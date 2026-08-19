@@ -443,6 +443,64 @@ main { padding: 34px 0 70px; }
   color: var(--ink-3);
 }
 
+/* ---------- availability ---------- */
+
+.avail-row { align-items: center; }
+.avail-label {
+  font-size: 10px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-right: 2px;
+}
+
+.card.sold .shot img { filter: saturate(.5); opacity: .78; }
+.card.sold .shot { background: #040b14; }
+
+.flag {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 10px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 4px 9px;
+  border-radius: 999px;
+  background: rgba(8, 21, 36, .86);
+  backdrop-filter: blur(4px);
+}
+.flag.keep { border: 1px solid var(--line-2); color: var(--ink-2); }
+.flag.gone { border: 1px solid #9a3f47; color: #ef7f88; }
+
+.price-wrap { display: flex; flex-direction: column; line-height: 1.2; min-width: 0; }
+.price.est { color: var(--ink); }
+.price.past { color: var(--ink-2); }
+.price-note {
+  font-size: 11px;
+  color: var(--ink-3);
+  letter-spacing: .02em;
+  font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.foot-note { font-size: 12px; color: var(--ink-3); white-space: nowrap; }
+
+.hero-note {
+  color: var(--ink-3);
+  font-size: 13px;
+  margin: -18px 0 26px;
+}
+
+.lb-note {
+  color: var(--ink-2);
+  font-size: 13px;
+  border-left: 2px solid var(--line-2);
+  padding-left: 12px;
+  margin: 0 0 18px;
+}
+
 /* ---------- lightbox ---------- */
 
 .lb {
@@ -592,10 +650,12 @@ footer.site {
     inventory below and buy straight from the eBay store.
   </p>
   <div class="stats">
-    <div class="stat"><b id="statCount">—</b><span>Cards live</span></div>
-    <div class="stat"><b id="statAuto">—</b><span>Autographs</span></div>
+    <div class="stat"><b id="statCount">—</b><span>Cards for sale</span></div>
     <div class="stat"><b id="statValue">—</b><span>Vault value</span></div>
+    <div class="stat" id="statOwnedWrap" hidden><b id="statOwned">—</b><span>In the collection</span></div>
+    <div class="stat"><b id="statAuto">—</b><span>Autographs</span></div>
   </div>
+  <p class="hero-note" id="heroNote" hidden></p>
   <a class="btn" href="#inventory">Browse the vault &darr;</a>
 </div>
 
@@ -607,11 +667,12 @@ footer.site {
         <input id="search" type="search" placeholder="Search a player, set or card number…" autocomplete="off">
       </label>
       <select class="sort" id="sort" aria-label="Sort cards">
-        <option value="price-desc">Price: high to low</option>
-        <option value="price-asc">Price: low to high</option>
+        <option value="price-desc">Value: high to low</option>
+        <option value="price-asc">Value: low to high</option>
         <option value="title-asc">Name: A to Z</option>
       </select>
     </div>
+    <div class="chips avail-row" id="avail"></div>
     <div class="chips" id="cats"></div>
     <div class="chips" id="tagChips"></div>
   </div>
@@ -669,7 +730,7 @@ footer.site {
   <div class="lb-inner" id="lbBody"></div>
 </div>
 
-<script>window.MECV_DATA = {"store": {"name": "Main Event Card Vault", "ebay": "https://www.ebay.com/str/maineventcardvault", "seller": "feld-111937", "facebook": "https://www.facebook.com/profile.php?id=61593632960504", "instagram": "https://www.instagram.com/main.eventcards/", "location": "Strasburg, Virginia", "shipping": "$5.99 flat, USPS Ground Advantage \u2014 $0.30 each additional card"}, "updated": "2026-08-18", "count": 35, "totalValue": 8437.01, "cards": [{"id": "318726608929", "title": "2026 Topps Chrome Konnor Griffin Gold Rookie Auto #RA-KG 03/50 Pirates RC", "price": 2399.0, "priceLabel": "$2,399.00", "url": "https://www.ebay.com/itm/318726608929", "image": "https://i.ebayimg.com/images/g/H5sAAeSwAfJqfl-E/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/H5sAAeSwAfJqfl-E/s-l960.jpg", "sku": "", "category": "Baseball", "brand": "Topps Chrome", "year": "2026", "serial": "/50", "tags": ["Autograph", "Numbered", "Rookie"]}, {"id": "318638286490", "title": "2026 Topps Chrome WWE Lita Rebel by Design On-Card Auto /10 #LIT1 Signed", "price": 1245.0, "priceLabel": "$1,245.00", "url": "https://www.ebay.com/itm/318638286490", "image": "https://i.ebayimg.com/images/g/CfIAAeSwQtRqZlwB/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/CfIAAeSwQtRqZlwB/s-l960.jpg", "sku": "", "category": "WWE", "brand": "Topps Chrome", "year": "2026", "serial": "/10", "tags": ["Autograph", "Numbered"]}, {"id": "318731377972", "title": "2026 Topps Cosmic Chrome WWE Triple H Autograph #CCA-HHH Legends Auto", "price": 535.99, "priceLabel": "$535.99", "url": "https://www.ebay.com/itm/318731377972", "image": "https://i.ebayimg.com/images/g/QrMAAeSwIVVqf5lb/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/QrMAAeSwIVVqf5lb/s-l960.jpg", "sku": "", "category": "WWE", "brand": "Topps Cosmic Chrome", "year": "2026", "serial": null, "tags": ["Autograph"]}, {"id": "318731525182", "title": "2026 Topps Chrome WWE Damian Priest Garbage Pail Kids #GPK-DP Refractor SSP", "price": 425.2, "priceLabel": "$425.20", "url": "https://www.ebay.com/itm/318731525182", "image": "https://i.ebayimg.com/images/g/j4MAAeSwCz5qf6ms/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/j4MAAeSwCz5qf6ms/s-l960.jpg", "sku": "", "category": "WWE", "brand": "Topps Chrome", "year": "2026", "serial": null, "tags": ["SSP", "Refractor"]}, {"id": "318731522341", "title": "2026 Topps Chrome WWE Liv Morgan 1986 Topps Auto #86T-LM 35/50 Gold RAW", "price": 421.88, "priceLabel": "$421.88", "url": "https://www.ebay.com/itm/318731522341", "image": "https://i.ebayimg.com/images/g/UNkAAeSwdh5qf6eM/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/UNkAAeSwdh5qf6eM/s-l960.jpg", "sku": "", "category": "WWE", "brand": "Topps Chrome", "year": "2026", "serial": "/50", "tags": ["Autograph", "Numbered"]}, {"id": "318731374308", "title": "2026 Topps Chrome WWE Liv Morgan 1986 Topps Auto #86T-LM Refractor RAW", "price": 379.0, "priceLabel": "$379.00", "url": "https://www.ebay.com/itm/318731374308", "image": "https://i.ebayimg.com/images/g/3skAAeSwOT5qf5tp/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/3skAAeSwOT5qf5tp/s-l960.jpg", "sku": "", "category": "WWE", "brand": "Topps Chrome", "year": "2026", "serial": null, "tags": ["Autograph", "Refractor"]}, {"id": "318731377273", "title": "2026 Topps NOW Road to Opening Day Ronald Acuna Jr Auto #A-RAC 07/10 Braves", "price": 377.0, "priceLabel": "$377.00", "url": "https://www.ebay.com/itm/318731377273", "image": "https://i.ebayimg.com/images/g/3u8AAeSw1~lqf5pg/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/3u8AAeSw1~lqf5pg/s-l960.jpg", "sku": "", "category": "Baseball", "brand": "Topps NOW", "year": "2026", "serial": "/10", "tags": ["Autograph", "Numbered"]}, {"id": "318731097217", "title": "2026 Topps Chrome WWE Stephanie Vaquer Red Brand Auto #RBA-STE RAW", "price": 249.0, "priceLabel": "$249.00", "url": "https://www.ebay.com/itm/318731097217", "image": "https://i.ebayimg.com/images/g/tosAAeSwG~Vqf4mr/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/tosAAeSwG~Vqf4mr/s-l960.jpg", "sku": "", "category": "WWE", "brand": "Topps Chrome", "year": "2026", "serial": null, "tags": ["Autograph"]}, {"id": "318703899081", "title": "Damian Priest 1989 Superstar Auto /5", "price": 199.0, "priceLabel": "$199.00", "url": "https://www.ebay.com/itm/318703899081", "image": "https://i.ebayimg.com/images/g/yRQAAeSw3Bxqd7Ub/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/yRQAAeSw3Bxqd7Ub/s-l960.jpg", "sku": "", "category": "WWE", "brand": "Other", "year": null, "serial": "/5", "tags": ["Autograph", "Numbered"]}, {"id": "318731527044", "title": "2026 Topps Chrome WWE Joe Hendry #301 RC Rookie Refractor NXT", "price": 198.0, "priceLabel": "$198.00", "url": "https://www.ebay.com/itm/318731527044", "image": "https://i.ebayimg.com/images/g/zCMAAeSwsJVqf65M/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/zCMAAeSwsJVqf65M/s-l960.jpg", "sku": "", "category": "WWE", "brand": "Topps Chrome", "year": "2026", "serial": null, "tags": ["Rookie", "Refractor"]}, {"id": "318731119307", "title": "2026 Topps Chrome WWE Giulia Blue Brand Auto #BBA-GIU 004/150 SmackDown", "price": 189.0, "priceLabel": "$189.00", "url": "https://www.ebay.com/itm/318731119307", "image": "https://i.ebayimg.com/images/g/4H4AAeSwA9Fqf4g3/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/4H4AAeSwA9Fqf4g3/s-l960.jpg", "sku": "", "category": "WWE", "brand": "Topps Chrome", "year": "2026", "serial": "/150", "tags": ["Autograph", "Numbered"]}, {"id": "318726593162", "title": "2026 Topps Resurgence Xavier Worthy Auto #48 14/25 Kansas City Chiefs", "price": 179.0, "priceLabel": "$179.00", "url": "https://www.ebay.com/itm/318726593162", "image": "https://i.ebayimg.com/images/g/IhMAAeSwBCJqfmFJ/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/IhMAAeSwBCJqfmFJ/s-l960.jpg", "sku": "", "category": "Football", "brand": "Topps Resurgence", "year": "2026", "serial": "/25", "tags": ["Autograph", "Numbered"]}, {"id": "318731072754", "title": "2026 Topps Chrome WWE Tiffany Stratton Blue Brand Auto #BBA-TIF SmackDown", "price": 159.0, "priceLabel": "$159.00", "url": "https://www.ebay.com/itm/318731072754", "image": "https://i.ebayimg.com/images/g/lXoAAeSwU79qf4q0/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/lXoAAeSwU79qf4q0/s-l960.jpg", "sku": "", "category": "WWE", "brand": "Topps Chrome", "year": "2026", "serial": null, "tags": ["Autograph"]}, {"id": "318731360579", "title": "2025 Topps Royalty WWE Kendal Grey Rookie RC #023 78/99 Gold NXT", "price": 149.99, "priceLabel": "$149.99", "url": "https://www.ebay.com/itm/318731360579", "image": "https://i.ebayimg.com/images/g/FuEAAeSwE-hqf54h/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/FuEAAeSwE-hqf54h/s-l960.jpg", "sku": "", "category": "WWE", "brand": "Topps Royalty", "year": "2025", "serial": "/99", "tags": ["Numbered", "Rookie"]}, {"id": "318731369372", "title": "2026 Topps Cosmic Chrome WWE Alexa Bliss Planetary Pursuit Earth #PPE-8 SSP", "price": 149.0, "priceLabel": "$149.00", "url": "https://www.ebay.com/itm/318731369372", "image": "https://i.ebayimg.com/images/g/pJcAAeSwU4Zqf5xk/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/pJcAAeSwU4Zqf5xk/s-l960.jpg", "sku": "", "category": "WWE", "brand": "Topps Cosmic Chrome", "year": "2026", "serial": null, "tags": ["SSP"]}, {"id": "318731365776", "title": "2026 Topps Chrome WWE Rhea Ripley Red Brand Auto #RBA-RHE Refractor RAW", "price": 125.0, "priceLabel": "$125.00", "url": "https://www.ebay.com/itm/318731365776", "image": "https://i.ebayimg.com/images/g/Z1EAAeSwhKZqf51H/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/Z1EAAeSwhKZqf51H/s-l960.jpg", "sku": "", "category": "WWE", "brand": "Topps Chrome", "year": "2026", "serial": null, "tags": ["Autograph", "Refractor"]}, {"id": "318731526728", "title": "2026 Topps Chrome WWE Jacob Fatu Gamut #GAM-10 SSP Case Hit SmackDown", "price": 119.0, "priceLabel": "$119.00", "url": "https://www.ebay.com/itm/318731526728", "image": "https://i.ebayimg.com/images/g/rd8AAeSw2RBqf61d/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/rd8AAeSw2RBqf61d/s-l960.jpg", "sku": "", "category": "WWE", "brand": "Topps Chrome", "year": "2026", "serial": null, "tags": ["SSP"]}, {"id": "318726606289", "title": "2025-26 Topps Inception Cooper Flagg #22 RC Rookie Dallas Mavericks", "price": 110.0, "priceLabel": "$110.00", "url": "https://www.ebay.com/itm/318726606289", "image": "https://i.ebayimg.com/images/g/J6cAAeSwYPFqfl5I/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/J6cAAeSwYPFqfl5I/s-l960.jpg", "sku": "", "category": "Basketball", "brand": "Topps Inception", "year": "2025-26", "serial": null, "tags": ["Rookie"]}, {"id": "318731525928", "title": "2025 Topps Universe WWE Ciampa Gargano Tag Team Relic Auto #TTA-GC 14/25", "price": 110.0, "priceLabel": "$110.00", "url": "https://www.ebay.com/itm/318731525928", "image": "https://i.ebayimg.com/images/g/cIAAAeSwDRtqf6pq/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/cIAAAeSwDRtqf6pq/s-l960.jpg", "sku": "", "category": "WWE", "brand": "Topps Universe", "year": "2025", "serial": "/25", "tags": ["Autograph", "Numbered", "Relic"]}, {"id": "318731348431", "title": "2026 Topps Cosmic Chrome WWE Cody Rhodes Planetary Pursuit Venus #PPV-1 SSP", "price": 99.0, "priceLabel": "$99.00", "url": "https://www.ebay.com/itm/318731348431", "image": "https://i.ebayimg.com/images/g/eOkAAeSwtixqf59B/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/eOkAAeSwtixqf59B/s-l960.jpg", "sku": "", "category": "WWE", "brand": "Topps Cosmic Chrome", "year": "2026", "serial": null, "tags": ["SSP"]}, {"id": "318637897037", "title": "2026 Topps Cosmic Chrome WWE - Joe Hendry #169 White Hole Refractor (RC) SSP", "price": 89.0, "priceLabel": "$89.00", "url": "https://www.ebay.com/itm/318637897037", "image": "https://i.ebayimg.com/images/g/2VUAAeSwS~JqZj-N/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/2VUAAeSwS~JqZj-N/s-l960.jpg", "sku": "", "category": "WWE", "brand": "Topps Cosmic Chrome", "year": "2026", "serial": null, "tags": ["Rookie", "SSP", "Refractor"]}, {"id": "318731060484", "title": "2026 Topps Chrome WWE Cody Rhodes House of Cards #HOC-4 SSP Case Hit", "price": 69.0, "priceLabel": "$69.00", "url": "https://www.ebay.com/itm/318731060484", "image": "https://i.ebayimg.com/images/g/TR8AAeSw5Vxqf4zQ/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/TR8AAeSw5Vxqf4zQ/s-l960.jpg", "sku": "", "category": "WWE", "brand": "Topps Chrome", "year": "2026", "serial": null, "tags": ["SSP"]}, {"id": "318731526188", "title": "2026 Topps Cosmic Chrome WWE Cody Rhodes Planetary Pursuit Sun #PPS-1 SSP", "price": 64.0, "priceLabel": "$64.00", "url": "https://www.ebay.com/itm/318731526188", "image": "https://i.ebayimg.com/images/g/d6EAAeSw~cFqf6tR/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/d6EAAeSw~cFqf6tR/s-l960.jpg", "sku": "", "category": "WWE", "brand": "Topps Cosmic Chrome", "year": "2026", "serial": null, "tags": ["SSP"]}, {"id": "318731058526", "title": "2026 Topps Cosmic Chrome WWE Aleister Black Equinox Auto Orange /25 #EA-ALB", "price": 59.0, "priceLabel": "$59.00", "url": "https://www.ebay.com/itm/318731058526", "image": "https://i.ebayimg.com/images/g/7JYAAeSwIVVqf43U/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/7JYAAeSwIVVqf43U/s-l960.jpg", "sku": "", "category": "WWE", "brand": "Topps Cosmic Chrome", "year": "2026", "serial": "/25", "tags": ["Autograph", "Numbered"]}, {"id": "318726601589", "title": "2026 Topps Tribute Jacob Misiorowski #94 RC Rookie Milwaukee Brewers", "price": 56.0, "priceLabel": "$56.00", "url": "https://www.ebay.com/itm/318726601589", "image": "https://i.ebayimg.com/images/g/E94AAeSwQOlqfluZ/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/E94AAeSwQOlqfluZ/s-l960.jpg", "sku": "", "category": "Baseball", "brand": "Topps Tribute", "year": "2026", "serial": null, "tags": ["Rookie"]}, {"id": "318726604221", "title": "2025-26 Topps Chrome Update Cooper Flagg Clutch Gene #CG-11 RC Mavericks", "price": 50.0, "priceLabel": "$50.00", "url": "https://www.ebay.com/itm/318726604221", "image": "https://i.ebayimg.com/images/g/GyYAAeSw87Bqfl0F/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/GyYAAeSw87Bqfl0F/s-l960.jpg", "sku": "", "category": "Basketball", "brand": "Topps Chrome Update", "year": "2025-26", "serial": null, "tags": ["Rookie"]}, {"id": "318731347510", "title": "2026 Topps Cosmic Chrome WWE Jey Uso Planetary Pursuit Mercury #PPM-2 RAW", "price": 49.0, "priceLabel": "$49.00", "url": "https://www.ebay.com/itm/318731347510", "image": "https://i.ebayimg.com/images/g/AJIAAeSwvl9qf6BQ/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/AJIAAeSwvl9qf6BQ/s-l960.jpg", "sku": "", "category": "WWE", "brand": "Topps Cosmic Chrome", "year": "2026", "serial": null, "tags": []}, {"id": "318731065243", "title": "2026 Topps Cosmic Chrome WWE Seth Rollins Planetary Pursuit Sun #PPS-3 RAW", "price": 44.0, "priceLabel": "$44.00", "url": "https://www.ebay.com/itm/318731065243", "image": "https://i.ebayimg.com/images/g/LxwAAeSw64Zqf4ud/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/LxwAAeSw64Zqf4ud/s-l960.jpg", "sku": "", "category": "WWE", "brand": "Topps Cosmic Chrome", "year": "2026", "serial": null, "tags": []}, {"id": "318731526426", "title": "2026 Topps Cosmic Chrome WWE IRS Autograph #CCA-IRS Legends Auto", "price": 37.99, "priceLabel": "$37.99", "url": "https://www.ebay.com/itm/318731526426", "image": "https://i.ebayimg.com/images/g/cLYAAeSwvnpqf6wZ/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/cLYAAeSwvnpqf6wZ/s-l960.jpg", "sku": "", "category": "WWE", "brand": "Topps Cosmic Chrome", "year": "2026", "serial": null, "tags": ["Autograph"]}, {"id": "318726587094", "title": "2025-26 Topps Chrome Cactus Jack Cooper Flagg #61 RC Rookie Dallas Mavericks", "price": 34.0, "priceLabel": "$34.00", "url": "https://www.ebay.com/itm/318726587094", "image": "https://i.ebayimg.com/images/g/6xYAAeSw4U1qflYw/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/6xYAAeSw4U1qflYw/s-l960.jpg", "sku": "", "category": "Basketball", "brand": "Topps Chrome", "year": "2025-26", "serial": null, "tags": ["Rookie"]}, {"id": "318731378183", "title": "2026 Topps Marvel Brooklyn Collection Moon Knight Distinguished Service #DS-11", "price": 29.99, "priceLabel": "$29.99", "url": "https://www.ebay.com/itm/318731378183", "image": "https://i.ebayimg.com/images/g/XasAAeSwxvxqf5Tt/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/XasAAeSwxvxqf5Tt/s-l960.jpg", "sku": "", "category": "Marvel", "brand": "Topps Marvel", "year": "2026", "serial": null, "tags": []}, {"id": "318726963298", "title": "2025 Topps Stadium Club Zach Neto #37", "price": 14.99, "priceLabel": "$14.99", "url": "https://www.ebay.com/itm/318726963298", "image": "https://i.ebayimg.com/images/g/m7QAAeSwOT5qfoYX/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/m7QAAeSwOT5qfoYX/s-l960.jpg", "sku": "C-011", "category": "Baseball", "brand": "Topps Stadium Club", "year": "2025", "serial": null, "tags": []}, {"id": "318726596480", "title": "2025-26 Topps Chrome Update Cooper Flagg #151 RC Rookie Dallas Mavericks", "price": 9.99, "priceLabel": "$9.99", "url": "https://www.ebay.com/itm/318726596480", "image": "https://i.ebayimg.com/images/g/DVoAAeSwmiFqflnH/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/DVoAAeSwmiFqflnH/s-l960.jpg", "sku": "", "category": "Basketball", "brand": "Topps Chrome Update", "year": "2025-26", "serial": null, "tags": ["Rookie"]}, {"id": "318699663629", "title": "2026 Topps Chrome #65 Roxanne Perez Refractor", "price": 8.0, "priceLabel": "$8.00", "url": "https://www.ebay.com/itm/318699663629", "image": "https://i.ebayimg.com/images/g/HecAAeSwkVdqd7hf/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/HecAAeSwkVdqd7hf/s-l960.jpg", "sku": "", "category": "WWE", "brand": "Topps Chrome", "year": "2026", "serial": null, "tags": ["Refractor"]}, {"id": "318726960542", "title": "2026 Topps Chrome Shota Imanaga #161 REFRACTOR", "price": 3.99, "priceLabel": "$3.99", "url": "https://www.ebay.com/itm/318726960542", "image": "https://i.ebayimg.com/images/g/aeQAAeSwPoZqfoWO/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/aeQAAeSwPoZqfoWO/s-l960.jpg", "sku": "C-022", "category": "Baseball", "brand": "Topps Chrome", "year": "2026", "serial": null, "tags": ["Refractor"]}]};</script>
+<script>window.MECV_DATA = {"store": {"name": "Main Event Card Vault", "ebay": "https://www.ebay.com/str/maineventcardvault", "seller": "feld-111937", "facebook": "https://www.facebook.com/profile.php?id=61593632960504", "instagram": "https://www.instagram.com/main.eventcards/", "location": "Strasburg, Virginia", "shipping": "$5.99 flat, USPS Ground Advantage \u2014 $0.30 each additional card"}, "updated": "2026-08-19", "count": 35, "collectionCount": 0, "soldCount": 1, "totalValue": 8437.01, "collectionValue": 0, "cards": [{"id": "318726608929", "status": "forsale", "title": "2026 Topps Chrome Konnor Griffin Gold Rookie Auto #RA-KG 03/50 Pirates RC", "price": 2399.0, "priceLabel": "$2,399.00", "priceNote": "", "url": "https://www.ebay.com/itm/318726608929", "image": "https://i.ebayimg.com/images/g/H5sAAeSwAfJqfl-E/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/H5sAAeSwAfJqfl-E/s-l960.jpg", "sku": "", "note": "", "category": "Baseball", "brand": "Topps Chrome", "year": "2026", "serial": "/50", "tags": ["Autograph", "Numbered", "Rookie"]}, {"id": "318638286490", "status": "forsale", "title": "2026 Topps Chrome WWE Lita Rebel by Design On-Card Auto /10 #LIT1 Signed", "price": 1245.0, "priceLabel": "$1,245.00", "priceNote": "", "url": "https://www.ebay.com/itm/318638286490", "image": "https://i.ebayimg.com/images/g/CfIAAeSwQtRqZlwB/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/CfIAAeSwQtRqZlwB/s-l960.jpg", "sku": "", "note": "", "category": "WWE", "brand": "Topps Chrome", "year": "2026", "serial": "/10", "tags": ["Autograph", "Numbered"]}, {"id": "318731377972", "status": "forsale", "title": "2026 Topps Cosmic Chrome WWE Triple H Autograph #CCA-HHH Legends Auto", "price": 535.99, "priceLabel": "$535.99", "priceNote": "", "url": "https://www.ebay.com/itm/318731377972", "image": "https://i.ebayimg.com/images/g/QrMAAeSwIVVqf5lb/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/QrMAAeSwIVVqf5lb/s-l960.jpg", "sku": "", "note": "", "category": "WWE", "brand": "Topps Cosmic Chrome", "year": "2026", "serial": null, "tags": ["Autograph"]}, {"id": "318731525182", "status": "forsale", "title": "2026 Topps Chrome WWE Damian Priest Garbage Pail Kids #GPK-DP Refractor SSP", "price": 425.2, "priceLabel": "$425.20", "priceNote": "", "url": "https://www.ebay.com/itm/318731525182", "image": "https://i.ebayimg.com/images/g/j4MAAeSwCz5qf6ms/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/j4MAAeSwCz5qf6ms/s-l960.jpg", "sku": "", "note": "", "category": "WWE", "brand": "Topps Chrome", "year": "2026", "serial": null, "tags": ["SSP", "Refractor"]}, {"id": "318731522341", "status": "forsale", "title": "2026 Topps Chrome WWE Liv Morgan 1986 Topps Auto #86T-LM 35/50 Gold RAW", "price": 421.88, "priceLabel": "$421.88", "priceNote": "", "url": "https://www.ebay.com/itm/318731522341", "image": "https://i.ebayimg.com/images/g/UNkAAeSwdh5qf6eM/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/UNkAAeSwdh5qf6eM/s-l960.jpg", "sku": "", "note": "", "category": "WWE", "brand": "Topps Chrome", "year": "2026", "serial": "/50", "tags": ["Autograph", "Numbered"]}, {"id": "318731374308", "status": "forsale", "title": "2026 Topps Chrome WWE Liv Morgan 1986 Topps Auto #86T-LM Refractor RAW", "price": 379.0, "priceLabel": "$379.00", "priceNote": "", "url": "https://www.ebay.com/itm/318731374308", "image": "https://i.ebayimg.com/images/g/3skAAeSwOT5qf5tp/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/3skAAeSwOT5qf5tp/s-l960.jpg", "sku": "", "note": "", "category": "WWE", "brand": "Topps Chrome", "year": "2026", "serial": null, "tags": ["Autograph", "Refractor"]}, {"id": "318731377273", "status": "forsale", "title": "2026 Topps NOW Road to Opening Day Ronald Acuna Jr Auto #A-RAC 07/10 Braves", "price": 377.0, "priceLabel": "$377.00", "priceNote": "", "url": "https://www.ebay.com/itm/318731377273", "image": "https://i.ebayimg.com/images/g/3u8AAeSw1~lqf5pg/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/3u8AAeSw1~lqf5pg/s-l960.jpg", "sku": "", "note": "", "category": "Baseball", "brand": "Topps NOW", "year": "2026", "serial": "/10", "tags": ["Autograph", "Numbered"]}, {"id": "318731097217", "status": "forsale", "title": "2026 Topps Chrome WWE Stephanie Vaquer Red Brand Auto #RBA-STE RAW", "price": 249.0, "priceLabel": "$249.00", "priceNote": "", "url": "https://www.ebay.com/itm/318731097217", "image": "https://i.ebayimg.com/images/g/tosAAeSwG~Vqf4mr/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/tosAAeSwG~Vqf4mr/s-l960.jpg", "sku": "", "note": "", "category": "WWE", "brand": "Topps Chrome", "year": "2026", "serial": null, "tags": ["Autograph"]}, {"id": "318703899081", "status": "forsale", "title": "Damian Priest 1989 Superstar Auto /5", "price": 199.0, "priceLabel": "$199.00", "priceNote": "", "url": "https://www.ebay.com/itm/318703899081", "image": "https://i.ebayimg.com/images/g/yRQAAeSw3Bxqd7Ub/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/yRQAAeSw3Bxqd7Ub/s-l960.jpg", "sku": "", "note": "", "category": "WWE", "brand": "Other", "year": null, "serial": "/5", "tags": ["Autograph", "Numbered"]}, {"id": "318731527044", "status": "forsale", "title": "2026 Topps Chrome WWE Joe Hendry #301 RC Rookie Refractor NXT", "price": 198.0, "priceLabel": "$198.00", "priceNote": "", "url": "https://www.ebay.com/itm/318731527044", "image": "https://i.ebayimg.com/images/g/zCMAAeSwsJVqf65M/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/zCMAAeSwsJVqf65M/s-l960.jpg", "sku": "", "note": "", "category": "WWE", "brand": "Topps Chrome", "year": "2026", "serial": null, "tags": ["Rookie", "Refractor"]}, {"id": "318731119307", "status": "forsale", "title": "2026 Topps Chrome WWE Giulia Blue Brand Auto #BBA-GIU 004/150 SmackDown", "price": 189.0, "priceLabel": "$189.00", "priceNote": "", "url": "https://www.ebay.com/itm/318731119307", "image": "https://i.ebayimg.com/images/g/4H4AAeSwA9Fqf4g3/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/4H4AAeSwA9Fqf4g3/s-l960.jpg", "sku": "", "note": "", "category": "WWE", "brand": "Topps Chrome", "year": "2026", "serial": "/150", "tags": ["Autograph", "Numbered"]}, {"id": "318726593162", "status": "forsale", "title": "2026 Topps Resurgence Xavier Worthy Auto #48 14/25 Kansas City Chiefs", "price": 179.0, "priceLabel": "$179.00", "priceNote": "", "url": "https://www.ebay.com/itm/318726593162", "image": "https://i.ebayimg.com/images/g/IhMAAeSwBCJqfmFJ/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/IhMAAeSwBCJqfmFJ/s-l960.jpg", "sku": "", "note": "", "category": "Football", "brand": "Topps Resurgence", "year": "2026", "serial": "/25", "tags": ["Autograph", "Numbered"]}, {"id": "318731072754", "status": "forsale", "title": "2026 Topps Chrome WWE Tiffany Stratton Blue Brand Auto #BBA-TIF SmackDown", "price": 159.0, "priceLabel": "$159.00", "priceNote": "", "url": "https://www.ebay.com/itm/318731072754", "image": "https://i.ebayimg.com/images/g/lXoAAeSwU79qf4q0/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/lXoAAeSwU79qf4q0/s-l960.jpg", "sku": "", "note": "", "category": "WWE", "brand": "Topps Chrome", "year": "2026", "serial": null, "tags": ["Autograph"]}, {"id": "318731360579", "status": "forsale", "title": "2025 Topps Royalty WWE Kendal Grey Rookie RC #023 78/99 Gold NXT", "price": 149.99, "priceLabel": "$149.99", "priceNote": "", "url": "https://www.ebay.com/itm/318731360579", "image": "https://i.ebayimg.com/images/g/FuEAAeSwE-hqf54h/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/FuEAAeSwE-hqf54h/s-l960.jpg", "sku": "", "note": "", "category": "WWE", "brand": "Topps Royalty", "year": "2025", "serial": "/99", "tags": ["Numbered", "Rookie"]}, {"id": "318731369372", "status": "forsale", "title": "2026 Topps Cosmic Chrome WWE Alexa Bliss Planetary Pursuit Earth #PPE-8 SSP", "price": 149.0, "priceLabel": "$149.00", "priceNote": "", "url": "https://www.ebay.com/itm/318731369372", "image": "https://i.ebayimg.com/images/g/pJcAAeSwU4Zqf5xk/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/pJcAAeSwU4Zqf5xk/s-l960.jpg", "sku": "", "note": "", "category": "WWE", "brand": "Topps Cosmic Chrome", "year": "2026", "serial": null, "tags": ["SSP"]}, {"id": "318731365776", "status": "forsale", "title": "2026 Topps Chrome WWE Rhea Ripley Red Brand Auto #RBA-RHE Refractor RAW", "price": 125.0, "priceLabel": "$125.00", "priceNote": "", "url": "https://www.ebay.com/itm/318731365776", "image": "https://i.ebayimg.com/images/g/Z1EAAeSwhKZqf51H/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/Z1EAAeSwhKZqf51H/s-l960.jpg", "sku": "", "note": "", "category": "WWE", "brand": "Topps Chrome", "year": "2026", "serial": null, "tags": ["Autograph", "Refractor"]}, {"id": "318731526728", "status": "forsale", "title": "2026 Topps Chrome WWE Jacob Fatu Gamut #GAM-10 SSP Case Hit SmackDown", "price": 119.0, "priceLabel": "$119.00", "priceNote": "", "url": "https://www.ebay.com/itm/318731526728", "image": "https://i.ebayimg.com/images/g/rd8AAeSw2RBqf61d/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/rd8AAeSw2RBqf61d/s-l960.jpg", "sku": "", "note": "", "category": "WWE", "brand": "Topps Chrome", "year": "2026", "serial": null, "tags": ["SSP"]}, {"id": "318726606289", "status": "forsale", "title": "2025-26 Topps Inception Cooper Flagg #22 RC Rookie Dallas Mavericks", "price": 110.0, "priceLabel": "$110.00", "priceNote": "", "url": "https://www.ebay.com/itm/318726606289", "image": "https://i.ebayimg.com/images/g/J6cAAeSwYPFqfl5I/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/J6cAAeSwYPFqfl5I/s-l960.jpg", "sku": "", "note": "", "category": "Basketball", "brand": "Topps Inception", "year": "2025-26", "serial": null, "tags": ["Rookie"]}, {"id": "318731525928", "status": "forsale", "title": "2025 Topps Universe WWE Ciampa Gargano Tag Team Relic Auto #TTA-GC 14/25", "price": 110.0, "priceLabel": "$110.00", "priceNote": "", "url": "https://www.ebay.com/itm/318731525928", "image": "https://i.ebayimg.com/images/g/cIAAAeSwDRtqf6pq/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/cIAAAeSwDRtqf6pq/s-l960.jpg", "sku": "", "note": "", "category": "WWE", "brand": "Topps Universe", "year": "2025", "serial": "/25", "tags": ["Autograph", "Numbered", "Relic"]}, {"id": "318731348431", "status": "forsale", "title": "2026 Topps Cosmic Chrome WWE Cody Rhodes Planetary Pursuit Venus #PPV-1 SSP", "price": 99.0, "priceLabel": "$99.00", "priceNote": "", "url": "https://www.ebay.com/itm/318731348431", "image": "https://i.ebayimg.com/images/g/eOkAAeSwtixqf59B/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/eOkAAeSwtixqf59B/s-l960.jpg", "sku": "", "note": "", "category": "WWE", "brand": "Topps Cosmic Chrome", "year": "2026", "serial": null, "tags": ["SSP"]}, {"id": "318637897037", "status": "forsale", "title": "2026 Topps Cosmic Chrome WWE - Joe Hendry #169 White Hole Refractor (RC) SSP", "price": 89.0, "priceLabel": "$89.00", "priceNote": "", "url": "https://www.ebay.com/itm/318637897037", "image": "https://i.ebayimg.com/images/g/2VUAAeSwS~JqZj-N/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/2VUAAeSwS~JqZj-N/s-l960.jpg", "sku": "", "note": "", "category": "WWE", "brand": "Topps Cosmic Chrome", "year": "2026", "serial": null, "tags": ["Rookie", "SSP", "Refractor"]}, {"id": "318731060484", "status": "forsale", "title": "2026 Topps Chrome WWE Cody Rhodes House of Cards #HOC-4 SSP Case Hit", "price": 69.0, "priceLabel": "$69.00", "priceNote": "", "url": "https://www.ebay.com/itm/318731060484", "image": "https://i.ebayimg.com/images/g/TR8AAeSw5Vxqf4zQ/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/TR8AAeSw5Vxqf4zQ/s-l960.jpg", "sku": "", "note": "", "category": "WWE", "brand": "Topps Chrome", "year": "2026", "serial": null, "tags": ["SSP"]}, {"id": "318731526188", "status": "forsale", "title": "2026 Topps Cosmic Chrome WWE Cody Rhodes Planetary Pursuit Sun #PPS-1 SSP", "price": 64.0, "priceLabel": "$64.00", "priceNote": "", "url": "https://www.ebay.com/itm/318731526188", "image": "https://i.ebayimg.com/images/g/d6EAAeSw~cFqf6tR/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/d6EAAeSw~cFqf6tR/s-l960.jpg", "sku": "", "note": "", "category": "WWE", "brand": "Topps Cosmic Chrome", "year": "2026", "serial": null, "tags": ["SSP"]}, {"id": "318731058526", "status": "forsale", "title": "2026 Topps Cosmic Chrome WWE Aleister Black Equinox Auto Orange /25 #EA-ALB", "price": 59.0, "priceLabel": "$59.00", "priceNote": "", "url": "https://www.ebay.com/itm/318731058526", "image": "https://i.ebayimg.com/images/g/7JYAAeSwIVVqf43U/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/7JYAAeSwIVVqf43U/s-l960.jpg", "sku": "", "note": "", "category": "WWE", "brand": "Topps Cosmic Chrome", "year": "2026", "serial": "/25", "tags": ["Autograph", "Numbered"]}, {"id": "318726601589", "status": "forsale", "title": "2026 Topps Tribute Jacob Misiorowski #94 RC Rookie Milwaukee Brewers", "price": 56.0, "priceLabel": "$56.00", "priceNote": "", "url": "https://www.ebay.com/itm/318726601589", "image": "https://i.ebayimg.com/images/g/E94AAeSwQOlqfluZ/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/E94AAeSwQOlqfluZ/s-l960.jpg", "sku": "", "note": "", "category": "Baseball", "brand": "Topps Tribute", "year": "2026", "serial": null, "tags": ["Rookie"]}, {"id": "318726604221", "status": "forsale", "title": "2025-26 Topps Chrome Update Cooper Flagg Clutch Gene #CG-11 RC Mavericks", "price": 50.0, "priceLabel": "$50.00", "priceNote": "", "url": "https://www.ebay.com/itm/318726604221", "image": "https://i.ebayimg.com/images/g/GyYAAeSw87Bqfl0F/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/GyYAAeSw87Bqfl0F/s-l960.jpg", "sku": "", "note": "", "category": "Basketball", "brand": "Topps Chrome Update", "year": "2025-26", "serial": null, "tags": ["Rookie"]}, {"id": "318731347510", "status": "forsale", "title": "2026 Topps Cosmic Chrome WWE Jey Uso Planetary Pursuit Mercury #PPM-2 RAW", "price": 49.0, "priceLabel": "$49.00", "priceNote": "", "url": "https://www.ebay.com/itm/318731347510", "image": "https://i.ebayimg.com/images/g/AJIAAeSwvl9qf6BQ/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/AJIAAeSwvl9qf6BQ/s-l960.jpg", "sku": "", "note": "", "category": "WWE", "brand": "Topps Cosmic Chrome", "year": "2026", "serial": null, "tags": []}, {"id": "318731065243", "status": "forsale", "title": "2026 Topps Cosmic Chrome WWE Seth Rollins Planetary Pursuit Sun #PPS-3 RAW", "price": 44.0, "priceLabel": "$44.00", "priceNote": "", "url": "https://www.ebay.com/itm/318731065243", "image": "https://i.ebayimg.com/images/g/LxwAAeSw64Zqf4ud/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/LxwAAeSw64Zqf4ud/s-l960.jpg", "sku": "", "note": "", "category": "WWE", "brand": "Topps Cosmic Chrome", "year": "2026", "serial": null, "tags": []}, {"id": "318731526426", "status": "forsale", "title": "2026 Topps Cosmic Chrome WWE IRS Autograph #CCA-IRS Legends Auto", "price": 37.99, "priceLabel": "$37.99", "priceNote": "", "url": "https://www.ebay.com/itm/318731526426", "image": "https://i.ebayimg.com/images/g/cLYAAeSwvnpqf6wZ/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/cLYAAeSwvnpqf6wZ/s-l960.jpg", "sku": "", "note": "", "category": "WWE", "brand": "Topps Cosmic Chrome", "year": "2026", "serial": null, "tags": ["Autograph"]}, {"id": "318726587094", "status": "forsale", "title": "2025-26 Topps Chrome Cactus Jack Cooper Flagg #61 RC Rookie Dallas Mavericks", "price": 34.0, "priceLabel": "$34.00", "priceNote": "", "url": "https://www.ebay.com/itm/318726587094", "image": "https://i.ebayimg.com/images/g/6xYAAeSw4U1qflYw/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/6xYAAeSw4U1qflYw/s-l960.jpg", "sku": "", "note": "", "category": "Basketball", "brand": "Topps Chrome", "year": "2025-26", "serial": null, "tags": ["Rookie"]}, {"id": "318731378183", "status": "forsale", "title": "2026 Topps Marvel Brooklyn Collection Moon Knight Distinguished Service #DS-11", "price": 29.99, "priceLabel": "$29.99", "priceNote": "", "url": "https://www.ebay.com/itm/318731378183", "image": "https://i.ebayimg.com/images/g/XasAAeSwxvxqf5Tt/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/XasAAeSwxvxqf5Tt/s-l960.jpg", "sku": "", "note": "", "category": "Marvel", "brand": "Topps Marvel", "year": "2026", "serial": null, "tags": []}, {"id": "318726963298", "status": "forsale", "title": "2025 Topps Stadium Club Zach Neto #37", "price": 14.99, "priceLabel": "$14.99", "priceNote": "", "url": "https://www.ebay.com/itm/318726963298", "image": "https://i.ebayimg.com/images/g/m7QAAeSwOT5qfoYX/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/m7QAAeSwOT5qfoYX/s-l960.jpg", "sku": "C-011", "note": "", "category": "Baseball", "brand": "Topps Stadium Club", "year": "2025", "serial": null, "tags": []}, {"id": "318726596480", "status": "forsale", "title": "2025-26 Topps Chrome Update Cooper Flagg #151 RC Rookie Dallas Mavericks", "price": 9.99, "priceLabel": "$9.99", "priceNote": "", "url": "https://www.ebay.com/itm/318726596480", "image": "https://i.ebayimg.com/images/g/DVoAAeSwmiFqflnH/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/DVoAAeSwmiFqflnH/s-l960.jpg", "sku": "", "note": "", "category": "Basketball", "brand": "Topps Chrome Update", "year": "2025-26", "serial": null, "tags": ["Rookie"]}, {"id": "318699663629", "status": "forsale", "title": "2026 Topps Chrome #65 Roxanne Perez Refractor", "price": 8.0, "priceLabel": "$8.00", "priceNote": "", "url": "https://www.ebay.com/itm/318699663629", "image": "https://i.ebayimg.com/images/g/HecAAeSwkVdqd7hf/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/HecAAeSwkVdqd7hf/s-l960.jpg", "sku": "", "note": "", "category": "WWE", "brand": "Topps Chrome", "year": "2026", "serial": null, "tags": ["Refractor"]}, {"id": "318726960542", "status": "forsale", "title": "2026 Topps Chrome Shota Imanaga #161 REFRACTOR", "price": 3.99, "priceLabel": "$3.99", "priceNote": "", "url": "https://www.ebay.com/itm/318726960542", "image": "https://i.ebayimg.com/images/g/aeQAAeSwPoZqfoWO/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/aeQAAeSwPoZqfoWO/s-l960.jpg", "sku": "C-022", "note": "", "category": "Baseball", "brand": "Topps Chrome", "year": "2026", "serial": null, "tags": ["Refractor"]}, {"id": "2026-topps-chrome-roman-anthony-true-gold-rookie-auto-50-ra-", "status": "sold", "title": "2026 Topps Chrome Roman Anthony True Gold Rookie Auto /50 #RA-RA Red Sox RC", "price": 1795.0, "priceLabel": "$1,795.00", "priceNote": "Sold Aug 2026", "url": "", "image": "https://i.ebayimg.com/images/g/QVYAAeSwsZdqgf-B/s-l1600.jpg", "thumb": "https://i.ebayimg.com/images/g/QVYAAeSwsZdqgf-B/s-l960.jpg", "sku": "", "note": "Biggest sale on the store to date. Routed through eBay Authenticity Guarantee.", "category": "Baseball", "brand": "Topps Chrome", "year": "2026", "serial": "/50", "tags": ["Autograph", "Numbered", "Rookie"]}]};</script>
 <script>
 /* Main Event Card Vault — storefront behaviour */
 (function () {
@@ -680,10 +741,27 @@ footer.site {
 
   var state = {
     q: "",
+    avail: "forsale",
     category: "All",
     tags: new Set(),
     sort: "price-desc"
   };
+
+  /* Availability: the storefront opens on what a buyer can actually buy.
+     The other views are one chip away. */
+  var AVAIL = [
+    { key: "forsale",    label: "For sale",   test: function (c) { return c.status === "forsale"; } },
+    { key: "collection", label: "Collection", test: function (c) { return c.status === "collection"; } },
+    { key: "sold",       label: "Sold",       test: function (c) { return c.status === "sold"; } },
+    { key: "all",        label: "Everything", test: function () { return true; } }
+  ];
+
+  function availTest(key) {
+    for (var i = 0; i < AVAIL.length; i++) { if (AVAIL[i].key === key) return AVAIL[i].test; }
+    return function () { return true; };
+  }
+
+  var FLAG = { collection: ["keep", "Not for sale"], sold: ["gone", "Sold"] };
 
   var $ = function (sel, root) { return (root || document).querySelector(sel); };
 
@@ -698,6 +776,7 @@ footer.site {
     grid: $("#grid"),
     search: $("#search"),
     sort: $("#sort"),
+    avail: $("#avail"),
     cats: $("#cats"),
     tags: $("#tagChips"),
     count: $("#resultCount"),
@@ -706,6 +785,11 @@ footer.site {
   };
 
   // ---------- helpers ----------
+
+  function esc(s) {
+    return String(s == null ? "" : s)
+      .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
 
   function money(n) {
     return "$" + n.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
@@ -718,6 +802,7 @@ footer.site {
   }
 
   function matches(card) {
+    if (!availTest(state.avail)(card)) return false;
     if (state.category !== "All" && card.category !== state.category) return false;
     for (var t of state.tags) { if (card.tags.indexOf(t) === -1) return false; }
     if (state.q) {
@@ -738,26 +823,34 @@ footer.site {
 
   function cardNode(card) {
     var el = document.createElement("article");
-    el.className = "card";
+    el.className = "card" + (card.status !== "forsale" ? " " + card.status : "");
 
     var ribbon = card.tags.slice(0, 3).map(function (t) {
       return '<span class="tag ' + (TAG_CLASS[t] || "") + '">' + t + "</span>";
     }).join("");
 
-    var alt = card.title.replace(/"/g, "&quot;");
+    var alt = esc(card.title);
+    var flag = FLAG[card.status];
+    var priceClass = card.status === "collection" ? " est" : (card.status === "sold" ? " past" : "");
 
     el.innerHTML =
       '<button class="shot" type="button" aria-label="Enlarge photo of ' + alt + '">' +
         '<span class="fallback">Photo loading</span>' +
         (card.thumb ? '<img loading="lazy" src="' + card.thumb + '" alt="' + alt + '">' : "") +
         (ribbon ? '<span class="ribbon">' + ribbon + "</span>" : "") +
+        (flag ? '<span class="flag ' + flag[0] + '">' + flag[1] + "</span>" : "") +
       "</button>" +
       '<div class="card-body">' +
         '<span class="card-cat">' + card.category + (card.serial ? " &middot; " + card.serial : "") + "</span>" +
-        '<h3 class="card-title">' + card.title + "</h3>" +
+        '<h3 class="card-title">' + esc(card.title) + "</h3>" +
         '<div class="card-foot">' +
-          '<span class="price">' + card.priceLabel + "</span>" +
-          '<a class="buy" href="' + card.url + '" target="_blank" rel="noopener">View on eBay &rarr;</a>' +
+          '<span class="price-wrap">' +
+            '<span class="price' + priceClass + '">' + card.priceLabel + "</span>" +
+            (card.priceNote ? '<span class="price-note">' + esc(card.priceNote) + "</span>" : "") +
+          "</span>" +
+          (card.url
+            ? '<a class="buy" href="' + card.url + '" target="_blank" rel="noopener">View on eBay &rarr;</a>'
+            : "") +
         "</div>" +
       "</div>";
 
@@ -804,10 +897,81 @@ footer.site {
 
   // ---------- filter UI ----------
 
+  var catBtns = {}, tagBtns = {};
+
+  function pressOnly(container, btn) {
+    [].forEach.call(container.children, function (c) { c.setAttribute("aria-pressed", "false"); });
+    btn.setAttribute("aria-pressed", "true");
+  }
+
+  function buildAvailChips() {
+    // Only worth showing once there is something besides the store inventory.
+    var present = AVAIL.filter(function (a) {
+      return a.key !== "all" && CARDS.some(a.test);
+    });
+    if (present.length < 2) { els.avail.hidden = true; return; }
+
+    var label = document.createElement("span");
+    label.className = "avail-label";
+    label.textContent = "Show";
+    els.avail.appendChild(label);
+
+    present.concat(AVAIL[AVAIL.length - 1]).forEach(function (a) {
+      var b = document.createElement("button");
+      b.className = "chip";
+      b.type = "button";
+      b.setAttribute("aria-pressed", String(a.key === state.avail));
+      b.innerHTML = a.label + '<span class="n">' + CARDS.filter(a.test).length + "</span>";
+      b.addEventListener("click", function () {
+        state.avail = a.key;
+        pressOnly(els.avail, b);
+        refreshCounts();
+        render();
+      });
+      els.avail.appendChild(b);
+    });
+  }
+
+  /* Category and tag counts follow the availability filter, so a chip never
+     promises cards the current view cannot show. */
+  function refreshCounts() {
+    var pool = CARDS.filter(availTest(state.avail));
+    var catCounts = countBy(pool, "category");
+    var tagCounts = {};
+    pool.forEach(function (c) {
+      c.tags.forEach(function (tg) { tagCounts[tg] = (tagCounts[tg] || 0) + 1; });
+    });
+
+    Object.keys(catBtns).forEach(function (cat) {
+      var n = cat === "All" ? pool.length : (catCounts[cat] || 0);
+      $(".n", catBtns[cat]).textContent = n;
+      catBtns[cat].hidden = cat !== "All" && n === 0;
+    });
+    Object.keys(tagBtns).forEach(function (tg) {
+      var n = tagCounts[tg] || 0;
+      $(".n", tagBtns[tg]).textContent = n;
+      tagBtns[tg].hidden = n === 0;
+    });
+
+    // A filter that just went empty would otherwise strand the user on "no results".
+    if (state.category !== "All" && !catCounts[state.category]) {
+      state.category = "All";
+      pressOnly(els.cats, catBtns.All);
+    }
+    for (var tg of Array.from(state.tags)) {
+      if (!tagCounts[tg]) {
+        state.tags.delete(tg);
+        if (tagBtns[tg]) tagBtns[tg].setAttribute("aria-pressed", "false");
+      }
+    }
+  }
+
   function buildChips() {
-    var catCounts = countBy(CARDS, "category");
-    var cats = ["All"].concat(Object.keys(catCounts).sort(function (a, b) {
-      return catCounts[b] - catCounts[a];
+    buildAvailChips();
+
+    var allCatCounts = countBy(CARDS, "category");
+    var cats = ["All"].concat(Object.keys(allCatCounts).sort(function (a, b) {
+      return allCatCounts[b] - allCatCounts[a];
     }));
 
     cats.forEach(function (cat) {
@@ -815,57 +979,74 @@ footer.site {
       b.className = "chip";
       b.type = "button";
       b.setAttribute("aria-pressed", String(cat === "All"));
-      b.innerHTML = cat + '<span class="n">' + (cat === "All" ? CARDS.length : catCounts[cat]) + "</span>";
+      b.innerHTML = cat + '<span class="n">0</span>';
       b.addEventListener("click", function () {
         state.category = cat;
-        [].forEach.call(els.cats.children, function (c) { c.setAttribute("aria-pressed", "false"); });
-        b.setAttribute("aria-pressed", "true");
+        pressOnly(els.cats, b);
         render();
       });
+      catBtns[cat] = b;
       els.cats.appendChild(b);
     });
 
-    var tagCounts = {};
+    var allTagCounts = {};
     CARDS.forEach(function (c) {
-      c.tags.forEach(function (t) { tagCounts[t] = (tagCounts[t] || 0) + 1; });
+      c.tags.forEach(function (tg) { allTagCounts[tg] = (allTagCounts[tg] || 0) + 1; });
     });
 
-    Object.keys(tagCounts).sort(function (a, b) { return tagCounts[b] - tagCounts[a]; })
+    Object.keys(allTagCounts).sort(function (a, b) { return allTagCounts[b] - allTagCounts[a]; })
       .forEach(function (tag) {
         var b = document.createElement("button");
         b.className = "chip";
         b.type = "button";
         b.setAttribute("aria-pressed", "false");
-        b.innerHTML = tag + '<span class="n">' + tagCounts[tag] + "</span>";
+        b.innerHTML = tag + '<span class="n">0</span>';
         b.addEventListener("click", function () {
           if (state.tags.has(tag)) { state.tags.delete(tag); b.setAttribute("aria-pressed", "false"); }
           else { state.tags.add(tag); b.setAttribute("aria-pressed", "true"); }
           render();
         });
+        tagBtns[tag] = b;
         els.tags.appendChild(b);
       });
+
+    refreshCounts();
   }
 
   // ---------- lightbox ----------
 
   function openLightbox(card) {
+    var STATUS_LINE = {
+      forsale: "Listed on eBay",
+      collection: "Personal collection · not for sale",
+      sold: "Sold" + (card.priceNote ? " " + card.priceNote.replace(/^Sold\s*/, "") : "")
+    };
+
     var rows = [
       ["Category", card.category],
       ["Set", card.brand],
       ["Year", card.year],
       ["Print run", card.serial],
-      ["Condition", "Ungraded · Near mint or better"]
+      ["Condition", "Ungraded · Near mint or better"],
+      ["Status", STATUS_LINE[card.status]]
     ].filter(function (r) { return r[1]; });
 
+    var priceClass = card.status === "collection" ? " est" : (card.status === "sold" ? " past" : "");
+
     $("#lbBody").innerHTML =
-      '<img src="' + card.image + '" alt="' + card.title.replace(/"/g, "&quot;") + '">' +
+      '<img src="' + card.image + '" alt="' + esc(card.title) + '">' +
       '<div class="lb-meta">' +
-        "<h3>" + card.title + "</h3>" +
-        '<span class="price">' + card.priceLabel + "</span>" +
+        "<h3>" + esc(card.title) + "</h3>" +
+        '<span class="price' + priceClass + '">' + card.priceLabel +
+          (card.priceNote ? ' <span class="price-note">' + esc(card.priceNote) + "</span>" : "") +
+        "</span>" +
+        (card.note ? '<p class="lb-note">' + esc(card.note) + "</p>" : "") +
         "<dl>" + rows.map(function (r) {
-          return "<dt>" + r[0] + "</dt><dd>" + r[1] + "</dd>";
+          return "<dt>" + r[0] + "</dt><dd>" + esc(r[1]) + "</dd>";
         }).join("") + "</dl>" +
-        '<a class="btn gold" href="' + card.url + '" target="_blank" rel="noopener">Buy it on eBay</a>' +
+        (card.url
+          ? '<a class="btn gold" href="' + card.url + '" target="_blank" rel="noopener">Buy it on eBay</a>'
+          : "") +
       "</div>";
 
     els.lb.setAttribute("open", "");
@@ -894,11 +1075,23 @@ footer.site {
       if (loc) loc.textContent = "Ships from " + DATA.store.location;
     }
 
-    $("#statCount").textContent = CARDS.length;
+    var owned = CARDS.filter(function (c) { return c.status === "collection"; });
+
+    $("#statCount").textContent = DATA.count != null ? DATA.count : CARDS.length;
     $("#statValue").textContent = "$" + Math.round(DATA.totalValue || 0).toLocaleString("en-US");
     $("#statAuto").textContent = CARDS.filter(function (c) {
       return c.tags.indexOf("Autograph") > -1;
     }).length;
+
+    if (owned.length) {
+      $("#statOwnedWrap").hidden = false;
+      $("#statOwned").textContent = owned.length;
+      var note = $("#heroNote");
+      note.hidden = false;
+      note.textContent =
+        owned.length + (owned.length === 1 ? " card is" : " cards are") +
+        " in the personal collection — shown here for reference, not for sale.";
+    }
     var upd = $("#updated");
     if (upd && DATA.updated) {
       upd.textContent = new Date(DATA.updated + "T12:00:00").toLocaleDateString("en-US", {
@@ -925,9 +1118,7 @@ footer.site {
       state.category = "All";
       state.tags.clear();
       els.search.value = "";
-      [].forEach.call(els.cats.children, function (c, i) {
-        c.setAttribute("aria-pressed", String(i === 0));
-      });
+      pressOnly(els.cats, catBtns.All);
       [].forEach.call(els.tags.children, function (c) { c.setAttribute("aria-pressed", "false"); });
       render();
     });
