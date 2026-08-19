@@ -1,27 +1,31 @@
 #!/usr/bin/env python3
 """
-Main Event Card Vault — data builder.
+Main Event Card Vault — site builder.
 
-Reads build/raw_listings.tsv (scraped from eBay Seller Hub) and writes:
-  data/listings.json   -- machine-readable feed
-  data/listings.js     -- same data as a JS global, so the site works from file://
+Inputs
+  build/raw_listings.tsv   live active eBay listings (see README for the scrape)
+  build/collection.tsv     cards NOT listed on eBay — owned-but-not-for-sale, and sold
+  build/template.html      the page shell, with a __MECV_DATA__ placeholder
 
-Refresh flow:
-  1. Re-scrape active listings (see README "Refreshing the inventory").
-  2. Overwrite build/raw_listings.tsv.
-  3. python3 build/build_site.py
+Outputs
+  index.html               the deployed page (generated — never hand-edit)
+  listings.json            the same feed, published for reference
+
+Run:  python3 build/build_site.py
 """
 
 import csv
 import json
 import re
-from datetime import date
+from datetime import date, datetime
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 RAW = ROOT / "build" / "raw_listings.tsv"
-OUT_JSON = ROOT / "data" / "listings.json"
-OUT_JS = ROOT / "data" / "listings.js"
+COLLECTION = ROOT / "build" / "collection.tsv"
+TEMPLATE = ROOT / "build" / "template.html"
+OUT_HTML = ROOT / "index.html"
+OUT_JSON = ROOT / "listings.json"
 
 STORE_URL = "https://www.ebay.com/str/maineventcardvault"
 
@@ -31,18 +35,23 @@ WWE_WORDS = [
     "rhea ripley", "liv morgan", "cody rhodes", "roxanne perez", "seth rollins",
     "jey uso", "alexa bliss", "tiffany stratton", "stephanie vaquer", "giulia",
     "jacob fatu", "joe hendry", "damian priest", "aleister black", "kendal grey",
-    "ciampa", "gargano", "irs", "royalty",
+    "ciampa", "gargano", "irs", "royalty", "charlotte flair", "john cena",
+    "rhonda rousey", "ronda rousey", "chris sabin", "cameron grimes",
+    "cowboy bob orton", "channing lorenzo", "carmelo hayes", "oba femi",
+    "talla tonga", "raquel rodriguez", "wrestling",
 ]
 MARVEL_WORDS = ["marvel", "moon knight", "wolverine", "spider-man", "x-men"]
 BASKETBALL_WORDS = [
     "mavericks", "nba", "lakers", "celtics", "cooper flagg", "clutch gene",
-    "inception", "cactus jack",
+    "inception", "cactus jack", "chris paul",
 ]
 FOOTBALL_WORDS = ["chiefs", "nfl", "xavier worthy", "resurgence", "49ers", "cowboys"]
 BASEBALL_WORDS = [
     "mlb", "brewers", "braves", "pirates", "red sox", "angels", "imanaga",
     "zach neto", "misiorowski", "acuna", "roman anthony", "konnor griffin",
-    "stadium club", "tribute", "topps now",
+    "stadium club", "tribute", "topps now", "yankees", "padres", "twins", "mets",
+    "expos", "giants", "phillies", "orioles", "blue jays", "cubs",
+    "greg maddux", "paul skenes", "anthony rizzo", "aaron judge",
 ]
 
 CATEGORY_RULES = [
@@ -104,59 +113,154 @@ def brand_of(title: str):
         "topps cosmic chrome", "topps chrome update", "topps chrome",
         "topps stadium club", "topps inception", "topps resurgence",
         "topps tribute", "topps universe", "topps royalty", "topps now",
-        "topps marvel", "topps",
+        "topps marvel", "topps", "donruss optic", "donruss", "panini prizm",
+        "panini", "score", "pinnacle", "upper deck", "bowman",
     ]:
         if b in low:
             return b.title().replace("Topps Now", "Topps NOW")
     return "Other"
 
 
-def bundle(data):
-    """Write a single self-contained HTML file (nice for previewing / emailing)."""
-    html = (ROOT / "index.html").read_text(encoding="utf-8")
-    css = (ROOT / "assets" / "style.css").read_text(encoding="utf-8")
-    js = (ROOT / "assets" / "app.js").read_text(encoding="utf-8")
+def money(n) -> str:
+    return f"${n:,.2f}"
 
-    html = html.replace(
-        '<link rel="stylesheet" href="assets/style.css">',
-        "<style>\n" + css + "\n</style>",
-    )
-    html = html.replace(
-        '<script src="data/listings.js"></script>\n<script src="assets/app.js"></script>',
-        "<script>window.MECV_DATA = " + json.dumps(data) + ";</script>\n"
-        "<script>\n" + js + "\n</script>",
-    )
-    (ROOT / "main-event-card-vault.html").write_text(html, encoding="utf-8")
+
+def slugify(text: str) -> str:
+    s = re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")
+    return s[:60] or "card"
+
+
+def photo_urls(photo: str):
+    """
+    A collection row's `photo` field accepts three forms:
+      ebay:<imageKey>    -> hotlinked from i.ebayimg.com, same as the live listings
+      assets/cards/x.jpg -> a file committed to this repo
+      https://...        -> any absolute URL
+    Returns (fullsize, thumb).
+    """
+    photo = (photo or "").strip()
+    if not photo:
+        return "", ""
+    if photo.startswith("ebay:"):
+        key = photo[5:].strip()
+        if not key:
+            return "", ""
+        base = f"https://i.ebayimg.com/images/g/{key}/"
+        # s-l960 for thumbs, s-l1600 for the lightbox: eBay fits inside the box, so a
+        # portrait card at s-l500 comes back only ~280-380px wide and looks soft.
+        return base + "s-l1600.jpg", base + "s-l960.jpg"
+    return photo, photo
+
+
+def pretty_month(iso: str) -> str:
+    try:
+        return datetime.strptime(iso.strip(), "%Y-%m-%d").strftime("%b %Y")
+    except Exception:
+        return iso.strip()
+
+
+def read_listings():
+    """Active eBay listings -> for-sale cards."""
+    rows = []
+    if not RAW.exists():
+        return rows
+    with RAW.open(newline="", encoding="utf-8") as fh:
+        for r in csv.DictReader(fh, delimiter="\t"):
+            title = (r.get("title") or "").strip()
+            if not title:
+                continue
+            key = (r.get("imageKey") or "").strip()
+            price = float(r["price"])
+            item_id = r["itemId"].strip()
+            rows.append({
+                "id": item_id,
+                "status": "forsale",
+                "title": title,
+                "price": price,
+                "priceLabel": money(price),
+                "priceNote": "",
+                "url": f"https://www.ebay.com/itm/{item_id}",
+                "image": f"https://i.ebayimg.com/images/g/{key}/s-l1600.jpg" if key else "",
+                "thumb": f"https://i.ebayimg.com/images/g/{key}/s-l960.jpg" if key else "",
+                "sku": (r.get("sku") or "").strip(),
+                "note": "",
+            })
+    return rows
+
+
+def read_collection():
+    """Cards that are not on eBay right now: owned-not-for-sale, and previously sold."""
+    rows = []
+    if not COLLECTION.exists():
+        return rows
+    with COLLECTION.open(newline="", encoding="utf-8") as fh:
+        reader = csv.DictReader(fh, delimiter="\t")
+        for lineno, r in enumerate(reader, start=2):
+            # A stray tab silently shifts every later column, so fail loudly instead.
+            if None in r or any(v is None for v in r.values()):
+                raise SystemExit(
+                    f"collection.tsv line {lineno}: expected {len(reader.fieldnames)} "
+                    f"tab-separated columns — check for a missing or extra tab.\n"
+                    f"  {r.get('title') or list(r.values())[:2]}"
+                )
+            title = (r.get("title") or "").strip()
+            if not title or title.startswith("#"):
+                continue
+            status = (r.get("status") or "collection").strip().lower()
+            if status not in ("collection", "sold"):
+                status = "collection"
+
+            est = (r.get("estValue") or "").strip()
+            est_val = float(est.replace("$", "").replace(",", "")) if est else None
+            sold = (r.get("soldPrice") or "").strip()
+            sold_val = float(sold.replace("$", "").replace(",", "")) if sold else None
+            comp_date = (r.get("compDate") or "").strip()
+            sold_date = (r.get("soldDate") or "").strip()
+
+            if status == "sold":
+                shown = sold_val if sold_val is not None else est_val
+                label = money(shown) if shown is not None else "Sold"
+                note = "Sold " + pretty_month(sold_date) if sold_date else "Sold"
+            else:
+                shown = est_val
+                label = money(shown) if shown is not None else "Not for sale"
+                note = ("Est. value" + (" · " + pretty_month(comp_date) if comp_date else "")
+                        if shown is not None else "")
+
+            image, thumb = photo_urls(r.get("photo"))
+            rows.append({
+                "id": (r.get("sku") or "").strip() or slugify(title),
+                "status": status,
+                "title": title,
+                "price": shown if shown is not None else 0.0,
+                "priceLabel": label,
+                "priceNote": note,
+                "url": "",
+                "image": image,
+                "thumb": thumb,
+                "sku": (r.get("sku") or "").strip(),
+                "note": (r.get("notes") or "").strip(),
+            })
+    return rows
+
+
+def enrich(card):
+    title = card["title"]
+    card["category"] = categorize(title)
+    card["brand"] = brand_of(title)
+    card["year"] = year_of(title)
+    card["serial"] = serial_of(title)
+    card["tags"] = tags_of(title)
+    return card
 
 
 def build():
-    rows = []
-    with RAW.open(newline="", encoding="utf-8") as fh:
-        for r in csv.DictReader(fh, delimiter="\t"):
-            title = (r["title"] or "").strip()
-            if not title:
-                continue
-            key = (r["imageKey"] or "").strip()
-            price = float(r["price"])
-            rows.append({
-                "id": r["itemId"].strip(),
-                "title": title,
-                "price": price,
-                "priceLabel": f"${price:,.2f}",
-                "url": f"https://www.ebay.com/itm/{r['itemId'].strip()}",
-                "image": f"https://i.ebayimg.com/images/g/{key}/s-l1600.jpg" if key else "",
-                # s-l960 rather than s-l500: eBay fits the image inside the box, so a
-                # portrait card at s-l500 comes back only ~280-380px wide and looks soft.
-                "thumb": f"https://i.ebayimg.com/images/g/{key}/s-l960.jpg" if key else "",
-                "sku": (r.get("sku") or "").strip(),
-                "category": categorize(title),
-                "brand": brand_of(title),
-                "year": year_of(title),
-                "serial": serial_of(title),
-                "tags": tags_of(title),
-            })
+    cards = [enrich(c) for c in read_listings() + read_collection()]
+    cards.sort(key=lambda c: (0 if c["status"] == "forsale" else 1, -c["price"]))
 
-    rows.sort(key=lambda c: -c["price"])
+    for_sale = [c for c in cards if c["status"] == "forsale"]
+    owned = [c for c in cards if c["status"] == "collection"]
+    sold = [c for c in cards if c["status"] == "sold"]
 
     data = {
         "store": {
@@ -169,25 +273,30 @@ def build():
             "shipping": "$5.99 flat, USPS Ground Advantage — $0.30 each additional card",
         },
         "updated": date.today().isoformat(),
-        "count": len(rows),
-        "totalValue": round(sum(c["price"] for c in rows), 2),
-        "cards": rows,
+        "count": len(for_sale),
+        "collectionCount": len(owned),
+        "soldCount": len(sold),
+        "totalValue": round(sum(c["price"] for c in for_sale), 2),
+        "collectionValue": round(sum(c["price"] for c in owned), 2),
+        "cards": cards,
     }
 
-    OUT_JSON.parent.mkdir(parents=True, exist_ok=True)
+    payload = json.dumps(data)
+    tpl = TEMPLATE.read_text(encoding="utf-8")
+    if "__MECV_DATA__" not in tpl:
+        raise SystemExit("build/template.html is missing the __MECV_DATA__ placeholder")
+    OUT_HTML.write_text(tpl.replace("__MECV_DATA__", payload), encoding="utf-8")
     OUT_JSON.write_text(json.dumps(data, indent=2), encoding="utf-8")
-    OUT_JS.write_text(
-        "// Generated by build/build_site.py — do not edit by hand.\n"
-        "window.MECV_DATA = " + json.dumps(data, indent=2) + ";\n",
-        encoding="utf-8",
-    )
-
-    bundle(data)
 
     cats = {}
-    for c in rows:
+    for c in cards:
         cats[c["category"]] = cats.get(c["category"], 0) + 1
-    print(f"{len(rows)} cards  ·  ${data['totalValue']:,.2f} total")
+    print(f"{len(for_sale)} for sale  ·  {money(data['totalValue'])}")
+    if owned:
+        print(f"{len(owned)} in the collection  ·  {money(data['collectionValue'])} est.")
+    if sold:
+        print(f"{len(sold)} sold")
+    print(f"{len(cards)} cards total")
     for k, v in sorted(cats.items(), key=lambda kv: -kv[1]):
         print(f"  {k:<12} {v}")
 

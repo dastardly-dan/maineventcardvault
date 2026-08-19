@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Main Event Card Vault — WWE, Marvel &amp; Sports Cards</title>
+<meta name="description" content="WWE, Marvel and sports trading cards — singles, on-card autographs and numbered parallels. Every card ungraded and near mint or better. Ships from Strasburg, Virginia.">
+<meta property="og:title" content="Main Event Card Vault">
+<meta property="og:description" content="WWE, Marvel and sports cards — autographs, numbered parallels and rookies. New listings weekly.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#081524">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Main Event Card Vault — storefront styles */
+
+:root {
+  /* Brand palette lifted from the existing Main Event Card Vault logo + landing page */
+  --bg: #081524;
+  --bg-2: #0d1f38;
+  --panel: #132845;
+  --panel-2: #1b3652;
+  --line: #24405f;
+  --line-2: #35597e;
+  --ink: #e8edf4;
+  --ink-2: #b7c6d8;
+  --ink-3: #8397ae;
+  --gold: #e6be55;
+  --gold-2: #f1d07a;
+  --gold-dim: #c9a13f;
+  --crimson: #d23c46;
+  --green: #5ec98a;
+  --radius: 14px;
+  --shadow: 0 10px 30px rgba(3, 9, 17, .6);
+  --maxw: 1240px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(1100px 600px at 50% -180px, #1b3652 0%, transparent 70%),
+    var(--bg);
+  color: var(--ink);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; }
+
+.wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 22px;
+}
+
+.display {
+  font-family: "Bebas Neue", "Oswald", "Haettenschweiler", "Arial Narrow", sans-serif;
+  letter-spacing: .04em;
+  font-weight: 400;
+}
+
+/* ---------- header ---------- */
+
+header.site {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(8, 21, 36, .88);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  height: 66px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  text-decoration: none;
+  margin-right: auto;
+}
+
+.mark {
+  width: 38px;
+  height: 38px;
+  flex: none;
+  border-radius: 9px;
+  display: block;
+  object-fit: contain;
+  box-shadow: 0 2px 12px rgba(230, 190, 85, .22);
+}
+
+.brand-text { display: flex; flex-direction: column; line-height: 1.05; }
+.brand-text b { font-size: 20px; letter-spacing: .06em; font-weight: 400; }
+.brand-text span {
+  font-size: 10px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+nav.top { display: flex; gap: 22px; }
+nav.top a {
+  color: var(--ink-2);
+  text-decoration: none;
+  font-size: 14px;
+  padding: 6px 0;
+  border-bottom: 1.5px solid transparent;
+}
+nav.top a:hover { color: var(--ink); border-bottom-color: var(--gold); }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--line-2);
+  background: var(--panel-2);
+  color: var(--ink);
+  padding: 9px 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: .16s ease;
+  white-space: nowrap;
+}
+.btn:hover { border-color: var(--gold); color: var(--gold); }
+
+.btn.gold {
+  background: linear-gradient(180deg, var(--gold-2) 0%, var(--gold) 100%);
+  border-color: transparent;
+  color: #081524;
+  font-weight: 700;
+}
+.btn.gold:hover { color: #081524; filter: brightness(1.08); }
+
+/* ---------- hero ---------- */
+
+.hero { padding: 62px 0 34px; text-align: center; }
+
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0 0 14px;
+}
+
+.hero h1 {
+  font-size: clamp(44px, 8.5vw, 88px);
+  margin: 0 0 14px;
+  line-height: .95;
+}
+.hero h1 em { font-style: normal; color: var(--gold); }
+
+.hero p.lede {
+  max-width: 640px;
+  margin: 0 auto 28px;
+  color: var(--ink-2);
+  font-size: 17px;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+.stat {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 12px 22px;
+  min-width: 118px;
+}
+.stat b { display: block; font-size: 24px; line-height: 1.2; }
+.stat span {
+  font-size: 10px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+/* ---------- controls ---------- */
+
+.controls {
+  position: sticky;
+  top: 66px;
+  z-index: 40;
+  background: rgba(8, 21, 36, .92);
+  backdrop-filter: blur(14px);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 14px 0;
+}
+
+.controls-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.search {
+  position: relative;
+  flex: 1 1 260px;
+  min-width: 210px;
+}
+.search input {
+  width: 100%;
+  background: var(--panel);
+  border: 1px solid var(--line-2);
+  border-radius: 999px;
+  color: var(--ink);
+  padding: 11px 16px 11px 40px;
+  font-size: 15px;
+  font-family: inherit;
+}
+.search input:focus { outline: none; border-color: var(--gold); }
+.search svg {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  fill: var(--ink-3);
+  pointer-events: none;
+}
+
+select.sort {
+  background: var(--panel);
+  border: 1px solid var(--line-2);
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 11px 14px;
+  font-size: 14px;
+  font-family: inherit;
+  cursor: pointer;
+}
+select.sort:focus { outline: none; border-color: var(--gold); }
+
+.chips { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+
+.chip {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  color: var(--ink-2);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 13px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: .14s ease;
+}
+.chip:hover { border-color: var(--line-2); color: var(--ink); }
+.chip[aria-pressed="true"] {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #081524;
+  font-weight: 600;
+}
+.chip .n { opacity: .6; margin-left: 5px; font-size: 12px; }
+
+.chip-sep {
+  width: 1px;
+  align-self: stretch;
+  background: var(--line);
+  margin: 2px 4px;
+}
+
+/* ---------- grid ---------- */
+
+main { padding: 34px 0 70px; }
+
+.result-line {
+  color: var(--ink-3);
+  font-size: 13px;
+  margin: 0 0 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.result-line button {
+  background: none;
+  border: none;
+  color: var(--gold);
+  cursor: pointer;
+  font: inherit;
+  padding: 0;
+  text-decoration: underline;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(238px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--line-2);
+  box-shadow: var(--shadow);
+}
+
+.shot {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  background: #050e19;
+  cursor: zoom-in;
+  border: none;
+  padding: 0;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+.shot img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  transition: transform .3s ease;
+}
+.card:hover .shot img { transform: scale(1.045); }
+
+.shot .fallback {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: var(--ink-3);
+  font-size: 12px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.ribbon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  max-width: calc(100% - 20px);
+}
+
+.tag {
+  font-size: 10px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: rgba(8, 21, 36, .84);
+  border: 1px solid var(--line-2);
+  color: var(--ink-2);
+  backdrop-filter: blur(4px);
+}
+.tag.auto { border-color: var(--gold-dim); color: var(--gold); }
+.tag.num { border-color: #4a6fa8; color: #8fb6ea; }
+.tag.rc { border-color: #4a8a5f; color: var(--green); }
+.tag.ssp { border-color: #9a3f47; color: #ef7f88; }
+
+.card-body {
+  padding: 14px 15px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.card-cat {
+  font-size: 10px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.card-title {
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 0;
+  font-weight: 500;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-foot {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding-top: 4px;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: -.01em;
+}
+
+.buy {
+  font-size: 12px;
+  padding: 7px 13px;
+  border-radius: 999px;
+  border: 1px solid var(--line-2);
+  text-decoration: none;
+  color: var(--ink-2);
+  white-space: nowrap;
+  transition: .14s ease;
+}
+.buy:hover { background: var(--gold); border-color: var(--gold); color: #081524; }
+
+.empty {
+  text-align: center;
+  padding: 70px 20px;
+  color: var(--ink-3);
+}
+
+/* ---------- availability ---------- */
+
+.avail-row { align-items: center; }
+.avail-label {
+  font-size: 10px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-right: 2px;
+}
+
+.card.sold .shot img { filter: saturate(.5); opacity: .78; }
+.card.sold .shot { background: #040b14; }
+
+.flag {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 10px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 4px 9px;
+  border-radius: 999px;
+  background: rgba(8, 21, 36, .86);
+  backdrop-filter: blur(4px);
+}
+.flag.keep { border: 1px solid var(--line-2); color: var(--ink-2); }
+.flag.gone { border: 1px solid #9a3f47; color: #ef7f88; }
+
+.price-wrap { display: flex; flex-direction: column; line-height: 1.2; min-width: 0; }
+.price.est { color: var(--ink); }
+.price.past { color: var(--ink-2); }
+.price-note {
+  font-size: 11px;
+  color: var(--ink-3);
+  letter-spacing: .02em;
+  font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.foot-note { font-size: 12px; color: var(--ink-3); white-space: nowrap; }
+
+.hero-note {
+  color: var(--ink-3);
+  font-size: 13px;
+  margin: -18px 0 26px;
+}
+
+.lb-note {
+  color: var(--ink-2);
+  font-size: 13px;
+  border-left: 2px solid var(--line-2);
+  padding-left: 12px;
+  margin: 0 0 18px;
+}
+
+/* ---------- lightbox ---------- */
+
+.lb {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(4, 11, 20, .94);
+  backdrop-filter: blur(6px);
+  display: none;
+  place-items: center;
+  padding: 24px;
+}
+.lb[open] { display: grid; }
+
+.lb-inner {
+  max-width: 940px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 26px;
+  align-items: center;
+}
+.lb-inner img {
+  width: 100%;
+  max-height: 78vh;
+  object-fit: contain;
+  border-radius: 10px;
+}
+.lb-meta h3 { margin: 0 0 10px; font-size: 20px; line-height: 1.35; font-weight: 600; }
+.lb-meta .price { font-size: 30px; display: block; margin-bottom: 16px; }
+.lb-meta dl {
+  margin: 0 0 20px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 6px 16px;
+  font-size: 13px;
+}
+.lb-meta dt { color: var(--ink-3); }
+.lb-meta dd { margin: 0; }
+
+.lb-close {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  background: none;
+  border: none;
+  color: var(--ink-2);
+  font-size: 30px;
+  line-height: 1;
+  cursor: pointer;
+}
+.lb-close:hover { color: var(--gold); }
+
+/* ---------- info + footer ---------- */
+
+section.info {
+  border-top: 1px solid var(--line);
+  background: var(--bg-2);
+  padding: 56px 0;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 26px;
+}
+
+.info h2 {
+  font-size: 30px;
+  margin: 0 0 26px;
+  text-align: center;
+}
+
+.info-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 22px;
+}
+.info-card h3 {
+  font-size: 12px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0 0 10px;
+}
+.info-card p { margin: 0; color: var(--ink-2); font-size: 14.5px; }
+
+footer.site {
+  border-top: 1px solid var(--line);
+  padding: 34px 0;
+  color: var(--ink-3);
+  font-size: 13px;
+}
+.foot-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.socials { display: flex; gap: 16px; }
+.socials a { text-decoration: none; color: var(--ink-2); }
+.socials a:hover { color: var(--gold); }
+
+@media (max-width: 760px) {
+  .bar { height: 60px; gap: 12px; }
+  nav.top { display: none; }
+  .controls { top: 60px; }
+  .hero { padding: 42px 0 26px; }
+  .grid { grid-template-columns: repeat(auto-fill, minmax(158px, 1fr)); gap: 14px; }
+  .lb-inner { grid-template-columns: 1fr; gap: 16px; }
+  .lb-inner img { max-height: 52vh; }
+  .card-title { font-size: 13px; }
+  .price { font-size: 17px; }
+}
+
+</style>
+<link rel="icon" type="image/png" href="assets/favicon.png">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap bar">
+    <a class="brand" href="#top">
+      <img class="mark" src="assets/logo.png" alt="Main Event Card Vault logo" width="38" height="38">
+      <span class="brand-text">
+        <b class="display">MAIN EVENT</b>
+        <span>Card Vault</span>
+      </span>
+    </a>
+    <nav class="top">
+      <a href="#inventory">Inventory</a>
+      <a href="#about">Shipping &amp; Condition</a>
+      <a href="#follow">Follow</a>
+    </nav>
+    <a class="btn gold" data-store-link href="https://www.ebay.com/str/maineventcardvault" target="_blank" rel="noopener">Shop on eBay</a>
+  </div>
+</header>
+
+<div id="top" class="wrap hero">
+  <p class="eyebrow">WWE &middot; Marvel &middot; Baseball &middot; Basketball &middot; Football</p>
+  <h1 class="display">Cards worth<br><em>main eventing</em></h1>
+  <p class="lede">
+    On-card autographs, numbered parallels, short prints and rookies — every card ungraded,
+    near mint or better, shipped in a penny sleeve and toploader. Browse the full live
+    inventory below and buy straight from the eBay store.
+  </p>
+  <div class="stats">
+    <div class="stat"><b id="statCount">—</b><span>Cards for sale</span></div>
+    <div class="stat"><b id="statValue">—</b><span>Vault value</span></div>
+    <div class="stat" id="statOwnedWrap" hidden><b id="statOwned">—</b><span>In the collection</span></div>
+    <div class="stat"><b id="statAuto">—</b><span>Autographs</span></div>
+  </div>
+  <p class="hero-note" id="heroNote" hidden></p>
+  <a class="btn" href="#inventory">Browse the vault &darr;</a>
+</div>
+
+<div class="controls" id="inventory">
+  <div class="wrap">
+    <div class="controls-row">
+      <label class="search">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+        <input id="search" type="search" placeholder="Search a player, set or card number…" autocomplete="off">
+      </label>
+      <select class="sort" id="sort" aria-label="Sort cards">
+        <option value="price-desc">Value: high to low</option>
+        <option value="price-asc">Value: low to high</option>
+        <option value="title-asc">Name: A to Z</option>
+      </select>
+    </div>
+    <div class="chips avail-row" id="avail"></div>
+    <div class="chips" id="cats"></div>
+    <div class="chips" id="tagChips"></div>
+  </div>
+</div>
+
+<main class="wrap">
+  <p class="result-line">
+    <span id="resultCount"></span>
+    <button id="resetBtn" type="button" hidden>Clear filters</button>
+  </p>
+  <div class="grid" id="grid"></div>
+</main>
+
+<section class="info" id="about">
+  <div class="wrap">
+    <h2 class="display">How it works</h2>
+    <div class="info-grid">
+      <div class="info-card">
+        <h3>Condition</h3>
+        <p>Every card is ungraded and near mint or better unless the listing says otherwise. Photos are of the actual card you receive — no stock images.</p>
+      </div>
+      <div class="info-card">
+        <h3>Shipping</h3>
+        <p id="shipLine">$5.99 flat, USPS Ground Advantage — $0.30 each additional card</p>
+      </div>
+      <div class="info-card">
+        <h3>Packaging</h3>
+        <p>Penny sleeve, 35pt toploader, team bag, and rigid chipboard in a bubble mailer. Ships within two business days.</p>
+      </div>
+      <div class="info-card">
+        <h3>Buying</h3>
+        <p>Every purchase goes through eBay, so you get their buyer protection and tracked delivery. Offers welcome on most listings.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site" id="follow">
+  <div class="wrap foot-row">
+    <div>
+      <b>Main Event Card Vault</b><br>
+      <span id="locLine">Ships from Strasburg, Virginia</span><br>
+      <span style="opacity:.7">Inventory updated <span id="updated">—</span></span>
+    </div>
+    <div class="socials">
+      <a data-store-link href="https://www.ebay.com/str/maineventcardvault" target="_blank" rel="noopener">eBay Store</a>
+      <a id="fbLink" href="#" target="_blank" rel="noopener">Facebook</a>
+      <a id="igLink" href="#" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </div>
+</footer>
+
+<div class="lb" id="lightbox" role="dialog" aria-modal="true" aria-label="Card photo">
+  <button class="lb-close" type="button" aria-label="Close">&times;</button>
+  <div class="lb-inner" id="lbBody"></div>
+</div>
+
+<script>window.MECV_DATA = __MECV_DATA__;</script>
+<script>
+/* Main Event Card Vault — storefront behaviour */
+(function () {
+  "use strict";
+
+  var DATA = window.MECV_DATA || { cards: [], store: {} };
+  var CARDS = DATA.cards || [];
+
+  var state = {
+    q: "",
+    avail: "forsale",
+    category: "All",
+    tags: new Set(),
+    sort: "price-desc"
+  };
+
+  /* Availability: the storefront opens on what a buyer can actually buy.
+     The other views are one chip away. */
+  var AVAIL = [
+    { key: "forsale",    label: "For sale",   test: function (c) { return c.status === "forsale"; } },
+    { key: "collection", label: "Collection", test: function (c) { return c.status === "collection"; } },
+    { key: "sold",       label: "Sold",       test: function (c) { return c.status === "sold"; } },
+    { key: "all",        label: "Everything", test: function () { return true; } }
+  ];
+
+  function availTest(key) {
+    for (var i = 0; i < AVAIL.length; i++) { if (AVAIL[i].key === key) return AVAIL[i].test; }
+    return function () { return true; };
+  }
+
+  var FLAG = { collection: ["keep", "Not for sale"], sold: ["gone", "Sold"] };
+
+  var $ = function (sel, root) { return (root || document).querySelector(sel); };
+
+  var TAG_CLASS = {
+    Autograph: "auto",
+    Numbered: "num",
+    Rookie: "rc",
+    SSP: "ssp"
+  };
+
+  var els = {
+    grid: $("#grid"),
+    search: $("#search"),
+    sort: $("#sort"),
+    avail: $("#avail"),
+    cats: $("#cats"),
+    tags: $("#tagChips"),
+    count: $("#resultCount"),
+    reset: $("#resetBtn"),
+    lb: $("#lightbox")
+  };
+
+  // ---------- helpers ----------
+
+  function esc(s) {
+    return String(s == null ? "" : s)
+      .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
+
+  function money(n) {
+    return "$" + n.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  }
+
+  function countBy(list, key) {
+    var m = {};
+    list.forEach(function (c) { m[c[key]] = (m[c[key]] || 0) + 1; });
+    return m;
+  }
+
+  function matches(card) {
+    if (!availTest(state.avail)(card)) return false;
+    if (state.category !== "All" && card.category !== state.category) return false;
+    for (var t of state.tags) { if (card.tags.indexOf(t) === -1) return false; }
+    if (state.q) {
+      var hay = (card.title + " " + card.category + " " + (card.sku || "") + " " + card.tags.join(" ")).toLowerCase();
+      var terms = state.q.toLowerCase().split(/\s+/).filter(Boolean);
+      for (var i = 0; i < terms.length; i++) { if (hay.indexOf(terms[i]) === -1) return false; }
+    }
+    return true;
+  }
+
+  var SORTERS = {
+    "price-desc": function (a, b) { return b.price - a.price; },
+    "price-asc": function (a, b) { return a.price - b.price; },
+    "title-asc": function (a, b) { return a.title.localeCompare(b.title); }
+  };
+
+  // ---------- rendering ----------
+
+  function cardNode(card) {
+    var el = document.createElement("article");
+    el.className = "card" + (card.status !== "forsale" ? " " + card.status : "");
+
+    var ribbon = card.tags.slice(0, 3).map(function (t) {
+      return '<span class="tag ' + (TAG_CLASS[t] || "") + '">' + t + "</span>";
+    }).join("");
+
+    var alt = esc(card.title);
+    var flag = FLAG[card.status];
+    var priceClass = card.status === "collection" ? " est" : (card.status === "sold" ? " past" : "");
+
+    el.innerHTML =
+      '<button class="shot" type="button" aria-label="Enlarge photo of ' + alt + '">' +
+        '<span class="fallback">Photo loading</span>' +
+        (card.thumb ? '<img loading="lazy" src="' + card.thumb + '" alt="' + alt + '">' : "") +
+        (ribbon ? '<span class="ribbon">' + ribbon + "</span>" : "") +
+        (flag ? '<span class="flag ' + flag[0] + '">' + flag[1] + "</span>" : "") +
+      "</button>" +
+      '<div class="card-body">' +
+        '<span class="card-cat">' + card.category + (card.serial ? " &middot; " + card.serial : "") + "</span>" +
+        '<h3 class="card-title">' + esc(card.title) + "</h3>" +
+        '<div class="card-foot">' +
+          '<span class="price-wrap">' +
+            '<span class="price' + priceClass + '">' + card.priceLabel + "</span>" +
+            (card.priceNote ? '<span class="price-note">' + esc(card.priceNote) + "</span>" : "") +
+          "</span>" +
+          (card.url
+            ? '<a class="buy" href="' + card.url + '" target="_blank" rel="noopener">View on eBay &rarr;</a>'
+            : "") +
+        "</div>" +
+      "</div>";
+
+    $(".shot", el).addEventListener("click", function () { openLightbox(card); });
+
+    var img = $(".shot img", el);
+    var fb = $(".shot .fallback", el);
+    if (img) {
+      var settle = function () {
+        fb.textContent = img.naturalWidth ? "" : "Photo unavailable";
+        fb.style.display = img.naturalWidth ? "none" : "grid";
+      };
+      if (img.complete) settle();
+      else {
+        img.addEventListener("load", settle);
+        img.addEventListener("error", settle);
+      }
+    } else if (fb) {
+      fb.textContent = "No photo";
+    }
+    return el;
+  }
+
+  function render() {
+    var list = CARDS.filter(matches).sort(SORTERS[state.sort]);
+
+    els.grid.innerHTML = "";
+    if (!list.length) {
+      els.grid.innerHTML = '<p class="empty">No cards match that. Try clearing a filter.</p>';
+    } else {
+      var frag = document.createDocumentFragment();
+      list.forEach(function (c) { frag.appendChild(cardNode(c)); });
+      els.grid.appendChild(frag);
+    }
+
+    var total = list.reduce(function (s, c) { return s + c.price; }, 0);
+    els.count.textContent =
+      list.length + (list.length === 1 ? " card" : " cards") +
+      (list.length ? " · " + money(total) : "");
+
+    var filtered = state.q || state.category !== "All" || state.tags.size;
+    els.reset.hidden = !filtered;
+  }
+
+  // ---------- filter UI ----------
+
+  var catBtns = {}, tagBtns = {};
+
+  function pressOnly(container, btn) {
+    [].forEach.call(container.children, function (c) { c.setAttribute("aria-pressed", "false"); });
+    btn.setAttribute("aria-pressed", "true");
+  }
+
+  function buildAvailChips() {
+    // Only worth showing once there is something besides the store inventory.
+    var present = AVAIL.filter(function (a) {
+      return a.key !== "all" && CARDS.some(a.test);
+    });
+    if (present.length < 2) { els.avail.hidden = true; return; }
+
+    var label = document.createElement("span");
+    label.className = "avail-label";
+    label.textContent = "Show";
+    els.avail.appendChild(label);
+
+    present.concat(AVAIL[AVAIL.length - 1]).forEach(function (a) {
+      var b = document.createElement("button");
+      b.className = "chip";
+      b.type = "button";
+      b.setAttribute("aria-pressed", String(a.key === state.avail));
+      b.innerHTML = a.label + '<span class="n">' + CARDS.filter(a.test).length + "</span>";
+      b.addEventListener("click", function () {
+        state.avail = a.key;
+        pressOnly(els.avail, b);
+        refreshCounts();
+        render();
+      });
+      els.avail.appendChild(b);
+    });
+  }
+
+  /* Category and tag counts follow the availability filter, so a chip never
+     promises cards the current view cannot show. */
+  function refreshCounts() {
+    var pool = CARDS.filter(availTest(state.avail));
+    var catCounts = countBy(pool, "category");
+    var tagCounts = {};
+    pool.forEach(function (c) {
+      c.tags.forEach(function (tg) { tagCounts[tg] = (tagCounts[tg] || 0) + 1; });
+    });
+
+    Object.keys(catBtns).forEach(function (cat) {
+      var n = cat === "All" ? pool.length : (catCounts[cat] || 0);
+      $(".n", catBtns[cat]).textContent = n;
+      catBtns[cat].hidden = cat !== "All" && n === 0;
+    });
+    Object.keys(tagBtns).forEach(function (tg) {
+      var n = tagCounts[tg] || 0;
+      $(".n", tagBtns[tg]).textContent = n;
+      tagBtns[tg].hidden = n === 0;
+    });
+
+    // A filter that just went empty would otherwise strand the user on "no results".
+    if (state.category !== "All" && !catCounts[state.category]) {
+      state.category = "All";
+      pressOnly(els.cats, catBtns.All);
+    }
+    for (var tg of Array.from(state.tags)) {
+      if (!tagCounts[tg]) {
+        state.tags.delete(tg);
+        if (tagBtns[tg]) tagBtns[tg].setAttribute("aria-pressed", "false");
+      }
+    }
+  }
+
+  function buildChips() {
+    buildAvailChips();
+
+    var allCatCounts = countBy(CARDS, "category");
+    var cats = ["All"].concat(Object.keys(allCatCounts).sort(function (a, b) {
+      return allCatCounts[b] - allCatCounts[a];
+    }));
+
+    cats.forEach(function (cat) {
+      var b = document.createElement("button");
+      b.className = "chip";
+      b.type = "button";
+      b.setAttribute("aria-pressed", String(cat === "All"));
+      b.innerHTML = cat + '<span class="n">0</span>';
+      b.addEventListener("click", function () {
+        state.category = cat;
+        pressOnly(els.cats, b);
+        render();
+      });
+      catBtns[cat] = b;
+      els.cats.appendChild(b);
+    });
+
+    var allTagCounts = {};
+    CARDS.forEach(function (c) {
+      c.tags.forEach(function (tg) { allTagCounts[tg] = (allTagCounts[tg] || 0) + 1; });
+    });
+
+    Object.keys(allTagCounts).sort(function (a, b) { return allTagCounts[b] - allTagCounts[a]; })
+      .forEach(function (tag) {
+        var b = document.createElement("button");
+        b.className = "chip";
+        b.type = "button";
+        b.setAttribute("aria-pressed", "false");
+        b.innerHTML = tag + '<span class="n">0</span>';
+        b.addEventListener("click", function () {
+          if (state.tags.has(tag)) { state.tags.delete(tag); b.setAttribute("aria-pressed", "false"); }
+          else { state.tags.add(tag); b.setAttribute("aria-pressed", "true"); }
+          render();
+        });
+        tagBtns[tag] = b;
+        els.tags.appendChild(b);
+      });
+
+    refreshCounts();
+  }
+
+  // ---------- lightbox ----------
+
+  function openLightbox(card) {
+    var STATUS_LINE = {
+      forsale: "Listed on eBay",
+      collection: "Personal collection · not for sale",
+      sold: "Sold" + (card.priceNote ? " " + card.priceNote.replace(/^Sold\s*/, "") : "")
+    };
+
+    var rows = [
+      ["Category", card.category],
+      ["Set", card.brand],
+      ["Year", card.year],
+      ["Print run", card.serial],
+      ["Condition", "Ungraded · Near mint or better"],
+      ["Status", STATUS_LINE[card.status]]
+    ].filter(function (r) { return r[1]; });
+
+    var priceClass = card.status === "collection" ? " est" : (card.status === "sold" ? " past" : "");
+
+    $("#lbBody").innerHTML =
+      '<img src="' + card.image + '" alt="' + esc(card.title) + '">' +
+      '<div class="lb-meta">' +
+        "<h3>" + esc(card.title) + "</h3>" +
+        '<span class="price' + priceClass + '">' + card.priceLabel +
+          (card.priceNote ? ' <span class="price-note">' + esc(card.priceNote) + "</span>" : "") +
+        "</span>" +
+        (card.note ? '<p class="lb-note">' + esc(card.note) + "</p>" : "") +
+        "<dl>" + rows.map(function (r) {
+          return "<dt>" + r[0] + "</dt><dd>" + esc(r[1]) + "</dd>";
+        }).join("") + "</dl>" +
+        (card.url
+          ? '<a class="btn gold" href="' + card.url + '" target="_blank" rel="noopener">Buy it on eBay</a>'
+          : "") +
+      "</div>";
+
+    els.lb.setAttribute("open", "");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeLightbox() {
+    els.lb.removeAttribute("open");
+    document.body.style.overflow = "";
+    $("#lbBody").innerHTML = "";
+  }
+
+  // ---------- wiring ----------
+
+  function init() {
+    if (DATA.store) {
+      [].forEach.call(document.querySelectorAll("[data-store-link]"), function (a) {
+        a.href = DATA.store.ebay;
+      });
+      var fb = $("#fbLink"), ig = $("#igLink");
+      if (fb) fb.href = DATA.store.facebook;
+      if (ig) ig.href = DATA.store.instagram;
+      var ship = $("#shipLine");
+      if (ship) ship.textContent = DATA.store.shipping;
+      var loc = $("#locLine");
+      if (loc) loc.textContent = "Ships from " + DATA.store.location;
+    }
+
+    var owned = CARDS.filter(function (c) { return c.status === "collection"; });
+
+    $("#statCount").textContent = DATA.count != null ? DATA.count : CARDS.length;
+    $("#statValue").textContent = "$" + Math.round(DATA.totalValue || 0).toLocaleString("en-US");
+    $("#statAuto").textContent = CARDS.filter(function (c) {
+      return c.tags.indexOf("Autograph") > -1;
+    }).length;
+
+    if (owned.length) {
+      $("#statOwnedWrap").hidden = false;
+      $("#statOwned").textContent = owned.length;
+      var note = $("#heroNote");
+      note.hidden = false;
+      note.textContent =
+        owned.length + (owned.length === 1 ? " card is" : " cards are") +
+        " in the personal collection — shown here for reference, not for sale.";
+    }
+    var upd = $("#updated");
+    if (upd && DATA.updated) {
+      upd.textContent = new Date(DATA.updated + "T12:00:00").toLocaleDateString("en-US", {
+        month: "long", day: "numeric", year: "numeric"
+      });
+    }
+
+    buildChips();
+
+    var timer;
+    els.search.addEventListener("input", function (e) {
+      clearTimeout(timer);
+      var v = e.target.value;
+      timer = setTimeout(function () { state.q = v; render(); }, 120);
+    });
+
+    els.sort.addEventListener("change", function (e) {
+      state.sort = e.target.value;
+      render();
+    });
+
+    els.reset.addEventListener("click", function () {
+      state.q = "";
+      state.category = "All";
+      state.tags.clear();
+      els.search.value = "";
+      pressOnly(els.cats, catBtns.All);
+      [].forEach.call(els.tags.children, function (c) { c.setAttribute("aria-pressed", "false"); });
+      render();
+    });
+
+    els.lb.addEventListener("click", function (e) {
+      if (e.target === els.lb || e.target.classList.contains("lb-close")) closeLightbox();
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") closeLightbox();
+    });
+
+    render();
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
+})();
+
+</script>
+</body>
+</html>
