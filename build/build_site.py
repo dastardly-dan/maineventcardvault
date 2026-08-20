@@ -34,7 +34,8 @@ WWE_WORDS = [
     "wwe", "nxt", "smackdown", "raw", "wrestlemania", "lita", "triple h",
     "rhea ripley", "liv morgan", "cody rhodes", "roxanne perez", "seth rollins",
     "jey uso", "alexa bliss", "tiffany stratton", "stephanie vaquer", "giulia",
-    "jacob fatu", "joe hendry", "damian priest", "aleister black", "kendal grey",
+    "jacob fatu", "joe hendry", "damian priest", "damien priest", "superstar auto",
+    "aleister black", "kendal grey",
     "ciampa", "gargano", "irs", "royalty", "charlotte flair", "john cena",
     "rhonda rousey", "ronda rousey", "chris sabin", "cameron grimes",
     "cowboy bob orton", "channing lorenzo", "carmelo hayes", "oba femi",
@@ -43,15 +44,23 @@ WWE_WORDS = [
 MARVEL_WORDS = ["marvel", "moon knight", "wolverine", "spider-man", "x-men"]
 BASKETBALL_WORDS = [
     "mavericks", "nba", "lakers", "celtics", "cooper flagg", "clutch gene",
-    "inception", "cactus jack", "chris paul",
+    "inception", "cactus jack", "chris paul", "gilgeous", "thunder",
+    "oklahoma city", "pacers", "toni kukoc", "thomas sorber", "taelon peter",
+    "tajh ariza", "todd golden",
 ]
-FOOTBALL_WORDS = ["chiefs", "nfl", "xavier worthy", "resurgence", "49ers", "cowboys"]
+FOOTBALL_WORDS = [
+    "chiefs", "nfl", "xavier worthy", "resurgence", "49ers", "cowboys",
+    "vikings", "tai felton", "commanders", "titans", "packers", "buccaneers",
+    "tony pollard", "terry mclaurin", "tucker kraft", "tez johnson",
+]
 BASEBALL_WORDS = [
     "mlb", "brewers", "braves", "pirates", "red sox", "angels", "imanaga",
     "zach neto", "misiorowski", "acuna", "roman anthony", "konnor griffin",
     "stadium club", "tribute", "topps now", "yankees", "padres", "twins", "mets",
     "expos", "giants", "phillies", "orioles", "blue jays", "cubs",
     "greg maddux", "paul skenes", "anthony rizzo", "aaron judge",
+    "don mattingly", "travis bazzana", "trey yesavage", "athletics",
+    "tyler soderstrom", "cleveland guardians",
 ]
 
 CATEGORY_RULES = [
