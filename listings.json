@@ -13,7 +13,7 @@
   "collectionCount": 6,
   "soldCount": 1,
   "totalValue": 8437.01,
-  "collectionValue": 1090.97,
+  "collectionValue": 1405.98,
   "cards": [
     {
       "id": "318726608929",
@@ -768,6 +768,27 @@
       ]
     },
     {
+      "id": "2025-panini-prizm-travis-bazzana-color-blast-4-rc-rookie-ssp",
+      "status": "collection",
+      "title": "2025 Panini Prizm Travis Bazzana Color Blast #4 RC Rookie SSP Case Hit Guardians",
+      "price": 319.0,
+      "priceLabel": "$319.00",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "https://i.ebayimg.com/images/g/-tIAAeSwXeFqhlBP/s-l1600.jpg",
+      "thumb": "https://i.ebayimg.com/images/g/-tIAAeSwXeFqhlBP/s-l960.jpg",
+      "sku": "",
+      "note": "Color Blast case hit SSP. Raw comps 220-325; PSA 10s 330-380.",
+      "category": "Baseball",
+      "brand": "Panini Prizm",
+      "year": "2025",
+      "serial": null,
+      "tags": [
+        "Rookie",
+        "SSP"
+      ]
+    },
+    {
       "id": "2026-topps-chrome-wwe-naomi-156-red-cracked-ice-refractor-5-",
       "status": "collection",
       "title": "2026 Topps Chrome WWE Naomi #156 Red Cracked Ice Refractor 5/5",
@@ -847,26 +868,6 @@
       "tags": [
         "Rookie",
         "Refractor"
-      ]
-    },
-    {
-      "id": "2025-panini-prizm-baseball-travis-bazzana-fireworks-4-rc-roo",
-      "status": "collection",
-      "title": "2025 Panini Prizm Baseball Travis Bazzana Fireworks #4 RC Rookie Guardians",
-      "price": 3.99,
-      "priceLabel": "$3.99",
-      "priceNote": "Est. value \u00b7 Aug 2026",
-      "url": "",
-      "image": "https://i.ebayimg.com/images/g/-tIAAeSwXeFqhlBP/s-l1600.jpg",
-      "thumb": "https://i.ebayimg.com/images/g/-tIAAeSwXeFqhlBP/s-l960.jpg",
-      "sku": "",
-      "note": "Fireworks insert rookie.",
-      "category": "Baseball",
-      "brand": "Panini Prizm",
-      "year": "2025",
-      "serial": null,
-      "tags": [
-        "Rookie"
       ]
     }
   ]
