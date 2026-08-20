@@ -8,12 +8,12 @@
     "location": "Strasburg, Virginia",
     "shipping": "$5.99 flat, USPS Ground Advantage \u2014 $0.30 each additional card"
   },
-  "updated": "2026-08-19",
+  "updated": "2026-08-20",
   "count": 35,
-  "collectionCount": 0,
+  "collectionCount": 6,
   "soldCount": 1,
   "totalValue": 8437.01,
-  "collectionValue": 0,
+  "collectionValue": 1090.97,
   "cards": [
     {
       "id": "318726608929",
@@ -185,7 +185,7 @@
     {
       "id": "318703899081",
       "status": "forsale",
-      "title": "Damian Priest 1989 Superstar Auto /5",
+      "title": "Damien priest 1989 superstar auto /5",
       "price": 199.0,
       "priceLabel": "$199.00",
       "priceNote": "",
@@ -744,6 +744,128 @@
       "tags": [
         "Autograph",
         "Numbered",
+        "Rookie"
+      ]
+    },
+    {
+      "id": "2026-topps-chrome-the-national-nscc-shai-gilgeous-alexander-",
+      "status": "collection",
+      "title": "2026 Topps Chrome The National NSCC Shai Gilgeous-Alexander Red Refractor 3/5",
+      "price": 799.0,
+      "priceLabel": "$799.00",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "https://i.ebayimg.com/images/g/iJoAAeSwqn9qhkqB/s-l1600.jpg",
+      "thumb": "https://i.ebayimg.com/images/g/iJoAAeSwqn9qhkqB/s-l960.jpg",
+      "sku": "",
+      "note": "Red Refractor, one of five. Reigning MVP, straight out of a title season.",
+      "category": "Basketball",
+      "brand": "Topps Chrome",
+      "year": "2026",
+      "serial": null,
+      "tags": [
+        "Refractor"
+      ]
+    },
+    {
+      "id": "2026-topps-chrome-wwe-naomi-156-red-cracked-ice-refractor-5-",
+      "status": "collection",
+      "title": "2026 Topps Chrome WWE Naomi #156 Red Cracked Ice Refractor 5/5",
+      "price": 149.0,
+      "priceLabel": "$149.00",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "https://i.ebayimg.com/images/g/Ta4AAeSwv9Nqhkzd/s-l1600.jpg",
+      "thumb": "https://i.ebayimg.com/images/g/Ta4AAeSwv9Nqhkzd/s-l960.jpg",
+      "sku": "",
+      "note": "Red Cracked Ice, one of five.",
+      "category": "WWE",
+      "brand": "Topps Chrome",
+      "year": "2026",
+      "serial": null,
+      "tags": [
+        "Refractor"
+      ]
+    },
+    {
+      "id": "2026-leaf-vivid-don-mattingly-neon-auto-na-dm1-4-5-hit-man-i",
+      "status": "collection",
+      "title": "2026 Leaf Vivid Don Mattingly Neon Auto #NA-DM1 4/5 Hit Man Inscribed",
+      "price": 99.0,
+      "priceLabel": "$99.00",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "https://i.ebayimg.com/images/g/9LcAAeSwDqFqhk5~/s-l1600.jpg",
+      "thumb": "https://i.ebayimg.com/images/g/9LcAAeSwDqFqhk5~/s-l960.jpg",
+      "sku": "",
+      "note": "On-card autograph on clear acetate, inscribed Hit Man. One of five.",
+      "category": "Baseball",
+      "brand": "Other",
+      "year": "2026",
+      "serial": null,
+      "tags": [
+        "Autograph"
+      ]
+    },
+    {
+      "id": "2025-panini-certified-tai-felton-freshman-fabric-rpa-auto-pa",
+      "status": "collection",
+      "title": "2025 Panini Certified Tai Felton Freshman Fabric RPA Auto Patch 21/30 Vikings",
+      "price": 24.99,
+      "priceLabel": "$24.99",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "https://i.ebayimg.com/images/g/dvoAAeSwXm5qhlDl/s-l1600.jpg",
+      "thumb": "https://i.ebayimg.com/images/g/dvoAAeSwXm5qhlDl/s-l960.jpg",
+      "sku": "",
+      "note": "Rookie patch autograph, numbered 21 of 30.",
+      "category": "Football",
+      "brand": "Panini",
+      "year": "2025",
+      "serial": "/30",
+      "tags": [
+        "Autograph",
+        "Numbered"
+      ]
+    },
+    {
+      "id": "2026-topps-chrome-the-national-nscc-trey-yesavage-rc-rookie-",
+      "status": "collection",
+      "title": "2026 Topps Chrome The National NSCC Trey Yesavage RC Rookie Refractor Blue Jays",
+      "price": 14.99,
+      "priceLabel": "$14.99",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "https://i.ebayimg.com/images/g/9nkAAeSwLcVqhk-v/s-l1600.jpg",
+      "thumb": "https://i.ebayimg.com/images/g/9nkAAeSwLcVqhk-v/s-l960.jpg",
+      "sku": "",
+      "note": "National convention exclusive rookie refractor.",
+      "category": "Baseball",
+      "brand": "Topps Chrome",
+      "year": "2026",
+      "serial": null,
+      "tags": [
+        "Rookie",
+        "Refractor"
+      ]
+    },
+    {
+      "id": "2025-panini-prizm-baseball-travis-bazzana-fireworks-4-rc-roo",
+      "status": "collection",
+      "title": "2025 Panini Prizm Baseball Travis Bazzana Fireworks #4 RC Rookie Guardians",
+      "price": 3.99,
+      "priceLabel": "$3.99",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "https://i.ebayimg.com/images/g/-tIAAeSwXeFqhlBP/s-l1600.jpg",
+      "thumb": "https://i.ebayimg.com/images/g/-tIAAeSwXeFqhlBP/s-l960.jpg",
+      "sku": "",
+      "note": "Fireworks insert rookie.",
+      "category": "Baseball",
+      "brand": "Panini Prizm",
+      "year": "2025",
+      "serial": null,
+      "tags": [
         "Rookie"
       ]
     }
