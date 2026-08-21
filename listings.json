@@ -13,7 +13,7 @@
   "collectionCount": 100,
   "soldCount": 1,
   "totalValue": 8437.01,
-  "collectionValue": 1912.35,
+  "collectionValue": 1958.35,
   "cards": [
     {
       "id": "318726608929",
@@ -849,6 +849,27 @@
       ]
     },
     {
+      "id": "2026-topps-decades-wwe-1990s-kane-undisputed-champions-autog",
+      "status": "collection",
+      "title": "2026 Topps Decades WWE 1990s Kane Undisputed Champions Autograph #98A 71/99",
+      "price": 85.0,
+      "priceLabel": "$85.00",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/Kane_98A_front.jpg",
+      "thumb": "assets/cards/Kane_98A_front.jpg",
+      "sku": "",
+      "note": "On-card auto, numbered 71 of 99. No sale of this card on record: Kanes own /50 autos in this set did $100.37 and $115, and the comparable Rob Van Dam #87A /99 did $99.99.",
+      "category": "WWE",
+      "brand": "Topps",
+      "year": "2026",
+      "serial": "/99",
+      "tags": [
+        "Autograph",
+        "Numbered"
+      ]
+    },
+    {
       "id": "2026-topps-chrome-wwe-talla-tonga-rookie-autograph-cracked-i",
       "status": "collection",
       "title": "2026 Topps Chrome WWE Talla Tonga Rookie Autograph Cracked Ice #BCA-TTA 6/10",
@@ -888,27 +909,6 @@
       "tags": [
         "Numbered",
         "Refractor"
-      ]
-    },
-    {
-      "id": "2021-topps-wwe-undisputed-kane-grand-slam-champions-autograp",
-      "status": "collection",
-      "title": "2021 Topps WWE Undisputed Kane Grand Slam Champions Autograph Purple 71/99 #GA-K",
-      "price": 39.0,
-      "priceLabel": "$39.00",
-      "priceNote": "Est. value \u00b7 Jan 2026",
-      "url": "",
-      "image": "assets/cards/Kane_GA-K_front.jpg",
-      "thumb": "assets/cards/Kane_GA-K_front.jpg",
-      "sku": "",
-      "note": "On-card auto, numbered 71 of 99. Purple parallel; comps run $39-$69.",
-      "category": "WWE",
-      "brand": "Topps",
-      "year": "2021",
-      "serial": "/99",
-      "tags": [
-        "Autograph",
-        "Numbered"
       ]
     },
     {
