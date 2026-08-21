@@ -61,13 +61,35 @@ BASEBALL_WORDS = [
     "greg maddux", "paul skenes", "anthony rizzo", "aaron judge",
     "don mattingly", "travis bazzana", "trey yesavage", "athletics",
     "tyler soderstrom", "cleveland guardians",
+    # added 2026-08-21 with the _Not On Site batch
+    "dodgers", "rockies", "cardinals", "rays", "diamondbacks", "astros",
+    "reds", "marlins", "indians", "royals", "tigers", "white sox",
+    "stars of mlb", "stadium club", "worlds finest", "bowmans best",
+    "major league managers", "top prospects", "coming attraction",
+    "pedro martinez", "larry walker", "trea turner", "joey votto",
+    "max fried", "dylan cease", "luis severino", "christian walker",
+    "kevin alcantara", "thomas saggese", "seiya suzuki", "jacob wilson",
+    "moises ballesteros", "junior caminero", "jackson chourio",
+    "mookie betts", "freddie freeman", "pete alonso", "luke keaschall",
+    "steve carlton", "pie traynor", "nick pivetta", "merrill kelly",
+    "jermaine palacios", "matt williams", "bret saberhagen", "moises alou",
+    "gerald williams", "javier lopez", "tim wallach", "brad pennington",
+    "chris sale",
 ]
+
+# Non-Marvel comics, combat sports and soccer arrived with the 2026-08-21 batch.
+DC_WORDS = ["batman", "owlman", "metal universe"]
+UFC_WORDS = ["ufc", "chimaev"]
+SOCCER_WORDS = ["pitch kings", "la liga", "celta", "el-abdellaoui"]
 
 CATEGORY_RULES = [
     ("Marvel", MARVEL_WORDS),
+    ("DC", DC_WORDS),
+    ("UFC", UFC_WORDS),
     ("WWE", WWE_WORDS),
     ("Basketball", BASKETBALL_WORDS),
     ("Football", FOOTBALL_WORDS),
+    ("Soccer", SOCCER_WORDS),
     ("Baseball", BASEBALL_WORDS),
 ]
 
