@@ -1080,7 +1080,11 @@ const C = globalThis.MECVCore;
 
 const LS = 'mecv.shoot.v1';
 const DEFAULTS = {
-  clientId: '',            // Google OAuth client id (set once, on this device)
+  // Google OAuth client id for the "Shoot" Web application client in the
+  // main-event-card-vault project. Not a secret — a browser OAuth client id is
+  // public by design and is restricted to the two maineventcardvault.com
+  // origins registered against it. Overridable in Settings.
+  clientId: '1008068074362-0r86slmd5m4cp0cthti82bs6sur5a3cj.apps.googleusercontent.com',
   apiBase: '',             // optional Worker base URL for card identification
   apiKey: '',              // shared key for that Worker
   rootFolder: 'Sports Card Photos',
