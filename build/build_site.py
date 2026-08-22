@@ -76,7 +76,7 @@ BASEBALL_WORDS = [
     "steve carlton", "pie traynor", "nick pivetta", "merrill kelly",
     "jermaine palacios", "matt williams", "bret saberhagen", "moises alou",
     "gerald williams", "javier lopez", "tim wallach", "brad pennington",
-    "chris sale",
+    "chris sale", "adrian gonzalez",
 ]
 
 # Non-Marvel comics, combat sports and soccer arrived with the 2026-08-21 batch.
