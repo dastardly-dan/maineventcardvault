@@ -8,35 +8,13 @@
     "location": "Strasburg, Virginia",
     "shipping": "$5.99 flat, USPS Ground Advantage \u2014 $0.30 each additional card"
   },
-  "updated": "2026-08-21",
-  "count": 35,
+  "updated": "2026-08-22",
+  "count": 34,
   "collectionCount": 100,
-  "soldCount": 1,
-  "totalValue": 8437.01,
+  "soldCount": 2,
+  "totalValue": 6038.01,
   "collectionValue": 1958.35,
   "cards": [
-    {
-      "id": "318726608929",
-      "status": "forsale",
-      "title": "2026 Topps Chrome Konnor Griffin Gold Rookie Auto #RA-KG 03/50 Pirates RC",
-      "price": 2399.0,
-      "priceLabel": "$2,399.00",
-      "priceNote": "",
-      "url": "https://www.ebay.com/itm/318726608929",
-      "image": "https://i.ebayimg.com/images/g/H5sAAeSwAfJqfl-E/s-l1600.jpg",
-      "thumb": "https://i.ebayimg.com/images/g/H5sAAeSwAfJqfl-E/s-l960.jpg",
-      "sku": "",
-      "note": "",
-      "category": "Baseball",
-      "brand": "Topps Chrome",
-      "year": "2026",
-      "serial": "/50",
-      "tags": [
-        "Autograph",
-        "Numbered",
-        "Rookie"
-      ]
-    },
     {
       "id": "318638286490",
       "status": "forsale",
@@ -723,6 +701,28 @@
       "serial": null,
       "tags": [
         "Refractor"
+      ]
+    },
+    {
+      "id": "2026-topps-chrome-konnor-griffin-gold-rookie-auto-ra-kg-03-5",
+      "status": "sold",
+      "title": "2026 Topps Chrome Konnor Griffin Gold Rookie Auto #RA-KG 03/50 Pirates RC",
+      "price": 2399.0,
+      "priceLabel": "$2,399.00",
+      "priceNote": "Sold Aug 2026",
+      "url": "",
+      "image": "https://i.ebayimg.com/images/g/H5sAAeSwAfJqfl-E/s-l1600.jpg",
+      "thumb": "https://i.ebayimg.com/images/g/H5sAAeSwAfJqfl-E/s-l960.jpg",
+      "sku": "",
+      "note": "New biggest sale on the store. Routed through eBay Authenticity Guarantee.",
+      "category": "Baseball",
+      "brand": "Topps Chrome",
+      "year": "2026",
+      "serial": "/50",
+      "tags": [
+        "Autograph",
+        "Numbered",
+        "Rookie"
       ]
     },
     {
