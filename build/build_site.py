@@ -40,31 +40,23 @@ WWE_WORDS = [
     "rhonda rousey", "ronda rousey", "chris sabin", "cameron grimes",
     "cowboy bob orton", "channing lorenzo", "carmelo hayes", "oba femi",
     "talla tonga", "raquel rodriguez", "wrestling",
-    "cm punk", "drew mcintyre", "gunther", "mankind", "penta",
-    "el grande americano", "karmen petrovic", "tatum paxley", "aoife valkyrie",
-    "star portal", "platinum punk", "signalz", "scope", "streamline",
-    "main event autograph", "pillars of greatness", "festival fury",
-    "legends autograph", "equinox", "cactus jack", "nxt chrome",
 ]
 MARVEL_WORDS = ["marvel", "moon knight", "wolverine", "spider-man", "x-men"]
 BASKETBALL_WORDS = [
     "mavericks", "nba", "lakers", "celtics", "cooper flagg", "clutch gene",
     "inception", "cactus jack", "chris paul", "gilgeous", "thunder",
     "oklahoma city", "pacers", "toni kukoc", "thomas sorber", "taelon peter",
-    "tajh ariza", "todd golden", "shaquille o'neal", "shaquille oneal",
-    "patrick ewing", "orlando magic", "knicks", "legacy signatures",
+    "tajh ariza", "todd golden",
+    "knicks", "orlando magic", "ewing", "shaquille",
 ]
 FOOTBALL_WORDS = [
     "chiefs", "nfl", "xavier worthy", "resurgence", "49ers", "cowboys",
     "vikings", "tai felton", "commanders", "titans", "packers", "buccaneers",
     "tony pollard", "terry mclaurin", "tucker kraft", "tez johnson",
-    "dk metcalf", "steelers", "circuit breakers",
 ]
 BASEBALL_WORDS = [
     "mlb", "brewers", "braves", "pirates", "red sox", "angels", "imanaga",
     "zach neto", "misiorowski", "acuna", "roman anthony", "konnor griffin",
-    "kazuma okamoto", "jose reyes", "adrian gonzalez", "seth hernandez",
-    "cade horton", "luke keaschall", "immaculate", "75th diamond",
     "stadium club", "tribute", "topps now", "yankees", "padres", "twins", "mets",
     "expos", "giants", "phillies", "orioles", "blue jays", "cubs",
     "greg maddux", "paul skenes", "anthony rizzo", "aaron judge",
@@ -153,10 +145,8 @@ def brand_of(title: str):
         "topps cosmic chrome", "topps chrome update", "topps chrome",
         "topps stadium club", "topps inception", "topps resurgence",
         "topps tribute", "topps universe", "topps royalty", "topps now",
-        "topps marvel", "topps exalted", "topps finest", "topps decades",
-        "topps", "donruss optic", "donruss", "panini immaculate",
-        "panini certified", "panini prizm",
-        "panini", "score", "pinnacle", "upper deck", "bowman", "fleer", "leaf",
+        "topps marvel", "topps", "donruss optic", "donruss", "panini prizm",
+        "panini", "score", "pinnacle", "upper deck", "bowman",
     ]:
         if b in low:
             return b.title().replace("Topps Now", "Topps NOW")
@@ -173,12 +163,7 @@ def slugify(text: str) -> str:
 
 
 def back_photo(photo: str) -> str:
-    """
-    A card's back is the same file with `_front` swapped for `_back`, when it
-    exists on disk. Convention rather than a new TSV column, so no row has to be
-    edited and there is no column-count risk. eBay-hotlinked photos have no back
-    (the scrape only captures one image key).
-    """
+    """Same path with `_front` swapped for `_back`, when that file exists."""
     photo = (photo or "").strip()
     if not photo.startswith("assets/cards/") or "_front." not in photo:
         return ""
