@@ -40,23 +40,31 @@ WWE_WORDS = [
     "rhonda rousey", "ronda rousey", "chris sabin", "cameron grimes",
     "cowboy bob orton", "channing lorenzo", "carmelo hayes", "oba femi",
     "talla tonga", "raquel rodriguez", "wrestling",
+    "cm punk", "drew mcintyre", "gunther", "mankind", "penta",
+    "el grande americano", "karmen petrovic", "tatum paxley", "aoife valkyrie",
+    "star portal", "platinum punk", "signalz", "scope", "streamline",
+    "main event autograph", "pillars of greatness", "festival fury",
+    "legends autograph", "equinox", "cactus jack", "nxt chrome",
 ]
 MARVEL_WORDS = ["marvel", "moon knight", "wolverine", "spider-man", "x-men"]
 BASKETBALL_WORDS = [
     "mavericks", "nba", "lakers", "celtics", "cooper flagg", "clutch gene",
     "inception", "cactus jack", "chris paul", "gilgeous", "thunder",
     "oklahoma city", "pacers", "toni kukoc", "thomas sorber", "taelon peter",
-    "tajh ariza", "todd golden",
-    "knicks", "orlando magic", "ewing", "shaquille",
+    "tajh ariza", "todd golden", "shaquille o'neal", "shaquille oneal",
+    "patrick ewing", "orlando magic", "knicks", "legacy signatures",
 ]
 FOOTBALL_WORDS = [
     "chiefs", "nfl", "xavier worthy", "resurgence", "49ers", "cowboys",
     "vikings", "tai felton", "commanders", "titans", "packers", "buccaneers",
     "tony pollard", "terry mclaurin", "tucker kraft", "tez johnson",
+    "dk metcalf", "steelers", "circuit breakers",
 ]
 BASEBALL_WORDS = [
     "mlb", "brewers", "braves", "pirates", "red sox", "angels", "imanaga",
     "zach neto", "misiorowski", "acuna", "roman anthony", "konnor griffin",
+    "kazuma okamoto", "jose reyes", "adrian gonzalez", "seth hernandez",
+    "cade horton", "luke keaschall", "immaculate", "75th diamond",
     "stadium club", "tribute", "topps now", "yankees", "padres", "twins", "mets",
     "expos", "giants", "phillies", "orioles", "blue jays", "cubs",
     "greg maddux", "paul skenes", "anthony rizzo", "aaron judge",
@@ -104,7 +112,7 @@ def categorize(title: str) -> str:
 
 
 # --- attribute detection ------------------------------------------------
-SERIAL_RE = re.compile(r"(?:\b(\d{2,3})[/](\d{1,4})\b)|(?:\s/(\d{1,4})\b)")
+SERIAL_RE = re.compile(r"(?:\b(\d{1,3})[/](\d{1,4})\b)|(?:\s/(\d{1,4})\b)")
 
 
 def serial_of(title: str):
@@ -125,7 +133,7 @@ def tags_of(title: str):
         out.append("Numbered")
     if re.search(r"\brc\b|\brookie\b", low):
         out.append("Rookie")
-    if "relic" in low:
+    if "relic" in low or "patch" in low:
         out.append("Relic")
     if "ssp" in low or "case hit" in low:
         out.append("SSP")
@@ -145,8 +153,10 @@ def brand_of(title: str):
         "topps cosmic chrome", "topps chrome update", "topps chrome",
         "topps stadium club", "topps inception", "topps resurgence",
         "topps tribute", "topps universe", "topps royalty", "topps now",
-        "topps marvel", "topps", "donruss optic", "donruss", "panini prizm",
-        "panini", "score", "pinnacle", "upper deck", "bowman",
+        "topps marvel", "topps exalted", "topps finest", "topps decades",
+        "topps", "donruss optic", "donruss", "panini immaculate",
+        "panini certified", "panini prizm",
+        "panini", "score", "pinnacle", "upper deck", "bowman", "fleer", "leaf",
     ]:
         if b in low:
             return b.title().replace("Topps Now", "Topps NOW")
@@ -160,6 +170,20 @@ def money(n) -> str:
 def slugify(text: str) -> str:
     s = re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")
     return s[:60] or "card"
+
+
+def back_photo(photo: str) -> str:
+    """
+    A card's back is the same file with `_front` swapped for `_back`, when it
+    exists on disk. Convention rather than a new TSV column, so no row has to be
+    edited and there is no column-count risk. eBay-hotlinked photos have no back
+    (the scrape only captures one image key).
+    """
+    photo = (photo or "").strip()
+    if not photo.startswith("assets/cards/") or "_front." not in photo:
+        return ""
+    cand = photo.replace("_front.", "_back.")
+    return cand if (ROOT / cand).exists() else ""
 
 
 def photo_urls(photo: str):
@@ -214,6 +238,8 @@ def read_listings():
                 "url": f"https://www.ebay.com/itm/{item_id}",
                 "image": f"https://i.ebayimg.com/images/g/{key}/s-l1600.jpg" if key else "",
                 "thumb": f"https://i.ebayimg.com/images/g/{key}/s-l960.jpg" if key else "",
+                "imageBack": "",
+                "thumbBack": "",
                 "sku": (r.get("sku") or "").strip(),
                 "note": "",
             })
@@ -260,6 +286,8 @@ def read_collection():
                         if shown is not None else "")
 
             image, thumb = photo_urls(r.get("photo"))
+            back = back_photo(r.get("photo"))
+            image_back, thumb_back = photo_urls(back) if back else ("", "")
             rows.append({
                 "id": (r.get("sku") or "").strip() or slugify(title),
                 "status": status,
@@ -270,6 +298,8 @@ def read_collection():
                 "url": "",
                 "image": image,
                 "thumb": thumb,
+                "imageBack": image_back,
+                "thumbBack": thumb_back,
                 "sku": (r.get("sku") or "").strip(),
                 "note": (r.get("notes") or "").strip(),
             })

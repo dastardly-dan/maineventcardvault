@@ -523,7 +523,7 @@ main { padding: 34px 0 70px; }
   gap: 26px;
   align-items: center;
 }
-.lb-inner img {
+.lb-inner > img, .lb-inner .lb-figure img {
   width: 100%;
   max-height: 78vh;
   object-fit: contain;
@@ -540,6 +540,48 @@ main { padding: 34px 0 70px; }
 }
 .lb-meta dt { color: var(--ink-3); }
 .lb-meta dd { margin: 0; }
+
+.lb-figure { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.lb-flip {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+}
+.lb-flip button {
+  font-family: inherit;
+  font-size: 11px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  padding: 7px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--line-2);
+  background: transparent;
+  color: var(--ink-3);
+  cursor: pointer;
+  transition: .14s ease;
+}
+.lb-flip button:hover { color: var(--ink); border-color: var(--gold-dim); }
+.lb-flip button[aria-pressed="true"] {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #081524;
+  font-weight: 600;
+}
+
+.two-shot {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: 10px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: rgba(8, 21, 36, .84);
+  border: 1px solid var(--line-2);
+  color: var(--ink-3);
+  backdrop-filter: blur(4px);
+}
 
 .lb-close {
   position: absolute;
@@ -613,7 +655,7 @@ footer.site {
   .hero { padding: 42px 0 26px; }
   .grid { grid-template-columns: repeat(auto-fill, minmax(158px, 1fr)); gap: 14px; }
   .lb-inner { grid-template-columns: 1fr; gap: 16px; }
-  .lb-inner img { max-height: 52vh; }
+  .lb-inner > img, .lb-inner .lb-figure img { max-height: 52vh; }
   .card-title { font-size: 13px; }
   .price { font-size: 17px; }
 }
@@ -764,6 +806,7 @@ footer.site {
   var FLAG = { collection: ["keep", "Not for sale"], sold: ["gone", "Sold"] };
 
   var $ = function (sel, root) { return (root || document).querySelector(sel); };
+  var $$ = function (sel, root) { return (root || document).querySelectorAll(sel); };
 
   var TAG_CLASS = {
     Autograph: "auto",
@@ -839,6 +882,7 @@ footer.site {
         (card.thumb ? '<img loading="lazy" src="' + card.thumb + '" alt="' + alt + '">' : "") +
         (ribbon ? '<span class="ribbon">' + ribbon + "</span>" : "") +
         (flag ? '<span class="flag ' + flag[0] + '">' + flag[1] + "</span>" : "") +
+        (card.thumbBack ? '<span class="two-shot">Front &amp; back</span>' : "") +
       "</button>" +
       '<div class="card-body">' +
         '<span class="card-cat">' + card.category + (card.serial ? " &middot; " + card.serial : "") + "</span>" +
@@ -889,7 +933,7 @@ footer.site {
     var total = list.reduce(function (s, c) { return s + c.price; }, 0);
     els.count.textContent =
       list.length + (list.length === 1 ? " card" : " cards") +
-      (list.length ? " · " + money(total) : "");
+      (list.length && total > 0 ? " · " + money(total) : "");
 
     var filtered = state.q || state.category !== "All" || state.tags.size;
     els.reset.hidden = !filtered;
@@ -1033,8 +1077,17 @@ footer.site {
 
     var priceClass = card.status === "collection" ? " est" : (card.status === "sold" ? " past" : "");
 
+    var hasBack = !!card.imageBack;
     $("#lbBody").innerHTML =
-      '<img src="' + card.image + '" alt="' + esc(card.title) + '">' +
+      '<div class="lb-figure">' +
+        '<img id="lbShot" src="' + card.image + '" alt="' + esc(card.title) + '">' +
+        (hasBack
+          ? '<div class="lb-flip">' +
+              '<button type="button" data-side="front" aria-pressed="true">Front</button>' +
+              '<button type="button" data-side="back" aria-pressed="false">Back</button>' +
+            "</div>"
+          : "") +
+      "</div>" +
       '<div class="lb-meta">' +
         "<h3>" + esc(card.title) + "</h3>" +
         '<span class="price' + priceClass + '">' + card.priceLabel +
@@ -1048,6 +1101,20 @@ footer.site {
           ? '<a class="btn gold" href="' + card.url + '" target="_blank" rel="noopener">Buy it on eBay</a>'
           : "") +
       "</div>";
+
+    if (hasBack) {
+      var shot = $("#lbShot");
+      Array.prototype.forEach.call($$(".lb-flip button"), function (b) {
+        b.addEventListener("click", function () {
+          var side = b.getAttribute("data-side");
+          shot.src = side === "back" ? card.imageBack : card.image;
+          shot.alt = esc(card.title) + " — " + side;
+          Array.prototype.forEach.call($$(".lb-flip button"), function (o) {
+            o.setAttribute("aria-pressed", String(o === b));
+          });
+        });
+      });
+    }
 
     els.lb.setAttribute("open", "");
     document.body.style.overflow = "hidden";

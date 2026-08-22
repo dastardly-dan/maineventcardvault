@@ -1,0 +1,263 @@
+/* ============================================================
+   Main Event Card Vault — rating components
+   Drop into build/template.html inside the existing <style>.
+
+   Palette note: ratings use a single validated blue ramp so that GOLD keeps
+   meaning "money" everywhere on the site. Ramp checked with the dataviz
+   validator against the panel surface #132845 — monotone lightness, >=0.06
+   step gaps, light end clears 2:1 contrast, 6 deg hue spread.
+   ============================================================ */
+
+:root {
+  --rate-1: #305a87;   /* track / lowest step */
+  --rate-2: #4877b8;
+  --rate-3: #6294dd;   /* default fill */
+  --rate-4: #93b9ec;   /* strongest */
+}
+:root { --rate-track: #1d3556; }
+
+/* ---------- shared meter ---------- */
+
+.meter {
+  display: block;
+  position: relative;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--rate-track);
+  overflow: hidden;
+}
+.meter > i {
+  display: block;
+  height: 100%;
+  border-radius: 0 4px 4px 0;   /* 4px rounded data-end, square at baseline */
+  background: var(--rate-3);
+  transition: width .4s cubic-bezier(.22,.61,.36,1);
+}
+.meter.s1 > i { background: var(--rate-1); }
+.meter.s2 > i { background: var(--rate-2); }
+.meter.s3 > i { background: var(--rate-3); }
+.meter.s4 > i { background: var(--rate-4); }
+
+/* ---------- grid tile: compact strip ---------- */
+
+.rate-strip {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding-top: 9px;
+  border-top: 1px solid var(--line);
+}
+.rate-strip .mer {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -.01em;
+  color: var(--ink);
+  line-height: 1;
+}
+.rate-strip .mer small {
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--ink-3);
+  margin-left: 1px;
+}
+.rate-strip .meter { flex: 1; height: 4px; }
+.rate-strip .trend {
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-3);
+  white-space: nowrap;
+}
+.rate-strip .trend.up::before   { content: "\2191 "; color: var(--rate-4); }
+.rate-strip .trend.down::before { content: "\2193 "; color: var(--ink-3); }
+.rate-strip .conf-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  flex: none;
+  background: var(--rate-3);
+}
+.rate-strip .conf-dot.medium { background: var(--rate-2); }
+.rate-strip .conf-dot.low    { background: transparent; border: 1.5px solid var(--rate-1); }
+
+/* an unrated card says so, quietly */
+.rate-strip.none {
+  color: var(--ink-3);
+  font-size: 11px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+/* ---------- lightbox: the full panel ---------- */
+
+.rate-panel {
+  margin: 18px 0 4px;
+  padding: 16px 16px 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--panel-2);
+}
+.rate-panel .eyebrow {
+  font-size: 10px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-bottom: 8px;
+}
+
+/* hero figure — same sans as the rest of the site, never the display face */
+.rate-hero { display: flex; align-items: baseline; gap: 10px; }
+.rate-hero b {
+  font-family: inherit;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: .92;
+  letter-spacing: -.025em;
+  color: var(--ink);
+  /* proportional figures: tabular-nums makes 121 look loose at display sizes */
+}
+.rate-hero .of { font-size: 14px; color: var(--ink-3); }
+.rate-hero .word {
+  margin-left: auto;
+  font-size: 12px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+.rate-panel > .meter { margin: 12px 0 18px; }
+
+/* confidence de-emphasis: a strong score on thin evidence must not LOOK
+   as certain as the same score on deep evidence. */
+.rate-panel[data-conf="medium"] .rate-hero b { color: var(--ink-2); }
+.rate-panel[data-conf="low"]    .rate-hero b { color: var(--ink-2); opacity: .72; }
+
+/* ---------- vault value range bar ---------- */
+
+.vv { margin-top: 20px; margin-bottom: 18px; }
+.vv-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 10px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-bottom: 14px;
+}
+.vv-head .pos { letter-spacing: .06em; text-transform: none; font-size: 12px; color: var(--ink-2); }
+
+.vv-track {
+  position: relative;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--rate-track);
+  margin: 0 2px 54px;
+}
+.vv-band {
+  position: absolute;
+  top: 0; bottom: 0;
+  border-radius: 999px;
+  background: var(--rate-2);
+}
+.vv-mid {
+  position: absolute;
+  top: -3px;
+  width: 2px; height: 14px;
+  background: var(--rate-4);
+  border-radius: 1px;
+  transform: translateX(-1px);
+}
+/* the asking price is an ANNOTATION on the estimate, not a second data series,
+   so it wears an ink token rather than a data hue. 2px surface ring keeps it
+   legible where it crosses the band. */
+.vv-you {
+  position: absolute;
+  top: -7px;
+  width: 3px; height: 22px;
+  background: var(--ink);
+  border-radius: 2px;
+  box-shadow: 0 0 0 2px var(--panel-2);
+  transform: translateX(-1.5px);
+}
+.vv-lab {
+  position: absolute;
+  top: 22px;
+  font-size: 11px;
+  white-space: nowrap;
+  color: var(--ink-3);
+  font-variant-numeric: tabular-nums;
+}
+.vv-lab.you { color: var(--gold); font-weight: 600; top: 40px; }
+.vv-lab.hi { transform: translateX(-100%); }
+.vv-lab.mid-anchor { transform: translateX(-50%); }
+
+/* ---------- score rows ---------- */
+
+.rate-rows { display: grid; gap: 11px; }
+.rate-row { display: grid; grid-template-columns: 1fr auto; gap: 4px 10px; align-items: center; }
+.rate-row .k { font-size: 12px; color: var(--ink-2); }
+.rate-row .v {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+.rate-row .v small { color: var(--ink-3); font-weight: 400; }
+.rate-row .meter { grid-column: 1 / -1; }
+
+.rate-foot {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+  font-size: 11px;
+  line-height: 1.75;
+  color: var(--ink-3);
+}
+.rate-foot .sep { color: var(--line-2); padding: 0 5px; }
+.rate-foot .chg { color: var(--ink-2); }
+
+/* ---------- drivers ---------- */
+
+.rate-why { margin-top: 14px; }
+.rate-why h4 {
+  margin: 0 0 8px;
+  font-size: 10px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  font-weight: 600;
+}
+.rate-why ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 5px; }
+.rate-why li {
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--ink-2);
+  padding-left: 16px;
+  position: relative;
+}
+.rate-why li::before {
+  position: absolute; left: 0; top: 0;
+  color: var(--rate-3);
+  content: "+";
+}
+.rate-why li.risk::before { content: "\2212"; color: var(--ink-3); }
+
+.rate-note {
+  margin-top: 14px;
+  font-size: 10.5px;
+  line-height: 1.5;
+  color: var(--ink-3);
+}
+.rate-note a { color: var(--ink-2); }
+
+/* ---------- not-yet-rated state ---------- */
+
+.rate-panel.pending { background: transparent; border-style: dashed; }
+.rate-panel.pending p {
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--ink-3);
+}
+
+@media (max-width: 720px) {
+  .rate-hero b { font-size: 44px; }
+  .vv-lab { font-size: 10px; }
+}
