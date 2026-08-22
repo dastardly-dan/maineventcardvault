@@ -1,0 +1,9 @@
+# Files in this repo that are NOT part of the published site.
+# Cloudflare Workers Builds deploys with assets.directory = "." (the repo root),
+# so without this every one of these would be uploaded as a public asset — and
+# the .git packfile exceeds the 25 MiB per-asset limit, which fails the build.
+
+.git
+.gitignore
+build
+README.md

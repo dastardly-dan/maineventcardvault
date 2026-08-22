@@ -104,7 +104,7 @@ def categorize(title: str) -> str:
 
 
 # --- attribute detection ------------------------------------------------
-SERIAL_RE = re.compile(r"(?:\b(\d{2,3})[/](\d{1,4})\b)|(?:\s/(\d{1,4})\b)")
+SERIAL_RE = re.compile(r"(?:\b(\d{1,3})[/](\d{1,4})\b)|(?:\s/(\d{1,4})\b)")
 
 
 def serial_of(title: str):
@@ -125,7 +125,7 @@ def tags_of(title: str):
         out.append("Numbered")
     if re.search(r"\brc\b|\brookie\b", low):
         out.append("Rookie")
-    if "relic" in low:
+    if "relic" in low or "patch" in low:
         out.append("Relic")
     if "ssp" in low or "case hit" in low:
         out.append("SSP")
@@ -160,6 +160,15 @@ def money(n) -> str:
 def slugify(text: str) -> str:
     s = re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")
     return s[:60] or "card"
+
+
+def back_photo(photo: str) -> str:
+    """Same path with `_front` swapped for `_back`, when that file exists."""
+    photo = (photo or "").strip()
+    if not photo.startswith("assets/cards/") or "_front." not in photo:
+        return ""
+    cand = photo.replace("_front.", "_back.")
+    return cand if (ROOT / cand).exists() else ""
 
 
 def photo_urls(photo: str):
@@ -214,6 +223,8 @@ def read_listings():
                 "url": f"https://www.ebay.com/itm/{item_id}",
                 "image": f"https://i.ebayimg.com/images/g/{key}/s-l1600.jpg" if key else "",
                 "thumb": f"https://i.ebayimg.com/images/g/{key}/s-l960.jpg" if key else "",
+                "imageBack": "",
+                "thumbBack": "",
                 "sku": (r.get("sku") or "").strip(),
                 "note": "",
             })
@@ -260,6 +271,8 @@ def read_collection():
                         if shown is not None else "")
 
             image, thumb = photo_urls(r.get("photo"))
+            back = back_photo(r.get("photo"))
+            image_back, thumb_back = photo_urls(back) if back else ("", "")
             rows.append({
                 "id": (r.get("sku") or "").strip() or slugify(title),
                 "status": status,
@@ -270,6 +283,8 @@ def read_collection():
                 "url": "",
                 "image": image,
                 "thumb": thumb,
+                "imageBack": image_back,
+                "thumbBack": thumb_back,
                 "sku": (r.get("sku") or "").strip(),
                 "note": (r.get("notes") or "").strip(),
             })

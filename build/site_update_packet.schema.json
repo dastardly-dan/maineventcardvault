@@ -1,0 +1,691 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://maineventcardvault.com/schema/site_update_packet.schema.json",
+  "title": "Main Event Card Vault \u2014 website update packet",
+  "description": "Contract between the ChatGPT research process and the website build. Flat field names. v2.0.0 is a BREAKING change from the nested 1.0 draft. The site never computes, derives or infers any value defined here.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "packet_version",
+    "packet_date",
+    "rubric_version",
+    "cards"
+  ],
+  "properties": {
+    "packet_version": {
+      "const": "2.0.0",
+      "description": "Breaking change from the nested 1.0 packet: all rating fields are flat."
+    },
+    "packet_date": {
+      "type": "string",
+      "format": "date",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "rubric_version": {
+      "type": "string"
+    },
+    "run_notes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "set_groups": {
+      "type": "array",
+      "description": "Set-level valuations for Tier 3 cards. A T3 card inherits its value from the group named in set_group_key and is never published.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "group_key",
+          "value_per_card_low",
+          "value_per_card_mid",
+          "value_per_card_high",
+          "updated_at"
+        ],
+        "properties": {
+          "group_key": {
+            "type": "string",
+            "minLength": 1
+          },
+          "card_count": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "value_per_card_low": {
+            "type": "number",
+            "minimum": 0
+          },
+          "value_per_card_mid": {
+            "type": "number",
+            "minimum": 0
+          },
+          "value_per_card_high": {
+            "type": "number",
+            "minimum": 0
+          },
+          "basis": {
+            "const": "set_level"
+          },
+          "note": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "updated_at": {
+            "type": "string",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+          }
+        }
+      }
+    },
+    "cards": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "card_uid",
+          "tier",
+          "refreshed",
+          "updated_at",
+          "vault_value_low",
+          "vault_value_mid",
+          "vault_value_high",
+          "market_position",
+          "market_health",
+          "upside_potential",
+          "main_event_rating",
+          "confidence",
+          "confidence_label",
+          "publish_ready",
+          "publication_status"
+        ],
+        "properties": {
+          "card_uid": {
+            "type": "string",
+            "pattern": "^MECV-\\d{4}$",
+            "description": "PRIMARY KEY. Permanent, assigned in build/card_uids.tsv. Never an eBay item ID \u2014 those change on sale and on relist."
+          },
+          "ebay_item_id": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Informational only. Never used for matching."
+          },
+          "tier": {
+            "enum": [
+              "T1",
+              "T2",
+              "T3"
+            ],
+            "description": "Research depth, set by the research process. T1 = individually researched every week (>= $75 estimated value, or actively listed at >= $50). T2 = individually researched monthly ($15-$75). T3 = valued at set-group level only, never individually researched (< $15); inherits from set_groups via set_group_key. Tier governs research effort and is a research-side decision; the validator reports on it but does not block publication on tier alone."
+          },
+          "refreshed": {
+            "type": "boolean",
+            "description": "false = values carried forward unchanged from the prior packet."
+          },
+          "set_group_key": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Required for T3 cards; must name an entry in set_groups."
+          },
+          "updated_at": {
+            "type": "string",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+            "description": "Date the RESEARCH was done, not the deploy date."
+          },
+          "vault_value_low": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "vault_value_mid": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0,
+            "description": "Weighted median of all verified arms-length completed sales, all formats, normalized to an all-in basis."
+          },
+          "vault_value_high": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "fmv_bin": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0,
+            "description": "Optional BIN-only fair value. Evidence metadata for a future competitiveness metric; not required for market_position."
+          },
+          "fmv_auction": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0,
+            "description": "Optional auction/accepted-offer fair value. Evidence metadata; not required for market_position."
+          },
+          "valuation_basis": {
+            "enum": [
+              "exact",
+              "adjacent",
+              "proxy",
+              "set_level",
+              "none",
+              null
+            ]
+          },
+          "n_sales": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "n_bin_sales": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0,
+            "description": "Optional count of BIN sales in the evidence set."
+          },
+          "n_effective": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "half_life_days": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 1
+          },
+          "newest_sale": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+          },
+          "oldest_sale": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+          },
+          "asking_price": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0,
+            "description": "Listed price excluding shipping."
+          },
+          "market_position": {
+            "enum": [
+              "below_estimated_market",
+              "within_estimated_market",
+              "above_estimated_market",
+              "insufficient_evidence",
+              null
+            ],
+            "description": "Compares asking_price_all_in against the approved Vault Value range on the same all-in basis. Publication is gated by confidence, effective comparable count, match quality, recency and manual approval - not by sale format."
+          },
+          "market_health": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0,
+            "maximum": 100
+          },
+          "market_health_label": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "upside_potential": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0,
+            "maximum": 100
+          },
+          "upside_potential_label": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "main_event_rating": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0,
+            "maximum": 100
+          },
+          "main_event_rating_label": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "confidence": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0,
+            "maximum": 100
+          },
+          "confidence_label": {
+            "enum": [
+              "high",
+              "medium",
+              "low",
+              "insufficient_evidence",
+              null
+            ]
+          },
+          "market_temperature": {
+            "enum": [
+              "cold",
+              "normal",
+              "warming",
+              "hot",
+              "overheated",
+              null
+            ]
+          },
+          "weekly_change_points": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "weekly_change_value_pct": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "weekly_change_note": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "publish_ready": {
+            "type": "boolean"
+          },
+          "publication_status": {
+            "enum": [
+              "published",
+              "hidden",
+              "internal_only",
+              "research_in_progress"
+            ]
+          },
+          "publish_reason": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "needs_human_review": {
+            "type": "boolean"
+          },
+          "drivers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "risks": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "upside_buckets": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "scarcity_population": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 10
+              },
+              "card_significance": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 10
+              },
+              "set_brand_durability": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 10
+              },
+              "subject_demand": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 10
+              },
+              "trajectory_catalysts": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 10
+              },
+              "market_confirmation": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 10
+              },
+              "category_tailwind": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 10
+              },
+              "risk_resilience": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 10
+              }
+            }
+          },
+          "market_health_buckets": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "momentum": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 10
+              },
+              "liquidity": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 10
+              },
+              "sell_through": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 10
+              },
+              "depth": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 10
+              },
+              "stability": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 10
+              },
+              "peer_group": {
+                "type": "string"
+              }
+            }
+          },
+          "changes_from_last_week": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "field",
+                "from",
+                "to",
+                "reason"
+              ],
+              "properties": {
+                "field": {
+                  "type": "string"
+                },
+                "from": {
+                  "type": [
+                    "number",
+                    "string",
+                    "null"
+                  ]
+                },
+                "to": {
+                  "type": [
+                    "number",
+                    "string",
+                    "null"
+                  ]
+                },
+                "reason": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "source": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "source_quality": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "minimum": 0,
+                  "maximum": 1
+                }
+              }
+            }
+          },
+          "evidence": {
+            "type": "array",
+            "description": "INTERNAL ONLY. Never rendered on the public site.",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "date",
+                "price",
+                "format",
+                "url"
+              ],
+              "properties": {
+                "date": {
+                  "type": "string",
+                  "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+                },
+                "price": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "shipping": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "minimum": 0
+                },
+                "format": {
+                  "enum": [
+                    "auction",
+                    "bin",
+                    "bin_best_offer",
+                    "unknown"
+                  ]
+                },
+                "match": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                "url": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "note": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              }
+            }
+          },
+          "asking_price_shipping": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0,
+            "description": "Buyer-paid shipping on the listing."
+          },
+          "asking_price_all_in": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0,
+            "description": "Listed price + buyer-paid shipping. THIS is what market_position compares against the Vault Value range, so both sides share one price basis."
+          }
+        }
+      }
+    },
+    "site_corrections": {
+      "type": "array",
+      "description": "Approved corrections to card identity as DISPLAYED ON THE WEBSITE. Applying one never implies an eBay edit.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "card_uid",
+          "field",
+          "to",
+          "approved"
+        ],
+        "properties": {
+          "card_uid": {
+            "type": "string",
+            "pattern": "^MECV-\\d{4}$"
+          },
+          "field": {
+            "type": "string"
+          },
+          "from": {
+            "type": [
+              "string",
+              "number",
+              "null"
+            ]
+          },
+          "to": {
+            "type": [
+              "string",
+              "number",
+              "null"
+            ]
+          },
+          "approved": {
+            "const": true
+          },
+          "reason": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "external_manual_actions": {
+      "type": "array",
+      "description": "Actions required OUTSIDE the website (eBay listing edits, photo reshoots). Reported to Daniel; never applied automatically by the build.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "card_uid",
+          "system",
+          "action"
+        ],
+        "properties": {
+          "card_uid": {
+            "type": "string",
+            "pattern": "^MECV-\\d{4}$"
+          },
+          "system": {
+            "enum": [
+              "ebay",
+              "photos",
+              "other"
+            ]
+          },
+          "action": {
+            "type": "string",
+            "minLength": 1
+          },
+          "current_value": {
+            "type": [
+              "string",
+              "number",
+              "null"
+            ]
+          },
+          "target_value": {
+            "type": [
+              "string",
+              "number",
+              "null"
+            ]
+          },
+          "priority": {
+            "enum": [
+              "high",
+              "normal",
+              "low",
+              null
+            ]
+          },
+          "reason": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    }
+  }
+}
