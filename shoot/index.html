@@ -1,0 +1,1994 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,maximum-scale=1,user-scalable=no">
+<title>Shoot — Main Event Card Vault</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#081524">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Shoot">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="../assets/logo.png">
+<link rel="icon" href="../assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>/* Main Event Card Vault — Shoot. Palette lifted from the storefront so the
+   tool feels like part of the same business, not a stray utility. */
+:root{
+  --bg:#081524; --bg-2:#0d1f38; --panel:#132845; --panel-2:#1b3652;
+  --line:#24405f; --line-2:#35597e;
+  --ink:#e8edf4; --ink-2:#b7c6d8; --ink-3:#8397ae;
+  --gold:#e6be55; --gold-2:#f1d07a; --gold-dim:#c9a13f;
+  --crimson:#d23c46; --green:#5ec98a; --amber:#e8a33d;
+  --radius:14px;
+  --safe-b:env(safe-area-inset-bottom,0px);
+  --safe-t:env(safe-area-inset-top,0px);
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;height:100%;overscroll-behavior:none}
+body{
+  background:var(--bg); color:var(--ink);
+  font:400 16px/1.45 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,.display{font-family:"Bebas Neue",Impact,sans-serif;font-weight:400;letter-spacing:.02em;margin:0}
+button,input,select,textarea{font:inherit;color:inherit}
+button{background:none;border:0;padding:0;cursor:pointer}
+.hide{display:none!important}
+
+/* ---------------------------------------------------------------- screens */
+.screen{position:fixed;inset:0;display:flex;flex-direction:column;overflow:hidden}
+.scroll{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:0 16px calc(24px + var(--safe-b))}
+
+.bar{
+  display:flex;align-items:center;gap:12px;flex:0 0 auto;
+  padding:calc(10px + var(--safe-t)) 14px 10px;
+  background:var(--bg-2);border-bottom:1px solid var(--line);
+}
+.bar h1{font-size:26px;line-height:1;color:var(--gold);min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar .sub{flex:0 0 auto;font-size:12px;color:var(--ink-3);letter-spacing:.04em;text-transform:uppercase}
+.bar .spacer{flex:1}
+.iconbtn{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;
+  background:var(--panel);border:1px solid var(--line);color:var(--ink-2);font-size:18px}
+
+/* ------------------------------------------------------------------ cards */
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:16px;margin:14px 0}
+.card h2{font-size:22px;color:var(--gold);margin-bottom:2px}
+.muted{color:var(--ink-3);font-size:13px}
+.rowline{display:flex;align-items:center;gap:10px}
+.rowline+.rowline{margin-top:10px}
+
+label.field{display:block;margin:12px 0 0}
+label.field span{display:block;font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-3);margin-bottom:5px}
+input[type=text],input[type=number],select,textarea{
+  width:100%;padding:12px 13px;background:var(--bg-2);color:var(--ink);
+  border:1px solid var(--line-2);border-radius:10px;outline:none
+}
+input:focus,select:focus,textarea:focus{border-color:var(--gold-dim)}
+textarea{min-height:74px;resize:vertical}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+
+.btn{
+  display:flex;align-items:center;justify-content:center;gap:8px;width:100%;
+  padding:15px 18px;border-radius:12px;font-weight:600;font-size:16px;
+  background:var(--panel-2);border:1px solid var(--line-2);color:var(--ink);
+}
+.btn:active{transform:translateY(1px)}
+.btn.primary{background:linear-gradient(180deg,var(--gold-2),var(--gold-dim));border-color:var(--gold-dim);color:#231a05}
+.btn.danger{background:#3a1417;border-color:#6b2129;color:#f0b6ba}
+.btn.ghost{background:transparent}
+.btn[disabled]{opacity:.45;pointer-events:none}
+.btnrow{display:flex;gap:10px;margin-top:12px}
+
+.pill{display:inline-flex;align-items:center;gap:6px;padding:5px 11px;border-radius:999px;
+  font-size:12px;font-weight:600;letter-spacing:.03em;background:var(--panel-2);border:1px solid var(--line-2);color:var(--ink-2)}
+.pill.good{background:rgba(94,201,138,.14);border-color:rgba(94,201,138,.5);color:var(--green)}
+.pill.warn{background:rgba(232,163,61,.14);border-color:rgba(232,163,61,.5);color:var(--amber)}
+.pill.bad{background:rgba(210,60,70,.16);border-color:rgba(210,60,70,.55);color:#f2939a}
+
+/* --------------------------------------------------------------- camera */
+#camScreen{background:#000}
+.stage{position:relative;flex:1;overflow:hidden;background:#000}
+#video,#still{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#000}
+#still{object-fit:contain}
+#overlay{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+
+.hud{position:absolute;left:0;right:0;top:0;padding:12px 14px;display:flex;gap:8px;align-items:flex-start;
+  background:linear-gradient(180deg,rgba(4,10,18,.85),rgba(4,10,18,0));pointer-events:none}
+.hud .who{flex:1}
+.hud .who .n{font-family:"Bebas Neue",Impact,sans-serif;font-size:30px;line-height:1;color:#fff}
+.hud .who .s{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-2)}
+
+.chips{position:absolute;left:0;right:0;bottom:0;display:flex;gap:7px;justify-content:center;
+  padding:12px 10px;flex-wrap:wrap;pointer-events:none}
+
+.coach{position:absolute;left:14px;right:14px;bottom:64px;text-align:center;
+  font-size:15px;font-weight:600;color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.9);pointer-events:none}
+
+.tray{flex:0 0 auto;background:var(--bg-2);border-top:1px solid var(--line);
+  padding:12px 16px calc(12px + var(--safe-b));display:flex;align-items:center;gap:14px}
+.shutter{width:76px;height:76px;border-radius:50%;background:#fff;border:5px solid rgba(255,255,255,.32);
+  display:grid;place-items:center;flex:0 0 auto;margin:0 auto;transition:background .12s,border-color .12s}
+.shutter:active{background:var(--gold-2)}
+.shutter[disabled]{opacity:.35}
+.shutter.armed{border-color:var(--green)}
+.shutter.blocked{border-color:var(--crimson)}
+.tray .side{width:64px;display:flex;flex-direction:column;align-items:center;gap:4px;font-size:11px;color:var(--ink-3)}
+
+/* --------------------------------------------------------------- review */
+.verdict{padding:13px 15px;border-radius:12px;margin:0 0 12px;border:1px solid}
+.verdict.good{background:rgba(94,201,138,.12);border-color:rgba(94,201,138,.45)}
+.verdict.warn{background:rgba(232,163,61,.12);border-color:rgba(232,163,61,.45)}
+.verdict.bad{background:rgba(210,60,70,.13);border-color:rgba(210,60,70,.5)}
+.verdict h3{font-size:20px;margin-bottom:3px}
+.verdict ul{margin:7px 0 0;padding-left:19px;font-size:14px;color:var(--ink-2)}
+.verdict li{margin:3px 0}
+
+.shots{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+.shot{position:relative;background:#000;border:1px solid var(--line);border-radius:10px;overflow:hidden;aspect-ratio:3/4}
+.shot img{width:100%;height:100%;object-fit:contain;display:block}
+.shot .tag{position:absolute;left:6px;top:6px;font-size:10px;letter-spacing:.1em;text-transform:uppercase;
+  background:rgba(8,21,36,.85);border:1px solid var(--line-2);padding:2px 7px;border-radius:999px;color:var(--gold-2)}
+
+/* ------------------------------------------------------------- session */
+.item{display:flex;gap:12px;align-items:center;padding:11px 0;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:0}
+.item .th{width:52px;height:70px;flex:0 0 auto;border-radius:8px;background:#000;border:1px solid var(--line);object-fit:contain}
+.item .body{flex:1;min-width:0}
+.item .body .t{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.item .body .m{font-size:12px;color:var(--ink-3)}
+
+.dot{width:8px;height:8px;border-radius:50%;flex:0 0 auto;background:var(--ink-3)}
+.dot.up{background:var(--green)} .dot.pend{background:var(--amber)} .dot.err{background:var(--crimson)}
+
+.banner{padding:11px 14px;border-radius:11px;font-size:14px;margin:12px 0;
+  background:rgba(232,163,61,.12);border:1px solid rgba(232,163,61,.4);color:#f0cd93}
+.banner.err{background:rgba(210,60,70,.13);border-color:rgba(210,60,70,.5);color:#f2939a}
+.banner.ok{background:rgba(94,201,138,.12);border-color:rgba(94,201,138,.45);color:#a5e5c1}
+
+.sheet{position:fixed;inset:0;background:rgba(4,10,18,.72);display:flex;align-items:flex-end;z-index:40}
+.sheet .inner{width:100%;max-height:88%;overflow-y:auto;background:var(--bg-2);
+  border-top-left-radius:20px;border-top-right-radius:20px;border-top:1px solid var(--line);
+  padding:18px 16px calc(20px + var(--safe-b))}
+.grab{width:38px;height:4px;border-radius:999px;background:var(--line-2);margin:0 auto 14px}
+
+a{color:var(--gold-2)}
+.linkrow{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.linkrow a{display:inline-block;padding:9px 13px;border-radius:10px;background:var(--panel-2);
+  border:1px solid var(--line-2);text-decoration:none;font-size:14px;font-weight:600}
+.spin{width:16px;height:16px;border:2px solid rgba(255,255,255,.25);border-top-color:var(--gold-2);
+  border-radius:50%;animation:sp .7s linear infinite;display:inline-block}
+@keyframes sp{to{transform:rotate(360deg)}}
+</style>
+</head>
+<body>
+
+<!-- ============================================================== START -->
+<div class="screen" id="startScreen">
+  <div class="bar">
+    <h1>Shoot</h1><span class="sub">Main Event Card Vault</span>
+    <span class="spacer"></span>
+    <button class="iconbtn" data-go="settingsScreen" aria-label="Settings">⚙</button>
+  </div>
+  <div class="scroll">
+    <div id="toast" class="banner hide"></div>
+
+    <div class="card">
+      <h2>Start a shoot</h2>
+      <div class="muted">Photos go straight to Google Drive. Next photo number is <b id="nextNo">0500</b>.</div>
+      <div id="noClient" class="banner hide">
+        Not set up yet. Open <b>Settings</b> and paste your Google OAuth client ID — one-time, takes about five minutes.
+        The steps are in <b>SETUP.md</b>.
+      </div>
+      <div class="btnrow"><button class="btn primary" id="startBtn">Sign in to Google &amp; start</button></div>
+      <div class="muted" id="resumeNote" style="margin-top:9px"></div>
+      <div class="muted" id="folderNote" style="margin-top:4px"></div>
+    </div>
+
+    <div class="card">
+      <h2>How it works</h2>
+      <div class="muted">One card at a time, front then back. Before a photo is kept it is checked for
+        an empty frame, blur, glare, framing, tilt, and whether you already shot that card today.
+        Then it is straightened, cropped to the card and named to the convention.</div>
+      <div class="btnrow">
+        <button class="btn" data-go="sessionScreen">This session</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================= CAMERA -->
+<div class="screen hide" id="camScreen">
+  <div class="stage">
+    <video id="video" playsinline muted autoplay></video>
+    <canvas id="overlay"></canvas>
+    <div class="hud">
+      <div class="who"><div class="n" id="hudNo">Card 1</div><div class="s" id="hudSide">Front of the card</div></div>
+      <button class="iconbtn" data-go="sessionScreen" aria-label="Session">☰</button>
+    </div>
+    <div class="chips" id="chips"></div>
+    <div class="coach" id="coach"></div>
+    <div class="banner err hide" id="camFail" style="position:absolute;left:14px;right:14px;top:88px"></div>
+  </div>
+  <div class="tray">
+    <div class="side">
+      <button class="iconbtn" id="torchBtn" aria-label="Torch">🔦</button>
+      <span id="resNote"></span>
+    </div>
+    <button class="shutter" id="shutter" aria-label="Take photo"></button>
+    <div class="side">
+      <button class="iconbtn" id="camAppBtn" aria-label="Use the camera app">📷</button>
+      <span>Camera app</span>
+    </div>
+  </div>
+  <input type="file" id="fileInput" accept="image/*" capture="environment" class="hide">
+</div>
+
+<!-- ============================================================= REVIEW -->
+<div class="screen hide" id="reviewScreen">
+  <div class="bar"><h1>Review</h1><span class="spacer"></span>
+    <button class="iconbtn" data-go="sessionScreen">☰</button></div>
+  <div class="scroll">
+    <div id="revVerdict" class="verdict good"></div>
+    <div class="shot" style="aspect-ratio:auto;max-height:52vh"><img id="revImg" alt="captured card"></div>
+    <div class="btnrow">
+      <button class="btn danger" id="revRetake">Reshoot</button>
+      <button class="btn primary" id="revKeep">Use it</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ DETAILS -->
+<div class="screen hide" id="detailScreen">
+  <div class="bar"><h1 id="dTitle">Card</h1><span class="spacer"></span>
+    <button class="iconbtn" data-go="sessionScreen">☰</button></div>
+  <div class="scroll">
+    <div class="shots" id="dShots"></div>
+
+    <div class="card">
+      <h2>What is it</h2>
+      <div class="muted">The card number and set are printed on the <b>back</b>. Read them off the card,
+        not from memory — a wrong set name produces perfectly plausible, completely wrong comps.</div>
+      <button class="btn" id="idBtn" style="margin-top:12px">Identify from the photos</button>
+      <label class="field"><span>Player</span><input type="text" id="f_player" autocapitalize="words"></label>
+      <div class="grid2">
+        <label class="field"><span>Card #</span><input type="text" id="f_number"></label>
+        <label class="field"><span>Year</span><input type="text" id="f_year" inputmode="numeric"></label>
+      </div>
+      <label class="field"><span>Set</span><input type="text" id="f_set"></label>
+      <div class="grid2">
+        <label class="field"><span>Parallel</span><input type="text" id="f_parallel"></label>
+        <label class="field"><span>Serial</span><input type="text" id="f_serial" placeholder="71/99"></label>
+      </div>
+      <div class="grid2">
+        <label class="field"><span>Sport</span><input type="text" id="f_sport" placeholder="Wrestling"></label>
+        <label class="field"><span>Price</span><input type="text" id="f_price" inputmode="decimal"></label>
+      </div>
+      <div class="rowline" style="margin-top:12px">
+        <label class="rowline"><input type="checkbox" id="f_rc"> <span>Rookie</span></label>
+        <label class="rowline"><input type="checkbox" id="f_auto"> <span>Autograph</span></label>
+      </div>
+      <label class="field"><span>Notes</span><textarea id="f_notes" placeholder="Damage, marker, off-centre, anything a buyer must know"></textarea></label>
+    </div>
+
+    <div class="card">
+      <h2>Comps</h2>
+      <div class="muted">Opens in a new tab with the card details filled in.</div>
+      <div class="linkrow" id="compLinks"></div>
+    </div>
+
+    <div class="btnrow">
+      <button class="btn" id="detailBack">Reshoot a side</button>
+      <button class="btn" id="detailSave">Save</button>
+    </div>
+    <div class="btnrow"><button class="btn primary" id="detailNext">Next card</button></div>
+  </div>
+</div>
+
+<!-- ============================================================ SESSION -->
+<div class="screen hide" id="sessionScreen">
+  <div class="bar"><h1>Session</h1><span class="sub" id="sessionCount"></span><span class="spacer"></span>
+    <button class="iconbtn" data-go="camScreen" aria-label="Back to camera">📷</button></div>
+  <div class="scroll">
+    <div class="rowline" style="margin:12px 0"><span class="pill" id="qbadge">—</span></div>
+    <div class="card" id="sessionList"></div>
+    <div class="card">
+      <h2>Finish</h2>
+      <div class="muted">Writes <b>manifest.json</b>, <b>shoot-log.csv</b> and <b>ebay-drafts.csv</b> next to the
+        photos, so a Claude session can pick the whole shoot up from Drive and carry on with comps and drafts.</div>
+      <div class="btnrow"><button class="btn primary" id="finishBtn">Write session files to Drive</button></div>
+      <div class="muted" id="finishNote" style="margin-top:9px"></div>
+    </div>
+    <div class="btnrow"><button class="btn ghost" id="resetSession">Clear this session</button></div>
+  </div>
+</div>
+
+<!-- =========================================================== SETTINGS -->
+<div class="screen hide" id="settingsScreen">
+  <div class="bar"><h1>Settings</h1><span class="spacer"></span>
+    <button class="iconbtn" data-go="startScreen">✕</button></div>
+  <div class="scroll">
+    <div class="card">
+      <h2>Google Drive</h2>
+      <div class="muted">From Google Cloud Console → Credentials → OAuth client ID → Web application,
+        with this site added as an authorised JavaScript origin. Only the <code>drive.file</code> scope is
+        requested, which is non-sensitive — the app can only see the files it creates.</div>
+      <label class="field"><span>OAuth client ID</span><input type="text" id="s_clientId" placeholder="…apps.googleusercontent.com" autocapitalize="off" autocorrect="off" spellcheck="false"></label>
+      <label class="field"><span>Drive folder</span><input type="text" id="s_rootFolder"></label>
+    </div>
+    <div class="card">
+      <h2>Shoot</h2>
+      <label class="field"><span>Next photo number</span><input type="number" id="s_photoNumber" inputmode="numeric"></label>
+      <div class="muted">The existing library runs to <code>card_0491</code>, so starting at 500 keeps every
+        number unique across the whole collection.</div>
+      <label class="rowline" style="margin-top:12px"><input type="checkbox" id="s_keepOriginals">
+        <span>Also keep the uncropped original</span></label>
+    </div>
+    <div class="card">
+      <h2>Card identification (optional)</h2>
+      <div class="muted">A Cloudflare Worker that reads the two photos and fills in player, set and card
+        number. Leave blank to skip it and type the details yourself.</div>
+      <label class="field"><span>Worker URL</span><input type="text" id="s_apiBase" placeholder="https://mecv-shoot-api.…workers.dev" autocapitalize="off" spellcheck="false"></label>
+      <label class="field"><span>Shared key</span><input type="text" id="s_apiKey" autocapitalize="off" spellcheck="false"></label>
+    </div>
+    <div class="btnrow"><button class="btn primary" id="setSave">Save settings</button></div>
+  </div>
+</div>
+
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<script>/* ============================================================================
+   Main Event Card Vault — capture quality core            core.js  (v1.0.0)
+
+   Pure functions over RGBA pixel buffers: {width, height, data:Uint8ClampedArray}.
+   No DOM, no Node APIs. The browser app and the test suite run this same file,
+   so a threshold tuned in tests is the threshold shipped to the phone.
+
+   The gates exist to kill four documented failure modes in this project's
+   photo library:
+     - 47 NO-CARD frames (13-16% of some batches)  -> cardPresent
+     - 29% duplicate shots                          -> dHash + hamming
+     - "card fills maybe a third of the frame"      -> fill
+     - rotation / off-square / glare                -> tilt, glare, focus
+   ========================================================================== */
+
+const CORE_VERSION = '1.0.0';
+
+/* ---------------------------------------------------------------- helpers */
+
+function clamp(v, lo, hi) { return v < lo ? lo : v > hi ? hi : v; }
+
+/** Box-filter downscale to targetW. Cheap, and good enough for statistics. */
+function resample(img, targetW) {
+  const { width: sw, height: sh, data: src } = img;
+  if (targetW >= sw) return { width: sw, height: sh, data: src };
+  const tw = Math.max(8, Math.round(targetW));
+  const th = Math.max(8, Math.round((sh / sw) * tw));
+  const out = new Uint8ClampedArray(tw * th * 4);
+  const xr = sw / tw, yr = sh / th;
+  for (let y = 0; y < th; y++) {
+    const y0 = Math.floor(y * yr), y1 = Math.min(sh, Math.max(y0 + 1, Math.floor((y + 1) * yr)));
+    for (let x = 0; x < tw; x++) {
+      const x0 = Math.floor(x * xr), x1 = Math.min(sw, Math.max(x0 + 1, Math.floor((x + 1) * xr)));
+      let r = 0, g = 0, b = 0, n = 0;
+      for (let yy = y0; yy < y1; yy++) {
+        let p = (yy * sw + x0) * 4;
+        for (let xx = x0; xx < x1; xx++, p += 4) { r += src[p]; g += src[p + 1]; b += src[p + 2]; n++; }
+      }
+      const o = (y * tw + x) * 4;
+      out[o] = r / n; out[o + 1] = g / n; out[o + 2] = b / n; out[o + 3] = 255;
+    }
+  }
+  return { width: tw, height: th, data: out };
+}
+
+/** Rec.709 luma, 0..255. */
+function toGray(img) {
+  const { width: w, height: h, data: d } = img;
+  const g = new Float32Array(w * h);
+  for (let i = 0, p = 0; i < g.length; i++, p += 4) {
+    g[i] = 0.2126 * d[p] + 0.7152 * d[p + 1] + 0.0722 * d[p + 2];
+  }
+  return g;
+}
+
+/** Sobel gradient magnitude over a Float32 gray plane. */
+function sobel(gray, w, h) {
+  const m = new Float32Array(w * h);
+  for (let y = 1; y < h - 1; y++) {
+    for (let x = 1; x < w - 1; x++) {
+      const i = y * w + x;
+      const tl = gray[i - w - 1], t = gray[i - w], tr = gray[i - w + 1];
+      const l = gray[i - 1], r = gray[i + 1];
+      const bl = gray[i + w - 1], b = gray[i + w], br = gray[i + w + 1];
+      const gx = (tr + 2 * r + br) - (tl + 2 * l + bl);
+      const gy = (bl + 2 * b + br) - (tl + 2 * t + tr);
+      m[i] = Math.sqrt(gx * gx + gy * gy);
+    }
+  }
+  return m;
+}
+
+function percentile(values, p) {
+  if (!values.length) return 0;
+  const a = Float64Array.from(values).sort();
+  const i = clamp(Math.round((p / 100) * (a.length - 1)), 0, a.length - 1);
+  return a[i];
+}
+
+function meanOf(values) {
+  let s = 0; for (let i = 0; i < values.length; i++) s += values[i];
+  return values.length ? s / values.length : 0;
+}
+
+function stdOf(values) {
+  const m = meanOf(values);
+  let s = 0; for (let i = 0; i < values.length; i++) { const d = values[i] - m; s += d * d; }
+  return Math.sqrt(values.length ? s / values.length : 0);
+}
+
+/* --------------------------------------------------- background + fg mask */
+
+/**
+ * Backdrop model, fitted as a plane per channel from a ring around the frame.
+ *
+ * A flat median is not good enough: every real shoot has light falloff, and a
+ * lightbox that is 15% brighter at the bottom makes the whole bottom border
+ * read as "not the backdrop", which in turn makes an ordinary photo look like a
+ * card running off the edge of the frame. A plane absorbs linear falloff
+ * exactly, which is what falloff mostly is.
+ *
+ * Fitted twice: once over the whole ring, then again after dropping points more
+ * than 2.5 sigma out, so a card or a stand leg intruding into the ring cannot
+ * drag the model with it.
+ */
+function estimateBackground(img) {
+  const { width: w, height: h, data: d } = img;
+  const band = Math.max(2, Math.round(Math.min(w, h) * 0.05));
+  const pts = [];
+  const push = (x, y) => { const p = (y * w + x) * 4; pts.push([x, y, d[p], d[p + 1], d[p + 2]]); };
+  for (let y = 0; y < h; y++) for (let x = 0; x < band; x++) { push(x, y); push(w - 1 - x, y); }
+  for (let x = 0; x < w; x++) for (let y = 0; y < band; y++) { push(x, y); push(x, h - 1 - y); }
+
+  // Least-squares plane v = a*x + b*y + c, solved through the 3x3 normal equations.
+  const fitPlane = (sample, ch) => {
+    let n = 0, sx = 0, sy = 0, sv = 0, sxx = 0, sxy = 0, syy = 0, sxv = 0, syv = 0;
+    for (const q of sample) {
+      const x = q[0], y = q[1], v = q[2 + ch];
+      n++; sx += x; sy += y; sv += v; sxx += x * x; sxy += x * y; syy += y * y; sxv += x * v; syv += y * v;
+    }
+    const m = [[sxx, sxy, sx], [sxy, syy, sy], [sx, sy, n]];
+    const rhs = [sxv, syv, sv];
+    // Gaussian elimination with partial pivoting.
+    for (let i = 0; i < 3; i++) {
+      let piv = i;
+      for (let k = i + 1; k < 3; k++) if (Math.abs(m[k][i]) > Math.abs(m[piv][i])) piv = k;
+      if (Math.abs(m[piv][i]) < 1e-9) return [0, 0, sv / Math.max(1, n)];
+      [m[i], m[piv]] = [m[piv], m[i]]; [rhs[i], rhs[piv]] = [rhs[piv], rhs[i]];
+      for (let k = i + 1; k < 3; k++) {
+        const f = m[k][i] / m[i][i];
+        for (let j = i; j < 3; j++) m[k][j] -= f * m[i][j];
+        rhs[k] -= f * rhs[i];
+      }
+    }
+    const out = [0, 0, 0];
+    for (let i = 2; i >= 0; i--) {
+      let acc = rhs[i];
+      for (let j = i + 1; j < 3; j++) acc -= m[i][j] * out[j];
+      out[i] = acc / m[i][i];
+    }
+    return out;
+  };
+
+  let planes = [0, 1, 2].map(ch => fitPlane(pts, ch));
+  const residual = (q) => {
+    let s = 0;
+    for (let ch = 0; ch < 3; ch++) {
+      const P = planes[ch];
+      s += Math.abs(q[2 + ch] - (P[0] * q[0] + P[1] * q[1] + P[2]));
+    }
+    return s;
+  };
+  let rs = pts.map(residual);
+  const mean = meanOf(rs), sd = stdOf(rs);
+  const kept = pts.filter((q, i) => rs[i] <= mean + 2.5 * sd);
+  if (kept.length > pts.length * 0.5) {
+    planes = [0, 1, 2].map(ch => fitPlane(kept, ch));
+    rs = kept.map(residual);
+  }
+
+  const at = (x, y) => [
+    planes[0][0] * x + planes[0][1] * y + planes[0][2],
+    planes[1][0] * x + planes[1][1] * y + planes[1][2],
+    planes[2][0] * x + planes[2][1] * y + planes[2][2]
+  ];
+  const mid = at(w / 2, h / 2);
+  return { at, planes, r: mid[0], g: mid[1], b: mid[2], spread: percentile(rs, 75) / 3 };
+}
+
+/**
+ * Binary foreground mask: pixels that differ from the backdrop OR carry strong
+ * local detail. The OR matters — a white card on a white lightbox has almost no
+ * colour distance but plenty of print detail.
+ */
+function foregroundMask(img, bg, edges) {
+  const { width: w, height: h, data: d } = img;
+  const mask = new Uint8Array(w * h);
+  const dist = new Float32Array(w * h);
+  for (let y = 0; y < h; y++) {
+    const row = bg.at(0, y), dx = [bg.planes[0][0], bg.planes[1][0], bg.planes[2][0]];
+    for (let x = 0; x < w; x++) {
+      const i = y * w + x, p = i * 4;
+      dist[i] = Math.abs(d[p] - (row[0] + dx[0] * x))
+              + Math.abs(d[p + 1] - (row[1] + dx[1] * x))
+              + Math.abs(d[p + 2] - (row[2] + dx[2] * x));
+    }
+  }
+  // Colour threshold: adaptive, but never below a floor, so sensor noise on a
+  // blank backdrop cannot masquerade as a card.
+  const colourFloor = Math.max(28, bg.spread * 3.2);
+  const colourThr = Math.max(colourFloor, percentile(dist, 62) * 0.75);
+  const edgeThr = Math.max(24, percentile(edges, 92) * 0.55);
+  for (let i = 0; i < mask.length; i++) {
+    mask[i] = (dist[i] > colourThr || edges[i] > edgeThr) ? 1 : 0;
+  }
+  return { mask, dist, colourThr, edgeThr };
+}
+
+/**
+ * Bounding box from row/column projection profiles. Projection beats
+ * connected-components here: a card stand leg or a speck of dust cannot drag
+ * the box out, because a row only counts once enough of it is foreground.
+ */
+function projectBox(mask, w, h, frac = 0.14) {
+  const rows = new Int32Array(h), cols = new Int32Array(w);
+  for (let y = 0; y < h; y++) {
+    let n = 0;
+    for (let x = 0; x < w; x++) if (mask[y * w + x]) { n++; cols[x]++; }
+    rows[y] = n;
+  }
+  const run = (counts, limit) => {
+    let bs = -1, bl = 0, cs = -1, cl = 0;
+    for (let i = 0; i < counts.length; i++) {
+      if (counts[i] > limit) { if (cs < 0) { cs = i; cl = 0; } cl++; }
+      else { if (cl > bl) { bl = cl; bs = cs; } cs = -1; cl = 0; }
+    }
+    if (cl > bl) { bl = cl; bs = cs; }
+    return bs < 0 ? null : { start: bs, len: bl };
+  };
+  const ry = run(rows, w * frac), rx = run(cols, h * frac);
+  if (!ry || !rx) return null;
+  return { x: rx.start, y: ry.start, w: rx.len, h: ry.len };
+}
+
+/* ------------------------------------------------------------ tilt of card */
+
+/**
+ * Tilt in degrees, from a least-squares fit of the card's top and bottom
+ * edges. The two fits must agree, otherwise the reading is discarded — a
+ * hand or a stand leg touching one edge would otherwise invent a tilt.
+ */
+function estimateTilt(mask, w, h, box) {
+  // Trace the outer boundary of the card from one side.
+  const trace = (fromTop) => {
+    const pts = [];
+    for (let x = box.x; x < box.x + box.w; x++) {
+      if (fromTop) {
+        for (let y = box.y; y < box.y + box.h; y++) if (mask[y * w + x]) { pts.push([x, y]); break; }
+      } else {
+        for (let y = box.y + box.h - 1; y >= box.y; y--) if (mask[y * w + x]) { pts.push([x, y]); break; }
+      }
+    }
+    return pts;
+  };
+
+  const fit = (pts) => {
+    const n = pts.length;
+    if (n < 10) return null;
+    let sx = 0, sy = 0, sxy = 0, sxx = 0;
+    for (const [x, y] of pts) { sx += x; sy += y; sxy += x * y; sxx += x * x; }
+    const den = n * sxx - sx * sx;
+    if (Math.abs(den) < 1e-6) return null;
+    const slope = (n * sxy - sx * sy) / den;
+    const inter = (sy - slope * sx) / n;
+    let resid = 0;
+    for (const [x, y] of pts) { const e = y - (slope * x + inter); resid += e * e; }
+    return { slope, rms: Math.sqrt(resid / n), n };
+  };
+
+  /**
+   * A rotated card's top boundary is not one line: it runs up the leading side
+   * edge to a corner, then along the true top edge. Fitting straight across the
+   * apex fits a roof and reads ~25% low. So split at the apex and keep the
+   * longer, shallower segment — that one is the real top edge.
+   */
+  const edgeAngle = (fromTop) => {
+    const pts = trace(fromTop);
+    if (pts.length < 12) return null;
+    let apex = 0;
+    for (let i = 1; i < pts.length; i++) {
+      const better = fromTop ? pts[i][1] < pts[apex][1] : pts[i][1] > pts[apex][1];
+      if (better) apex = i;
+    }
+    // A flat edge gives a long plateau; take its centre as the split point.
+    const extreme = pts[apex][1];
+    const plateau = pts.filter(p => Math.abs(p[1] - extreme) <= 1).length;
+    if (plateau > pts.length * 0.55) {
+      const f = fit(pts.slice(Math.floor(pts.length * 0.1), Math.ceil(pts.length * 0.9)));
+      return f && f.rms < 2.0 ? Math.atan(f.slope) * 180 / Math.PI : null;
+    }
+    const inset = (arr) => arr.slice(Math.floor(arr.length * 0.12), Math.ceil(arr.length * 0.88));
+    const cands = [inset(pts.slice(0, apex + 1)), inset(pts.slice(apex))]
+      .map(fit)
+      .filter(f => f && f.n >= Math.max(10, box.w * 0.22) && Math.abs(f.slope) < 1.0
+                   && f.rms < Math.max(1.2, box.h * 0.02));
+    if (!cands.length) return null;
+    cands.sort((a, b) => Math.abs(a.slope) - Math.abs(b.slope));
+    return Math.atan(cands[0].slope) * 180 / Math.PI;
+  };
+
+  const top = edgeAngle(true), bot = edgeAngle(false);
+  if (top === null && bot === null) return null;
+  if (top === null) return bot;
+  if (bot === null) return top;
+  if (Math.abs(top - bot) > 3.5) return null;   // the two disagree: don't guess
+  return (top + bot) / 2;
+}
+
+/* ------------------------------------------------------------ focus, glare */
+
+/**
+ * Sharpness as variance-of-Laplacian divided by local contrast, so a
+ * low-contrast card is not called blurry just for being low-contrast.
+ * Measured on the card crop only — backdrop has nothing to be sharp about.
+ */
+function focusScore(img, box) {
+  const w = img.width, h = img.height;
+  const x0 = clamp(box.x, 0, w - 1), y0 = clamp(box.y, 0, h - 1);
+  const x1 = clamp(box.x + box.w, 1, w), y1 = clamp(box.y + box.h, 1, h);
+  const cw = x1 - x0, ch = y1 - y0;
+  if (cw < 8 || ch < 8) return 0;
+  const gray = toGray(img);
+  const lap = [];
+  for (let y = y0 + 1; y < y1 - 1; y++) {
+    for (let x = x0 + 1; x < x1 - 1; x++) {
+      const i = y * w + x;
+      lap.push(gray[i - w] + gray[i + w] + gray[i - 1] + gray[i + 1] - 4 * gray[i]);
+    }
+  }
+  const inside = [];
+  for (let y = y0; y < y1; y++) for (let x = x0; x < x1; x++) inside.push(gray[y * w + x]);
+  const contrast = stdOf(inside);
+  if (!lap.length || contrast < 1) return 0;
+  const varLap = stdOf(lap) ** 2;
+  return varLap / (contrast * contrast);
+}
+
+/**
+ * Specular glare: blown AND desaturated pixels inside the card. Returns both
+ * the total fraction and the largest connected blob, because scattered sparkle
+ * on a refractor is normal and one big white smear is not.
+ */
+function glareScore(img, box) {
+  const { width: w, data: d } = img;
+  const x0 = clamp(box.x, 0, w - 1), y0 = Math.max(0, box.y);
+  const x1 = clamp(box.x + box.w, 1, w), y1 = Math.min(img.height, box.y + box.h);
+  const cw = x1 - x0, ch = y1 - y0;
+  if (cw < 4 || ch < 4) return { frac: 0, blob: 0 };
+  const spec = new Uint8Array(cw * ch);
+  let n = 0;
+  for (let y = y0; y < y1; y++) {
+    for (let x = x0; x < x1; x++) {
+      const p = (y * w + x) * 4;
+      const r = d[p], g = d[p + 1], b = d[p + 2];
+      const mx = Math.max(r, g, b), mn = Math.min(r, g, b);
+      const sat = mx === 0 ? 0 : (mx - mn) / mx;
+      if (mx > 244 && sat < 0.18) { spec[(y - y0) * cw + (x - x0)] = 1; n++; }
+    }
+  }
+  const total = cw * ch;
+  if (!n) return { frac: 0, blob: 0 };
+  // Largest connected component, 4-neighbour flood fill on a small buffer.
+  const seen = new Uint8Array(total);
+  const stack = new Int32Array(total);
+  let best = 0;
+  for (let i = 0; i < total; i++) {
+    if (!spec[i] || seen[i]) continue;
+    let sp = 0, size = 0;
+    stack[sp++] = i; seen[i] = 1;
+    while (sp) {
+      const c = stack[--sp]; size++;
+      const cx = c % cw, cy = (c / cw) | 0;
+      if (cx > 0 && spec[c - 1] && !seen[c - 1]) { seen[c - 1] = 1; stack[sp++] = c - 1; }
+      if (cx < cw - 1 && spec[c + 1] && !seen[c + 1]) { seen[c + 1] = 1; stack[sp++] = c + 1; }
+      if (cy > 0 && spec[c - cw] && !seen[c - cw]) { seen[c - cw] = 1; stack[sp++] = c - cw; }
+      if (cy < ch - 1 && spec[c + cw] && !seen[c + cw]) { seen[c + cw] = 1; stack[sp++] = c + cw; }
+    }
+    if (size > best) best = size;
+  }
+  return { frac: n / total, blob: best / total };
+}
+
+/* ------------------------------------------------------------------ dHash */
+
+/**
+ * 64-bit difference hash of the card crop, as 16 hex chars.
+ *
+ * Two things make it survive the wobble in edge detection between two shots of
+ * the same card: the region is inset 7% so a few pixels of detected-edge drift
+ * change nothing, and it is averaged to 32x32 and box-blurred before the 9x8
+ * grid is taken, so a sub-cell shift cannot flip a run of bits.
+ */
+function dHash(img, box) {
+  const { width: w, height: h, data: d } = img;
+  const inset = 0.07;
+  const bx = box.x + box.w * inset, by = box.y + box.h * inset;
+  const bw = Math.max(4, box.w * (1 - 2 * inset)), bh = Math.max(4, box.h * (1 - 2 * inset));
+
+  const N = 32;
+  const grid = new Float64Array(N * N);
+  for (let ty = 0; ty < N; ty++) {
+    const sy0 = Math.floor(by + (ty / N) * bh), sy1 = Math.max(sy0 + 1, Math.floor(by + ((ty + 1) / N) * bh));
+    for (let tx = 0; tx < N; tx++) {
+      const sx0 = Math.floor(bx + (tx / N) * bw), sx1 = Math.max(sx0 + 1, Math.floor(bx + ((tx + 1) / N) * bw));
+      let s = 0, n = 0;
+      for (let y = sy0; y < sy1 && y < h; y++) {
+        if (y < 0) continue;
+        for (let x = sx0; x < sx1 && x < w; x++) {
+          if (x < 0) continue;
+          const p = (y * w + x) * 4;
+          s += 0.2126 * d[p] + 0.7152 * d[p + 1] + 0.0722 * d[p + 2]; n++;
+        }
+      }
+      grid[ty * N + tx] = n ? s / n : 0;
+    }
+  }
+  // 3x3 box blur, twice — absorbs sub-cell drift between two shots.
+  let cur = grid;
+  for (let pass = 0; pass < 2; pass++) {
+    const nx = new Float64Array(N * N);
+    for (let y = 0; y < N; y++) {
+      for (let x = 0; x < N; x++) {
+        let s = 0, n = 0;
+        for (let dy = -1; dy <= 1; dy++) for (let dx = -1; dx <= 1; dx++) {
+          const yy = y + dy, xx = x + dx;
+          if (yy < 0 || yy >= N || xx < 0 || xx >= N) continue;
+          s += cur[yy * N + xx]; n++;
+        }
+        nx[y * N + x] = s / n;
+      }
+    }
+    cur = nx;
+  }
+
+  const W = 9, H = 8;
+  const cell = new Float64Array(W * H);
+  for (let ty = 0; ty < H; ty++) {
+    for (let tx = 0; tx < W; tx++) {
+      let s = 0, n = 0;
+      for (let y = Math.floor((ty / H) * N); y < Math.floor(((ty + 1) / H) * N); y++) {
+        for (let x = Math.floor((tx / W) * N); x < Math.floor(((tx + 1) / W) * N); x++) { s += cur[y * N + x]; n++; }
+      }
+      cell[ty * W + tx] = n ? s / n : 0;
+    }
+  }
+  let bits = '';
+  for (let y = 0; y < H; y++) for (let x = 0; x < W - 1; x++) bits += cell[y * W + x] < cell[y * W + x + 1] ? '1' : '0';
+  let hex = '';
+  for (let i = 0; i < 64; i += 4) hex += parseInt(bits.slice(i, i + 4), 2).toString(16);
+  return hex;
+}
+
+function hamming(a, b) {
+  if (!a || !b || a.length !== b.length) return 64;
+  let n = 0;
+  for (let i = 0; i < a.length; i++) {
+    let v = parseInt(a[i], 16) ^ parseInt(b[i], 16);
+    while (v) { n += v & 1; v >>= 1; }
+  }
+  return n;
+}
+
+/* -------------------------------------------------------- card signature */
+
+const SIG_N = 10;
+
+/**
+ * A 10x10 mean-colour thumbnail of the card, z-normalised per channel.
+ *
+ * This is the primary duplicate signal, and it beats the 64-bit hash by a wide
+ * margin: measured across 95 real cards from the collection (6,996 distinct
+ * pairs plus 25 synthetic "shutter fired twice" pairs), a 64-bit dHash caught
+ * 76% of repeat shots at a 0.57% false-alarm rate, while this signature at
+ * threshold 0.42 catches 96% at 0.31%. Both are kept — the hash is cheap to
+ * store in the manifest and to compare against past sessions.
+ */
+function signature(img, box, inset = 0.10) {
+  const { width: w, height: h, data: d } = img;
+  const bx = box.x + box.w * inset, by = box.y + box.h * inset;
+  const bw = box.w * (1 - 2 * inset), bh = box.h * (1 - 2 * inset);
+  const out = new Float64Array(SIG_N * SIG_N * 3);
+  for (let ty = 0; ty < SIG_N; ty++) {
+    for (let tx = 0; tx < SIG_N; tx++) {
+      const y0 = clamp(Math.floor(by + (ty / SIG_N) * bh), 0, h - 1);
+      const y1 = clamp(Math.max(y0 + 1, Math.floor(by + ((ty + 1) / SIG_N) * bh)), 1, h);
+      const x0 = clamp(Math.floor(bx + (tx / SIG_N) * bw), 0, w - 1);
+      const x1 = clamp(Math.max(x0 + 1, Math.floor(bx + ((tx + 1) / SIG_N) * bw)), 1, w);
+      let r = 0, g = 0, b = 0, n = 0;
+      for (let y = y0; y < y1; y++) {
+        let p = (y * w + x0) * 4;
+        for (let x = x0; x < x1; x++, p += 4) { r += d[p]; g += d[p + 1]; b += d[p + 2]; n++; }
+      }
+      const i = (ty * SIG_N + tx) * 3;
+      out[i] = r / n; out[i + 1] = g / n; out[i + 2] = b / n;
+    }
+  }
+  for (let ch = 0; ch < 3; ch++) {
+    let m = 0, c = 0;
+    for (let i = ch; i < out.length; i += 3) { m += out[i]; c++; }
+    m /= c;
+    let sd = 0;
+    for (let i = ch; i < out.length; i += 3) sd += (out[i] - m) ** 2;
+    sd = Math.sqrt(sd / c) || 1;
+    for (let i = ch; i < out.length; i += 3) out[i] = (out[i] - m) / sd;
+  }
+  return Array.from(out, v => Math.round(v * 100) / 100);   // JSON-friendly
+}
+
+/**
+ * Distance between two signatures, minimised over a +/-1 cell alignment.
+ * Without the shift search two shots of the same card that the detector boxed
+ * a few pixels apart score as different cards — it took the catch rate from
+ * 84% to 96% on the test set.
+ */
+function sigDistance(a, b) {
+  if (!a || !b || a.length !== b.length) return Infinity;
+  let best = Infinity;
+  for (let dy = -1; dy <= 1; dy++) {
+    for (let dx = -1; dx <= 1; dx++) {
+      let s = 0, n = 0;
+      for (let y = 0; y < SIG_N; y++) {
+        for (let x = 0; x < SIG_N; x++) {
+          const y2 = y + dy, x2 = x + dx;
+          if (y2 < 0 || y2 >= SIG_N || x2 < 0 || x2 >= SIG_N) continue;
+          const i = (y * SIG_N + x) * 3, j = (y2 * SIG_N + x2) * 3;
+          s += Math.abs(a[i] - b[j]) + Math.abs(a[i + 1] - b[j + 1]) + Math.abs(a[i + 2] - b[j + 2]);
+          n += 3;
+        }
+      }
+      if (n) best = Math.min(best, s / n);
+    }
+  }
+  return best;
+}
+
+/* ------------------------------------------------------------ side signals */
+
+/** Saturation + text-density stats, used only to warn that a "back" looks like a front. */
+function sideSignals(img, box) {
+  const { width: w, data: d } = img;
+  const x0 = clamp(box.x, 0, w - 1), y0 = Math.max(0, box.y);
+  const x1 = clamp(box.x + box.w, 1, w), y1 = Math.min(img.height, box.y + box.h);
+  let satSum = 0, n = 0;
+  for (let y = y0; y < y1; y++) {
+    for (let x = x0; x < x1; x++) {
+      const p = (y * w + x) * 4;
+      const r = d[p], g = d[p + 1], b = d[p + 2];
+      const mx = Math.max(r, g, b), mn = Math.min(r, g, b);
+      satSum += mx === 0 ? 0 : (mx - mn) / mx; n++;
+    }
+  }
+  return { saturation: n ? satSum / n : 0 };
+}
+
+/**
+ * How much of the frame's own border the card is sitting on. This, not the fill
+ * percentage, is what tells you a card runs off the edge of the shot: a card
+ * scaled past the frame reads as a *smaller* box, because the frame clips it.
+ * Only border pixels within the card's row/column span are counted, so a
+ * textured backdrop along the far edge cannot trigger it.
+ */
+function borderTouch(mask, w, h, box) {
+  // How many of the box's four sides are pinned to the frame edge, as a
+  // fraction of its perimeter. The projection profile that produced the box
+  // already discarded sparse noise, so a side sitting on the frame edge means
+  // the card genuinely continues past it.
+  const pad = 2;
+  let touched = 0, perim = 2 * (box.w + box.h);
+  if (box.x <= pad) touched += box.h;
+  if (box.y <= pad) touched += box.w;
+  if (box.x + box.w >= w - pad) touched += box.h;
+  if (box.y + box.h >= h - pad) touched += box.w;
+  void mask;
+  return perim ? touched / perim : 0;
+}
+
+/* ------------------------------------------------------------ the verdict */
+
+const DEFAULT_LIMITS = {
+  minFill: 0.30,        // card must occupy this much of the frame
+  goodFill: 0.45,       // ...this much to be called good
+  maxFill: 0.97,        // above this the card is cropped by the frame edge
+  maxBorderTouch: 0.12, // fraction of the card outline pinned to the frame edge
+  maxTilt: 4.0,         // degrees off square
+  minFocus: 0.30,       // variance-of-Laplacian / contrast^2 — below this, reshoot
+  softFocus: 0.55,      // ...below this, warn: usable but not crisp
+  maxGlareFrac: 0.020,  // blown+desaturated pixels inside the card
+  maxGlareBlob: 0.008,  // largest single blown blob — above this, warn
+  maxGlareBlobFatal: 0.030, // ...above this the card is unreadable under the smear
+  minDetail: 7.0,       // 95th-pct Sobel inside the box; below this: no card
+  minAspect: 0.55,      // card is 2.5x3.5 -> 0.714 portrait / 1.40 landscape
+  maxAspect: 1.85,
+  dupSig: 0.42,         // signature distance: at or below, it is the same card
+  dupSigMaybe: 0.55,    // ...above that but below this, ask rather than assert
+  dupDistance: 8        // hash fallback, for matching against past sessions
+};
+
+/**
+ * Analyse one captured frame.
+ *
+ * @param {{width:number,height:number,data:Uint8ClampedArray}} image  full-size RGBA
+ * @param {{limits?:object, knownHashes?:Array<{hash:string,label:string}>}} opts
+ * @returns verdict object — see fields below.
+ */
+function analyzeFrame(image, opts = {}) {
+  const limits = Object.assign({}, DEFAULT_LIMITS, opts.limits || {});
+  const small = resample(image, 220);
+  const { width: w, height: h } = small;
+  const gray = toGray(small);
+  const edges = sobel(gray, w, h);
+  const bg = estimateBackground(small);
+  const { mask } = foregroundMask(small, bg, edges);
+
+  const box = projectBox(mask, w, h);
+  const frameArea = w * h;
+
+  const problems = [];
+  const out = {
+    coreVersion: CORE_VERSION,
+    ok: false, cardPresent: false, box: null, boxNorm: null,
+    fill: 0, aspect: 0, tilt: null, focus: 0, glare: 0, glareBlob: 0, borderTouch: 0,
+    detail: 0, saturation: 0, hash: null, signature: null, duplicateOf: null, problems
+  };
+
+  if (!box || box.w < 6 || box.h < 6) {
+    problems.push({ code: 'no-card', level: 'fatal', message: 'No card in the frame.' });
+    return out;
+  }
+
+  // Detail inside the box separates a real card from an empty lit backdrop.
+  const inBox = [];
+  for (let y = box.y; y < box.y + box.h; y++) {
+    for (let x = box.x; x < box.x + box.w; x++) inBox.push(edges[y * w + x]);
+  }
+  out.detail = percentile(inBox, 95);
+
+  out.fill = (box.w * box.h) / frameArea;
+  out.aspect = box.w / box.h;
+  out.box = box;
+  out.boxNorm = { x: box.x / w, y: box.y / h, w: box.w / w, h: box.h / h };
+
+  if (out.detail < limits.minDetail) {
+    problems.push({ code: 'no-card', level: 'fatal', message: 'No card in the frame — just the backdrop.' });
+    return out;
+  }
+  if (out.fill < 0.02) {
+    problems.push({ code: 'no-card', level: 'fatal', message: 'No card in the frame.' });
+    return out;
+  }
+
+  out.cardPresent = true;
+  out.borderTouch = borderTouch(mask, w, h, box);
+  out.tilt = estimateTilt(mask, w, h, box);
+  out.focus = focusScore(small, box);
+  const g = glareScore(small, box);
+  out.glare = g.frac; out.glareBlob = g.blob;
+  out.saturation = sideSignals(small, box).saturation;
+  // The live viewfinder runs this loop several times a second and only needs
+  // framing feedback, so the identity work is skipped there.
+  if (!opts.quick) {
+    out.hash = dHash(small, box);
+    out.signature = signature(small, box);
+  }
+
+  if (out.aspect < limits.minAspect || out.aspect > limits.maxAspect) {
+    problems.push({ code: 'shape', level: 'warn', message: 'That does not look like one card — two cards in frame, or something else caught the edge.' });
+  }
+  if (out.fill > limits.maxFill || out.borderTouch > limits.maxBorderTouch) {
+    problems.push({ code: 'cropped', level: 'fatal', message: 'The card runs off the edge of the frame. Back off a little.' });
+  } else if (out.fill < limits.minFill) {
+    problems.push({ code: 'too-small', level: 'fatal', message: `Card fills only ${Math.round(out.fill * 100)}% of the frame. Move closer — the card number will not be readable.` });
+  } else if (out.fill < limits.goodFill) {
+    problems.push({ code: 'small', level: 'warn', message: `Card fills ${Math.round(out.fill * 100)}% of the frame. Closer would be sharper.` });
+  }
+  if (out.tilt !== null && Math.abs(out.tilt) > limits.maxTilt) {
+    problems.push({ code: 'tilt', level: 'warn', message: `Card is ${Math.abs(out.tilt).toFixed(1)}° off square.` });
+  }
+  if (out.focus < limits.minFocus) {
+    problems.push({ code: 'blur', level: 'fatal', message: 'Out of focus. Tap the card on screen to refocus, then reshoot.' });
+  } else if (out.focus < limits.softFocus) {
+    problems.push({ code: 'soft', level: 'warn', message: 'A little soft. Fine for the listing, but the card number may not read.' });
+  }
+  if (g.blob > limits.maxGlareBlobFatal) {
+    problems.push({ code: 'glare', level: 'fatal', message: `A ${Math.round(g.blob * 100)}% glare blob is covering the card. Move the light off-axis, or tilt the card away from it.` });
+  } else if (g.blob > limits.maxGlareBlob || g.frac > limits.maxGlareFrac) {
+    problems.push({ code: 'glare', level: 'warn', message: 'Glare on the card surface. Move the light off-axis or tilt the card.' });
+  }
+
+  // Duplicate check, against everything already shot. Signature first, hash as
+  // a fallback for entries carried over from an earlier session.
+  let best = null;
+  for (const k of (opts.quick ? [] : (opts.known || []))) {
+    const sd = k.signature ? sigDistance(out.signature, k.signature) : Infinity;
+    const hd = k.hash ? hamming(out.hash, k.hash) : 64;
+    const score = Math.min(sd, hd <= limits.dupDistance ? limits.dupSig : Infinity);
+    if (!best || score < best.score) best = { label: k.label, sig: sd, hash: hd, score };
+  }
+  if (best && best.score <= limits.dupSigMaybe) {
+    const certain = best.score <= limits.dupSig;
+    out.duplicateOf = { label: best.label, sig: best.sig, hash: best.hash, certain };
+    problems.push({
+      code: 'duplicate', level: 'warn',
+      message: certain
+        ? `Already shot this card — ${best.label}.`
+        : `This looks close to ${best.label}. Same card, or a different parallel?`
+    });
+  }
+
+  out.ok = !problems.some(p => p.level === 'fatal');
+  return out;
+}
+
+/** Crop rectangle in ORIGINAL image pixels, with a margin, clamped to bounds. */
+function cropRect(verdict, srcW, srcH, margin = 0.025) {
+  const b = verdict.boxNorm;
+  if (!b) return { x: 0, y: 0, w: srcW, h: srcH };
+  const mx = margin * srcW, my = margin * srcH;
+  const x = clamp(b.x * srcW - mx, 0, srcW - 1);
+  const y = clamp(b.y * srcH - my, 0, srcH - 1);
+  const w = clamp(b.w * srcW + 2 * mx, 1, srcW - x);
+  const h = clamp(b.h * srcH + 2 * my, 1, srcH - y);
+  return { x: Math.round(x), y: Math.round(y), w: Math.round(w), h: Math.round(h) };
+}
+
+const CORE = {
+  CORE_VERSION, DEFAULT_LIMITS,
+  analyzeFrame, cropRect, dHash, hamming, signature, sigDistance, SIG_N, resample, toGray, sobel,
+  estimateBackground, foregroundMask, projectBox, estimateTilt, focusScore, glareScore, borderTouch
+};
+
+if (typeof globalThis !== 'undefined') globalThis.MECVCore = CORE;
+</script>
+<script>/* ============================================================================
+   Main Event Card Vault — Shoot                              app.js  (v1.0.0)
+
+   Guided card capture on a phone, straight into Google Drive.
+
+   The shape of this app is a direct response to what went wrong in the photo
+   library: 47 frames with no card in them, 29% duplicate shots, fronts and
+   backs mislabelled, cards filling a third of the frame, everything rotated.
+   Those are all *capture-time* problems, so every one of them is checked at
+   capture time, on the phone, before the file is allowed to exist.
+   ========================================================================== */
+(() => {
+'use strict';
+const C = globalThis.MECVCore;
+
+/* --------------------------------------------------------------- settings */
+
+const LS = 'mecv.shoot.v1';
+const DEFAULTS = {
+  clientId: '',            // Google OAuth client id (set once, on this device)
+  apiBase: '',             // optional Worker base URL for card identification
+  apiKey: '',              // shared key for that Worker
+  rootFolder: 'Sports Card Photos',
+  photoNumber: 500,        // the library runs to card_0491; this carries on
+  keepOriginals: false,
+  maxEdge: 2600
+};
+let S = Object.assign({}, DEFAULTS, JSON.parse(localStorage.getItem(LS) || '{}'));
+const saveSettings = () => localStorage.setItem(LS, JSON.stringify(S));
+
+/* ------------------------------------------------------------ tiny helpers */
+
+const $ = (sel, root = document) => root.querySelector(sel);
+const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
+const el = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; };
+const pad4 = n => String(n).padStart(4, '0');
+const slug = s => (s || '').trim().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-');
+const today = () => new Date().toISOString().slice(0, 10);
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+function toast(msg, kind = '') {
+  const t = $('#toast');
+  t.className = 'banner ' + kind; t.textContent = msg; t.classList.remove('hide');
+  clearTimeout(toast._t); toast._t = setTimeout(() => t.classList.add('hide'), 4200);
+}
+
+/* ------------------------------------------------------- durable job queue */
+/* Photos live in IndexedDB from the moment they are taken. A dead signal, a
+   locked screen or a reloaded tab must never cost a shot. */
+
+const DB_NAME = 'mecv-shoot', STORE = 'uploads';
+let db = null;
+function openDB() {
+  return new Promise((res, rej) => {
+    const r = indexedDB.open(DB_NAME, 1);
+    r.onupgradeneeded = () => {
+      const d = r.result;
+      if (!d.objectStoreNames.contains(STORE)) d.createObjectStore(STORE, { keyPath: 'id' });
+      if (!d.objectStoreNames.contains('session')) d.createObjectStore('session', { keyPath: 'key' });
+    };
+    r.onsuccess = () => res(r.result); r.onerror = () => rej(r.error);
+  });
+}
+function tx(store, mode, fn) {
+  return new Promise((res, rej) => {
+    const t = db.transaction(store, mode), s = t.objectStore(store);
+    const out = fn(s);
+    t.oncomplete = () => res(out && out.result !== undefined ? out.result : out);
+    t.onerror = () => rej(t.error);
+  });
+}
+const putJob = j => tx(STORE, 'readwrite', s => s.put(j));
+const delJob = id => tx(STORE, 'readwrite', s => s.delete(id));
+const allJobs = () => new Promise((res, rej) => {
+  const r = db.transaction(STORE, 'readonly').objectStore(STORE).getAll();
+  r.onsuccess = () => res(r.result); r.onerror = () => rej(r.error);
+});
+const saveSession = () => tx('session', 'readwrite', s => s.put({ key: 'current', cards, folder, started: session.started }));
+const loadSession = () => new Promise(res => {
+  const r = db.transaction('session', 'readonly').objectStore('session').get('current');
+  r.onsuccess = () => res(r.result); r.onerror = () => res(null);
+});
+
+/* -------------------------------------------------------------- Google auth */
+
+let token = null, tokenExp = 0, tokenClient = null;
+
+function initAuth() {
+  if (!S.clientId) return false;
+  if (!globalThis.google || !google.accounts) return false;
+  tokenClient = google.accounts.oauth2.initTokenClient({
+    client_id: S.clientId,
+    scope: 'https://www.googleapis.com/auth/drive.file',
+    callback: () => {}
+  });
+  return true;
+}
+
+function getToken({ interactive = true } = {}) {
+  return new Promise((res, rej) => {
+    if (token && Date.now() < tokenExp - 60000) return res(token);
+    if (!tokenClient && !initAuth()) return rej(new Error('Google sign-in is not configured yet — open Settings and paste your OAuth client ID.'));
+    tokenClient.callback = (resp) => {
+      if (resp.error) return rej(new Error(resp.error_description || resp.error));
+      token = resp.access_token;
+      tokenExp = Date.now() + (Number(resp.expires_in || 3600) * 1000);
+      localStorage.setItem('mecv.signedin', '1');
+      res(token);
+    };
+    try { tokenClient.requestAccessToken({ prompt: interactive ? '' : 'none' }); }
+    catch (e) { rej(e); }
+  });
+}
+
+const signedIn = () => !!token || localStorage.getItem('mecv.signedin') === '1';
+
+/* ------------------------------------------------------------- Drive calls */
+
+async function drive(path, opts = {}, retry = true) {
+  const t = await getToken({ interactive: false }).catch(() => getToken());
+  const r = await fetch('https://www.googleapis.com/' + path, {
+    ...opts,
+    headers: { Authorization: 'Bearer ' + t, ...(opts.headers || {}) }
+  });
+  if (r.status === 401 && retry) { token = null; return drive(path, opts, false); }
+  if (!r.ok) throw new Error(`Drive ${r.status}: ${(await r.text()).slice(0, 200)}`);
+  return r.json();
+}
+
+async function findOrCreateFolder(name, parent) {
+  const q = [
+    `name = '${name.replace(/'/g, "\\'")}'`,
+    "mimeType = 'application/vnd.google-apps.folder'",
+    'trashed = false',
+    parent ? `'${parent}' in parents` : null
+  ].filter(Boolean).join(' and ');
+  const found = await drive('drive/v3/files?q=' + encodeURIComponent(q) + '&fields=files(id,name)&pageSize=5');
+  if (found.files && found.files.length) return found.files[0].id;
+  const made = await drive('drive/v3/files?fields=id', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ name, mimeType: 'application/vnd.google-apps.folder', ...(parent ? { parents: [parent] } : {}) })
+  });
+  return made.id;
+}
+
+async function renameOnDrive(fileId, name) {
+  return drive(`drive/v3/files/${encodeURIComponent(fileId)}?fields=id,name`, {
+    method: 'PATCH', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ name })
+  });
+}
+
+async function uploadBlob(name, blob, folderId, mime = 'image/jpeg') {
+  const t = await getToken({ interactive: false }).catch(() => getToken());
+  const boundary = 'mecv' + Math.random().toString(36).slice(2);
+  const meta = JSON.stringify({ name, parents: [folderId] });
+  const body = new Blob([
+    `--${boundary}\r\nContent-Type: application/json; charset=UTF-8\r\n\r\n${meta}\r\n`,
+    `--${boundary}\r\nContent-Type: ${mime}\r\n\r\n`, blob, `\r\n--${boundary}--\r\n`
+  ]);
+  const r = await fetch('https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart&fields=id,name,webViewLink', {
+    method: 'POST',
+    headers: { Authorization: 'Bearer ' + t, 'Content-Type': `multipart/related; boundary=${boundary}` },
+    body
+  });
+  if (r.status === 401) { token = null; return uploadBlob(name, blob, folderId, mime); }
+  if (!r.ok) throw new Error(`Upload ${r.status}: ${(await r.text()).slice(0, 200)}`);
+  return r.json();
+}
+
+/* ------------------------------------------------------------ upload drain */
+
+let draining = false;
+async function drainQueue() {
+  if (draining || !db) return;
+  draining = true;
+  try {
+    for (const job of await allJobs()) {
+      if (job.state === 'done') { await delJob(job.id); continue; }
+      if (job.attempts >= 5) continue;
+      if (!navigator.onLine) break;
+      try {
+        const res = await uploadBlob(job.name, job.blob, job.folderId, job.mime || 'image/jpeg');
+        markUploaded(job, res);
+        await delJob(job.id);
+      } catch (e) {
+        job.attempts = (job.attempts || 0) + 1;
+        job.error = String(e.message || e);
+        await putJob(job);
+        markError(job);
+        await sleep(600 * job.attempts);
+      }
+    }
+  } finally { draining = false; renderSession(); updateQueueBadge(); }
+}
+setInterval(() => { if (navigator.onLine) drainQueue(); }, 8000);
+addEventListener('online', drainQueue);
+
+function markUploaded(job, res) {
+  const card = cards.find(c => c.id === job.cardId);
+  if (!card) return;
+  const shot = card.shots[job.side];
+  if (shot && shot.file === job.name) { shot.driveId = res.id; shot.link = res.webViewLink; shot.state = 'up'; }
+  saveSession();
+}
+function markError(job) {
+  const card = cards.find(c => c.id === job.cardId);
+  const shot = card && card.shots[job.side];
+  if (shot) shot.state = 'err';
+}
+async function updateQueueBadge() {
+  if (!db) return;
+  const n = (await allJobs()).filter(j => j.state !== 'done').length;
+  const b = $('#qbadge');
+  b.textContent = n ? `${n} waiting to upload` : 'All uploaded';
+  b.className = 'pill ' + (n ? 'warn' : 'good');
+}
+
+/* ================================================================= session */
+
+let cards = [];       // [{id, no, player, number, set, year, parallel, serial, flags, notes, price, shots:{front,back}}]
+let folder = null;    // {rootId, sessionId, name}
+let session = { started: null };
+let current = null;   // card being shot
+let side = 'front';
+
+const cardLabel = c => c.player ? `${c.player}${c.number ? ' #' + c.number : ''}` : `card ${pad4(c.no)}`;
+
+function newCard() {
+  const c = {
+    id: 'c' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6),
+    no: S.photoNumber, player: '', number: '', set: '', year: '', parallel: '',
+    serial: '', rc: false, auto: false, notes: '', price: '', sport: '',
+    shots: { front: null, back: null }, created: new Date().toISOString()
+  };
+  cards.push(c); return c;
+}
+
+function fileNameFor(card, sideName, photoNo) {
+  // claude/photo-naming-convention.md — player, number, side, sequence last.
+  if (!card.player) return `card_${pad4(photoNo)}_${sideName}.jpg`;
+  const bits = [slug(card.player)];
+  if (card.number) bits.push(slug(String(card.number).replace(/\//g, '-')));
+  bits.push(sideName, pad4(photoNo));
+  return bits.join('_') + '.jpg';
+}
+
+/* Every shot already taken this session, for the duplicate check. Front and
+   back of the *same* card are excluded — they are supposed to differ. */
+function knownShots(exceptCardId) {
+  const out = [];
+  for (const c of cards) {
+    if (c.id === exceptCardId) continue;
+    for (const k of ['front', 'back']) {
+      const s = c.shots[k];
+      if (s && s.signature) out.push({ signature: s.signature, hash: s.hash, label: `${cardLabel(c)} (${k}, photo ${pad4(s.no)})` });
+    }
+  }
+  return out;
+}
+
+/* ================================================================== camera */
+
+let stream = null, track = null, imageCapture = null, liveTimer = null, lastVerdict = null;
+
+async function startCamera() {
+  stopCamera();
+  const tries = [
+    { facingMode: { exact: 'environment' }, width: { ideal: 3840 }, height: { ideal: 2160 } },
+    { facingMode: { ideal: 'environment' }, width: { ideal: 1920 }, height: { ideal: 1080 } },
+    true
+  ];
+  let err = null;
+  for (const video of tries) {
+    try { stream = await navigator.mediaDevices.getUserMedia({ video, audio: false }); break; }
+    catch (e) { err = e; }
+  }
+  if (!stream) {
+    $('#camFail').classList.remove('hide');
+    $('#camFail').textContent = 'Cannot open the camera (' + (err && err.name || 'unknown') + '). Use "Camera app" below instead.';
+    return;
+  }
+  $('#camFail').classList.add('hide');
+  track = stream.getVideoTracks()[0];
+  const v = $('#video'); v.srcObject = stream; await v.play().catch(() => {});
+  try { if ('ImageCapture' in window) imageCapture = new ImageCapture(track); } catch { imageCapture = null; }
+  const st = track.getSettings ? track.getSettings() : {};
+  $('#resNote').textContent = st.width ? `${st.width}x${st.height}` : '';
+  $('#torchBtn').classList.toggle('hide', !(track.getCapabilities && track.getCapabilities().torch));
+  startLiveLoop();
+}
+
+function stopCamera() {
+  clearInterval(liveTimer); liveTimer = null;
+  if (stream) stream.getTracks().forEach(t => t.stop());
+  stream = null; track = null; imageCapture = null;
+}
+
+async function toggleTorch() {
+  if (!track) return;
+  const on = !(track.getSettings().torch);
+  try { await track.applyConstraints({ advanced: [{ torch: on }] }); } catch { toast('This camera has no torch control.'); }
+}
+
+/* Tap-to-focus, where the platform allows it. */
+function focusAt(nx, ny) {
+  if (!track || !track.applyConstraints) return;
+  track.applyConstraints({ advanced: [{ focusMode: 'single-shot', pointsOfInterest: [{ x: nx, y: ny }] }] })
+    .catch(() => {});
+}
+
+/* --------------------------------------------------------- live viewfinder */
+
+const liveCanvas = document.createElement('canvas');
+const liveCtx = liveCanvas.getContext('2d', { willReadFrequently: true });
+
+function startLiveLoop() {
+  clearInterval(liveTimer);
+  liveTimer = setInterval(() => {
+    const v = $('#video');
+    if (!v || v.readyState < 2 || document.hidden) return;
+    const w = 220, h = Math.round(w * v.videoHeight / v.videoWidth) || 165;
+    liveCanvas.width = w; liveCanvas.height = h;
+    liveCtx.drawImage(v, 0, 0, w, h);
+    let img;
+    try { img = liveCtx.getImageData(0, 0, w, h); } catch { return; }
+    const verdict = C.analyzeFrame({ width: w, height: h, data: img.data }, { quick: true });
+    lastVerdict = verdict;
+    paintHud(verdict);
+  }, 260);
+}
+
+function paintHud(v) {
+  const chips = $('#chips'); chips.textContent = '';
+  const add = (label, cls) => { const p = el('span', 'pill ' + cls, label); chips.appendChild(p); };
+
+  if (!v.cardPresent) {
+    add('No card', 'bad');
+    $('#coach').textContent = 'Put a card in the frame';
+    setShutter('blocked');
+  } else {
+    const pct = Math.round(v.fill * 100);
+    add(`Fills ${pct}%`, v.fill < C.DEFAULT_LIMITS.minFill ? 'bad' : v.fill < C.DEFAULT_LIMITS.goodFill ? 'warn' : 'good');
+    if (v.tilt !== null) {
+      const a = Math.abs(v.tilt);
+      add(a < 1 ? 'Square' : `${a.toFixed(1)}°`, a > C.DEFAULT_LIMITS.maxTilt ? 'warn' : 'good');
+    }
+    add(v.focus < C.DEFAULT_LIMITS.minFocus ? 'Soft' : 'Sharp',
+        v.focus < C.DEFAULT_LIMITS.minFocus ? 'bad' : v.focus < C.DEFAULT_LIMITS.softFocus ? 'warn' : 'good');
+    if (v.glareBlob > C.DEFAULT_LIMITS.maxGlareBlob) add('Glare', v.glareBlob > C.DEFAULT_LIMITS.maxGlareBlobFatal ? 'bad' : 'warn');
+
+    const fatal = v.problems.find(p => p.level === 'fatal');
+    $('#coach').textContent = fatal ? fatal.message : (v.fill < C.DEFAULT_LIMITS.goodFill ? 'A little closer' : 'Ready');
+    setShutter(fatal ? 'blocked' : 'armed');
+  }
+  drawGuide(v);
+}
+
+function setShutter(mode) {
+  const b = $('#shutter');
+  b.classList.toggle('armed', mode === 'armed');
+  b.classList.toggle('blocked', mode === 'blocked');
+}
+
+function drawGuide(v) {
+  const cv = $('#overlay'), v0 = $('#video');
+  if (!v0.videoWidth) return;
+  const rect = v0.getBoundingClientRect();
+  if (cv.width !== Math.round(rect.width) || cv.height !== Math.round(rect.height)) {
+    cv.width = Math.round(rect.width); cv.height = Math.round(rect.height);
+  }
+  const g = cv.getContext('2d');
+  g.clearRect(0, 0, cv.width, cv.height);
+
+  // object-fit: cover — work out the visible slice of the video.
+  const sc = Math.max(cv.width / v0.videoWidth, cv.height / v0.videoHeight);
+  const dw = v0.videoWidth * sc, dh = v0.videoHeight * sc;
+  const ox = (cv.width - dw) / 2, oy = (cv.height - dh) / 2;
+
+  // Target frame: where a well-filled card should sit.
+  g.strokeStyle = 'rgba(230,190,85,.55)'; g.lineWidth = 2; g.setLineDash([9, 7]);
+  const tw = cv.width * 0.72, th = Math.min(cv.height * 0.86, tw * 3.5 / 2.5);
+  g.strokeRect((cv.width - tw) / 2, (cv.height - th) / 2, tw, th);
+  g.setLineDash([]);
+
+  if (v && v.boxNorm) {
+    const b = v.boxNorm;
+    const x = ox + b.x * dw, y = oy + b.y * dh, w = b.w * dw, h = b.h * dh;
+    const fatal = v.problems.some(p => p.level === 'fatal');
+    g.strokeStyle = fatal ? 'rgba(210,60,70,.95)' : 'rgba(94,201,138,.95)';
+    g.lineWidth = 3; g.strokeRect(x, y, w, h);
+  }
+}
+addEventListener('resize', () => drawGuide(lastVerdict));
+
+/* ================================================== capture and processing */
+
+let busy = false;
+
+async function capture() {
+  if (busy) return;
+  const fatal = lastVerdict && lastVerdict.problems.some(p => p.level === 'fatal');
+  if (fatal && !confirm(lastVerdict.problems.find(p => p.level === 'fatal').message + '\n\nTake it anyway?')) return;
+  busy = true; setShutter(''); $('#shutter').disabled = true;
+  try {
+    let blob = null;
+    if (imageCapture) { try { blob = await imageCapture.takePhoto(); } catch { blob = null; } }
+    if (!blob) blob = await grabFromVideo();
+    await handleCaptured(blob);
+  } catch (e) {
+    toast('Capture failed: ' + (e.message || e), 'err');
+  } finally { busy = false; $('#shutter').disabled = false; }
+}
+
+function grabFromVideo() {
+  const v = $('#video');
+  const cv = document.createElement('canvas');
+  cv.width = v.videoWidth; cv.height = v.videoHeight;
+  cv.getContext('2d').drawImage(v, 0, 0);
+  return new Promise(res => cv.toBlob(res, 'image/jpeg', 0.95));
+}
+
+/**
+ * One decode, one pixel readback, then everything else works off that canvas:
+ * analysis, straightening and the crop. Phones do not have the memory to do
+ * this three times over a 12-megapixel frame.
+ */
+async function handleCaptured(blob) {
+  const bmp = await createImageBitmap(blob, { imageOrientation: 'from-image' });
+  const scale = Math.min(1, S.maxEdge / Math.max(bmp.width, bmp.height));
+  const w = Math.round(bmp.width * scale), h = Math.round(bmp.height * scale);
+  const work = document.createElement('canvas'); work.width = w; work.height = h;
+  const wctx = work.getContext('2d', { willReadFrequently: true });
+  wctx.drawImage(bmp, 0, 0, w, h);
+  bmp.close && bmp.close();
+
+  const px = wctx.getImageData(0, 0, w, h);
+  const verdict = C.analyzeFrame({ width: w, height: h, data: px.data },
+    { known: knownShots(current ? current.id : null) });
+
+  const out = verdict.cardPresent ? straightenAndCrop(work, verdict) : work;
+  const jpeg = await new Promise(r => out.toBlob(r, 'image/jpeg', 0.92));
+  const thumb = await makeThumb(out);
+
+  pending = { verdict, blob: jpeg, thumb, original: S.keepOriginals ? blob : null,
+              width: out.width, height: out.height };
+  showReview();
+}
+
+function straightenAndCrop(src, v) {
+  const r = C.cropRect(v, src.width, src.height, 0.03);
+  const ang = (v.tilt && Math.abs(v.tilt) > 0.4) ? -v.tilt * Math.PI / 180 : 0;
+  // Rotation about the crop centre eats a little of each edge; inset by
+  // exactly what it eats so no backdrop corner survives into the listing photo.
+  const eat = Math.abs(Math.sin(ang)) * Math.max(r.w, r.h) * 0.5;
+  const ow = Math.max(8, Math.round(r.w - 2 * eat)), oh = Math.max(8, Math.round(r.h - 2 * eat));
+  const cv = document.createElement('canvas'); cv.width = ow; cv.height = oh;
+  const g = cv.getContext('2d');
+  g.translate(ow / 2, oh / 2);
+  if (ang) g.rotate(ang);
+  g.drawImage(src, r.x, r.y, r.w, r.h, -r.w / 2, -r.h / 2, r.w, r.h);
+  return cv;
+}
+
+function makeThumb(canvas) {
+  const s = 160 / Math.max(canvas.width, canvas.height);
+  const cv = document.createElement('canvas');
+  cv.width = Math.round(canvas.width * s); cv.height = Math.round(canvas.height * s);
+  cv.getContext('2d').drawImage(canvas, 0, 0, cv.width, cv.height);
+  return cv.toDataURL('image/jpeg', 0.72);
+}
+
+/* ------------------------------------------------------------ camera-app path */
+
+async function onFilePicked(e) {
+  const f = e.target.files && e.target.files[0];
+  e.target.value = '';
+  if (!f) return;
+  busy = true;
+  try { await handleCaptured(f); } catch (err) { toast('Could not read that photo: ' + err.message, 'err'); }
+  finally { busy = false; }
+}
+
+/* ================================================================== review */
+
+let pending = null;
+
+function showReview() {
+  const v = pending.verdict;
+  const fatal = v.problems.filter(p => p.level === 'fatal');
+  const warn = v.problems.filter(p => p.level === 'warn');
+  const kind = fatal.length ? 'bad' : warn.length ? 'warn' : 'good';
+
+  $('#revImg').src = pending.thumb;
+  $('#revImg').dataset.full = '1';
+  const box = $('#revVerdict');
+  box.className = 'verdict ' + kind;
+  box.textContent = '';
+  const head = el('h3', null, fatal.length ? 'Reshoot this one' : warn.length ? 'Usable, with notes' : 'Good shot');
+  box.appendChild(head);
+  box.appendChild(el('div', 'muted', `${current ? cardLabel(current) : 'new card'} · ${side} · ${pending.width}×${pending.height}`));
+  if (v.problems.length) {
+    const ul = el('ul');
+    for (const p of v.problems) ul.appendChild(el('li', null, p.message));
+    box.appendChild(ul);
+  } else {
+    box.appendChild(el('div', 'muted', `Fills ${Math.round(v.fill * 100)}% of the frame, square, sharp.`));
+  }
+  $('#revKeep').textContent = fatal.length ? 'Keep anyway' : 'Use it';
+  $('#revKeep').className = 'btn ' + (fatal.length ? '' : 'primary');
+  show('reviewScreen');
+}
+
+async function keepShot() {
+  if (!pending) return;
+  if (!current) current = newCard();
+  const no = S.photoNumber;
+  const name = fileNameFor(current, side, no);
+  const shot = {
+    no, file: name, state: 'pend', thumb: pending.thumb,
+    hash: pending.verdict.hash, signature: pending.verdict.signature,
+    fill: +pending.verdict.fill.toFixed(3),
+    tilt: pending.verdict.tilt === null ? null : +pending.verdict.tilt.toFixed(2),
+    focus: +pending.verdict.focus.toFixed(3),
+    glare: +pending.verdict.glareBlob.toFixed(4),
+    problems: pending.verdict.problems.map(p => p.code),
+    width: pending.width, height: pending.height
+  };
+  current.shots[side] = shot;
+  S.photoNumber = no + 1; saveSettings();
+
+  await putJob({
+    id: current.id + '-' + side, name, blob: pending.blob, mime: 'image/jpeg',
+    folderId: folder.sessionId, cardId: current.id, side, state: 'pend', attempts: 0
+  });
+  if (pending.original) {
+    await putJob({
+      id: current.id + '-' + side + '-orig', name: name.replace(/\.jpg$/, '_original.jpg'),
+      blob: pending.original, mime: 'image/jpeg', folderId: folder.originalsId || folder.sessionId,
+      cardId: current.id, side: side + '-orig', state: 'pend', attempts: 0
+    });
+  }
+  pending = null;
+  await saveSession(); drainQueue();
+
+  if (side === 'front') { side = 'back'; show('camScreen'); updateHud(); }
+  else { openDetails(current); }
+}
+
+/* =================================================================== details */
+
+function openDetails(card) {
+  current = card;
+  $('#dTitle').textContent = cardLabel(card);
+  for (const k of ['player', 'number', 'set', 'year', 'parallel', 'serial', 'notes', 'price', 'sport'])
+    $('#f_' + k).value = card[k] || '';
+  $('#f_rc').checked = !!card.rc; $('#f_auto').checked = !!card.auto;
+  const s = $('#dShots'); s.textContent = '';
+  for (const k of ['front', 'back']) {
+    const shot = card.shots[k];
+    const d = el('div', 'shot');
+    if (shot) { const i = el('img'); i.src = shot.thumb; d.appendChild(i); }
+    d.appendChild(el('span', 'tag', shot ? `${k} · ${pad4(shot.no)}` : k + ' — missing'));
+    if (!shot) { d.style.display = 'grid'; d.style.placeItems = 'center'; d.appendChild(el('span', 'muted', 'not shot')); }
+    s.appendChild(d);
+  }
+  $('#idBtn').classList.toggle('hide', !S.apiBase);
+  renderCompLinks();
+  show('detailScreen');
+}
+
+/** Done with this card. Anything shot next starts a new one. */
+function commitCard() { flushRenames(); current = null; side = 'front'; }
+
+function readDetails() {
+  if (!current) return;
+  for (const k of ['player', 'number', 'set', 'year', 'parallel', 'serial', 'notes', 'price', 'sport'])
+    current[k] = $('#f_' + k).value.trim();
+  current.rc = $('#f_rc').checked; current.auto = $('#f_auto').checked;
+  // Renaming after identification is what makes the filenames trustworthy.
+  // A shot is uploaded the moment it is taken, so by the time the player name
+  // is typed the file usually already exists in Drive — rename it there rather
+  // than leaving a folder full of card_0500_front.jpg.
+  for (const k of ['front', 'back']) {
+    const shot = current.shots[k];
+    if (!shot) continue;
+    const want = fileNameFor(current, k, shot.no);
+    if (want === shot.file) continue;
+    shot.file = want;
+    if (shot.driveId) scheduleRename(shot);
+    else renameJob(current.id + '-' + k, want);
+  }
+  saveSession();
+}
+/* One PATCH per card once typing settles, not one per keystroke. */
+const renameTimers = new Map();
+function scheduleRename(shot) {
+  clearTimeout(renameTimers.get(shot.driveId));
+  renameTimers.set(shot.driveId, setTimeout(() => {
+    renameTimers.delete(shot.driveId);
+    renameOnDrive(shot.driveId, shot.file)
+      .catch(e => toast('Renamed here, but Drive refused: ' + String(e.message || e).slice(0, 80), 'err'));
+  }, 1200));
+}
+function flushRenames() {
+  for (const [, t] of renameTimers) clearTimeout(t);
+  const pendingIds = [...renameTimers.keys()]; renameTimers.clear();
+  for (const c of cards) for (const k of ['front', 'back']) {
+    const sh = c.shots[k];
+    if (sh && sh.driveId && pendingIds.includes(sh.driveId)) {
+      renameOnDrive(sh.driveId, sh.file).catch(() => {});
+    }
+  }
+}
+
+async function renameJob(id, name) {
+  const jobs = await allJobs();
+  const j = jobs.find(x => x.id === id);
+  if (j) { j.name = name; await putJob(j); }
+}
+
+function titleFor(c) {
+  const bits = [c.year, c.set, c.player, c.parallel, c.number ? '#' + c.number : '',
+                c.serial ? '/' + String(c.serial).split('/').pop() : '',
+                c.auto ? 'AUTO' : '', c.rc ? 'RC' : ''].filter(Boolean);
+  return bits.join(' ').replace(/\s+/g, ' ').slice(0, 80);
+}
+
+function renderCompLinks() {
+  const c = current, q = [c.year, c.set, c.player, c.number ? '#' + c.number : '', c.parallel].filter(Boolean).join(' ');
+  const box = $('#compLinks'); box.textContent = '';
+  if (!q.trim()) { box.appendChild(el('span', 'muted', 'Fill in the player and set to get comp links.')); return; }
+  const links = [
+    ['Card Ladder', 'https://app.cardladder.com/search?q=' + encodeURIComponent(q)],
+    ['eBay sold', 'https://www.ebay.com/sch/i.html?_nkw=' + encodeURIComponent(q) + '&LH_Sold=1&LH_Complete=1&_ipg=60'],
+    ['130point', 'https://130point.com/sales/?q=' + encodeURIComponent(q)]
+  ];
+  for (const [label, href] of links) {
+    const a = el('a', null, label); a.href = href; a.target = '_blank'; a.rel = 'noopener';
+    box.appendChild(a);
+  }
+}
+
+/* ------------------------------------------------------------- identify */
+
+async function identify() {
+  if (!S.apiBase) return;
+  const btn = $('#idBtn'); const old = btn.textContent;
+  btn.textContent = ''; btn.appendChild(el('span', 'spin')); btn.disabled = true;
+  try {
+    const imgs = {};
+    for (const k of ['front', 'back']) {
+      const job = (await allJobs()).find(j => j.id === current.id + '-' + k);
+      if (job) imgs[k] = await downscaleToDataURL(job.blob, 1100);
+      else if (current.shots[k]) imgs[k] = current.shots[k].thumb;
+    }
+    const r = await fetch(S.apiBase.replace(/\/$/, '') + '/identify', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ key: S.apiKey, front: imgs.front || null, back: imgs.back || null })
+    });
+    if (!r.ok) throw new Error(await r.text());
+    const d = await r.json();
+    for (const k of ['player', 'number', 'set', 'year', 'parallel', 'serial', 'sport'])
+      if (d[k]) $('#f_' + k).value = d[k];
+    if (d.rc != null) $('#f_rc').checked = !!d.rc;
+    if (d.auto != null) $('#f_auto').checked = !!d.auto;
+    if (d.notes) $('#f_notes').value = ($('#f_notes').value ? $('#f_notes').value + '\n' : '') + d.notes;
+    readDetails(); renderCompLinks();
+    toast(d.confidence ? `Identified (${d.confidence} confidence) — check it against the card back.` : 'Identified — check it against the card back.', 'ok');
+  } catch (e) {
+    toast('Could not identify: ' + String(e.message || e).slice(0, 120), 'err');
+  } finally { btn.textContent = old; btn.disabled = false; }
+}
+
+async function downscaleToDataURL(blob, edge) {
+  const bmp = await createImageBitmap(blob);
+  const s = Math.min(1, edge / Math.max(bmp.width, bmp.height));
+  const cv = document.createElement('canvas');
+  cv.width = Math.round(bmp.width * s); cv.height = Math.round(bmp.height * s);
+  cv.getContext('2d').drawImage(bmp, 0, 0, cv.width, cv.height);
+  bmp.close && bmp.close();
+  return cv.toDataURL('image/jpeg', 0.82);
+}
+
+/* ================================================================= session UI */
+
+function renderSession() {
+  const list = $('#sessionList'); if (!list) return;
+  list.textContent = '';
+  if (!cards.length) { list.appendChild(el('div', 'muted', 'Nothing shot yet.')); return; }
+  for (const c of [...cards].reverse()) {
+    const row = el('div', 'item');
+    const th = el('img', 'th');
+    th.src = (c.shots.front || c.shots.back || {}).thumb || '';
+    row.appendChild(th);
+    const b = el('div', 'body');
+    b.appendChild(el('div', 't', cardLabel(c)));
+    const sides = ['front', 'back'].filter(k => c.shots[k]);
+    const up = sides.filter(k => c.shots[k].state === 'up').length;
+    b.appendChild(el('div', 'm', `${sides.join(' + ') || 'no photos'} · ${up}/${sides.length} uploaded${c.price ? ' · $' + c.price : ''}`));
+    row.appendChild(b);
+    const st = sides.length && up === sides.length ? 'up' : sides.some(k => c.shots[k].state === 'err') ? 'err' : 'pend';
+    row.appendChild(el('span', 'dot ' + st));
+    row.onclick = () => openDetails(c);
+    list.appendChild(row);
+  }
+  $('#sessionCount').textContent = `${cards.length} card${cards.length === 1 ? '' : 's'}`;
+}
+
+/* ------------------------------------------------------- handoff artefacts */
+
+function manifestJSON() {
+  return JSON.stringify({
+    tool: 'mecv-shoot', version: '1.0.0', coreVersion: C.CORE_VERSION,
+    session: { started: session.started, finished: new Date().toISOString(), folder: folder && folder.name },
+    namingConvention: '<Player-Name>_<CardNumber>_<front|back>_<photo#>.jpg',
+    cards: cards.map(c => ({
+      id: c.id, title: titleFor(c),
+      player: c.player, number: c.number, set: c.set, year: c.year,
+      parallel: c.parallel, serial: c.serial, rc: c.rc, auto: c.auto,
+      sport: c.sport, price: c.price, notes: c.notes,
+      photos: ['front', 'back'].filter(k => c.shots[k]).map(k => ({
+        side: k, file: c.shots[k].file, photoNumber: c.shots[k].no,
+        driveId: c.shots[k].driveId || null,
+        quality: {
+          fill: c.shots[k].fill, tilt: c.shots[k].tilt, focus: c.shots[k].focus,
+          glareBlob: c.shots[k].glare, flags: c.shots[k].problems
+        },
+        signature: c.shots[k].signature, hash: c.shots[k].hash
+      }))
+    }))
+  }, null, 1);
+}
+
+const csvCell = v => { const s = String(v == null ? '' : v); return /[",\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s; };
+const csvRows = rows => rows.map(r => r.map(csvCell).join(',')).join('\r\n') + '\r\n';
+
+function shootLogCSV() {
+  const head = ['photoNumber', 'file', 'cardId', 'side', 'player', 'cardNumber', 'set', 'year',
+    'parallel', 'serial', 'rc', 'auto', 'price', 'fill', 'tiltDeg', 'focus', 'glareBlob', 'flags', 'driveId'];
+  const rows = [head];
+  for (const c of cards) for (const k of ['front', 'back']) {
+    const s = c.shots[k]; if (!s) continue;
+    rows.push([s.no, s.file, c.id, k, c.player, c.number, c.set, c.year, c.parallel, c.serial,
+      c.rc ? 'Y' : '', c.auto ? 'Y' : '', c.price, s.fill, s.tilt, s.focus, s.glare, (s.problems || []).join('|'), s.driveId || '']);
+  }
+  return csvRows(rows);
+}
+
+function draftsCSV() {
+  // eBay File Exchange columns. Category/condition/shipping follow
+  // claude/pricing-and-shipping-2026-07-30.md. PicURL stays blank on purpose:
+  // Drive links are not fetchable by eBay, so photos are attached in the browser.
+  const head = ['Action(SiteID=US|Country=US|Currency=USD|Version=1193)', 'CustomLabel', 'Category',
+    'Title', 'ConditionID', 'C:Sport', 'C:Player/Athlete', 'C:Season', 'C:Set', 'C:Card Number',
+    'C:Parallel/Variety', 'C:Autographed', 'PicURL', 'Description', 'Format', 'Duration',
+    'StartPrice', 'Quantity', 'Location', 'ShippingType', 'ShippingService-1:Option',
+    'ShippingService-1:Cost', 'DispatchTimeMax', 'ReturnsAcceptedOption', 'PhotoFiles'];
+  const rows = [head];
+  cards.forEach((c, i) => {
+    const desc = [
+      [c.year, c.set, c.player && '- ' + c.player, c.parallel, c.number && 'card #' + c.number,
+       c.serial && 'serial numbered ' + c.serial, c.rc && 'Rookie Card', c.auto && 'Certified autograph, on-card signature']
+        .filter(Boolean).join(', ') + '.',
+      'Card is ungraded and in near mint or better condition. Please see the photos - they are of the actual card you will receive.',
+      'Ships in a penny sleeve and rigid top loader, protected between chipboard in a bubble mailer. Ships fast from a smoke-free home.',
+      'Combined shipping available - add 30c per extra card.'
+    ].join('\n');
+    rows.push(['Add', 'S-' + String(i + 1).padStart(3, '0'), '261328', titleFor(c), '2750',
+      c.sport, c.player, c.year, c.set, c.number, c.parallel, c.auto ? 'Yes' : 'No', '',
+      desc, 'FixedPrice', 'GTC', c.price || '', '1', 'Strasburg, VA', 'Flat',
+      'USPSGroundAdvantage', '5.99', '1', 'ReturnsNotAccepted',
+      ['front', 'back'].filter(k => c.shots[k]).map(k => c.shots[k].file).join('|')]);
+  });
+  return csvRows(rows);
+}
+
+async function finishSession() {
+  const btn = $('#finishBtn'); btn.disabled = true;
+  try {
+    readDetails();
+    await drainQueue();
+    const files = [
+      ['manifest.json', manifestJSON(), 'application/json'],
+      ['shoot-log.csv', shootLogCSV(), 'text/csv'],
+      ['ebay-drafts.csv', draftsCSV(), 'text/csv']
+    ];
+    for (const [name, text, mime] of files) await uploadBlob(name, new Blob([text], { type: mime }), folder.sessionId, mime);
+    const pend = (await allJobs()).filter(j => j.state !== 'done').length;
+    toast(pend ? `Written. ${pend} photo(s) still uploading — leave this open.` : 'Session written to Drive.', pend ? 'warn' : 'ok');
+    $('#finishNote').textContent = `manifest.json, shoot-log.csv and ebay-drafts.csv are in "${folder.name}".`;
+  } catch (e) {
+    toast('Could not write the session files: ' + (e.message || e), 'err');
+  } finally { btn.disabled = false; }
+}
+
+/* ====================================================================== nav */
+
+const SCREENS = ['startScreen', 'camScreen', 'reviewScreen', 'detailScreen', 'sessionScreen', 'settingsScreen'];
+function show(id) {
+  for (const s of SCREENS) $('#' + s).classList.toggle('hide', s !== id);
+  if (id === 'camScreen') {
+    if (current && current.shots.front && current.shots.back) commitCard();
+    if (!current) side = 'front';
+    if (!stream) startCamera(); else startLiveLoop();
+    updateHud();
+  }
+  else clearInterval(liveTimer);
+  if (id === 'sessionScreen') { renderSession(); updateQueueBadge(); }
+}
+function updateHud() {
+  $('#hudNo').textContent = 'Card ' + (current ? cards.indexOf(current) + 1 : cards.length + 1);
+  $('#hudSide').textContent = side === 'front' ? 'Front of the card' : 'Back of the card — this is where the number is';
+}
+
+/* ------------------------------------------------------------------ start */
+
+async function beginSession() {
+  try {
+    $('#startBtn').disabled = true;
+    await getToken();
+    const rootId = await findOrCreateFolder(S.rootFolder, null);
+    const name = `${today()} shoot`;
+    const sessionId = await findOrCreateFolder(name, rootId);
+    folder = { rootId, sessionId, name: `${S.rootFolder} / ${name}` };
+    if (S.keepOriginals) folder.originalsId = await findOrCreateFolder('originals', sessionId);
+    session.started = session.started || new Date().toISOString();
+    await saveSession();
+    $('#folderNote').textContent = folder.name;
+    side = 'front'; current = null;
+    show('camScreen');
+  } catch (e) {
+    toast(String(e.message || e), 'err');
+  } finally { $('#startBtn').disabled = false; }
+}
+
+/* ------------------------------------------------------------------- wire */
+
+function wire() {
+  $('#shutter').onclick = capture;
+  $('#torchBtn').onclick = toggleTorch;
+  $('#fileInput').onchange = onFilePicked;
+  $('#camAppBtn').onclick = () => $('#fileInput').click();
+  $('#video').onclick = (e) => {
+    const r = e.currentTarget.getBoundingClientRect();
+    focusAt((e.clientX - r.left) / r.width, (e.clientY - r.top) / r.height);
+  };
+  $('#revRetake').onclick = () => { pending = null; show('camScreen'); };
+  $('#revKeep').onclick = keepShot;
+  $('#startBtn').onclick = beginSession;
+
+  $('#idBtn').onclick = identify;
+  $('#detailSave').onclick = () => { readDetails(); commitCard(); renderSession(); show('sessionScreen'); };
+  $('#detailNext').onclick = () => { readDetails(); commitCard(); show('camScreen'); };
+  $('#detailBack').onclick = () => {
+    readDetails();
+    side = current.shots.back ? 'back' : (current.shots.front ? 'back' : 'front');
+    show('camScreen');
+  };
+  for (const k of ['player', 'number', 'set', 'year', 'parallel'])
+    $('#f_' + k).oninput = () => { readDetails(); renderCompLinks(); $('#dTitle').textContent = cardLabel(current); };
+
+  $('#finishBtn').onclick = finishSession;
+  $$('[data-go]').forEach(b => b.onclick = () => show(b.dataset.go));
+
+  // settings
+  $('#setSave').onclick = () => {
+    S.clientId = $('#s_clientId').value.trim();
+    S.apiBase = $('#s_apiBase').value.trim();
+    S.apiKey = $('#s_apiKey').value.trim();
+    S.rootFolder = $('#s_rootFolder').value.trim() || DEFAULTS.rootFolder;
+    S.photoNumber = Math.max(1, parseInt($('#s_photoNumber').value, 10) || DEFAULTS.photoNumber);
+    S.keepOriginals = $('#s_keepOriginals').checked;
+    saveSettings(); token = null; tokenClient = null; initAuth();
+    toast('Saved.', 'ok'); show('startScreen'); refreshStart();
+  };
+  $('#resetSession').onclick = async () => {
+    if (!confirm('Clear this session? Photos already uploaded stay in Drive.')) return;
+    cards = []; current = null; side = 'front';
+    for (const j of await allJobs()) await delJob(j.id);
+    await saveSession(); renderSession(); toast('Session cleared.');
+  };
+}
+
+function refreshStart() {
+  $('#s_clientId').value = S.clientId;
+  $('#s_apiBase').value = S.apiBase;
+  $('#s_apiKey').value = S.apiKey;
+  $('#s_rootFolder').value = S.rootFolder;
+  $('#s_photoNumber').value = S.photoNumber;
+  $('#s_keepOriginals').checked = S.keepOriginals;
+  $('#nextNo').textContent = pad4(S.photoNumber);
+  const ready = !!S.clientId;
+  $('#startBtn').disabled = !ready;
+  $('#noClient').classList.toggle('hide', ready);
+  $('#resumeNote').textContent = cards.length ? `${cards.length} card(s) already in this session` : '';
+}
+
+/* ------------------------------------------------------------------- boot */
+
+async function boot() {
+  db = await openDB();
+  const prev = await loadSession();
+  if (prev && prev.cards && prev.cards.length) {
+    cards = prev.cards; folder = prev.folder; session.started = prev.started;
+  }
+  wire(); refreshStart(); renderSession(); updateQueueBadge();
+  if (S.clientId) initAuth();
+  if (signedIn()) getToken({ interactive: false }).then(drainQueue).catch(() => {});
+  document.addEventListener('visibilitychange', () => { if (!document.hidden) drainQueue(); });
+  // A console handle. Useful for poking at a session from a phone's remote
+  // inspector, and it is what the end-to-end test drives.
+  globalThis.MECVShoot = {
+    show, capture, drainQueue, finishSession, startCamera,
+    get cards() { return cards; }, get settings() { return S; },
+    get folder() { return folder; }, get pending() { return pending; },
+    setSide(v) { side = v; }, get side() { return side; },
+    manifestJSON, shootLogCSV, draftsCSV, titleFor, fileNameFor, flushRenames
+  };
+  addEventListener('beforeunload', e => {
+    if (cards.length && !draining) return;
+    if (draining) { e.preventDefault(); e.returnValue = ''; }
+  });
+}
+boot();
+
+})();
+</script>
+</body>
+</html>
