@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How We Rate a Card — Main Event Card Vault</title>
+<meta name="description" content="The Main Event Rating explained: Vault Value, Market Position, Market Health, Upside Potential and Confidence — how each is built, and what they do not mean.">
+<meta name="theme-color" content="#081524">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Main Event Card Vault — storefront styles */
+
+:root {
+  /* Brand palette lifted from the existing Main Event Card Vault logo + landing page */
+  --bg: #081524;
+  --bg-2: #0d1f38;
+  --panel: #132845;
+  --panel-2: #1b3652;
+  --line: #24405f;
+  --line-2: #35597e;
+  --ink: #e8edf4;
+  --ink-2: #b7c6d8;
+  --ink-3: #8397ae;
+  --gold: #e6be55;
+  --gold-2: #f1d07a;
+  --gold-dim: #c9a13f;
+  --crimson: #d23c46;
+  --green: #5ec98a;
+  --radius: 14px;
+  --shadow: 0 10px 30px rgba(3, 9, 17, .6);
+  --maxw: 1240px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(1100px 600px at 50% -180px, #1b3652 0%, transparent 70%),
+    var(--bg);
+  color: var(--ink);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; }
+
+.wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 22px;
+}
+
+.display {
+  font-family: "Bebas Neue", "Oswald", "Haettenschweiler", "Arial Narrow", sans-serif;
+  letter-spacing: .04em;
+  font-weight: 400;
+}
+
+/* ---------- header ---------- */
+
+header.site {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(8, 21, 36, .88);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  height: 66px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  text-decoration: none;
+  margin-right: auto;
+}
+
+.mark {
+  width: 38px;
+  height: 38px;
+  flex: none;
+  border-radius: 9px;
+  display: block;
+  object-fit: contain;
+  box-shadow: 0 2px 12px rgba(230, 190, 85, .22);
+}
+
+.brand-text { display: flex; flex-direction: column; line-height: 1.05; }
+.brand-text b { font-size: 20px; letter-spacing: .06em; font-weight: 400; }
+.brand-text span {
+  font-size: 10px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+nav.top { display: flex; gap: 22px; }
+nav.top a {
+  color: var(--ink-2);
+  text-decoration: none;
+  font-size: 14px;
+  padding: 6px 0;
+  border-bottom: 1.5px solid transparent;
+}
+nav.top a:hover { color: var(--ink); border-bottom-color: var(--gold); }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--line-2);
+  background: var(--panel-2);
+  color: var(--ink);
+  padding: 9px 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: .16s ease;
+  white-space: nowrap;
+}
+.btn:hover { border-color: var(--gold); color: var(--gold); }
+
+.btn.gold {
+  background: linear-gradient(180deg, var(--gold-2) 0%, var(--gold) 100%);
+  border-color: transparent;
+  color: #081524;
+  font-weight: 700;
+}
+.btn.gold:hover { color: #081524; filter: brightness(1.08); }
+
+/* ---------- hero ---------- */
+
+.hero { padding: 62px 0 34px; text-align: center; }
+
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0 0 14px;
+}
+
+.hero h1 {
+  font-size: clamp(44px, 8.5vw, 88px);
+  margin: 0 0 14px;
+  line-height: .95;
+}
+.hero h1 em { font-style: normal; color: var(--gold); }
+
+.hero p.lede {
+  max-width: 640px;
+  margin: 0 auto 28px;
+  color: var(--ink-2);
+  font-size: 17px;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+.stat {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 12px 22px;
+  min-width: 118px;
+}
+.stat b { display: block; font-size: 24px; line-height: 1.2; }
+.stat span {
+  font-size: 10px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+/* ---------- controls ---------- */
+
+.controls {
+  position: sticky;
+  top: 66px;
+  z-index: 40;
+  background: rgba(8, 21, 36, .92);
+  backdrop-filter: blur(14px);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 14px 0;
+}
+
+.controls-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.search {
+  position: relative;
+  flex: 1 1 260px;
+  min-width: 210px;
+}
+.search input {
+  width: 100%;
+  background: var(--panel);
+  border: 1px solid var(--line-2);
+  border-radius: 999px;
+  color: var(--ink);
+  padding: 11px 16px 11px 40px;
+  font-size: 15px;
+  font-family: inherit;
+}
+.search input:focus { outline: none; border-color: var(--gold); }
+.search svg {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  fill: var(--ink-3);
+  pointer-events: none;
+}
+
+select.sort {
+  background: var(--panel);
+  border: 1px solid var(--line-2);
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 11px 14px;
+  font-size: 14px;
+  font-family: inherit;
+  cursor: pointer;
+}
+select.sort:focus { outline: none; border-color: var(--gold); }
+
+.chips { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+
+.chip {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  color: var(--ink-2);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 13px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: .14s ease;
+}
+.chip:hover { border-color: var(--line-2); color: var(--ink); }
+.chip[aria-pressed="true"] {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #081524;
+  font-weight: 600;
+}
+.chip .n { opacity: .6; margin-left: 5px; font-size: 12px; }
+
+.chip-sep {
+  width: 1px;
+  align-self: stretch;
+  background: var(--line);
+  margin: 2px 4px;
+}
+
+/* ---------- grid ---------- */
+
+main { padding: 34px 0 70px; }
+
+.result-line {
+  color: var(--ink-3);
+  font-size: 13px;
+  margin: 0 0 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.result-line button {
+  background: none;
+  border: none;
+  color: var(--gold);
+  cursor: pointer;
+  font: inherit;
+  padding: 0;
+  text-decoration: underline;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(238px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--line-2);
+  box-shadow: var(--shadow);
+}
+
+.shot {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  background: #050e19;
+  cursor: zoom-in;
+  border: none;
+  padding: 0;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+.shot img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  transition: transform .3s ease;
+}
+.card:hover .shot img { transform: scale(1.045); }
+
+.shot .fallback {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: var(--ink-3);
+  font-size: 12px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.ribbon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  max-width: calc(100% - 20px);
+}
+
+.tag {
+  font-size: 10px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: rgba(8, 21, 36, .84);
+  border: 1px solid var(--line-2);
+  color: var(--ink-2);
+  backdrop-filter: blur(4px);
+}
+.tag.auto { border-color: var(--gold-dim); color: var(--gold); }
+.tag.num { border-color: #4a6fa8; color: #8fb6ea; }
+.tag.rc { border-color: #4a8a5f; color: var(--green); }
+.tag.ssp { border-color: #9a3f47; color: #ef7f88; }
+
+.card-body {
+  padding: 14px 15px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.card-cat {
+  font-size: 10px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.card-title {
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 0;
+  font-weight: 500;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-foot {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding-top: 4px;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: -.01em;
+}
+
+.buy {
+  font-size: 12px;
+  padding: 7px 13px;
+  border-radius: 999px;
+  border: 1px solid var(--line-2);
+  text-decoration: none;
+  color: var(--ink-2);
+  white-space: nowrap;
+  transition: .14s ease;
+}
+.buy:hover { background: var(--gold); border-color: var(--gold); color: #081524; }
+
+.empty {
+  text-align: center;
+  padding: 70px 20px;
+  color: var(--ink-3);
+}
+
+/* ---------- availability ---------- */
+
+.avail-row { align-items: center; }
+.avail-label {
+  font-size: 10px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-right: 2px;
+}
+
+.card.sold .shot img { filter: saturate(.5); opacity: .78; }
+.card.sold .shot { background: #040b14; }
+
+.flag {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 10px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 4px 9px;
+  border-radius: 999px;
+  background: rgba(8, 21, 36, .86);
+  backdrop-filter: blur(4px);
+}
+.flag.keep { border: 1px solid var(--line-2); color: var(--ink-2); }
+.flag.gone { border: 1px solid #9a3f47; color: #ef7f88; }
+
+.price-wrap { display: flex; flex-direction: column; line-height: 1.2; min-width: 0; }
+.price.est { color: var(--ink); }
+.price.past { color: var(--ink-2); }
+.price-note {
+  font-size: 11px;
+  color: var(--ink-3);
+  letter-spacing: .02em;
+  font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.foot-note { font-size: 12px; color: var(--ink-3); white-space: nowrap; }
+
+.hero-note {
+  color: var(--ink-3);
+  font-size: 13px;
+  margin: -18px 0 26px;
+}
+
+.lb-note {
+  color: var(--ink-2);
+  font-size: 13px;
+  border-left: 2px solid var(--line-2);
+  padding-left: 12px;
+  margin: 0 0 18px;
+}
+
+/* ---------- lightbox ---------- */
+
+.lb {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(4, 11, 20, .94);
+  backdrop-filter: blur(6px);
+  display: none;
+  place-items: center;
+  padding: 24px;
+}
+.lb[open] { display: grid; }
+
+.lb-inner {
+  max-width: 940px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 26px;
+  align-items: center;
+}
+.lb-inner img {
+  width: 100%;
+  max-height: 78vh;
+  object-fit: contain;
+  border-radius: 10px;
+}
+.lb-meta h3 { margin: 0 0 10px; font-size: 20px; line-height: 1.35; font-weight: 600; }
+.lb-meta .price { font-size: 30px; display: block; margin-bottom: 16px; }
+.lb-meta dl {
+  margin: 0 0 20px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 6px 16px;
+  font-size: 13px;
+}
+.lb-meta dt { color: var(--ink-3); }
+.lb-meta dd { margin: 0; }
+
+.lb-close {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  background: none;
+  border: none;
+  color: var(--ink-2);
+  font-size: 30px;
+  line-height: 1;
+  cursor: pointer;
+}
+.lb-close:hover { color: var(--gold); }
+
+/* ---------- info + footer ---------- */
+
+section.info {
+  border-top: 1px solid var(--line);
+  background: var(--bg-2);
+  padding: 56px 0;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 26px;
+}
+
+.info h2 {
+  font-size: 30px;
+  margin: 0 0 26px;
+  text-align: center;
+}
+
+.info-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 22px;
+}
+.info-card h3 {
+  font-size: 12px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0 0 10px;
+}
+.info-card p { margin: 0; color: var(--ink-2); font-size: 14.5px; }
+
+footer.site {
+  border-top: 1px solid var(--line);
+  padding: 34px 0;
+  color: var(--ink-3);
+  font-size: 13px;
+}
+.foot-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.socials { display: flex; gap: 16px; }
+.socials a { text-decoration: none; color: var(--ink-2); }
+.socials a:hover { color: var(--gold); }
+
+@media (max-width: 760px) {
+  .bar { height: 60px; gap: 12px; }
+  nav.top { display: none; }
+  .controls { top: 60px; }
+  .hero { padding: 42px 0 26px; }
+  .grid { grid-template-columns: repeat(auto-fill, minmax(158px, 1fr)); gap: 14px; }
+  .lb-inner { grid-template-columns: 1fr; gap: 16px; }
+  .lb-inner img { max-height: 52vh; }
+  .card-title { font-size: 13px; }
+  .price { font-size: 17px; }
+}
+
+/* ============================================================
+   Main Event Card Vault — rating components
+   Drop into build/template.html inside the existing <style>.
+
+   Palette note: ratings use a single validated blue ramp so that GOLD keeps
+   meaning "money" everywhere on the site. Ramp checked with the dataviz
+   validator against the panel surface #132845 — monotone lightness, >=0.06
+   step gaps, light end clears 2:1 contrast, 6 deg hue spread.
+   ============================================================ */
+
+:root {
+  --rate-1: #305a87;   /* track / lowest step */
+  --rate-2: #4877b8;
+  --rate-3: #6294dd;   /* default fill */
+  --rate-4: #93b9ec;   /* strongest */
+}
+:root { --rate-track: #1d3556; }
+
+/* ---------- shared meter ---------- */
+
+.meter {
+  display: block;
+  position: relative;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--rate-track);
+  overflow: hidden;
+}
+.meter > i {
+  display: block;
+  height: 100%;
+  border-radius: 0 4px 4px 0;   /* 4px rounded data-end, square at baseline */
+  background: var(--rate-3);
+  transition: width .4s cubic-bezier(.22,.61,.36,1);
+}
+.meter.s1 > i { background: var(--rate-1); }
+.meter.s2 > i { background: var(--rate-2); }
+.meter.s3 > i { background: var(--rate-3); }
+.meter.s4 > i { background: var(--rate-4); }
+
+/* ---------- grid tile: compact strip ---------- */
+
+.rate-strip {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding-top: 9px;
+  border-top: 1px solid var(--line);
+}
+.rate-strip .mer {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -.01em;
+  color: var(--ink);
+  line-height: 1;
+}
+.rate-strip .mer small {
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--ink-3);
+  margin-left: 1px;
+}
+.rate-strip .meter { flex: 1; height: 4px; }
+.rate-strip .trend {
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-3);
+  white-space: nowrap;
+}
+.rate-strip .trend.up::before   { content: "\2191 "; color: var(--rate-4); }
+.rate-strip .trend.down::before { content: "\2193 "; color: var(--ink-3); }
+.rate-strip .conf-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  flex: none;
+  background: var(--rate-3);
+}
+.rate-strip .conf-dot.medium { background: var(--rate-2); }
+.rate-strip .conf-dot.low    { background: transparent; border: 1.5px solid var(--rate-1); }
+
+/* an unrated card says so, quietly */
+.rate-strip.none {
+  color: var(--ink-3);
+  font-size: 11px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+/* ---------- lightbox: the full panel ---------- */
+
+.rate-panel {
+  margin: 18px 0 4px;
+  padding: 16px 16px 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--panel-2);
+}
+.rate-panel .eyebrow {
+  font-size: 10px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-bottom: 8px;
+}
+
+/* hero figure — same sans as the rest of the site, never the display face */
+.rate-hero { display: flex; align-items: baseline; gap: 10px; }
+.rate-hero b {
+  font-family: inherit;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: .92;
+  letter-spacing: -.025em;
+  color: var(--ink);
+  /* proportional figures: tabular-nums makes 121 look loose at display sizes */
+}
+.rate-hero .of { font-size: 14px; color: var(--ink-3); }
+.rate-hero .word {
+  margin-left: auto;
+  font-size: 12px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+.rate-panel > .meter { margin: 12px 0 18px; }
+
+/* confidence de-emphasis: a strong score on thin evidence must not LOOK
+   as certain as the same score on deep evidence. */
+.rate-panel[data-conf="medium"] .rate-hero b { color: var(--ink-2); }
+.rate-panel[data-conf="low"]    .rate-hero b { color: var(--ink-2); opacity: .72; }
+
+/* ---------- vault value range bar ---------- */
+
+.vv { margin-top: 20px; margin-bottom: 18px; }
+.vv-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 10px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-bottom: 14px;
+}
+.vv-head .pos { letter-spacing: .06em; text-transform: none; font-size: 12px; color: var(--ink-2); }
+
+.vv-track {
+  position: relative;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--rate-track);
+  margin: 0 2px 54px;
+}
+.vv-band {
+  position: absolute;
+  top: 0; bottom: 0;
+  border-radius: 999px;
+  background: var(--rate-2);
+}
+.vv-mid {
+  position: absolute;
+  top: -3px;
+  width: 2px; height: 14px;
+  background: var(--rate-4);
+  border-radius: 1px;
+  transform: translateX(-1px);
+}
+/* the asking price is an ANNOTATION on the estimate, not a second data series,
+   so it wears an ink token rather than a data hue. 2px surface ring keeps it
+   legible where it crosses the band. */
+.vv-you {
+  position: absolute;
+  top: -7px;
+  width: 3px; height: 22px;
+  background: var(--ink);
+  border-radius: 2px;
+  box-shadow: 0 0 0 2px var(--panel-2);
+  transform: translateX(-1.5px);
+}
+.vv-lab {
+  position: absolute;
+  top: 22px;
+  font-size: 11px;
+  white-space: nowrap;
+  color: var(--ink-3);
+  font-variant-numeric: tabular-nums;
+}
+.vv-lab.you { color: var(--gold); font-weight: 600; top: 40px; }
+.vv-lab.hi { transform: translateX(-100%); }
+.vv-lab.mid-anchor { transform: translateX(-50%); }
+
+/* ---------- score rows ---------- */
+
+.rate-rows { display: grid; gap: 11px; }
+.rate-row { display: grid; grid-template-columns: 1fr auto; gap: 4px 10px; align-items: center; }
+.rate-row .k { font-size: 12px; color: var(--ink-2); }
+.rate-row .v {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+.rate-row .v small { color: var(--ink-3); font-weight: 400; }
+.rate-row .meter { grid-column: 1 / -1; }
+
+.rate-foot {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+  font-size: 11px;
+  line-height: 1.75;
+  color: var(--ink-3);
+}
+.rate-foot .sep { color: var(--line-2); padding: 0 5px; }
+.rate-foot .chg { color: var(--ink-2); }
+
+/* ---------- drivers ---------- */
+
+.rate-why { margin-top: 14px; }
+.rate-why h4 {
+  margin: 0 0 8px;
+  font-size: 10px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  font-weight: 600;
+}
+.rate-why ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 5px; }
+.rate-why li {
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--ink-2);
+  padding-left: 16px;
+  position: relative;
+}
+.rate-why li::before {
+  position: absolute; left: 0; top: 0;
+  color: var(--rate-3);
+  content: "+";
+}
+.rate-why li.risk::before { content: "\2212"; color: var(--ink-3); }
+
+.rate-note {
+  margin-top: 14px;
+  font-size: 10.5px;
+  line-height: 1.5;
+  color: var(--ink-3);
+}
+.rate-note a { color: var(--ink-2); }
+
+/* ---------- not-yet-rated state ---------- */
+
+.rate-panel.pending { background: transparent; border-style: dashed; }
+.rate-panel.pending p {
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--ink-3);
+}
+
+@media (max-width: 720px) {
+  .rate-hero b { font-size: 44px; }
+  .vv-lab { font-size: 10px; }
+}
+
+.doc { max-width: 760px; margin: 0 auto; padding: 54px 22px 90px; }
+.doc h1 { font-size: 42px; margin: 0 0 10px; letter-spacing: .03em; }
+.doc .lede { font-size: 17px; line-height: 1.65; color: var(--ink-2); margin: 0 0 14px; }
+.doc h2 { font-size: 13px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold);
+          margin: 46px 0 14px; font-weight: 600; }
+.doc h3 { font-size: 16px; margin: 26px 0 6px; font-weight: 600; }
+.doc p  { line-height: 1.68; color: var(--ink-2); margin: 0 0 14px; }
+.doc ul { line-height: 1.68; color: var(--ink-2); padding-left: 20px; margin: 0 0 14px; }
+.doc li { margin-bottom: 7px; }
+.doc strong { color: var(--ink); font-weight: 600; }
+.doc .stamp { font-size: 12px; color: var(--ink-3); letter-spacing: .06em; text-transform: uppercase; margin-bottom: 30px; }
+.five { display: grid; gap: 12px; margin: 0 0 14px; }
+.five div { border: 1px solid var(--line); border-left: 3px solid var(--rate-3);
+            border-radius: 10px; padding: 13px 15px; background: var(--panel); }
+.five b { display: block; font-size: 14px; margin-bottom: 3px; color: var(--ink); }
+.five span { font-size: 13.5px; line-height: 1.6; color: var(--ink-2); }
+.callout { border: 1px solid var(--line-2); border-radius: 12px; padding: 16px 18px;
+           background: var(--panel); margin: 22px 0; }
+.callout p:last-child { margin-bottom: 0; }
+.conftable { width: 100%; border-collapse: collapse; margin: 0 0 16px; font-size: 13.5px; }
+.conftable th { text-align: left; font-size: 10px; letter-spacing: .18em; text-transform: uppercase;
+                color: var(--ink-3); font-weight: 600; padding: 0 10px 8px 0; border-bottom: 1px solid var(--line); }
+.conftable td { padding: 10px 10px 10px 0; border-bottom: 1px solid var(--line); color: var(--ink-2); vertical-align: top; }
+.conftable td:first-child { color: var(--ink); font-weight: 600; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.demo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 18px; margin: 18px 0 8px; }
+.sample-banner { background: rgba(210,60,70,.13); border: 1px solid var(--crimson);
+                 border-radius: 10px; padding: 12px 16px; margin: 0 0 30px; font-size: 13px; color: #f3b3b8; }
+.sample-banner b { color: #ffd9dc; }
+</style>
+</head>
+<body>
+<header class="site">
+  <div class="wrap bar">
+    <a class="brand" href="/#top">
+      <img class="mark" src="assets/logo.png" alt="Main Event Card Vault logo" width="38" height="38">
+      <span class="brand-text"><b class="display">MAIN EVENT</b><span>Card Vault</span></span>
+    </a>
+    <nav class="top">
+      <a href="/#inventory">Inventory</a>
+      <a href="/ratings.html">Ratings</a>
+      <a href="/#about">Shipping &amp; Condition</a>
+    </nav>
+    <a class="btn gold" href="https://www.ebay.com/str/maineventcardvault" target="_blank" rel="noopener">Shop on eBay</a>
+  </div>
+</header>
+<main class="doc">
+  <h1 class="display">HOW WE RATE A CARD</h1>
+  <p class="stamp">Methodology &middot; version 1.0</p>
+
+  <p class="lede">Most card listings give you one number: the price. That tells you what a seller
+  wants, not what a card is worth, whether it is actually selling, or whether the number is built
+  on real evidence or a single lucky sale.</p>
+
+  <p class="lede">The Main Event Rating is our attempt to show the rest of it &mdash; and to show
+  you how much we actually know, which is the part almost nobody publishes.</p>
+
+  <h2>The five numbers</h2>
+  <p>We deliberately do not reduce a card to one score. A card can have a strong market today and
+  limited room to grow. It can have weak recent sales and excellent long-term potential. It can look
+  attractively priced on the strength of one unreliable sale. Collapsing all of that into a single
+  figure hides exactly the thing you would want to know.</p>
+
+  <div class="five">
+    <div><b>Vault Value</b><span>What the card is reasonably worth today, shown as a range rather
+      than a single figure &mdash; because a range is the honest shape of the answer. Built from
+      verified completed sales of the same card, weighted so that closer matches and more recent
+      sales count for more.</span></div>
+    <div><b>Market Position</b><span>Where our asking price sits against that range, compared on the
+      same all-in basis including shipping. Below, within, or above the estimated market.</span></div>
+    <div><b>Market Health</b><span>Whether the card is actually trading right now &mdash; sales
+      pace, how much competing supply is listed, how stable recent prices have been, and which way
+      they are moving.</span></div>
+    <div><b>Upside Potential</b><span>How the card compares with similar cards on the things that
+      tend to support future demand: scarcity, whether it is a key card, the strength of the set,
+      demand for the person on it, and what is coming up for them.</span></div>
+    <div><b>Confidence</b><span>How much evidence sits behind everything above. This is the number
+      that keeps the others honest.</span></div>
+  </div>
+
+  <h2>Why confidence comes first</h2>
+  <p>An Upside score of 85 built on one proxy sale is not the same claim as an 85 built on twenty
+  matched sales, and it should not look the same. So confidence is displayed next to every rating
+  rather than buried inside it, and a rating shown at lower confidence is deliberately drawn with
+  less visual weight.</p>
+
+  <table class="conftable">
+    <tr><th>Confidence</th><th>What it means</th></tr>
+    <tr><td>80&ndash;100 &middot; High</td><td>Several recent sales of this exact card in this exact condition.</td></tr>
+    <tr><td>60&ndash;79 &middot; Medium</td><td>A handful of good matches, or close matches that needed adjusting.</td></tr>
+    <tr><td>40&ndash;59 &middot; Low</td><td>Thin evidence &mdash; often a similar parallel rather than this one.</td></tr>
+    <tr><td>Below 40</td><td>Not enough to publish. The card shows no rating at all.</td></tr>
+  </table>
+
+  <div class="callout">
+    <p><strong>This is why many cards here show no rating.</strong> A card numbered to 5 may have no
+    recent public sale anywhere. A base card worth a dollar may have no tracked market at all. When
+    that happens we would rather show you nothing than dress up a guess as a measurement.</p>
+    <p>Cards under about $15 are valued at the set level rather than individually, and are never
+    given a published rating.</p>
+  </div>
+
+  <h2>Where the numbers come from</h2>
+  <ul>
+    <li><strong>Completed sales only.</strong> What cards actually sold for &mdash; never what
+      someone is asking. Active listings tell you about competition, not value.</li>
+    <li><strong>Matched to the exact card.</strong> Same year, set, parallel, serial numbering,
+      autograph type and condition. A base card and a gold parallel numbered to 10 are different
+      cards, and an on-card autograph is not a sticker autograph.</li>
+    <li><strong>Weighted, not averaged.</strong> Closer matches and more recent sales carry more
+      weight, and we use a weighted median so one unusual auction cannot drag the whole estimate.</li>
+    <li><strong>Lots, reprints, damaged cards and mistitled listings are excluded.</strong></li>
+  </ul>
+
+  <h3>When there is no exact sale</h3>
+  <p>For very short-printed cards we estimate from the nearest comparable &mdash; a neighbouring
+  parallel, adjusted for how print run has historically affected price in that set. Any value
+  reached that way is labelled as an estimate and carries low confidence by definition.</p>
+
+  <h2>How often it updates</h2>
+  <p>Research runs weekly on the cards where there is enough of a market to be worth tracking, and
+  monthly on the rest. Every rating shows the date it was last researched. We also apply a minimum
+  movement threshold before a published score changes, so a rating moves when the evidence moves,
+  not because one sale happened to land on a Tuesday.</p>
+
+  <h2>What these ratings are not</h2>
+  <ul>
+    <li><strong>Not a prediction.</strong> A rating of 81 does not mean an 81% chance of going up.
+      It means the card ranks strongly against similar cards on the factors described above.</li>
+    <li><strong>Not investment advice.</strong> We do not publish buy, sell or hold calls.</li>
+    <li><strong>Not a guaranteed sale price.</strong> Vault Value is an estimate of the market, not
+      an offer, an appraisal, or a promise of what a card will fetch.</li>
+    <li><strong>Not yet calibrated against outcomes.</strong> This is an evidence-based model, not a
+      backtested one. We store every weekly score so that in time we can check whether high-rated
+      cards actually did better &mdash; and publish what we find, including if the answer is no.</li>
+  </ul>
+
+  <h2>Ownership disclosure</h2>
+  <div class="callout">
+    <p>Main Event Card Vault estimates are based on available market information and comparable
+    cards. <strong>Main Event Card Vault may own or offer for sale the cards it rates.</strong>
+    Collectible prices can change, and ratings do not guarantee future value.</p>
+    <p>We publish the confidence behind every rating, and suppress ratings we cannot support,
+    precisely because we are rating our own inventory. If a rating looks wrong to you, it may be
+    &mdash; tell us and we will re-examine it.</p>
+  </div>
+</main>
+<footer class="site">
+  <div class="wrap foot-row">
+    <div><b>Main Event Card Vault</b><br><span>Ships from Strasburg, Virginia</span></div>
+    <div class="socials"><a href="/#top">Back to the store</a></div>
+  </div>
+</footer>
+</body>
+</html>
