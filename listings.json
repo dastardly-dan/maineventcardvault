@@ -10,10 +10,10 @@
   },
   "updated": "2026-08-22",
   "count": 34,
-  "collectionCount": 100,
-  "soldCount": 5,
+  "collectionCount": 135,
+  "soldCount": 2,
   "totalValue": 6038.01,
-  "collectionValue": 1958.35,
+  "collectionValue": 3014.35,
   "cards": [
     {
       "id": "318638286490",
@@ -758,7 +758,7 @@
       "image": "https://i.ebayimg.com/images/g/iJoAAeSwqn9qhkqB/s-l1600.jpg",
       "thumb": "https://i.ebayimg.com/images/g/iJoAAeSwqn9qhkqB/s-l960.jpg",
       "sku": "",
-      "note": "Red Refractor, one of five. Reigning MVP, straight out of a title season.",
+      "note": "Red Refractor, one of five made for the National. A 32.7-a-game MVP season and a title in Oklahoma City behind him.",
       "category": "Basketball",
       "brand": "Topps Chrome",
       "year": "2026",
@@ -789,6 +789,26 @@
       ]
     },
     {
+      "id": "2026-topps-cosmic-chrome-wwe-el-grande-americano-ea-ega-equi",
+      "status": "collection",
+      "title": "2026 Topps Cosmic Chrome WWE El Grande Americano #EA-EGA Equinox Auto",
+      "price": 165.0,
+      "priceLabel": "$165.00",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/El-Grande-Americano_EA-EGA_front.jpg",
+      "thumb": "assets/cards/El-Grande-Americano_EA-EGA_front.jpg",
+      "sku": "",
+      "note": "The masked man himself, signed. Equinox is the short-printed autograph tier of Cosmic Chrome - the best card in this group.",
+      "category": "WWE",
+      "brand": "Topps Cosmic Chrome",
+      "year": "2026",
+      "serial": null,
+      "tags": [
+        "Autograph"
+      ]
+    },
+    {
       "id": "2026-topps-chrome-wwe-naomi-156-red-cracked-ice-refractor-5-",
       "status": "collection",
       "title": "2026 Topps Chrome WWE Naomi #156 Red Cracked Ice Refractor 5/5",
@@ -809,23 +829,24 @@
       ]
     },
     {
-      "id": "2026-topps-cosmic-chrome-wwe-joe-hendry-planetary-pursuit-ur",
-      "status": "sold",
-      "title": "2026 Topps Cosmic Chrome WWE Joe Hendry Planetary Pursuit Uranus RC Rookie NXT",
-      "price": 135.99,
-      "priceLabel": "$135.99",
-      "priceNote": "Sold Aug 2026",
+      "id": "2026-topps-chrome-wwe-cm-punk-rba-cmp-red-brand-chrome-auto-",
+      "status": "collection",
+      "title": "2026 Topps Chrome WWE CM Punk #RBA-CMP Red Brand Chrome Auto Gold Refractor RAW",
+      "price": 125.0,
+      "priceLabel": "$125.00",
+      "priceNote": "Est. value \u00b7 Aug 2026",
       "url": "",
-      "image": "https://i.ebayimg.com/images/g/YZUAAeSwg5hqf6hf/s-l1600.jpg",
-      "thumb": "https://i.ebayimg.com/images/g/YZUAAeSwg5hqf6hf/s-l960.jpg",
+      "image": "assets/cards/CM-Punk_RBA-CMP_front.jpg",
+      "thumb": "assets/cards/CM-Punk_RBA-CMP_front.jpg",
       "sku": "",
-      "note": "Sold Aug 14. The $135.99 Card Ladder comp in the Aug 15 pricing workbook was this very sale.",
+      "note": "On-card Punk signature on a gold cracked-ice refractor. The autograph collectors actually chase.",
       "category": "WWE",
-      "brand": "Topps Cosmic Chrome",
+      "brand": "Topps Chrome",
       "year": "2026",
       "serial": null,
       "tags": [
-        "Rookie"
+        "Autograph",
+        "Refractor"
       ]
     },
     {
@@ -869,6 +890,47 @@
       ]
     },
     {
+      "id": "2025-topps-exalted-wwe-cm-punk-streamline-signatures-31-50",
+      "status": "collection",
+      "title": "2025 Topps Exalted WWE CM Punk Streamline Signatures 31/50",
+      "price": 95.0,
+      "priceLabel": "$95.00",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/CM-Punk_STREAMLINE_front.jpg",
+      "thumb": "assets/cards/CM-Punk_STREAMLINE_front.jpg",
+      "sku": "",
+      "note": "Exalted Streamline Signatures, thirty-one of fifty, on-card.",
+      "category": "WWE",
+      "brand": "Topps",
+      "year": "2025",
+      "serial": "/50",
+      "tags": [
+        "Numbered"
+      ]
+    },
+    {
+      "id": "2026-topps-chrome-wwe-talla-tonga-rookie-autograph-cracked-i",
+      "status": "collection",
+      "title": "2026 Topps Chrome WWE Talla Tonga Rookie Autograph Cracked Ice #BCA-TTA 6/10",
+      "price": 89.0,
+      "priceLabel": "$89.00",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/Talla-Tonga_BCA-TTA_front.jpg",
+      "thumb": "assets/cards/Talla-Tonga_BCA-TTA_front.jpg",
+      "sku": "",
+      "note": "On-card rookie auto, one of ten. Cracked Ice shatters the chrome into glass, the loudest parallel in the set, and his first Chrome signature.",
+      "category": "WWE",
+      "brand": "Topps Chrome",
+      "year": "2026",
+      "serial": null,
+      "tags": [
+        "Autograph",
+        "Rookie"
+      ]
+    },
+    {
       "id": "2026-topps-decades-wwe-1990s-kane-undisputed-champions-autog",
       "status": "collection",
       "title": "2026 Topps Decades WWE 1990s Kane Undisputed Champions Autograph #98A 71/99",
@@ -890,24 +952,44 @@
       ]
     },
     {
-      "id": "2026-topps-chrome-wwe-talla-tonga-rookie-autograph-cracked-i",
+      "id": "2025-26-panini-prizm-patrick-ewing-ls-ewi-legacy-signatures-",
       "status": "collection",
-      "title": "2026 Topps Chrome WWE Talla Tonga Rookie Autograph Cracked Ice #BCA-TTA 6/10",
-      "price": 65.0,
-      "priceLabel": "$65.00",
+      "title": "2025-26 Panini Prizm Patrick Ewing #LS-EWI Legacy Signatures Gold Auto 08/10 New York Knicks",
+      "price": 85.0,
+      "priceLabel": "$85.00",
       "priceNote": "Est. value \u00b7 Aug 2026",
       "url": "",
-      "image": "assets/cards/Talla-Tonga_BCA-TTA_front.jpg",
-      "thumb": "assets/cards/Talla-Tonga_BCA-TTA_front.jpg",
+      "image": "assets/cards/Patrick-Ewing_LS-EWI_front.jpg",
+      "thumb": "assets/cards/Patrick-Ewing_LS-EWI_front.jpg",
       "sku": "",
-      "note": "On-card rookie auto, numbered 6 of 10. No /10 sale on record - bracketed by the Orange /25 at $40 (Aug 16) and the Red Refractor /5 at $129.99 (Aug 18).",
-      "category": "WWE",
-      "brand": "Topps Chrome",
-      "year": "2026",
-      "serial": null,
+      "note": "Gold Legacy Signatures, eight of ten. A Hall of Fame autograph in single digits.",
+      "category": "Basketball",
+      "brand": "Panini Prizm",
+      "year": "2025-26",
+      "serial": "/10",
       "tags": [
         "Autograph",
-        "Rookie"
+        "Numbered"
+      ]
+    },
+    {
+      "id": "2025-topps-ufc-finest-khamzat-chimaev-blinding-lights-bl-14-",
+      "status": "collection",
+      "title": "2025 Topps UFC Finest Khamzat Chimaev Blinding Lights #BL-14 SSP Case Hit",
+      "price": 79.0,
+      "priceLabel": "$79.00",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/Khamzat-Chimaev_BL-14_front.jpg",
+      "thumb": "assets/cards/Khamzat-Chimaev_BL-14_front.jpg",
+      "sku": "",
+      "note": "Case-hit short print. Blinding Lights is the chase insert of Finest, roughly one per case, and neon on chrome is exactly as loud as it sounds.",
+      "category": "UFC",
+      "brand": "Topps",
+      "year": "2025",
+      "serial": null,
+      "tags": [
+        "SSP"
       ]
     },
     {
@@ -932,44 +1014,165 @@
       ]
     },
     {
-      "id": "N-23",
-      "status": "sold",
-      "title": "Topps WWE Charlotte Flair Superior Relic Signatures Auto",
-      "price": 35.0,
-      "priceLabel": "$35.00",
-      "priceNote": "Sold Aug 2026",
+      "id": "2026-panini-immaculate-collection-seth-hernandez-bm-sh-brill",
+      "status": "collection",
+      "title": "2026 Panini Immaculate Collection Seth Hernandez #BM-SH Brilliance Patch 1/1 Pittsburgh Pirates",
+      "price": 45.0,
+      "priceLabel": "$45.00",
+      "priceNote": "Est. value \u00b7 Aug 2026",
       "url": "",
-      "image": "https://i.ebayimg.com/images/g/DbcAAeSw6fRqec~p/s-l1600.jpg",
-      "thumb": "https://i.ebayimg.com/images/g/DbcAAeSw6fRqec~p/s-l960.jpg",
-      "sku": "N-23",
-      "note": "On-card relic autograph.",
+      "image": "assets/cards/Seth-Hernandez_BM-SH_front.jpg",
+      "thumb": "assets/cards/Seth-Hernandez_BM-SH_front.jpg",
+      "sku": "",
+      "note": "A one-of-one. Game-used patch window on Immaculate stock, and there is no second copy of it anywhere.",
+      "category": "Baseball",
+      "brand": "Panini",
+      "year": "2026",
+      "serial": null,
+      "tags": []
+    },
+    {
+      "id": "2025-topps-universe-wwe-mankind-lga-man-legends-autograph",
+      "status": "collection",
+      "title": "2025 Topps Universe WWE Mankind #LGA-MAN Legends Autograph",
+      "price": 45.0,
+      "priceLabel": "$45.00",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/Mankind_LGA-MAN_front.jpg",
+      "thumb": "assets/cards/Mankind_LGA-MAN_front.jpg",
+      "sku": "",
+      "note": "Mick Foley signed as Mankind. Legends Autographs, on-card.",
       "category": "WWE",
-      "brand": "Topps",
-      "year": null,
+      "brand": "Topps Universe",
+      "year": "2025",
       "serial": null,
       "tags": [
-        "Autograph",
+        "Autograph"
+      ]
+    },
+    {
+      "id": "2026-topps-chrome-the-national-nscc-cm-punk-wwe-40-07-25",
+      "status": "collection",
+      "title": "2026 Topps Chrome The National NSCC CM Punk #WWE-40 07/25",
+      "price": 45.0,
+      "priceLabel": "$45.00",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/CM-Punk_WWE-40_front.jpg",
+      "thumb": "assets/cards/CM-Punk_WWE-40_front.jpg",
+      "sku": "",
+      "note": "Seven of twenty-five, printed only for the National Sports Collectors Convention.",
+      "category": "WWE",
+      "brand": "Topps Chrome",
+      "year": "2026",
+      "serial": "/25",
+      "tags": [
+        "Numbered"
+      ]
+    },
+    {
+      "id": "2026-panini-immaculate-collection-paul-skenes-cade-horton-tr",
+      "status": "collection",
+      "title": "2026 Panini Immaculate Collection Paul Skenes Cade Horton Trey Yesavage #TRI-PCT Triple Relic 36/49",
+      "price": 40.0,
+      "priceLabel": "$40.00",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/Skenes-Horton-Yesavage_TRI-PCT_front.jpg",
+      "thumb": "assets/cards/Skenes-Horton-Yesavage_TRI-PCT_front.jpg",
+      "sku": "",
+      "note": "Three game-used swatches on one card, numbered 36 of 49. Three of the best young arms in the game.",
+      "category": "Baseball",
+      "brand": "Panini",
+      "year": "2026",
+      "serial": "/49",
+      "tags": [
+        "Numbered",
         "Relic"
       ]
     },
     {
-      "id": "2025-topps-ufc-finest-khamzat-chimaev-blinding-lights-bl-14-",
+      "id": "2026-topps-chrome-the-national-nscc-kazuma-okamoto-mlb-03-bl",
       "status": "collection",
-      "title": "2025 Topps UFC Finest Khamzat Chimaev Blinding Lights #BL-14 SSP Case Hit",
+      "title": "2026 Topps Chrome The National NSCC Kazuma Okamoto #MLB-03 Black Refractor 07/10 RC Blue Jays",
+      "price": 36.0,
+      "priceLabel": "$36.00",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/Kazuma-Okamoto_MLB-03_front.jpg",
+      "thumb": "assets/cards/Kazuma-Okamoto_MLB-03_front.jpg",
+      "sku": "",
+      "note": "Black parallel, seven of ten, made only for the National. First-year card of the Toronto slugger.",
+      "category": "Baseball",
+      "brand": "Topps Chrome",
+      "year": "2026",
+      "serial": "/10",
+      "tags": [
+        "Numbered",
+        "Rookie",
+        "Refractor"
+      ]
+    },
+    {
+      "id": "2025-topps-royalty-wwe-karmen-petrovic-pgs-kpe-pillars-of-gr",
+      "status": "collection",
+      "title": "2025 Topps Royalty WWE Karmen Petrovic #PGS-KPE Pillars of Greatness On-Card Auto 09/25 NXT",
+      "price": 32.0,
+      "priceLabel": "$32.00",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/Karmen-Petrovic_PGS-KPE_front.jpg",
+      "thumb": "assets/cards/Karmen-Petrovic_PGS-KPE_front.jpg",
+      "sku": "",
+      "note": "On-card signature, nine of twenty-five, on the heavy Royalty stock.",
+      "category": "WWE",
+      "brand": "Topps Royalty",
+      "year": "2025",
+      "serial": "/25",
+      "tags": [
+        "Autograph",
+        "Numbered"
+      ]
+    },
+    {
+      "id": "2026-topps-chrome-wwe-tatum-paxley-nxt-tat-on-card-auto-nxt",
+      "status": "collection",
+      "title": "2026 Topps Chrome WWE Tatum Paxley #NXT-TAT On-Card Auto NXT",
       "price": 30.0,
       "priceLabel": "$30.00",
       "priceNote": "Est. value \u00b7 Aug 2026",
       "url": "",
-      "image": "assets/cards/Khamzat-Chimaev_BL-14_front.jpg",
-      "thumb": "assets/cards/Khamzat-Chimaev_BL-14_front.jpg",
+      "image": "assets/cards/Tatum-Paxley_NXT-TAT_front.jpg",
+      "thumb": "assets/cards/Tatum-Paxley_NXT-TAT_front.jpg",
       "sku": "",
-      "note": "Case-hit short print. Comps $30-$90; the champ premium is real but thin.",
-      "category": "UFC",
-      "brand": "Topps",
-      "year": "2025",
+      "note": "On-card NXT Chrome signature, Topps certified.",
+      "category": "WWE",
+      "brand": "Topps Chrome",
+      "year": "2026",
       "serial": null,
       "tags": [
-        "SSP"
+        "Autograph"
+      ]
+    },
+    {
+      "id": "2026-topps-chrome-adrian-gonzalez-75d-ag-75th-diamond-autogr",
+      "status": "collection",
+      "title": "2026 Topps Chrome Adrian Gonzalez #75D-AG 75th Diamond Autograph Los Angeles Dodgers",
+      "price": 30.0,
+      "priceLabel": "$30.00",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/Adrian-Gonzalez_75D-AG_front.jpg",
+      "thumb": "assets/cards/Adrian-Gonzalez_75D-AG_front.jpg",
+      "sku": "",
+      "note": "75th Diamond Anniversary signature, on-card, Topps certified.",
+      "category": "Baseball",
+      "brand": "Topps Chrome",
+      "year": "2026",
+      "serial": null,
+      "tags": [
+        "Autograph"
       ]
     },
     {
@@ -1014,6 +1217,24 @@
       ]
     },
     {
+      "id": "2026-topps-cosmic-chrome-wwe-cm-punk-ppm-4-mercury-planetary",
+      "status": "collection",
+      "title": "2026 Topps Cosmic Chrome WWE CM Punk #PPM-4 Mercury Planetary Pursuit",
+      "price": 25.0,
+      "priceLabel": "$25.00",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/CM-Punk_PPM-4_front.jpg",
+      "thumb": "assets/cards/CM-Punk_PPM-4_front.jpg",
+      "sku": "",
+      "note": "Planetary Pursuit Mercury, one of the tougher pulls in Cosmic Chrome.",
+      "category": "WWE",
+      "brand": "Topps Cosmic Chrome",
+      "year": "2026",
+      "serial": null,
+      "tags": []
+    },
+    {
       "id": "2025-panini-certified-tai-felton-freshman-fabric-rpa-auto-pa",
       "status": "collection",
       "title": "2025 Panini Certified Tai Felton Freshman Fabric RPA Auto Patch 21/30 Vikings",
@@ -1035,6 +1256,84 @@
       ]
     },
     {
+      "id": "2026-topps-chrome-wwe-drew-mcintyre-bba-dre-blue-brand-chrom",
+      "status": "collection",
+      "title": "2026 Topps Chrome WWE Drew McIntyre #BBA-DRE Blue Brand Chrome Auto SmackDown",
+      "price": 20.0,
+      "priceLabel": "$20.00",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/Drew-McIntyre_BBA-DRE_front.jpg",
+      "thumb": "assets/cards/Drew-McIntyre_BBA-DRE_front.jpg",
+      "sku": "",
+      "note": "On-card blue-brand signature, Topps certified.",
+      "category": "WWE",
+      "brand": "Topps Chrome",
+      "year": "2026",
+      "serial": null,
+      "tags": [
+        "Autograph"
+      ]
+    },
+    {
+      "id": "2026-topps-chrome-wwe-drew-mcintyre-sgz-23-signalz-case-hit",
+      "status": "collection",
+      "title": "2026 Topps Chrome WWE Drew McIntyre #SGZ-23 Signalz Case Hit",
+      "price": 20.0,
+      "priceLabel": "$20.00",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/Drew-McIntyre_SGZ-23_front.jpg",
+      "thumb": "assets/cards/Drew-McIntyre_SGZ-23_front.jpg",
+      "sku": "",
+      "note": "Signalz is a case-hit insert - roughly one per case.",
+      "category": "WWE",
+      "brand": "Topps Chrome",
+      "year": "2026",
+      "serial": null,
+      "tags": [
+        "SSP"
+      ]
+    },
+    {
+      "id": "2026-topps-chrome-wwe-gunther-mea-gt-main-event-autographs",
+      "status": "collection",
+      "title": "2026 Topps Chrome WWE Gunther #MEA-GT Main Event Autographs",
+      "price": 20.0,
+      "priceLabel": "$20.00",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/Gunther_MEA-GT_front.jpg",
+      "thumb": "assets/cards/Gunther_MEA-GT_front.jpg",
+      "sku": "",
+      "note": "The Ring General, signed. Main Event Autographs, on-card.",
+      "category": "WWE",
+      "brand": "Topps Chrome",
+      "year": "2026",
+      "serial": null,
+      "tags": []
+    },
+    {
+      "id": "1992-93-fleer-shaquille-o-neal-298-slam-dunk-rookie-orlando-",
+      "status": "collection",
+      "title": "1992-93 Fleer Shaquille O'Neal #298 Slam Dunk Rookie Orlando Magic",
+      "price": 17.0,
+      "priceLabel": "$17.00",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/Shaquille-ONeal_298_front.jpg",
+      "thumb": "assets/cards/Shaquille-ONeal_298_front.jpg",
+      "sku": "",
+      "note": "Shaq's rookie-year Slam Dunk card, backboard already in trouble. Ungraded.",
+      "category": "Basketball",
+      "brand": "Other",
+      "year": "1992-93",
+      "serial": null,
+      "tags": [
+        "Rookie"
+      ]
+    },
+    {
       "id": "2026-topps-chrome-the-national-nscc-trey-yesavage-rc-rookie-",
       "status": "collection",
       "title": "2026 Topps Chrome The National NSCC Trey Yesavage RC Rookie Refractor Blue Jays",
@@ -1053,6 +1352,47 @@
       "tags": [
         "Rookie",
         "Refractor"
+      ]
+    },
+    {
+      "id": "2026-topps-chrome-jose-reyes-75d-re-75th-diamond-autograph-2",
+      "status": "collection",
+      "title": "2026 Topps Chrome Jose Reyes #75D-RE 75th Diamond Autograph 29/99 New York Mets",
+      "price": 13.0,
+      "priceLabel": "$13.00",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/Jose-Reyes_75D-RE_front.jpg",
+      "thumb": "assets/cards/Jose-Reyes_75D-RE_front.jpg",
+      "sku": "",
+      "note": "On-card signature numbered 29 of 99, Mets blue and orange.",
+      "category": "Baseball",
+      "brand": "Topps Chrome",
+      "year": "2026",
+      "serial": "/99",
+      "tags": [
+        "Autograph",
+        "Numbered"
+      ]
+    },
+    {
+      "id": "2025-topps-royalty-wwe-cm-punk-004-18-99-raw",
+      "status": "collection",
+      "title": "2025 Topps Royalty WWE CM Punk #004 18/99 RAW",
+      "price": 13.0,
+      "priceLabel": "$13.00",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/CM-Punk_004_front.jpg",
+      "thumb": "assets/cards/CM-Punk_004_front.jpg",
+      "sku": "",
+      "note": "Royalty base, numbered 18 of 99, gold-framed on thick stock.",
+      "category": "WWE",
+      "brand": "Topps Royalty",
+      "year": "2025",
+      "serial": "/99",
+      "tags": [
+        "Numbered"
       ]
     },
     {
@@ -1098,6 +1438,46 @@
       ]
     },
     {
+      "id": "2026-topps-cosmic-chrome-wwe-tatum-paxley-131-gold-refractor",
+      "status": "collection",
+      "title": "2026 Topps Cosmic Chrome WWE Tatum Paxley #131 Gold Refractor",
+      "price": 12.0,
+      "priceLabel": "$12.00",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/Tatum-Paxley_131-gold_front.jpg",
+      "thumb": "assets/cards/Tatum-Paxley_131-gold_front.jpg",
+      "sku": "",
+      "note": "Gold parallel from the Cosmic Chrome set, planets and all.",
+      "category": "WWE",
+      "brand": "Topps Cosmic Chrome",
+      "year": "2026",
+      "serial": null,
+      "tags": [
+        "Refractor"
+      ]
+    },
+    {
+      "id": "2026-topps-chrome-wwe-cm-punk-plp-6-platinum-punk-27-50",
+      "status": "collection",
+      "title": "2026 Topps Chrome WWE CM Punk #PLP-6 Platinum Punk 27/50",
+      "price": 12.0,
+      "priceLabel": "$12.00",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/CM-Punk_PLP-6_front.jpg",
+      "thumb": "assets/cards/CM-Punk_PLP-6_front.jpg",
+      "sku": "",
+      "note": "Platinum Punk numbered 27 of 50 - the Straight Edge Society card.",
+      "category": "WWE",
+      "brand": "Topps Chrome",
+      "year": "2026",
+      "serial": "/50",
+      "tags": [
+        "Numbered"
+      ]
+    },
+    {
       "id": "2026-topps-chrome-marvel-u-s-agent-182-gold-lightning-refrac",
       "status": "collection",
       "title": "2026 Topps Chrome Marvel U.S. Agent #182 Gold Lightning Refractor 44/50",
@@ -1115,6 +1495,26 @@
       "serial": "/50",
       "tags": [
         "Numbered",
+        "Refractor"
+      ]
+    },
+    {
+      "id": "2026-topps-chrome-wwe-tatum-paxley-191-cracked-ice-refractor",
+      "status": "collection",
+      "title": "2026 Topps Chrome WWE Tatum Paxley #191 Cracked Ice Refractor NXT",
+      "price": 10.0,
+      "priceLabel": "$10.00",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/Tatum-Paxley_191-ice_front.jpg",
+      "thumb": "assets/cards/Tatum-Paxley_191-ice_front.jpg",
+      "sku": "",
+      "note": "Cracked Ice shatters the chrome into glass. Same card, louder finish.",
+      "category": "WWE",
+      "brand": "Topps Chrome",
+      "year": "2026",
+      "serial": null,
+      "tags": [
         "Refractor"
       ]
     },
@@ -1140,6 +1540,66 @@
       ]
     },
     {
+      "id": "2026-topps-cosmic-chrome-wwe-tatum-paxley-131-magenta-cosmos",
+      "status": "collection",
+      "title": "2026 Topps Cosmic Chrome WWE Tatum Paxley #131 Magenta Cosmos Refractor",
+      "price": 8.0,
+      "priceLabel": "$8.00",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/Tatum-Paxley_131-pink_front.jpg",
+      "thumb": "assets/cards/Tatum-Paxley_131-pink_front.jpg",
+      "sku": "",
+      "note": "Magenta Cosmos parallel. The pink pops under a light.",
+      "category": "WWE",
+      "brand": "Topps Cosmic Chrome",
+      "year": "2026",
+      "serial": null,
+      "tags": [
+        "Refractor"
+      ]
+    },
+    {
+      "id": "2026-topps-chrome-wwe-cm-punk-49-red-cracked-ice-refractor",
+      "status": "collection",
+      "title": "2026 Topps Chrome WWE CM Punk #49 Red Cracked Ice Refractor",
+      "price": 8.0,
+      "priceLabel": "$8.00",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/CM-Punk_49_front.jpg",
+      "thumb": "assets/cards/CM-Punk_49_front.jpg",
+      "sku": "",
+      "note": "Red Cracked Ice parallel. Shattered-glass chrome in Punk red.",
+      "category": "WWE",
+      "brand": "Topps Chrome",
+      "year": "2026",
+      "serial": null,
+      "tags": [
+        "Refractor"
+      ]
+    },
+    {
+      "id": "2026-topps-chrome-wwe-tatum-paxley-191-wave-refractor-nxt",
+      "status": "collection",
+      "title": "2026 Topps Chrome WWE Tatum Paxley #191 Wave Refractor NXT",
+      "price": 6.0,
+      "priceLabel": "$6.00",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/Tatum-Paxley_191-wave_front.jpg",
+      "thumb": "assets/cards/Tatum-Paxley_191-wave_front.jpg",
+      "sku": "",
+      "note": "Wave parallel. NXT's most watchable oddball.",
+      "category": "WWE",
+      "brand": "Topps Chrome",
+      "year": "2026",
+      "serial": null,
+      "tags": [
+        "Refractor"
+      ]
+    },
+    {
       "id": "2025-topps-royalty-wwe-cowboy-bob-orton-golden-hall-autograp",
       "status": "collection",
       "title": "2025 Topps Royalty WWE Cowboy Bob Orton Golden Hall Autograph #GHA-CBO 48/99",
@@ -1161,6 +1621,60 @@
       ]
     },
     {
+      "id": "2025-topps-chrome-wwe-x-cactus-jack-penta-fvf-1-festival-fur",
+      "status": "collection",
+      "title": "2025 Topps Chrome WWE x Cactus Jack Penta #FVF-1 Festival Fury",
+      "price": 5.0,
+      "priceLabel": "$5.00",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/Penta_FVF-1_front.jpg",
+      "thumb": "assets/cards/Penta_FVF-1_front.jpg",
+      "sku": "",
+      "note": "Festival Fury from the Cactus Jack crossover, torn-paper design and all.",
+      "category": "WWE",
+      "brand": "Topps Chrome",
+      "year": "2025",
+      "serial": null,
+      "tags": []
+    },
+    {
+      "id": "2026-topps-chrome-wwe-cm-punk-plp-12-platinum-punk-hell-in-a",
+      "status": "collection",
+      "title": "2026 Topps Chrome WWE CM Punk #PLP-12 Platinum Punk Hell in a Cell",
+      "price": 5.0,
+      "priceLabel": "$5.00",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/CM-Punk_PLP-12_front.jpg",
+      "thumb": "assets/cards/CM-Punk_PLP-12_front.jpg",
+      "sku": "",
+      "note": "Platinum Punk insert marking Hell in a Cell 2012.",
+      "category": "WWE",
+      "brand": "Topps Chrome",
+      "year": "2026",
+      "serial": null,
+      "tags": []
+    },
+    {
+      "id": "2026-topps-chrome-wwe-cm-punk-plp-14-platinum-punk-summersla",
+      "status": "collection",
+      "title": "2026 Topps Chrome WWE CM Punk #PLP-14 Platinum Punk SummerSlam 2013",
+      "price": 5.0,
+      "priceLabel": "$5.00",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/CM-Punk_PLP-14_front.jpg",
+      "thumb": "assets/cards/CM-Punk_PLP-14_front.jpg",
+      "sku": "",
+      "note": "Platinum Punk insert, SummerSlam 2013 against Lesnar.",
+      "category": "WWE",
+      "brand": "Topps Chrome",
+      "year": "2026",
+      "serial": null,
+      "tags": []
+    },
+    {
       "id": "2026-topps-chrome-seiya-suzuki-34-refractor-cubs",
       "status": "collection",
       "title": "2026 Topps Chrome Seiya Suzuki #34 Refractor Cubs",
@@ -1179,24 +1693,6 @@
       "tags": [
         "Refractor"
       ]
-    },
-    {
-      "id": "N-22",
-      "status": "sold",
-      "title": "2026 Topps Chrome WWE Sapphire Selections Jey Uso",
-      "price": 3.5,
-      "priceLabel": "$3.50",
-      "priceNote": "Sold Aug 2026",
-      "url": "",
-      "image": "https://i.ebayimg.com/images/g/G4cAAeSwA9Fqedm1/s-l1600.jpg",
-      "thumb": "https://i.ebayimg.com/images/g/G4cAAeSwA9Fqedm1/s-l960.jpg",
-      "sku": "N-22",
-      "note": "Sapphire Selections insert.",
-      "category": "WWE",
-      "brand": "Topps Chrome",
-      "year": "2026",
-      "serial": null,
-      "tags": []
     },
     {
       "id": "2026-topps-cosmic-chrome-wwe-raquel-rodriguez-51-green-space",
@@ -1270,6 +1766,24 @@
       "sku": "",
       "note": "Insert. Comps $1.50-$4.25.",
       "category": "Marvel",
+      "brand": "Topps Chrome",
+      "year": "2026",
+      "serial": null,
+      "tags": []
+    },
+    {
+      "id": "2026-topps-chrome-wwe-drew-mcintyre-sco-4-scope",
+      "status": "collection",
+      "title": "2026 Topps Chrome WWE Drew McIntyre #SCO-4 Scope",
+      "price": 2.5,
+      "priceLabel": "$2.50",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/Drew-McIntyre_SCO-4_front.jpg",
+      "thumb": "assets/cards/Drew-McIntyre_SCO-4_front.jpg",
+      "sku": "",
+      "note": "Scope insert, behind-the-scenes look at the Scottish Warrior.",
+      "category": "WWE",
       "brand": "Topps Chrome",
       "year": "2026",
       "serial": null,
@@ -1368,6 +1882,26 @@
       "tags": []
     },
     {
+      "id": "2022-panini-prizm-wwe-aoife-valkyrie-67-rc-rookie-nxt-uk",
+      "status": "collection",
+      "title": "2022 Panini Prizm WWE Aoife Valkyrie #67 RC Rookie NXT UK",
+      "price": 2.0,
+      "priceLabel": "$2.00",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/Aoife-Valkyrie_67_front.jpg",
+      "thumb": "assets/cards/Aoife-Valkyrie_67_front.jpg",
+      "sku": "",
+      "note": "Rookie card from her NXT UK run, before the Lyra Valkyria rename.",
+      "category": "WWE",
+      "brand": "Panini Prizm",
+      "year": "2022",
+      "serial": null,
+      "tags": [
+        "Rookie"
+      ]
+    },
+    {
       "id": "2026-topps-cosmic-chrome-wwe-john-cena-extraterrestrial-tale",
       "status": "collection",
       "title": "2026 Topps Cosmic Chrome WWE John Cena Extraterrestrial Talents #ET-14",
@@ -1453,6 +1987,24 @@
       "note": "Base. Red parallel of this card did $2.25.",
       "category": "Baseball",
       "brand": "Topps Stadium Club",
+      "year": "2025",
+      "serial": null,
+      "tags": []
+    },
+    {
+      "id": "2025-topps-universe-wwe-cm-punk-spo-13-star-portal-raw",
+      "status": "collection",
+      "title": "2025 Topps Universe WWE CM Punk #SPO-13 Star Portal RAW",
+      "price": 1.75,
+      "priceLabel": "$1.75",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/CM-Punk_SPO-13_front.jpg",
+      "thumb": "assets/cards/CM-Punk_SPO-13_front.jpg",
+      "sku": "",
+      "note": "Star Portal insert - that entrance, rendered in deep space.",
+      "category": "WWE",
+      "brand": "Topps Universe",
       "year": "2025",
       "serial": null,
       "tags": []
@@ -1565,6 +2117,24 @@
       "category": "Baseball",
       "brand": "Topps",
       "year": "1983",
+      "serial": null,
+      "tags": []
+    },
+    {
+      "id": "2025-topps-resurgence-dk-metcalf-cb-11-circuit-breakers-pitt",
+      "status": "collection",
+      "title": "2025 Topps Resurgence DK Metcalf #CB-11 Circuit Breakers Pittsburgh Steelers",
+      "price": 1.5,
+      "priceLabel": "$1.50",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/DK-Metcalf_CB-11_front.jpg",
+      "thumb": "assets/cards/DK-Metcalf_CB-11_front.jpg",
+      "sku": "",
+      "note": "Circuit Breakers insert, first Resurgence season in black and gold.",
+      "category": "Football",
+      "brand": "Topps Resurgence",
+      "year": "2025",
       "serial": null,
       "tags": []
     },
@@ -1713,6 +2283,24 @@
       "tags": [
         "Rookie"
       ]
+    },
+    {
+      "id": "2026-topps-chrome-wwe-cm-punk-sco-40-scope",
+      "status": "collection",
+      "title": "2026 Topps Chrome WWE CM Punk #SCO-40 Scope",
+      "price": 1.25,
+      "priceLabel": "$1.25",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/CM-Punk_SCO-40_front.jpg",
+      "thumb": "assets/cards/CM-Punk_SCO-40_front.jpg",
+      "sku": "",
+      "note": "Scope insert, behind the curtain with the Best in the World.",
+      "category": "WWE",
+      "brand": "Topps Chrome",
+      "year": "2026",
+      "serial": null,
+      "tags": []
     },
     {
       "id": "2025-26-bowman-basketball-chris-paul-146-spurs",
@@ -1927,6 +2515,42 @@
       "category": "Baseball",
       "brand": "Topps",
       "year": "1993",
+      "serial": null,
+      "tags": []
+    },
+    {
+      "id": "1993-topps-ramon-caraballo-jon-shave-brent-gates-quinton-mcc",
+      "status": "collection",
+      "title": "1993 Topps Ramon Caraballo Jon Shave Brent Gates Quinton McCracken #451 Prospects Braves Rangers Athletics Rockies",
+      "price": 1.0,
+      "priceLabel": "$1.00",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/Prospects-Second-Basemen_451_front.jpg",
+      "thumb": "assets/cards/Prospects-Second-Basemen_451_front.jpg",
+      "sku": "",
+      "note": "Four-player prospect card, Jon Shave rookie. Pure early-90s junk-wax charm.",
+      "category": "Baseball",
+      "brand": "Topps",
+      "year": "1993",
+      "serial": null,
+      "tags": []
+    },
+    {
+      "id": "2026-panini-donruss-luke-keaschall-30-minnesota-twins",
+      "status": "collection",
+      "title": "2026 Panini Donruss Luke Keaschall #30 Minnesota Twins",
+      "price": 1.0,
+      "priceLabel": "$1.00",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/Luke-Keaschall_30_front.jpg",
+      "thumb": "assets/cards/Luke-Keaschall_30_front.jpg",
+      "sku": "",
+      "note": "Base Donruss of the Twins second baseman who hit the ground running in 2025.",
+      "category": "Baseball",
+      "brand": "Donruss",
+      "year": "2026",
       "serial": null,
       "tags": []
     },
