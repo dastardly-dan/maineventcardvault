@@ -11,7 +11,7 @@
   "updated": "2026-08-22",
   "count": 34,
   "collectionCount": 100,
-  "soldCount": 2,
+  "soldCount": 5,
   "totalValue": 6038.01,
   "collectionValue": 1958.35,
   "cards": [
@@ -809,6 +809,26 @@
       ]
     },
     {
+      "id": "2026-topps-cosmic-chrome-wwe-joe-hendry-planetary-pursuit-ur",
+      "status": "sold",
+      "title": "2026 Topps Cosmic Chrome WWE Joe Hendry Planetary Pursuit Uranus RC Rookie NXT",
+      "price": 135.99,
+      "priceLabel": "$135.99",
+      "priceNote": "Sold Aug 2026",
+      "url": "",
+      "image": "https://i.ebayimg.com/images/g/YZUAAeSwg5hqf6hf/s-l1600.jpg",
+      "thumb": "https://i.ebayimg.com/images/g/YZUAAeSwg5hqf6hf/s-l960.jpg",
+      "sku": "",
+      "note": "Sold Aug 14. The $135.99 Card Ladder comp in the Aug 15 pricing workbook was this very sale.",
+      "category": "WWE",
+      "brand": "Topps Cosmic Chrome",
+      "year": "2026",
+      "serial": null,
+      "tags": [
+        "Rookie"
+      ]
+    },
+    {
       "id": "2023-panini-prizm-wwe-roxanne-perez-champion-signatures-silv",
       "status": "collection",
       "title": "2023 Panini Prizm WWE Roxanne Perez Champion Signatures Silver Prizm Auto #CS-RXP",
@@ -909,6 +929,27 @@
       "tags": [
         "Numbered",
         "Refractor"
+      ]
+    },
+    {
+      "id": "N-23",
+      "status": "sold",
+      "title": "Topps WWE Charlotte Flair Superior Relic Signatures Auto",
+      "price": 35.0,
+      "priceLabel": "$35.00",
+      "priceNote": "Sold Aug 2026",
+      "url": "",
+      "image": "https://i.ebayimg.com/images/g/DbcAAeSw6fRqec~p/s-l1600.jpg",
+      "thumb": "https://i.ebayimg.com/images/g/DbcAAeSw6fRqec~p/s-l960.jpg",
+      "sku": "N-23",
+      "note": "On-card relic autograph.",
+      "category": "WWE",
+      "brand": "Topps",
+      "year": null,
+      "serial": null,
+      "tags": [
+        "Autograph",
+        "Relic"
       ]
     },
     {
@@ -1138,6 +1179,24 @@
       "tags": [
         "Refractor"
       ]
+    },
+    {
+      "id": "N-22",
+      "status": "sold",
+      "title": "2026 Topps Chrome WWE Sapphire Selections Jey Uso",
+      "price": 3.5,
+      "priceLabel": "$3.50",
+      "priceNote": "Sold Aug 2026",
+      "url": "",
+      "image": "https://i.ebayimg.com/images/g/G4cAAeSwA9Fqedm1/s-l1600.jpg",
+      "thumb": "https://i.ebayimg.com/images/g/G4cAAeSwA9Fqedm1/s-l960.jpg",
+      "sku": "N-22",
+      "note": "Sapphire Selections insert.",
+      "category": "WWE",
+      "brand": "Topps Chrome",
+      "year": "2026",
+      "serial": null,
+      "tags": []
     },
     {
       "id": "2026-topps-cosmic-chrome-wwe-raquel-rodriguez-51-green-space",
