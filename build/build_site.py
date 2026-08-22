@@ -23,6 +23,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 RAW = ROOT / "build" / "raw_listings.tsv"
 COLLECTION = ROOT / "build" / "collection.tsv"
+LISTING_PHOTOS = ROOT / "build" / "listing_photos.tsv"
 TEMPLATE = ROOT / "build" / "template.html"
 OUT_HTML = ROOT / "index.html"
 OUT_JSON = ROOT / "listings.json"
@@ -162,6 +163,29 @@ def slugify(text: str) -> str:
     return s[:60] or "card"
 
 
+def listing_photo_overrides():
+    """
+    itemId -> stem, for active eBay listings whose photo we would rather serve
+    from assets/cards than hotlink from eBay. An eBay listing photo is whatever
+    was shot when the card was listed; these are the studio re-shoots. Missing
+    file or missing map = fall back to the eBay image, so this can never break a
+    listing that has no local photo.
+    """
+    out = {}
+    if not LISTING_PHOTOS.exists():
+        return out
+    with LISTING_PHOTOS.open(newline="", encoding="utf-8") as fh:
+        for r in csv.DictReader(fh, delimiter="\t"):
+            iid = (r.get("itemId") or "").strip()
+            stem = (r.get("stem") or "").strip()
+            if not iid or not stem:
+                continue
+            front = f"assets/cards/{stem}_front.jpg"
+            if (ROOT / front).exists():
+                out[iid] = front
+    return out
+
+
 def back_photo(photo: str) -> str:
     """Same path with `_front` swapped for `_back`, when that file exists."""
     photo = (photo or "").strip()
@@ -205,12 +229,14 @@ def read_listings():
     rows = []
     if not RAW.exists():
         return rows
+    OVERRIDES = listing_photo_overrides()
     with RAW.open(newline="", encoding="utf-8") as fh:
         for r in csv.DictReader(fh, delimiter="\t"):
             title = (r.get("title") or "").strip()
             if not title:
                 continue
             key = (r.get("imageKey") or "").strip()
+            override = OVERRIDES.get((r.get("itemId") or "").strip(), "")
             price = float(r["price"])
             item_id = r["itemId"].strip()
             rows.append({
@@ -221,10 +247,10 @@ def read_listings():
                 "priceLabel": money(price),
                 "priceNote": "",
                 "url": f"https://www.ebay.com/itm/{item_id}",
-                "image": f"https://i.ebayimg.com/images/g/{key}/s-l1600.jpg" if key else "",
-                "thumb": f"https://i.ebayimg.com/images/g/{key}/s-l960.jpg" if key else "",
-                "imageBack": "",
-                "thumbBack": "",
+                "image": override or (f"https://i.ebayimg.com/images/g/{key}/s-l1600.jpg" if key else ""),
+                "thumb": override or (f"https://i.ebayimg.com/images/g/{key}/s-l960.jpg" if key else ""),
+                "imageBack": back_photo(override),
+                "thumbBack": back_photo(override),
                 "sku": (r.get("sku") or "").strip(),
                 "note": "",
             })
