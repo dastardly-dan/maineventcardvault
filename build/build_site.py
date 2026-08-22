@@ -47,6 +47,7 @@ BASKETBALL_WORDS = [
     "inception", "cactus jack", "chris paul", "gilgeous", "thunder",
     "oklahoma city", "pacers", "toni kukoc", "thomas sorber", "taelon peter",
     "tajh ariza", "todd golden",
+    "knicks", "orlando magic", "ewing", "shaquille",
 ]
 FOOTBALL_WORDS = [
     "chiefs", "nfl", "xavier worthy", "resurgence", "49ers", "cowboys",
