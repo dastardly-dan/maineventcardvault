@@ -1102,7 +1102,13 @@ const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
 const el = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; };
 const pad4 = n => String(n).padStart(4, '0');
 const slug = s => (s || '').trim().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-');
-const today = () => new Date().toISOString().slice(0, 10);
+// Local date, not UTC. A 9pm shoot in New York is already tomorrow in UTC,
+// which filed an evening's photos under the next day's folder — and evenings
+// are when this shoots (the Aug 19 batch ran 18:44-19:00).
+const today = () => {
+  const d = new Date();
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+};
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
