@@ -54,6 +54,8 @@ BASKETBALL_WORDS = [
     "taurasi", "ace bailey", "walker kessler", "enrique freeman",
     "ja morant", "tre johnson", "john stockton", "jr smith",
     "jordan smith", "dylan harper", "prizm break",
+    # added 2026-08-25, batch 2
+    "rodman", "kingston flemings",
 ]
 FOOTBALL_WORDS = [
     "chiefs", "nfl", "xavier worthy", "resurgence", "49ers", "cowboys",
@@ -63,6 +65,9 @@ FOOTBALL_WORDS = [
     "ravens", "bills", "steelers", "colts", "longhorns", "ducks",
     "cam ward", "tyler loop", "jim kelly", "deion sanders", "dia bell",
     "dakorien moore", "kaleb johnson", "peyton manning", "freshman fabric",
+    # added 2026-08-25, batch 2
+    "patriots", "michigan", "phil mafah", "drake maye", "kalel mullings",
+    "bryce underwood",
 ]
 BASEBALL_WORDS = [
     "mlb", "brewers", "braves", "pirates", "red sox", "angels", "imanaga",
@@ -92,6 +97,10 @@ BASEBALL_WORDS = [
     "dwight gooden", "dave winfield", "marcus semien", "brett baty",
     "julio rodriguez", "ken griffey", "sebastian walcott", "trey sweeney",
     "baseball nation",
+    # added 2026-08-25, batch 2
+    "chipper jones", "prospects shortstops", "corbin carroll", "nolan arenado",
+    "ezequiel tovar", "masyn winn", "kodai senga", "nolan mclean",
+    "bubba chandler",
 ]
 
 # Non-Marvel comics, combat sports and soccer arrived with the 2026-08-21 batch.
@@ -101,6 +110,9 @@ SOCCER_WORDS = [
     "pitch kings", "la liga", "celta", "el-abdellaoui",
     # added 2026-08-25
     "uefa", "leverkusen", "prized footballers", "grimaldo", "konate",
+    # added 2026-08-25, batch 2
+    "neymar", "nottingham", "club leon", "lewandowski", "fermin lopez",
+    "valverde", "mastantuono", "igor jesus",
 ]
 # Star Wars and hockey arrived with the 2026-08-25 batch.
 STAR_WARS_WORDS = ["star wars", "kylo ren", "masterwork"]
