@@ -490,8 +490,23 @@ main { padding: 34px 0 70px; }
 .hero-note {
   color: var(--ink-3);
   font-size: 13px;
-  margin: -18px 0 26px;
+  margin: -18px 0 12px;
 }
+
+.dev-note {
+  display: inline-block;
+  max-width: 620px;
+  margin: 0 auto 26px;
+  padding: 10px 16px;
+  border: 1px solid var(--line-2);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, .03);
+  color: var(--ink-2);
+  font-size: 13px;
+  line-height: 1.5;
+  text-align: left;
+}
+.dev-note b { color: var(--ink); font-weight: 600; }
 
 .lb-note {
   color: var(--ink-2);
@@ -699,6 +714,9 @@ footer.site {
     <div class="stat"><b id="statAuto">—</b><span>Autographs</span></div>
   </div>
   <p class="hero-note" id="heroNote" hidden></p>
+  <p class="dev-note"><b>Work in progress.</b> The collection is still being catalogued &mdash;
+    card identifications, photos and estimated values are being checked and may be inaccurate
+    or incomplete. Prices in the eBay store are always the authoritative ones.</p>
   <a class="btn" href="#inventory">Browse the vault &darr;</a>
 </div>
 

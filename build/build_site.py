@@ -68,6 +68,8 @@ FOOTBALL_WORDS = [
     # added 2026-08-25, batch 2
     "patriots", "michigan", "phil mafah", "drake maye", "kalel mullings",
     "bryce underwood",
+    # added 2026-08-25, batch 3
+    "lions", "jared goff", "photogenic",
 ]
 BASEBALL_WORDS = [
     "mlb", "brewers", "braves", "pirates", "red sox", "angels", "imanaga",
