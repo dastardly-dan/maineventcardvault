@@ -8,12 +8,12 @@
     "location": "Strasburg, Virginia",
     "shipping": "$5.99 flat, USPS Ground Advantage \u2014 $0.30 each additional card"
   },
-  "updated": "2026-08-22",
+  "updated": "2026-08-25",
   "count": 49,
-  "collectionCount": 118,
+  "collectionCount": 163,
   "soldCount": 2,
   "totalValue": 8902.97,
-  "collectionValue": 1401.35,
+  "collectionValue": 1980.66,
   "cards": [
     {
       "id": "318638286490",
@@ -1226,6 +1226,52 @@
       ]
     },
     {
+      "id": "2025-topps-pristine-julio-rodriguez-pristine-pieces-autograp",
+      "status": "collection",
+      "title": "2025 Topps Pristine Julio Rodriguez Pristine Pieces Autograph Relic #PPAR-JRO Seattle Mariners",
+      "price": 104.0,
+      "priceLabel": "$104.00",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/Julio-Rodriguez_PPAR-JRO_front.jpg",
+      "thumb": "assets/cards/Julio-Rodriguez_PPAR-JRO_front.jpg",
+      "imageBack": "assets/cards/Julio-Rodriguez_PPAR-JRO_back.jpg",
+      "thumbBack": "assets/cards/Julio-Rodriguez_PPAR-JRO_back.jpg",
+      "sku": "",
+      "note": "On-card autograph with a game-used relic window.",
+      "category": "Baseball",
+      "brand": "Topps",
+      "year": "2025",
+      "serial": null,
+      "tags": [
+        "Autograph",
+        "Relic"
+      ]
+    },
+    {
+      "id": "2026-topps-resurgence-cam-ward-194-rc-rookie-on-card-auto-te",
+      "status": "collection",
+      "title": "2026 Topps Resurgence Cam Ward #194 RC Rookie On-Card Auto Tennessee Titans",
+      "price": 100.0,
+      "priceLabel": "$100.00",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/Cam-Ward_194_front.jpg",
+      "thumb": "assets/cards/Cam-Ward_194_front.jpg",
+      "imageBack": "assets/cards/Cam-Ward_194_back.jpg",
+      "thumbBack": "assets/cards/Cam-Ward_194_back.jpg",
+      "sku": "",
+      "note": "Three copies of this card are in the collection. The #194 rookie auto traded $81 to $138.50 over Aug 24-25; comped to the Aug 25 sale at $100.",
+      "category": "Football",
+      "brand": "Topps Resurgence",
+      "year": "2026",
+      "serial": null,
+      "tags": [
+        "Autograph",
+        "Rookie"
+      ]
+    },
+    {
       "id": "2026-leaf-vivid-don-mattingly-neon-auto-na-dm1-4-5-hit-man-i",
       "status": "collection",
       "title": "2026 Leaf Vivid Don Mattingly Neon Auto #NA-DM1 4/5 Hit Man Inscribed",
@@ -1246,6 +1292,29 @@
       "tags": [
         "Autograph",
         "Numbered"
+      ]
+    },
+    {
+      "id": "2026-topps-pristine-brice-turang-pristine-autographs-pa-bt-g",
+      "status": "collection",
+      "title": "2026 Topps Pristine Brice Turang Pristine Autographs #PA-BT Gold Refractor 50/50 Brewers",
+      "price": 96.0,
+      "priceLabel": "$96.00",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/Brice-Turang_PA-BT_front.jpg",
+      "thumb": "assets/cards/Brice-Turang_PA-BT_front.jpg",
+      "imageBack": "assets/cards/Brice-Turang_PA-BT_back.jpg",
+      "thumbBack": "assets/cards/Brice-Turang_PA-BT_back.jpg",
+      "sku": "",
+      "note": "Encased on-card auto, the last copy of fifty. Gold /50 sales run $75 to $99.",
+      "category": "Baseball",
+      "brand": "Topps",
+      "year": "2026",
+      "serial": "/50",
+      "tags": [
+        "Numbered",
+        "Refractor"
       ]
     },
     {
@@ -1384,6 +1453,28 @@
       ]
     },
     {
+      "id": "2025-topps-star-wars-masterwork-kylo-ren-under-disguise-uns-",
+      "status": "collection",
+      "title": "2025 Topps Star Wars Masterwork Kylo Ren Under Disguise #UNS-7 4/5",
+      "price": 45.0,
+      "priceLabel": "$45.00",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/Kylo-Ren_UNS-7_front.jpg",
+      "thumb": "assets/cards/Kylo-Ren_UNS-7_front.jpg",
+      "imageBack": "assets/cards/Kylo-Ren_UNS-7_back.jpg",
+      "thumbBack": "assets/cards/Kylo-Ren_UNS-7_back.jpg",
+      "sku": "",
+      "note": "No sale of the /5 on record. The Red /25 did $27.03 on Aug 25, the Rainbow /299 $8 and the base $2.25.",
+      "category": "Star Wars",
+      "brand": "Topps",
+      "year": "2025",
+      "serial": "/5",
+      "tags": [
+        "Numbered"
+      ]
+    },
+    {
       "id": "2026-panini-immaculate-collection-paul-skenes-cade-horton-tr",
       "status": "collection",
       "title": "2026 Panini Immaculate Collection Paul Skenes Cade Horton Trey Yesavage #TRI-PCT Triple Relic 36/49",
@@ -1452,6 +1543,30 @@
       ]
     },
     {
+      "id": "2025-panini-certified-kaleb-johnson-freshman-fabric-rpa-auto",
+      "status": "collection",
+      "title": "2025 Panini Certified Kaleb Johnson Freshman Fabric RPA Auto Patch 09/15 Pittsburgh Steelers",
+      "price": 30.0,
+      "priceLabel": "$30.00",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/Kaleb-Johnson_FBC-KJN_front.jpg",
+      "thumb": "assets/cards/Kaleb-Johnson_FBC-KJN_front.jpg",
+      "imageBack": "assets/cards/Kaleb-Johnson_FBC-KJN_back.jpg",
+      "thumbBack": "assets/cards/Kaleb-Johnson_FBC-KJN_back.jpg",
+      "sku": "",
+      "note": "No sale of the /15 on record. The /299 mirror did $10 on Aug 19, the /399 $7.55 and the /499 $8.50.",
+      "category": "Football",
+      "brand": "Panini",
+      "year": "2025",
+      "serial": "/15",
+      "tags": [
+        "Autograph",
+        "Numbered",
+        "Relic"
+      ]
+    },
+    {
       "id": "2026-topps-chrome-marvel-hulk-050-aqua-refractor-073-199",
       "status": "collection",
       "title": "2026 Topps Chrome Marvel Hulk #050 Aqua Refractor 073/199",
@@ -1515,6 +1630,51 @@
       "year": "2026",
       "serial": null,
       "tags": []
+    },
+    {
+      "id": "2026-topps-chrome-the-national-nscc-dylan-harper-nba-42-rc-r",
+      "status": "collection",
+      "title": "2026 Topps Chrome The National NSCC Dylan Harper #NBA-42 RC Rookie Refractor Spurs",
+      "price": 25.0,
+      "priceLabel": "$25.00",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/Dylan-Harper_NBA-42_front.jpg",
+      "thumb": "assets/cards/Dylan-Harper_NBA-42_front.jpg",
+      "imageBack": "assets/cards/Dylan-Harper_NBA-42_back.jpg",
+      "thumbBack": "assets/cards/Dylan-Harper_NBA-42_back.jpg",
+      "sku": "",
+      "note": "Convention exclusive rookie. Aug 24 sales at $25 and $28.",
+      "category": "Basketball",
+      "brand": "Topps Chrome",
+      "year": "2026",
+      "serial": null,
+      "tags": [
+        "Rookie",
+        "Refractor"
+      ]
+    },
+    {
+      "id": "2026-leaf-baseball-nation-sebastian-walcott-ba-sw1-auto-red-",
+      "status": "collection",
+      "title": "2026 Leaf Baseball Nation Sebastian Walcott #BA-SW1 Auto Red Texas Rangers",
+      "price": 25.0,
+      "priceLabel": "$25.00",
+      "priceNote": "Est. value \u00b7 May 2026",
+      "url": "",
+      "image": "assets/cards/Sebastian-Walcott_BA-SW1_front.jpg",
+      "thumb": "assets/cards/Sebastian-Walcott_BA-SW1_front.jpg",
+      "imageBack": "assets/cards/Sebastian-Walcott_BA-SW1_back.jpg",
+      "thumbBack": "assets/cards/Sebastian-Walcott_BA-SW1_back.jpg",
+      "sku": "",
+      "note": "No sale of #BA-SW1 on record. The Baseball Nation MiLB Top 100 #MA-SW1 1/1 autos did $15.50 to $82 through 2026.",
+      "category": "Baseball",
+      "brand": "Other",
+      "year": "2026",
+      "serial": null,
+      "tags": [
+        "Autograph"
+      ]
     },
     {
       "id": "2026-topps-chrome-wwe-drew-mcintyre-bba-dre-blue-brand-chrom",
@@ -1581,6 +1741,28 @@
       "tags": []
     },
     {
+      "id": "2025-26-panini-prizm-john-stockton-158-gold-shimmer-09-10-ut",
+      "status": "collection",
+      "title": "2025-26 Panini Prizm John Stockton #158 Gold Shimmer 09/10 Utah Jazz",
+      "price": 20.0,
+      "priceLabel": "$20.00",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/John-Stockton_158_front.jpg",
+      "thumb": "assets/cards/John-Stockton_158_front.jpg",
+      "imageBack": "assets/cards/John-Stockton_158_back.jpg",
+      "thumbBack": "assets/cards/John-Stockton_158_back.jpg",
+      "sku": "",
+      "note": "Gold /10. Recent /10 sales $15.50 to $21.50.",
+      "category": "Basketball",
+      "brand": "Panini Prizm",
+      "year": "2025-26",
+      "serial": "/10",
+      "tags": [
+        "Numbered"
+      ]
+    },
+    {
       "id": "1992-93-fleer-shaquille-o-neal-298-slam-dunk-rookie-orlando-",
       "status": "collection",
       "title": "1992-93 Fleer Shaquille O'Neal #298 Slam Dunk Rookie Orlando Magic",
@@ -1599,6 +1781,29 @@
       "year": "1992-93",
       "serial": null,
       "tags": [
+        "Rookie"
+      ]
+    },
+    {
+      "id": "2026-upper-deck-fleer-hot-prospects-daniil-but-hpadb-nscc-rc",
+      "status": "collection",
+      "title": "2026 Upper Deck Fleer Hot Prospects Daniil But #HPADB NSCC RC Rookie Auto Utah Mammoth",
+      "price": 15.99,
+      "priceLabel": "$15.99",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/Daniil-But_HPADB_front.jpg",
+      "thumb": "assets/cards/Daniil-But_HPADB_front.jpg",
+      "imageBack": "assets/cards/Daniil-But_HPADB_back.jpg",
+      "thumbBack": "assets/cards/Daniil-But_HPADB_back.jpg",
+      "sku": "",
+      "note": "Convention exclusive on-card auto, base /50. The Gold /25 did $23.50 and the Red /10 $27.",
+      "category": "Hockey",
+      "brand": "Upper Deck",
+      "year": "2026",
+      "serial": null,
+      "tags": [
+        "Autograph",
         "Rookie"
       ]
     },
@@ -1666,6 +1871,28 @@
       "brand": "Topps Royalty",
       "year": "2025",
       "serial": "/99",
+      "tags": [
+        "Numbered"
+      ]
+    },
+    {
+      "id": "2025-26-panini-prizm-prizm-break-jordan-smith-jr-7-orange-pu",
+      "status": "collection",
+      "title": "2025-26 Panini Prizm Prizm Break Jordan Smith Jr #7 Orange Pulsar 104/149 NIL Razorbacks",
+      "price": 13.0,
+      "priceLabel": "$13.00",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/Jordan-Smith-Jr_7_front.jpg",
+      "thumb": "assets/cards/Jordan-Smith-Jr_7_front.jpg",
+      "imageBack": "assets/cards/Jordan-Smith-Jr_7_back.jpg",
+      "thumbBack": "assets/cards/Jordan-Smith-Jr_7_back.jpg",
+      "sku": "",
+      "note": "The photo filename says J.R. Smith; the card is Jordan Smith Jr. Exact /149 orange pulsar comp.",
+      "category": "Basketball",
+      "brand": "Panini Prizm",
+      "year": "2025-26",
+      "serial": "/149",
       "tags": [
         "Numbered"
       ]
@@ -1783,6 +2010,29 @@
       ]
     },
     {
+      "id": "2026-topps-chrome-wwe-carlee-bright-159-purple-mini-diamond-",
+      "status": "collection",
+      "title": "2026 Topps Chrome WWE Carlee Bright #159 Purple Mini-Diamond Refractor 20/75 NXT",
+      "price": 10.0,
+      "priceLabel": "$10.00",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/Carlee-Bright_159_front.jpg",
+      "thumb": "assets/cards/Carlee-Bright_159_front.jpg",
+      "imageBack": "assets/cards/Carlee-Bright_159_back.jpg",
+      "thumbBack": "assets/cards/Carlee-Bright_159_back.jpg",
+      "sku": "",
+      "note": "Comped to the Purple Mini-Diamond /75. The exact /75 parallel is not confirmed off the photo.",
+      "category": "WWE",
+      "brand": "Topps Chrome",
+      "year": "2026",
+      "serial": "/75",
+      "tags": [
+        "Numbered",
+        "Refractor"
+      ]
+    },
+    {
       "id": "2026-topps-cosmic-chrome-wwe-tatum-paxley-131-magenta-cosmos",
       "status": "collection",
       "title": "2026 Topps Cosmic Chrome WWE Tatum Paxley #131 Magenta Cosmos Refractor",
@@ -1827,6 +2077,73 @@
       ]
     },
     {
+      "id": "2026-topps-tribute-paul-molitor-87-orange-03-25-milwaukee-br",
+      "status": "collection",
+      "title": "2026 Topps Tribute Paul Molitor #87 Orange 03/25 Milwaukee Brewers",
+      "price": 8.0,
+      "priceLabel": "$8.00",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/Paul-Molitor_87_front.jpg",
+      "thumb": "assets/cards/Paul-Molitor_87_front.jpg",
+      "imageBack": "assets/cards/Paul-Molitor_87_back.jpg",
+      "thumbBack": "assets/cards/Paul-Molitor_87_back.jpg",
+      "sku": "",
+      "note": "No sale of the Orange /25 base card on record. The base did $0.99 to $2.90 and the Green /99 $0.99 to $4.99 the same week; the Orange /25 autograph did $24.50.",
+      "category": "Baseball",
+      "brand": "Topps Tribute",
+      "year": "2026",
+      "serial": "/25",
+      "tags": [
+        "Numbered"
+      ]
+    },
+    {
+      "id": "2025-26-topps-chrome-update-ace-bailey-155-refractor-rc-rook",
+      "status": "collection",
+      "title": "2025-26 Topps Chrome Update Ace Bailey #155 Refractor RC Rookie Utah Jazz",
+      "price": 7.5,
+      "priceLabel": "$7.50",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/Ace-Bailey_155_front.jpg",
+      "thumb": "assets/cards/Ace-Bailey_155_front.jpg",
+      "imageBack": "assets/cards/Ace-Bailey_155_back.jpg",
+      "thumbBack": "assets/cards/Ace-Bailey_155_back.jpg",
+      "sku": "",
+      "note": "Base refractor. Aug 25 refractor sales ran $4.25 to $8.50.",
+      "category": "Basketball",
+      "brand": "Topps Chrome Update",
+      "year": "2025-26",
+      "serial": null,
+      "tags": [
+        "Rookie",
+        "Refractor"
+      ]
+    },
+    {
+      "id": "2026-topps-chrome-wwe-nikki-cross-132-gold-refractor",
+      "status": "collection",
+      "title": "2026 Topps Chrome WWE Nikki Cross #132 Gold Refractor",
+      "price": 6.2,
+      "priceLabel": "$6.20",
+      "priceNote": "Est. value \u00b7 Jul 2026",
+      "url": "",
+      "image": "assets/cards/Nikki-Cross_132_front.jpg",
+      "thumb": "assets/cards/Nikki-Cross_132_front.jpg",
+      "imageBack": "assets/cards/Nikki-Cross_132_back.jpg",
+      "thumbBack": "assets/cards/Nikki-Cross_132_back.jpg",
+      "sku": "",
+      "note": "Read as the Gold /50 off the photo; that parallel sold $4.25 to $7.59 through the summer.",
+      "category": "WWE",
+      "brand": "Topps Chrome",
+      "year": "2026",
+      "serial": null,
+      "tags": [
+        "Refractor"
+      ]
+    },
+    {
       "id": "2026-topps-chrome-wwe-tatum-paxley-191-wave-refractor-nxt",
       "status": "collection",
       "title": "2026 Topps Chrome WWE Tatum Paxley #191 Wave Refractor NXT",
@@ -1846,6 +2163,28 @@
       "serial": null,
       "tags": [
         "Refractor"
+      ]
+    },
+    {
+      "id": "2026-topps-chrome-wwe-kelani-jordan-nxt-kel-on-card-auto-nxt",
+      "status": "collection",
+      "title": "2026 Topps Chrome WWE Kelani Jordan #NXT-KEL On-Card Auto NXT",
+      "price": 5.5,
+      "priceLabel": "$5.50",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/Kelani-Jordan_NXT-KEL_front.jpg",
+      "thumb": "assets/cards/Kelani-Jordan_NXT-KEL_front.jpg",
+      "imageBack": "assets/cards/Kelani-Jordan_NXT-KEL_back.jpg",
+      "thumbBack": "assets/cards/Kelani-Jordan_NXT-KEL_back.jpg",
+      "sku": "",
+      "note": "Base autograph. Recent sales range $5.50 to $18.08.",
+      "category": "WWE",
+      "brand": "Topps Chrome",
+      "year": "2026",
+      "serial": null,
+      "tags": [
+        "Autograph"
       ]
     },
     {
@@ -1909,6 +2248,71 @@
       "tags": []
     },
     {
+      "id": "2026-panini-the-national-dakorien-moore-nil-nil10-green-oreg",
+      "status": "collection",
+      "title": "2026 Panini The National Dakorien Moore NIL #NIL10 Green Oregon Ducks",
+      "price": 5.0,
+      "priceLabel": "$5.00",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/Dakorien-Moore_NIL10_front.jpg",
+      "thumb": "assets/cards/Dakorien-Moore_NIL10_front.jpg",
+      "imageBack": "assets/cards/Dakorien-Moore_NIL10_back.jpg",
+      "thumbBack": "assets/cards/Dakorien-Moore_NIL10_back.jpg",
+      "sku": "",
+      "note": "Green /399 comp.",
+      "category": "Football",
+      "brand": "Panini",
+      "year": "2026",
+      "serial": null,
+      "tags": []
+    },
+    {
+      "id": "2026-topps-tribute-harry-ford-43-rc-rookie-washington-nation",
+      "status": "collection",
+      "title": "2026 Topps Tribute Harry Ford #43 RC Rookie Washington Nationals",
+      "price": 4.99,
+      "priceLabel": "$4.99",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/Harry-Ford_43_front.jpg",
+      "thumb": "assets/cards/Harry-Ford_43_front.jpg",
+      "imageBack": "assets/cards/Harry-Ford_43_back.jpg",
+      "thumbBack": "assets/cards/Harry-Ford_43_back.jpg",
+      "sku": "",
+      "note": "Base rookie, no serial.",
+      "category": "Baseball",
+      "brand": "Topps Tribute",
+      "year": "2026",
+      "serial": null,
+      "tags": [
+        "Rookie"
+      ]
+    },
+    {
+      "id": "2025-panini-certified-tyler-loop-175-rc-rookie-499-baltimore",
+      "status": "collection",
+      "title": "2025 Panini Certified Tyler Loop #175 RC Rookie /499 Baltimore Ravens",
+      "price": 4.35,
+      "priceLabel": "$4.35",
+      "priceNote": "Est. value \u00b7 Apr 2026",
+      "url": "",
+      "image": "assets/cards/Tyler-Loop_175_front.jpg",
+      "thumb": "assets/cards/Tyler-Loop_175_front.jpg",
+      "imageBack": "assets/cards/Tyler-Loop_175_back.jpg",
+      "thumbBack": "assets/cards/Tyler-Loop_175_back.jpg",
+      "sku": "",
+      "note": "The /499 base rookie. Serial not legible in the photo.",
+      "category": "Football",
+      "brand": "Panini",
+      "year": "2025",
+      "serial": "/499",
+      "tags": [
+        "Numbered",
+        "Rookie"
+      ]
+    },
+    {
       "id": "2026-topps-chrome-seiya-suzuki-34-refractor-cubs",
       "status": "collection",
       "title": "2026 Topps Chrome Seiya Suzuki #34 Refractor Cubs",
@@ -1954,6 +2358,51 @@
       ]
     },
     {
+      "id": "2025-panini-prizm-jonah-tong-sensational-signatures-ss-jt-rc",
+      "status": "collection",
+      "title": "2025 Panini Prizm Jonah Tong Sensational Signatures #SS-JT RC Rookie Auto New York Mets",
+      "price": 3.25,
+      "priceLabel": "$3.25",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/Jonah-Tong_SS-JT_front.jpg",
+      "thumb": "assets/cards/Jonah-Tong_SS-JT_front.jpg",
+      "imageBack": "assets/cards/Jonah-Tong_SS-JT_back.jpg",
+      "thumbBack": "assets/cards/Jonah-Tong_SS-JT_back.jpg",
+      "sku": "",
+      "note": "Base autograph. Recent sales $3.25 to $9.99.",
+      "category": "Baseball",
+      "brand": "Panini Prizm",
+      "year": "2025",
+      "serial": null,
+      "tags": [
+        "Autograph",
+        "Rookie"
+      ]
+    },
+    {
+      "id": "2025-26-panini-prizm-jr-smith-81-blue-wave-039-249-cleveland",
+      "status": "collection",
+      "title": "2025-26 Panini Prizm JR Smith #81 Blue Wave 039/249 Cleveland Cavaliers",
+      "price": 3.14,
+      "priceLabel": "$3.14",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/JR-Smith_81_front.jpg",
+      "thumb": "assets/cards/JR-Smith_81_front.jpg",
+      "imageBack": "assets/cards/JR-Smith_81_back.jpg",
+      "thumbBack": "assets/cards/JR-Smith_81_back.jpg",
+      "sku": "",
+      "note": "Exact /249 blue wave comp.",
+      "category": "Basketball",
+      "brand": "Panini Prizm",
+      "year": "2025-26",
+      "serial": "/249",
+      "tags": [
+        "Numbered"
+      ]
+    },
+    {
       "id": "2026-topps-chrome-marvel-wolverine-icons-mi-20-x-men",
       "status": "collection",
       "title": "2026 Topps Chrome Marvel Wolverine Icons #MI-20 X-Men",
@@ -1972,6 +2421,140 @@
       "year": "2026",
       "serial": null,
       "tags": []
+    },
+    {
+      "id": "2025-panini-prizm-johnny-bench-17-white-sparkle-496-499-cinc",
+      "status": "collection",
+      "title": "2025 Panini Prizm Johnny Bench #17 White Sparkle 496/499 Cincinnati Reds",
+      "price": 3.0,
+      "priceLabel": "$3.00",
+      "priceNote": "Est. value \u00b7 Jul 2026",
+      "url": "",
+      "image": "assets/cards/Johnny-Bench_17_front.jpg",
+      "thumb": "assets/cards/Johnny-Bench_17_front.jpg",
+      "imageBack": "assets/cards/Johnny-Bench_17_back.jpg",
+      "thumbBack": "assets/cards/Johnny-Bench_17_back.jpg",
+      "sku": "",
+      "note": "No sale of the /499 on record. The Red Prizm /299 did $4.99 and the Blue /199 $3.60; the base does about $1.",
+      "category": "Baseball",
+      "brand": "Panini Prizm",
+      "year": "2025",
+      "serial": "/499",
+      "tags": [
+        "Numbered"
+      ]
+    },
+    {
+      "id": "2026-topps-chrome-wwe-kevin-nash-24-diamond-plate-refractor",
+      "status": "collection",
+      "title": "2026 Topps Chrome WWE Kevin Nash #24 Diamond Plate Refractor",
+      "price": 3.0,
+      "priceLabel": "$3.00",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/Kevin-Nash_24_front.jpg",
+      "thumb": "assets/cards/Kevin-Nash_24_front.jpg",
+      "imageBack": "assets/cards/Kevin-Nash_24_back.jpg",
+      "thumbBack": "assets/cards/Kevin-Nash_24_back.jpg",
+      "sku": "",
+      "note": "Diamond Plate parallel.",
+      "category": "WWE",
+      "brand": "Topps Chrome",
+      "year": "2026",
+      "serial": null,
+      "tags": [
+        "Refractor"
+      ]
+    },
+    {
+      "id": "2024-25-panini-select-ja-morant-257-courtside-blue-wave-priz",
+      "status": "collection",
+      "title": "2024-25 Panini Select Ja Morant #257 Courtside Blue Wave Prizm 20/75 Memphis Grizzlies",
+      "price": 2.99,
+      "priceLabel": "$2.99",
+      "priceNote": "Est. value \u00b7 Jul 2026",
+      "url": "",
+      "image": "assets/cards/Ja-Morant_257_front.jpg",
+      "thumb": "assets/cards/Ja-Morant_257_front.jpg",
+      "imageBack": "assets/cards/Ja-Morant_257_back.jpg",
+      "thumbBack": "assets/cards/Ja-Morant_257_back.jpg",
+      "sku": "",
+      "note": "Exact /75 blue wave comp.",
+      "category": "Basketball",
+      "brand": "Panini",
+      "year": "2024-25",
+      "serial": "/75",
+      "tags": [
+        "Numbered"
+      ]
+    },
+    {
+      "id": "2025-26-panini-prizm-brilliance-tre-johnson-iii-3-red-wave-1",
+      "status": "collection",
+      "title": "2025-26 Panini Prizm Brilliance Tre Johnson III #3 Red Wave 141/299 RC Rookie Wizards",
+      "price": 2.99,
+      "priceLabel": "$2.99",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/Tre-Johnson_3_front.jpg",
+      "thumb": "assets/cards/Tre-Johnson_3_front.jpg",
+      "imageBack": "assets/cards/Tre-Johnson_3_back.jpg",
+      "thumbBack": "assets/cards/Tre-Johnson_3_back.jpg",
+      "sku": "",
+      "note": "Exact /299 red wave comp.",
+      "category": "Basketball",
+      "brand": "Panini Prizm",
+      "year": "2025-26",
+      "serial": "/299",
+      "tags": [
+        "Numbered",
+        "Rookie"
+      ]
+    },
+    {
+      "id": "2025-topps-chrome-platinum-trey-sweeney-cpa-tsw-rc-rookie-au",
+      "status": "collection",
+      "title": "2025 Topps Chrome Platinum Trey Sweeney #CPA-TSW RC Rookie Auto Detroit Tigers",
+      "price": 2.99,
+      "priceLabel": "$2.99",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/Trey-Sweeney_CPA-TSW_front.jpg",
+      "thumb": "assets/cards/Trey-Sweeney_CPA-TSW_front.jpg",
+      "imageBack": "assets/cards/Trey-Sweeney_CPA-TSW_back.jpg",
+      "thumbBack": "assets/cards/Trey-Sweeney_CPA-TSW_back.jpg",
+      "sku": "",
+      "note": "Base on-card autograph.",
+      "category": "Baseball",
+      "brand": "Topps Chrome",
+      "year": "2025",
+      "serial": null,
+      "tags": [
+        "Autograph",
+        "Rookie"
+      ]
+    },
+    {
+      "id": "2026-topps-chrome-wwe-the-national-nscc-carmelo-hayes-wwe-21",
+      "status": "collection",
+      "title": "2026 Topps Chrome WWE The National NSCC Carmelo Hayes #WWE-21 Refractor",
+      "price": 2.99,
+      "priceLabel": "$2.99",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/Carmelo-Hayes_WWE-21_front.jpg",
+      "thumb": "assets/cards/Carmelo-Hayes_WWE-21_front.jpg",
+      "imageBack": "assets/cards/Carmelo-Hayes_WWE-21_back.jpg",
+      "thumbBack": "assets/cards/Carmelo-Hayes_WWE-21_back.jpg",
+      "sku": "",
+      "note": "Convention exclusive refractor.",
+      "category": "WWE",
+      "brand": "Topps Chrome",
+      "year": "2026",
+      "serial": null,
+      "tags": [
+        "Refractor"
+      ]
     },
     {
       "id": "2026-topps-cosmic-chrome-wwe-channing-stacks-lorenzo-94-purp",
@@ -2012,6 +2595,49 @@
       "category": "WWE",
       "brand": "Topps Chrome",
       "year": "2026",
+      "serial": null,
+      "tags": []
+    },
+    {
+      "id": "2025-26-topps-chrome-update-walker-kessler-100-aqua-refracto",
+      "status": "collection",
+      "title": "2025-26 Topps Chrome Update Walker Kessler #100 Aqua Refractor 040/299 Utah Jazz",
+      "price": 2.5,
+      "priceLabel": "$2.50",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/Walker-Kessler_100_front.jpg",
+      "thumb": "assets/cards/Walker-Kessler_100_front.jpg",
+      "imageBack": "assets/cards/Walker-Kessler_100_back.jpg",
+      "thumbBack": "assets/cards/Walker-Kessler_100_back.jpg",
+      "sku": "",
+      "note": "No sale of the /299 aqua on record. The /150 blue refractor did $2.25 and the /99 green wave $1.25 on Aug 25.",
+      "category": "Basketball",
+      "brand": "Topps Chrome Update",
+      "year": "2025-26",
+      "serial": "/299",
+      "tags": [
+        "Numbered",
+        "Refractor"
+      ]
+    },
+    {
+      "id": "2025-topps-pristine-ken-griffey-jr-perseverance-p-10-seattle",
+      "status": "collection",
+      "title": "2025 Topps Pristine Ken Griffey Jr Perseverance #P-10 Seattle Mariners",
+      "price": 2.5,
+      "priceLabel": "$2.50",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/Ken-Griffey-Jr_P-10_front.jpg",
+      "thumb": "assets/cards/Ken-Griffey-Jr_P-10_front.jpg",
+      "imageBack": "assets/cards/Ken-Griffey-Jr_P-10_back.jpg",
+      "thumbBack": "assets/cards/Ken-Griffey-Jr_P-10_back.jpg",
+      "sku": "",
+      "note": "Base insert.",
+      "category": "Baseball",
+      "brand": "Topps",
+      "year": "2025",
       "serial": null,
       "tags": []
     },
@@ -2120,6 +2746,48 @@
       ]
     },
     {
+      "id": "2026-leaf-the-national-diana-taurasi-38-nscc-promo",
+      "status": "collection",
+      "title": "2026 Leaf The National Diana Taurasi #38 NSCC Promo",
+      "price": 2.0,
+      "priceLabel": "$2.00",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/Diana-Taurasi_38_front.jpg",
+      "thumb": "assets/cards/Diana-Taurasi_38_front.jpg",
+      "imageBack": "assets/cards/Diana-Taurasi_38_back.jpg",
+      "thumbBack": "assets/cards/Diana-Taurasi_38_back.jpg",
+      "sku": "",
+      "note": "No sale of this card on record. Comparable Leaf National /99 promos did $1.30 to $1.95 the same week.",
+      "category": "Basketball",
+      "brand": "Other",
+      "year": "2026",
+      "serial": null,
+      "tags": []
+    },
+    {
+      "id": "2026-topps-chrome-wwe-carmelo-hayes-70-refractor",
+      "status": "collection",
+      "title": "2026 Topps Chrome WWE Carmelo Hayes #70 Refractor",
+      "price": 2.0,
+      "priceLabel": "$2.00",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/Carmelo-Hayes_70_front.jpg",
+      "thumb": "assets/cards/Carmelo-Hayes_70_front.jpg",
+      "imageBack": "assets/cards/Carmelo-Hayes_70_back.jpg",
+      "thumbBack": "assets/cards/Carmelo-Hayes_70_back.jpg",
+      "sku": "",
+      "note": "No sale of the plain refractor on record. The Gold Mini-Diamond /50 did $6.99 and the Blue Mini-Diamond /150 $4.99.",
+      "category": "WWE",
+      "brand": "Topps Chrome",
+      "year": "2026",
+      "serial": null,
+      "tags": [
+        "Refractor"
+      ]
+    },
+    {
       "id": "2026-topps-cosmic-chrome-wwe-john-cena-extraterrestrial-tale",
       "status": "collection",
       "title": "2026 Topps Cosmic Chrome WWE John Cena Extraterrestrial Talents #ET-14",
@@ -2158,6 +2826,90 @@
       "year": "1993",
       "serial": null,
       "tags": []
+    },
+    {
+      "id": "2026-panini-the-national-dia-bell-rated-prospect-nil-nil15-t",
+      "status": "collection",
+      "title": "2026 Panini The National Dia Bell Rated Prospect NIL #NIL15 Texas Longhorns",
+      "price": 1.99,
+      "priceLabel": "$1.99",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/Dia-Bell_NIL15_front.jpg",
+      "thumb": "assets/cards/Dia-Bell_NIL15_front.jpg",
+      "imageBack": "assets/cards/Dia-Bell_NIL15_back.jpg",
+      "thumbBack": "assets/cards/Dia-Bell_NIL15_back.jpg",
+      "sku": "",
+      "note": "Comped to the Rated Prospect /399; the print run on this copy is not confirmed.",
+      "category": "Football",
+      "brand": "Panini",
+      "year": "2026",
+      "serial": null,
+      "tags": []
+    },
+    {
+      "id": "2026-leaf-the-national-dave-winfield-33-nscc-promo-san-diego",
+      "status": "collection",
+      "title": "2026 Leaf The National Dave Winfield #33 NSCC Promo San Diego Padres",
+      "price": 1.95,
+      "priceLabel": "$1.95",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/Dave-Winfield_33_front.jpg",
+      "thumb": "assets/cards/Dave-Winfield_33_front.jpg",
+      "imageBack": "assets/cards/Dave-Winfield_33_back.jpg",
+      "thumbBack": "assets/cards/Dave-Winfield_33_back.jpg",
+      "sku": "",
+      "note": "Exact comp: 60/99 sold Aug 21.",
+      "category": "Baseball",
+      "brand": "Other",
+      "year": "2026",
+      "serial": null,
+      "tags": []
+    },
+    {
+      "id": "2026-topps-chrome-wwe-the-national-nscc-austin-theory-wwe-50",
+      "status": "collection",
+      "title": "2026 Topps Chrome WWE The National NSCC Austin Theory #WWE-50 Refractor",
+      "price": 1.95,
+      "priceLabel": "$1.95",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/Austin-Theory_WWE-50_front.jpg",
+      "thumb": "assets/cards/Austin-Theory_WWE-50_front.jpg",
+      "imageBack": "assets/cards/Austin-Theory_WWE-50_back.jpg",
+      "thumbBack": "assets/cards/Austin-Theory_WWE-50_back.jpg",
+      "sku": "",
+      "note": "Convention exclusive refractor.",
+      "category": "WWE",
+      "brand": "Topps Chrome",
+      "year": "2026",
+      "serial": null,
+      "tags": [
+        "Refractor"
+      ]
+    },
+    {
+      "id": "2026-topps-chrome-wwe-the-national-nscc-charlotte-flair-wwe-",
+      "status": "collection",
+      "title": "2026 Topps Chrome WWE The National NSCC Charlotte Flair #WWE-27 Refractor",
+      "price": 1.95,
+      "priceLabel": "$1.95",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/Charlotte-Flair_WWE-27_front.jpg",
+      "thumb": "assets/cards/Charlotte-Flair_WWE-27_front.jpg",
+      "imageBack": "assets/cards/Charlotte-Flair_WWE-27_back.jpg",
+      "thumbBack": "assets/cards/Charlotte-Flair_WWE-27_back.jpg",
+      "sku": "",
+      "note": "Convention exclusive refractor. The Orange /25 did $22.50 to $31 the same week.",
+      "category": "WWE",
+      "brand": "Topps Chrome",
+      "year": "2026",
+      "serial": null,
+      "tags": [
+        "Refractor"
+      ]
     },
     {
       "id": "2026-topps-chrome-marvel-mister-sinister-080-x-men",
@@ -2236,6 +2988,26 @@
       "category": "WWE",
       "brand": "Topps Universe",
       "year": "2025",
+      "serial": null,
+      "tags": []
+    },
+    {
+      "id": "2026-leaf-the-national-dwight-gooden-46-nscc-promo-new-york-",
+      "status": "collection",
+      "title": "2026 Leaf The National Dwight Gooden #46 NSCC Promo New York Mets",
+      "price": 1.75,
+      "priceLabel": "$1.75",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/Dwight-Gooden_46_front.jpg",
+      "thumb": "assets/cards/Dwight-Gooden_46_front.jpg",
+      "imageBack": "assets/cards/Dwight-Gooden_46_back.jpg",
+      "thumbBack": "assets/cards/Dwight-Gooden_46_back.jpg",
+      "sku": "",
+      "note": "Silver /99 did $3.00 on Aug 13.",
+      "category": "Baseball",
+      "brand": "Other",
+      "year": "2026",
       "serial": null,
       "tags": []
     },
@@ -2383,6 +3155,28 @@
       "tags": []
     },
     {
+      "id": "2024-25-panini-select-enrique-freeman-80-concourse-rc-rookie",
+      "status": "collection",
+      "title": "2024-25 Panini Select Enrique Freeman #80 Concourse RC Rookie Indiana Pacers",
+      "price": 1.5,
+      "priceLabel": "$1.50",
+      "priceNote": "Est. value \u00b7 Jun 2026",
+      "url": "",
+      "image": "assets/cards/Enrique-Freeman_80_front.jpg",
+      "thumb": "assets/cards/Enrique-Freeman_80_front.jpg",
+      "imageBack": "assets/cards/Enrique-Freeman_80_back.jpg",
+      "thumbBack": "assets/cards/Enrique-Freeman_80_back.jpg",
+      "sku": "",
+      "note": "No sale of the plain Concourse base on record. The Blue RC did $1.50 and the Blue Camo /99 $1.25.",
+      "category": "Basketball",
+      "brand": "Panini",
+      "year": "2024-25",
+      "serial": null,
+      "tags": [
+        "Rookie"
+      ]
+    },
+    {
       "id": "1993-pinnacle-bret-saberhagen-185-mets",
       "status": "collection",
       "title": "1993 Pinnacle Bret Saberhagen #185 Mets",
@@ -2421,6 +3215,28 @@
       "year": "2026",
       "serial": null,
       "tags": []
+    },
+    {
+      "id": "2026-topps-chrome-marcus-semien-281-refractor-new-york-mets",
+      "status": "collection",
+      "title": "2026 Topps Chrome Marcus Semien #281 Refractor New York Mets",
+      "price": 1.43,
+      "priceLabel": "$1.43",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/Marcus-Semien_281_front.jpg",
+      "thumb": "assets/cards/Marcus-Semien_281_front.jpg",
+      "imageBack": "assets/cards/Marcus-Semien_281_back.jpg",
+      "thumbBack": "assets/cards/Marcus-Semien_281_back.jpg",
+      "sku": "",
+      "note": "Base refractor.",
+      "category": "Baseball",
+      "brand": "Topps Chrome",
+      "year": "2026",
+      "serial": null,
+      "tags": [
+        "Refractor"
+      ]
     },
     {
       "id": "score-tim-wallach-dodgers",
@@ -2499,6 +3315,26 @@
       "category": "Baseball",
       "brand": "Topps Stadium Club",
       "year": "2025",
+      "serial": null,
+      "tags": []
+    },
+    {
+      "id": "2026-leaf-the-national-dustin-poirier-45-nscc-ufc-promo",
+      "status": "collection",
+      "title": "2026 Leaf The National Dustin Poirier #45 NSCC UFC Promo",
+      "price": 1.3,
+      "priceLabel": "$1.30",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/Dustin-Poirier_45_front.jpg",
+      "thumb": "assets/cards/Dustin-Poirier_45_front.jpg",
+      "imageBack": "assets/cards/Dustin-Poirier_45_back.jpg",
+      "thumbBack": "assets/cards/Dustin-Poirier_45_back.jpg",
+      "sku": "",
+      "note": "Comped to the Wrapper Redemption /99. The Silver Foil 24/99 did $5.00 on Jul 31.",
+      "category": "UFC",
+      "brand": "Other",
+      "year": "2026",
       "serial": null,
       "tags": []
     },
@@ -2583,6 +3419,28 @@
       "year": "2026",
       "serial": null,
       "tags": []
+    },
+    {
+      "id": "2025-panini-certified-peyton-manning-immortals-im-pmg-mirror",
+      "status": "collection",
+      "title": "2025 Panini Certified Peyton Manning Immortals #IM-PMG Mirror Purple /299 Indianapolis Colts",
+      "price": 1.04,
+      "priceLabel": "$1.04",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/Peyton-Manning_IM-PMG_front.jpg",
+      "thumb": "assets/cards/Peyton-Manning_IM-PMG_front.jpg",
+      "imageBack": "assets/cards/Peyton-Manning_IM-PMG_back.jpg",
+      "thumbBack": "assets/cards/Peyton-Manning_IM-PMG_back.jpg",
+      "sku": "",
+      "note": "Colour read as Mirror Purple off the photo; the base did $0.99 on Aug 21.",
+      "category": "Football",
+      "brand": "Panini",
+      "year": "2025",
+      "serial": "/299",
+      "tags": [
+        "Numbered"
+      ]
     },
     {
       "id": "2023-bowmans-best-anthony-rizzo-56-yankees",
@@ -2821,6 +3679,26 @@
       "category": "Baseball",
       "brand": "Donruss",
       "year": "2026",
+      "serial": null,
+      "tags": []
+    },
+    {
+      "id": "2025-panini-certified-jim-kelly-immortals-im-jky-buffalo-bil",
+      "status": "collection",
+      "title": "2025 Panini Certified Jim Kelly Immortals #IM-JKY Buffalo Bills",
+      "price": 1.0,
+      "priceLabel": "$1.00",
+      "priceNote": "Est. value \u00b7 Jul 2026",
+      "url": "",
+      "image": "assets/cards/Jim-Kelly_IM-JKY_front.jpg",
+      "thumb": "assets/cards/Jim-Kelly_IM-JKY_front.jpg",
+      "imageBack": "assets/cards/Jim-Kelly_IM-JKY_back.jpg",
+      "thumbBack": "assets/cards/Jim-Kelly_IM-JKY_back.jpg",
+      "sku": "",
+      "note": "Base insert.",
+      "category": "Football",
+      "brand": "Panini",
+      "year": "2025",
       "serial": null,
       "tags": []
     },
@@ -3341,6 +4219,68 @@
       "tags": []
     },
     {
+      "id": "2024-25-topps-finest-uefa-alejandro-grimaldo-prized-football",
+      "status": "collection",
+      "title": "2024-25 Topps Finest UEFA Alejandro Grimaldo Prized Footballers #PF-5 Bayer Leverkusen",
+      "price": 0.99,
+      "priceLabel": "$0.99",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/Alejandro-Grimaldo_PF-5_front.jpg",
+      "thumb": "assets/cards/Alejandro-Grimaldo_PF-5_front.jpg",
+      "imageBack": "assets/cards/Alejandro-Grimaldo_PF-5_back.jpg",
+      "thumbBack": "assets/cards/Alejandro-Grimaldo_PF-5_back.jpg",
+      "sku": "",
+      "note": "Base insert.",
+      "category": "Soccer",
+      "brand": "Topps",
+      "year": "2024-25",
+      "serial": null,
+      "tags": []
+    },
+    {
+      "id": "2024-25-panini-immaculate-collection-ibrahima-konate-85-42-7",
+      "status": "collection",
+      "title": "2024-25 Panini Immaculate Collection Ibrahima Konate #85 42/70 France",
+      "price": 0.99,
+      "priceLabel": "$0.99",
+      "priceNote": "Est. value \u00b7 Jun 2026",
+      "url": "",
+      "image": "assets/cards/Ibrahima-Konate_85_front.jpg",
+      "thumb": "assets/cards/Ibrahima-Konate_85_front.jpg",
+      "imageBack": "assets/cards/Ibrahima-Konate_85_back.jpg",
+      "thumbBack": "assets/cards/Ibrahima-Konate_85_back.jpg",
+      "sku": "",
+      "note": "Exact /70 match: 9/70 sold Jun 9 2026.",
+      "category": "Soccer",
+      "brand": "Panini",
+      "year": "2024-25",
+      "serial": "/70",
+      "tags": [
+        "Numbered"
+      ]
+    },
+    {
+      "id": "2026-panini-the-national-nscc-deion-sanders-45-silver-pack-d",
+      "status": "collection",
+      "title": "2026 Panini The National NSCC Deion Sanders #45 Silver Pack Dallas Cowboys",
+      "price": 0.99,
+      "priceLabel": "$0.99",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/Deion-Sanders_45_front.jpg",
+      "thumb": "assets/cards/Deion-Sanders_45_front.jpg",
+      "imageBack": "assets/cards/Deion-Sanders_45_back.jpg",
+      "thumbBack": "assets/cards/Deion-Sanders_45_back.jpg",
+      "sku": "",
+      "note": "Silver pack convention promo.",
+      "category": "Football",
+      "brand": "Panini",
+      "year": "2026",
+      "serial": null,
+      "tags": []
+    },
+    {
       "id": "2025-topps-stadium-club-thomas-saggese-157-rc-rookie-cardina",
       "status": "collection",
       "title": "2025 Topps Stadium Club Thomas Saggese #157 RC Rookie Cardinals",
@@ -3381,6 +4321,48 @@
       "year": "2025",
       "serial": null,
       "tags": []
+    },
+    {
+      "id": "2026-topps-chrome-wwe-angelo-dawkins-108-sapphire-edition",
+      "status": "collection",
+      "title": "2026 Topps Chrome WWE Angelo Dawkins #108 Sapphire Edition",
+      "price": 0.8,
+      "priceLabel": "$0.80",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/Angelo-Dawkins_108_front.jpg",
+      "thumb": "assets/cards/Angelo-Dawkins_108_front.jpg",
+      "imageBack": "assets/cards/Angelo-Dawkins_108_back.jpg",
+      "thumbBack": "assets/cards/Angelo-Dawkins_108_back.jpg",
+      "sku": "",
+      "note": "Parallel not confirmed off the photo. The Sapphire did $0.80 and the base $0.20 on Aug 17; the Blue RayWave /150 did $2.13.",
+      "category": "WWE",
+      "brand": "Topps Chrome",
+      "year": "2026",
+      "serial": null,
+      "tags": []
+    },
+    {
+      "id": "2026-topps-chrome-brett-baty-263-refractor-new-york-mets",
+      "status": "collection",
+      "title": "2026 Topps Chrome Brett Baty #263 Refractor New York Mets",
+      "price": 0.8,
+      "priceLabel": "$0.80",
+      "priceNote": "Est. value \u00b7 Aug 2026",
+      "url": "",
+      "image": "assets/cards/Brett-Baty_263_front.jpg",
+      "thumb": "assets/cards/Brett-Baty_263_front.jpg",
+      "imageBack": "assets/cards/Brett-Baty_263_back.jpg",
+      "thumbBack": "assets/cards/Brett-Baty_263_back.jpg",
+      "sku": "",
+      "note": "Base refractor.",
+      "category": "Baseball",
+      "brand": "Topps Chrome",
+      "year": "2026",
+      "serial": null,
+      "tags": [
+        "Refractor"
+      ]
     },
     {
       "id": "2025-topps-stadium-club-joey-votto-2-reds",
