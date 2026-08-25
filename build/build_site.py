@@ -49,11 +49,20 @@ BASKETBALL_WORDS = [
     "oklahoma city", "pacers", "toni kukoc", "thomas sorber", "taelon peter",
     "tajh ariza", "todd golden",
     "knicks", "orlando magic", "ewing", "shaquille",
+    # added 2026-08-25
+    "jazz", "grizzlies", "wizards", "cavaliers", "spurs", "razorbacks",
+    "taurasi", "ace bailey", "walker kessler", "enrique freeman",
+    "ja morant", "tre johnson", "john stockton", "jr smith",
+    "jordan smith", "dylan harper", "prizm break",
 ]
 FOOTBALL_WORDS = [
     "chiefs", "nfl", "xavier worthy", "resurgence", "49ers", "cowboys",
     "vikings", "tai felton", "commanders", "titans", "packers", "buccaneers",
     "tony pollard", "terry mclaurin", "tucker kraft", "tez johnson",
+    # added 2026-08-25
+    "ravens", "bills", "steelers", "colts", "longhorns", "ducks",
+    "cam ward", "tyler loop", "jim kelly", "deion sanders", "dia bell",
+    "dakorien moore", "kaleb johnson", "peyton manning", "freshman fabric",
 ]
 BASEBALL_WORDS = [
     "mlb", "brewers", "braves", "pirates", "red sox", "angels", "imanaga",
@@ -77,21 +86,36 @@ BASEBALL_WORDS = [
     "jermaine palacios", "matt williams", "bret saberhagen", "moises alou",
     "gerald williams", "javier lopez", "tim wallach", "brad pennington",
     "chris sale", "adrian gonzalez",
+    # added 2026-08-25 with the Photos-1-001 Cropped 2026-08-25 batch
+    "nationals", "mariners", "rangers", "pristine", "harry ford",
+    "brice turang", "paul molitor", "johnny bench", "jonah tong",
+    "dwight gooden", "dave winfield", "marcus semien", "brett baty",
+    "julio rodriguez", "ken griffey", "sebastian walcott", "trey sweeney",
+    "baseball nation",
 ]
 
 # Non-Marvel comics, combat sports and soccer arrived with the 2026-08-21 batch.
 DC_WORDS = ["batman", "owlman", "metal universe"]
-UFC_WORDS = ["ufc", "chimaev"]
-SOCCER_WORDS = ["pitch kings", "la liga", "celta", "el-abdellaoui"]
+UFC_WORDS = ["ufc", "chimaev", "poirier"]
+SOCCER_WORDS = [
+    "pitch kings", "la liga", "celta", "el-abdellaoui",
+    # added 2026-08-25
+    "uefa", "leverkusen", "prized footballers", "grimaldo", "konate",
+]
+# Star Wars and hockey arrived with the 2026-08-25 batch.
+STAR_WARS_WORDS = ["star wars", "kylo ren", "masterwork"]
+HOCKEY_WORDS = ["nhl", "utah mammoth", "hot prospects", "daniil but"]
 
 CATEGORY_RULES = [
     ("Marvel", MARVEL_WORDS),
     ("DC", DC_WORDS),
+    ("Star Wars", STAR_WARS_WORDS),
     ("UFC", UFC_WORDS),
     ("WWE", WWE_WORDS),
     ("Basketball", BASKETBALL_WORDS),
     ("Football", FOOTBALL_WORDS),
     ("Soccer", SOCCER_WORDS),
+    ("Hockey", HOCKEY_WORDS),
     ("Baseball", BASEBALL_WORDS),
 ]
 
