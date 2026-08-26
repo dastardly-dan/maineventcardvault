@@ -409,6 +409,8 @@ main { padding: 34px 0 70px; }
   overflow: hidden;
 }
 
+.card-foot:empty { display: none; }
+
 .card-foot {
   margin-top: auto;
   display: flex;
@@ -711,12 +713,14 @@ footer.site {
     <div class="stat"><b id="statCount">—</b><span>Cards for sale</span></div>
     <div class="stat"><b id="statValue">—</b><span>Vault value</span></div>
     <div class="stat" id="statOwnedWrap" hidden><b id="statOwned">—</b><span>In the collection</span></div>
+    <div class="stat" id="statSoldWrap" hidden><b id="statSold">—</b><span>Sold to date</span></div>
     <div class="stat"><b id="statAuto">—</b><span>Autographs</span></div>
   </div>
   <p class="hero-note" id="heroNote" hidden></p>
   <p class="dev-note"><b>Work in progress.</b> The collection is still being catalogued &mdash;
-    card identifications, photos and estimated values are being checked and may be inaccurate
-    or incomplete. Prices in the eBay store are always the authoritative ones.</p>
+    card identifications and photos are being checked and may be inaccurate or incomplete.
+    Cards in the collection are not for sale and are listed without a value. Prices in the
+    eBay store are always the authoritative ones.</p>
   <a class="btn" href="#inventory">Browse the vault &darr;</a>
 </div>
 
@@ -875,9 +879,13 @@ footer.site {
     return true;
   }
 
+  function unvalued(c) { return (c.hasValue === false || !(c.price > 0)) ? 1 : 0; }
+
   var SORTERS = {
-    "price-desc": function (a, b) { return b.price - a.price; },
-    "price-asc": function (a, b) { return a.price - b.price; },
+    // A card with no published value (the whole collection) sorts last in BOTH
+    // directions — "low to high" must not float 298 valueless cards to the top.
+    "price-desc": function (a, b) { return unvalued(a) - unvalued(b) || b.price - a.price; },
+    "price-asc": function (a, b) { return unvalued(a) - unvalued(b) || a.price - b.price; },
     "title-asc": function (a, b) { return a.title.localeCompare(b.title); }
   };
 
@@ -907,10 +915,14 @@ footer.site {
         '<span class="card-cat">' + card.category + (card.serial ? " &middot; " + card.serial : "") + "</span>" +
         '<h3 class="card-title">' + esc(card.title) + "</h3>" +
         '<div class="card-foot">' +
-          '<span class="price-wrap">' +
-            '<span class="price' + priceClass + '">' + card.priceLabel + "</span>" +
-            (card.priceNote ? '<span class="price-note">' + esc(card.priceNote) + "</span>" : "") +
-          "</span>" +
+          // Collection cards publish no value, and the photo already carries a
+          // NOT FOR SALE badge — repeating it in the price slot is noise. The
+          // empty foot is where the potential-value rating will go.
+          (card.status === "collection" ? "" :
+            '<span class="price-wrap">' +
+              '<span class="price' + priceClass + '">' + card.priceLabel + "</span>" +
+              (card.priceNote ? '<span class="price-note">' + esc(card.priceNote) + "</span>" : "") +
+            "</span>") +
           (card.url
             ? '<a class="buy" href="' + card.url + '" target="_blank" rel="noopener">View on eBay &rarr;</a>'
             : "") +
@@ -949,7 +961,7 @@ footer.site {
       els.grid.appendChild(frag);
     }
 
-    var total = list.reduce(function (s, c) { return s + c.price; }, 0);
+    var total = list.reduce(function (s, c) { return unvalued(c) ? s : s + c.price; }, 0);
     els.count.textContent =
       list.length + (list.length === 1 ? " card" : " cards") +
       (list.length && total > 0 ? " · " + money(total) : "");
@@ -1169,6 +1181,12 @@ footer.site {
       return c.tags.indexOf("Autograph") > -1;
     }).length;
 
+    if (DATA.soldCount) {
+      $("#statSoldWrap").hidden = false;
+      $("#statSold").textContent =
+        "$" + Math.round(DATA.soldValue || 0).toLocaleString("en-US");
+    }
+
     if (owned.length) {
       $("#statOwnedWrap").hidden = false;
       $("#statOwned").textContent = owned.length;
@@ -1176,7 +1194,8 @@ footer.site {
       note.hidden = false;
       note.textContent =
         owned.length + (owned.length === 1 ? " card is" : " cards are") +
-        " in the personal collection — shown here for reference, not for sale.";
+        " in the personal collection — shown here for reference, not for sale. " +
+        "These are catalogued without a value.";
     }
     var upd = $("#updated");
     if (upd && DATA.updated) {

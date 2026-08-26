@@ -282,6 +282,7 @@ def read_listings():
                 "status": "forsale",
                 "title": title,
                 "price": price,
+                "hasValue": True,
                 "priceLabel": money(price),
                 "priceNote": "",
                 "url": f"https://www.ebay.com/itm/{item_id}",
@@ -329,10 +330,13 @@ def read_collection():
                 label = money(shown) if shown is not None else "Sold"
                 note = "Sold " + pretty_month(sold_date) if sold_date else "Sold"
             else:
-                shown = est_val
-                label = money(shown) if shown is not None else "Not for sale"
-                note = ("Est. value" + (" · " + pretty_month(comp_date) if comp_date else "")
-                        if shown is not None else "")
+                # Collection cards carry NO public value. estValue / compDate stay in
+                # collection.tsv as private research input for the potential-value
+                # formula, but they must never reach listings.json or the page.
+                # Daniel, 2026-08-26.
+                shown = None
+                label = "Not for sale"
+                note = ""
 
             image, thumb = photo_urls(r.get("photo"))
             back = back_photo(r.get("photo"))
@@ -342,6 +346,7 @@ def read_collection():
                 "status": status,
                 "title": title,
                 "price": shown if shown is not None else 0.0,
+                "hasValue": shown is not None,
                 "priceLabel": label,
                 "priceNote": note,
                 "url": "",
@@ -367,7 +372,9 @@ def enrich(card):
 
 def build():
     cards = [enrich(c) for c in read_listings() + read_collection()]
-    cards.sort(key=lambda c: (0 if c["status"] == "forsale" else 1, -c["price"]))
+    cards.sort(key=lambda c: (0 if c["status"] == "forsale" else 1,
+                             0 if c["hasValue"] else 1,
+                             -c["price"]))
 
     for_sale = [c for c in cards if c["status"] == "forsale"]
     owned = [c for c in cards if c["status"] == "collection"]
@@ -388,7 +395,7 @@ def build():
         "collectionCount": len(owned),
         "soldCount": len(sold),
         "totalValue": round(sum(c["price"] for c in for_sale), 2),
-        "collectionValue": round(sum(c["price"] for c in owned), 2),
+        "soldValue": round(sum(c["price"] for c in sold), 2),
         "cards": cards,
     }
 
@@ -404,9 +411,9 @@ def build():
         cats[c["category"]] = cats.get(c["category"], 0) + 1
     print(f"{len(for_sale)} for sale  ·  {money(data['totalValue'])}")
     if owned:
-        print(f"{len(owned)} in the collection  ·  {money(data['collectionValue'])} est.")
+        print(f"{len(owned)} in the collection  ·  no published value")
     if sold:
-        print(f"{len(sold)} sold")
+        print(f"{len(sold)} sold  ·  {money(data['soldValue'])}")
     print(f"{len(cards)} cards total")
     for k, v in sorted(cats.items(), key=lambda kv: -kv[1]):
         print(f"  {k:<12} {v}")
