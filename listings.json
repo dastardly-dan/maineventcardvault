@@ -8,11 +8,11 @@
     "location": "Strasburg, Virginia",
     "shipping": "$5.99 flat, USPS Ground Advantage \u2014 $0.30 each additional card"
   },
-  "updated": "2026-08-26",
-  "count": 49,
-  "collectionCount": 298,
+  "updated": "2026-08-31",
+  "count": 59,
+  "collectionCount": 284,
   "soldCount": 2,
-  "totalValue": 8902.97,
+  "totalValue": 10262.93,
   "soldValue": 4194.0,
   "cards": [
     {
@@ -61,6 +61,30 @@
       "tags": [
         "Numbered",
         "Refractor"
+      ]
+    },
+    {
+      "id": "318801642384",
+      "status": "forsale",
+      "title": "2026 Panini Immaculate Seth Hernandez Brilliance Patch 1/1 Pirates Game-Used",
+      "price": 829.0,
+      "hasValue": true,
+      "priceLabel": "$829.00",
+      "priceNote": "",
+      "url": "https://www.ebay.com/itm/318801642384",
+      "image": "https://i.ebayimg.com/images/g/2XkAAeSw3EVqlJPN/s-l1600.jpg",
+      "thumb": "https://i.ebayimg.com/images/g/2XkAAeSw3EVqlJPN/s-l960.jpg",
+      "imageBack": "",
+      "thumbBack": "",
+      "sku": "",
+      "note": "",
+      "category": "Baseball",
+      "brand": "Panini",
+      "year": "2026",
+      "serial": "/1",
+      "tags": [
+        "Numbered",
+        "Relic"
       ]
     },
     {
@@ -352,6 +376,27 @@
       ]
     },
     {
+      "id": "318801692852",
+      "status": "forsale",
+      "title": "Marvel X-Men 4 Card Lot Wolverine Nightcrawler Hulk Magik Topps Chrome",
+      "price": 189.0,
+      "hasValue": true,
+      "priceLabel": "$189.00",
+      "priceNote": "",
+      "url": "https://www.ebay.com/itm/318801692852",
+      "image": "https://i.ebayimg.com/images/g/LXsAAeSwkAlqhlP9/s-l1600.jpg",
+      "thumb": "https://i.ebayimg.com/images/g/LXsAAeSwkAlqhlP9/s-l960.jpg",
+      "imageBack": "",
+      "thumbBack": "",
+      "sku": "",
+      "note": "",
+      "category": "Marvel",
+      "brand": "Topps Chrome",
+      "year": null,
+      "serial": null,
+      "tags": []
+    },
+    {
       "id": "318726593162",
       "status": "forsale",
       "title": "2026 Topps Resurgence Xavier Worthy Auto #48 14/25 Kansas City Chiefs",
@@ -397,6 +442,30 @@
       "tags": [
         "Autograph",
         "Numbered",
+        "Rookie"
+      ]
+    },
+    {
+      "id": "318801598718",
+      "status": "forsale",
+      "title": "2026 Topps Resurgence Cam Ward #194 RC Rookie On-Card Auto Tennessee Titans",
+      "price": 169.0,
+      "hasValue": true,
+      "priceLabel": "$169.00",
+      "priceNote": "",
+      "url": "https://www.ebay.com/itm/318801598718",
+      "image": "https://i.ebayimg.com/images/g/BHgAAeSwWOBqlJXz/s-l1600.jpg",
+      "thumb": "https://i.ebayimg.com/images/g/BHgAAeSwWOBqlJXz/s-l960.jpg",
+      "imageBack": "",
+      "thumbBack": "",
+      "sku": "",
+      "note": "",
+      "category": "Football",
+      "brand": "Topps Resurgence",
+      "year": "2026",
+      "serial": null,
+      "tags": [
+        "Autograph",
         "Rookie"
       ]
     },
@@ -468,30 +537,6 @@
       "serial": null,
       "tags": [
         "SSP"
-      ]
-    },
-    {
-      "id": "318731365776",
-      "status": "forsale",
-      "title": "2026 Topps Chrome WWE Rhea Ripley Red Brand Auto #RBA-RHE Refractor RAW",
-      "price": 125.0,
-      "hasValue": true,
-      "priceLabel": "$125.00",
-      "priceNote": "",
-      "url": "https://www.ebay.com/itm/318731365776",
-      "image": "assets/cards/Rhea-Ripley_RBA-RHE_front.jpg",
-      "thumb": "assets/cards/Rhea-Ripley_RBA-RHE_front.jpg",
-      "imageBack": "assets/cards/Rhea-Ripley_RBA-RHE_back.jpg",
-      "thumbBack": "assets/cards/Rhea-Ripley_RBA-RHE_back.jpg",
-      "sku": "",
-      "note": "",
-      "category": "WWE",
-      "brand": "Topps Chrome",
-      "year": "2026",
-      "serial": null,
-      "tags": [
-        "Autograph",
-        "Refractor"
       ]
     },
     {
@@ -613,6 +658,29 @@
       ]
     },
     {
+      "id": "318801698741",
+      "status": "forsale",
+      "title": "2023 Panini Prizm WWE Roxanne Perez Champion Signatures Silver Auto #CS-RXP",
+      "price": 99.0,
+      "hasValue": true,
+      "priceLabel": "$99.00",
+      "priceNote": "",
+      "url": "https://www.ebay.com/itm/318801698741",
+      "image": "https://i.ebayimg.com/images/g/dAkAAeSwPXdqlKej/s-l1600.jpg",
+      "thumb": "https://i.ebayimg.com/images/g/dAkAAeSwPXdqlKej/s-l960.jpg",
+      "imageBack": "",
+      "thumbBack": "",
+      "sku": "",
+      "note": "",
+      "category": "WWE",
+      "brand": "Panini Prizm",
+      "year": "2023",
+      "serial": null,
+      "tags": [
+        "Autograph"
+      ]
+    },
+    {
       "id": "318637897037",
       "status": "forsale",
       "title": "2026 Topps Cosmic Chrome WWE - Joe Hendry #169 White Hole Refractor (RC) SSP",
@@ -634,6 +702,30 @@
       "tags": [
         "Rookie",
         "SSP",
+        "Refractor"
+      ]
+    },
+    {
+      "id": "318801639849",
+      "status": "forsale",
+      "title": "2026 Topps Pristine Brice Turang Autographs #PA-BT Gold Refractor 50/50 Brewers",
+      "price": 80.0,
+      "hasValue": true,
+      "priceLabel": "$80.00",
+      "priceNote": "",
+      "url": "https://www.ebay.com/itm/318801639849",
+      "image": "https://i.ebayimg.com/images/g/-xgAAeSwVZ5qlJRv/s-l1600.jpg",
+      "thumb": "https://i.ebayimg.com/images/g/-xgAAeSwVZ5qlJRv/s-l960.jpg",
+      "imageBack": "",
+      "thumbBack": "",
+      "sku": "",
+      "note": "",
+      "category": "Baseball",
+      "brand": "Topps",
+      "year": "2026",
+      "serial": "/50",
+      "tags": [
+        "Numbered",
         "Refractor"
       ]
     },
@@ -846,6 +938,31 @@
       ]
     },
     {
+      "id": "318801593360",
+      "status": "forsale",
+      "title": "2025 Panini Certified Kaleb Johnson Freshman Fabric RPA Auto Patch 9/15 Steelers",
+      "price": 50.0,
+      "hasValue": true,
+      "priceLabel": "$50.00",
+      "priceNote": "",
+      "url": "https://www.ebay.com/itm/318801593360",
+      "image": "https://i.ebayimg.com/images/g/-zUAAeSwF-ZqlJZs/s-l1600.jpg",
+      "thumb": "https://i.ebayimg.com/images/g/-zUAAeSwF-ZqlJZs/s-l960.jpg",
+      "imageBack": "",
+      "thumbBack": "",
+      "sku": "",
+      "note": "",
+      "category": "Football",
+      "brand": "Panini",
+      "year": "2025",
+      "serial": "/15",
+      "tags": [
+        "Autograph",
+        "Numbered",
+        "Relic"
+      ]
+    },
+    {
       "id": "318731347510",
       "status": "forsale",
       "title": "2026 Topps Cosmic Chrome WWE Jey Uso Planetary Pursuit Mercury #PPM-2 RAW",
@@ -1049,6 +1166,78 @@
       ]
     },
     {
+      "id": "318801589345",
+      "status": "forsale",
+      "title": "2026 UD Fleer Hot Prospects Daniil But #HPADB NSCC RC Auto Utah Mammoth",
+      "price": 19.99,
+      "hasValue": true,
+      "priceLabel": "$19.99",
+      "priceNote": "",
+      "url": "https://www.ebay.com/itm/318801589345",
+      "image": "https://i.ebayimg.com/images/g/8y8AAeSwislqlJdF/s-l1600.jpg",
+      "thumb": "https://i.ebayimg.com/images/g/8y8AAeSwislqlJdF/s-l960.jpg",
+      "imageBack": "",
+      "thumbBack": "",
+      "sku": "",
+      "note": "",
+      "category": "Hockey",
+      "brand": "Other",
+      "year": "2026",
+      "serial": null,
+      "tags": [
+        "Autograph",
+        "Rookie"
+      ]
+    },
+    {
+      "id": "318801636841",
+      "status": "forsale",
+      "title": "2025 Topps Chrome Platinum Trey Sweeney #CPA-TSW RC Rookie Auto Detroit Tigers",
+      "price": 19.99,
+      "hasValue": true,
+      "priceLabel": "$19.99",
+      "priceNote": "",
+      "url": "https://www.ebay.com/itm/318801636841",
+      "image": "https://i.ebayimg.com/images/g/008AAeSwVzdqlJTq/s-l1600.jpg",
+      "thumb": "https://i.ebayimg.com/images/g/008AAeSwVzdqlJTq/s-l960.jpg",
+      "imageBack": "",
+      "thumbBack": "",
+      "sku": "",
+      "note": "",
+      "category": "Baseball",
+      "brand": "Topps Chrome",
+      "year": "2025",
+      "serial": null,
+      "tags": [
+        "Autograph",
+        "Rookie"
+      ]
+    },
+    {
+      "id": "318801618488",
+      "status": "forsale",
+      "title": "2025 Panini Prizm Jonah Tong Sensational Signatures #SS-JT RC Auto NY Mets",
+      "price": 15.99,
+      "hasValue": true,
+      "priceLabel": "$15.99",
+      "priceNote": "",
+      "url": "https://www.ebay.com/itm/318801618488",
+      "image": "https://i.ebayimg.com/images/g/9x4AAeSwjU9qlJVg/s-l1600.jpg",
+      "thumb": "https://i.ebayimg.com/images/g/9x4AAeSwjU9qlJVg/s-l960.jpg",
+      "imageBack": "",
+      "thumbBack": "",
+      "sku": "",
+      "note": "",
+      "category": "Baseball",
+      "brand": "Panini Prizm",
+      "year": "2025",
+      "serial": null,
+      "tags": [
+        "Autograph",
+        "Rookie"
+      ]
+    },
+    {
       "id": "318726963298",
       "status": "forsale",
       "title": "2025 Topps Stadium Club Zach Neto #37",
@@ -1087,6 +1276,29 @@
       "category": "Basketball",
       "brand": "Topps Chrome Update",
       "year": "2025-26",
+      "serial": null,
+      "tags": [
+        "Rookie"
+      ]
+    },
+    {
+      "id": "318801592167",
+      "status": "forsale",
+      "title": "1992-93 Fleer Shaquille O'Neal #298 Slam Dunk Rookie Orlando Magic",
+      "price": 8.99,
+      "hasValue": true,
+      "priceLabel": "$8.99",
+      "priceNote": "",
+      "url": "https://www.ebay.com/itm/318801592167",
+      "image": "https://i.ebayimg.com/images/g/K28AAeSwgW9qlJbZ/s-l1600.jpg",
+      "thumb": "https://i.ebayimg.com/images/g/K28AAeSwgW9qlJbZ/s-l960.jpg",
+      "imageBack": "",
+      "thumbBack": "",
+      "sku": "",
+      "note": "",
+      "category": "Basketball",
+      "brand": "Other",
+      "year": "1992-93",
       "serial": null,
       "tags": [
         "Rookie"
@@ -1135,6 +1347,29 @@
       "year": "2026",
       "serial": null,
       "tags": []
+    },
+    {
+      "id": "318802317751",
+      "status": "forsale",
+      "title": "2026 Topps Chrome WWE Bret Hit Man Hart #30 Refractor Legend",
+      "price": 4.0,
+      "hasValue": true,
+      "priceLabel": "$4.00",
+      "priceNote": "",
+      "url": "https://www.ebay.com/itm/318802317751",
+      "image": "https://i.ebayimg.com/images/g/TPMAAeSwsx9qlKnm/s-l1600.jpg",
+      "thumb": "https://i.ebayimg.com/images/g/TPMAAeSwsx9qlKnm/s-l960.jpg",
+      "imageBack": "",
+      "thumbBack": "",
+      "sku": "",
+      "note": "",
+      "category": "WWE",
+      "brand": "Topps Chrome",
+      "year": "2026",
+      "serial": null,
+      "tags": [
+        "Refractor"
+      ]
     },
     {
       "id": "318726960542",
@@ -1708,29 +1943,6 @@
       ]
     },
     {
-      "id": "2023-panini-prizm-wwe-roxanne-perez-champion-signatures-silv",
-      "status": "collection",
-      "title": "2023 Panini Prizm WWE Roxanne Perez Champion Signatures Silver Prizm Auto #CS-RXP",
-      "price": 0.0,
-      "hasValue": false,
-      "priceLabel": "Not for sale",
-      "priceNote": "",
-      "url": "",
-      "image": "assets/cards/Roxanne-Perez_CS-RXP_front.jpg",
-      "thumb": "assets/cards/Roxanne-Perez_CS-RXP_front.jpg",
-      "imageBack": "assets/cards/Roxanne-Perez_CS-RXP_back.jpg",
-      "thumbBack": "assets/cards/Roxanne-Perez_CS-RXP_back.jpg",
-      "sku": "",
-      "note": "Her first autograph. Unnumbered Silver Prizm - no serial and no colour tint on the card.",
-      "category": "WWE",
-      "brand": "Panini Prizm",
-      "year": "2023",
-      "serial": null,
-      "tags": [
-        "Autograph"
-      ]
-    },
-    {
       "id": "2026-topps-cosmic-chrome-wwe-dominik-mysterio-starfractor-sf",
       "status": "collection",
       "title": "2026 Topps Cosmic Chrome WWE Dominik Mysterio StarFractor #SF-6 SSP",
@@ -1820,29 +2032,6 @@
       "year": "2026",
       "serial": null,
       "tags": []
-    },
-    {
-      "id": "2026-topps-chrome-wwe-bret-hit-man-hart-30-refractor-legends",
-      "status": "collection",
-      "title": "2026 Topps Chrome WWE Bret Hit Man Hart #30 Refractor Legends",
-      "price": 0.0,
-      "hasValue": false,
-      "priceLabel": "Not for sale",
-      "priceNote": "",
-      "url": "",
-      "image": "assets/cards/Bret-Hart_30_front.jpg",
-      "thumb": "assets/cards/Bret-Hart_30_front.jpg",
-      "imageBack": "assets/cards/Bret-Hart_30_back.jpg",
-      "thumbBack": "assets/cards/Bret-Hart_30_back.jpg",
-      "sku": "",
-      "note": "Base refractor of the Hitman, from the Legends subset.",
-      "category": "WWE",
-      "brand": "Topps Chrome",
-      "year": "2026",
-      "serial": null,
-      "tags": [
-        "Refractor"
-      ]
     },
     {
       "id": "2026-topps-chrome-wwe-brooks-jensen-104-purple-refractor-57-",
@@ -1940,54 +2129,6 @@
       ]
     },
     {
-      "id": "2026-topps-chrome-marvel-hulk-050-aqua-refractor-073-199",
-      "status": "collection",
-      "title": "2026 Topps Chrome Marvel Hulk #050 Aqua Refractor 073/199",
-      "price": 0.0,
-      "hasValue": false,
-      "priceLabel": "Not for sale",
-      "priceNote": "",
-      "url": "",
-      "image": "assets/cards/Hulk_050_front.jpg",
-      "thumb": "assets/cards/Hulk_050_front.jpg",
-      "imageBack": "assets/cards/Hulk_050_back.jpg",
-      "thumbBack": "assets/cards/Hulk_050_back.jpg",
-      "sku": "",
-      "note": "Aqua Refractor of the Hulk, numbered 73 of 199.",
-      "category": "Marvel",
-      "brand": "Topps Chrome",
-      "year": "2026",
-      "serial": "/199",
-      "tags": [
-        "Numbered",
-        "Refractor"
-      ]
-    },
-    {
-      "id": "2026-topps-chrome-marvel-nightcrawler-087-spiderweb-refracto",
-      "status": "collection",
-      "title": "2026 Topps Chrome Marvel Nightcrawler #087 Spiderweb Refractor 336/399 X-Men",
-      "price": 0.0,
-      "hasValue": false,
-      "priceLabel": "Not for sale",
-      "priceNote": "",
-      "url": "",
-      "image": "assets/cards/Nightcrawler_087_front.jpg",
-      "thumb": "assets/cards/Nightcrawler_087_front.jpg",
-      "imageBack": "assets/cards/Nightcrawler_087_back.jpg",
-      "thumbBack": "assets/cards/Nightcrawler_087_back.jpg",
-      "sku": "",
-      "note": "Spider-Web Refractor, numbered 336 of 399.",
-      "category": "Marvel",
-      "brand": "Topps Chrome",
-      "year": "2026",
-      "serial": "/399",
-      "tags": [
-        "Numbered",
-        "Refractor"
-      ]
-    },
-    {
       "id": "2026-topps-chrome-marvel-mister-sinister-080-x-men",
       "status": "collection",
       "title": "2026 Topps Chrome Marvel Mister Sinister #080 X-Men",
@@ -2002,27 +2143,6 @@
       "thumbBack": "assets/cards/Mister-Sinister_080_back.jpg",
       "sku": "",
       "note": "Base card of Mister Sinister, from the X-Men subset.",
-      "category": "Marvel",
-      "brand": "Topps Chrome",
-      "year": "2026",
-      "serial": null,
-      "tags": []
-    },
-    {
-      "id": "2026-topps-chrome-marvel-wolverine-icons-mi-20-x-men",
-      "status": "collection",
-      "title": "2026 Topps Chrome Marvel Wolverine Icons #MI-20 X-Men",
-      "price": 0.0,
-      "hasValue": false,
-      "priceLabel": "Not for sale",
-      "priceNote": "",
-      "url": "",
-      "image": "assets/cards/Wolverine_MI-20_front.jpg",
-      "thumb": "assets/cards/Wolverine_MI-20_front.jpg",
-      "imageBack": "assets/cards/Wolverine_MI-20_back.jpg",
-      "thumbBack": "assets/cards/Wolverine_MI-20_back.jpg",
-      "sku": "",
-      "note": "Base Icons insert of Wolverine, from the X-Men subset.",
       "category": "Marvel",
       "brand": "Topps Chrome",
       "year": "2026",
@@ -3076,29 +3196,6 @@
       "tags": []
     },
     {
-      "id": "1992-93-fleer-shaquille-o-neal-298-slam-dunk-rookie-orlando-",
-      "status": "collection",
-      "title": "1992-93 Fleer Shaquille O'Neal #298 Slam Dunk Rookie Orlando Magic",
-      "price": 0.0,
-      "hasValue": false,
-      "priceLabel": "Not for sale",
-      "priceNote": "",
-      "url": "",
-      "image": "assets/cards/Shaquille-ONeal_298_front.jpg",
-      "thumb": "assets/cards/Shaquille-ONeal_298_front.jpg",
-      "imageBack": "assets/cards/Shaquille-ONeal_298_back.jpg",
-      "thumbBack": "assets/cards/Shaquille-ONeal_298_back.jpg",
-      "sku": "",
-      "note": "Shaq's rookie-year Slam Dunk card, backboard already in trouble. Ungraded.",
-      "category": "Basketball",
-      "brand": "Other",
-      "year": "1992-93",
-      "serial": null,
-      "tags": [
-        "Rookie"
-      ]
-    },
-    {
       "id": "2026-panini-immaculate-collection-paul-skenes-cade-horton-tr",
       "status": "collection",
       "title": "2026 Panini Immaculate Collection Paul Skenes Cade Horton Trey Yesavage #TRI-PCT Triple Relic 36/49",
@@ -3371,30 +3468,6 @@
       "year": "2025",
       "serial": null,
       "tags": []
-    },
-    {
-      "id": "2026-panini-immaculate-collection-seth-hernandez-bm-sh-brill",
-      "status": "collection",
-      "title": "2026 Panini Immaculate Collection Seth Hernandez #BM-SH Brilliance Patch 1/1 Pittsburgh Pirates",
-      "price": 0.0,
-      "hasValue": false,
-      "priceLabel": "Not for sale",
-      "priceNote": "",
-      "url": "",
-      "image": "assets/cards/Seth-Hernandez_BM-SH_front.jpg",
-      "thumb": "assets/cards/Seth-Hernandez_BM-SH_front.jpg",
-      "imageBack": "assets/cards/Seth-Hernandez_BM-SH_back.jpg",
-      "thumbBack": "assets/cards/Seth-Hernandez_BM-SH_back.jpg",
-      "sku": "",
-      "note": "A one-of-one. Game-used patch window on Immaculate stock, and there is no second copy of it anywhere.",
-      "category": "Baseball",
-      "brand": "Panini",
-      "year": "2026",
-      "serial": "/1",
-      "tags": [
-        "Numbered",
-        "Relic"
-      ]
     },
     {
       "id": "2025-topps-universe-wwe-mankind-lga-man-legends-autograph",
@@ -3777,30 +3850,6 @@
       "tags": []
     },
     {
-      "id": "2026-topps-resurgence-cam-ward-194-rc-rookie-on-card-auto-te",
-      "status": "collection",
-      "title": "2026 Topps Resurgence Cam Ward #194 RC Rookie On-Card Auto Tennessee Titans",
-      "price": 0.0,
-      "hasValue": false,
-      "priceLabel": "Not for sale",
-      "priceNote": "",
-      "url": "",
-      "image": "assets/cards/Cam-Ward_194_front.jpg",
-      "thumb": "assets/cards/Cam-Ward_194_front.jpg",
-      "imageBack": "assets/cards/Cam-Ward_194_back.jpg",
-      "thumbBack": "assets/cards/Cam-Ward_194_back.jpg",
-      "sku": "",
-      "note": "On-card rookie autograph of the Titans first-round quarterback. Three copies of this card are in the collection.",
-      "category": "Football",
-      "brand": "Topps Resurgence",
-      "year": "2026",
-      "serial": null,
-      "tags": [
-        "Autograph",
-        "Rookie"
-      ]
-    },
-    {
       "id": "2026-topps-tribute-harry-ford-43-rc-rookie-washington-nation",
       "status": "collection",
       "title": "2026 Topps Tribute Harry Ford #43 RC Rookie Washington Nationals",
@@ -3893,30 +3942,6 @@
       "tags": []
     },
     {
-      "id": "2026-topps-pristine-brice-turang-pristine-autographs-pa-bt-g",
-      "status": "collection",
-      "title": "2026 Topps Pristine Brice Turang Pristine Autographs #PA-BT Gold Refractor 50/50 Brewers",
-      "price": 0.0,
-      "hasValue": false,
-      "priceLabel": "Not for sale",
-      "priceNote": "",
-      "url": "",
-      "image": "assets/cards/Brice-Turang_PA-BT_front.jpg",
-      "thumb": "assets/cards/Brice-Turang_PA-BT_front.jpg",
-      "imageBack": "assets/cards/Brice-Turang_PA-BT_back.jpg",
-      "thumbBack": "assets/cards/Brice-Turang_PA-BT_back.jpg",
-      "sku": "",
-      "note": "Encased on-card autograph of the Brewers second baseman. Gold refractor, the last copy of fifty.",
-      "category": "Baseball",
-      "brand": "Topps",
-      "year": "2026",
-      "serial": "/50",
-      "tags": [
-        "Numbered",
-        "Refractor"
-      ]
-    },
-    {
       "id": "2026-topps-tribute-paul-molitor-87-orange-03-25-milwaukee-br",
       "status": "collection",
       "title": "2026 Topps Tribute Paul Molitor #87 Orange 03/25 Milwaukee Brewers",
@@ -3977,7 +4002,7 @@
       "imageBack": "assets/cards/Ibrahima-Konate_85_back.jpg",
       "thumbBack": "assets/cards/Ibrahima-Konate_85_back.jpg",
       "sku": "",
-      "note": "Immaculate Collection card of the France centre-back, numbered 42 of 70.",
+      "note": "Immaculate Collection card of the France center-back, numbered 42 of 70.",
       "category": "Soccer",
       "brand": "Panini",
       "year": "2024-25",
@@ -4053,30 +4078,6 @@
       "serial": "/299",
       "tags": [
         "Numbered",
-        "Rookie"
-      ]
-    },
-    {
-      "id": "2025-topps-chrome-platinum-trey-sweeney-cpa-tsw-rc-rookie-au",
-      "status": "collection",
-      "title": "2025 Topps Chrome Platinum Trey Sweeney #CPA-TSW RC Rookie Auto Detroit Tigers",
-      "price": 0.0,
-      "hasValue": false,
-      "priceLabel": "Not for sale",
-      "priceNote": "",
-      "url": "",
-      "image": "assets/cards/Trey-Sweeney_CPA-TSW_front.jpg",
-      "thumb": "assets/cards/Trey-Sweeney_CPA-TSW_front.jpg",
-      "imageBack": "assets/cards/Trey-Sweeney_CPA-TSW_back.jpg",
-      "thumbBack": "assets/cards/Trey-Sweeney_CPA-TSW_back.jpg",
-      "sku": "",
-      "note": "On-card rookie autograph of the Tigers shortstop, from Topps Chrome Platinum.",
-      "category": "Baseball",
-      "brand": "Topps Chrome",
-      "year": "2025",
-      "serial": null,
-      "tags": [
-        "Autograph",
         "Rookie"
       ]
     },
@@ -4215,30 +4216,6 @@
       "serial": "/149",
       "tags": [
         "Numbered"
-      ]
-    },
-    {
-      "id": "2025-panini-prizm-jonah-tong-sensational-signatures-ss-jt-rc",
-      "status": "collection",
-      "title": "2025 Panini Prizm Jonah Tong Sensational Signatures #SS-JT RC Rookie Auto New York Mets",
-      "price": 0.0,
-      "hasValue": false,
-      "priceLabel": "Not for sale",
-      "priceNote": "",
-      "url": "",
-      "image": "assets/cards/Jonah-Tong_SS-JT_front.jpg",
-      "thumb": "assets/cards/Jonah-Tong_SS-JT_front.jpg",
-      "imageBack": "assets/cards/Jonah-Tong_SS-JT_back.jpg",
-      "thumbBack": "assets/cards/Jonah-Tong_SS-JT_back.jpg",
-      "sku": "",
-      "note": "Sensational Signatures rookie autograph of the Mets right-hander.",
-      "category": "Baseball",
-      "brand": "Panini Prizm",
-      "year": "2025",
-      "serial": null,
-      "tags": [
-        "Autograph",
-        "Rookie"
       ]
     },
     {
@@ -4413,30 +4390,6 @@
       "tags": []
     },
     {
-      "id": "2026-upper-deck-fleer-hot-prospects-daniil-but-hpadb-nscc-rc",
-      "status": "collection",
-      "title": "2026 Upper Deck Fleer Hot Prospects Daniil But #HPADB NSCC RC Rookie Auto Utah Mammoth",
-      "price": 0.0,
-      "hasValue": false,
-      "priceLabel": "Not for sale",
-      "priceNote": "",
-      "url": "",
-      "image": "assets/cards/Daniil-But_HPADB_front.jpg",
-      "thumb": "assets/cards/Daniil-But_HPADB_front.jpg",
-      "imageBack": "assets/cards/Daniil-But_HPADB_back.jpg",
-      "thumbBack": "assets/cards/Daniil-But_HPADB_back.jpg",
-      "sku": "",
-      "note": "Convention exclusive on-card rookie autograph of the Utah Mammoth winger, from Fleer Hot Prospects.",
-      "category": "Hockey",
-      "brand": "Upper Deck",
-      "year": "2026",
-      "serial": null,
-      "tags": [
-        "Autograph",
-        "Rookie"
-      ]
-    },
-    {
       "id": "2026-topps-chrome-wwe-the-national-nscc-carmelo-hayes-wwe-21",
       "status": "collection",
       "title": "2026 Topps Chrome WWE The National NSCC Carmelo Hayes #WWE-21 Refractor",
@@ -4503,31 +4456,6 @@
       "serial": null,
       "tags": [
         "Autograph"
-      ]
-    },
-    {
-      "id": "2025-panini-certified-kaleb-johnson-freshman-fabric-rpa-auto",
-      "status": "collection",
-      "title": "2025 Panini Certified Kaleb Johnson Freshman Fabric RPA Auto Patch 09/15 Pittsburgh Steelers",
-      "price": 0.0,
-      "hasValue": false,
-      "priceLabel": "Not for sale",
-      "priceNote": "",
-      "url": "",
-      "image": "assets/cards/Kaleb-Johnson_FBC-KJN_front.jpg",
-      "thumb": "assets/cards/Kaleb-Johnson_FBC-KJN_front.jpg",
-      "imageBack": "assets/cards/Kaleb-Johnson_FBC-KJN_back.jpg",
-      "thumbBack": "assets/cards/Kaleb-Johnson_FBC-KJN_back.jpg",
-      "sku": "",
-      "note": "Freshman Fabric rookie patch autograph of the Steelers running back, numbered 9 of 15.",
-      "category": "Football",
-      "brand": "Panini",
-      "year": "2025",
-      "serial": "/15",
-      "tags": [
-        "Autograph",
-        "Numbered",
-        "Relic"
       ]
     },
     {
@@ -4749,7 +4677,7 @@
       "imageBack": "assets/cards/Julio-Rodriguez_PPAR-JRO_back.jpg",
       "thumbBack": "assets/cards/Julio-Rodriguez_PPAR-JRO_back.jpg",
       "sku": "",
-      "note": "On-card autograph of the Mariners centre fielder with a game-used relic window.",
+      "note": "On-card autograph of the Mariners center fielder with a game-used relic window.",
       "category": "Baseball",
       "brand": "Topps",
       "year": "2025",
@@ -5249,7 +5177,7 @@
       "imageBack": "assets/cards/Neymar-Jr_SM-N1_back.jpg",
       "thumbBack": "assets/cards/Neymar-Jr_SM-N1_back.jpg",
       "sku": "",
-      "note": "On-card autograph with a three-colour game-used patch. The first of five.",
+      "note": "On-card autograph with a three-color game-used patch. The first of five.",
       "category": "Soccer",
       "brand": "Other",
       "year": "2026",
@@ -5651,27 +5579,6 @@
       "sku": "",
       "note": "X-Fractor of the New Day member and King of the Ring.",
       "category": "WWE",
-      "brand": "Topps Chrome",
-      "year": "2026",
-      "serial": null,
-      "tags": []
-    },
-    {
-      "id": "2026-topps-chrome-marvel-comics-magik-fanfare-ff-25",
-      "status": "collection",
-      "title": "2026 Topps Chrome Marvel Comics Magik Fanfare #FF-25",
-      "price": 0.0,
-      "hasValue": false,
-      "priceLabel": "Not for sale",
-      "priceNote": "",
-      "url": "",
-      "image": "assets/cards/Magik_FF-25_front.jpg",
-      "thumb": "assets/cards/Magik_FF-25_front.jpg",
-      "imageBack": "assets/cards/Magik_FF-25_back.jpg",
-      "thumbBack": "assets/cards/Magik_FF-25_back.jpg",
-      "sku": "",
-      "note": "Fanfare insert of Illyana Rasputina.",
-      "category": "Marvel",
       "brand": "Topps Chrome",
       "year": "2026",
       "serial": null,
@@ -6102,7 +6009,7 @@
       "imageBack": "assets/cards/Rivaldo_MAD-5_back.jpg",
       "thumbBack": "assets/cards/Rivaldo_MAD-5_back.jpg",
       "sku": "",
-      "note": "Insert card of the Ballon d'Or winner in Barcelona colours.",
+      "note": "Insert card of the Ballon d'Or winner in Barcelona colors.",
       "category": "Soccer",
       "brand": "Topps",
       "year": "2026",
@@ -6814,7 +6721,7 @@
       "imageBack": "assets/cards/The-Rock_RDL-14_back.jpg",
       "thumbBack": "assets/cards/The-Rock_RDL-14_back.jpg",
       "sku": "",
-      "note": "Diamond Legacy insert marking the Fully Loaded 2000 title defence.",
+      "note": "Diamond Legacy insert marking the Fully Loaded 2000 title defense.",
       "category": "WWE",
       "brand": "Topps Chrome",
       "year": "2026",
@@ -7587,7 +7494,7 @@
       "imageBack": "assets/cards/Patrick-Ewing_150_back.jpg",
       "thumbBack": "assets/cards/Patrick-Ewing_150_back.jpg",
       "sku": "",
-      "note": "Prizm card of the Knicks Hall of Fame centre.",
+      "note": "Prizm card of the Knicks Hall of Fame center.",
       "category": "Basketball",
       "brand": "Panini Prizm",
       "year": "2025-26",
