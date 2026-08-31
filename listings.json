@@ -11,9 +11,9 @@
   "updated": "2026-08-31",
   "count": 59,
   "collectionCount": 284,
-  "soldCount": 3,
+  "soldCount": 6,
   "totalValue": 10262.93,
-  "soldValue": 4319.0,
+  "soldValue": 4493.49,
   "cards": [
     {
       "id": "318638286490",
@@ -1445,6 +1445,29 @@
       ]
     },
     {
+      "id": "2026-topps-cosmic-chrome-wwe-joe-hendry-planetary-pursuit-ur",
+      "status": "sold",
+      "title": "2026 Topps Cosmic Chrome WWE Joe Hendry Planetary Pursuit Uranus RC Rookie NXT",
+      "price": 135.99,
+      "hasValue": true,
+      "priceLabel": "$135.99",
+      "priceNote": "Sold Aug 2026",
+      "url": "",
+      "image": "https://i.ebayimg.com/images/g/YZUAAeSwg5hqf6hf/s-l1600.jpg",
+      "thumb": "https://i.ebayimg.com/images/g/YZUAAeSwg5hqf6hf/s-l960.jpg",
+      "imageBack": "",
+      "thumbBack": "",
+      "sku": "",
+      "note": "Planetary Pursuit Uranus insert, rookie card of the NXT talent.",
+      "category": "WWE",
+      "brand": "Topps Cosmic Chrome",
+      "year": "2026",
+      "serial": null,
+      "tags": [
+        "Rookie"
+      ]
+    },
+    {
       "id": "2026-topps-chrome-wwe-rhea-ripley-red-brand-auto-rba-rhe-ref",
       "status": "sold",
       "title": "2026 Topps Chrome WWE Rhea Ripley Red Brand Auto #RBA-RHE Refractor RAW",
@@ -1467,6 +1490,51 @@
         "Autograph",
         "Refractor"
       ]
+    },
+    {
+      "id": "N-23",
+      "status": "sold",
+      "title": "Topps WWE Charlotte Flair Superior Relic Signatures Auto",
+      "price": 35.0,
+      "hasValue": true,
+      "priceLabel": "$35.00",
+      "priceNote": "Sold Aug 2026",
+      "url": "",
+      "image": "https://i.ebayimg.com/images/g/DbcAAeSw6fRqec~p/s-l1600.jpg",
+      "thumb": "https://i.ebayimg.com/images/g/DbcAAeSw6fRqec~p/s-l960.jpg",
+      "imageBack": "",
+      "thumbBack": "",
+      "sku": "N-23",
+      "note": "On-card autograph with a game-used relic window.",
+      "category": "WWE",
+      "brand": "Topps",
+      "year": null,
+      "serial": null,
+      "tags": [
+        "Autograph",
+        "Relic"
+      ]
+    },
+    {
+      "id": "N-22",
+      "status": "sold",
+      "title": "2026 Topps Chrome WWE Sapphire Selections Jey Uso",
+      "price": 3.5,
+      "hasValue": true,
+      "priceLabel": "$3.50",
+      "priceNote": "Sold Aug 2026",
+      "url": "",
+      "image": "https://i.ebayimg.com/images/g/G4cAAeSwA9Fqedm1/s-l1600.jpg",
+      "thumb": "https://i.ebayimg.com/images/g/G4cAAeSwA9Fqedm1/s-l960.jpg",
+      "imageBack": "",
+      "thumbBack": "",
+      "sku": "N-22",
+      "note": "Sapphire Selections insert.",
+      "category": "WWE",
+      "brand": "Topps Chrome",
+      "year": "2026",
+      "serial": null,
+      "tags": []
     },
     {
       "id": "2026-leaf-vivid-don-mattingly-neon-auto-na-dm1-4-5-hit-man-i",
