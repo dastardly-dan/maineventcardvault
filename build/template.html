@@ -717,7 +717,7 @@ footer.site {
     <div class="stat"><b id="statAuto">—</b><span>Autographs</span></div>
   </div>
   <p class="hero-note" id="heroNote" hidden></p>
-  <p class="dev-note"><b>Work in progress.</b> The collection is still being catalogued &mdash;
+  <p class="dev-note"><b>Work in progress.</b> The collection is still being cataloged &mdash;
     card identifications and photos are being checked and may be inaccurate or incomplete.
     Cards in the collection are not for sale and are listed without a value. Prices in the
     eBay store are always the authoritative ones.</p>
@@ -763,9 +763,9 @@ footer.site {
         <h3>Shipping</h3>
         <p id="shipLine">$5.99 flat, USPS Ground Advantage — $0.30 each additional card</p>
       </div>
-      <div class="info-card">
+      <div class="info-card" id="packaging">
         <h3>Packaging</h3>
-        <p>Penny sleeve, 35pt toploader, team bag, and rigid chipboard in a bubble mailer. Ships within two business days.</p>
+        <p>Penny sleeve and a 35pt toploader or larger, sized to the card. A card that arrives to me already in a one-touch — or that warrants one on its own value — ships back out in that one-touch instead. Then team bag and rigid chipboard in a bubble mailer. Ships within two business days.</p>
       </div>
       <div class="info-card">
         <h3>Buying</h3>
@@ -1195,7 +1195,7 @@ footer.site {
       note.textContent =
         owned.length + (owned.length === 1 ? " card is" : " cards are") +
         " in the personal collection — shown here for reference, not for sale. " +
-        "These are catalogued without a value.";
+        "These are cataloged without a value.";
     }
     var upd = $("#updated");
     if (upd && DATA.updated) {
