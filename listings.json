@@ -11,9 +11,9 @@
   "updated": "2026-08-31",
   "count": 59,
   "collectionCount": 284,
-  "soldCount": 2,
+  "soldCount": 3,
   "totalValue": 10262.93,
-  "soldValue": 4194.0,
+  "soldValue": 4319.0,
   "cards": [
     {
       "id": "318638286490",
@@ -1442,6 +1442,30 @@
         "Autograph",
         "Numbered",
         "Rookie"
+      ]
+    },
+    {
+      "id": "2026-topps-chrome-wwe-rhea-ripley-red-brand-auto-rba-rhe-ref",
+      "status": "sold",
+      "title": "2026 Topps Chrome WWE Rhea Ripley Red Brand Auto #RBA-RHE Refractor RAW",
+      "price": 125.0,
+      "hasValue": true,
+      "priceLabel": "$125.00",
+      "priceNote": "Sold Aug 2026",
+      "url": "",
+      "image": "https://i.ebayimg.com/images/g/Z1EAAeSwhKZqf51H/s-l1600.jpg",
+      "thumb": "https://i.ebayimg.com/images/g/Z1EAAeSwhKZqf51H/s-l960.jpg",
+      "imageBack": "",
+      "thumbBack": "",
+      "sku": "",
+      "note": "On-card autograph, Red Brand refractor. Authenticated and shipped to buyer.",
+      "category": "WWE",
+      "brand": "Topps Chrome",
+      "year": "2026",
+      "serial": null,
+      "tags": [
+        "Autograph",
+        "Refractor"
       ]
     },
     {
