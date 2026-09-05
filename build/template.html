@@ -439,6 +439,35 @@ main { padding: 34px 0 70px; }
 }
 .buy:hover { background: var(--gold); border-color: var(--gold); color: #081524; }
 
+/* ---------- LABOR DAY SALE (temporary — remove block + banner markup after 2026-09-12) ---------- */
+.sale-banner {
+  background: linear-gradient(90deg, var(--gold-dim), var(--gold) 50%, var(--gold-dim));
+  color: #081524;
+}
+.sale-banner .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 9px 20px;
+  text-align: center;
+  flex-wrap: wrap;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .01em;
+}
+.sale-banner strong { text-transform: uppercase; letter-spacing: .08em; font-size: 12px; }
+.sale-banner a { color: #081524; text-decoration: underline; font-weight: 700; white-space: nowrap; }
+.flag.sale {
+  bottom: auto;
+  top: 10px;
+  right: 10px;
+  border: 1px solid var(--gold);
+  color: #081524;
+  background: var(--gold);
+  font-weight: 700;
+}
+
 .empty {
   text-align: center;
   padding: 70px 20px;
@@ -682,6 +711,12 @@ footer.site {
 </head>
 <body>
 
+<!-- LABOR DAY SALE BANNER — temporary, remove this block after 2026-09-12 -->
+<div class="sale-banner">
+  <p class="wrap"><strong>Labor Day Sale</strong> — 15 cards marked down storewide, through Saturday, Sept 12 <a href="#inventory">Shop the sale &rarr;</a></p>
+</div>
+<!-- /LABOR DAY SALE BANNER -->
+
 <header class="site">
   <div class="wrap bar">
     <a class="brand" href="#top">
@@ -900,7 +935,7 @@ footer.site {
     }).join("");
 
     var alt = esc(card.title);
-    var flag = FLAG[card.status];
+    var flag = FLAG[card.status] || (card.onSale ? ["sale", "Sale"] : null);
     var priceClass = card.status === "collection" ? " est" : (card.status === "sold" ? " past" : "");
 
     el.innerHTML =

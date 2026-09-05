@@ -277,6 +277,11 @@ def read_listings():
             override = OVERRIDES.get((r.get("itemId") or "").strip(), "")
             price = float(r["price"])
             item_id = r["itemId"].strip()
+            # Optional column, only populated during a temporary storewide sale — see
+            # "wasPrice" in raw_listings.tsv. Blank/absent means the card isn't on sale.
+            was_raw = (r.get("wasPrice") or "").strip()
+            on_sale = bool(was_raw)
+            price_note = f"Labor Day Sale · was {money(float(was_raw))}" if on_sale else ""
             rows.append({
                 "id": item_id,
                 "status": "forsale",
@@ -284,7 +289,8 @@ def read_listings():
                 "price": price,
                 "hasValue": True,
                 "priceLabel": money(price),
-                "priceNote": "",
+                "priceNote": price_note,
+                "onSale": on_sale,
                 "url": f"https://www.ebay.com/itm/{item_id}",
                 "image": override or (f"https://i.ebayimg.com/images/g/{key}/s-l1600.jpg" if key else ""),
                 "thumb": override or (f"https://i.ebayimg.com/images/g/{key}/s-l960.jpg" if key else ""),
