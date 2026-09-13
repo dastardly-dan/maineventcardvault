@@ -336,13 +336,17 @@ def read_collection():
                 label = money(shown) if shown is not None else "Sold"
                 note = "Sold " + pretty_month(sold_date) if sold_date else "Sold"
             else:
-                # Collection cards carry NO public value. estValue / compDate stay in
-                # collection.tsv as private research input for the potential-value
-                # formula, but they must never reach listings.json or the page.
-                # Daniel, 2026-08-26.
-                shown = None
-                label = "Not for sale"
-                note = ""
+                # Collection cards show an estimated value when one is on file.
+                # Reinstated 2026-09-13, Daniel: public again, marked as an
+                # estimate (not a formal appraisal) via the * and the note below.
+                if est_val is not None:
+                    shown = est_val
+                    label = money(shown) + "*"
+                    note = "Est. value — Market Movers comps"
+                else:
+                    shown = None
+                    label = "Not for sale"
+                    note = ""
 
             image, thumb = photo_urls(r.get("photo"))
             back = back_photo(r.get("photo"))
@@ -417,7 +421,8 @@ def build():
         cats[c["category"]] = cats.get(c["category"], 0) + 1
     print(f"{len(for_sale)} for sale  ·  {money(data['totalValue'])}")
     if owned:
-        print(f"{len(owned)} in the collection  ·  no published value")
+        valued = sum(1 for c in owned if c["hasValue"])
+        print(f"{len(owned)} in the collection  ·  {valued} with a published estimate")
     if sold:
         print(f"{len(sold)} sold  ·  {money(data['soldValue'])}")
     print(f"{len(cards)} cards total")

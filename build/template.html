@@ -754,8 +754,9 @@ footer.site {
   <p class="hero-note" id="heroNote" hidden></p>
   <p class="dev-note"><b>Work in progress.</b> The collection is still being cataloged &mdash;
     card identifications and photos are being checked and may be inaccurate or incomplete.
-    Cards in the collection are not for sale and are listed without a value. Prices in the
-    eBay store are always the authoritative ones.</p>
+    Cards in the collection are not for sale. Values marked <b>*</b> are estimates based on
+    recent comparable sales via Market Movers, not formal appraisals. Prices in the eBay store
+    are always the authoritative ones for cards actually listed.</p>
   <a class="btn" href="#inventory">Browse the vault &darr;</a>
 </div>
 
@@ -950,14 +951,14 @@ footer.site {
         '<span class="card-cat">' + card.category + (card.serial ? " &middot; " + card.serial : "") + "</span>" +
         '<h3 class="card-title">' + esc(card.title) + "</h3>" +
         '<div class="card-foot">' +
-          // Collection cards publish no value, and the photo already carries a
-          // NOT FOR SALE badge — repeating it in the price slot is noise. The
-          // empty foot is where the potential-value rating will go.
-          (card.status === "collection" ? "" :
-            '<span class="price-wrap">' +
-              '<span class="price' + priceClass + '">' + card.priceLabel + "</span>" +
-              (card.priceNote ? '<span class="price-note">' + esc(card.priceNote) + "</span>" : "") +
-            "</span>") +
+          // Collection cards show an estimated value (marked with * — see the
+          // dev-note above the grid) when one is on file; otherwise "Not for
+          // sale", same as before. The photo still carries the NOT FOR SALE
+          // badge either way, since these are never buyable regardless of value.
+          '<span class="price-wrap">' +
+            '<span class="price' + priceClass + '">' + card.priceLabel + "</span>" +
+            (card.priceNote ? '<span class="price-note">' + esc(card.priceNote) + "</span>" : "") +
+          "</span>" +
           (card.url
             ? '<a class="buy" href="' + card.url + '" target="_blank" rel="noopener">View on eBay &rarr;</a>'
             : "") +
@@ -1230,7 +1231,7 @@ footer.site {
       note.textContent =
         owned.length + (owned.length === 1 ? " card is" : " cards are") +
         " in the personal collection — shown here for reference, not for sale. " +
-        "These are cataloged without a value.";
+        "Values marked * are estimates based on Market Movers comps, not formal appraisals.";
     }
     var upd = $("#updated");
     if (upd && DATA.updated) {
