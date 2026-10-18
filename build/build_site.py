@@ -398,7 +398,7 @@ def build():
             "facebook": "https://www.facebook.com/profile.php?id=61593632960504",
             "instagram": "https://www.instagram.com/main.eventcards/",
             "location": "Strasburg, Virginia",
-            "shipping": "$5.99 flat, USPS Ground Advantage — $0.30 each additional card",
+            "shipping": "$5.00 flat on every card, USPS Ground Advantage, tracked",
         },
         "updated": date.today().isoformat(),
         "count": len(for_sale),
