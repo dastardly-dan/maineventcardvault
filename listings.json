@@ -6,15 +6,39 @@
     "facebook": "https://www.facebook.com/profile.php?id=61593632960504",
     "instagram": "https://www.instagram.com/main.eventcards/",
     "location": "Strasburg, Virginia",
-    "shipping": "$5.99 flat, USPS Ground Advantage \u2014 $0.30 each additional card"
+    "shipping": "$5.00 flat on every card, USPS Ground Advantage, tracked"
   },
-  "updated": "2026-09-13",
-  "count": 57,
+  "updated": "2026-10-18",
+  "count": 52,
   "collectionCount": 396,
-  "soldCount": 8,
-  "totalValue": 7880.07,
-  "soldValue": 4893.49,
+  "soldCount": 14,
+  "totalValue": 15106.69,
+  "soldValue": 5320.97,
   "cards": [
+    {
+      "id": "318899943909",
+      "status": "forsale",
+      "title": "Triple Autograph Base Parallel - Jey Uso, Jimmy Uso and Roman Reigns",
+      "price": 8365.0,
+      "hasValue": true,
+      "priceLabel": "$8,365.00",
+      "priceNote": "",
+      "onSale": false,
+      "url": "https://www.ebay.com/itm/318899943909",
+      "image": "https://i.ebayimg.com/images/g/xfgAAeSwr9JqsUq-/s-l1600.jpg",
+      "thumb": "https://i.ebayimg.com/images/g/xfgAAeSwr9JqsUq-/s-l960.jpg",
+      "imageBack": "",
+      "thumbBack": "",
+      "sku": "",
+      "note": "",
+      "category": "WWE",
+      "brand": "Other",
+      "year": null,
+      "serial": null,
+      "tags": [
+        "Autograph"
+      ]
+    },
     {
       "id": "318638286490",
       "status": "forsale",
@@ -171,9 +195,9 @@
       "id": "318731374308",
       "status": "forsale",
       "title": "2026 Topps Chrome WWE Liv Morgan 1986 Topps Auto #86T-LM Refractor RAW",
-      "price": 310.0,
+      "price": 260.0,
       "hasValue": true,
-      "priceLabel": "$310.00",
+      "priceLabel": "$260.00",
       "priceNote": "",
       "onSale": false,
       "url": "https://www.ebay.com/itm/318731374308",
@@ -196,9 +220,9 @@
       "id": "318731377273",
       "status": "forsale",
       "title": "2026 Topps NOW Road to Opening Day Ronald Acuna Jr Auto #A-RAC 07/10 Braves",
-      "price": 275.0,
+      "price": 190.0,
       "hasValue": true,
-      "priceLabel": "$275.00",
+      "priceLabel": "$190.00",
       "priceNote": "",
       "onSale": false,
       "url": "https://www.ebay.com/itm/318731377273",
@@ -221,9 +245,9 @@
       "id": "318767403634",
       "status": "forsale",
       "title": "2025 Panini Prizm Travis Bazzana Color Blast #4 RC Rookie SSP Case Hit Guardians",
-      "price": 250.0,
+      "price": 180.0,
       "hasValue": true,
-      "priceLabel": "$250.00",
+      "priceLabel": "$180.00",
       "priceNote": "",
       "onSale": false,
       "url": "https://www.ebay.com/itm/318767403634",
@@ -240,104 +264,6 @@
       "tags": [
         "Rookie",
         "SSP"
-      ]
-    },
-    {
-      "id": "318731525182",
-      "status": "forsale",
-      "title": "2026 Topps Chrome WWE Damian Priest Garbage Pail Kids #GPK-DP Refractor SSP",
-      "price": 200.0,
-      "hasValue": true,
-      "priceLabel": "$200.00",
-      "priceNote": "",
-      "onSale": false,
-      "url": "https://www.ebay.com/itm/318731525182",
-      "image": "assets/cards/Damaged-Damian_GPK-DP_front.jpg",
-      "thumb": "assets/cards/Damaged-Damian_GPK-DP_front.jpg",
-      "imageBack": "assets/cards/Damaged-Damian_GPK-DP_back.jpg",
-      "thumbBack": "assets/cards/Damaged-Damian_GPK-DP_back.jpg",
-      "sku": "",
-      "note": "",
-      "category": "WWE",
-      "brand": "Topps Chrome",
-      "year": "2026",
-      "serial": null,
-      "tags": [
-        "SSP",
-        "Refractor"
-      ]
-    },
-    {
-      "id": "318801692852",
-      "status": "forsale",
-      "title": "Marvel X-Men 4 Card Lot Wolverine Nightcrawler Hulk Magik Topps Chrome",
-      "price": 189.0,
-      "hasValue": true,
-      "priceLabel": "$189.00",
-      "priceNote": "",
-      "onSale": false,
-      "url": "https://www.ebay.com/itm/318801692852",
-      "image": "https://i.ebayimg.com/images/g/LXsAAeSwkAlqhlP9/s-l1600.jpg",
-      "thumb": "https://i.ebayimg.com/images/g/LXsAAeSwkAlqhlP9/s-l960.jpg",
-      "imageBack": "",
-      "thumbBack": "",
-      "sku": "",
-      "note": "",
-      "category": "Marvel",
-      "brand": "Topps Chrome",
-      "year": null,
-      "serial": null,
-      "tags": []
-    },
-    {
-      "id": "318726593162",
-      "status": "forsale",
-      "title": "2026 Topps Resurgence Xavier Worthy Auto #48 14/25 Kansas City Chiefs",
-      "price": 179.0,
-      "hasValue": true,
-      "priceLabel": "$179.00",
-      "priceNote": "",
-      "onSale": false,
-      "url": "https://www.ebay.com/itm/318726593162",
-      "image": "https://i.ebayimg.com/images/g/IhMAAeSwBCJqfmFJ/s-l1600.jpg",
-      "thumb": "https://i.ebayimg.com/images/g/IhMAAeSwBCJqfmFJ/s-l960.jpg",
-      "imageBack": "",
-      "thumbBack": "",
-      "sku": "",
-      "note": "",
-      "category": "Football",
-      "brand": "Topps Resurgence",
-      "year": "2026",
-      "serial": "/25",
-      "tags": [
-        "Autograph",
-        "Numbered"
-      ]
-    },
-    {
-      "id": "318767426228",
-      "status": "forsale",
-      "title": "2026 Topps Chrome WWE Talla Tonga Rookie Auto Cracked Ice 6/10 #BCA-TTA",
-      "price": 169.0,
-      "hasValue": true,
-      "priceLabel": "$169.00",
-      "priceNote": "",
-      "onSale": false,
-      "url": "https://www.ebay.com/itm/318767426228",
-      "image": "https://i.ebayimg.com/images/g/~k4AAeSwtFxqigk8/s-l1600.jpg",
-      "thumb": "https://i.ebayimg.com/images/g/~k4AAeSwtFxqigk8/s-l960.jpg",
-      "imageBack": "",
-      "thumbBack": "",
-      "sku": "",
-      "note": "",
-      "category": "WWE",
-      "brand": "Topps Chrome",
-      "year": "2026",
-      "serial": "/10",
-      "tags": [
-        "Autograph",
-        "Numbered",
-        "Rookie"
       ]
     },
     {
@@ -366,55 +292,6 @@
       ]
     },
     {
-      "id": "318731119307",
-      "status": "forsale",
-      "title": "2026 Topps Chrome WWE Giulia Blue Brand Auto #BBA-GIU 004/150 SmackDown",
-      "price": 132.3,
-      "hasValue": true,
-      "priceLabel": "$132.30",
-      "priceNote": "",
-      "onSale": false,
-      "url": "https://www.ebay.com/itm/318731119307",
-      "image": "assets/cards/Giulia_BBA-GIU_front.jpg",
-      "thumb": "assets/cards/Giulia_BBA-GIU_front.jpg",
-      "imageBack": "assets/cards/Giulia_BBA-GIU_back.jpg",
-      "thumbBack": "assets/cards/Giulia_BBA-GIU_back.jpg",
-      "sku": "",
-      "note": "",
-      "category": "WWE",
-      "brand": "Topps Chrome",
-      "year": "2026",
-      "serial": "/150",
-      "tags": [
-        "Autograph",
-        "Numbered"
-      ]
-    },
-    {
-      "id": "318731097217",
-      "status": "forsale",
-      "title": "2026 Topps Chrome WWE Stephanie Vaquer Red Brand Auto #RBA-STE RAW",
-      "price": 125.3,
-      "hasValue": true,
-      "priceLabel": "$125.30",
-      "priceNote": "",
-      "onSale": false,
-      "url": "https://www.ebay.com/itm/318731097217",
-      "image": "assets/cards/Stephanie-Vaquer_RBA-STE_front.jpg",
-      "thumb": "assets/cards/Stephanie-Vaquer_RBA-STE_front.jpg",
-      "imageBack": "assets/cards/Stephanie-Vaquer_RBA-STE_back.jpg",
-      "thumbBack": "assets/cards/Stephanie-Vaquer_RBA-STE_back.jpg",
-      "sku": "",
-      "note": "",
-      "category": "WWE",
-      "brand": "Topps Chrome",
-      "year": "2026",
-      "serial": null,
-      "tags": [
-        "Autograph"
-      ]
-    },
-    {
       "id": "318731526728",
       "status": "forsale",
       "title": "2026 Topps Chrome WWE Jacob Fatu Gamut #GAM-10 SSP Case Hit SmackDown",
@@ -436,30 +313,6 @@
       "serial": null,
       "tags": [
         "SSP"
-      ]
-    },
-    {
-      "id": "318731072754",
-      "status": "forsale",
-      "title": "2026 Topps Chrome WWE Tiffany Stratton Blue Brand Auto #BBA-TIF SmackDown",
-      "price": 111.3,
-      "hasValue": true,
-      "priceLabel": "$111.30",
-      "priceNote": "",
-      "onSale": false,
-      "url": "https://www.ebay.com/itm/318731072754",
-      "image": "assets/cards/Tiffany-Stratton_BBA-TIF_front.jpg",
-      "thumb": "assets/cards/Tiffany-Stratton_BBA-TIF_front.jpg",
-      "imageBack": "assets/cards/Tiffany-Stratton_BBA-TIF_back.jpg",
-      "thumbBack": "assets/cards/Tiffany-Stratton_BBA-TIF_back.jpg",
-      "sku": "",
-      "note": "",
-      "category": "WWE",
-      "brand": "Topps Chrome",
-      "year": "2026",
-      "serial": null,
-      "tags": [
-        "Autograph"
       ]
     },
     {
@@ -537,28 +390,52 @@
       ]
     },
     {
-      "id": "318703899081",
+      "id": "318726593162",
       "status": "forsale",
-      "title": "Damien priest 1989 superstar auto /5",
+      "title": "2026 Topps Resurgence Xavier Worthy Auto #48 14/25 Kansas City Chiefs",
       "price": 100.0,
       "hasValue": true,
       "priceLabel": "$100.00",
       "priceNote": "",
       "onSale": false,
-      "url": "https://www.ebay.com/itm/318703899081",
-      "image": "https://i.ebayimg.com/images/g/yRQAAeSw3Bxqd7Ub/s-l1600.jpg",
-      "thumb": "https://i.ebayimg.com/images/g/yRQAAeSw3Bxqd7Ub/s-l960.jpg",
+      "url": "https://www.ebay.com/itm/318726593162",
+      "image": "https://i.ebayimg.com/images/g/IhMAAeSwBCJqfmFJ/s-l1600.jpg",
+      "thumb": "https://i.ebayimg.com/images/g/IhMAAeSwBCJqfmFJ/s-l960.jpg",
       "imageBack": "",
       "thumbBack": "",
       "sku": "",
       "note": "",
-      "category": "WWE",
-      "brand": "Other",
-      "year": null,
-      "serial": "/5",
+      "category": "Football",
+      "brand": "Topps Resurgence",
+      "year": "2026",
+      "serial": "/25",
       "tags": [
         "Autograph",
         "Numbered"
+      ]
+    },
+    {
+      "id": "318731097217",
+      "status": "forsale",
+      "title": "2026 Topps Chrome WWE Stephanie Vaquer Red Brand Auto #RBA-STE RAW",
+      "price": 100.0,
+      "hasValue": true,
+      "priceLabel": "$100.00",
+      "priceNote": "",
+      "onSale": false,
+      "url": "https://www.ebay.com/itm/318731097217",
+      "image": "assets/cards/Stephanie-Vaquer_RBA-STE_front.jpg",
+      "thumb": "assets/cards/Stephanie-Vaquer_RBA-STE_front.jpg",
+      "imageBack": "assets/cards/Stephanie-Vaquer_RBA-STE_back.jpg",
+      "thumbBack": "assets/cards/Stephanie-Vaquer_RBA-STE_back.jpg",
+      "sku": "",
+      "note": "",
+      "category": "WWE",
+      "brand": "Topps Chrome",
+      "year": "2026",
+      "serial": null,
+      "tags": [
+        "Autograph"
       ]
     },
     {
@@ -609,6 +486,30 @@
         "Rookie",
         "SSP",
         "Refractor"
+      ]
+    },
+    {
+      "id": "318731072754",
+      "status": "forsale",
+      "title": "2026 Topps Chrome WWE Tiffany Stratton Blue Brand Auto #BBA-TIF SmackDown",
+      "price": 89.0,
+      "hasValue": true,
+      "priceLabel": "$89.00",
+      "priceNote": "",
+      "onSale": false,
+      "url": "https://www.ebay.com/itm/318731072754",
+      "image": "assets/cards/Tiffany-Stratton_BBA-TIF_front.jpg",
+      "thumb": "assets/cards/Tiffany-Stratton_BBA-TIF_front.jpg",
+      "imageBack": "assets/cards/Tiffany-Stratton_BBA-TIF_back.jpg",
+      "thumbBack": "assets/cards/Tiffany-Stratton_BBA-TIF_back.jpg",
+      "sku": "",
+      "note": "",
+      "category": "WWE",
+      "brand": "Topps Chrome",
+      "year": "2026",
+      "serial": null,
+      "tags": [
+        "Autograph"
       ]
     },
     {
@@ -713,6 +614,32 @@
       ]
     },
     {
+      "id": "318767426228",
+      "status": "forsale",
+      "title": "2026 Topps Chrome WWE Talla Tonga Rookie Auto Cracked Ice 6/10 #BCA-TTA",
+      "price": 60.0,
+      "hasValue": true,
+      "priceLabel": "$60.00",
+      "priceNote": "",
+      "onSale": false,
+      "url": "https://www.ebay.com/itm/318767426228",
+      "image": "https://i.ebayimg.com/images/g/~k4AAeSwtFxqigk8/s-l1600.jpg",
+      "thumb": "https://i.ebayimg.com/images/g/~k4AAeSwtFxqigk8/s-l960.jpg",
+      "imageBack": "",
+      "thumbBack": "",
+      "sku": "",
+      "note": "",
+      "category": "WWE",
+      "brand": "Topps Chrome",
+      "year": "2026",
+      "serial": "/10",
+      "tags": [
+        "Autograph",
+        "Numbered",
+        "Rookie"
+      ]
+    },
+    {
       "id": "318767404292",
       "status": "forsale",
       "title": "2025 Topps UFC Finest Khamzat Chimaev Blinding Lights #BL-14 SSP Case Hit",
@@ -758,31 +685,6 @@
       "serial": null,
       "tags": [
         "SSP"
-      ]
-    },
-    {
-      "id": "318767410093",
-      "status": "forsale",
-      "title": "2026 Topps Chrome Marvel US Agent #182 Gold Refractor 44/50 Fanfare",
-      "price": 49.0,
-      "hasValue": true,
-      "priceLabel": "$49.00",
-      "priceNote": "",
-      "onSale": false,
-      "url": "https://www.ebay.com/itm/318767410093",
-      "image": "https://i.ebayimg.com/images/g/PqoAAeSww99qih0b/s-l1600.jpg",
-      "thumb": "https://i.ebayimg.com/images/g/PqoAAeSww99qih0b/s-l960.jpg",
-      "imageBack": "",
-      "thumbBack": "",
-      "sku": "",
-      "note": "",
-      "category": "Marvel",
-      "brand": "Topps Chrome",
-      "year": "2026",
-      "serial": "/50",
-      "tags": [
-        "Numbered",
-        "Refractor"
       ]
     },
     {
@@ -931,31 +833,6 @@
       "tags": []
     },
     {
-      "id": "318767402091",
-      "status": "forsale",
-      "title": "2026 Topps Chrome Adrian Gonzalez 75th Diamond Auto Orange Refractor SP #75D-AG",
-      "price": 38.49,
-      "hasValue": true,
-      "priceLabel": "$38.49",
-      "priceNote": "",
-      "onSale": false,
-      "url": "https://www.ebay.com/itm/318767402091",
-      "image": "https://i.ebayimg.com/images/g/PNIAAeSw8rhqihMQ/s-l1600.jpg",
-      "thumb": "https://i.ebayimg.com/images/g/PNIAAeSw8rhqihMQ/s-l960.jpg",
-      "imageBack": "",
-      "thumbBack": "",
-      "sku": "",
-      "note": "",
-      "category": "Baseball",
-      "brand": "Topps Chrome",
-      "year": "2026",
-      "serial": null,
-      "tags": [
-        "Autograph",
-        "Refractor"
-      ]
-    },
-    {
       "id": "318731526426",
       "status": "forsale",
       "title": "2026 Topps Cosmic Chrome WWE IRS Autograph #CCA-IRS Legends Auto",
@@ -1028,6 +905,28 @@
       ]
     },
     {
+      "id": "318801692852",
+      "status": "forsale",
+      "title": "Marvel X-Men 4 Card Lot Wolverine Nightcrawler Hulk Magik Topps Chrome",
+      "price": 31.0,
+      "hasValue": true,
+      "priceLabel": "$31.00",
+      "priceNote": "",
+      "onSale": false,
+      "url": "https://www.ebay.com/itm/318801692852",
+      "image": "https://i.ebayimg.com/images/g/LXsAAeSwkAlqhlP9/s-l1600.jpg",
+      "thumb": "https://i.ebayimg.com/images/g/LXsAAeSwkAlqhlP9/s-l960.jpg",
+      "imageBack": "",
+      "thumbBack": "",
+      "sku": "",
+      "note": "",
+      "category": "Marvel",
+      "brand": "Topps Chrome",
+      "year": null,
+      "serial": null,
+      "tags": []
+    },
+    {
       "id": "318731065243",
       "status": "forsale",
       "title": "2026 Topps Cosmic Chrome WWE Seth Rollins Planetary Pursuit Sun #PPS-3 RAW",
@@ -1095,31 +994,6 @@
       "year": "2026",
       "serial": null,
       "tags": []
-    },
-    {
-      "id": "318801589345",
-      "status": "forsale",
-      "title": "2026 UD Fleer Hot Prospects Daniil But #HPADB NSCC RC Auto Utah Mammoth",
-      "price": 19.99,
-      "hasValue": true,
-      "priceLabel": "$19.99",
-      "priceNote": "",
-      "onSale": false,
-      "url": "https://www.ebay.com/itm/318801589345",
-      "image": "https://i.ebayimg.com/images/g/8y8AAeSwislqlJdF/s-l1600.jpg",
-      "thumb": "https://i.ebayimg.com/images/g/8y8AAeSwislqlJdF/s-l960.jpg",
-      "imageBack": "",
-      "thumbBack": "",
-      "sku": "",
-      "note": "",
-      "category": "Hockey",
-      "brand": "Other",
-      "year": "2026",
-      "serial": null,
-      "tags": [
-        "Autograph",
-        "Rookie"
-      ]
     },
     {
       "id": "318767398046",
@@ -1502,6 +1376,30 @@
       ]
     },
     {
+      "id": "2026-topps-chrome-wwe-damian-priest-garbage-pail-kids-gpk-dp",
+      "status": "sold",
+      "title": "2026 Topps Chrome WWE Damian Priest Garbage Pail Kids #GPK-DP Refractor SSP",
+      "price": 150.0,
+      "hasValue": true,
+      "priceLabel": "$150.00",
+      "priceNote": "Sold Oct 2026",
+      "url": "",
+      "image": "https://i.ebayimg.com/images/g/j4MAAeSwCz5qf6ms/s-l1600.jpg",
+      "thumb": "https://i.ebayimg.com/images/g/j4MAAeSwCz5qf6ms/s-l960.jpg",
+      "imageBack": "",
+      "thumbBack": "",
+      "sku": "",
+      "note": "Garbage Pail Kids refractor, SSP.",
+      "category": "WWE",
+      "brand": "Topps Chrome",
+      "year": "2026",
+      "serial": null,
+      "tags": [
+        "SSP",
+        "Refractor"
+      ]
+    },
+    {
       "id": "2026-topps-cosmic-chrome-wwe-joe-hendry-planetary-pursuit-ur",
       "status": "sold",
       "title": "2026 Topps Cosmic Chrome WWE Joe Hendry Planetary Pursuit Uranus RC Rookie NXT",
@@ -1620,6 +1518,30 @@
       ]
     },
     {
+      "id": "damien-priest-1989-superstar-auto-5",
+      "status": "sold",
+      "title": "Damien Priest 1989 Superstar Auto /5",
+      "price": 100.0,
+      "hasValue": true,
+      "priceLabel": "$100.00",
+      "priceNote": "Sold Oct 2026",
+      "url": "",
+      "image": "https://i.ebayimg.com/images/g/yRQAAeSw3Bxqd7Ub/s-l1600.jpg",
+      "thumb": "https://i.ebayimg.com/images/g/yRQAAeSw3Bxqd7Ub/s-l960.jpg",
+      "imageBack": "",
+      "thumbBack": "",
+      "sku": "",
+      "note": "Numbered /5 autograph.",
+      "category": "WWE",
+      "brand": "Other",
+      "year": null,
+      "serial": "/5",
+      "tags": [
+        "Autograph",
+        "Numbered"
+      ]
+    },
+    {
       "id": "2026-leaf-vivid-don-mattingly-neon-auto-na-dm1-4-5-hit-man-i",
       "status": "collection",
       "title": "2026 Leaf Vivid Don Mattingly Neon Auto #NA-DM1 4/5 Hit Man Inscribed",
@@ -1712,6 +1634,54 @@
       "tags": [
         "Autograph",
         "Numbered"
+      ]
+    },
+    {
+      "id": "2026-topps-chrome-wwe-giulia-blue-brand-auto-bba-giu-004-150",
+      "status": "sold",
+      "title": "2026 Topps Chrome WWE Giulia Blue Brand Auto #BBA-GIU 004/150 SmackDown",
+      "price": 70.0,
+      "hasValue": true,
+      "priceLabel": "$70.00",
+      "priceNote": "Sold Oct 2026",
+      "url": "",
+      "image": "https://i.ebayimg.com/images/g/4H4AAeSwA9Fqf4g3/s-l1600.jpg",
+      "thumb": "https://i.ebayimg.com/images/g/4H4AAeSwA9Fqf4g3/s-l960.jpg",
+      "imageBack": "",
+      "thumbBack": "",
+      "sku": "",
+      "note": "Blue Brand auto numbered 004/150.",
+      "category": "WWE",
+      "brand": "Topps Chrome",
+      "year": "2026",
+      "serial": "/150",
+      "tags": [
+        "Autograph",
+        "Numbered"
+      ]
+    },
+    {
+      "id": "2026-topps-chrome-marvel-us-agent-182-gold-refractor-44-50-f",
+      "status": "sold",
+      "title": "2026 Topps Chrome Marvel US Agent #182 Gold Refractor 44/50 Fanfare",
+      "price": 49.0,
+      "hasValue": true,
+      "priceLabel": "$49.00",
+      "priceNote": "Sold Oct 2026",
+      "url": "",
+      "image": "https://i.ebayimg.com/images/g/PqoAAeSww99qih0b/s-l1600.jpg",
+      "thumb": "https://i.ebayimg.com/images/g/PqoAAeSww99qih0b/s-l960.jpg",
+      "imageBack": "",
+      "thumbBack": "",
+      "sku": "",
+      "note": "Gold refractor numbered 44/50.",
+      "category": "Marvel",
+      "brand": "Topps Chrome",
+      "year": "2026",
+      "serial": "/50",
+      "tags": [
+        "Numbered",
+        "Refractor"
       ]
     },
     {
@@ -1826,6 +1796,30 @@
       "tags": [
         "Numbered",
         "Relic"
+      ]
+    },
+    {
+      "id": "2026-topps-chrome-adrian-gonzalez-75th-diamond-auto-orange-r",
+      "status": "sold",
+      "title": "2026 Topps Chrome Adrian Gonzalez 75th Diamond Auto Orange Refractor SP #75D-AG",
+      "price": 38.49,
+      "hasValue": true,
+      "priceLabel": "$38.49",
+      "priceNote": "Sold Oct 2026",
+      "url": "",
+      "image": "https://i.ebayimg.com/images/g/PNIAAeSw8rhqihMQ/s-l1600.jpg",
+      "thumb": "https://i.ebayimg.com/images/g/PNIAAeSw8rhqihMQ/s-l960.jpg",
+      "imageBack": "",
+      "thumbBack": "",
+      "sku": "",
+      "note": "Orange refractor on-card auto.",
+      "category": "Baseball",
+      "brand": "Topps Chrome",
+      "year": "2026",
+      "serial": null,
+      "tags": [
+        "Autograph",
+        "Refractor"
       ]
     },
     {
@@ -2078,6 +2072,30 @@
       "serial": "/10",
       "tags": [
         "Numbered"
+      ]
+    },
+    {
+      "id": "2026-ud-fleer-hot-prospects-daniil-but-hpadb-nscc-rc-auto-ut",
+      "status": "sold",
+      "title": "2026 UD Fleer Hot Prospects Daniil But #HPADB NSCC RC Auto Utah Mammoth",
+      "price": 19.99,
+      "hasValue": true,
+      "priceLabel": "$19.99",
+      "priceNote": "Sold Sep 2026",
+      "url": "",
+      "image": "https://i.ebayimg.com/images/g/8y8AAeSwislqlJdF/s-l1600.jpg",
+      "thumb": "https://i.ebayimg.com/images/g/8y8AAeSwislqlJdF/s-l960.jpg",
+      "imageBack": "",
+      "thumbBack": "",
+      "sku": "",
+      "note": "Hot Prospects NSCC rookie auto.",
+      "category": "Hockey",
+      "brand": "Other",
+      "year": "2026",
+      "serial": null,
+      "tags": [
+        "Autograph",
+        "Rookie"
       ]
     },
     {
