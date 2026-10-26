@@ -103,6 +103,11 @@ BASEBALL_WORDS = [
     "chipper jones", "prospects shortstops", "corbin carroll", "nolan arenado",
     "ezequiel tovar", "masyn winn", "kodai senga", "nolan mclean",
     "bubba chandler",
+    # added 2026-10-26 with the CDP Box 1 baseball listings (titles carry set, not team)
+    "topps update", "bowman chrome", "finest flashbacks", "topps heritage",
+    "1991 topps baseball", "chrome platinum", "logofractor", "sapphire edition",
+    "topps inception", "2026 finest #", "2026 panini prizm #", "2026 topps chrome #",
+    "topps chrome black", "2026 topps #",
 ]
 
 # Non-Marvel comics, combat sports and soccer arrived with the 2026-08-21 batch.
@@ -116,6 +121,9 @@ SOCCER_WORDS = [
     "neymar", "nottingham", "club leon", "lewandowski", "fermin lopez",
     "valverde", "mastantuono", "igor jesus",
 ]
+# Pokemon and Disney arrived with the 2026-10-26 refresh.
+POKEMON_WORDS = ["pokemon", "30th celebration"]
+DISNEY_WORDS = ["disney"]
 # Star Wars and hockey arrived with the 2026-08-25 batch.
 STAR_WARS_WORDS = ["star wars", "kylo ren", "masterwork"]
 HOCKEY_WORDS = ["nhl", "utah mammoth", "hot prospects", "daniil but"]
@@ -124,6 +132,8 @@ CATEGORY_RULES = [
     ("Marvel", MARVEL_WORDS),
     ("DC", DC_WORDS),
     ("Star Wars", STAR_WARS_WORDS),
+    ("Disney", DISNEY_WORDS),
+    ("Pokemon", POKEMON_WORDS),
     ("UFC", UFC_WORDS),
     ("WWE", WWE_WORDS),
     ("Basketball", BASKETBALL_WORDS),
@@ -398,7 +408,7 @@ def build():
             "facebook": "https://www.facebook.com/profile.php?id=61593632960504",
             "instagram": "https://www.instagram.com/main.eventcards/",
             "location": "Strasburg, Virginia",
-            "shipping": "$5.00 flat on every card, USPS Ground Advantage, tracked",
+            "shipping": "$1.99 on cards $20 and under, by eBay Standard Envelope (+$0.30 each extra card). $5.99 on cards over $20, USPS Ground Advantage, tracked — also offered as an upgrade at checkout on any card.",
         },
         "updated": date.today().isoformat(),
         "count": len(for_sale),
