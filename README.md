@@ -11,6 +11,7 @@ Hosted on Cloudflare (Worker `maineventcardvault`), auto-deploys on every push t
   **This is the file to edit when changing how the site looks or behaves.**
 - `build/raw_listings.tsv` — live active eBay listings.
 - `build/collection.tsv` — cards not currently listed: owned-not-for-sale, and sold.
+- `build/cdp_vault.tsv` — unlisted cards scanned in Card Dealer Pro; shown in the Collection with the CDP scan as the photo.
 - `build/build_site.py` — the two TSVs + the template in, `index.html` + `listings.json` out.
 
 Never hand-edit `index.html`. Edit the template or a TSV and rebuild:
@@ -69,6 +70,17 @@ run on a row with the wrong count** rather than producing a card labelled "Sold 
 | `soldDate` | `YYYY-MM-DD`. Rendered as "Sold Aug 2026". |
 | `sku` | Optional. Used as the card's id when present. |
 | `notes` | Optional. Shows in the lightbox. |
+
+### Card Dealer Pro vault (`build/cdp_vault.tsv`)
+
+Everything in Card Dealer Pro that is *not* listed on eBay lands in the Collection from this
+file, so the site mirrors the vault without hand-entering 500+ rows. Six columns: `cardId`,
+`batchId`, `price`, `sku`, `tag`, `title`. `price` is the CDP list price, shown with a `*`
+(estimate); `tag` is the CDP category tag and overrides keyword matching; the photo is the CDP
+front scan, built as `https://storage.googleapis.com/cdp-batches-prod/74399-<batchId>/<cardId>-front-md.jpg`
+and hotlinked (nothing is stored in this repo). To refresh: export the unlisted cards from CDP
+(`/api/v2/inventory/59432`, minus anything already on eBay or sold), rewrite the file, rebuild.
+When a vault card gets listed on eBay, drop its row from here and add it to `raw_listings.tsv`.
 
 On the site these appear in the same grid as the store inventory, with a **Not for sale**
 or **Sold** badge and no buy button. The `Show` chips switch between For sale / Collection /
