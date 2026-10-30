@@ -5,6 +5,8 @@ Main Event Card Vault — site builder.
 Inputs
   build/raw_listings.tsv   live active eBay listings (see README for the scrape)
   build/collection.tsv     cards NOT listed on eBay — owned-but-not-for-sale, and sold
+  build/cdp_vault.tsv      unlisted cards scanned in Card Dealer Pro — shown in the Collection,
+                           photo hotlinked from CDP's scan bucket (see read_cdp_vault)
   build/template.html      the page shell, with a __MECV_DATA__ placeholder
 
 Outputs
@@ -24,6 +26,9 @@ ROOT = Path(__file__).resolve().parent.parent
 RAW = ROOT / "build" / "raw_listings.tsv"
 COLLECTION = ROOT / "build" / "collection.tsv"
 LISTING_PHOTOS = ROOT / "build" / "listing_photos.tsv"
+CDP_VAULT = ROOT / "build" / "cdp_vault.tsv"
+# Card Dealer Pro stores each scan in a public bucket; -md is the 448x600 rendition.
+CDP_IMG = "https://storage.googleapis.com/cdp-batches-prod/74399-{batch}/{card}-front-md.jpg"
 TEMPLATE = ROOT / "build" / "template.html"
 OUT_HTML = ROOT / "index.html"
 OUT_JSON = ROOT / "listings.json"
@@ -380,9 +385,55 @@ def read_collection():
     return rows
 
 
+def read_cdp_vault():
+    """
+    Unlisted cards in Card Dealer Pro -> Collection cards (never buyable).
+
+    cdp_vault.tsv columns: cardId, batchId, price, sku, tag, title. `tag` is the CDP
+    category tag (WWE, Baseball, ...) and wins over keyword matching on the title.
+    `price` is the CDP list price, shown as an estimate (marked *), not a sale price.
+    The photo is the CDP front scan, hotlinked — no image files are stored in this repo.
+    """
+    rows = []
+    if not CDP_VAULT.exists():
+        return rows
+    with CDP_VAULT.open(newline="", encoding="utf-8") as fh:
+        reader = csv.DictReader(fh, delimiter="\t", quoting=csv.QUOTE_NONE)
+        for lineno, r in enumerate(reader, start=2):
+            if None in r or any(v is None for v in r.values()):
+                raise SystemExit(
+                    f"cdp_vault.tsv line {lineno}: expected {len(reader.fieldnames)} "
+                    f"tab-separated columns — check for a missing or extra tab."
+                )
+            title = (r.get("title") or "").strip()
+            if not title:
+                continue
+            card_id = r["cardId"].strip()
+            price = float(r["price"])
+            img = CDP_IMG.format(batch=r["batchId"].strip(), card=card_id)
+            rows.append({
+                "id": "cdp-" + card_id,
+                "status": "collection",
+                "title": title,
+                "price": price,
+                "hasValue": True,
+                "priceLabel": money(price) + "*",
+                "priceNote": "Est. value — Card Dealer Pro pricing",
+                "url": "",
+                "image": img,
+                "thumb": img,
+                "imageBack": "",
+                "thumbBack": "",
+                "sku": (r.get("sku") or "").strip(),
+                "note": "",
+                "_category": (r.get("tag") or "").strip(),
+            })
+    return rows
+
+
 def enrich(card):
     title = card["title"]
-    card["category"] = categorize(title)
+    card["category"] = card.pop("_category", "") or categorize(title)
     card["brand"] = brand_of(title)
     card["year"] = year_of(title)
     card["serial"] = serial_of(title)
@@ -391,7 +442,7 @@ def enrich(card):
 
 
 def build():
-    cards = [enrich(c) for c in read_listings() + read_collection()]
+    cards = [enrich(c) for c in read_listings() + read_collection() + read_cdp_vault()]
     cards.sort(key=lambda c: (0 if c["status"] == "forsale" else 1,
                              0 if c["hasValue"] else 1,
                              -c["price"]))

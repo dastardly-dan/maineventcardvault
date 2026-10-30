@@ -729,8 +729,9 @@ footer.site {
   <p class="hero-note" id="heroNote" hidden></p>
   <p class="dev-note"><b>Work in progress.</b> The collection is still being cataloged &mdash;
     card identifications and photos are being checked and may be inaccurate or incomplete.
-    Cards in the collection are not for sale. Values marked <b>*</b> are estimates based on
-    recent comparable sales via Market Movers, not formal appraisals. Prices in the eBay store
+    Cards in the collection are not for sale. Values marked <b>*</b> are estimates, not formal appraisals &mdash;
+    recent comparable sales via Market Movers for the older collection cards, Card Dealer Pro
+    pricing for the newly scanned ones. Prices in the eBay store
     are always the authoritative ones for cards actually listed.</p>
   <a class="btn" href="#inventory">Browse the vault &darr;</a>
 </div>
@@ -1206,7 +1207,7 @@ footer.site {
       note.textContent =
         owned.length + (owned.length === 1 ? " card is" : " cards are") +
         " in the personal collection — shown here for reference, not for sale. " +
-        "Values marked * are estimates based on Market Movers comps, not formal appraisals.";
+        "Values marked * are estimates (Market Movers comps or Card Dealer Pro pricing), not formal appraisals.";
     }
     var upd = $("#updated");
     if (upd && DATA.updated) {
