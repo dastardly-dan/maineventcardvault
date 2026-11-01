@@ -1,22 +1,188 @@
 itemId	price	imageKey	sku	title
+860084142960	0.99	EZAAAeSwaR9q3seB	3323-1cdb0s	2025 Stadium Club #101 Ryan Zimmerman
+860084160100	0.99	8zoAAeSw1A1q3sla	3152-1cdav6	2026 Panini Prizm #233 Juan Marichal
+860084160110	0.99	lI0AAeSwTAdq3sle	3305-1cdb0a	2026 Panini Prizm #182 Nomar Garciaparra Red Prizm #/299
+860084160114	0.99	dvsAAeSwi1tq3slb	3045-1cd71n	2026 Topps Update #U91-7 Jeferson Quero 1991 Topps Baseball 35th Anniversary
+860084160123	0.99	uCgAAeSwtGFq3slc	3127-1cdauh	2025 Stadium Club #37 Zach Neto
+860084160126	0.99	d4QAAeSwUwlq3slb	3019-1cd70a	2026 Panini Prizm #45 Tate Southisene
+860084160130	0.99	O3EAAeSwvjpq3slc	3020-1cd70b	2026 Panini Prizm #279 Cam Smith
+860084160136	0.99	MIgAAeSwsKZq3slc	2999-1cd6zf	2023 Finest Flashbacks #85 Spencer Steer
+860084160142	0.99	pUQAAeSwUdlq3slb	3012-1cd6zz	2025 Stadium Club #160 Mookie Betts
+860084160159	0.99	nmIAAeSw76lq3slc	2981-1cd6yk	2026 Topps Heritage #23 Garrett Crochet
+860084160164	0.99	XhMAAeSwLHlq3sle	2979-1cd6yg	2026 Topps Update #U91-49 Owen Caissie 1991 Topps Baseball 35th Anniversary
+860084160170	0.99	M5cAAeSwoP9q3slc	2968-1cd6xv	2026 Panini Prizm #87 Charles Davalan
+860084160171	0.99	x6kAAeSwybpq3sld	2970-1cd6xy	2025 Stadium Club #192 Trevor Hoffman
+860084160175	0.99	lwEAAeSwOZxq3slc	2893-1cb7kg	2026 Panini Prizm #29 Andrew Painter Red Prizm #/299
+860084160182	0.99	MsUAAeSwIvJq3sld	2892-1cb7kf	2026 Finest #219 Julio Rodríguez
+860084160189	0.99	4jsAAeSwV0xq3sle	2888-1cb7k9	2026 Panini Prizm #217 Hye-Seong Kim
+860084160190	0.99	EYkAAeSwkU5q3slc	2847-1cb7ie	2026 Panini Prizm #218 Ryan Howard
+860084184246	0.99	AUAAAeSwGwBq3sy3	3363-1cdc09	2024 Upper Deck Marvel Studios Series 1 #32 Sasha Lane as Hunter C-20
+860103465415	0.99	z1gAAeSwzbFq50wW	3029-1cd70p	2026 Topps Universe WWE #18 Tank Ledger
+860103465421	0.99	0vgAAeSw7wpq50wV	3080-1cd73t	2026 Topps Universe WWE #285 "The American Nightmare" Cody Rhodes
+860103465422	0.99	fcoAAeSwcnBq50wW	3081-1cd73v	2026 Topps Universe WWE #272 Rey Mysterio
+860103465437	0.99	U-cAAeSwqPNq50wV	3068-1cd732	2026 Topps Universe WWE #84 Lexis King
+860103465439	0.99	8GwAAeSwiAVq50wV	3051-1cd721	2026 Topps Universe WWE #247 Nia Jax
+860103465443	0.99	MwgAAeSwplVq50wV	3048-1cd71u	2026 Topps Universe WWE #189 Teddy Long
+860103465446	0.99	bjkAAeSwcG9q50wV	3014-1cd702	2025 Topps Resurgence #122 Quinshon Judkins
+860103465451	0.99	~h4AAeSwcVRq50wX	3066-1cd72y	2026 Topps Universe WWE #46 Charlie Dempsey
+860103465452	0.99	MxgAAeSwplVq50wW	3018-1cd708	2026 Topps Universe WWE #66 R-Truth
+860103465453	0.99	BzgAAeSwiB1q50wV	3025-1cd70j	2026 Topps Universe WWE #67 Channing "Stacks" Lorenzo
+860103465454	0.99	I2gAAeSwQfRq50wW	2978-1cd6yd	2026 Topps Universe WWE #77 Drew McIntyre
+860103465457	0.99	w-YAAeSweRpq50wV	3071-1cd739	2026 Topps Universe WWE #146 Nathan Frazer
+860103465463	0.99	GtAAAeSwmOtq50wW	3064-1cd72u	2026 Topps Universe WWE #186 Pete Dunne
+860084160058	1.00	HGUAAeSwBK9q3slX	3167-1cdavl	2026 Panini Prizm #185 Cliff Lee Laces Prizm #/125
+860084160060	1.00	zn0AAeSwrQNq3slb	3165-1cdavj	2025 Topps Chrome Platinum #332 Spencer Schwellenbach
+860084160062	1.00	vFgAAeSwSIlq3slZ	3310-1cdb0f	2026 Topps Chrome #104 Taylor Walls Topps Refractor
+860084160063	1.00	LpwAAeSwvQ1q3slZ	3135-1cdaup	2026 Panini Prizm #21 Andrew Painter Throwback
+860084160069	1.00	jEEAAeSw4Qlq3slY	3053-1cd725	2026 Topps #373 Cam Smith
+860084160075	1.00	luUAAeSwOZxq3sla	3017-1cd707	2026 Panini Prizm #236 Carlos Beltran
+860084160098	1.00	0vwAAeSwwqpq3sla	2877-1cb7js	2026 Panini Prizm #123 Mike Piazza
+860084184236	1.00	9x8AAeSw6bdq3sy3	3088-1cdafs	2026 Topps Chrome Marvel #120 Grandmaster
+860103465413	1.00	M0wAAeSwtgFq50wU	3074-1cd73g	2026 Topps Universe WWE #88 Zoey Stark
+860103465423	1.00	TGYAAeSwZLVq50wX	3049-1cd71w	2026 Topps Universe WWE #73 Maxxine Dupri
+860103465448	1.00	CqsAAeSwY-Fq50wW	3030-1cd70r	2025-26 Topps Signature Class #73 Donovan Mitchell
+860103465461	1.00	xZcAAeSwbNhq50wd	3065-1cd72w	2026 Topps Universe WWE #187 Nikkita Lyons
+860103465447	1.09	tTcAAeSwYStq50wW	3070-1cd736	2026 Topps Universe WWE #55 Gunther
+860103465441	1.10	3VsAAeSwqK9q50wV	3050-1cd71y	2026 Topps Universe WWE #265 Charlotte Flair
+860084160037	1.11	Q~cAAeSw8Glq3slX	3063-1cd72r	2026 Panini Prizm #191 John Smoltz
+860103465427	1.12	61cAAeSwDBNq50wW	3021-1cd70d	2026 Topps Universe WWE #243 Montez Ford
+860103465434	1.13	WzgAAeSwsZJq50wW	3058-1cd72e	2026 Topps Universe WWE #291 Charlotte Flair
+860103465418	1.16	b5UAAeSwYOBq50wV	3076-1cd73k	2026 Topps Universe WWE #146 Nathan Frazer Aqua Speckle #/299
+860084160027	1.19	WboAAeSwmaFq3slX	3115-1cdau4	2025 Stadium Club #35 Cole Ragans
+860084184239	1.19	SDwAAeSwaR9q3sy3	3091-1cdafw	2024 Upper Deck Marvel Studios Series 1 #93 Chris Pratt as Star-Lord
+860103465449	1.20	gtIAAeSwAp9q50va	3013-1cd701	2025 Topps Resurgence #160 Will Campbell
+860084159990	1.25	Br4AAeSwqpJq3slW	3303-1cdb08	2026 Panini Prizm #23 Travis Bazzana Global Reach
+860084137835	1.29	39IAAeSwIAdq3saA	3100-1cdag5	2026 Topps Chrome Disney #DD-2 Drake Mallard Darkwing Duck 35th Anniversary
+860084160005	1.29	7NoAAeSw0FNq3slW	3129-1cdauj	2026 Panini Prizm #3 Ivan Rodriguez
+860103465426	1.29	7kMAAeSwGAlq50wV	3072-1cd73c	2026 Topps Universe WWE #69 Jimmy Uso
+860084160006	1.30	pQwAAeSwUdlq3slW	2972-1cd6y1	2025 Topps Inception #1 Hurston Waldrep
+860084160008	1.30	UWAAAeSwVnJq3slX	3016-1cd705	2025 Topps Chrome Platinum #255 Tyler Callihan
+860084159996	1.32	7hoAAeSwEydq3ska	2889-1cb7kb	2026 Panini Prizm #259 Jim Edmonds
+860103465425	1.32	SCgAAeSwJFBq50wW	3077-1cd73m	2026 Topps Universe WWE #232 Asuka
+860084159992	1.33	ywcAAeSwjclq3slX	2984-1cd6yr	2026 Topps Update #US323 Jakob Marsee
+860084159975	1.34	mwkAAeSwnQhq3slV	3039-1cd718	2026 Topps Update #US283 Tristan Gray
+860084159947	1.35	Q-sAAeSw8Glq3slV	3001-1cd6zi	2025 Topps Chrome Platinum #209 Kumar Rocker
+860103465411	1.35	zI0AAeSw08Zq50wW	3075-1cd73i	2026 Topps Universe WWE #89 Trick Williams
+860103465444	1.40	1UUAAeSwEPpq50wW	3073-1cd73d	2026 Topps Universe WWE #249 Oba Femi
+860103465445	1.43	5KkAAeSwjC5q50wX	3007-1cd6zr	2025 Topps Resurgence #40 Will Anderson Jr. Refractor
+860103465433	1.44	oKQAAeSwJE5q50wV	3061-1cd72l	2026 Topps Universe WWE #194 Noam Dar
+860084137653	1.49	em0AAeSwOZxq3sZ-	3086-1cdafq	2026 Topps Chrome Disney #FS-6 White Rabbit Future Stars
+860084138523	1.49	cVYAAeSw4-Zq3sap	3365-1cdc0c	ME: 30th Celebration #006/128 Cherubi
+860084138618	1.49	P2IAAeSwmaFq3sas	3098-1cdag3	2026 Pokemon ME: 30th Celebration #103/128 Dialga Holo Rare NM
+860084138750	1.49	P6IAAeSwmaFq3saw	3085-1cdafp	2026 Pokemon ME: 30th Celebration #009/128 Vulpix Holo Common NM
+860084159882	1.49	wlAAAeSw~opq3slT	3003-1cd6zl	2026 Topps Update #ASG-19 Byron Buxton 2026 All-Star Game
+860084159883	1.49	vAoAAeSwSIlq3slS	3059-1cd72g	2023 Finest Flashbacks #13 Livan Soto
+860084159886	1.49	kiAAAeSwI5Fq3slV	3057-1cd72d	2026 Topps Update #US127 Connor Prielipp
+860084159895	1.49	GxYAAeSwbNtq3slT	2982-1cd6yn	2026 Bowman Chrome #BCP-191 Dawvris Brito Prospects
+860084159899	1.49	ZJkAAeSwQX1q3slV	2976-1cd6y9	2026 Topps Update #US160 Victor Caratini
+860084159917	1.49	ER0AAeSwcuJq3slU	3023-1cd70g	2026 Topps Update #US160 Victor Caratini
+860084184231	1.49	66AAAeSwybpq3sy5	3099-1cdag4	2024 Upper Deck Marvel Studios Series 1 #81 Griffin Matthews as Luke Jacobson
+860084184238	1.49	q-gAAeSw6k5q3sy5	3367-1cdc0f	2026 Topps Neon Marvel #188 Genis-Vell
+860084184247	1.49	yWcAAeSwgtRq3sy2	3102-1cdag8	2026 Topps Neon Marvel #188 Genis-Vell
+860084159765	1.50	qOUAAeSw03Nq3slP	3151-1cdav5	2026 Panini Prizm #290 Dennis Eckersley
+860084159782	1.50	lccAAeSwC~tq3slP	3132-1cdaum	2026 Panini Prizm #77 Jonathan Santucci
+860084159784	1.50	v9MAAeSw31xq3slQ	3042-1cd71e	2026 Topps Chrome Logofractor Edition #222 Agustin Ramirez
+860084159795	1.50	~XYAAeSwWuJq3slP	3043-1cd71h	2026 Topps Chrome Logofractor Edition #222 Agustin Ramirez
+860084159821	1.50	ej4AAeSwGV1q3slQ	3117-1cdau6	2025 Stadium Club #56 Steven Kwan Lime Green
+860084159857	1.50	MC0AAeSwsKZq3slU	2987-1cd6yw	2026 Topps Update #US14 William Kempner
+860084159872	1.50	meAAAeSw~Dxq3slT	2974-1cd6y5	2023 Finest Flashbacks #97 Vaughn Grissom
+860084159877	1.50	CWsAAeSwQ~5q3slU	3011-1cd6zy	2026 Topps Update #US265 Deyvison De Los Santos
+860084159891	1.50	sUkAAeSwcOFq3slS	3008-1cd6zt	2025 Stadium Club #SS-13 Mike Trout Savage Sluggers
+860084184252	1.50	tcwAAeSw-Bdq3sy4	3096-1cdag1	2026 Topps Neon Marvel #70 Gladiator
+860084159724	1.52	jJsAAeSwfP1q3slO	3000-1cd6zh	2023 Finest Flashbacks #38 Zach Neto
+860103465460	1.52	YHAAAeSwvjZq50wW	3082-1cd73x	2026 Topps Universe WWE #299 John Cone
+860084159755	1.55	ET4AAeSw3FFq3slQ	3037-1cd714	2023 Finest Flashbacks #82 Logan O'Hoppe
+860084159759	1.55	gRMAAeSwXX1q3slP	3067-1cd730	2026 Panini Prizm #149 Darryl Strawberry
+860103465436	1.56	o9kAAeSwIcFq50wW	2980-1cd6yh	2026 Topps Universe WWE #254 Drew McIntyre
+860103465456	1.58	uBgAAeSwFBtq50wW	3069-1cd735	2026 Topps Universe WWE #175 Lainey Reid
+860084159682	1.59	xDUAAeSwYSZq3slP	3002-1cd6zk	2023 Finest Flashbacks #64 Will Benson
+860103465424	1.62	DvoAAeSwXQFq50wU	3078-1cd73o	#278 2026 Topps Universe WWE #278 Penta 2026 Topps Universe WWE
+860084159670	1.63	GGMAAeSwMPJq3slO	2832-1cb7hn	2026 Topps Chrome Logofractor Edition #234 Ryan Jeffers
+860084159683	1.63	HEwAAeSwiEJq3slO	2831-1cb7hk	2026 Topps Chrome Logofractor Edition #234 Ryan Jeffers
+860084159595	1.64	-ncAAeSw4OJq3slM	3125-1cdaue	2026 Panini Prizm #165 Leo De Vries
+860084142665	1.65	n6EAAeSwuVdq3sc6	3345-1cdb1e	2026 Panini Prizm #30 Bob Gibson
+860084159641	1.65	nXMAAeSwkf9q3slN	3138-1cdaus	2026 Panini Prizm #73 Tom Glavine
+860084159740	1.65	hmkAAeSw6k5q3slP	2882-1cb7k0	2026 Panini Prizm #107 Andruw Jones
+860084159568	1.69	w38AAeSwZsRq3slL	3136-1cdauq	2026 Panini Prizm #100 C.J. Kayfus
+860084159575	1.69	nbMAAeSwVBRq3slM	3040-1cd71a	2026 Topps Update #U91-44 Connor Prielipp 1991 Topps Baseball 35th Anniversary
+860084159764	1.69	k28AAeSwO-1q3slP	3056-1cd72b	2022 Topps Chrome Sapphire Edition #363 Yonny Hernandez
+860084159515	1.71	sy0AAeSw8M1q3slK	3114-1cdau3	2026 Bowman Chrome #SF-5 Carter Jensen Stars of the Future
+860084159562	1.71	VkkAAeSw-0Vq3slK	3015-1cd704	2023 Finest Flashbacks #144 Hunter Greene
+860084159501	1.73	j5oAAeSwynJq3slK	3109-1cdaty	2026 Panini Prizm #168 Trevor Hoffman Purple Prizm #/149
+860084159499	1.75	L1IAAeSwJ7tq3slJ	3130-1cdauk	2026 Panini Prizm #19 Catfish Hunter
+860103465455	1.75	wjYAAeSwYNlq50wW	3062-1cd72o	2026 Topps Universe WWE #109 Tonga Loa
+860084184242	1.78	0LAAAeSwqTlq3sy3	3087-1cdafr	2026 Topps Neon Marvel #38 Ghost-Spider
+860084184254	1.78	OygAAeSw-EZq3sy4	3092-1cdafx	2026 Topps Neon Marvel #38 Ghost-Spider
+860103465416	1.78	XJsAAeSwqNZq50vY	3083-1cd73y	2026 Topps Universe WWE #251 Jade Cargill
+860084138594	1.79	kXkAAeSwHTBq3sat	3101-1cdag7	2026 Pokemon ME: 30th Celebration #115/128 Ditto Holo Common NM
+860084159551	1.79	mS4AAeSw3rBq3slM	3041-1cd71d	2026 Topps Update #US266 Connor Prielipp
+860084159590	1.79	j6sAAeSwynJq3slM	3009-1cd6zv	2026 Topps Update #US151 John Klein
+860103465450	1.79	fscAAeSwo1Nq50wV	3022-1cd70e	2026 Topps Universe WWE #136 Chelsea Green
+860103465438	1.82	Bu8AAeSwM~Nq50wZ	3054-1cd728	2026 Topps Universe WWE #GS-10 Brock Lesnar Grander Scale
+860084159545	1.85	BS8AAeSwqQFq3slL	3104-1cdatt	2026 Panini Prizm #25 Sung-Mun Song Global Reach
+860084159415	1.99	tlAAAeSwN7lq3slJ	3133-1cdaun	2026 Panini Prizm #16 Sammy Sosa
+860084159417	1.99	pxsAAeSw65tq3slG	3113-1cdau2	2026 Topps Update #US136 Jacob Misiorowski
+860084159483	1.99	EMUAAeSwkU5q3slJ	3118-1cdau7	2026 Topps Update #US136 Jacob Misiorowski
+860084184240	1.99	SHMAAeSwNBBq3sy2	3090-1cdafv	2026 Topps Neon Marvel #75 Groot
+860084184251	1.99	nlUAAeSw4wxq3sy3	3364-1cdc0b	2024 Upper Deck Marvel Studios Series 1 #61 Iman Vellani as Kamala Khan
+860103465409	1.99	aRMAAeSw7oNq50wV	3084-1cd741	2026 Topps Universe WWE #143 Nia Jax Flare
+860103465417	1.99	uwEAAeSwzC1q50wU	3046-1cd71p	2026 Topps Universe WWE #235 "The American Nightmare" Cody Rhodes
+860103465432	1.99	uwkAAeSwzC1q50wV	3047-1cd71s	2026 Topps Universe WWE #198 Kale Dixon Flare
+860103465459	1.99	My0AAeSwZAxq50wW	3079-1cd73r	2026 Topps Universe WWE #194 Noam Dar Flare
+860084142978	2.00	IXEAAeSwIvJq3seE	3315-1cdb0k	2026 Panini Prizm #50 Justin Gonzales Ruby Wave Prizm
+860084159475	2.00	ahsAAeSwfmdq3skM	3044-1cd71k	2026 Topps Update #US106 Joe Mack
+860084159342	2.03	EiAAAeSwoitq3skM	3024-1cd70h	2026 Bowman Chrome #BCP-243 Steele Hall Prospects Geometric Refractor #/499
+860084159412	2.06	77kAAeSwITNq3slI	3248-1cdayp	2023 Finest Flashbacks #149 Vaughn Grissom
+860103465414	2.25	GDEAAeSwc~Vq50wW	3028-1cd70o	2026 Topps Universe WWE #122 Michael Cole
+860084184241	2.30	VtQAAeSwAD5q3sy5	3094-1cdafz	2026 Topps Neon Marvel #78 Drax
+860084159389	2.49	CRsAAeSwiv1q3slG	3055-1cd729	2026 Topps Update #U91C-32 Connor Prielipp 1991 35th Anniversary Chrome RC Twins
+860084184244	2.49	FB8AAeSw~0pq3sy4	3366-1cdc0d	2026 Topps Neon Marvel #95 Green Goblin
+860084184249	2.49	bicAAeSwcJxq3sy3	3089-1cdaft	2026 Topps Neon Marvel #95 Green Goblin
+860084184229	2.67	kXYAAeSwfmdq3sy3	3095-1cdag0	2026 Topps Neon Marvel #167 Gwenpool
+860084184253	2.67	GQUAAeSwvlZq3sx7	3093-1cdafy	2026 Topps Neon Marvel #167 Gwenpool
 318726960542	2.79	aeQAAeSwPoZqfoWO	C-022	2026 Topps Chrome Shota Imanaga #161 REFRACTOR
+860084159289	2.92	6TUAAeSw8Adq3slD	2989-1cd6yz	2026 Topps Heritage #360 Owen Caissie
+860084159284	2.99	ENYAAeSw3FFq3slD	3134-1cdauo	2026 Panini Prizm #20 Carlton Fisk
+860103465410	2.99	j-gAAeSw1A1q50wV	3052-1cd723	2026 Topps Universe WWE #174 Omos Aqua Speckle #/299
+860103465435	2.99	GZEAAeSwaIFq50wW	3010-1cd6zw	2026 Topps Universe WWE #167 Kofi Kingston Rings
+860084184235	3.00	AXoAAeSwirxq3sy3	3097-1cdag2	2026 Topps Neon Marvel #36 Doctor Doom
+860084159305	3.25	H8gAAeSwaXJq3slE	2834-1cb7hr	2026 Panini Prizm #1 Nick Kurtz Fireworks Blue Prizm #/99
+860084159277	3.29	mlQAAeSwnQhq3slD	3004-1cd6zn	2026 Finest #37 Brandon Sproat
+860084142989	3.50	jUcAAeSwVBRq3seE	3311-1cdb0g	2026 Topps Chrome #175 Jack Leiter Topps Refractor
+860084159271	3.99	5~AAAeSwlZtq3slE	3137-1cdaur	2026 Panini Prizm #27 Tyler Bremner Silver Prizm
+860084159350	3.99	XAQAAeSwFBtq3srn	3155-1cdav9	2026 Panini Prizm #195 Kruz Schoolcraft Silver Prizm
+860084159371	3.99	j70AAeSwAndq3skK	2975-1cd6y6	2026 Topps Update #US200 Joe Mack Sandglitter
 318802317751	4.00	TPMAAeSwsx9qlKnm		2026 Topps Chrome WWE Bret Hit Man Hart #30 Refractor Legend
-318767398529	5.59	Jo8AAeSwZERqihTB		2026 Topps Chrome Marvel Hulk The Beyond #TB-04
+860084159046	4.25	3kcAAeSwiMFq3slD	3141-1cdauv	2026 Panini Prizm #61 Kyson Witherspoon
+860084159153	4.25	EH8AAeSwkU5q3slB	3120-1cdau9	2026 Bowman Chrome #27 Chase Burns
+860084159245	4.25	t0MAAeSwtGFq3slC	3006-1cd6zq	2026 Bowman Chrome #27 Chase Burns
+860084159226	4.59	90QAAeSw~l9q3slD	2897-1cb7kk	2026 Topps Pristine #S-14 Babe Ruth Spotless
+860084159233	4.59	q1sAAeSwqTlq3slE	2914-1cb7l1	2026 Topps Pristine #S-14 Babe Ruth Spotless
 318767425696	4.90	nIoAAeSwiipqih6y		2025 Skybox Metal Universe Batman Owlman #176 Purple FX Crime Syndicate
+860084158747	4.98	utIAAeSw~ahq3slA	2830-1cb7hi	2026 Topps Chrome Logofractor Edition #179 Brooks Lee Pink Refractor #/250
+860084158647	5.50	44EAAeSwS6hq3slB	3111-1cdau0	2026 Bowman Chrome #BCP-159 Christian Zazueta Prospects
+318767398529	5.59	Jo8AAeSwZERqihTB		2026 Topps Chrome Marvel Hulk The Beyond #TB-04
+860084184245	5.72	qxoAAeSwFppq3sy3	3103-1cdag9	2024 Upper Deck Marvel Studios Series 1 #DZ-7 Tatiana Maslany as Dazzlers Green
+860084158586	5.95	LvUAAeSwFiVq3slA	2890-1cb7kc	2026 Topps Chrome Black #109 Byron Buxton Green Refractor #/99
+860084158582	7.96	R2cAAeSwSiVq3slC	3060-1cd72j	2026 Topps Update #U91C-69 Kirby Puckett 1991 35th Anniversary Chrome Twins HOF
 318699663629	8.00	HecAAeSwkVdqd7hf		2026 Topps Chrome #65 Roxanne Perez Refractor
 318801592167	8.99	K28AAeSwgW9qlJbZ		1992-93 Fleer Shaquille O'Neal #298 Slam Dunk Rookie Orlando Magic
+860084158677	9.00	ItAAAeSweYFq3sk~	3308-1cdb0d	2026 Topps Chrome #101 Brandon Nimmo Topps Refractor
+860084158513	9.27	aE8AAeSwsjVq3sk~	3106-1cdatv	2026 Panini Prizm #106 Charlie Condon
 318726596480	9.99	DVoAAeSwmiFqflnH		2025-26 Topps Chrome Update Cooper Flagg #151 RC Rookie Dallas Mavericks
-318801636841	13.99	008AAeSwVzdqlJTq		2025 Topps Chrome Platinum Trey Sweeney #CPA-TSW RC Rookie Auto Detroit Tigers
-318726963298	12.74	m7QAAeSwOT5qfoYX	C-011	2025 Topps Stadium Club Zach Neto #37
-318767419007	15.00	0LQAAeSwzVlqhlLF		Topps Stars of MLB Insert 3 Card Lot Mookie Betts Freddie Freeman Pete Alonso
 318801618488	11.19	9x4AAeSwjU9qlJVg		2025 Panini Prizm Jonah Tong Sensational Signatures #SS-JT RC Auto NY Mets
+318726963298	12.74	m7QAAeSwOT5qfoYX	C-011	2025 Topps Stadium Club Zach Neto #37
+318801636841	13.99	008AAeSwVzdqlJTq		2025 Topps Chrome Platinum Trey Sweeney #CPA-TSW RC Rookie Auto Detroit Tigers
+318767419007	15.00	0LQAAeSwzVlqhlLF		Topps Stars of MLB Insert 3 Card Lot Mookie Betts Freddie Freeman Pete Alonso
+860084158663	16.50	bvIAAeSw1Apq3slC	3105-1cdatu	2026 Finest #276 Didier Fuentes Gold Geometric Refractor #/50
 318767398046	17.49	G2cAAeSwicFqihY0		2025 Panini Certified Tai Felton Freshman Fabric RPA Auto Patch 21/30 Vikings
-318731378183	20.99	XasAAeSwxvxqf5Tt		2026 Topps Marvel Brooklyn Collection Moon Knight Distinguished Service #DS-11
 318767407465	19.50	njYAAeSwVppqihxk		2026 Topps Chrome Marvel Rek-Rap #095 Green Refractor 194/199 Spider-Man
+860084158244	20.00	70UAAeSwITNq3sk-	3108-1cdatx	2026 Finest #TF-13 Ronald Acuña Jr. Topps Team Finest Purple Refractor #/75
+318731378183	20.99	XasAAeSwxvxqf5Tt		2026 Topps Marvel Brooklyn Collection Moon Knight Distinguished Service #DS-11
 318731065243	30.80	LxwAAeSw64Zqf4ud		2026 Topps Cosmic Chrome WWE Seth Rollins Planetary Pursuit Sun #PPS-3 RAW
 318801692852	31.00	LXsAAeSwkAlqhlP9		Marvel X-Men 4 Card Lot Wolverine Nightcrawler Hulk Magik Topps Chrome
-318726587094	34.00	6xYAAeSw4U1qflYw		2025-26 Topps Chrome Cactus Jack Cooper Flagg #61 RC Rookie Dallas Mavericks
 318726604221	35.00	GyYAAeSw87Bqfl0F		2025-26 Topps Chrome Update Cooper Flagg Clutch Gene #CG-11 RC Mavericks
+860084158343	35.00	bZsAAeSw2lxq3sk~	2895-1cb7ki	2026 Panini Prizm #TBS-JW Jacob Wilson Throwback Signatures Mojo Prizm #/25
 318731526426	37.99	cLYAAeSwvnpqf6wZ		2026 Topps Cosmic Chrome WWE IRS Autograph #CCA-IRS Legends Auto
 318731347510	39.00	AJIAAeSwvl9qf6BQ		2026 Topps Cosmic Chrome WWE Jey Uso Planetary Pursuit Mercury #PPM-2 RAW
 318726601589	39.20	E94AAeSwQOlqfluZ		2026 Topps Tribute Jacob Misiorowski #94 RC Rookie Milwaukee Brewers
@@ -28,18 +194,19 @@ itemId	price	imageKey	sku	title
 318767404292	55.30	sFsAAeSwFz1qgdzZ		2025 Topps UFC Finest Khamzat Chimaev Blinding Lights #BL-14 SSP Case Hit
 318767426228	60.00	~k4AAeSwtFxqigk8		2026 Topps Chrome WWE Talla Tonga Rookie Auto Cracked Ice 6/10 #BCA-TTA
 318767424817	64.00	UAoAAeSww-Fqih5w		2025 Topps Royalty WWE Cowboy Bob Orton Golden Hall Auto #GHA-CBO 48/99
+318726593162	70.00	IhMAAeSwBCJqfmFJ		2026 Topps Resurgence Xavier Worthy Auto #48 14/25 Kansas City Chiefs
 318731525928	77.00	cIAAAeSwDRtqf6pq		2025 Topps Universe WWE Ciampa Gargano Tag Team Relic Auto #TTA-GC 14/25
 318767430557	80.00	acoAAeSwuxVqih9T		2026 Topps Chrome WWE Oba Femi #120 Orange Geometric Refractor 22/25 NXT
 318801639849	80.00	-xgAAeSwVZ5qlJRv		2026 Topps Pristine Brice Turang Autographs #PA-BT Gold Refractor 50/50 Brewers
+318731526728	83.30	rd8AAeSw2RBqf61d		2026 Topps Chrome WWE Jacob Fatu Gamut #GAM-10 SSP Case Hit SmackDown
 318637897037	89.00	2VUAAeSwS~JqZj-N		2026 Topps Cosmic Chrome WWE - Joe Hendry #169 White Hole Refractor (RC) SSP
 318731072754	89.00	lXoAAeSwU79qf4q0		2026 Topps Chrome WWE Tiffany Stratton Blue Brand Auto #BBA-TIF SmackDown
+860084158353	98.70	1QEAAeSwBVtq3sk~	2829-1cb7hh	2026 Topps Chrome Logofractor Edition #210 Joe Ryan Orange Refractor #/25
 318801698741	99.00	dAkAAeSwPXdqlKej		2023 Panini Prizm WWE Roxanne Perez Champion Signatures Silver Auto #CS-RXP
-318726593162	70.00	IhMAAeSwBCJqfmFJ		2026 Topps Resurgence Xavier Worthy Auto #48 14/25 Kansas City Chiefs
 318731097217	100.00	tosAAeSwG~Vqf4mr		2026 Topps Chrome WWE Stephanie Vaquer Red Brand Auto #RBA-STE RAW
 318731360579	104.99	FuEAAeSwE-hqf54h		2025 Topps Royalty WWE Kendal Grey Rookie RC #023 78/99 Gold NXT
 318726606289	110.00	J6cAAeSwYPFqfl5I		2025-26 Topps Inception Cooper Flagg #22 RC Rookie Dallas Mavericks
 318801598718	110.00	BHgAAeSwWOBqlJXz		2026 Topps Resurgence Cam Ward #194 RC Rookie On-Card Auto Tennessee Titans
-318731526728	83.30	rd8AAeSw2RBqf61d		2026 Topps Chrome WWE Jacob Fatu Gamut #GAM-10 SSP Case Hit SmackDown
 318731527044	150.00	zCMAAeSwsJVqf65M		2026 Topps Chrome WWE Joe Hendry #301 RC Rookie Refractor NXT
 318767403634	180.00	9vMAAeSwSUNqig02		2025 Panini Prizm Travis Bazzana Color Blast #4 RC Rookie SSP Case Hit Guardians
 318731377273	190.00	3u8AAeSw1~lqf5pg		2026 Topps NOW Road to Opening Day Ronald Acuna Jr Auto #A-RAC 07/10 Braves
@@ -50,127 +217,3 @@ itemId	price	imageKey	sku	title
 318638286490	999.00	CfIAAeSwQtRqZlwB		2026 Topps Chrome WWE Lita Rebel by Design On-Card Auto /10 #LIT1 Signed
 318767414310	999.00	Sc4AAeSwIf9qih2T		2026 Topps Chrome National NSCC Shai Gilgeous-Alexander Red Refractor 3/5 OKC
 318899943909	8365.00	xfgAAeSwr9JqsUq-		Triple Autograph Base Parallel - Jey Uso, Jimmy Uso and Roman Reigns
-860084142960	0.99	EZAAAeSwaR9q3seB		2025 Stadium Club #101 Ryan Zimmerman
-860084160100	0.99	8zoAAeSw1A1q3sla		2026 Panini Prizm #233 Juan Marichal
-860084160110	0.99	lI0AAeSwTAdq3sle		2026 Panini Prizm #182 Nomar Garciaparra Red Prizm #/299
-860084160114	0.99	dvsAAeSwi1tq3slb		2026 Topps Update #U91-7 Jeferson Quero 1991 Topps Baseball 35th Anniversary
-860084160123	0.99	uCgAAeSwtGFq3slc		2025 Stadium Club #37 Zach Neto
-860084160126	0.99	d4QAAeSwUwlq3slb		2026 Panini Prizm #45 Tate Southisene
-860084160130	0.99	O3EAAeSwvjpq3slc		2026 Panini Prizm #279 Cam Smith
-860084160136	0.99	MIgAAeSwsKZq3slc		2023 Finest Flashbacks #85 Spencer Steer
-860084160142	0.99	pUQAAeSwUdlq3slb		2025 Stadium Club #160 Mookie Betts
-860084160159	0.99	nmIAAeSw76lq3slc		2026 Topps Heritage #23 Garrett Crochet
-860084160164	0.99	XhMAAeSwLHlq3sle		2026 Topps Update #U91-49 Owen Caissie 1991 Topps Baseball 35th Anniversary
-860084160170	0.99	M5cAAeSwoP9q3slc		2026 Panini Prizm #87 Charles Davalan
-860084160171	0.99	x6kAAeSwybpq3sld		2025 Stadium Club #192 Trevor Hoffman
-860084160175	0.99	lwEAAeSwOZxq3slc		2026 Panini Prizm #29 Andrew Painter Red Prizm #/299
-860084160182	0.99	MsUAAeSwIvJq3sld		2026 Finest #219 Julio Rodríguez
-860084160189	0.99	4jsAAeSwV0xq3sle		2026 Panini Prizm #217 Hye-Seong Kim
-860084160190	0.99	EYkAAeSwkU5q3slc		2026 Panini Prizm #218 Ryan Howard
-860084184246	0.99	AUAAAeSwGwBq3sy3		2024 Upper Deck Marvel Studios Series 1 #32 Sasha Lane as Hunter C-20
-860084160058	1.00	HGUAAeSwBK9q3slX		2026 Panini Prizm #185 Cliff Lee Laces Prizm #/125
-860084160060	1.00	zn0AAeSwrQNq3slb		2025 Topps Chrome Platinum #332 Spencer Schwellenbach
-860084160062	1.00	vFgAAeSwSIlq3slZ		2026 Topps Chrome #104 Taylor Walls Topps Refractor
-860084160063	1.00	LpwAAeSwvQ1q3slZ		2026 Panini Prizm #21 Andrew Painter Throwback
-860084160069	1.00	jEEAAeSw4Qlq3slY		2026 Topps #373 Cam Smith
-860084160075	1.00	luUAAeSwOZxq3sla		2026 Panini Prizm #236 Carlos Beltran
-860084160098	1.00	0vwAAeSwwqpq3sla		2026 Panini Prizm #123 Mike Piazza
-860084184236	1.00	9x8AAeSw6bdq3sy3		2026 Topps Chrome Marvel #120 Grandmaster
-860084160037	1.11	Q~cAAeSw8Glq3slX		2026 Panini Prizm #191 John Smoltz
-860084160027	1.19	WboAAeSwmaFq3slX		2025 Stadium Club #35 Cole Ragans
-860084184239	1.19	SDwAAeSwaR9q3sy3		2024 Upper Deck Marvel Studios Series 1 #93 Chris Pratt as Star-Lord
-860084159990	1.25	Br4AAeSwqpJq3slW		2026 Panini Prizm #23 Travis Bazzana Global Reach
-860084137835	1.29	39IAAeSwIAdq3saA		2026 Topps Chrome Disney #DD-2 Drake Mallard Darkwing Duck 35th Anniversary
-860084160005	1.29	7NoAAeSw0FNq3slW		2026 Panini Prizm #3 Ivan Rodriguez
-860084160006	1.30	pQwAAeSwUdlq3slW		2025 Topps Inception #1 Hurston Waldrep
-860084160008	1.30	UWAAAeSwVnJq3slX		2025 Topps Chrome Platinum #255 Tyler Callihan
-860084159996	1.32	7hoAAeSwEydq3ska		2026 Panini Prizm #259 Jim Edmonds
-860084159992	1.33	ywcAAeSwjclq3slX		2026 Topps Update #US323 Jakob Marsee
-860084159975	1.34	mwkAAeSwnQhq3slV		2026 Topps Update #US283 Tristan Gray
-860084159947	1.35	Q-sAAeSw8Glq3slV		2025 Topps Chrome Platinum #209 Kumar Rocker
-860084137653	1.49	em0AAeSwOZxq3sZ-		2026 Topps Chrome Disney #FS-6 White Rabbit Future Stars
-860084138523	1.49	cVYAAeSw4-Zq3sap		ME: 30th Celebration #006/128 Cherubi
-860084138618	1.49	P2IAAeSwmaFq3sas		2026 Pokemon ME: 30th Celebration #103/128 Dialga Holo Rare NM
-860084138750	1.49	P6IAAeSwmaFq3saw		2026 Pokemon ME: 30th Celebration #009/128 Vulpix Holo Common NM
-860084159882	1.49	wlAAAeSw~opq3slT		2026 Topps Update #ASG-19 Byron Buxton 2026 All-Star Game
-860084159883	1.49	vAoAAeSwSIlq3slS		2023 Finest Flashbacks #13 Livan Soto
-860084159886	1.49	kiAAAeSwI5Fq3slV		2026 Topps Update #US127 Connor Prielipp
-860084159895	1.49	GxYAAeSwbNtq3slT		2026 Bowman Chrome #BCP-191 Dawvris Brito Prospects
-860084159899	1.49	ZJkAAeSwQX1q3slV		2026 Topps Update #US160 Victor Caratini
-860084159917	1.49	ER0AAeSwcuJq3slU		2026 Topps Update #US160 Victor Caratini
-860084184231	1.49	66AAAeSwybpq3sy5		2024 Upper Deck Marvel Studios Series 1 #81 Griffin Matthews as Luke Jacobson
-860084184238	1.49	q-gAAeSw6k5q3sy5		2026 Topps Neon Marvel #188 Genis-Vell
-860084184247	1.49	yWcAAeSwgtRq3sy2		2026 Topps Neon Marvel #188 Genis-Vell
-860084159765	1.50	qOUAAeSw03Nq3slP		2026 Panini Prizm #290 Dennis Eckersley
-860084159782	1.50	lccAAeSwC~tq3slP		2026 Panini Prizm #77 Jonathan Santucci
-860084159784	1.50	v9MAAeSw31xq3slQ		2026 Topps Chrome Logofractor Edition #222 Agustin Ramirez
-860084159795	1.50	~XYAAeSwWuJq3slP		2026 Topps Chrome Logofractor Edition #222 Agustin Ramirez
-860084159821	1.50	ej4AAeSwGV1q3slQ		2025 Stadium Club #56 Steven Kwan Lime Green
-860084159857	1.50	MC0AAeSwsKZq3slU		2026 Topps Update #US14 William Kempner
-860084159872	1.50	meAAAeSw~Dxq3slT		2023 Finest Flashbacks #97 Vaughn Grissom
-860084159877	1.50	CWsAAeSwQ~5q3slU		2026 Topps Update #US265 Deyvison De Los Santos
-860084159891	1.50	sUkAAeSwcOFq3slS		2025 Stadium Club #SS-13 Mike Trout Savage Sluggers
-860084184252	1.50	tcwAAeSw-Bdq3sy4		2026 Topps Neon Marvel #70 Gladiator
-860084159724	1.52	jJsAAeSwfP1q3slO		2023 Finest Flashbacks #38 Zach Neto
-860084159755	1.55	ET4AAeSw3FFq3slQ		2023 Finest Flashbacks #82 Logan O'Hoppe
-860084159759	1.55	gRMAAeSwXX1q3slP		2026 Panini Prizm #149 Darryl Strawberry
-860084159682	1.59	xDUAAeSwYSZq3slP		2023 Finest Flashbacks #64 Will Benson
-860084159670	1.63	GGMAAeSwMPJq3slO		2026 Topps Chrome Logofractor Edition #234 Ryan Jeffers
-860084159683	1.63	HEwAAeSwiEJq3slO		2026 Topps Chrome Logofractor Edition #234 Ryan Jeffers
-860084159595	1.64	-ncAAeSw4OJq3slM		2026 Panini Prizm #165 Leo De Vries
-860084142665	1.65	n6EAAeSwuVdq3sc6		2026 Panini Prizm #30 Bob Gibson
-860084159641	1.65	nXMAAeSwkf9q3slN		2026 Panini Prizm #73 Tom Glavine
-860084159740	1.65	hmkAAeSw6k5q3slP		2026 Panini Prizm #107 Andruw Jones
-860084159568	1.69	w38AAeSwZsRq3slL		2026 Panini Prizm #100 C.J. Kayfus
-860084159575	1.69	nbMAAeSwVBRq3slM		2026 Topps Update #U91-44 Connor Prielipp 1991 Topps Baseball 35th Anniversary
-860084159764	1.69	k28AAeSwO-1q3slP		2022 Topps Chrome Sapphire Edition #363 Yonny Hernandez
-860084159515	1.71	sy0AAeSw8M1q3slK		2026 Bowman Chrome #SF-5 Carter Jensen Stars of the Future
-860084159562	1.71	VkkAAeSw-0Vq3slK		2023 Finest Flashbacks #144 Hunter Greene
-860084159501	1.73	j5oAAeSwynJq3slK		2026 Panini Prizm #168 Trevor Hoffman Purple Prizm #/149
-860084159499	1.75	L1IAAeSwJ7tq3slJ		2026 Panini Prizm #19 Catfish Hunter
-860084184242	1.78	0LAAAeSwqTlq3sy3		2026 Topps Neon Marvel #38 Ghost-Spider
-860084184254	1.78	OygAAeSw-EZq3sy4		2026 Topps Neon Marvel #38 Ghost-Spider
-860084138594	1.79	kXkAAeSwHTBq3sat		2026 Pokemon ME: 30th Celebration #115/128 Ditto Holo Common NM
-860084159551	1.79	mS4AAeSw3rBq3slM		2026 Topps Update #US266 Connor Prielipp
-860084159590	1.79	j6sAAeSwynJq3slM		2026 Topps Update #US151 John Klein
-860084159545	1.85	BS8AAeSwqQFq3slL		2026 Panini Prizm #25 Sung-Mun Song Global Reach
-860084159415	1.99	tlAAAeSwN7lq3slJ		2026 Panini Prizm #16 Sammy Sosa
-860084159417	1.99	pxsAAeSw65tq3slG		2026 Topps Update #US136 Jacob Misiorowski
-860084159483	1.99	EMUAAeSwkU5q3slJ		2026 Topps Update #US136 Jacob Misiorowski
-860084184240	1.99	SHMAAeSwNBBq3sy2		2026 Topps Neon Marvel #75 Groot
-860084184251	1.99	nlUAAeSw4wxq3sy3		2024 Upper Deck Marvel Studios Series 1 #61 Iman Vellani as Kamala Khan
-860084142978	2.00	IXEAAeSwIvJq3seE		2026 Panini Prizm #50 Justin Gonzales Ruby Wave Prizm
-860084159475	2.00	ahsAAeSwfmdq3skM		2026 Topps Update #US106 Joe Mack
-860084159342	2.03	EiAAAeSwoitq3skM		2026 Bowman Chrome #BCP-243 Steele Hall Prospects Geometric Refractor #/499
-860084159412	2.06	77kAAeSwITNq3slI		2023 Finest Flashbacks #149 Vaughn Grissom
-860084184241	2.30	VtQAAeSwAD5q3sy5		2026 Topps Neon Marvel #78 Drax
-860084159389	2.49	CRsAAeSwiv1q3slG		2026 Topps Update #U91C-32 Connor Prielipp 1991 35th Anniversary Chrome RC Twins
-860084184244	2.49	FB8AAeSw~0pq3sy4		2026 Topps Neon Marvel #95 Green Goblin
-860084184249	2.49	bicAAeSwcJxq3sy3		2026 Topps Neon Marvel #95 Green Goblin
-860084184229	2.67	kXYAAeSwfmdq3sy3		2026 Topps Neon Marvel #167 Gwenpool
-860084184253	2.67	GQUAAeSwvlZq3sx7		2026 Topps Neon Marvel #167 Gwenpool
-860084159289	2.92	6TUAAeSw8Adq3slD		2026 Topps Heritage #360 Owen Caissie
-860084159284	2.99	ENYAAeSw3FFq3slD		2026 Panini Prizm #20 Carlton Fisk
-860084184235	3.00	AXoAAeSwirxq3sy3		2026 Topps Neon Marvel #36 Doctor Doom
-860084159305	3.25	H8gAAeSwaXJq3slE		2026 Panini Prizm #1 Nick Kurtz Fireworks Blue Prizm #/99
-860084159277	3.29	mlQAAeSwnQhq3slD		2026 Finest #37 Brandon Sproat
-860084142989	3.50	jUcAAeSwVBRq3seE		2026 Topps Chrome #175 Jack Leiter Topps Refractor
-860084159271	3.99	5~AAAeSwlZtq3slE		2026 Panini Prizm #27 Tyler Bremner Silver Prizm
-860084159350	3.99	XAQAAeSwFBtq3srn		2026 Panini Prizm #195 Kruz Schoolcraft Silver Prizm
-860084159371	3.99	j70AAeSwAndq3skK		2026 Topps Update #US200 Joe Mack Sandglitter
-860084159046	4.25	3kcAAeSwiMFq3slD		2026 Panini Prizm #61 Kyson Witherspoon
-860084159153	4.25	EH8AAeSwkU5q3slB		2026 Bowman Chrome #27 Chase Burns
-860084159245	4.25	t0MAAeSwtGFq3slC		2026 Bowman Chrome #27 Chase Burns
-860084159226	4.59	90QAAeSw~l9q3slD		2026 Topps Pristine #S-14 Babe Ruth Spotless
-860084159233	4.59	q1sAAeSwqTlq3slE		2026 Topps Pristine #S-14 Babe Ruth Spotless
-860084158747	4.98	utIAAeSw~ahq3slA		2026 Topps Chrome Logofractor Edition #179 Brooks Lee Pink Refractor #/250
-860084158647	5.50	44EAAeSwS6hq3slB		2026 Bowman Chrome #BCP-159 Christian Zazueta Prospects
-860084184245	5.72	qxoAAeSwFppq3sy3		2024 Upper Deck Marvel Studios Series 1 #DZ-7 Tatiana Maslany as Dazzlers Green
-860084158586	5.95	LvUAAeSwFiVq3slA		2026 Topps Chrome Black #109 Byron Buxton Green Refractor #/99
-860084158582	7.96	R2cAAeSwSiVq3slC		2026 Topps Update #U91C-69 Kirby Puckett 1991 35th Anniversary Chrome Twins HOF
-860084158677	9.00	ItAAAeSweYFq3sk~		2026 Topps Chrome #101 Brandon Nimmo Topps Refractor
-860084158513	9.27	aE8AAeSwsjVq3sk~		2026 Panini Prizm #106 Charlie Condon
-860084158663	16.50	bvIAAeSw1Apq3slC		2026 Finest #276 Didier Fuentes Gold Geometric Refractor #/50
-860084158244	20.00	70UAAeSwITNq3sk-		2026 Finest #TF-13 Ronald Acuña Jr. Topps Team Finest Purple Refractor #/75
-860084158343	35.00	bZsAAeSw2lxq3sk~		2026 Panini Prizm #TBS-JW Jacob Wilson Throwback Signatures Mojo Prizm #/25
-860084158353	98.70	1QEAAeSwBVtq3sk~		2026 Topps Chrome Logofractor Edition #210 Joe Ryan Orange Refractor #/25
