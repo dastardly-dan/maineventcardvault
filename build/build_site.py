@@ -459,7 +459,7 @@ def build():
             "facebook": "https://www.facebook.com/profile.php?id=61593632960504",
             "instagram": "https://www.instagram.com/main.eventcards/",
             "location": "Strasburg, Virginia",
-            "shipping": "$1.99 on cards $20 and under, by eBay Standard Envelope (+$0.30 each extra card). $5.99 on cards over $20, USPS Ground Advantage, tracked — also offered as an upgrade at checkout on any card.",
+            "shipping": "$1.99 on cards $20 and under, by eBay Standard Envelope (+$0.30 each extra card). $5.99 on cards over $20, USPS Ground Advantage, tracked — also offered as an upgrade at checkout on any card. Buying several cards? They ship together in one package: up to 2 cards travel in an eBay Standard Envelope, and larger orders go in a tracked bubble mailer.",
         },
         "updated": date.today().isoformat(),
         "count": len(for_sale),

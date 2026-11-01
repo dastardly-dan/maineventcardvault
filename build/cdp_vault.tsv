@@ -315,8 +315,6 @@ cardId	batchId	price	sku	tag	title
 81237093	1509627	1.49	2969-1cd6xx	Baseball	2026 Topps Update #US141 Carmen Mlodzinski
 81237096	1509627	1.27	2971-1cd6y0	Baseball	2026 Topps Update #US59 Dennis Santana
 81237108	1509627	0.99	2977-1cd6yc	Baseball	2026 Topps Update #US118 Gregory Soto
-81237109	1509627	0.99	2978	WWE	2026 Topps Universe WWE #77 Drew McIntyre
-81237113	1509627	1.56	2980	WWE	2026 Topps Universe WWE #254 Drew McIntyre
 81237126	1509627	1.32	2986-1cd6yu	Baseball	2026 Topps Update #US203 Bubba Chandler
 81237129	1509627	1.09	2988-1cd6yx	Baseball	2026 Topps Update #US230 Wilber Dotel
 81237133	1509627	5.00	2990-1cd6z1	Baseball	2026 Topps Update #US99 Happy B-Day!
@@ -327,56 +325,14 @@ cardId	batchId	price	sku	tag	title
 81237141	1509627	1.99	2995-1cd6z9	Baseball	2026 Topps Update #US255 Konnor Griffin
 81237142	1509627	1.89	2996-1cd6za	Baseball	2026 Topps Update #US1 Konnor Griffin
 81237144	1509627	1.42	2997-1cd6zc	Baseball	2026 Topps Update #US99 Happy B-Day!
-81237159	1509627	1.43	3007	Football	2025 Topps Resurgence #40 Will Anderson Jr. Refractor
-81237164	1509627	2.99	3010	WWE	2026 Topps Universe WWE #167 Kofi Kingston Rings
-81237169	1509627	1.20	3013	Football	2025 Topps Resurgence #160 Will Campbell
-81237170	1509627	0.99	3014	Football	2025 Topps Resurgence #122 Quinshon Judkins
-81237176	1509627	0.99	3018	WWE	2026 Topps Universe WWE #66 R-Truth
-81237181	1509627	1.12	3021	WWE	2026 Topps Universe WWE #243 Montez Ford
-81237182	1509627	1.79	3022	WWE	2026 Topps Universe WWE #136 Chelsea Green
-81237187	1509627	0.99	3025	WWE	2026 Topps Universe WWE #67 Channing "Stacks" Lorenzo
 81237188	1509627	3.99	3026	WWE	2026 Topps Universe WWE #GS-17 CM Punk Grander Scale Aqua Speckle #/299
 81237190	1509627	1.09	3027-1cd70m	Baseball	2026 Topps Update #US230 Wilber Dotel
-81237192	1509627	2.25	3028	WWE	2026 Topps Universe WWE #122 Michael Cole
-81237193	1509627	0.99	3029	WWE	2026 Topps Universe WWE #18 Tank Ledger
-81237195	1509627	1.00	3030	Basketball	2025-26 Topps Signature Class #73 Donovan Mitchell
 81237196	1509627	0.99	3031-1cd70s	Baseball	2026 Finest #90 Bubba Chandler
 81237198	1509627	1.27	3032-1cd70u	Baseball	2026 Topps Update #US59 Dennis Santana
 81237199	1509627	1.00	3033-1cd70v	Baseball	2026 Finest #20 Jhostynxon Garcia
 81237201	1509627	1.05	3034-1cd70x	Baseball	2026 Topps Update #US80 The 'Burgh
 81237202	1509627	1.25	3035-1cd70y	Baseball	2026 Topps Update #US204 Jhostynxon Garcia
 81237205	1509627	1.25	3036-1cd711	Baseball	2026 Finest #6 Konnor Griffin
-81237229	1509627	1.99	3046	WWE	2026 Topps Universe WWE #235 "The American Nightmare" Cody Rhodes
-81237232	1509627	1.99	3047	WWE	2026 Topps Universe WWE #198 Kale Dixon Flare
-81237234	1509627	0.99	3048	WWE	2026 Topps Universe WWE #189 Teddy Long
-81237236	1509627	1.00	3049	WWE	2026 Topps Universe WWE #73 Maxxine Dupri
-81237238	1509627	1.10	3050	WWE	2026 Topps Universe WWE #265 Charlotte Flair
-81237241	1509627	0.99	3051	WWE	2026 Topps Universe WWE #247 Nia Jax
-81237243	1509627	2.99	3052	WWE	2026 Topps Universe WWE #174 Omos Aqua Speckle #/299
-81237248	1509627	1.82	3054	WWE	2026 Topps Universe WWE #GS-10 Brock Lesnar Grander Scale
-81237254	1509627	1.13	3058	WWE	2026 Topps Universe WWE #291 Charlotte Flair
-81237261	1509627	1.44	3061	WWE	2026 Topps Universe WWE #194 Noam Dar
-81237264	1509627	1.75	3062	WWE	2026 Topps Universe WWE #109 Tonga Loa
-81237270	1509627	0.99	3064	WWE	2026 Topps Universe WWE #186 Pete Dunne
-81237272	1509627	1.00	3065	WWE	2026 Topps Universe WWE #187 Nikkita Lyons
-81237274	1509627	0.99	3066	WWE	2026 Topps Universe WWE #46 Charlie Dempsey
-81237278	1509627	0.99	3068	WWE	2026 Topps Universe WWE #84 Lexis King
-81237281	1509627	1.58	3069	WWE	2026 Topps Universe WWE #175 Lainey Reid
-81237282	1509627	1.09	3070	WWE	2026 Topps Universe WWE #55 Gunther
-81237285	1509627	0.99	3071	WWE	2026 Topps Universe WWE #146 Nathan Frazer
-81237288	1509627	1.29	3072	WWE	2026 Topps Universe WWE #69 Jimmy Uso
-81237289	1509627	1.40	3073	WWE	2026 Topps Universe WWE #249 Oba Femi
-81237292	1509627	1.00	3074	WWE	2026 Topps Universe WWE #88 Zoey Stark
-81237294	1509627	1.35	3075	WWE	2026 Topps Universe WWE #89 Trick Williams
-81237296	1509627	2.99	3076	WWE	2026 Topps Universe WWE #146 Nathan Frazer Aqua Speckle #/299
-81237298	1509627	1.32	3077	WWE	2026 Topps Universe WWE #232 Asuka
-81237300	1509627	1.75	3078	WWE	2026 Topps Universe WWE #278 Penta
-81237303	1509627	1.99	3079	WWE	2026 Topps Universe WWE #194 Noam Dar Flare
-81237305	1509627	0.99	3080	WWE	2026 Topps Universe WWE #285 "The American Nightmare" Cody Rhodes
-81237307	1509627	0.99	3081	WWE	2026 Topps Universe WWE #272 Rey Mysterio
-81237309	1509627	1.52	3082	WWE	2026 Topps Universe WWE #299 John Cone
-81237310	1509627	1.78	3083	WWE	2026 Topps Universe WWE #251 Jade Cargill
-81237313	1509627	1.99	3084	WWE	2026 Topps Universe WWE #143 Nia Jax Flare
 81242132	1509701	0.99	3107-1cdatw	Baseball	2026 Panini Prizm #1 Seth Hernandez Throwback
 81242141	1509701	0.99	3116	Football	2025 Topps Resurgence #153 Chris Paul Jr.
 81242144	1509701	1.90	3119	WWE	2026 Topps Universe WWE #222 "Rowdy" Roddy Piper
