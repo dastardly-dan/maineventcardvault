@@ -100,3 +100,19 @@ requested box, so a portrait card at `s-l500` comes back only ~280–380px wide 
 
 Photos committed to `assets/cards/` are used at one size for both the tile and the
 lightbox — resize to roughly 1200px on the long edge before committing.
+
+## Iron Ledger and worker.js
+
+- `iron-ledger.html` is Daniel's personal workout tracker, served at `/iron-ledger`.
+  It isn't linked from the storefront and carries `noindex`, like `shoot/`. It's a
+  self-contained bundle, so replace the whole file to update it.
+- `worker.js` and `wrangler.jsonc` turned this from a static-only Worker into a Worker
+  with static assets. Files are still served straight from the repo root without
+  running any code; `worker.js` only runs for URLs that don't match a file, and the only
+  thing it handles is the Iron Ledger sync API at `/api/ironledger` (everything else
+  falls through to the normal asset 404). The log lives in one Durable Object,
+  `IronLedgerStore`, and is locked by a passphrase: the first device to connect sets it.
+- `wrangler.jsonc` keeps the settings Cloudflare used to generate on its own during each
+  build (name `maineventcardvault`, observability on, assets directory `.`). Keep
+  `worker.js`, `wrangler.jsonc` and `.wrangler` in `.assetsignore` so they're never
+  published as files.

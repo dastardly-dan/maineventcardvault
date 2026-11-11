@@ -1,0 +1,25 @@
+// Cloudflare Worker config for maineventcardvault.com.
+// Same settings Cloudflare generated on its own before this file existed (name,
+// observability, the repo root as the static site), plus worker.js and one Durable
+// Object for the Iron Ledger sync API. worker.js only runs for requests that don't
+// match a file, so the storefront and every other page are served exactly as before.
+{
+  "name": "maineventcardvault",
+  "main": "worker.js",
+  "compatibility_date": "2026-10-23",
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    "directory": ".",
+    "binding": "ASSETS"
+  },
+  "durable_objects": {
+    "bindings": [
+      { "name": "IRONLEDGER", "class_name": "IronLedgerStore" }
+    ]
+  },
+  "migrations": [
+    { "tag": "v1", "new_sqlite_classes": ["IronLedgerStore"] }
+  ]
+}
