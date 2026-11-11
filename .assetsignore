@@ -7,3 +7,9 @@
 .gitignore
 build
 README.md
+
+# Worker code and config: run by Cloudflare, not served as files.
+worker.js
+wrangler.jsonc
+.wrangler
+node_modules
