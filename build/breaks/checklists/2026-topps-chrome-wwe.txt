@@ -1,4 +1,4 @@
-# name: 2026 Topps Chrome WWE (also LogoFractor)
+# name: 2026 Topps Chrome WWE
 # sport: WWE
 # added: 2026-11-22
 # source: https://www.checklistcenter.com/2026-topps-chrome-wwe-wrestling-card-checklist/

@@ -129,6 +129,14 @@ team spot, box by box. Linked from the storefront's Breaks menu; every page carr
 - **Weekly routine when Daniel sends new checklists:** add one `.txt` per product, then run
   `python3 build/breaks/builder.py && python3 build/breaks/hub.py`, check the Checklist library
   tab, and push. Break guide pages built by `build.py` still read `wwe_data.py` / `team_data.py`.
+- **Official sources (Nov 22, 2026):** every library file except 2026 Topps Chrome WWE now comes from
+  the official Topps checklist (PDF or .xls) or, for LogoFractor, Checklist Insider; each file's
+  `# source:` line has the link. `build/breaks/checklist_parse.py` is the parser used: flatten the
+  PDF with `pdftotext -layout`, then `parse_lines()` + `bucket()` + `write()`. It rejoins wrapped
+  names, groups dual/triple/quad cards that share a card code into `[multi]`, files relics with
+  inserts, skips sketch, printing plate, redemption and "Moments" subsets, and keys Star Wars
+  autographs by character, not actor. WWE names are aliased to one spelling across products
+  (e.g. Nattie to Natalya, Rob VAN Dam to Rob Van Dam) so the builder merges them.
 
 ## Iron Ledger and worker.js
 

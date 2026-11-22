@@ -1,12 +1,9 @@
 # name: Topps Exalted WWE (2025 set, released April 2026)
 # sport: WWE
 # added: 2026-11-22
-# source: https://www.diamondcardsonline.com/blog/2025-topps-exalted-wwe-wrestling-cards-checklist/
+# source: https://cdn.shopify.com/s/files/1/0662/9749/5709/files/FINAL_CHECKLIST_2025EXALTEDWWE.pdf?v=1774986961
 
 [base]
-"Dirty" Dominik Mysterio
-"Stone Cold" Steve Austin
-"The American Nightmare" Cody Rhodes
 AJ Styles
 Aleister Black
 Alexa Bliss | W
@@ -31,6 +28,7 @@ Chad Gable
 Charlotte Flair | W
 Chelsea Green | W
 CM Punk
+Dominik Mysterio
 Drew McIntyre
 Dude Love
 Dusty Rhodes
@@ -87,7 +85,9 @@ Sol Ruca | W
 Solo Sikoa
 Stacy Keibler | W
 Stephanie Vaquer | W
+"Stone Cold" Steve Austin
 Tama Tonga
+"The American Nightmare" Cody Rhodes
 The Miz
 The Rock
 Tiffany Stratton | W
@@ -106,12 +106,6 @@ Zaria | W
 Zelina Vega | W
 
 [auto]
-"Cowboy" Bob Orton
-"Dirty" Dominik Mysterio
-"Million Dollar Man" Ted DiBiase
-"Road Dogg" Jesse James
-"Stone Cold" Steve Austin
-"The American Nightmare" Cody Rhodes
 Adriana Rizzo | W
 AJ Styles
 Alba Fyre | W
@@ -129,7 +123,6 @@ Bayley | W
 Becky Lynch | W
 Bianca Belair | W
 Booker T
-Braun Strowman
 Bret "Hit Man" Hart
 Brinley Reece | W
 Bron Breakker
@@ -138,7 +131,6 @@ Brutus Creed
 Bubba Ray Dudley
 Cactus Jack
 Candice LeRae | W
-Carlito
 Carmelo Hayes
 Cathy Kelley | W
 Chad Gable
@@ -147,11 +139,12 @@ Charlotte Flair | W
 Chelsea Green | W
 Chris Sabin
 CM Punk
-Dakota Kai | W
+"Cowboy" Bob Orton
 Damian Priest
 Dexter Lumis
 Diamond Dallas Page
 Diesel
+Dominik Mysterio
 Dragon Lee
 Drew McIntyre
 Elton Prince
@@ -160,7 +153,6 @@ Ethan Page
 Eve | W
 Fallon Henley | W
 Finn Bálor
-Gigi Dolin | W
 Giulia | W
 Grayson Waller
 Gunther
@@ -179,7 +171,6 @@ Jake "The Snake" Roberts
 Jazmyn Nyx | W
 JBL
 JD McDonagh
-Je'Von Evans
 Jey Uso
 Jimmy Uso
 Joe Gacy
@@ -190,7 +181,6 @@ Julius Creed
 Kairi Sane | W
 Kane
 Karmen Petrovic | W
-Karrion Kross
 Kelani Jordan | W
 Kevin Owens
 Kiana James | W
@@ -210,8 +200,8 @@ Mark Henry
 Maxxine Dupri | W
 Michelle McCool | W
 Michin | W
+"Million Dollar Man" Ted DiBiase
 Montez Ford
-Naomi | W
 Natalya | W
 Nathan Frazer
 Nia Jax | W
@@ -233,6 +223,7 @@ Rhea Ripley | W
 Rick Steiner
 Ricky Saints
 Rikishi
+"Road Dogg" Jesse James
 Rob Van Dam
 Roman Reigns
 Roxanne Perez | W
@@ -249,8 +240,9 @@ Sol Ruca | W
 Solo Sikoa
 Stacy Keibler | W
 Stephanie Vaquer | W
-Tama Tonga
+"Stone Cold" Steve Austin
 Tatum Paxley | W
+"The American Nightmare" Cody Rhodes
 The Honky Tonk Man
 The Miz
 The Rock
@@ -264,26 +256,93 @@ Torrie Wilson | W
 Trick Williams
 Triple H
 Trish Stratus | W
-Tyler Bate
-Uncle Howdy
 Undertaker
 Wendy Choo | W
-Wes Lee
 X-Pac
 Xavier Woods
 Zaria | W
 Zelina Vega | W
 Zoey Stark | W
 
+[insert]
+Alexa Bliss | W
+Andrade
+Angelo Dawkins
+Arianna Grace | W
+Austin Theory
+Becky Lynch | W
+Bianca Belair | W
+Braun Strowman
+Bronson Reed
+Candice LeRae | W
+Carlito
+Carmelo Hayes
+Charlotte Flair | W
+CM Punk
+Dakota Kai | W
+Damian Priest
+Dexter Lumis
+Dragon Lee
+Drew McIntyre
+Erick Rowan
+Ethan Page
+Gigi Dolin | W
+Gunther
+Jacob Fatu
+Jade Cargill | W
+Je'Von Evans
+Jey Uso
+Jimmy Uso
+Joe Gacy
+John Cena
+Jordynne Grace | W
+Karrion Kross
+Kelani Jordan | W
+Kevin Owens
+Kofi Kingston
+LA Knight
+Lexis King
+Liv Morgan | W
+Lola Vice | W
+Ludwig Kaiser
+Lyra Valkyria | W
+Maxxine Dupri | W
+Michin | W
+Montez Ford
+Naomi | W
+Nia Jax | W
+Nikki Cross | W
+Otis
+Penta
+Randy Orton
+Raquel Rodriguez | W
+Rey Mysterio
+Roman Reigns
+Roxanne Perez | W
+Seth Rollins
+Shawn Spears
+Sheamus
+Shinsuke Nakamura
+Sol Ruca | W
+Solo Sikoa
+Stephanie Vaquer | W
+Tama Tonga
+"The American Nightmare" Cody Rhodes
+The Miz
+Thea Hail | W
+Tiffany Stratton | W
+Tonga Loa
+Trick Williams
+Tyler Bate
+Uncle Howdy
+Wes Lee
+Xavier Woods
+Zelina Vega | W
+
 [multi]
 Triple H / The Rock
 Triple H / Shawn Michaels
 Stephanie McMahon | W / Trish Stratus | W
-Uncle Howdy / Dexter Lumis / Joe Gacy / Erick Rowan
-Finn Bálor / Carlito / JD McDonagh / "Dirty" Dominik Mysterio
-Lola Vice | W / Roxanne Perez | W / Cora Jade | W / Kelani Jordan | W
-Trick Williams / Je'Von Evans / Ethan Page / Oba Femi
-Jacob Fatu / Tama Tonga / Tonga Loa / Solo Sikoa
 Ilja Dragunov / Bron Breakker
 Bayley | W / Iyo Sky | W
 AJ Styles / LA Knight
@@ -304,3 +363,8 @@ Montez Ford / Angelo Dawkins
 Piper Niven | W / Chelsea Green | W
 Chris Sabin / Alex Shelley
 Elton Prince / Kit Wilson
+Uncle Howdy / Dexter Lumis / Joe Gacy / Erick Rowan
+Finn Bálor / Carlito / JD McDonagh / Dominik Mysterio
+Lola Vice | W / Roxanne Perez | W / Cora Jade | W / Kelani Jordan | W
+Trick Williams / Je'Von Evans / Ethan Page / Oba Femi
+Jacob Fatu / Tama Tonga / Tonga Loa / Solo Sikoa

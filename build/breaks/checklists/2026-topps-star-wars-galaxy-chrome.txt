@@ -1,11 +1,10 @@
 # name: 2026 Topps Star Wars Galaxy Chrome
 # sport: Star Wars
 # added: 2026-11-22
-# source: https://www.checklistcenter.com/2026-topps-star-wars-galaxy-chrome-entertainment-card-checklist/
+# source: https://cdn.shopify.com/s/files/1/0662/9749/5709/files/26SWCGCHECKLISTUPDATE.pdf?v=1786632392
 # note: Base cards are art titles, not character names
 
 [base]
-"Look, Sir, Droids!"
 A Chilly Reception
 A New Day for Luke Skywalker
 Ahsoka Tano and Sabine Wren
@@ -16,11 +15,9 @@ Battle In the Arena
 Battle of Endor
 Boba Fett
 Bounty Hunters
-C-3PO & Babu Frik
 Can You Speak Bocce?
 Carbonite
 Carbonite Captor
-Cassian Andor & K-2SO
 Celebration On Endor
 Chewbacca On Hoth
 Cloud City Escape
@@ -47,6 +44,7 @@ Last Look Back
 Life in Exile
 Life On Hoth
 Logray
+"Look Sir, Droids!"
 Luke Skywalker
 Machines of Dominion
 Master And Apprentice
@@ -59,7 +57,6 @@ Only Hope
 Padmé Amidala In The Senate
 Padmé Amidala vs. the Nexu
 Peace Is A Lie
-Poe Dameron & BB-8
 Power of the Dark Side
 Pull To The Light
 Qui-Gon Jinn
@@ -150,8 +147,8 @@ Pokkit
 Qi'ra
 Reva
 Rey
-Sabé
 Sabine Wren
+Sabé
 Shin Hati
 SM-33
 Supreme Leader Snoke
@@ -168,12 +165,15 @@ Zorii Bliss
 Adi Gallia
 Admiral Raddus
 Ahsoka Tano
+"All Too Easy"
 Anakin Skywalker
 Asajj Ventress
 Atton Rand
 Axe Woves
 Bail Organa
 Bastila Shan
+Battle Droids
+Battle Droids Vs Gungans
 Baze Malbus
 Ben (Obi-Wan) Kenobi
 Bix Caleen
@@ -184,29 +184,37 @@ Canderous Ordo
 Captain Phasma
 Carth Onasi
 Cassian Andor
+Chewbacca and BB-8
 Chirrut Îmwe
 Clone Commander Cody
 Clone Troopers
+Confronting Darth Vader
 Count Dooku
+Count Dooku's Hangar
 Darth Malak
 Darth Maul
 Darth Revan
 Darth Sidious
 Darth Sion
 Darth Vader
+Darth Vader Cuts Off Luke Skywalker's Arm
+Darth Vader's Fall
 Dedra Meero
 Director Krennic
 Eeth Koth
 Even Piell
 Fifth Brother
+Following Darth Vader
 Galen Erso
 General Grievous
 Grand Admiral Thrawn
 Grand Moff Tarkin
 Grogu
+Gungan Sacred Place
 Han Solo: Imperial Stormtrooper Outfit
 Hera Syndulla
 HK-47
+"I Am Your Father"
 Imperial TIE Fighter Pilot
 Jabba the Hutt
 Jango Fett
@@ -225,6 +233,9 @@ Kylo Ren
 Lando Calrissian
 Leia Organa
 Luke Skywalker
+Luke Skywalker Flies Through The Window
+Luke Skywalker Is Pushed Back
+Luke Skywalker Strikes Back
 Luthen Rael
 Mace Windu
 Maul
@@ -233,12 +244,18 @@ Moff Gideon
 Mon Mothma
 Morgan Elsbeth
 Mother Talzin
+Naboo
 Obi-Wan Kenobi
+Opee Sea Killer Hunts the Gungan Submarine
 Padmé Amidala
 Paz Vizsla
 Plo Koon
 Qui-Gon Jinn
 Ragnar Vizsla
+Ravinak
+Reclaiming The Lightsaber
+"Release Your Anger"
+Republic Gunships
 Rey
 Sabine Wren
 Saesee Tiin
@@ -249,16 +266,27 @@ Shin Hati
 Sith Soldier
 T3-M4
 The Armorer
+The Duel Resumes
+The Krayt Dragon Targets A Bantha
 The Mandalorian
+The Mudhorn
+The Podracer Advances
+The Power Of The Dark Side
 The Stranger
 Vice Admiral Holdo
 Visas Marr
 Wicket W. Warrick
 Yaddle
 Yoda
+"You Are Beaten"
+"You Are Not A Jedi, Yet"
 Zorii Bliss
 
 [multi]
+C-3PO / Babu Frik
+Cassian Andor / K-2SO
+Poe Dameron / BB-8
+HK-47 / T3-M4
 Cad Bane / Boba Fett
 Dryden Vos / Maul
 Asajj Ventress / Darth Maul

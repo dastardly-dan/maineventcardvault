@@ -1,15 +1,10 @@
 # name: 2026 Topps Cosmic Chrome WWE
 # sport: WWE
 # added: 2026-11-22
-# source: https://www.checklistcenter.com/2026-topps-cosmic-chrome-wwe-wrestling-card-checklist/
+# source:
+# note: Official Topps checklist (CheckList_26CCWW spreadsheet)
 
 [base]
-"Million Dollar Man" Ted DiBiase
-"Mr. Perfect" Curt Hennig
-"Road Dogg" Jesse James
-"Rowdy" Roddy Piper
-"Stone Cold" Steve Austin
-"The American Nightmare" Cody Rhodes
 Adriana Rizzo | W
 AJ Lee | W
 AJ Styles
@@ -127,8 +122,10 @@ Malik Blade
 Mark Henry
 Maxxine Dupri | W
 Michin | W
+"Million Dollar Man" Ted DiBiase
 Montez Ford
 Mosh
+"Mr. Perfect" Curt Hennig
 Myles Borne
 Naomi | W
 Natalya | W
@@ -154,7 +151,9 @@ Rey Mysterio
 Rhea Ripley | W
 Ricky Saints
 Rikishi
+"Road Dogg" Jesse James
 Roman Reigns
+"Rowdy" Roddy Piper
 Roxanne Perez | W
 Rusev
 Sami Zayn
@@ -171,12 +170,14 @@ Sol Ruca | W
 Solo Sikoa
 Stacy Keibler | W
 Stephanie Vaquer | W
+"Stone Cold" Steve Austin
 Talla Tonga
 Tama Tonga
 Tank Ledger
 Tatanka
 Tatum Paxley | W
 Tavion Heights
+"The American Nightmare" Cody Rhodes
 The Godfather
 The Miz
 The Rock
@@ -206,10 +207,6 @@ Zelina Vega | W
 Zoey Stark | W
 
 [auto]
-"Million Dollar Man" Ted DiBiase
-"Road Dogg" Jesse James
-"Stone Cold" Steve Austin
-"The American Nightmare" Cody Rhodes
 Adriana Rizzo | W
 AJ Lee | W
 Akira Tozawa
@@ -288,6 +285,7 @@ Ludwig Kaiser
 Lyra Valkyria | W
 Maxxine Dupri | W
 Michin | W
+"Million Dollar Man" Ted DiBiase
 Montez Ford
 Myles Borne
 Natalya | W
@@ -304,6 +302,7 @@ Rey Mysterio
 Rhea Ripley | W
 Ricky Saints
 Rikishi
+"Road Dogg" Jesse James
 Roman Reigns
 Roxanne Perez | W
 Rusev
@@ -317,10 +316,12 @@ Sol Ruca | W
 Solo Sikoa
 Stacy Keibler | W
 Stephanie Vaquer | W
+"Stone Cold" Steve Austin
 Talla Tonga
 Tama Tonga
 Tank Ledger
 Tavion Heights
+"The American Nightmare" Cody Rhodes
 The Miz
 The Rock
 Tiffany Stratton | W
@@ -338,10 +339,6 @@ Zelina Vega | W
 Zoey Stark | W
 
 [insert]
-"Ravishing" Rick Rude
-"Rowdy" Roddy Piper
-"Stone Cold" Steve Austin
-"The American Nightmare" Cody Rhodes
 AJ Lee | W
 AJ Styles
 Alexa Bliss | W
@@ -395,9 +392,11 @@ Nathan Frazer
 Oba Femi
 Penta
 Randy Orton
+"Ravishing" Rick Rude
 Rhea Ripley | W
 Ricky Saints
 Roman Reigns
+"Rowdy" Roddy Piper
 Roxanne Perez | W
 Rusev
 Sami Zayn
@@ -406,7 +405,9 @@ Shawn Michaels
 Sol Ruca | W
 Solo Sikoa
 Stephanie Vaquer | W
+"Stone Cold" Steve Austin
 Tank Ledger
+"The American Nightmare" Cody Rhodes
 The Miz
 The Rock
 Tiffany Stratton | W

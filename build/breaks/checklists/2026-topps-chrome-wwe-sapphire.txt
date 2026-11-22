@@ -1,12 +1,9 @@
 # name: 2026 Topps Chrome WWE Sapphire
 # sport: WWE
 # added: 2026-11-22
-# source: https://www.checklistcenter.com/2026-topps-chrome-sapphire-wwe-wrestling-card-checklist/
+# source: https://cdn.shopify.com/s/files/1/0662/9749/5709/files/FINAL_CHECKLIST_2026TOPPSCHROMEWWE_SAPPHIRE_1.pdf?v=1777570435
 
 [base]
-"Road Dogg" Jesse James
-"Stone Cold" Steve Austin
-"The American Nightmare" Cody Rhodes
 Adriana Rizzo | W
 AJ Lee | W
 AJ Styles
@@ -155,6 +152,7 @@ Rhea Ripley | W
 Ricky Saints
 Ridge Holland
 Rikishi
+"Road Dogg" Jesse James
 Roman Reigns
 Ron Killings
 Roxanne Perez | W
@@ -172,11 +170,13 @@ Solo Sikoa
 Stacy Keibler | W
 Stephanie Vaquer | W
 Stevie Turner | W
+"Stone Cold" Steve Austin
 Talla Tonga
 Tama Tonga
 Tank Ledger
 Tatum Paxley | W
 Tavion Heights
+"The American Nightmare" Cody Rhodes
 The Miz
 The Rock
 Thea Hail | W
@@ -207,11 +207,6 @@ Zelina Vega | W
 Zoey Stark | W
 
 [auto]
-"Cowboy" Bob Orton
-"Hacksaw" Jim Duggan
-"Road Dogg" Jesse James
-"Stone Cold" Steve Austin
-"The American Nightmare" Cody Rhodes
 Adriana Rizzo | W
 AJ Styles
 Akira Tozawa
@@ -239,6 +234,7 @@ Bronco Nima
 Bronson Reed
 Brutus "The Barber" Beefcake
 Brutus Creed
+Candice LeRae | W
 Carmelo Hayes
 Chad Gable
 Channing "Stacks" Lorenzo
@@ -247,6 +243,7 @@ Charlotte Flair | W
 Chelsea Green | W
 Chris Sabin
 CM Punk
+"Cowboy" Bob Orton
 Cruz Del Toro
 D'Lo Brown
 Damian Priest
@@ -264,6 +261,7 @@ Finlay
 Finn Bálor
 Giulia | W
 Gunther
+"Hacksaw" Jim Duggan
 Hillbilly Jim
 Hornswoggle
 Hulk Hogan
@@ -311,6 +309,7 @@ Lucien Price
 Ludwig Kaiser
 Maxxine Dupri | W
 Michelle McCool | W
+Michin | W
 Mike Rotunda
 Montez Ford
 Myles Borne
@@ -333,6 +332,8 @@ Rey Mysterio
 Rhea Ripley | W
 Ricky Saints
 Rikishi
+"Road Dogg" Jesse James
+Roman Reigns
 Ron Killings
 Roxanne Perez | W
 Rusev
@@ -341,13 +342,16 @@ Seth Rollins
 Shawn Michaels
 Shawn Spears
 Sheamus
+Shinsuke Nakamura
 Sol Ruca | W
 Solo Sikoa
 Stacy Keibler | W
 Stephanie Vaquer | W
+"Stone Cold" Steve Austin
 Talla Tonga
 Tama Tonga
 Tatum Paxley | W
+"The American Nightmare" Cody Rhodes
 The Miz
 The Rock
 Thea Hail | W
@@ -372,8 +376,6 @@ Zelina Vega | W
 Zoey Stark | W
 
 [insert]
-"Stone Cold" Steve Austin
-"The American Nightmare" Cody Rhodes
 Alexa Bliss | W
 Bianca Belair | W
 Brock Lesnar
@@ -396,6 +398,8 @@ Rhea Ripley | W
 Roman Reigns
 Seth Rollins
 Stephanie Vaquer | W
+"Stone Cold" Steve Austin
+"The American Nightmare" Cody Rhodes
 The Rock
 Tiffany Stratton | W
 Undertaker

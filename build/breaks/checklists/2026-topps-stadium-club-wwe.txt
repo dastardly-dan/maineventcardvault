@@ -1,15 +1,9 @@
 # name: 2026 Topps Stadium Club WWE
 # sport: WWE
 # added: 2026-11-22
-# source: https://www.checklistcenter.com/?p=63880
+# source: https://cdn.shopify.com/s/files/1/0662/9749/5709/files/2026_Topps_Stadium_Club_WWE_-_Checklist.pdf?v=1791221305
 
 [base]
-"Mr. Perfect" Curt Hennig
-"Ravishing" Rick Rude
-"Rowdy" Roddy Piper
-"Sensational" Sherri Martel | W
-"Stone Cold" Steve Austin
-"The American Nightmare" Cody Rhodes
 Adriana Rizzo | W
 AJ Lee | W
 AJ Styles
@@ -128,6 +122,7 @@ Maryse | W
 Maxxine Dupri | W
 Michin | W
 Montez Ford
+"Mr. Perfect" Curt Hennig
 Myles Borne
 Naomi | W
 Natalya | W
@@ -150,6 +145,7 @@ Piper Niven | W
 R-Truth
 Randy Orton
 Raquel Rodriguez | W
+"Ravishing" Rick Rude
 Razor Ramon
 Rey Fenix
 Rey Mysterio
@@ -157,10 +153,12 @@ Rhea Ripley | W
 Ricky Saints
 Rikishi
 Roman Reigns
+"Rowdy" Roddy Piper
 Roxanne Perez | W
 Rusev
 Sami Zayn
 Saquon Shugars
+"Sensational" Sherri Martel | W
 Seth Rollins
 Shawn Michaels
 Shawn Spears
@@ -172,11 +170,13 @@ Sol Ruca | W
 Solo Sikoa
 Stacy Keibler | W
 Stephanie Vaquer | W
+"Stone Cold" Steve Austin
 Talla Tonga
 Tama Tonga
 Tank Ledger
 Tatum Paxley | W
 Tavion Heights
+"The American Nightmare" Cody Rhodes
 The Godfather
 The Iron Sheik
 The Miz
@@ -206,12 +206,6 @@ Zelina Vega | W
 Zoey Stark | W
 
 [auto]
-"Cowboy" Bob Orton
-"Hacksaw" Jim Duggan
-"Million Dollar Man" Ted DiBiase
-"Road Dogg" Jesse James
-"Stone Cold" Steve Austin
-"The American Nightmare" Cody Rhodes
 Adam Pearce
 Adrian Butler
 Adriana Rizzo | W
@@ -243,6 +237,7 @@ Bret "Hit Man" Hart
 Brock Lesnar
 Bron Breakker
 Bronco Nima
+Bronson Reed
 Brooks Jensen
 Brother Love
 Brutus "The Barber" Beefcake
@@ -264,6 +259,7 @@ Chip Danning
 Chris Sabin
 CM Punk
 Corey Graves
+"Cowboy" Bob Orton
 Cruz Del Toro
 Cutler James
 D'Lo Brown
@@ -299,6 +295,7 @@ Gary Wilson
 Giulia | W
 Greg "The Hammer" Valentine
 Gunther
+"Hacksaw" Jim Duggan
 Hank Walker
 Hillbilly Jim
 Honky Tonk Man
@@ -364,6 +361,7 @@ Ludwig Kaiser
 Maxxine Dupri | W
 Michelle McCool | W
 Michin | W
+"Million Dollar Man" Ted DiBiase
 Molly Holly | W
 Montez Ford
 Myles Borne
@@ -390,6 +388,7 @@ Rhea Ripley | W
 Rick Steiner
 Ricky Saints
 Rikishi
+"Road Dogg" Jesse James
 Rob Van Dam
 Roman Reigns
 Rusev
@@ -410,12 +409,14 @@ Stacy Keibler | W
 Stephanie McMahon | W
 Stephanie Vaquer | W
 Steve Blackman
+"Stone Cold" Steve Austin
 Talla Tonga
 Tama Tonga
 Tank Ledger
 Tatum Paxley | W
 Tavion Heights
 Teddy Long
+"The American Nightmare" Cody Rhodes
 The Boogeyman
 The Godfather
 The Hurricane
@@ -442,90 +443,210 @@ William Regal
 Wren Sinclair | W
 X-Pac
 Zaria | W
+Zelina Vega | W
 Zoey Stark | W
 
 [insert]
-"Stone Cold" Steve Austin
-"The American Nightmare" Cody Rhodes
+Adriana Rizzo | W
 AJ Lee | W
 AJ Styles
+Akira Tozawa
+Alba Fyre | W
 Aleister Black
+Alex Shelley
 Alexa Bliss | W
+Andre Chase
+Angel
+Angelo Dawkins
+Apollo Crews
+Arianna Grace | W
 Asuka | W
+Austin Theory
+Axiom
+B-Fab | W
+Batista
 Bayley | W
 Becky Lynch | W
+Berto
 Bianca Belair | W
+Big E
+Big John Studd
 Blake Monroe | W
+Booker T
+Bray Wyatt
 Bret "Hit Man" Hart
+British Bulldog
 Brock Lesnar
 Bron Breakker
+Bronco Nima
 Bronson Reed
+Brooks Jensen
+Brutus Creed
 Candice LeRae | W
 Carmelo Hayes
+Chad Gable
 Channing "Stacks" Lorenzo
+Charlie Dempsey
 Charlotte Flair | W
 Chelsea Green | W
+Chris Sabin
+Chyna | W
 CM Punk
+Cruz Del Toro
+Cutler James
 Damian Priest
+Dante Chen
 Dexter Lumis
 Diesel
+Dion Lennox
 Dominik Mysterio
+Dragon Lee
 Drew McIntyre
+El Grande Americano
+Elton Prince
+Erick Rowan
 Erik
 Ethan Page
+Fallon Henley | W
 Finn Bálor
 Giulia | W
+Grayson Waller
 Gunther
+Hank Walker
+Hulk Hogan
+Ilja Dragunov
 Ivar
+Ivy Nile | W
 Iyo Sky | W
+Izzi Dame | W
 Jacob Fatu
 Jacy Jayne | W
 Jade Cargill | W
+Jaida Parker | W
+Jasper Troy
+JC Mateo
+JD McDonagh
+Je'Von Evans
 Jey Uso
 Jimmy Uso
+Joaquin Wilde
 Joe Gacy
+Joe Hendry
 John Cena
+Johnny Gargano
 Jordynne Grace | W
+Josh Briggs
+Julius Creed
+Kairi Sane | W
+Kale Dixon
 Kane
+Karmen Petrovic | W
+Kelani Jordan | W
+Ken Shamrock
+Kendal Grey | W
 Kevin Owens
+Kiana James | W
+Kit Wilson
+Kofi Kingston
 Kurt Angle
 LA Knight
+Lainey Reid | W
+Lash Legend | W
+Lexis King
 Lita | W
 Liv Morgan | W
+Lola Vice | W
+Luca Crusifino
+Lucien Price
+Ludwig Kaiser
 Lyra Valkyria | W
+Malik Blade
+Maryse | W
 Maxxine Dupri | W
+Michin | W
 Montez Ford
+"Mr. Perfect" Curt Hennig
 Myles Borne
 Naomi | W
 Natalya | W
+Nathan Frazer
 Nia Jax | W
+Nikki Bella | W
+Nikki Cross | W
+Nikkita Lyons | W
 Niko Vance
+Nikolai Volkoff
+Noam Dar
 Oba Femi
+Osiris Griffin
+Otis
+Paul Bearer
+Paul Heyman
 Penta
+Pete Dunne
+Piper Niven | W
+R-Truth
 Randy Orton
+Raquel Rodriguez | W
+"Ravishing" Rick Rude
+Razor Ramon
 Rey Fenix
 Rey Mysterio
 Rhea Ripley | W
 Ricky Saints
+Rikishi
 Roman Reigns
+"Rowdy" Roddy Piper
 Roxanne Perez | W
 Rusev
 Sami Zayn
+Saquon Shugars
+"Sensational" Sherri Martel | W
 Seth Rollins
 Shawn Michaels
+Shawn Spears
 Sheamus
+Shiloh Hill
+Shinsuke Nakamura
+Skylar Raye | W
 Sol Ruca | W
 Solo Sikoa
+Stacy Keibler | W
 Stephanie Vaquer | W
+"Stone Cold" Steve Austin
 Talla Tonga
+Tama Tonga
+Tank Ledger
+Tatum Paxley | W
+Tavion Heights
+"The American Nightmare" Cody Rhodes
+The Godfather
+The Iron Sheik
+The Miz
 The Rock
+Thea Hail | W
 Tiffany Stratton | W
+Tonga Loa
+Tony D'Angelo
+Torrie Wilson | W
 Trick Williams
 Triple H
 Trish Stratus | W
+Tyler Bate
+Tyra Mae Steele | W
+Tyriek Igwe
+Tyson Dupont
+Ultimate Warrior
+Uncle Howdy
 Undertaker
+Uriah Connors
+Wendy Choo | W
+Wren Sinclair | W
+Xavier Woods
+Yokozuna
 Zaria | W
 Zelina Vega | W
+Zoey Stark | W
 
 [multi]
 Charlotte Flair | W / Alexa Bliss | W
