@@ -1,0 +1,8 @@
+# name: 2025 Leaf Eclectic Signature Series Joe Montana Celebration
+# sport: Leaf Football
+# added: 2026-11-22
+# source: https://www.leaftradingcards.com/products/2025-leaf-eclectic-signature-series-joe-montana-celebration
+# note: Leaf is unlicensed: no team names, so team breaks are not available. Print runs from the official checklist.
+
+[auto]
+Joe Montana

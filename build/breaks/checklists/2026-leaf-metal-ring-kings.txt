@@ -1,0 +1,151 @@
+# name: 2026 Leaf Metal Ring Kings
+# sport: Leaf Wrestling & MMA
+# added: 2026-11-22
+# source: https://www.leaftradingcards.com/products/2026-leaf-metal-ring-kings
+# note: Leaf is unlicensed: no team names, so team breaks are not available. Print runs from the official checklist.
+
+[auto]
+"12 Gauge" Paige VanZant
+"Sugar" Shane Mosley
+Amanda Nunes
+Bret Hart
+Brian Knobbs
+Bruce Buffer
+Brutus Beefcake
+Bushwhacker Luke
+Carlito
+Chase Hooper
+Christy Martin
+Chuck Norris
+Conor McGregor
+Cris Cyborg
+Dana White
+Demolition Ax
+Demolition Smash
+Dennis Buzukja
+Deontay Wilder
+Dolph Lundgren
+Dory Funk Jr.
+Dustin Poirier
+Earl Hebner
+Erin Blanchfield
+Floyd Mayweather Jr.
+Godfather
+Goldberg
+Greg Valentine
+Hasbulla
+Hulk Hogan
+Ian Machado Garry
+Jacqueline Cavalcanti
+Jade Cargill
+Jake Roberts
+James Toney
+Jean Silva
+Jean-Claude Van Damme
+Jeff Hardy
+Jerry Lawler
+Jerry Sags
+Jim Duggan
+Jimmy Hart
+Jon Anik
+Jon Jones
+Joseph Parker
+Julio César Chávez
+Kama
+Katlyn Cerminara
+Kayla Harrison
+Kevin Holland
+Koko B. Ware
+Kurt Angle
+Landon Quiñones
+Lennox Lewis
+Lou Ferrigno
+Mandy Rose
+Manny Pacquiao
+Mason Parris
+Mateusz Gamrot
+Matt Hardy
+Max Holloway
+Merab Dvalishvili
+Michael Bisping
+Michael Buffer
+Michael Spinks
+Michel Qissi
+Micky Ward
+Miesha Tate
+Miguel Cotto
+Mike Tyson
+Molly McCann
+Montana De La Rosa
+Mr. T
+Nazim Sadykhov
+Oleksandr Usyk
+Oscar De La Hoya
+Ovince Saint Preux
+Papa Shango
+Pernell Whitaker
+Quinton "Rampage" Jackson
+Ralph Macchio
+Raul Rosas Jr.
+Ray Mancini
+Ray Mercer
+Renato Moicano
+Ric Flair
+Ricky Steamboat
+Riddick Bowe
+Rob Van Dam
+Roy Jones Jr.
+Ryan Garcia
+Shakur Stevenson
+Shavkat Rakhmonov
+Steve Austin
+Sugar Ray Leonard
+Tatanka
+Ted DiBiase
+Terrance McKinney
+The Barbarian
+The Boogeyman
+The Great Khali
+Tito Santana
+Tommy Fury
+Trevin Giles
+Tyler "Hook" Senerchia
+Tyson Fury
+Victor Ortiz
+Vinny Paz
+Warlord
+
+[insert]
+André The Giant
+George Foreman
+Jack Dempsey
+Joe Louis
+Muhammad Ali
+Randy Savage
+Rocky Marciano
+Roddy Piper
+Sugar Ray Robinson
+
+[multi]
+"Sugar" Shane Mosley / Oscar De La Hoya
+Floyd Mayweather Jr. / Manny Pacquiao
+Floyd Mayweather Jr. / Shakur Stevenson
+Jake Roberts / Jerry Lawler
+Jean-Claude Van Damme / Michel Qissi
+Jerry Lawler / Carlito
+Jim Duggan / Ted DiBiase
+Jimmy Hart / Jerry Lawler
+Jon Jones / Daniel Cormier
+Joseph Parker / Tyson Fury
+Julio César Chávez / Oscar De La Hoya
+Max Holloway / Dustin Poirier
+Michelle Waterson-Gomez / "12 Gauge" Paige VanZant
+Mr. T / Dolph Lundgren
+Oscar De La Hoya / Sugar Ray Leonard
+Ric Flair / Greg Valentine
+Ric Flair / Ricky Steamboat
+Steve Austin / Bret Hart
+Sugar Ray Leonard / Tommy Hearns
+Tito Santana / Greg Valentine
+Tyson Fury / Deontay Wilder
+Victor Ortiz / Floyd Mayweather Jr.

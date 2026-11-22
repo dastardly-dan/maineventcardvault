@@ -1,0 +1,46 @@
+# name: 2026 Leaf Metallic Imaginations Series 3
+# sport: Leaf Pop Culture
+# added: 2026-11-22
+# source: https://www.leaftradingcards.com/products/2026-metallic-imaginations-series-3
+# note: Leaf is unlicensed: no team names, so team breaks are not available. Print runs from the official checklist.
+
+[insert]
+Adrian Peterson
+Allen Iverson
+Barry Sanders
+Brett Favre
+Bryce Underwood
+Cameron Boozer
+CJ Carr
+Conor McGregor
+Cristiano Ronaldo
+Dante Moore
+Dennis Rodman
+Derrick Henry
+Donald J. Trump
+Floyd Mayweather Jr.
+Giannis Antetokounmpo
+Hannah Hidalgo
+Hulk Hogan
+Jayden Daniels
+Jeff Hardy
+Johnny Manziel
+Ken Griffey Jr.
+Lionel Messi
+Malachi Toney
+Nikola Jokić
+Paul Skenes
+Pelé
+Peyton Manning
+Roch Cholowsky
+Shaquille O'Neal
+Sophie Cunningham
+Stephen Curry
+Steve Nash
+Tim Tebow
+Yao Ming
+
+[multi]
+Cameron Boozer / Sarah Strong
+Stephen Curry / Allen Iverson
+Syla Swords / Olivia Olson

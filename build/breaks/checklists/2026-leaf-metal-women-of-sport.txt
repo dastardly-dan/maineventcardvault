@@ -1,0 +1,339 @@
+# name: 2026 Leaf Metal Women of Sport
+# sport: Leaf Multi-Sport
+# added: 2026-11-22
+# source: https://www.leaftradingcards.com/products/2026-leaf-metal-women-of-sport
+# note: Leaf is unlicensed: no team names, so team breaks are not available. Print runs from the official checklist.
+
+[base]
+Aaliyah Crump | W
+Abbey Murphy | W
+Ajša Sivka | W
+Amber Glenn | W
+Angela Ruggiero | W
+Anna Leigh Waters | W
+Annie Kunz | W
+Ashley Sofilkanich | W
+Audi Crooks | W
+Avery Koenen | W
+Ayoka Lee | W
+Azzi Fudd | W
+Becky Hammon | W
+Bella Hines | W
+Bella Mir | W
+Bella Sims | W
+Bitty Schram | W
+Blanca Thomas | W
+Bree Hall | W
+Brianna Decker | W
+Caleigh Haetten | W
+Cameron Brink | W
+Cami Merickel | W
+Caroline Ducharme | W
+Caroline Harvey | W
+Caroline Ouellette | W
+Chloe Kitts | W
+Christy Martin | W
+Cynthia Cooper | W
+Dea Monz | W
+Diana Taurasi | W
+Dominique Malonga | W
+Elle Beaufait | W
+Emery Dupes | W
+Emily Pierce | W
+Erin Andrews | W
+Erin Blanchfield | W
+Erin Matson | W
+Esmery Martínez | W
+Evy Leibfarth | W
+Gabriela Jaquez | W
+Gabrielle Thomas | W
+Geena Davis | W
+Georgia Amoore | W
+Grace Knox | W
+Grace Stephens | W
+Hailey Van Lith | W
+Haley Cavinder | W
+Hanna Cavinder | W
+Hannah Hidalgo | W
+Hannah Stuelke | W
+Hannah White | W
+Holland Methe | W
+Hope Solo | W
+Isabella Geraci | W
+Isabella Nilsen | W
+Jacqueline Cavalcanti | W
+Jacy Sheldon | W
+Jade Iginla | W
+Jayda Coleman | W
+Jeanette Lee | W
+Jeanie Buss | W
+Jenica Lewis | W
+Jerzy Robinson | W
+Jill Braverman | W
+Jocelyn Alo | W
+Jordyn Frahm | W
+Juliana Miller | W
+Kai Trump | W
+Kailin Chio | W
+Kaitlyn Chen | W
+Kamilla Cardoso | W
+Karlyn Pickens | W
+Kassidy Cook | W
+Kate Harpring | W
+Kate Martin | W
+Katelyn Ohashi | W
+Katie Dinnebier | W
+Katie Moore | W
+Katlyn Cerminara | W
+Kayce Smith | W
+Kennedy Martin | W
+Kielyn McCright | W
+Kim Mulkey | W
+Kinzie Hansen | W
+KJ Johnson | W
+Laila Edwards | W
+Laura Rutledge | W
+Lauren Betts | W
+Lea Jansen | W
+Lexie Hull | W
+Lily Fenton | W
+Lily Jones | W
+Liz Kitley | W
+Maddie Scherr | W
+Maddie Webber | W
+Madi Hays | W
+Madison Booker | W
+Mady Aulbach | W
+Makenzie Steele | W
+Manon Rhéaume | W
+Marleigh O'Day | W
+Maya Brady | W
+McKenzie Mathurin | W
+Me'Arah O'Neal | W
+Megan Cavanagh | W
+Megan Keller | W
+Michelle Waterson-Gomez | W
+MiLaysia Fulwiley | W
+Mo'ne Davis | W
+Montana De La Rosa | W
+Morgan Stickney | W
+Mya Pauldo | W
+Nika Mühl | W
+Olivia Dunne | W
+Olivia Olson | W
+Olivia Rothfeld | W
+Olivia Vukoša | W
+Paris Mikinski | W
+Qandace Samuels | W
+Rachel Glenn | W
+Rachel Rettger | W
+Riley Ammenhauser | W
+Saniyah Hall | W
+Sarah Ashlee Barker | W
+Sarah Bacon | W
+Sarah Strong | W
+Savannah Freeman | W
+Sofia Chepenik | W
+Sofia Sewing | W
+Sophia Esposito | W
+Sophia Panossian | W
+Sydney Ash | W
+Sydney Razeghi | W
+Sydney Smith | W
+Syla Swords | W
+Tatianna Griffin | W
+Tatum O'Neal | W
+Taylor Sofilkanich | W
+Te-Hina Paopao | W
+Toby Fournier | W
+Toni Breidinger | W
+Tonya Harding | W
+Trinity Jones | W
+Vanita Krouch | W
+Vashti Cunningham | W
+ZaKiyah Johnson | W
+
+[auto]
+Aaliyah Crump | W
+Abbey Murphy | W
+Ajša Sivka | W
+Amber Glenn | W
+Angela Ruggiero | W
+Anna Leigh Waters | W
+Annie Kunz | W
+Ashley Sofilkanich | W
+Audi Crooks | W
+Avery Koenen | W
+Ayoka Lee | W
+Azzi Fudd | W
+Becky Hammon | W
+Bella Hines | W
+Bella Mir | W
+Bella Sims | W
+Bitty Schram | W
+Blanca Thomas | W
+Bree Hall | W
+Brianna Decker | W
+Caleigh Haetten | W
+Cameron Brink | W
+Cami Merickel | W
+Caroline Ducharme | W
+Caroline Harvey | W
+Caroline Ouellette | W
+Chloe Kitts | W
+Christy Martin | W
+Cynthia Cooper | W
+Dea Monz | W
+Diana Taurasi | W
+Dominique Malonga | W
+Elle Beaufait | W
+Emery Dupes | W
+Emily Pierce | W
+Erin Andrews | W
+Erin Blanchfield | W
+Erin Matson | W
+Esmery Martínez | W
+Evy Leibfarth | W
+Gabriela Jaquez | W
+Gabrielle Thomas | W
+Geena Davis | W
+Georgia Amoore | W
+Grace Knox | W
+Grace Stephens | W
+Hailey Van Lith | W
+Haley Cavinder | W
+Hanna Cavinder | W
+Hannah Hidalgo | W
+Hannah Stuelke | W
+Hannah White | W
+Holland Methe | W
+Hope Solo | W
+Isabella Geraci | W
+Isabella Nilsen | W
+Jacqueline Cavalcanti | W
+Jacy Sheldon | W
+Jade Iginla | W
+Jayda Coleman | W
+Jeanette Lee | W
+Jeanie Buss | W
+Jenica Lewis | W
+Jerzy Robinson | W
+Jill Braverman | W
+Jocelyn Alo | W
+Jordyn Frahm | W
+Juliana Miller | W
+Kai Trump | W
+Kaila Kuhn | W
+Kailin Chio | W
+Kaitlyn Chen | W
+Kamilla Cardoso | W
+Karlyn Pickens | W
+Kassidy Cook | W
+Kate Harpring | W
+Kate Martin | W
+Katelyn Ohashi | W
+Katie Dinnebier | W
+Katie Moore | W
+Katlyn Cerminara | W
+Kayce Smith | W
+Kennedy Martin | W
+Kielyn McCright | W
+Kim Mulkey | W
+Kinzie Hansen | W
+KJ Johnson | W
+Laila Edwards | W
+Laura Rutledge | W
+Lauren Betts | W
+Lea Jansen | W
+Lexie Hull | W
+Lily Fenton | W
+Lily Jones | W
+Liz Kitley | W
+Maddie Scherr | W
+Maddie Webber | W
+Madi Hays | W
+Madison Booker | W
+Mady Aulbach | W
+Makenzie Steele | W
+Manon Rhéaume | W
+Marleigh O'Day | W
+Maya Brady | W
+McKenzie Mathurin | W
+Me'Arah O'Neal | W
+Megan Cavanagh | W
+Megan Keller | W
+Michelle Waterson-Gomez | W
+MiLaysia Fulwiley | W
+Mo'ne Davis | W
+Montana De La Rosa | W
+Morgan Stickney | W
+Mya Pauldo | W
+Nika Mühl | W
+Olivia Dunne | W
+Olivia Olson | W
+Olivia Rothfeld | W
+Olivia Vukoša | W
+Paris Mikinski | W
+Qandace Samuels | W
+Rachel Glenn | W
+Rachel Rettger | W
+Riley Ammenhauser | W
+Saniyah Hall | W
+Sarah Ashlee Barker | W
+Sarah Bacon | W
+Sarah Strong | W
+Savannah Freeman | W
+Sofia Chepenik | W
+Sofia Sewing | W
+Sophia Esposito | W
+Sophia Panossian | W
+Sydney Ash | W
+Sydney Razeghi | W
+Sydney Smith | W
+Syla Swords | W
+Tatianna Griffin | W
+Tatum O'Neal | W
+Taylor Sofilkanich | W
+Te-Hina Paopao | W
+Toby Fournier | W
+Toni Breidinger | W
+Tonya Harding | W
+Trinity Jones | W
+Vanita Krouch | W
+Vashti Cunningham | W
+ZaKiyah Johnson | W
+
+[multi]
+Amber Glenn | W / Toni Breidinger | W / Jocelyn Alo | W / Cameron Brink | W
+Anna Leigh Waters | W / Sofia Sewing | W
+Annie Kunz | W / Vashti Cunningham | W / Dea Monz | W / Cami Merickel | W / Emily Pierce | W / Katie Moore | W / Lily Jones | W / Riley Ammenhauser | W
+Ashley Sofilkanich | W / Taylor Sofilkanich | W
+Audi Crooks | W / Toby Fournier | W / ZaKiyah Johnson | W
+Azzi Fudd | W / Kailin Chio | W / Karlyn Pickens | W / Bella Mir | W
+Azzi Fudd | W / Lauren Betts | W
+Azzi Fudd | W / Lauren Betts | W / Gabriela Jaquez | W / Audi Crooks | W / MiLaysia Fulwiley | W / Madison Booker | W
+Azzi Fudd | W / Olivia Miles | W
+Bella Mir | W / Erin Blanchfield | W
+Cameron Brink | W / Kamilla Cardoso | W / Alissa Pili | W / Nika Mühl | W / Esmery Martínez | W / Kate Martin | W
+Dominique Malonga | W / Sonia Citron | W / Kiki Iriafen | W
+Georgia Amoore | W / Sarah Ashlee Barker | W / Ajša Sivka | W
+Hanna Cavinder | W / Haley Cavinder | W
+Jeanette Lee | W / Cynthia Cooper | W / Tonya Harding | W / Hope Solo | W
+Kailin Chio | W / Katelyn Ohashi | W
+Kailin Chio | W / Kielyn McCright | W / Sydney Ash | W / Sophia Esposito | W / Sydney Razeghi | W / Elle Beaufait | W
+Kailin Chio | W / Olivia Dunne | W / Kielyn McCright | W / Ragan Smith | W / Sydney Ash | W / Sydney Razeghi | W / Sydney Smith | W / Sophia Esposito | W
+Kailin Chio | W / Sydney Ash | W / Kielyn McCright | W
+Karlyn Pickens | W / Jordyn Frahm | W
+Kate Harpring | W / Trinity Jones | W / Jerzy Robinson | W
+Kinzie Hansen | W / Jocelyn Alo | W
+Lauren Betts | W / Gabriela Jaquez | W
+Megan Keller | W / Jordyn Frahm | W / Kassidy Cook | W / Dominique Malonga | W
+Morgan Stickney | W / Kassidy Cook | W
+Olivia Dunne | W / Julz Dunne | W
+Olivia Dunne | W / Kai Trump | W / Anna Leigh Waters | W / Lauren Betts | W
+Olivia Dunne | W / Olivia Fabry | W
+Saniyah Hall | W / Kate Harpring | W / Olivia Vukoša | W
+Sarah Ashlee Barker | W / Cameron Brink | W / Kamilla Cardoso | W / Kaitlyn Chen | W / Lexie Hull | W / Dominique Malonga | W / Te-Hina Paopao | W / Hailey Van Lith | W
+Sarah Strong | W / Olivia Vukoša | W
+Syla Swords | W / Saniyah Hall | W / Kate Harpring | W
+Toby Fournier | W / Taylor Sofilkanich | W

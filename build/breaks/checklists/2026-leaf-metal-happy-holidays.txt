@@ -1,0 +1,280 @@
+# name: 2026 Leaf Metal Happy Holidays
+# sport: Leaf Multi-Sport
+# added: 2026-11-22
+# source: https://www.leaftradingcards.com/products/2026-leaf-metal-happy-holidays
+# note: Leaf is unlicensed: no team names, so team breaks are not available. Print runs from the official checklist.
+
+[auto]
+Ajša Sivka
+Alan Page
+Alan Trammell
+Alex Freeman
+Allen Iverson
+Amari Whiting
+Andre Agassi
+Andre Reed
+Andruw Jones
+Andy Van Slyke
+Anna Leigh Waters
+Artis Gilmore
+Azzi Fudd
+Barry Larkin
+Barry Sanders
+Bob Griese
+Bobby Valentine
+Brendan Fraser
+Bret Hart
+Brutus Beefcake
+Bryce Dallas Howard
+Bud Selig
+Byrd Ficklin
+Byrum Brown
+Calvin Murphy
+Cam Coleman
+Carlton Fisk
+Carmen Electra
+Caroline Wozniacki
+Cayden Griffiths
+Chad Johnson
+Charles Oliveira
+Charlie Sheen
+Chazz Palminteri
+Chevy Chase
+Chris Bosh
+Chris Hogan
+Christian Collins
+Christopher Vargas
+Chuck Norris
+Cliff Floyd
+Daisy Ridley
+Dan Aykroyd
+Dan Hurley
+Darren Aronofsky
+Dave Concepcion
+Dave Winfield
+David Duchovny
+Dax Whitney
+Deion Sanders
+Demond Williams Jr.
+Denise Richards
+Dennis Rodman
+Devon White
+Dexter McCleon Jr.
+Dez Bryant
+Dia Bell
+Dick Vitale
+Diego Forlán
+Don Mattingly
+Donovan McNabb
+Drew Brees
+Dwight Gooden
+Dwyane Wade
+Earl Campbell
+Ed O'Neill
+Eddie Murray
+Edgardo Alfonzo
+Edgerrin James
+Edie Falco
+Elijah Haven
+Eric Gagne
+Faizon Brandon
+Ferguson Jenkins
+Floyd Mayweather Jr.
+Frank Viola
+Gabriela Jaquez
+Gary Sheffield
+Gene Tenace
+Gheorghe Mureșan
+Giannis Antetokounmpo
+Gilbert Burns
+Gilbert Melendez
+Gillian Anderson
+Goldberg
+Goose Gossage
+Greg Maddux
+Heather Graham
+Heather Locklear
+Hines Ward
+Howard Johnson
+Huey Lewis
+Ja Rule
+Jack Clark
+Jack Ham
+Jack Morris
+Jack Youngblood
+Jamal Lewis
+James Blake
+James Harrison
+James White
+Jamie Foxx
+Jamier Brown
+Jane Fonda
+Jason Taylor
+Jay Novacek
+Jayden Maiava
+Jean Silva
+Jeff Goldblum
+Jeremiah Smith
+Jerry Stackhouse
+Jim Kelly
+Jim McMahon
+Jim Rice
+Jimmer Fredette
+Joe Dumars
+John Arne Riise
+John Daly
+John Kruk
+John Smoltz
+Johnny Bench
+Johnny Depp
+Johnny Manziel
+Jon Jones
+Jose Canseco
+Joseph Parker
+Josh Brolin
+Josh Gad
+Josh Gordon
+Joshua Edwards
+Joshua Van
+Ju Ju Lewis
+Julian Arnold
+Julius Erving
+Jutta Leerdam
+Kaká
+Kate Harpring
+Ken Anderson
+Ken Griffey Jr.
+Kendrick Perkins
+Kevin Nealon
+Larry Bird
+Lauren Betts
+LeGarrette Blount
+Lennox Lewis
+Leonard Moore
+LeRoy Butler
+Luke Kuechly
+Luke Littler
+Macaulay Culkin
+Malachi Toney
+Manny Pacquiao
+Marco Materazzi
+Marcos Maidana
+Marcus Freeman
+Mariano Rivera
+Mario Andretti
+Mario Cristobal
+Martin Sheen
+Martina Hingis
+Mason Parris
+Mauricio Ruffy
+Max Holloway
+Mia Williams
+Michael J. Fox
+Michael Vick
+Mickey Rourke
+Miguel Cotto
+Mike Mussina
+Mike Schmidt
+Mike Tyson
+Mr. T
+Nate Diaz
+Nathan Fillion
+Neil Smith
+Nick Carter
+Nick Kurtz
+Nicolas Cage
+Nolan Ryan
+Oleksandr Usyk
+Olivia Dunne
+Olivia Vukoša
+Oscar Collazo
+Otis Birdsong
+Ozzie Smith
+Paddy Pimblett
+Patrick Renna
+Paul Molitor
+Peyton Manning
+Radamel Falcao
+Randy White
+Rebecca De Mornay
+Ric Flair
+Ricky Williams
+Riddick Bowe
+Rob Riggle
+Roberto Durán
+Robin Yount
+Roger Staubach
+Rollie Fingers
+Sam Leavitt
+Samuel L. Jackson
+Santino Marella
+Shakur Stevenson
+Shaquille O'Neal
+Shawn Kemp
+Sidney Moncrief
+Steffi Graf
+Stephon Marbury
+Steve Carlton
+Steve Young
+Striker Pence
+Tatum Bittick
+Ted Simmons
+Terrell Davis
+Terrence Brown
+Terry Francona
+The Barbarian
+The Great Khali
+Tim Tebow
+Toby Fournier
+Tom Glavine
+Tom Holland
+Tony Parker
+Tonya Harding
+Troy Aikman
+Tyrese Maxey
+Vicente Luque
+Victor Ortiz
+Vladimir Guerrero
+Will Smith
+William Shatner
+
+[multi]
+Archie Manning / Joe Theismann / Ron Jaworski
+Azzi Fudd / Lauren Betts
+Bob Griese / Drew Brees
+Chevy Chase / Beverly D'Angelo / Anthony Michael Hall
+Chevy Chase / Macaulay Culkin
+Dwyane Wade / Chris Bosh
+Eddie Murray / Andre Dawson
+Edie Falco / Drea de Matteo
+Freddie Roach / Manny Pacquiao
+Greg Maddux / Tom Glavine
+Greg Maddux / Tom Glavine / John Smoltz
+James White / Chris Hogan / Danny Amendola
+James White / LeGarrette Blount
+Jim Calhoun / Dan Hurley
+Jim Rice / Carlton Fisk / Fred Lynn
+Joe Montana / Jim Kelly / Troy Aikman
+Josh Brolin / Chris Pratt / Paul Bettany
+Josh Brolin / Paul Bettany
+Julian Edelman / Danny Amendola / Chris Hogan
+Julius Erving / Allen Iverson / Tyrese Maxey
+Ken Griffey Jr. / Mike Tyson / Barry Sanders
+Malachi Toney / Jeremiah Smith
+Mariano Rivera / Lee Smith / Trevor Hoffman
+Michael J. Fox / Christopher Lloyd
+Mickey Rourke / Dolph Lundgren
+Mike Schmidt / Steve Carlton
+Mike Tyson / Michael Spinks
+Mike Tyson / Michael Spinks / Lennox Lewis
+Pete Sampras / Andre Agassi
+Ric Flair / Bret Hart / Mick Foley
+Ric Flair / Jerry Lawler / Jim Duggan
+Roberto Durán / Oscar De La Hoya / Floyd Mayweather Jr.
+Robin Yount / Paul Molitor / Ted Simmons
+Ron Howard / Bryce Dallas Howard
+Scott Rolen / Adrián Beltré
+Steffi Graf / Martina Hingis
+Tyrese Maxey / Allen Iverson
+Vladimir Guerrero / Andruw Jones
+Will Smith / Jeff Goldblum

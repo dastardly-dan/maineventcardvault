@@ -1,0 +1,238 @@
+# name: 2025-26 Leaf NLL
+# sport: Leaf Lacrosse
+# added: 2026-11-22
+# source: https://www.leaftradingcards.com/products/2025-26-leaf-nll
+# note: Leaf is unlicensed: no team names, so team breaks are not available. Print runs from the official checklist.
+
+[base]
+Adam Poitras
+Aden Walsh
+Alex Pace
+Alex Simmons
+Andrew Kew
+Ari Steenhuis
+Austin Shanks
+Ben Trumble
+Bo Columbus
+Brad Kri
+Braedon Saris
+Brennan O'Neill
+Brent Noseworthy
+Brett Dobson
+Bryan Cole
+Callum Jones
+Challen Rogers
+Chase Fraser
+Chris Boushy
+Chris Cloutier
+Christian Del Bianco
+Christopher Origlieri
+CJ Kirst
+Clarke Petterson
+Cody Jamieson
+Colton Watkinson
+Connor Farrell
+Connor Fields
+Connor Kearnan
+Connor Kirst
+Connor Nock
+Curtis Dickson
+Dalton Young
+Danny Logan
+Dawson Theede
+Dhane Smith
+Dillon Ward
+Doug Jamieson
+Dylan Robinson
+Dyson Williams
+Eli Salama
+Ethan Walker
+Frank Scigliano
+Graeme Hossack
+Harrison Matsuoka
+Ian MacKay
+Jack Hannah
+Jacob Piseno
+Jake Boudreau
+Jake Naso
+Jake Withers
+Jalen Chaster
+Jaxon Fridge
+Jeff Teat
+Jesse King
+Joe Resetarits
+Jonathan Donville
+Jordan MacIntosh
+Josh Byrne
+Josh Jubenville
+Justin Inacio
+Keegan Bal
+Kevin Brownell
+Kyle Buchanan
+Kyle Pepper
+Kyle Rubisch
+Landon Kells
+Larson Sundown
+Latrell Harris
+Lyle Thompson
+Mark Matthews
+Matt Gilray
+Matt Hossack
+Matt Vinc
+Matthew Paolatto
+Michael Grace
+Mike Byrne
+Mike Messenger
+Mitch de Snoo
+Mitch Jones
+Nathan Kapp
+Nicholas Rowlett
+Nick Chaykowsky
+Nick Damude
+Nick Rose
+Nick Weiss
+Noah Manning
+Nolan Byrne
+Owen Grant
+Owen Hiltz
+Patrick Kaschalk
+Paul Dawson
+Reed Kurtz
+Reilly O'Connor
+Rob Hellyer
+Robert Church
+Robert Hope
+Ryan Keenan
+Ryan Lanchbury
+Ryan Smith
+Ryan Terefenko
+Rylan Hartley
+Ryland Rees
+Sam English
+Shane Simpson
+Shayne Jackson
+Steve Priolo
+Tanner Cook
+Tehoka Nanticoke
+Thomas McConvey
+Thomas Whitty
+Tre Leclaire
+Trevor Baptiste
+Troy Holowchuk
+Tye Kurtz
+Tyler Pace
+Tyrell Hamer-Jackson
+Warren Hill
+Wesley Berg
+Will Malcom
+Zach Currier
+Zach Higgins
+Zach Manns
+
+[auto]
+Adam Poitras
+Alex Simmons
+Andrew Kew
+Ari Steenhuis
+Ben Trumble
+Brad Kri
+Braedon Saris
+Brennan O'Neill
+Brett Dobson
+Bryan Cole
+Callum Jones
+Chris Cloutier
+Christian Del Bianco
+CJ Kirst
+Clarke Petterson
+Connor Fields
+Connor Kearnan
+Connor Kirst
+Connor Nock
+Curtis Dickson
+Danny Logan
+Dhane Smith
+Dillon Ward
+Dylan Robinson
+Dyson Williams
+Ethan Walker
+Graeme Hossack
+Ian MacKay
+Jack Hannah
+Jake Withers
+Jaxon Fridge
+Jeff Teat
+Jesse King
+Joe Resetarits
+Josh Byrne
+Keegan Bal
+Kyle Pepper
+Kyle Rubisch
+Mark Matthews
+Matt Gilray
+Michael Grace
+Mike Messenger
+Mitch de Snoo
+Mitch Jones
+Noah Manning
+Nolan Byrne
+Owen Hiltz
+Robert Church
+Robert Hope
+Ryan Keenan
+Ryan Smith
+Rylan Hartley
+Ryland Rees
+Sam English
+Shayne Jackson
+Tanner Cook
+Tehoka Nanticoke
+Tre Leclaire
+Tye Kurtz
+Tyler Pace
+Wesley Berg
+Will Malcom
+Zach Currier
+Zach Higgins
+Zach Manns
+
+[insert]
+Brad Kri
+Brett Dobson
+Buffalo Bandits vs Vancouver Warriors
+Callum Jones
+Challen Rogers
+Chris Boushy
+Christian Del Bianco
+CJ Kirst
+Colorado Mammoth vs Philadelphia Wings
+Dhane Smith
+Dillon Ward
+Georgia Swarm vs Halifax Thunderbirds
+Georgia Swarm vs Saskatchewan Rush
+Halifax Thunderbirds vs Oshawa Firewolves
+Jake Boudreau
+Jeff Teat
+Jordan MacIntosh
+Josh Jubenville
+Keegan Bal
+Latrell Harris
+Mark Matthews
+Michael Grace
+Mike Messenger
+Nick Chaykowsky
+Nick Damude
+Nick Rose
+Nick Weiss
+Owen Hiltz
+Rob Hellyer
+Robert Hope
+Rochester Knighthawks vs Las Vegas Desert Dogs
+Sam English
+San Diego Seals vs Ottawa Black Bears
+San Diego Seals vs Toronto Rock
+Toronto Rock vs Calgary Roughnecks
+Toronto Rock vs Halifax Thunderbirds
+Troy Holowchuk
+Warren Hill
+Zach Currier

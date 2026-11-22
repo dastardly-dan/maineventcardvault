@@ -1,0 +1,30 @@
+# name: 2026 Leaf Anime Nation OVA
+# sport: Leaf Pop Culture
+# added: 2026-11-22
+# source: https://www.leaftradingcards.com/products/2026-leaf-anime-nation-ova
+# note: Leaf is unlicensed: no team names, so team breaks are not available. Print runs from the official checklist.
+
+[base]
+Anna Leigh Waters
+Barry Sanders
+Cameron Boozer
+Cristiano Ronaldo
+Giannis Antetokounmpo
+Johnny Depp
+Jose Canseco
+Lamine Yamal
+Lionel Messi
+Malachi Toney
+Mariano Rivera
+Nicolas Cage
+Nikola Jokić
+Ousmane Dembélé
+Peyton Manning
+Stephen Curry
+
+[auto]
+Anna Leigh Waters
+Cristiano Ronaldo
+Giannis Antetokounmpo
+Ousmane Dembélé
+Peyton Manning

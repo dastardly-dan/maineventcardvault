@@ -1,0 +1,249 @@
+# name: 2026 Leaf Metal Independence Day
+# sport: Leaf Multi-Sport
+# added: 2026-11-22
+# source: https://www.leaftradingcards.com/products/2026-leaf-metal-independence-day
+# note: Leaf is unlicensed: no team names, so team breaks are not available. Print runs from the official checklist.
+
+[auto]
+Alan Page
+Alan Trammell
+Allan Houston
+Allen Iverson
+Andre Reed
+Andruw Jones
+Andy Reid
+Anna Leigh Waters
+Anthony Hopkins
+Audi Crooks
+Austin Reaves
+Barry Sanders
+Bill Lee
+Billy Joe DuPree
+Bo Jackson
+Bobby Abreu
+Brady Quinn
+Brandon Aubrey
+Bret Hart
+Brie Larson
+Brien Taylor
+Brooks Koepka
+Cam Coleman
+Cameron Boozer
+Cameron Brink
+Cameron Skattebo
+Carmen Electra
+Cayden Boozer
+Chad Johnson
+Charlie Sheen
+Chevy Chase
+Chris Webber
+Christina Applegate
+Christy Martin
+Chuck Norris
+CJ Carr
+Cleon Jones
+Cliff Floyd
+Conor McGregor
+Dante Moore
+Darrell Evans
+Dax Whitney
+Deebo Samuel
+Dennis Rodman
+DeSean Jackson
+Dexter McCleon Jr.
+Dia Bell
+Dominique Wilkins
+Don Mattingly
+Drew Brees
+Dustin Poirier
+Dwight Howard
+Earl Thomas
+Elisabeth Shue
+Emmitt Smith
+Erling Haaland
+Faizon Brandon
+Floyd Mayweather Jr.
+Frank Thomas
+George Birge
+George Brett
+George MacIntyre
+Giannis Antetokounmpo
+Gillian Anderson
+Giorgio Chiellini
+Goldberg
+Greg Maddux
+Hailey Van Lith
+Harlem Berry
+Haywood Jeffires
+Heather Graham
+Henry Cavill
+Howard Johnson
+Ja Morant
+Jacob Lombard
+James Simon
+Jared Curtis
+Jason Giambi
+Jason Roy
+Jason Taylor
+Javier Zanetti
+Jay Glazer
+Jaylen Brown
+Jeff Goldblum
+Jerry Stackhouse
+Jerry West
+Jim Boeheim
+Jim Kelly
+Joe Dumars
+Joe Montana
+Joe Rudi
+Joey Chestnut
+John Daly
+John Elway
+John Stockton
+Johnny Bench
+Johnny Depp
+Johnny Manziel
+Jon Gruden
+Jose Canseco
+José Cruz
+José Cruz Jr.
+Julian Edelman
+Kai Trump
+Karl Malone
+Kate Beckinsale
+Kate Harpring
+Katie Ledecky
+Kevin Garnett
+Kevin Smith
+Kordell Stewart
+Lamar "Bo" Jackson
+Lamine Yamal
+Larry Bird
+Lauren Betts
+Lenny Moore
+Linda Hamilton
+Lou Whitaker
+Magic Johnson
+Makai Lemon
+Malachi Toney
+Mario Andretti
+Marisa Tomei
+Mark Mulder
+Maurice Jones-Drew
+Mel Gibson
+Miguel Cabrera
+Mike Mussina
+Mike Piazza
+Mike Tyson
+MiLaysia Fulwiley
+Molly Ringwald
+Mr. T
+Muggsy Bogues
+Nick Dunlap
+Nick Kurtz
+Nick Saban
+Nikola Jokić
+Noah Knigga
+Nolan Ryan
+Olivia Dunne
+Paolo Banchero
+Patrick Ewing
+Paul Skenes
+Pete Rose
+Pete Weber
+Peyton Manning
+Phil Ivey
+Rainn Wilson
+Randy Johnson
+Randy Quaid
+Ric Flair
+Rich Eisen
+Richard Petty
+Rintaro Sasaki
+Roger Staubach
+Ronnie Coleman
+Rosario Dawson
+Ryne Sandberg
+Shakur Stevenson
+Shaquille O'Neal
+Shaun White
+Soleil Moon Frye
+Steve Austin
+Steve Largent
+Steve Nash
+Striker Pence
+Ted Danson
+Terry Bradshaw
+Tim Tebow
+Toby Fournier
+Tommy John
+Tony La Russa
+Tony Pérez
+Tonya Harding
+Tyler Herro
+Vinny Testaverde
+Vladimir Guerrero
+Wade Boggs
+Wayne Chrebet
+Will Clark
+William Shatner
+Willie Gault
+Zach LaVine
+
+[insert]
+Benjamin Harrison
+Bill Clinton
+Donald J. Trump
+Dwight D. Eisenhower
+George H.W. Bush
+George W. Bush
+Gerald R. Ford
+Harry S. Truman
+Herbert Hoover
+Jimmy Carter
+John F. Kennedy
+Richard Nixon
+Ronald Reagan
+William H. Taft
+
+[multi]
+Austin Reaves / Tyler Herro
+Bill Pullman / Randy Quaid
+Bryan Cranston / Ben Affleck
+Cameron Boozer / Giannis Antetokounmpo
+Cameron Boozer / Lamine Yamal / Roch Cholowsky / Malachi Toney
+Cameron Boozer / Nikola Jokić
+Chris Webber / Cameron Boozer
+Chris Webber / Giannis Antetokounmpo / Dennis Rodman / Cameron Boozer
+CJ Carr / Dante Moore
+CJ Carr / Dante Moore / Jayden Maiava / Drew Mestemaker
+Dennis Quaid / John Goodman
+Floyd Mayweather Jr. / Shakur Stevenson
+Frank Thomas / Jeff Bagwell / Mike Piazza / Jeff Kent
+George / Barbara Bush
+Greg Maddux / John Smoltz / Tom Glavine / Denny Neagle
+Jason Kidd / Steve Nash
+Jim McMahon / Willie Gault / Richard Dent / Mike Singletary
+Joe Montana / Terry Bradshaw / Roger Staubach / Drew Brees
+John Daly / Brooks Koepka
+John Stockton / Steve Nash
+Johnny Bench / George Foster / Tony Pérez / Pete Rose
+Jon Gruden / Andy Reid / Sean McVay / Bill Cowher
+Jose Canseco / Rafael Palmeiro / Sammy Sosa / Jason Giambi
+Kevin "KC" Concepcion / Makai Lemon
+Magic Johnson / Julius Erving
+Malachi Toney / Cam Coleman / Lamar "Bo" Jackson / Harlem Berry
+Malachi Toney / Jim Kelly / Edgerrin James / Warren Sapp
+Nick Saban / Urban Meyer
+Nikola Jokić / Jaylen Brown / Giannis Antetokounmpo / Ja Morant
+Nolan Ryan / Steve Carlton
+Nolan Ryan / Steve Carlton / Jim Palmer / Ferguson Jenkins
+Olivia Dunne / Anna Leigh Waters
+Patrick Ewing / Walt Frazier
+Paul Skenes / Olivia Dunne
+Ric Flair / Bret Hart / Steve Austin / Goldberg
+Shaquille O'Neal / Anfernee Hardaway / Dwight Howard / Horace Grant
+Shaquille O'Neal / Me'Arah O'Neal
+Shaquille O'Neal / Me'Arah O'Neal / Dennis Rodman / Trinity Rodman
+Shaquille O'Neal / Nikola Jokić
+Terry Bradshaw / Roger Staubach

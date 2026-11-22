@@ -1,0 +1,310 @@
+# name: 2026 Leaf Signature Series Sports
+# sport: Leaf Multi-Sport
+# added: 2026-11-22
+# source: https://www.leaftradingcards.com/products/2026-leaf-signature-series-sports
+# note: Leaf is unlicensed: no team names, so team breaks are not available. Print runs from the official checklist.
+
+[auto]
+"Sugar" Shane Mosley
+Adam "Pacman" Jones
+Akylin Dear
+Alan Page
+Alan Trammell
+Allen Iverson
+Alshon Jeffery
+Andre Johnson
+Andre Reed
+Anna Leigh Waters
+Anthony Muñoz
+Antonio Gates
+Austin Reaves
+Barry Foster
+Barry Sanders
+Benedict Cumberbatch
+Bernard King
+Bill Lee
+Bill Madlock
+Bob Lilly
+Bobby Abreu
+Bobby Hull
+Bobby Valentine
+Boy George
+Brad Daugherty
+Brady Edmunds
+Brady Hart
+Brady Smigiel
+Bret Hart
+Brian Cashman
+Brian Dawkins Sr.
+Brian Snitker
+Brien Taylor
+Brook Jacoby
+Bud Selig
+Byrum Brown
+Cam Coleman
+Chad Johnson
+Charlie Sheen
+Chevy Chase
+Chris Bosh
+Chris Chambliss
+Chris Pratt
+Christian Okoye
+Christina Applegate
+Chuck Norris
+Claudio Caniggia
+Cliff Floyd
+Conor McGregor
+Cory Snyder
+Daisy Ridley
+Dan Hampton
+Danny Amendola
+Darrell Evans
+Dave Casper
+Dee Snider
+Demond Williams Jr.
+Dennis Martinez
+Dennis Rodman
+Denny Neagle
+Derrek Lee
+Dez Bryant
+Dierre Hill
+Dolph Lundgren
+Dominique Wilkins
+Don Mattingly
+Donnie Shell
+Doug Mientkiewicz
+Drew Brees
+Drew Pearson
+Dustin Poirier
+Dwight Gooden
+Dwight Stephenson
+Earl Thomas
+Ed O'Neill
+Elijah Haven
+Elvin Bethea
+Emilio Estevez
+Emmitt Smith
+Eric Gagne
+Filippo Inzaghi
+Frank Gore
+Frank Thomas
+Fred McGriff
+Gabriel Magalhães
+George Brett
+George Foster
+George MacIntyre
+George McGinnis
+Gheorghe Mureșan
+Giannis Antetokounmpo
+Gillian Anderson
+Goose Gossage
+Harlem Berry
+Heather Graham
+Hines Ward
+Hope Solo
+Ja Rule
+Jack Grealish
+Jack Ham
+Jack Morris
+Jadon Sancho
+Jamal Anderson
+James Simon
+James Toney
+Jamier Brown
+Jared Curtis
+Jason Taylor
+Jason Williams
+Jay Glazer
+Jay Mohr
+Jay Novacek
+Jean Silva
+Jeff Goldblum
+Jerry Stackhouse
+Jim Boeheim
+Jim Calhoun
+Jim Covert
+Jim Kelly
+Jim McMahon
+Jimmy Smith
+Joe Dumars
+Joe Horn
+Joe Montana
+John Carpenter
+John Stockton
+John Wroblewski
+Johnny Bench
+Johnny Depp
+Johnny Manziel
+Jon Gries
+Jon Gruden
+Jon Jones
+Jose Canseco
+Joseph Parker
+Josh Gordon
+Julianne Moore
+Karl Malone
+Karl Mecklenburg
+Kate Harpring
+Ken Griffey Jr.
+Kevin Nealon
+Kiki VanDeWeghe
+Kurt Angle
+Lamar "Bo" Jackson
+Larry Bird
+Lauren Betts
+Lenny Moore
+Lenny Wilkens
+Lorenzo White
+Lou Gramm
+Luke Kuechly
+Macaulay Culkin
+Maisie Williams
+Malachi Toney
+Manny Pacquiao
+Manny Ramirez
+Marc Bernal
+Marc Casadó
+Marcia Gay Harden
+Mariano Rivera
+Mario Andretti
+Mario Cristobal
+Mark McGwire
+Mark Messier
+Marshall Faulk
+Martin Brodeur
+Martin Sheen
+Mats Sundin
+Matt Schaub
+Maurice Jones-Drew
+Megan Keller
+Melissa Benoist
+Michael Vick
+Mick Foley
+Mickey Rourke
+Mike Mussina
+Mike Schmidt
+Mike Tyson
+Morten Andersen
+Muggsy Bogues
+Nate Robinson
+Nathan Fillion
+Neil Smith
+Nick Castle
+Nick Dunlap
+Nick Kurtz
+Noah Grubbs
+Nolan Ryan
+Oleksandr Usyk
+Olivia Dunne
+Oscar De La Hoya
+Ozzie Smith
+Patrick Ewing
+Patrick Peterson
+Paul Giamatti
+Paul Krause
+Pete Weber
+Peyton Manning
+Phil Ivey
+Rainn Wilson
+Ralph Macchio
+Randy White
+Ric Flair
+Rich Eisen
+Riddick Bowe
+Riley Tiernan
+Rob Gronkowski
+Roger Staubach
+Rollie Fingers
+Ron Howard
+Ronaldo Nazário
+Ronnie Coleman
+Ronnie O'Sullivan
+Roy Williams
+Ryan Garcia
+Samuel L. Jackson
+Saniyah Hall
+Sebastian Telfair
+Shaquille O'Neal
+Shavkat Rakhmonov
+Shawn Kemp
+Stephen Dorff
+Steve Guttenberg
+Steve Largent
+Syla Swords
+Tatianna Griffin
+Thurman Thomas
+Tim Couch
+Tim Raines
+Tim Tebow
+Timothy Olyphant
+Toby Fournier
+Todd McShay
+Tom Felton
+Tom Glavine
+Tony Dorsett
+Tony Parker
+Tonya Harding
+Trinity Jones
+Val Kilmer
+Vince Papale
+Vince Young
+Vinny Testaverde
+Vlade Divac
+Warlord
+Warren Sapp
+William Fichtner
+William Shatner
+Willie Roaf
+Yuki Tsunoda
+
+[multi]
+Aaron Donald / Alan Page / Bob Lilly / Randy White / Elvin Bethea / Warren Sapp / Ndamukong Suh / Dan Hampton
+Alan Trammell / Ozzie Smith
+Allen Iverson / Jason Williams
+Allen Iverson / Nate Archibald / Dave Bing
+Amos Otis / Willie Wilson
+Andre Johnson / Malachi Toney
+Anquan Boldin / Dez Bryant / Andre Johnson / Alshon Jeffery
+Antonio Gates / Dave Casper
+Barry Sanders / Adrian Peterson
+Barry Sanders / Emmitt Smith / Marshall Faulk / Adrian Peterson / Earl Campbell / Chuck Foreman / Lenny Moore / Edgerrin James
+Barry Sanders / Tony Dorsett
+Brett Favre / Drew Brees / Jim McMahon / Jim Kelly
+CJ Carr / Dante Moore
+Conor McGregor / Jon Jones / Dustin Poirier / Max Holloway / Raul Rosas Jr. / Terrance McKinney / Jean Silva / Michael Bisping
+Dante Moore / Jayden Maiava / CJ Carr / Gunner Stockton
+Dennis Rodman / Joe Dumars
+Dominique Wilkins / Jerry Stackhouse / Shawn Kemp
+Drew Brees / Joe Horn
+Dwight Gooden / David Cone / Ron Darling / Sid Fernandez
+Emmitt Smith / Tony Dorsett
+Goose Gossage / Rollie Fingers / Eric Gagne / Jeff Reardon
+Jamal Lewis / Ricky Williams / Christian Okoye
+Jim Palmer / Dennis Martinez
+Jimmy Johnson / Andy Reid / Jon Gruden
+Joe Horn / Chad Johnson / Jimmy Smith
+Julio César Chávez / Oscar De La Hoya / Ryan Garcia
+Karl Malone / John Stockton
+Ken Griffey Jr. / Frank Thomas / Jeff Bagwell
+Larry Bird / Kevin McHale / Robert Parish
+Lawrence Taylor / Luke Kuechly / Jack Ham / Mike Singletary / Robert Brazile / Ray Lewis / Greg Lloyd / Harry Carson
+Mario Cristobal / Malachi Toney
+Mark McGwire / Jose Canseco
+Mike Mussina / Dennis Martinez / Curt Schilling / John Smoltz
+Mike Tyson / Riddick Bowe
+Mike Tyson / Riddick Bowe / James Toney / Deontay Wilder
+Oleksandr Usyk / Mike Tyson
+Olivia Dunne / Julz Dunne
+Oscar De La Hoya / Victor Ortiz / Ryan Garcia / Shakur Stevenson
+Peter Gammons / Dan Shaughnessy
+Peyton Manning / Brett Favre / Drew Brees / Roger Staubach / Jim Kelly / Joe Montana / Dan Fouts / Jim McMahon
+Ric Flair / Goldberg
+Richard Petty / Mario Andretti / Tony Stewart / Charles Leclerc
+Roger Staubach / Drew Pearson / Tony Dorsett / Billy Joe DuPree
+Roger Staubach / Tony Dorsett / Drew Pearson
+Rollie Fingers / Gene Tenace / Joe Rudi
+Shaquille O'Neal / Patrick Ewing
+Shawn Kemp / Detlef Schrempf
+Shawn Kemp / Dominique Wilkins
+Steve Largent / Isaac Curtis / Charlie Joiner / Harold Carmichael
+Steve Owens / Billy Sims / Jason White

@@ -1,0 +1,199 @@
+# name: 2026 Leaf Melange
+# sport: Leaf Multi-Sport
+# added: 2026-11-22
+# source: https://www.leaftradingcards.com/products/2026-leaf-melange
+# note: Leaf is unlicensed: no team names, so team breaks are not available. Print runs from the official checklist.
+
+[auto]
+42 Dugg
+Aaron Gregory
+Abde Ezzalzouli
+Akili Smith Jr.
+Akylin Dear
+Alexis Mac Allister
+Alfie Gilchrist
+Alvin Henderson
+Anthony Gordon
+Antony
+Antwann Hill Jr.
+Archer Horn
+Ari Lehman
+Austan Cristiaan
+Austin "Mantis" Taylor
+Ava Hunt
+Bekkem Kritza
+Benjamin Brahmer
+Billy Gilmour
+Billy McFarland
+Bobbi Althoff
+Brady Edmunds
+Brady Hart
+Brady Quinn
+Brady Smigiel
+Brandon Arrington
+Brandon Inniss
+Brenden Aaronson
+Caden Durham
+Caleb Cunningham
+Callum Hudson-Odoi
+Calvin Russell
+Cam Williams
+Cederian Morgan
+Chad "RollTide Willie" Horne
+Chanel West Coast
+Chris Denson
+Chris Richards
+Christopher Vargas
+D.J. Bordeaux
+Dan "Big Cat" Katz
+Dane Weber
+Daniel Mielke
+Darryon Williams
+Dasan Hill
+Derek Meadows
+Derek Zammit
+Derrek Cooper
+Derrick Baker
+Deuce Knight
+Devin Carter
+Dia Bell
+Dierre Hill
+Dilin Jones
+DJ Lagway
+Donovan Olugbode
+Easton Royal
+Eddie Nketiah
+Elijah Brown
+Elijah Haven
+Elijah Kimble
+Elijiah Oehlke
+Emerson
+Emile Smith Rowe
+Ethan Grunkemeyer
+Ethan Kleinschmit
+Evan Ferguson
+Faizon Brandon
+Ferzell Shepard
+Folarin Balogun
+Frenkie de Jong
+Gabriel Jesus
+Gabriel Magalhães
+George MacIntyre
+Gevani McCoy
+Gia Duddy
+Gillie Da King
+Girard Pringle
+Graham Simpson
+Grayson McCall
+Guy Gilchrist
+Haliey "Hawk Tuah" Welch
+Hank Brown
+Harlem Berry
+Harvey Elliott
+Helaman Casuga
+Isaac Curtis
+Jabari Brady
+Jabari Mack
+Jack Hinshelwood
+Jacob Ramsey
+Jaden O'Neal
+Jaden Rashada
+Jadon Sancho
+Jaime Ffrench
+James Charles "JC" French IV
+James Simon
+Jameson Purcell
+Jamier Brown
+Jared Curtis
+Jeremiah McClellan
+Jerome Myles
+Jersey Jerry
+Jesús Ferreira
+Jordan Henderson
+Jordan Pefok
+Jordon Davison
+Jorginho
+Josie Canseco
+Josko Gvardiol
+JT Lindsey
+Ju Ju Lewis
+Justice Haynes
+Justin Lamson
+Jérémy Doku
+Kaleb Jackson
+Kaliq Lockett
+Kalvin Phillips
+KaMario Taylor
+Karson Gordon
+Kayden Dixon-Wyatt
+Keegan Croucher
+Kenneth Taylor
+KJ Bolden
+KJ Lacey
+Kylan Billiot
+Kyson Brown
+Landen Holley
+Lewis Miley
+Luke Nickel
+Malachi Zeigler
+Marc Bernal
+Marc Casadó
+Marc Guiu
+Mason Holtzclaw
+Maxi Oyedele
+Megan Eugenio "Overtime Megan"
+Memphis Depay
+Micah Hudson
+Michael Hawkins Jr.
+Michael Pyne
+Miguel Almirón
+Neimann Lawrence
+Nico Paz
+Noah Grubbs
+Noah Roberts
+Ollie Watkins
+Osani Gayles
+Oscar Rios
+Pablo Torre
+Pau Víctor
+Peter Bourque
+Peyton Falzone
+Peyton Houston
+Phillip Bell
+Quinn Murphy
+Rafael Leão
+Reinier Jesus
+Rico Lewis
+Rudolph Blaze Ingram
+Ryan Gravenberch
+Ryan Montgomery
+Ryan Rakowski
+Ryder Lyons
+Salesi Moa
+Salim The Dream
+Sam Hurley
+Sara Saffari
+Sergiño Dest
+Sommer Ray
+Tait Reynolds
+Talyn Taylor
+Theo Hernandez
+Timothy Weah
+Trae Taylor
+Tramell Jones Jr.
+Trech Kekahuna
+Trever Jackson
+Trevoh Chalobah
+Tristan Sabb
+Tristen Keys
+Troy Huhn
+Tyler Cherry
+Unai Hernández
+Victor Osimhen
+Wallo
+Warren Zaïre-Emery
+Will Griffin
+Wonderful "Champ" Monds IV
+Yunus Musah
+Zac Katz
+Zack Steffen

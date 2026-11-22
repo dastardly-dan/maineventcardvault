@@ -1,0 +1,305 @@
+# name: 2026 Leaf Glory of the Game Soccer
+# sport: Leaf Soccer
+# added: 2026-11-22
+# source: https://www.leaftradingcards.com/products/2026-leaf-glory-of-the-game-soccer
+# note: Leaf is unlicensed: no team names, so team breaks are not available. Print runs from the official checklist.
+
+[auto]
+Abde Ezzalzouli
+Alessandro Del Piero
+Alexis Mac Allister
+Alfie Gilchrist
+Alisha Lehmann
+Andrea Pirlo
+Andriy Shevchenko
+Andrés Iniesta
+Ansu Fati
+Antoine Griezmann
+Bebeto
+Billy Gilmour
+Bruno Fernandes
+Callum Hudson-Odoi
+Claudio Caniggia
+Cole Palmer
+Cristiano Ronaldo
+Darwin Núñez
+David Villa
+Declan Rice
+Didier Drogba
+Dimitar Berbatov
+Eddie Nketiah
+Emile Smith Rowe
+Emily Sonnett
+Endrick
+Erling Haaland
+Evan Ferguson
+Fernando Torres
+Francesco Totti
+Frank Lampard
+Freddie Ljungberg
+Gabriel Batistuta
+Gabriel Jesus
+Gabriel Magalhães
+Gabriel Martinelli
+Gareth Bale
+Geoff Hurst
+Gianluigi Buffon
+Giorgio Chiellini
+Harry Maguire
+Harvey Elliott
+Hope Solo
+Jack Grealish
+Jack Hinshelwood
+Jadon Sancho
+Javier Mascherano
+Javier Zanetti
+Jesús Ferreira
+Joao Felix
+Jorginho
+Josko Gvardiol
+Julián Álvarez
+Jérémy Doku
+Kalvin Phillips
+Katie Roditis
+Kennedy Fuller
+Kenneth Taylor
+Kenny Dalglish
+Kieran Tierney
+Kyle Walker
+Lamine Yamal
+Lewis Miley
+Lionel Messi
+Luis Diaz
+Luis Figo
+Luis Suárez
+Luka Modrić
+Marc Bernal
+Marc Casadó
+Marc Guiu
+Marcelo
+Maxi Oyedele
+Miguel Almirón
+Mikel Arteta
+Neymar Jr.
+Nico Paz
+Ollie Watkins
+Pablo Torre
+Patrick Kluivert
+Pau Víctor
+Pavel Nedvěd
+Pedri
+Pelé
+Phil Foden
+Pierre-Emerick Aubameyang
+Rafael Leão
+Raphinha
+Ricardo Quaresma
+Richarlison
+Riley Tiernan
+Robbie Fowler
+Robert Pires
+Roberto Carlos
+Ronaldo Nazário
+Ruud Gullit
+Ryan Gravenberch
+Sadio Mané
+Sarah Schupansky
+Sergio Agüero
+Sergio Busquets
+Sergio Ramos
+Sergiño Dest
+Teddy Sheringham
+Theo Hernandez
+Thiago Silva
+Timothy Weah
+Tisha Venturini
+Trent Alexander-Arnold
+Trevoh Chalobah
+Trinity Rodman
+Unai Hernández
+Victor Osimhen
+Warren Zaïre-Emery
+Wayne Rooney
+Xabi Alonso
+Xavi Hernandez
+Xavi Simons
+Yunus Musah
+Zinedine Zidane
+Zoe Matthews
+Ángel Di María
+
+[insert]
+Alejandro Garnacho
+Alexis Vega
+Andrea Pirlo
+Ansu Fati
+Bruno Fernandes
+Casemiro
+Cristiano Ronaldo
+Danilo
+David Beckham
+David de Gea
+David Platt
+Diego Maradona
+Douglas Luiz
+Dries Mertens
+Dušan Vlahović
+Eden Hazard
+Ederson
+Erling Haaland
+Federico Valverde
+Ferran Torres
+Florian Wirtz
+Gaku Shibasaki
+Garrincha
+Gavi
+Harry Kane
+Heung-min Son
+Jack Grealish
+Jamal Musiala
+John Stones
+Jorginho
+Juan Cuadrado
+Jude Bellingham
+Karim Benzema
+Kevin De Bruyne
+Kylian Mbappé
+Lionel Messi
+Lucas Paquetá
+Luka Modrić
+Manuel Neuer
+Marcus Rashford
+Marouane Fellaini
+Marquinhos
+Mason Mount
+Mauro Icardi
+Mohamed Salah
+Neymar Jr.
+Nico Williams
+Ousmane Dembélé
+Paul Pogba
+Paulo Bernardo
+Pelé
+Phil Foden
+Pierre-Emerick Aubameyang
+Raheem Sterling
+Robert Lewandowski
+Roberto Firmino
+Rodrygo
+Romelu Lukaku
+Ronaldo Nazário
+Sócrates
+Thierry Henry
+Toni Kroos
+Tostão
+Viktor Gyökeres
+Virgil van Dijk
+Youssoufa Moukoko
+Zlatan Ibrahimović
+Álisson Becker
+Éder Militão
+
+[multi]
+Alexis Mac Allister / Julián Álvarez
+Andrea Pirlo / Francesco Totti
+Ansu Fati / Pedri
+Bruno Fernandes / Nico Williams / Phil Foden / Kevin De Bruyne / Trent Alexander-Arnold
+Bukayo Saka / Viktor Gyökeres / Marquinhos / Jamal Musiala / Victor Osimhen / Bruno Fernandes / Nico Williams
+Cristiano Ronaldo / Bruno Fernandes / Kevin De Bruyne / Heung-min Son
+Cristiano Ronaldo / David Beckham
+Cristiano Ronaldo / Endrick / David Beckham / Cole Palmer / Neymar Jr.
+Cristiano Ronaldo / Zlatan Ibrahimović / Pelé
+David Beckham / Robert Lewandowski / Neymar Jr. / Gabriel Batistuta / Thierry Henry
+David de Gea / Karim Benzema / Luka Modrić / Hulk / Neymar Jr. / Wayne Rooney / Phil Foden
+Declan Rice / Phil Foden / Jack Grealish / Harry Kane
+Diego Maradona / Garrincha / Pelé / Ronaldo Nazário
+Diego Maradona / Lionel Messi
+Diego Maradona / Lionel Messi / Gabriel Batistuta
+Diego Maradona / Ronaldo Nazário
+Eden Hazard / Ederson / Paul Pogba / Mauro Icardi / David de Gea
+Erling Haaland / Jack Grealish
+Erling Haaland / Kevin De Bruyne / Phil Foden / Kylian Mbappé / Jude Bellingham / Harry Kane / Mohamed Salah
+Erling Haaland / Kylian Mbappé / Cole Palmer
+Erling Haaland / Kylian Mbappé / Lamine Yamal / Ousmane Dembélé / Jude Bellingham
+Erling Haaland / Lamine Yamal
+Erling Haaland / Mason Mount / Kevin De Bruyne
+Erling Haaland / Ousmane Dembélé
+Florian Wirtz / Phil Foden
+Francesco Totti / Gianluigi Buffon
+Gabriel Jesus / Gabriel Magalhães
+Gareth Bale / Luka Modrić
+Gavi / Frenkie de Jong
+Gavi / Pedri
+Giorgio Chiellini / Alessandro Del Piero
+Harry Kane / David Beckham / Jude Bellingham / Harry Maguire
+Harry Kane / Kylian Mbappé
+Harry Maguire / Bruno Fernandes
+Heung-min Son / Alejandro Garnacho / Endrick / Richarlison / Marcus Rashford
+Jack Grealish / Phil Foden
+Jadon Sancho / Phil Foden
+Jamal Musiala / Erling Haaland / Kylian Mbappé / Pedri
+Josko Gvardiol / Jack Grealish
+Jude Bellingham / Kylian Mbappé / Erling Haaland
+Julián Álvarez / Alexis Mac Allister
+Karim Benzema / Phil Foden / Kevin De Bruyne / Ousmane Dembélé
+Karim Benzema / Robert Lewandowski / Jude Bellingham
+Kylian Mbappé / Endrick / Lamine Yamal / Erling Haaland / Cole Palmer / Vinícius Júnior / Jude Bellingham
+Kylian Mbappé / Erling Haaland / Endrick / Florian Wirtz
+Kylian Mbappé / Mohamed Salah / Neymar Jr. / Virgil van Dijk / Karim Benzema
+Lionel Messi / Cristiano Ronaldo
+Lionel Messi / Cristiano Ronaldo / Erling Haaland / Robert Lewandowski
+Lionel Messi / Cristiano Ronaldo / Neymar Jr. / Robert Lewandowski / Manuel Neuer / Paul Pogba / Eden Hazard
+Lionel Messi / Erling Haaland
+Lionel Messi / Florian Wirtz / Marquinhos / Victor Osimhen / Cristiano Ronaldo
+Lionel Messi / Garrincha / Diego Maradona / Wayne Rooney / Ronaldo Nazário
+Lionel Messi / Karim Benzema / Zlatan Ibrahimović / Cristiano Ronaldo / Neymar Jr. / Ousmane Dembélé / Gabriel Batistuta
+Lionel Messi / Neymar Jr. / Ronaldo Nazário / David Beckham
+Lionel Messi / Robert Lewandowski / Karim Benzema / Kylian Mbappé / Erling Haaland / Cristiano Ronaldo / Romelu Lukaku
+Lionel Messi / Sadio Mané / Cristiano Ronaldo / Robert Lewandowski
+Lionel Messi / Toni Kroos / Kylian Mbappé / Eden Hazard / Casemiro / Paul Pogba / Mauro Icardi
+Luka Modrić / Virgil van Dijk / Declan Rice / Julián Álvarez
+Luka Modrić / Virgil van Dijk / Ángel Di María / Thiago Silva / Jack Grealish / Toni Kroos / Casemiro
+Manuel Neuer / Romelu Lukaku / Harry Kane / Bruno Fernandes / Heung-min Son
+Marquinhos / Casemiro / Jack Grealish / Luka Modrić / Richarlison
+Neymar Jr. / Cristiano Ronaldo
+Neymar Jr. / Harry Kane / Bruno Fernandes / Phil Foden / Raheem Sterling / Manuel Neuer / Heung-min Son
+Neymar Jr. / Romelu Lukaku / Paul Pogba / Erling Haaland
+Neymar Jr. / Sócrates / Kaka
+Ousmane Dembélé / Kylian Mbappé / Harry Kane / Erling Haaland / Mohamed Salah
+Ousmane Dembélé / Kylian Mbappé / Harry Kane / Mohamed Salah
+Ousmane Dembélé / Lamine Yamal / Kylian Mbappé
+Paul Pogba / Ederson / Julián Álvarez / Fabinho / Eden Hazard / Pierre-Emerick Aubameyang / David de Gea
+Pavel Nedvěd / Giorgio Chiellini
+Pedri / Cole Palmer / Declan Rice / Jude Bellingham / Vinícius Júnior
+Pedri / Cole Palmer / Declan Rice / Jude Bellingham / Virgil van Dijk / Robert Lewandowski / Julián Álvarez
+Pedri / Karim Benzema / Harry Kane / Gavi / Luka Modrić
+Pelé / Diego Maradona
+Pelé / Diego Maradona / David Beckham
+Pelé / Diego Maradona / Ronaldo Nazário / Cristiano Ronaldo
+Pelé / Erling Haaland
+Pelé / Erling Haaland / Diego Maradona / Jude Bellingham / Ronaldo Nazário
+Pelé / Garrincha / Sócrates / Roberto Carlos / Diego Maradona / Lionel Messi / Ronaldo Nazário
+Pelé / Lionel Messi
+Pelé / Lionel Messi / Cristiano Ronaldo / Diego Maradona / Neymar Jr. / David Beckham / Ronaldo Nazário
+Pelé / Lionel Messi / Diego Maradona / Cristiano Ronaldo / Ronaldo Nazário
+Pelé / Lionel Messi / Diego Maradona / Cristiano Ronaldo / Ronaldo Nazário / Thierry Henry / David Beckham
+Pelé / Ronaldo Nazário
+Pelé / Ronaldo Nazário / Garrincha
+Phil Foden / Kevin De Bruyne / Thibaut Courtois / Ansu Fati / Marcus Rashford / Trent Alexander-Arnold / Alejandro Garnacho
+Ricardo Quaresma / Javier Zanetti
+Richarlison / Álisson Becker
+Robert Lewandowski / Kylian Mbappé / Wayne Rooney / Vinícius Júnior / Garrincha
+Robert Lewandowski / Lionel Messi / Cristiano Ronaldo / Kevin De Bruyne / Erling Haaland
+Romelu Lukaku / Gabriel Jesus / Manuel Neuer / Ousmane Dembélé / Thibaut Courtois / Thiago Silva / Raheem Sterling
+Ronaldo Nazário / Cristiano Ronaldo / Lionel Messi
+Ronaldo Nazário / Roberto Carlos
+Sergio Busquets / Andrés Iniesta
+Sergio Busquets / Luis Suárez
+Steven Gerrard / Raheem Sterling / Bukayo Saka
+Sócrates / David Beckham / Neymar Jr. / Cristiano Ronaldo / Zlatan Ibrahimović
+Thibaut Courtois / Viktor Gyökeres / Alexis Mac Allister / Florian Wirtz
+Toni Kroos / Marcus Rashford / Declan Rice / Bruno Fernandes
+Virgil van Dijk / Robert Lewandowski / Julián Álvarez / Bukayo Saka / Viktor Gyökeres
+Wayne Rooney / David Beckham / Harry Kane
+Zinedine Zidane / Thierry Henry / Kylian Mbappé
+Álisson Becker / Zlatan Ibrahimović / Raheem Sterling / Toni Kroos / Thibaut Courtois

@@ -1,0 +1,77 @@
+# name: 2026 Leaf Metal Golden Set Tennis
+# sport: Leaf Tennis
+# added: 2026-11-22
+# source: https://www.leaftradingcards.com/products/2026-leaf-metal-golden-set-tennis
+# note: Leaf is unlicensed: no team names, so team breaks are not available. Print runs from the official checklist.
+
+[auto]
+Adam Driver
+Ana Ivanovic
+Andre Agassi
+Anett Kontaveit
+Anna Frey
+Bob Bryan
+Boris Becker
+Brad Gilbert
+c
+Caroline Wozniacki
+Chris Hemsworth
+Coco Vandeweghe
+Cristiano Ronaldo
+Dave Portnoy
+Dominic Thiem
+Dominik Hrbatý
+Eugenie Bouchard
+Grigor Dimitrov
+Hana Mandlíková
+Ivan Lendl
+Jack Sock
+James Blake
+Jan-Michael Gambill
+Jeff Goldblum
+Jennifer Capriati
+Juan Martín del Potro
+Katerina Maleeva
+Kathy Rinaldi
+Leylah Fernandez
+Lindsay Davenport
+Luke Littler
+Mardy Fish
+Mark Philippoussis
+Martina Hingis
+Mary Pierce
+Mike Bryan
+Milos Raonic
+Pat Cash
+Paul Rudd
+Pete Sampras
+Peyton Manning
+Richard Krajicek
+Robby Ginepri
+Sam Querrey
+Shelby Rogers
+Stefan Edberg
+Steffi Graf
+Steve Johnson
+Todd Martin
+Tom Holland
+Tomas Berdych
+Tommy Haas
+Tracy Austin
+Will Smith
+Zina Garrison
+
+[insert]
+Bill Tilden
+Helen Wills
+Henri Cochet
+Jean Borotra
+René Lacoste
+Suzanne Lenglen
+
+[multi]
+Andre Agassi / Ivan Lendl
+Boris Becker / Andre Agassi
+Ivan Lendl / Boris Becker
+Pete Sampras / Andre Agassi
+Steffi Graf / Martina Hingis

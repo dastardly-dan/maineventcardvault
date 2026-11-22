@@ -1,0 +1,94 @@
+# name: 2026 Leaf Paintworks Football
+# sport: Leaf Football
+# added: 2026-11-22
+# source: https://www.leaftradingcards.com/products/2026-leaf-paintworks-football
+# note: Leaf is unlicensed: no team names, so team breaks are not available. Print runs from the official checklist.
+
+[base]
+Ahmad Hardy
+AJ Hill Jr.
+Austin Simmons
+Brady Edmunds
+Bryce Underwood
+Byrd Ficklin
+Byrum Brown
+Cam Coleman
+Christopher Vargas
+Christopher Vizzina
+CJ Bailey
+CJ Carr
+Dante Moore
+Darian Mensah
+Demond Williams Jr.
+Dia Bell
+DJ Lagway
+Drew Mestemaker
+Easton Royal
+Elijah Haven
+Ethan Grunkemeyer
+Faizon Brandon
+George MacIntyre
+Gunner Stockton
+Harlem Berry
+Jadan Baugh
+Jamier Brown
+Jared Curtis
+Jayden Maiava
+Jeremiah Smith
+John Mateer
+Josh Hoover
+Ju Ju Lewis
+KaMario Taylor
+Keegan Croucher
+Kenny Minchey
+Kewan Lacy
+Lamar "Bo" Jackson
+Leonard Moore
+Malachi Toney
+Marcel Reed
+Mason Heintschel
+Michael Hawkins Jr.
+Nick Marsh
+Nyck Harbor
+Peyton Houston
+Ryder Lyons
+Trae Taylor
+Will Hammond
+Wonderful "Champ" Monds IV
+
+[auto]
+Ahmad Hardy
+Austin Simmons
+Brady Edmunds
+Bryce Underwood
+Cam Coleman
+Christopher Vargas
+CJ Carr
+Darian Mensah
+Demond Williams Jr.
+Dia Bell
+DJ Lagway
+Drew Mestemaker
+Elijah Haven
+Ethan Grunkemeyer
+Faizon Brandon
+George MacIntyre
+Gunner Stockton
+Harlem Berry
+Jadan Baugh
+Jamier Brown
+Jared Curtis
+Jayden Maiava
+Jeremiah Smith
+Ju Ju Lewis
+KaMario Taylor
+Kenny Minchey
+Kewan Lacy
+Lamar "Bo" Jackson
+Leonard Moore
+Malachi Toney
+Michael Hawkins Jr.
+Peyton Houston
+Ryder Lyons
+Trae Taylor
+Wonderful "Champ" Monds IV

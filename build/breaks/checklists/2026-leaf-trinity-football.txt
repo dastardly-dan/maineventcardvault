@@ -1,0 +1,294 @@
+# name: 2026 Leaf Trinity Football
+# sport: Leaf Football
+# added: 2026-11-22
+# source: https://www.leaftradingcards.com/products/2026-leaf-trinity-football
+# note: Leaf is unlicensed: no team names, so team breaks are not available. Print runs from the official checklist.
+
+[auto]
+A.J. Hawk
+Aaron Donald
+Aaron Gregory
+Adrian Peterson
+Ahmad Hardy
+Akili Smith Jr.
+Akylin Dear
+Alan Page
+Andre Johnson
+Antonio Gates
+Antwann Hill Jr.
+Archie Manning
+Art Monk
+Austan Cristiaan
+Austin Simmons
+Barry Sanders
+Bekkem Kritza
+Bernie Kosar
+Bill Cowher
+Billy Edwards Jr.
+Bo Jackson
+Bob Lilly
+Brady Edmunds
+Brady Hart
+Brady Quinn
+Brady Smigiel
+Brandon Arrington
+Brian Bosworth
+Brian Dawkins Sr.
+Bryce Underwood
+Byrd Ficklin
+Byrum Brown
+Caden Durham
+Caleb Cunningham
+Calvin Russell
+Cam Coleman
+Cam Williams
+Carson Hansen
+Cederian Morgan
+Chad Johnson
+Chase Herbstreit
+Chris Denson
+Christopher Vargas
+CJ Bailey
+CJ Carr
+Colin Hurley
+Conner Weigman
+D.J. Bordeaux
+Dallas Wilson
+Dane Weber
+Daniel Mielke
+Danny Amendola
+Dante Moore
+Darryon Williams
+Demond Williams Jr.
+Derek Meadows
+Derek Zammit
+Derrek Cooper
+Derrick Baker
+Deuce Knight
+Devin Carter
+Dez Bryant
+Dia Bell
+Dierre Hill
+Dilin Jones
+DJ Lagway
+Donovan McNabb
+Donovan Olugbode
+Doug Flutie
+Drew Brees
+Drew Mestemaker
+Drew Pearson
+Earl Campbell
+Earl Thomas
+Edgerrin James
+Elijah Brown
+Elijah Haven
+Elijah Kimble
+Elijiah Oehlke
+Emmitt Smith
+Eric Allen
+Ethan Grunkemeyer
+Ethan Vasko
+Faizon Brandon
+Ferzell Shepard
+Frank Gore
+George MacIntyre
+Girard Pringle
+Grant Gray
+Gunner Stockton
+Harlem Berry
+Helaman Casuga
+Hines Ward
+Isaac Curtis
+Jabari Brady
+Jabari Mack
+Jack Ham
+Jadan Baugh
+Jaden O'Neal
+Jaime Ffrench
+Jamal Anderson
+James Simon
+Jameson Purcell
+Jamier Brown
+Jared Curtis
+Jay Novacek
+Jayden Maiava
+Jaylin Lucas
+Jeremiah Smith
+Jerome Bettis
+Jerome Bettis Jr.
+Jerome Myles
+Jim Kelly
+Jim McMahon
+Jimmy Smith
+Joe Montana
+John Elway
+John Mateer
+Johnny Manziel
+Jon Gruden
+Jordon Davison
+JT Lindsey
+Ju Ju Lewis
+Julian Edelman
+Jurrion Dickey
+Justice Haynes
+Kaiden Prothro
+Kaleb Jackson
+Kaliq Lockett
+Kam Davis
+KaMario Taylor
+Karson Gordon
+Kayden Dixon-Wyatt
+Kaydon Finley
+Keegan Croucher
+Ken Anderson
+Kenny Minchey
+Kewan Lacy
+Khalil Wilkins
+KJ Lacey
+Koi Perich
+Kylan Billiot
+Kyson Brown
+LaDainian Tomlinson
+Lamar "Bo" Jackson
+Landen Holley
+LaNorris Sellers
+Lenny Moore
+Leonard Moore
+Luke Kuechly
+Luke Nickel
+Mabrey Mettauer
+Maddux Madsen
+Malachi Toney
+Malachi Zeigler
+Marcos Davila
+Marcus Freeman
+Marcus Harris
+Mario Cristobal
+Marshall Faulk
+Mason Heintschel
+Mason Holtzclaw
+Micah Hudson
+Michael Hawkins Jr.
+Michael Pyne
+Michael Vick
+Mike Vrabel
+Miles O'Neill
+MJ Morris
+Muizz Tounkara
+Neimann Lawrence
+Nicco Marchiol
+Nick Saban
+Noah Grubbs
+Noah Knigga
+Noah Roberts
+Nyck Harbor
+Osani Gayles
+Oscar Rios
+Peter Bourque
+Peyton Falzone
+Peyton Houston
+Peyton Manning
+Preston Stone
+Quentin Gibson
+Quincy Porter
+Randy White
+Rickie Collins
+Ricky Williams
+Rob Gronkowski
+Roger Staubach
+Rudolph Blaze Ingram
+Ryan Montgomery
+Ryan Puglisi
+Ryan Rakowski
+Ryder Lyons
+Salesi Moa
+Sean McVay
+Steve Largent
+Steve Spurrier
+Tait Reynolds
+Tedy Bruschi
+Terrell Suggs
+Terry Bradshaw
+Tiki Barber
+Tim Tebow
+TJ Lateef
+Tony Dorsett
+Trae Taylor
+Tramell Jones Jr.
+Trech Kekahuna
+Trever Jackson
+Tristan Sabb
+Tristen Keys
+Troy Aikman
+Troy Huhn
+Tyler Cherry
+Vince Wilfork
+Warren Sapp
+Will Griffin
+Wonderful "Champ" Monds IV
+Zac Katz
+
+[multi]
+Ahmad Hardy / Kewan Lacy
+Andre Johnson / Anquan Boldin / Chad Johnson / Hines Ward
+Austin Simmons / Ahmad Hardy
+Bill Bradley / Eric Allen / Brian Dawkins Sr.
+Bo Jackson / Barry Sanders
+Bo Jackson / Earl Campbell
+Bo Jackson / Tim Tebow
+Bryce Underwood / Jaime Ffrench
+Caden Durham / Harlem Berry
+Cam Coleman / James Simon
+Cam Coleman / James Simon / Kaliq Lockett
+CJ Bailey / Bryce Underwood / Demond Williams Jr.
+CJ Carr / Dante Moore / Jayden Maiava
+CJ Carr / Leonard Moore
+Dan Fouts / Terry Bradshaw / Archie Manning / Joe Theismann
+Dan Hampton / William Perry
+Dante Moore / CJ Carr
+Dante Moore / Jayden Maiava
+Derrek Cooper / Kaliq Lockett
+Drew Mestemaker / Gunner Stockton / John Mateer
+Earl Campbell / Haywood Jeffires / Ernest Givins / Warren Moon
+Eli Manning / Tiki Barber / Jeremy Shockey
+Emmitt Smith / Adrian Peterson / LaDainian Tomlinson / Edgerrin James
+Emmitt Smith / Barry Sanders
+Emmitt Smith / Barry Sanders / Adrian Peterson / Earl Campbell / Thurman Thomas / Marshall Faulk / Edgerrin James / Tony Dorsett
+Emmitt Smith / Earl Campbell
+George MacIntyre / Faizon Brandon
+George MacIntyre / Faizon Brandon / Tristen Keys
+George MacIntyre / Tristen Keys / Faizon Brandon
+Harlem Berry / Caden Durham
+Haywood Jeffires / Ernest Givins / Lorenzo White
+Helaman Casuga / Jerome Myles
+James Simon / Cam Coleman / Kaliq Lockett
+Jared Curtis / Oscar Rios
+Jared Curtis / Will Griffin / Ryan Montgomery
+Joe Montana / John Elway / Jim McMahon / Terry Bradshaw
+John Mateer / Dante Moore / Bryce Underwood
+Jordon Davison / Dierre Hill
+KaMario Taylor / Demond Williams Jr.
+Ken Anderson / Isaac Curtis
+Kewan Lacy / Ahmad Hardy / Jadan Baugh
+Lamar "Bo" Jackson / Jadan Baugh / Kewan Lacy
+Lamar "Bo" Jackson / James Simon / Harlem Berry
+Lamar "Bo" Jackson / Jamier Brown
+LaNorris Sellers / Byrum Brown
+LaNorris Sellers / Drew Mestemaker / Byrum Brown
+Malachi Toney / Cam Coleman
+Malachi Toney / Girard Pringle
+Marcus Freeman / CJ Carr
+Marcus Freeman / CJ Carr / Leonard Moore
+Marcus Freeman / Mario Cristobal / Ryan Day / Kirby Smart
+Matt Schaub / Andre Johnson
+Michael Hawkins Jr. / Ethan Grunkemeyer / George MacIntyre
+Ray Lewis / James Harrison
+Ray Lewis / Warren Sapp
+Rob Gronkowski / Julian Edelman / Danny Amendola / Ben Coates
+Ryan Montgomery / Jared Curtis
+Steve Largent / Art Monk / Drew Pearson / Charlie Joiner
+Steve Largent / Drew Pearson / Andre Reed / Art Monk / Andre Johnson / Anquan Boldin / Cris Carter / Chad Johnson
+Tedy Bruschi / Willie McGinest / Malcolm Butler
+Terry Hanratty / Joe Montana / Rick Mirer
+Tony Dorsett / Emmitt Smith
+Vinny Testaverde / Danny Wuerffel / Johnny Manziel

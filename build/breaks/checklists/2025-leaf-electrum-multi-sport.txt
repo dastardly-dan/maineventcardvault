@@ -1,0 +1,421 @@
+# name: 2025 Leaf Electrum Multi-Sport
+# sport: Leaf Multi-Sport
+# added: 2026-11-22
+# source: https://www.leaftradingcards.com/products/2025-leaf-electrum-multi-sport
+# note: Leaf is unlicensed: no team names, so team breaks are not available. Print runs from the official checklist.
+
+[auto]
+Adrián Beltré
+Akili Smith Jr.
+Alan Ritchson
+Alan Trammell
+Alicia Silverstone
+Allen Iverson
+Andre Reed
+Anfernee Hardaway
+Anna Leigh Waters
+Antoine Walker
+Antonio Davis
+Archie Manning
+Aryna Sabalenka
+Ashton Jeanty
+Barry Foster
+Barry Larkin
+Bartolo Colon
+Bella Ramsey
+Ben Affleck
+Bernard King
+Bernie Williams
+Bill Bradley
+Bill Cowher
+Bo Jackson
+Brad Daugherty
+Brandi Chastain
+Brooks Koepka
+Bruce Buffer
+Bruce Smith
+Bruno Fernandes
+Bryce Dallas Howard
+Bushwhacker Luke
+Cameron Boozer
+Cameron Brink
+Carl Yastrzemski
+Cayden Boozer
+Charlie Scott
+Chase Hooper
+Chazz Palminteri
+Cheryl Miller
+Chevy Chase
+Christopher Lloyd
+Christopher McDonald
+Chuck Foreman
+Conor McGregor
+Craig Biggio
+Cris Carter
+Curt Schilling
+Dale Murphy
+Dan Marino
+Danny Glover
+Danny Trejo
+Darryl Strawberry
+Dave Casper
+Dave Winfield
+Declan Rice
+Dennis Buzukja
+Dennis Rodman
+Deontay Wilder
+Dexter McCleon Jr.
+Dia Bell
+Diana Taurasi
+Dick Vitale
+DJ Lagway
+Dominique Malonga
+Dominique Wilkins
+Don Mattingly
+Donnie Shell
+Donovan McNabb
+Drew Brees
+Drew Pearson
+Dustin Poirier
+Dwight Gooden
+Dwight Howard
+Earl Campbell
+Ed O'Neill
+Eddie Murray
+Eli Manning
+Elisabeth Shue
+Elizabeth Berkley
+Emmitt Smith
+Eric Davis
+Eric Dickerson
+Eric Gagne
+Erin Andrews
+Erin Blanchfield
+Ethan Hawke
+Faizon Brandon
+Floyd Mayweather Jr.
+Fran Tarkenton
+Francesco Totti
+Franck Ribéry
+Frank Thomas
+Fred McGriff
+Gabriel Batistuta
+Gal Gadot
+George MacIntyre
+Giannis Antetokounmpo
+Gillian Anderson
+Giorgio Chiellini
+Gisele Bündchen
+Goldberg
+Graig Nettles
+Hailee Steinfeld
+Hailey Van Lith
+Halle Berry
+Hannah Hidalgo
+Heather Graham
+Helen Hunt
+Henry Cavill
+Hideki Matsui
+Hines Ward
+Howie Mandel
+Huey Lewis
+Hulk Hogan
+Ian Machado Garry
+Ja Morant
+Ja'Marr Chase
+Jack Ham
+Jake Roberts
+Jamaal Wilkes
+James Harrison
+Jared Curtis
+Jason Giambi
+Jason Kidd
+Jason Roy
+Jennifer Grey
+Jerry Stackhouse
+Jerry West
+Jim Boeheim
+Jim Calhoun
+Jim Covert
+Jim McMahon
+Jimmy Hart
+Joe Dumars
+Joe Montana
+Joe Theismann
+John Boyega
+John Calipari
+John Daly
+John Elway
+John Goodman
+Jon Bernthal
+Jon Cryer
+Jon Gries
+Jose Canseco
+Juliette Lewis
+Justin Jefferson
+Kate Beckinsale
+Kate Harpring
+Katey Sagal
+Katie Ledecky
+Katlyn Cerminara
+Kayla Harrison
+Keenan Allen
+Kelsey Grammer
+Kevin Holland
+Kevin Smith
+Kirby Smart
+Koko B. Ware
+Kurt Angle
+LaDainian Tomlinson
+Landon Quiñones
+Larry Bird
+Larry Csonka
+Le'Veon Moss
+Lea Thompson
+Lenny Moore
+Lenny Wilkens
+Lionel Messi
+Liv Tyler
+Lou Ferrigno
+Magic Johnson
+Mariano Rivera
+Marisa Tomei
+Mark-Paul Gosselaar
+Marshall Faulk
+Mel Gibson
+Mena Suvari
+Merab Dvalishvili
+Michael B. Jordan
+Michael Bisping
+Michael Buffer
+Michael Cooper
+Michael Madsen
+Michael Vick
+Michelle Pfeiffer
+Miesha Tate
+Miguel Cabrera
+Mike Tyson
+MiLaysia Fulwiley
+Mo'ne Davis
+Mr. T
+Muggsy Bogues
+Naomi Osaka
+Nazim Sadykhov
+Nick Sirianni
+Nicolas Cage
+Nika Mühl
+Olivia Dunne
+Omarion Hampton
+Orlando Pace
+Parker Posey
+Patrick Ewing
+Patrick Peterson
+Paul Rudd
+Pete Rose
+Peyton Houston
+Peyton Manning
+Phil Ivey
+Quinton "Rampage" Jackson
+Rafael Nadal
+Rafael Palmeiro
+Raghib "Rocket" Ismail
+Ralph Fiennes
+Ralph Macchio
+Randy Quaid
+Randy White
+Ray Lewis
+Ray Mancini
+Reggie Jackson
+Ric Flair
+Rick Mirer
+Rickey Henderson
+Ricky Williams
+Riddick Bowe
+Rintaro Sasaki
+Robert De Niro
+Roberto Alomar
+Rocky Bleier
+Ron Harper
+Ron Howard
+Ronaldo Nazário
+Ronnie Coleman
+Roy Jones Jr.
+Russell Wilson
+Ryan Lochte
+Ryder Lyons
+Ryne Sandberg
+Saidyokub Kakhramonov
+Sarah Schupansky
+Scott Rolen
+Sean Astin
+Sean Brady
+Seth Green
+Sharon Osbourne
+Shavkat Rakhmonov
+Shawn Kemp
+Shawnee Smith
+Soleil Moon Frye
+Spike Lee
+Stephen Curry
+Stephon Marbury
+Steve Austin
+Steve Garvey
+Steve Nash
+Steve Spurrier
+Steve Tasker
+Steve Young
+Susan Sarandon
+Ted DiBiase
+Tedy Bruschi
+Terrance McKinney
+Terry Bradshaw
+The Barbarian
+Thomas Jane
+Thurman Thomas
+Tiffani Thiessen
+Tim Tebow
+Tobin Bell
+Toby Fournier
+Tommy Hearns
+Tommy Lee
+Tony La Russa
+Tony Pérez
+Tonya Harding
+Tori Spelling
+Tyler "Hook" Senerchia
+Tyler Herro
+Tyreek Hill
+Val Kilmer
+Vinny Paz
+Vlade Divac
+Wade Boggs
+Warlord
+Warren Sapp
+Wil Wheaton
+Willie Roaf
+Yadier Molina
+
+[multi]
+Alan Trammell / Miguel Cabrera / Cecil Fielder
+Allen Iverson / Jerry Stackhouse
+Allen Iverson / Stephon Marbury / Gary Payton / Jason Kidd
+Allen Iverson / Stephon Marbury / Steve Francis
+Andy Reid / Bill Cowher / Dick Vermeil
+Archie Manning / Peyton Manning / Eli Manning
+Bill Cowher / Dermontti Dawson / Barry Foster
+Bill Cowher / Troy Polamalu / Hines Ward / Yancey Thigpen
+Bo Jackson / Ashton Jeanty
+Bo Jackson / Tim Tebow
+Bob Cousy / Jerry West / Larry Bird
+Brad Daugherty / Mark Price
+Brandon Quintin Adams / Victor DiMattia / Grant Gelt / Tom Guiry / Chauncey Leopardi / Marty York
+Cameron Boozer / Cayden Boozer
+Cameron Brink / Hailey Van Lith
+Carl Yastrzemski / Wade Boggs / Carlton Fisk / Curt Schilling / David Ortiz
+Charles Barkley / Patrick Ewing / Dennis Rodman
+Cheech Marin / Tommy Chong
+Chevy Chase / Randy Quaid
+Christopher McDonald / Chevy Chase / John Daly
+Cole Palmer / Declan Rice / Bruno Fernandes
+Conor McGregor / Dustin Poirier / Max Holloway
+Conor McGregor / Floyd Mayweather Jr.
+Conor McGregor / Max Holloway
+Conor McGregor / Max Holloway / Dustin Poirier / Shavkat Rakhmonov / Michael Bisping
+Conor McGregor / Mike Tyson / Steve Austin / Floyd Mayweather Jr.
+Cris Carter / Randy Moss / Justin Jefferson
+Dale Murphy / Dave Justice / Fred McGriff / Tom Glavine / John Smoltz
+Dale Murphy / Fred McGriff
+Darryl Strawberry / Dwight Gooden
+Darryl Strawberry / Dwight Gooden / Ray Knight / Jesse Orosco / Sid Fernandez / Wally Backman
+Dave Winfield / Darryl Strawberry / Vladimir Guerrero
+Dennis Rodman / Isiah Thomas / Joe Dumars
+DJ Lagway / Byrum Brown
+DJ Lagway / Sam Leavitt / Austin Simmons / Cade Klubnik / John Mateer
+DJ Lagway / Tim Tebow
+Dominique Wilkins / Clyde Drexler / Jerry Stackhouse
+Donnie Shell / Rod Woodson
+Donovan McNabb / Michael Vick
+Drew Brees / Eli Manning
+Drew Brees / Peyton Manning / Brett Favre / Joe Montana / John Elway
+Dwight Gooden / Darryl Strawberry / Ray Knight / Jesse Orosco
+Emmitt Smith / Drew Pearson / Randy White / Cliff Harris / Danny White / Charles Haley
+Emmitt Smith / Earl Campbell / Eric Dickerson / Terrell Davis / LaDainian Tomlinson
+Emmitt Smith / Eric Dickerson
+Eric Davis / Barry Larkin
+Eric Davis / Chris Sabo / Barry Larkin / José Rijo
+Eric Dickerson / Marshall Faulk / Edgerrin James
+Frank Lampard / Franck Ribéry
+Frank Thomas / Harold Baines
+George Gervin / Marques Johnson / Dan Issel / George McGinnis / Bob McAdoo
+Giannis Antetokounmpo / Ja Morant
+Giannis Antetokounmpo / Stephen Curry
+Giannis Antetokounmpo / Stephen Curry / Ja Morant
+Giannis Antetokounmpo / Stephen Curry / Ja Morant / James Harden / Anthony Edwards
+Hulk Hogan / Steve Austin
+Ja Morant / Tyler Herro
+Jamal Anderson / Terrell Davis
+Jeff Bagwell / Craig Biggio
+Jim Boeheim / Rick Pitino / Jim Calhoun / Roy Williams
+Jim Calhoun / Jim Boeheim / Rick Pitino
+Jim Calhoun / Rick Pitino / John Calipari / Jim Boeheim / Roy Williams
+Jim Palmer / Ferguson Jenkins / Jim Lonborg
+Jim Thome / Fred McGriff / Rafael Palmeiro
+Joe Montana / Peyton Manning / Dan Marino / John Elway
+Joe Montana / Tim Brown / Rocky Bleier / Ricky Watters / Joe Theismann / Raghib "Rocket" Ismail
+John Daly / Christopher McDonald
+Josko Gvardiol / Gabriel Magalhães / Ryan Gravenberch
+Kayla Harrison / Amanda Nunes / Cris Cyborg
+Larry Bird / Charles Barkley / Dominique Wilkins / Dennis Rodman / Magic Johnson
+Larry Bird / Jerry West
+Larry Csonka / Earl Campbell
+Larry Little / Joe DeLamielleure / John Hannah / Willie Roaf
+Lawrence Taylor / Jack Ham / Ray Lewis / Rickey Jackson
+Lenny Moore / LaDainian Tomlinson / Marshall Faulk / Thurman Thomas / Alvin Kamara
+Lionel Messi / Giannis Antetokounmpo / Carlos Alcaraz / Jayden Daniels
+Lionel Messi / Neymar Jr.
+Lionel Messi / Ronaldo Nazário / Franck Ribéry / Bruno Fernandes / Geoff Hurst
+Magic Johnson / Jamaal Wilkes / Michael Cooper / James Worthy / Bob McAdoo / Jerry West
+Magic Johnson / James Worthy / Michael Cooper / Jamaal Wilkes
+Mark McGwire / Frank Thomas / Jeff Bagwell
+Mark McGwire / Yadier Molina / Ozzie Smith
+Marv Levy / Jim Kelly / Thurman Thomas / Andre Reed
+Mason Heintschel / CJ Carr / Gunner Stockton / Demond Williams Jr. / Fernando Mendoza
+Miguel Cabrera / Adrián Beltré
+Mike Tyson / Michael B. Jordan / Mr. T
+Mike Tyson / Riddick Bowe / Deontay Wilder
+Nolan Ryan / Jeff Bagwell / Craig Biggio / Billy Wagner / Roy Oswalt
+Paul O'Neill / Barry Larkin / Chris Sabo / Eric Davis / José Rijo
+Pete Rose / Eric Davis
+Peyton Manning / Eli Manning
+Ric Flair / Jake Roberts / Ted DiBiase / Tito Santana / Greg Valentine
+Ric Flair / Paul Finebaum
+Ric Flair / Steve Austin
+Ric Flair / Ted DiBiase / Jake Roberts / Goldberg
+Richard Petty / Tony Stewart / Sergio Garcia / Charles Leclerc / Yuki Tsunoda
+Rob Van Dam / Kane
+Roberto Alomar / Kelly Gruber / Jesse Barfield / Duane Ward / Devon White / Fred McGriff
+Roberto Alomar / Kelly Gruber / Joe Carter
+Robin Yount / Alan Trammell
+Robin Yount / Cecil Cooper / Paul Molitor / Rollie Fingers / Ted Simmons
+Robin Yount / Ted Simmons / Paul Molitor / Cecil Cooper / Jim Gantner / Rollie Fingers
+Roger Staubach / Drew Pearson / Randy White / Cliff Harris
+Roger Staubach / Terry Bradshaw / Bob Griese / Fran Tarkenton
+Rollie Fingers / Jeff Reardon / Mariano Rivera
+Ronaldo Nazário / Neymar Jr. / Roberto Carlos
+Ryne Sandberg / Roberto Alomar
+Ryne Sandberg / Shawon Dunston / Mark Grace
+Ryne Sandberg / Wade Boggs / Dale Murphy / Don Mattingly
+Steve Garvey / Dusty Baker / Reggie Smith / Bill Russell / Steve Yeager
+Steve Garvey / Eddie Murray / Dave Winfield / Pete Rose
+Steve Garvey / Reggie Smith / Dusty Baker / Jerry Reuss / Bill Russell / Ron Cey
+Steve Nash / Jason Kidd / Allen Iverson / Gary Payton / Tony Parker
+Steve Nash / Jason Kidd / Gary Payton
+Steve Spurrier / Danny Wuerffel / Tim Tebow
+Steve Spurrier / Urban Meyer / Kirby Smart / Ryan Day
+Ted DiBiase / Brutus Beefcake
+Ted DiBiase / Steve Austin
+Terrell Davis / Eric Dickerson / Chris Johnson / Barry Sanders
+Terry Bradshaw / Donnie Shell / Hines Ward / Barry Foster / Greg Lloyd / Bill Cowher
+Terry Hanratty / Joe Theismann / Joe Montana / Rick Mirer
+Terry Hanratty / Joe Theismann / Joe Montana / Rick Mirer / Riley Leonard
+Warren Sapp / Ndamukong Suh

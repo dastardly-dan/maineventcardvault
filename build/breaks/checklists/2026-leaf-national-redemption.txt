@@ -1,0 +1,372 @@
+# name: 2026 Leaf National Redemption
+# sport: Leaf Multi-Sport
+# added: 2026-11-22
+# source: https://www.leaftradingcards.com/products/2026-leaf-national-redemption
+# note: Leaf is unlicensed: no team names, so team breaks are not available. Print runs from the official checklist.
+
+[base]
+Aaron Donald
+Adrian Peterson
+Ahmad Hardy
+Alan Trammell
+Alejandro Garnacho
+Allen Iverson
+Anfernee Hardaway
+Anna Leigh Waters
+Austin Reaves
+Barry Larkin
+Bo Jackson
+Bret Hart
+Brian Bosworth
+Bruno Fernandes
+Bryce Underwood
+Byrum Brown
+Cade Arrambide
+Cam Coleman
+Cameron Brink
+Charles Leclerc
+Charlie Sheen
+Chevy Chase
+Chris Bosh
+Chris Webber
+CJ Carr
+Cole Palmer
+Conor McGregor
+Cristiano Ronaldo
+Cynthia Cooper
+Dante Moore
+Dave Winfield
+Dennis Eckersley
+Dennis Rodman
+Deontay Wilder
+Diana Taurasi
+Dominique Malonga
+Dominique Wilkins
+Don Mattingly
+Doug Flutie
+Drew Brees
+Drew Mestemaker
+Dustin Poirier
+Dwight Gooden
+Earl Campbell
+Eddie Murray
+Eli Manning
+Emmitt Smith
+Endrick
+Erling Haaland
+Floyd Mayweather Jr.
+Francesco Totti
+Frank Thomas
+Fred McGriff
+Gabby Douglas
+George Brett
+George MacIntyre
+Giannis Antetokounmpo
+Goldberg
+Greg Maddux
+Gunner Stockton
+Hannah Hidalgo
+Harold Baines
+Hope Solo
+Hulk Hogan
+Ja Morant
+Jake Roberts
+Jared Curtis
+Jason Kidd
+Jayden Maiava
+Jerry West
+Jim McMahon
+Joe Montana
+Joey Chestnut
+John Daly
+John Elway
+John Stockton
+Johnny Bench
+Jon Gruden
+Jon Jones
+Jose Canseco
+Julian Edelman
+Kai Trump
+Kaka
+Kate Harpring
+Ken Griffey Jr.
+Kevin Garnett
+Lamar "Bo" Jackson
+Lamine Yamal
+LaNorris Sellers
+Larry Bird
+Lauren Betts
+Lawrence Taylor
+Lionel Messi
+Luke Kuechly
+Magic Johnson
+Malachi Toney
+Manny Pacquiao
+Marcus Freeman
+Mariano Rivera
+Mario Andretti
+Mario Cristobal
+Mark Grace
+Mark McGwire
+Max Holloway
+Miguel Cabrera
+Mike Piazza
+Mike Schmidt
+Mike Tyson
+Mike Vrabel
+Mr. T
+Neymar Jr.
+Nick Kurtz
+Nikola Jokić
+Nolan Ryan
+Olivia Dunne
+Ozzie Smith
+Patrick Ewing
+Pelé
+Pete Weber
+Phil Ivey
+Rafael Nadal
+Reggie Jackson
+Ric Flair
+Rich Eisen
+Richard Petty
+Rickey Henderson
+Rob Gronkowski
+Roger Clemens
+Roger Staubach
+Russell Wilson
+Ryne Sandberg
+Shakur Stevenson
+Shaquille O'Neal
+Shawn Kemp
+Sophie Cunningham
+Stephen Curry
+Steve Austin
+Steve Largent
+Sugar Ray Leonard
+Tim Raines
+Toby Fournier
+Wade Boggs
+Walt Frazier
+Will Clark
+Ángel Di María
+
+[auto]
+Ahmad Hardy
+Alan Trammell
+Allen Iverson
+Anna Leigh Waters
+Audi Crooks
+Barry Switzer
+Bret Hart
+Brooks Koepka
+Bryce Underwood
+Byrum Brown
+Cam Coleman
+Cameron Brink
+CJ Carr
+Dante Moore
+Demond Williams Jr.
+Dennis Rodman
+Dexter McCleon Jr.
+Dominique Wilkins
+Don Mattingly
+Doug Flutie
+Drew Brees
+Earl Campbell
+Emmitt Smith
+Floyd Mayweather Jr.
+Frank Thomas
+Fred McGriff
+George MacIntyre
+Giannis Antetokounmpo
+Goldberg
+Gunner Stockton
+Hope Solo
+Ja Morant
+Jake Roberts
+Jared Curtis
+Jerry Stackhouse
+Joe Torre
+John Smoltz
+Johnny Bench
+Jon Gruden
+Justice Haynes
+Kai Trump
+Kate Harpring
+Kevin Garnett
+Lamar "Bo" Jackson
+Larry Bird
+Lauren Betts
+Luke Kuechly
+Malachi Toney
+Mariano Rivera
+Mario Andretti
+Mark Grace
+Marshall Faulk
+Mike Mussina
+Mike Schmidt
+Mike Tyson
+Nick Saban
+Olivia Dunne
+Ozzie Smith
+Patrick Ewing
+Phil Ivey
+Reggie Jackson
+Ric Flair
+Ronnie Coleman
+Ryne Sandberg
+Sammy Sosa
+Shaquille O'Neal
+Shawn Kemp
+Steve Largent
+Tim Raines
+Tim Tebow
+Toby Fournier
+
+[insert]
+Aaron Donald
+Adrian Peterson
+Ahmad Hardy
+Alan Trammell
+Alejandro Garnacho
+Allen Iverson
+Anfernee Hardaway
+Anna Leigh Waters
+Austin Reaves
+Barry Larkin
+Bo Jackson
+Bret Hart
+Brian Bosworth
+Bruno Fernandes
+Bryce Underwood
+Byrum Brown
+Cade Arrambide
+Cam Coleman
+Cameron Brink
+Charles Leclerc
+Charlie Sheen
+Chevy Chase
+Chris Bosh
+Chris Webber
+CJ Carr
+Cole Palmer
+Conor McGregor
+Cristiano Ronaldo
+Cynthia Cooper
+Dante Moore
+Dave Winfield
+Dennis Eckersley
+Dennis Rodman
+Deontay Wilder
+Diana Taurasi
+Dominique Malonga
+Dominique Wilkins
+Don Mattingly
+Doug Flutie
+Drew Brees
+Drew Mestemaker
+Dustin Poirier
+Dwight Gooden
+Earl Campbell
+Eddie Murray
+Eli Manning
+Emmitt Smith
+Endrick
+Erling Haaland
+Floyd Mayweather Jr.
+Francesco Totti
+Frank Thomas
+Fred McGriff
+Gabby Douglas
+George Brett
+George MacIntyre
+Giannis Antetokounmpo
+Goldberg
+Greg Maddux
+Gunner Stockton
+Hannah Hidalgo
+Harold Baines
+Hope Solo
+Hulk Hogan
+Ja Morant
+Jake Roberts
+Jared Curtis
+Jason Kidd
+Jayden Maiava
+Jerry West
+Jim McMahon
+Joe Montana
+Joey Chestnut
+John Daly
+John Elway
+John Stockton
+Johnny Bench
+Jon Gruden
+Jon Jones
+Jose Canseco
+Julian Edelman
+Kai Trump
+Kaka
+Kate Harpring
+Ken Griffey Jr.
+Kevin Garnett
+Lamar "Bo" Jackson
+Lamine Yamal
+LaNorris Sellers
+Larry Bird
+Lauren Betts
+Lawrence Taylor
+Lionel Messi
+Luke Kuechly
+Magic Johnson
+Malachi Toney
+Manny Pacquiao
+Marcus Freeman
+Mariano Rivera
+Mario Andretti
+Mario Cristobal
+Mark Grace
+Mark McGwire
+Max Holloway
+Miguel Cabrera
+Mike Piazza
+Mike Schmidt
+Mike Tyson
+Mike Vrabel
+Mr. T
+Neymar Jr.
+Nick Kurtz
+Nikola Jokić
+Nolan Ryan
+Olivia Dunne
+Ozzie Smith
+Patrick Ewing
+Pelé
+Pete Weber
+Phil Ivey
+Rafael Nadal
+Reggie Jackson
+Ric Flair
+Rich Eisen
+Richard Petty
+Rickey Henderson
+Rob Gronkowski
+Roger Clemens
+Roger Staubach
+Russell Wilson
+Ryne Sandberg
+Shakur Stevenson
+Shaquille O'Neal
+Shawn Kemp
+Sophie Cunningham
+Stephen Curry
+Steve Austin
+Steve Largent
+Sugar Ray Leonard
+Tim Raines
+Toby Fournier
+Wade Boggs
+Walt Frazier
+Will Clark
+Ángel Di María

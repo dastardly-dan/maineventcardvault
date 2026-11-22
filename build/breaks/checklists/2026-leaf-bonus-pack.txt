@@ -1,0 +1,198 @@
+# name: 2026 Leaf Bonus Pack
+# sport: Leaf Multi-Sport
+# added: 2026-11-22
+# source: https://www.leaftradingcards.com/products/2026-leaf-bonus-pack
+# note: Leaf is unlicensed: no team names, so team breaks are not available. Print runs from the official checklist.
+
+[auto]
+Aaron Butler
+Abraham Ancer
+Aeneas Williams
+Ahmari Huggins-Bruce
+Air Noland
+Ali Jennings
+Alton McCaskill
+Amar Johnson
+Amari Niblack
+Andre Greene Jr.
+Andrew Rappleyea
+Aneesah Morrow
+Anfernee Simons
+Antonio Davis
+Antonio Gates Jr.
+Armanti Edwards
+Athan Kaliakmanis
+Austin Jones
+Austin Reed
+Baron Davis
+Barry Sanders
+Ben Gula
+Benjamin Hall
+Bennedict Mathurin
+Bhayshul Tuten
+Brady Drogosh
+Brayden Dorman
+Braylen Russell
+Brian Cashman
+Brooks Koepka
+Bryce Cain
+Cade Klubnik
+Cade McNamara
+Caden Story
+Carnell Tate
+Chandler Morris
+Chandler Rivers
+Charlie Scott
+Charlie Sheen
+Chase Hendricks
+Chimere Dike
+CJ Daniels
+CJ Tiller
+Colbie Young
+Colston Loveland
+Conor McGregor
+D.J. Uiagalelei
+Davius Richard
+Dean Connors
+DeMar DeRozan
+DeMeer Blankumsee
+Derrick Blanche Jr.
+Devin Brown
+Domani Jackson
+Dominique Wilkins
+Donavon Greene
+Dustin Hopkins
+Dylan Rizk
+Eli Sanders
+Elijah Sarratt
+Elijah Spencer
+Emmett Morehead
+Eric Singleton Jr.
+Ethan Hampton
+Evan Prater
+Fat Lever
+Germie Bernard
+Giannis Antetokounmpo
+Giles Jackson
+Grant Wells
+Greg Oden
+Gunnar Helm
+Isaiah Thomas
+Ismail Mahdi
+Israel Abrams
+Ja'Varrius Johnson
+Jack Nickel
+Jackson Taylor
+Jacolby George
+Jadon Janke
+Jaedon Wilson
+Jai'Den Thomas
+Jake Plummer
+Jake Retzlaff
+Jake Strong
+Jalewis Solomon
+Jalon Daniels
+Jase McClellan
+Javon Baker
+Javon Tracy
+Jayden Ballard
+Jayden Broadie
+Jaylen Lloyd
+Jermaine Jackson
+Jermaine Samuels
+Jha'Quan Jackson
+Joe Montana
+Joey O'Brien
+John Rhys Plumlee
+Jordan McCloud
+Jordan Waters
+Jose Canseco
+Joseph Griffin Jr.
+Joseph Himon II
+Josh Hoover
+Josh Kelly
+JP Pickles
+Julian Hicks
+Justin Thurman
+Justin Williams
+Kaedin Robinson
+Kaidon Salter
+Katin Houser
+Kedren Young
+Kedrick Reescano
+Kendrick Perkins
+Kevin Mitchell
+Keyone Jenkins
+Kobe McCloud
+Kody Epps
+Konata Mumpfield
+Kris Mitchell
+Lamine Yamal
+Larry Nance Sr.
+Leilani Armenta
+Leshon Williams
+Lincoln Victor
+Logan Diggs
+Logan Saldate
+Marcus Rosemy-Jacksaint
+Maria Gakdeng
+Mario Chalmers
+Mario Manningham
+Mark Fletcher Jr.
+Marques Johnson
+Marquis Johnson
+Maverick McIvor
+Micheal Ray Richardson
+Mike Bibby
+Mikey Williams
+Mohamed Ibrahim
+Natalie Portman
+Nate McCollum
+Nicolas Cage
+Nolan Ryan
+Omar Cooper Jr.
+Otis Nixon
+Patrick Baldwin Jr.
+Peny Boone
+Quinten Joyner
+Rara Thomas
+Rashad Amos
+Reggie Langhorne
+Reggie Rucker
+Rico Flores Jr.
+Robert Lewis
+Roc Taylor
+Roddy White
+Roman Hemby
+Ron Harper
+Ryan Pellum
+Ryan Wingo
+Ryne Sandberg
+Samuel Brown
+Shawne Merriman
+Stacey Augmon
+Tai Felton
+Taylor Elgersma
+Tee Martin
+Terry Cummings
+Thomas Cillo
+TJ Finley
+Tony Hill
+Travis Dye
+Treshaun Ward
+Ty Hawkins
+Ty Simpson
+Tyler Huff
+Tyler Shough
+Tyler Van Dyke
+Walker Howard
+Walker White
+Will Rogers
+Winston Watkins Jr.
+Woody Marks
+Xavier Townsend
+Yancey Thigpen
+Zachery Turner
+Zavion Thomas
+Zeon Chriss
+Zevi Eckhaus

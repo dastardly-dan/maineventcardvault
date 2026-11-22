@@ -1,0 +1,218 @@
+# name: 2026 Leaf Metal St. Patrick's Day
+# sport: Leaf Multi-Sport
+# added: 2026-11-22
+# source: https://www.leaftradingcards.com/products/2026-leaf-metal-st-patricks-day
+# note: Leaf is unlicensed: no team names, so team breaks are not available. Print runs from the official checklist.
+
+[auto]
+Adam "Pacman" Jones
+Adrian Dantley
+Alan Page
+Allen Iverson
+Andy Reid
+Anna Leigh Waters
+Anthony Hopkins
+Antoine Walker
+Audi Crooks
+Austin Reaves
+Barry Sanders
+Ben Affleck
+Billy Joe DuPree
+Bo Jackson
+Bob Cousy
+Brian Scalabrine
+Cameron Boozer
+Cameron Brink
+Cameron Skattebo
+Carlito
+Carlos Alcaraz
+Cayden Boozer
+Chad Johnson
+Charles Barkley
+Charlie Scott
+Chevy Chase
+Chris Webber
+Christian Okoye
+Christy Martin
+Chuck Norris
+CJ Carr
+Cliff Floyd
+Conor McGregor
+Dan Aykroyd
+Dan Fouts
+Dan Issel
+Dana White
+Davante Adams
+Dave Casper
+Dave Portnoy
+Dennis Eckersley
+Dennis Rodman
+Dexter McCleon Jr.
+Dia Bell
+Diana Taurasi
+Dick Vitale
+DJ Lagway
+Dominique Malonga
+Dominique Wilkins
+Donnie Shell
+Doug Flutie
+Drew Brees
+Earl Campbell
+Eddie Murray
+Elizabeth Hurley
+Emilia Clarke
+Emmitt Smith
+Erling Haaland
+Ewan McGregor
+Fat Lever
+Floyd Mayweather Jr.
+Frank Thomas
+Frank Viola
+Gheorghe Mureșan
+Giannis Antetokounmpo
+Gillian Anderson
+Goldberg
+Greg Maddux
+Greg Valentine
+Hannah Hidalgo
+Harlem Berry
+Henry Cavill
+Hines Ward
+Hope Solo
+J. R. Smith
+Ja Morant
+Ja'Marr Chase
+Jamal Anderson
+Jared Curtis
+Jason Kipnis
+Jay Novacek
+Jaylen Brown
+Jerry Stackhouse
+Jerzy Robinson
+Jim Kelly
+Jim McMahon
+Joe Johnson
+Joe Montana
+Joe Rudi
+Joe Theismann
+Jon Gruden
+Jose Canseco
+José Cruz Jr.
+José Rijo
+Kai Trump
+Lamar "Bo" Jackson
+Lamine Yamal
+Larry Bird
+Larry Little
+Lauren Betts
+Lenny Wilkens
+Magic Johnson
+Malachi Toney
+Mariano Rivera
+Mario Andretti
+Mario Manningham
+Mark Mulder
+Mark Wahlberg
+Maurice Jones-Drew
+Mel Gibson
+Miguel Cabrera
+Mike Tyson
+MiLaysia Fulwiley
+Mr. T
+Muggsy Bogues
+Natalie Portman
+Nate Archibald
+Nick Dunlap
+Nick Saban
+Nicolas Cage
+Nikola Jokic
+Nolan Ryan
+Olivia Dunne
+Omarion Hampton
+Otis Nixon
+Paolo Banchero
+Patrick Ewing
+Pete Incaviglia
+Peyton Manning
+Phil Ivey
+Raghib "Rocket" Ismail
+Rainn Wilson
+Randy White
+Reggie Jackson
+Ric Flair
+Rich Eisen
+Richard Dreyfuss
+Richard Petty
+Rick Mirer
+Rickey Henderson
+Riley Leonard
+Rob Van Dam
+Robert Horry
+Roch Cholowsky
+Rocky Bleier
+Ronnie Coleman
+Roy Jones Jr.
+Rudy Ruettiger
+Russell Wilson
+Ryan Leaf
+Sean Astin
+Seth Green
+Shaun White
+Shawn Green
+Spike Lee
+Steve Austin
+Steve Largent
+Steve Young
+Terry Bradshaw
+Terry Hanratty
+Tiki Barber
+Tim Hudson
+Tim Robbins
+Tim Tebow
+Timonthy Olyphant
+Toby Fournier
+Tom Glavine
+Tony Hill
+TreVeyon Henderson
+William Perry
+William Shatner
+Willie McGinest
+Willie Roaf
+Yao Ming
+Yuki Tsunoda
+
+[multi]
+Austin Reaves / Tyler Herro
+Ben Affleck / Cole Hauser
+Cameron Boozer / Malachi Toney
+Chris Webber / Juwan Howard
+Conor McGregor / Dana White
+Conor McGregor / Jean-Claude Van Damme / Chuck Norris
+Dan Fouts / Charlie Joiner
+Daniel Cormier / Jon Anik
+Demolition Ax / Demolition Smash
+Drew Brees / Eli Manning
+Dwight Howard / Paolo Banchero
+Earl Campbell / Chris Johnson / Derrick Henry
+Eli Manning / Tiki Barber
+Fran Tarkenton / Chuck Foreman / Alan Page
+George Brett / Wade Boggs / Don Mattingly
+Giannis Antetokounmpo / Jaylen Brown / Nikola Jokic
+Giannis Antetokounmpo / Magic Johnson
+Jerry West / Magic Johnson
+Jim Kelly / Andre Reed / Thurman Thomas
+Jim McMahon / Doug Flutie
+Joe Montana / Steve Young
+Lamine Yamal / Erling Haaland / Cole Palmer
+Matt Hardy / Jeff Hardy
+Mike Vrabel / Willie McGinest
+Patrick Ewing / Bill Bradley / Bernard King
+Richard Petty / Mario Andretti
+Roger Staubach / Terry Bradshaw / Dan Fouts
+Rudy Ruettiger / Sean Astin
+Sam Neill / Wayne Knight
+Steve Austin / Ric Flair
+Steve Largent / Randy Moss / Davante Adams
+Sugar Ray Leonard / Tommy Hearns
+Tim Tebow / Bo Jackson
+Warren Sapp / Aaron Donald

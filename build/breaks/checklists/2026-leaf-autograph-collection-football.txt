@@ -1,0 +1,306 @@
+# name: 2026 Leaf Autograph Collection Football
+# sport: Leaf Football
+# added: 2026-11-22
+# source: https://www.leaftradingcards.com/products/2026-leaf-autograph-collection-football
+# note: Leaf is unlicensed: no team names, so team breaks are not available. Print runs from the official checklist.
+
+[auto]
+Aaron Donald
+Aaron Gregory
+Adrian Peterson
+Akili Smith Jr.
+Akylin Dear
+Alan Page
+Alshon Jeffery
+Andre Johnson
+Andre Reed
+Andy Reid
+Anthony Muñoz
+Antonio Gates
+Antwann Hill Jr.
+Archie Manning
+Art Monk
+Barry Foster
+Barry Sanders
+Ben Coates
+Billy Joe DuPree
+Billy Sims
+Bob Golic
+Bob Lilly
+Brady Edmunds
+Brady Hart
+Brady Quinn
+Brady Smigiel
+Brandon Arrington
+Braxton Miller
+Brian Bosworth
+Brian Dawkins Sr.
+Brian Sipe
+Buck Belue
+Byrd Ficklin
+Byrum Brown
+Caden Durham
+Caleb Cunningham
+Calvin Russell
+Cam Coleman
+Chad Johnson
+Chase Herbstreit
+Chris Johnson
+Christian Okoye
+Chuck Foreman
+CJ Carr
+Colt McCoy
+Conner Weigman
+D.J. Bordeaux
+Dan Hampton
+Daniel Mielke
+Danny Amendola
+Danny White
+Dante Hall
+Dante Moore
+Darren Sproles
+Dave Robinson
+Demond Williams Jr.
+Derek Meadows
+Derek Zammit
+Derrek Cooper
+Derrick Baker
+DeSean Jackson
+Deuce Knight
+Devin Carter
+Dia Bell
+Dierre Hill
+Dilin Jones
+DJ Lagway
+Donnie Shell
+Donovan Olugbode
+Drew Brees
+Drew Mestemaker
+Drew Pearson
+Dwight Stephenson
+Earl Campbell
+Earl Thomas
+Ed Reed
+Edgerrin James
+Eli Holstein
+Elijah Haven
+Ellis Robinson IV
+Elvin Bethea
+Emmitt Smith
+Eric Allen
+Ernest Givins
+Ethan Grunkemeyer
+Faizon Brandon
+Frank Gore
+Fred Williamson
+George MacIntyre
+Gunner Stockton
+Harlem Berry
+Harold Carmichael
+Hauss Hejny
+Haywood Jeffires
+Hines Ward
+Ickey Woods
+Irving Fryar
+Jabari Brady
+Jabari Mack
+Jack Ham
+Jadan Baugh
+Jaden O'Neal
+Jamal Anderson
+Jamal Lewis
+James Harrison
+Jameson Purcell
+Jamier Brown
+Jan Stenerud
+Jared Curtis
+Jason Taylor
+Jason White
+Javian Osborne
+Jay Novacek
+Jayden Maiava
+Jerome Myles
+Jim Covert
+Jim Kelly
+Jim McMahon
+Jimmy Smith
+Joe Horn
+Joe Montana
+John Mateer
+John Taylor
+Johnny Manziel
+Jon Gruden
+Jonathan Ogden
+Josh Gordon
+Ju Ju Lewis
+Justice Haynes
+Kaiden Prothro
+Kaliq Lockett
+KaMario Taylor
+Karl Mecklenburg
+Kaydon Finley
+Kedren Young
+Kewan Lacy
+KJ Lacey
+Kordell Stewart
+Lamar "Bo" Jackson
+Landen Holley
+LaNorris Sellers
+Larry Little
+Lawrence Taylor
+Le'Veon Bell
+LeGarrette Blount
+Lenny Moore
+Leonard Moore
+LJ Martin
+Lorenzo White
+Luke Kuechly
+Malachi Toney
+Malachi Zeigler
+Mario Craver
+Mario Cristobal
+Mario Manningham
+Marshall Faulk
+Marv Levy
+Marvin Lewis
+Matt Schaub
+Maurice Jones-Drew
+Mekhi Nelson
+Micah Gilbert
+Michael Hawkins Jr.
+Michael Haynes
+Michael Pyne
+Michael Vick
+Mike Quick
+Mike Rozier
+Morten Andersen
+Ndamukong Suh
+Neil Smith
+Neimann Lawrence
+Nick Saban
+Noah Grubbs
+Noah Knigga
+Nyck Harbor
+Orlando Pace
+Oscar Rios
+Ottis Anderson
+Patrick Peterson
+Paul Krause
+Peter Bourque
+Peyton Falzone
+Peyton Houston
+Peyton Manning
+Quincy Porter
+Raghib "Rocket" Ismail
+Randy White
+Richard Dent
+Rick Mirer
+Rocky Bleier
+Rod Woodson
+Roger Staubach
+Ryan Leaf
+Ryan Montgomery
+Ryan Rakowski
+Sam Leavitt
+Sean McVay
+Steve DeBerg
+Steve Largent
+Steve Spurrier
+Steve Tasker
+Steve Young
+Ted Johnson
+Terrell Davis
+Thurman Thomas
+Tiki Barber
+Tim Couch
+Tim Tebow
+Tommy Carr
+Tony Dorsett
+Tony Richardson
+Tramell Jones Jr.
+Trever Jackson
+Troy Aikman
+Troy Huhn
+Tyler Cherry
+Vince Ferragamo
+Vince Wilfork
+Vinny Testaverde
+Walter Jones
+Wayne Chrebet
+Will Hammond
+Willie Gault
+Willie Roaf
+Willis McGahee
+Wonderful "Champ" Monds IV
+Zac Katz
+
+[multi]
+Alan Page / Chuck Foreman
+Alan Page / Paul Krause
+Andre Johnson / Willis McGahee
+Andre Reed / Thurman Thomas
+Antonio Gates / Jay Novacek
+Barry Sanders / Emmitt Smith
+Billy Sims / Brian Bosworth
+Bob Lilly / Randy White
+Brian Sipe / Ozzie Newsome
+Bryce Underwood / LaNorris Sellers
+Chad Johnson / Adam "Pacman" Jones
+Chad Johnson / Ickey Woods
+Dan Hampton / Jim Covert
+Darren Sproles / Antonio Gates
+Dia Bell / Cam Coleman
+Dick Vermeil / Marshall Faulk
+Donnie Shell / Rocky Bleier
+Donnie Shell / Rod Woodson
+Doug Flutie / Johnny Manziel
+Earl Campbell / Christian Okoye
+Earl Campbell / Colt McCoy
+Ed Reed / Warren Sapp
+Edgerrin James / Willis McGahee
+Emmitt Smith / Troy Aikman
+Eric Allen / Brian Dawkins Sr.
+Ernest Givins / Haywood Jeffires
+Frank Gore / Edgerrin James
+Ickey Woods / Anthony Muñoz
+Irving Fryar / DeSean Jackson
+Jack Ham / Donnie Shell
+James Harrison / Greg Lloyd
+Jan Stenerud / Morten Andersen
+Jerry Kramer / EDIT Dave Robinson
+Jim Kelly / Andre Reed
+Jim McMahon / Willie Gault
+Joe Theismann / Art Monk
+Joe Theismann / Ken Anderson
+John Mateer / Sam Leavitt
+Ken Anderson / Anthony Muñoz
+Kordell Stewart / Hines Ward
+Lamar "Bo" Jackson / Jamier Brown
+Larry Little / Dwight Stephenson
+LeGarrette Blount / Julian Edelman
+Lenny Moore / Edgerrin James
+Malachi Toney / Andre Johnson
+Malachi Toney / Cam Coleman
+Matt Schaub / Andre Johnson
+Mike Quick / DeSean Jackson
+Mike Rozier / Lorenzo White
+Neil Smith / Will Shields
+Randy Moss / Adrian Peterson
+Rick Mirer / Brady Quinn
+Rudy Ruettiger / Vince Papale
+Sam Leavitt / Drew Mestemaker
+Steve DeBerg / Vinny Testaverde
+Steve Largent / Charlie Joiner
+Steve Largent / Harold Carmichael
+Steve Owens / Billy Sims
+Steve Young / Joe Montana
+Tedy Bruschi / Ted Johnson
+Terrell Davis / Jamal Lewis
+Tiki Barber / Ottis Anderson
+Tim Couch / Johnny Manziel
+Vince Ferragamo / Jim Everett
+Vince Wilfork / Warren Sapp
+Vince Young / Colt McCoy
+Wayne Chrebet / Danny Amendola
+Willie Roaf / Orlando Pace
+Willis McGahee / Frank Gore

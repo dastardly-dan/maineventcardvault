@@ -1,0 +1,630 @@
+# name: 2026 Pro Set Metal Football
+# sport: Leaf Football
+# added: 2026-11-22
+# source: https://www.leaftradingcards.com/products/2026-pro-set-metal-football
+# note: Leaf is unlicensed: no team names, so team breaks are not available. Print runs from the official checklist.
+
+[base]
+Aaron Donald
+Aaron Gregory
+Adam "Pacman" Jones
+Ahmad Hardy
+Akili Smith Jr.
+Akylin Dear
+Ali Jennings
+Amar Johnson
+Andre Reed
+Andrew Rappleyea
+Andy Reid
+Anquan Boldin
+Antwane Wells Jr.
+Antwann Hill Jr.
+Archie Manning
+Art Monk
+Austan Cristiaan
+Austin Simmons
+Barry Sanders
+Barryn Sorrell
+Beaux Collins
+Bekkem Kritza
+Ben Gula
+Billy Edwards Jr.
+Billy Sims
+Bo Jackson
+Bob Lilly
+Brady Allen
+Brady Drogosh
+Brady Edmunds
+Brady Hart
+Brady Quinn
+Brady Smigiel
+Brandon Arrington
+Brayden Dorman
+Brayden Fowler-Nicolosi
+Braylen Russell
+Brian Bosworth
+Brian Dawkins Sr.
+Bryce Underwood
+Byrum Brown
+C.J. Williams
+Caden Durham
+Caden Story
+Caleb Burton III
+Caleb Cunningham
+Calvin Russell
+Cam Coleman
+Cam Williams
+Cameron Edge
+Cameron Seldon
+Carson Hansen
+Cederian Morgan
+Chad Johnson
+Chandler Rivers
+Chase Herbstreit
+Chevan Cordeiro
+Chris Denson
+Christian Okoye
+Christopher Vargas
+Chuck Foreman
+CJ Bailey
+CJ Carr
+CJ Daniels
+CJ Tiller
+Colin Hurley
+Conner Weigman
+D.J. Bordeaux
+Da'Quan Felton
+Dallan Hayden
+Dallas Wilson
+Dan Fouts
+Dane Weber
+Daniel Jackson
+Daniel Mielke
+Dante Moore
+Darian Mensah
+Darryon Williams
+Dave Casper
+Davi Belfort
+Dean Connors
+Deion Smith
+DeMeer Blankumsee
+Demond Williams Jr.
+Derek Meadows
+Derek Zammit
+Dereon Coleman
+Dermaricus Davis
+Derrek Cooper
+Derrick Baker
+Derrick Blanche Jr.
+Deuce Knight
+Devin Carter
+Devon Dampier
+Dia Bell
+Dierre Hill
+Dilin Jones
+DJ Lagway
+Domani Jackson
+Donnie Shell
+Donovan Olugbode
+Doug Flutie
+Drew Brees
+Drew Mestemaker
+Drew Pearson
+Dylan Laube
+Earl Campbell
+Eli Manning
+Elijah Brown
+Elijah Haven
+Elijah Kimble
+Elijah Spencer
+Elijiah Oehlke
+Ellis Robinson IV
+Emmett Morehead
+Emmitt Smith
+Ethan Grunkemeyer
+Ethan Vasko
+Evan Svoboda
+Faizon Brandon
+Ferzell Shepard
+Frank Gore
+Gage Larvadain
+George MacIntyre
+Giles Jackson
+Girard Pringle
+Grant Gray
+Gunner Stockton
+Harlem Berry
+Harold Carmichael
+Haywood Jeffires
+Helaman Casuga
+Hines Ward
+Irving Fryar
+Isaac Curtis
+Israel Abrams
+Jabari Brady
+Jabari Mack
+Jack Nickel
+Jackson Arnold
+Jacolby George
+Jaden Greathouse
+Jaden O'Neal
+Jaden Shirden
+Jaedon Wilson
+Jaime Ffrench
+Jaivian Thomas
+Jake Briningstool
+Jamal Anderson
+James Harrison
+James Simon
+Jameson Purcell
+Jamier Brown
+Jan Stenerud
+Jared Curtis
+Jay Novacek
+Jayden Broadie
+Jayden Maiava
+Jaylen Henderson
+Jaylin Lucas
+Jeremy Shockey
+Jerome Bettis Jr.
+Jerome Myles
+Jim Covert
+Jim Kelly
+Jim McMahon
+Jimmy Smith
+Joe Montana
+John Elway
+Jordan McCloud
+Jordon Davison
+JP Pickles
+Ju Ju Lewis
+Julian Edelman
+Jurrion Dickey
+Justice Haynes
+Justin Williams
+Kaden Wetjen
+Kaiden Prothro
+Kaleb Jackson
+Kam Davis
+KaMario Taylor
+Karson Gordon
+Kayden Dixon-Wyatt
+Kedrick Reescano
+Keegan Croucher
+Kenny Minchey
+Kewan Lacy
+Khalil Wilkins
+KJ Lacey
+Kobe McCloud
+Koi Perich
+Konata Mumpfield
+Kris Mitchell
+Kylan Billiot
+Kyson Brown
+LaDainian Tomlinson
+LaJohntay Wester
+Lamar "Bo" Jackson
+Landen Holley
+LaNorris Sellers
+Larry Little
+Lawrence Taylor
+Le'Veon Moss
+Lenny Moore
+Leonard Moore
+Logan Saldate
+Lorenzo White
+Luke Nickel
+Mabrey Mettauer
+Maddux Madsen
+Malachi Toney
+Malachi Zeigler
+Marcos Davila
+Marcus Harris
+Marcus Rosemy-Jacksaint
+Marshall Faulk
+Mason Heintschel
+Mason Holtzclaw
+Maurice Jones-Drew
+Maverick McIvor
+Max Klare
+Micah Hudson
+Michael Hawkins Jr.
+Michael Pyne
+Michael Vick
+Mike Quick
+Mike Vrabel
+Miles O'Neill
+MJ Morris
+Muizz Tounkara
+Ndamukong Suh
+Neil Smith
+Neimann Lawrence
+Nicco Marchiol
+Nick Marsh
+Nick Saban
+Noah Grubbs
+Noah Knigga
+Noah Roberts
+Nyck Harbor
+Omarion Miller
+Orlando Pace
+Osani Gayles
+Oscar Rios
+Patrick Peterson
+Paul Krause
+Payton Thorne
+Peny Boone
+Peter Bourque
+Peyton Falzone
+Peyton Houston
+Peyton Manning
+Preston Stone
+Quentin Gibson
+Quincy Porter
+Quintrevion Wisner
+Raheim Sanders
+Rahsul Faison
+Rara Thomas
+Rashad Amos
+Richard Dent
+Rickie Collins
+Ricky Williams
+Robert Lewis
+Roc Taylor
+Rocky Bleier
+Rod Woodson
+Roger Staubach
+Rudolph Blaze Ingram
+Russell Wilson
+Ryan Montgomery
+Ryan Puglisi
+Ryan Rakowski
+Ryder Lyons
+Salesi Moa
+Sawyer Robertson
+Sean McVay
+Sebastian Janikowski
+Steve Largent
+Steve Spurrier
+Steve Young
+Tait Reynolds
+Taylor Elgersma
+Terry Bradshaw
+Thurman Thomas
+Tiki Barber
+Tim Tebow
+TJ Harden
+TJ Lateef
+Trae Taylor
+Tramell Jones Jr.
+Trech Kekahuna
+Trever Jackson
+Tristan Sabb
+Tristen Keys
+Troy Huhn
+Ty Hawkins
+Tyler Cherry
+Tyler Huff
+Ulysses Bentley IV
+Vinny Testaverde
+Warren Moon
+Warren Sapp
+Will Griffin
+William Perry
+Willie Gault
+Willie McGinest
+Winston Watkins Jr.
+Wonderful "Champ" Monds IV
+Zac Katz
+Zeon Chriss
+
+[auto]
+A.J. Hawk
+Aaron Donald
+Aaron Gregory
+Adam "Pacman" Jones
+Ahmad Hardy
+Akili Smith Jr.
+Akylin Dear
+Ali Jennings
+Amar Johnson
+Andre Reed
+Andrew Rappleyea
+Andy Reid
+Anquan Boldin
+Antwane Wells Jr.
+Antwann Hill Jr.
+Archie Manning
+Art Monk
+Austan Cristiaan
+Austin Simmons
+Barry Sanders
+Bekkem Kritza
+Ben Gula
+Billy Edwards Jr.
+Billy Sims
+Bo Jackson
+Brady Allen
+Brady Drogosh
+Brady Edmunds
+Brady Hart
+Brady Quinn
+Brady Smigiel
+Brandon Arrington
+Brayden Dorman
+Brayden Fowler-Nicolosi
+Braylen Russell
+Brian Bosworth
+Brian Dawkins Sr.
+Bryce Underwood
+Byrum Brown
+Caden Durham
+Caden Story
+Caleb Burton III
+Caleb Cunningham
+Calvin Russell
+Cam Coleman
+Cam Williams
+Cameron Edge
+Cameron Seldon
+Carson Hansen
+Cederian Morgan
+Chad Johnson
+Chandler Rivers
+Chase Herbstreit
+Chevan Cordeiro
+Chris Denson
+Christian Okoye
+Christopher Vargas
+Chuck Foreman
+CJ Bailey
+CJ Carr
+CJ Daniels
+CJ Tiller
+Colin Hurley
+Conner Weigman
+D.J. Bordeaux
+Dallas Wilson
+Dan Fouts
+Dane Weber
+Daniel Mielke
+Dante Moore
+Darian Mensah
+Darryon Williams
+Dave Casper
+Davi Belfort
+Dean Connors
+Deion Smith
+Demond Williams Jr.
+Derek Meadows
+Derek Zammit
+Dereon Coleman
+Dermaricus Davis
+Derrek Cooper
+Derrick Baker
+Derrick Blanche Jr.
+Deuce Knight
+Devin Carter
+Devon Dampier
+Dia Bell
+Dierre Hill
+Dilin Jones
+DJ Lagway
+Domani Jackson
+Donnie Shell
+Donovan Olugbode
+Doug Flutie
+Drew Brees
+Drew Mestemaker
+Drew Pearson
+Earl Campbell
+Earl Thomas
+Eli Manning
+Elijah Brown
+Elijah Haven
+Elijah Kimble
+Elijiah Oehlke
+Ellis Robinson IV
+Emmitt Smith
+Ethan Grunkemeyer
+Ethan Vasko
+Evan Svoboda
+Faizon Brandon
+Ferzell Shepard
+Frank Gore
+George MacIntyre
+Girard Pringle
+Grant Gray
+Gunner Stockton
+Harlem Berry
+Harold Carmichael
+Haywood Jeffires
+Helaman Casuga
+Hines Ward
+Irving Fryar
+Isaac Curtis
+Jabari Brady
+Jabari Mack
+Jack Ham
+Jaden Greathouse
+Jaden O'Neal
+Jaden Shirden
+Jaime Ffrench
+Jake Briningstool
+Jamal Anderson
+Jamal Lewis
+James Harrison
+James Simon
+Jameson Purcell
+Jamier Brown
+Jan Stenerud
+Jared Curtis
+Jay Novacek
+Jayden Maiava
+Jaylen Henderson
+Jaylin Lucas
+Jeremy Shockey
+Jerome Bettis
+Jerome Bettis Jr.
+Jerome Myles
+Jim Covert
+Jim Kelly
+Jim McMahon
+Jimmy Smith
+Joe Montana
+John Elway
+Jordon Davison
+Ju Ju Lewis
+Julian Edelman
+Jurrion Dickey
+Justice Haynes
+Kaden Wetjen
+Kaiden Prothro
+Kaleb Jackson
+Kam Davis
+KaMario Taylor
+Karson Gordon
+Kayden Dixon-Wyatt
+Keegan Croucher
+Kenny Minchey
+Kewan Lacy
+Khalil Wilkins
+KJ Lacey
+Koi Perich
+Kylan Billiot
+Kyson Brown
+LaDainian Tomlinson
+LaJohntay Wester
+Lamar "Bo" Jackson
+Lance Briggs
+Landen Holley
+LaNorris Sellers
+Larry Little
+Lawrence Taylor
+Le'Veon Moss
+Lenny Moore
+Leonard Moore
+Lorenzo White
+Luke Nickel
+Mabrey Mettauer
+Maddux Madsen
+Malachi Toney
+Malachi Zeigler
+Marcos Davila
+Marcus Harris
+Marshall Faulk
+Mason Heintschel
+Mason Holtzclaw
+Maurice Jones-Drew
+Max Klare
+Micah Hudson
+Michael Dean Perry
+Michael Hawkins Jr.
+Michael Pyne
+Michael Vick
+Mike Alstott
+Mike Quick
+Mike Vrabel
+Miles O'Neill
+MJ Morris
+Muizz Tounkara
+Ndamukong Suh
+Neil Smith
+Neimann Lawrence
+Nicco Marchiol
+Nick Marsh
+Nick Saban
+Noah Grubbs
+Noah Knigga
+Noah Roberts
+Nyck Harbor
+Orlando Pace
+Osani Gayles
+Oscar Rios
+Paul Krause
+Payton Thorne
+Peter Bourque
+Peyton Falzone
+Peyton Hillis
+Peyton Houston
+Peyton Manning
+Preston Stone
+Quentin Gibson
+Quincy Porter
+Quintrevion Wisner
+Rahsul Faison
+Ray Lewis
+Richard Dent
+Rickie Collins
+Ricky Williams
+Rocky Bleier
+Rod Woodson
+Roger Staubach
+Rudolph Blaze Ingram
+Russell Wilson
+Ryan Montgomery
+Ryan Puglisi
+Ryan Rakowski
+Ryder Lyons
+Salesi Moa
+Sawyer Robertson
+Sean McVay
+Sebastian Janikowski
+Steve Atwater
+Steve Largent
+Steve Spurrier
+Steve Young
+Tait Reynolds
+Terry Bradshaw
+Thurman Thomas
+Tiki Barber
+Tim Tebow
+TJ Harden
+TJ Lateef
+Trae Taylor
+Tramell Jones Jr.
+Trech Kekahuna
+Trever Jackson
+Tristan Sabb
+Tristen Keys
+Troy Huhn
+Troy Polamalu
+Tyler Cherry
+Ulysses Bentley IV
+Vinny Testaverde
+Warren Moon
+Warren Sapp
+Will Griffin
+William Perry
+Willie Gault
+Willie McGinest
+Wonderful "Champ" Monds IV
+Zac Katz
+
+[multi]
+Alan Page / Aaron Donald
+Andy Reid / Sean McVay
+Barry Sanders / Emmitt Smith
+Bo Jackson / Barry Sanders
+Bo Jackson / Earl Campbell
+Bo Jackson / Tim Tebow
+Brian Dawkins Sr. / Earl Thomas
+CJ Carr / Dante Moore
+Colt McCoy / Vince Young
+Eli Manning / Jeremy Shockey
+Emmitt Smith / Barry Sanders
+Fran Tarkenton / Terry Bradshaw
+Jim McMahon / Willie Gault
+Jon Gruden / Sean McVay
+Julian Edelman / Danny Amendola
+Malachi Toney / Cam Coleman
+Malachi Toney / Lamar "Bo" Jackson
+Mark Brunell / Jimmy Smith
+Ray Lewis / James Harrison
+Ray Lewis / Warren Sapp
+Russell Wilson / Malcolm Butler
+Tim Tebow / Johnny Manziel
+Warren Moon / Demond Williams Jr.
+Warren Moon / Haywood Jeffires
+Willie McGinest / Mike Vrabel
+Y.A. Tittle / Eli Manning

@@ -1,0 +1,171 @@
+# name: 2026 Leaf Metal Hockey
+# sport: Leaf Hockey
+# added: 2026-11-22
+# source: https://www.leaftradingcards.com/products/2026-leaf-metal-hockey
+# note: Leaf is unlicensed: no team names, so team breaks are not available. Print runs from the official checklist.
+
+[auto]
+Abbey Murphy
+Adam Oates
+Al MacInnis
+Anders Hedberg
+Andy Moog
+Angela Ruggiero
+Barry Melrose
+Bernie Nicholls
+Bernie Parent
+Bill Guerin
+Bob Kelly
+Bob Nystrom
+Bobby Clarke
+Bobby Hull
+Brendan Morrison
+Brett Hull
+Brianna Decker
+Bryan Trottier
+Cale Hulse
+Caroline Harvey
+Caroline Ouellette
+Chris Chelios
+Curtis Joseph
+Darius Kasparaitis
+Darryl Sittler
+Dave Ellett
+Denis Savard
+Dominik Hasek
+Don Saleski
+Donald Audette
+Ed Belfour
+Eric Desjardins
+Eric Lindros
+Garry Unger
+Gerry Cheevers
+Gilles Gilbert
+Gilles Villemure
+Gordie Howe
+Grant Fuhr
+Guy Carbonneau
+Guy Lapointe
+Hayley Wickenheiser
+Hilary Knight
+Igor Larionov
+Jade Iginla
+Jari Kurri
+Jaromír Jágr
+Jay Wells
+Jocelyn Thibault
+Joe Mullen
+Joe Sakic
+John LeClair
+John Vanbiesbrouck
+Keith Primeau
+Kirk McLean
+Larry Robinson
+Luc Robitaille
+Manon Rhéaume
+Marcel Dionne
+Marian Hossa
+Mario Lemieux
+Mario Roberge
+Mario Tremblay
+Mark Giordano
+Mark Messier
+Martin Biron
+Martin Brodeur
+Martin St. Louis
+Marty McSorley
+Marty Turco
+Mats Näslund
+Mats Sundin
+Michel Goulet
+Mike Foligno
+Mike Keane
+Mike Krushelnyski
+Mike Modano
+Mike Palmateer
+Mike Richter
+Mike Vernon
+Natalie Spooner
+Nick Fotiu
+Norm Ullman
+Olaf Kolzig
+Orest Kindrachuk
+Pat LaFontaine
+Patrick Lalime
+Paul Coffey
+Paul DiPietro
+Pete Mahovlich
+Pete Stemkowski
+Peter Forsberg
+Phil Esposito
+Phil Kessel
+Raymond Bourque
+Rejean Lemelin
+Richard Brodeur
+Rob Ramage
+Rod Langway
+Ron Duguay
+Ron Greschner
+Ron Hextall
+Saku Koivu
+Scotty Bowman
+Stephane Fiset
+Stephane Richer
+Steve Larmer
+Steven Stamkos
+Stéphane Matteau
+Teemu Selanne
+Theoren Fleury
+Tim Thomas
+Tomas Kaberle
+Ulf Nilsson
+Vincent Damphousse
+Vincent Lecavalier
+Vladislav Tretiak
+Wendel Clark
+Willie O'Ree
+
+[multi]
+Abbey Murphy / Caroline Harvey
+Adam Oates / Brett Hull
+Angela Ruggiero / Brianna Decker
+Bobby Hull / Anders Hedberg / Ulf Nilsson
+Bobby Hull / Dennis Hull / Brett Hull
+Bobby Hull / Garry Unger
+Bobby Hull / Garry Unger / Jean Ratelle
+Borje Salming / Darryl Sittler
+Charlie Simmer / Dave Taylor
+Chris Chelios / Jeremy Roenick
+Chris Chelios / Michel Goulet / Steve Larmer
+Denis Potvin / Clark Gillies / Bob Nystrom
+Dominik Hasek / Donald Audette
+Dominik Hasek / Martin Brodeur
+Dominik Hasek / Martin Brodeur / Grant Fuhr
+Dominik Hasek / Ron Hextall
+Dominik Hasek / Vladislav Tretiak
+Eric Lindros / Mark Recchi
+Garry Unger / Brett Hull
+Gerry Cheevers / Tim Thomas
+Hilary Knight / Caroline Harvey / Abbey Murphy
+Jean Ratelle / Mark Messier / Eric Lindros
+Joe Sakic / Brett Hull
+Joe Sakic / Brett Hull / Mario Lemieux
+Joe Sakic / Peter Forsberg
+Larry Robinson / Guy Lapointe
+Mario Lemieux / Bobby Hull
+Mario Lemieux / Dominik Hasek
+Mario Lemieux / Jaromír Jágr
+Mario Lemieux / Teemu Selanne
+Mark Messier / Jari Kurri
+Mark Messier / Mike Richter
+Norm Ullman / Bobby Hull / Dick Duff
+Phil Kessel / Tomas Kaberle
+Raymond Bourque / Adam Oates
+Raymond Bourque / Denis Potvin
+Raymond Bourque / Denis Potvin / Larry Murphy
+Roman Hamrlik / Vincent Lecavalier / Steven Stamkos
+Saku Koivu / Vincent Damphousse
+Serge Savard / Guy Lapointe
+Theoren Fleury / Joe Mullen / Mike Vernon
+Vincent Damphousse / Guy Carbonneau / Denis Savard
+Vincent Damphousse / Kirk Muller

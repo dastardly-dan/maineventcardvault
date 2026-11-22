@@ -167,6 +167,11 @@ team spot, box by box. Linked from the storefront's Breaks menu; every page carr
   2026 Flagship Football's stacked headings). `depth.py` then writes `typedrows.json` (each player's sets plus each
   set's odds per type) and the browser scores the chosen box type; sets not in that box count 0. A picked box is
   `S.qty["<id>"]` (main type) or `S.qty["<id>@<type index>"]`, and prices are keyed the same way.
+- **Leaf (Nov 22, 2026):** 49 products dated 2026 from leaftradingcards.com/releases (web-only singles skipped,
+  5 upcoming ones had no checklist yet). Each product page links a Google Sheet (CSV export, read in the browser
+  and shrunk to one line per set / name / card type) or an .xlsx; `build/breaks/leaf_convert.py` writes the
+  library files into "Leaf ..." sport groups (Leaf is unlicensed, no team names) and adds print-run rarity to
+  depth.json the same way as Panini. 2026 Leaf Metal Women of Sport is marked all women.
 - **Find a spot:** search box above the spot list filters to the spots holding a name or team (one or two
   letters match by letter range); the header search results link to `#/build/find/<name>`.
 - **Panini print runs:** Panini publishes no pack odds. `depth.py --panini` reads each CSV's SEQUENCE column:

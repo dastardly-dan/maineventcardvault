@@ -1,0 +1,290 @@
+# name: 2026 Leaf Metal Halloween
+# sport: Leaf Multi-Sport
+# added: 2026-11-22
+# source: https://www.leaftradingcards.com/products/2026-leaf-metal-halloween
+# note: Leaf is unlicensed: no team names, so team breaks are not available. Print runs from the official checklist.
+
+[auto]
+Akili Smith Jr.
+Akylin Dear
+Alan Trammell
+Alex Pereira
+Allen Iverson
+Andrew Bryniarski
+Andy Van Slyke
+Anna Leigh Waters
+Antoine Walker
+Antwann Hill Jr.
+Ari Lehman
+Barry Sanders
+Bartolo Colon
+Benedict Cumberbatch
+Bradley Wright-Phillips
+Brady Edmunds
+Brady Hart
+Brady Smigiel
+Brandon Arrington
+Bruce Dickinson
+Bryce Dallas Howard
+Bud Selig
+Byrum Brown
+Caleb Cunningham
+Calvin Murphy
+Cam Coleman
+Cara Delevingne
+Carmen Electra
+Charles Oliveira
+Chevy Chase
+Chris Bosh
+Chris Pratt
+Christian Collins
+Chuck Knoblauch
+Chuck Person
+Cleon Jones
+Conor McGregor
+Daisy Ridley
+Dan Aykroyd
+Dan Hurley
+Daniel Mielke
+Danny Amendola
+Dave Concepcion
+David Duchovny
+Dee Snider
+Demond Williams Jr.
+Denise Richards
+Dennis Rodman
+Derek Meadows
+Derrick Baker
+Devin Carter
+Devon White
+Dez Bryant
+Dick Vitale
+Dilin Jones
+Don Mattingly
+Donovan Olugbode
+Doug Mientkiewicz
+Drew Brees
+Dwight Gooden
+Edgar Martinez
+Edgardo Alfonzo
+Edgerrin James
+Elvin Bethea
+Emmitt Smith
+Ethan Grunkemeyer
+Faizon Brandon
+Ferguson Jenkins
+Fred McGriff
+Freddie Roach
+Gabriela Jaquez
+George MacIntyre
+Gerald Henderson
+Giannis Antetokounmpo
+Gilbert Burns
+Gillian Anderson
+Goldberg
+Goose Gossage
+Gregory Rodrigues
+Harlem Berry
+Ivan Lendl
+Ja Rule
+Jabari Mack
+Jack Clark
+Jack Morris
+Jaden O'Neal
+Jamal Lewis
+James Simon
+Jamie Foxx
+Jamier Brown
+Jane Fonda
+Jared Curtis
+Jason Taylor
+Jason Williams
+Jay Novacek
+Jayden Maiava
+Jeff Goldblum
+Jerry Lawler
+Jerry Stackhouse
+Jesse Barfield
+Jim Duggan
+Jim McMahon
+Jimmer Fredette
+Jimmy Smith
+Joe Theismann
+John Calipari
+John Carpenter
+John Daly
+John Elway
+John Smoltz
+John Stockton
+Johnny Bench
+Johnny Depp
+Johnny Manziel
+Jon Gruden
+Jordon Davison
+Jose Canseco
+Joseph Parker
+Josh Gordon
+Joshua Edwards
+José Cruz
+José Cruz Jr.
+Ju Ju Lewis
+Julianne Moore
+KaMario Taylor
+Karlyn Pickens
+Kate Harpring
+Keegan Croucher
+Kendrick Perkins
+Kevin Garnett
+Kiki VanDeWeghe
+KJ Lacey
+Lamar "Bo" Jackson
+Landen Holley
+LeGarrette Blount
+Leonard Moore
+Linda Blair
+Liz Kitley
+Luke Littler
+Luke Nickel
+Macaulay Culkin
+Malachi Toney
+Malachi Zeigler
+Manny Pacquiao
+Marcos Maidana
+Mario Andretti
+Mario Cristobal
+Mark Grace
+Mark Mulder
+Mason Holtzclaw
+Matt Schaub
+Matthew Lillard
+Mauricio Ruffy
+Micah Hudson
+Michael Crabtree
+Michael Hawkins Jr.
+Michael J. Fox
+Michael Moorer
+Michael Pyne
+Michael Rooker
+Mick Foley
+Mickey Rourke
+Miguel Cotto
+Mike Tyson
+Mr. T
+Muggsy Bogues
+Nate Diaz
+Neil Smith
+Neimann Lawrence
+Nick Castle
+Nick Kurtz
+Nicolas Cage
+Noah Grubbs
+Olivia Dunne
+Oscar De La Hoya
+Oscar Rios
+Otis Birdsong
+Papa Shango
+Patrick Ewing
+Patrick Vieira
+Paul Molitor
+Paul Pogba
+Pedro Guerrero
+Pete Weber
+Peter Bourque
+Peyton Falzone
+Peyton Houston
+Peyton Manning
+Rebecca De Mornay
+Ric Flair
+Rich Eisen
+Richard Dent
+Riddick Bowe
+Roberto Baggio
+Roger Staubach
+Rollie Fingers
+Rudy Ruettiger
+Ryan Montgomery
+Ryder Lyons
+Sam Leavitt
+Samuel L. Jackson
+Santino Marella
+Shaquille O'Neal
+Shawn Kemp
+Shelley Duvall
+Sid Fernandez
+Sidney Moncrief
+Sissy Spacek
+Soleil Moon Frye
+Steffi Graf
+Stephen Dorff
+Stephon Marbury
+Steve Nash
+Steve Spurrier
+Steve Young
+Striker Pence
+Tatianna Griffin
+Ted Danson
+The Boogeyman
+Tim Brown
+Tim Tebow
+Tobin Bell
+Toby Fournier
+Tom Felton
+Tom Glavine
+Tom Holland
+Tony Dorsett
+Tony La Russa
+Tony Parker
+Troy Aikman
+Tyrese Maxey
+Victor Ortiz
+Vince Wilfork
+Vinny Testaverde
+Warlord
+Warren Moon
+Wayne Rooney
+Will Smith
+Zuby Ejiofor
+
+[multi]
+Alan Trammell / Jack Morris
+Allen Iverson / Tyrese Maxey
+Ari Lehman / Nick Castle
+Artis Gilmore / Patrick Ewing / Shaquille O'Neal
+Brian Knobbs / Jerry Sags
+Chris Mullin / Chuck Person
+Christopher Lloyd / Anjelica Huston / Joan Cusack / Christina Ricci
+Conor McGregor / Max Holloway
+Conor McGregor / Nate Diaz
+David Arquette / Jenny McCarthy / Parker Posey
+Demolition Ax / Demolition Smash
+Emmitt Smith / Tony Dorsett
+Jeff Goldblum / Geena Davis
+Jim Kelly / Warren Moon / Jim McMahon
+John Carpenter / Nick Castle
+John Elway / Peyton Manning
+John Stockton / Steve Nash / Tony Parker
+Johnny Bench / Dave Concepcion / Tony Pérez / George Foster
+Johnny Depp / Helena Bonham Carter
+Karl Malone / Kevin Garnett
+Karl Malone / Kevin Garnett / Chris Bosh
+Ken Griffey Jr. / Barry Sanders / Shaquille O'Neal
+Ken Griffey Jr. / Manny Ramirez
+Lauren Betts / Gabriela Jaquez
+Lawrence Taylor / Luke Kuechly / James Harrison / Willie McGinest
+Manny Pacquiao / Oscar De La Hoya
+Marcus Freeman / CJ Carr / Leonard Moore
+Matt Schaub / Andre Johnson
+Mike Tyson / Michael Moorer
+Mike Tyson / Riddick Bowe / Michael Moorer / James Toney
+Mr. T / Dolph Lundgren
+Nick Castle / Tony Todd / Tim Curry
+Paul Pogba / Giorgio Chiellini
+Ric Flair / Goldberg
+Roberto Baggio / Andrea Pirlo / Gianluigi Buffon
+Roberto Durán / Oscar De La Hoya / Julio César Chávez / Manny Pacquiao
+Ryne Sandberg / Jeff Kent / Craig Biggio
+Santino Marella / Carlito
+Santino Marella / The Great Khali
+Shaquille O'Neal / Giannis Antetokounmpo
+Tony Oliva / Chuck Knoblauch
+Troy Aikman / Roger Staubach

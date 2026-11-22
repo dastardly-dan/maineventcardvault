@@ -1,0 +1,354 @@
+# name: 2026 Leaf Sports Heroes
+# sport: Leaf Multi-Sport
+# added: 2026-11-22
+# source: https://www.leaftradingcards.com/products/2026-leaf-sports-heroes
+# note: Leaf is unlicensed: no team names, so team breaks are not available. Print runs from the official checklist.
+
+[auto]
+"12 Gauge" Paige VanZant
+Adrian Dantley
+Alan Trammell
+Allan Houston
+Allen Iverson
+Andre Dawson
+Andre Reed
+Anna Leigh Waters
+Anquan Boldin
+Antoine Walker
+Antonio Davis
+Antonio Gates
+Avery Bracher
+Barry Foster
+Barry Sanders
+Barry Switzer
+Bernard King
+Bernie Williams
+Bert Jones
+Bill Bradley
+Bill Cowher
+Billy Sims
+Bob Cousy
+Bobby Valentine
+Brian Bosworth
+Brian Dawkins Sr.
+Brooks Koepka
+Bud Selig
+Bushwhacker Luke
+Cam Coleman
+Cameron Boozer
+Cameron Brink
+Cameron Skattebo
+Carl Yastrzemski
+Carlos Boozer
+Cayden Boozer
+Charles Barkley
+Charlie Sheen
+Chuck Foreman
+Chuck Norris
+CJ Carr
+Colt McCoy
+Conor McGregor
+Craig Biggio
+Curt Schilling
+Cynthia Cooper
+Dale Murphy
+Dan Marino
+Danny Amendola
+Darryl Strawberry
+Dave Justice
+Dave Winfield
+Demond Williams Jr.
+Dennis Rodman
+Denny McLain
+Deontay Wilder
+Derrick Coleman
+Derrick Henry
+Dexter McCleon Jr.
+Dia Bell
+Diana Taurasi
+Dick Vitale
+Dillon Gabriel
+Diogo Jota
+DJ Lagway
+Dominique Malonga
+Dominique Wilkins
+Drew Brees
+Drew Pearson
+Dwight Gooden
+Dwight Howard
+Earl Campbell
+Ed O'Neill
+Eddie Murray
+Edgerrin James
+Eli Manning
+Emmitt Smith
+Eric Davis
+Eric Dickerson
+Eric Gagne
+Ethan Grunkemeyer
+Evan Ferguson
+Faizon Brandon
+Ferguson Jenkins
+Floyd Mayweather Jr.
+Fran Tarkenton
+Frank Gore
+Gabby Douglas
+Gabrielle Thomas
+Gary Matthews
+George Brett
+George MacIntyre
+Gheorghe Mureșan
+Giannis Antetokounmpo
+Giorgio Chiellini
+Goldberg
+Graig Nettles
+Greg Valentine
+Gunner Stockton
+Hailey Van Lith
+Hannah Hidalgo
+Harlem Berry
+Harold Baines
+Harold Carmichael
+Hope Solo
+J. R. Smith
+Ja Morant
+Jack Ham
+Jake Roberts
+Jamal Anderson
+Jamal Lewis
+James Worthy
+Jason Roy
+Jeff Bagwell
+Jeff Burroughs
+Jerry Stackhouse
+Jim Boeheim
+Jim Covert
+Jim Edmonds
+Jim Kelly
+Jim McMahon
+Jim Palmer
+Joe Dumars
+Joe Johnson
+Joe Montana
+Joe Theismann
+Joey Chestnut
+John Candelaria
+John Daly
+John Stockton
+Johnny Bench
+Jonathan Ogden
+Jose Canseco
+Julián Álvarez
+Justin Jefferson
+Justin Lebron
+Kaitlyn Chen
+Kate Harpring
+Kayla Harrison
+Kelly Gruber
+Kendrick Perkins
+Kennedy Fuller
+Kim Mulkey
+Kyle Walker
+LaDainian Tomlinson
+Lamar "Bo" Jackson
+Lamar Odom
+Lamine Yamal
+Landon Quiñones
+Larry Bird
+Larry Csonka
+Larry Johnson
+Latrell Sprewell
+Lawrence Taylor
+Le'Veon Bell
+Lenny Moore
+Lenny Wilkens
+Lewis Miley
+Lionel Messi
+Liz Kitley
+Luis Figo
+Luka Modrić
+Magic Johnson
+Malachi Toney
+Mariano Rivera
+Mario Lemieux
+Mario Manningham
+Marques Johnson
+Marshall Faulk
+Martin Brodeur
+Marvin Lewis
+Merab Dvalishvili
+Michael Dean Perry
+Micheal Ray Richardson
+Miguel Cabrera
+Mike Alstott
+Mike Piazza
+Mike Schmidt
+Mike Tyson
+Mike Vrabel
+MiLaysia Fulwiley
+Ndamukong Suh
+Nick Saban
+Nika Mühl
+Nikola Jokic
+Nolan Ryan
+Odell Beckham Jr.
+Olivia Dunne
+Ozzie Smith
+Pat Tabler
+Patrick Peterson
+Paul Molitor
+Pete Rose
+Peyton Manning
+Phil Ivey
+Quinton "Rampage" Jackson
+Rachel Glenn
+Randy White
+Raul Rosas Jr.
+Ray Knight
+Ray Mancini
+Reggie Jackson
+Ric Flair
+Ricardo Quaresma
+Richard Dent
+Richard Petty
+Rob Van Dam
+Roberto Alomar
+Rocky Bleier
+Rollie Fingers
+Ronnie Coleman
+Roquan Smith
+Roy Jones Jr.
+Russell Wilson
+Ryan Leaf
+Ryan Montgomery
+Ryne Sandberg
+Sammy Sosa
+Sarah Schupansky
+Sarah Strong
+Sawyer Robertson
+Scott Rolen
+Sean Brady
+Shaquille O'Neal
+Shavkat Rakhmonov
+Shawn Kemp
+Sid Bream
+Steve Atwater
+Steve Austin
+Steve Avery
+Steve Garvey
+Steve Nash
+Steve Spagnuolo
+Steve Spurrier
+Sugar Ray Leonard
+Ted DiBiase
+Tedy Bruschi
+Terrance McKinney
+Terry Bradshaw
+Terry Cummings
+Terry Hanratty
+Terry Pendleton
+Thurman Thomas
+Tim Tebow
+Toby Fournier
+Tommy John
+Tony Parker
+Tonya Harding
+Tristen Keys
+Tyler Herro
+Vince Ferragamo
+Vinny Paz
+Vlade Divac
+Vladimir Guerrero
+Wade Boggs
+Walt Frazier
+Warlord
+Warren Moon
+Warren Sapp
+Wayne Chrebet
+Willie Roaf
+Wonderful "Champ" Monds IV
+Yadier Molina
+Yancey Thigpen
+Zach LaVine
+
+[multi]
+Alan Trammell / Miguel Cabrera
+Andy Reid / Bill Cowher / Nick Sirianni / Barry Switzer
+Andy Reid / Steve Spagnuolo
+Barry Sanders / Alan Trammell / Dennis Rodman
+Barry Sanders / Derrick Henry
+Billy Sims / Edgerrin James / Eric Dickerson / Marshall Faulk / Ottis Anderson / Barry Foster / Chuck Foreman / Jamal Lewis
+Bret Hart / Ric Flair
+Cheryl Miller / Lisa Leslie / Sheryl Swoopes / Cynthia Cooper
+Colt McCoy / Vince Young
+Conor McGregor / Max Holloway / Shavkat Rakhmonov
+Conor McGregor / Mike Tyson / Sugar Ray Leonard / Chuck Norris
+Dale Murphy / Bob Horner
+Dale Murphy / Dominique Wilkins / Jamal Anderson
+Daniel Cormier / Forrest Griffin
+Dennis Rodman / Larry Johnson / Derrick Coleman
+Gheorghe Mureșan / Muggsy Bogues
+Giannis Antetokounmpo / Nikola Jokic
+Harold Baines / Dave Justice / Jim Edmonds / Bernie Williams / Darryl Strawberry / Rafael Palmeiro / Hideki Matsui / Rubén Sierra
+Harold Carmichael / Art Monk / Charlie Joiner / Drew Pearson
+Howard Johnson / Darryl Strawberry / Ray Knight / Dwight Gooden
+John Daly / Brooks Koepka
+John Stockton / Jason Kidd
+John Stockton / Steve Nash / Magic Johnson
+John Stockton / Steve Nash / Tony Parker / Magic Johnson
+Johnny Bench / Mike Piazza
+Lamar "Bo" Jackson / Harlem Berry
+Larry Bird / Jerry West
+Larry Csonka / Peyton Hillis / Mike Alstott
+Lionel Messi / Ronaldo Nazário
+Magic Johnson / Eric Dickerson / Mike Piazza
+Magic Johnson / John Stockton / Steve Nash / Allen Iverson / Tony Parker / Mike Bibby / Stephon Marbury / Gary Payton
+Marshall Faulk / Isaac Bruce
+Micheal Ray Richardson / Stephon Marbury
+Miguel Cabrera / Vladimir Guerrero / Adrián Beltré
+Mike Alstott / Peyton Hillis
+Mike Schmidt / George Brett
+Mike Schmidt / Harold Carmichael / Allen Iverson
+Mike Tyson / Deontay Wilder / Roy Jones Jr. / Sugar Ray Leonard / Tommy Hearns / Vinny Paz / Ray Mercer / Ray Mancini
+Mike Tyson / Riddick Bowe / Deontay Wilder
+Mike Vrabel / Tedy Bruschi
+Nick Saban / Barry Switzer
+Nick Saban / Urban Meyer / Barry Switzer
+Nolan Ryan / Ferguson Jenkins / Jim Palmer
+Nolan Ryan / Roger Clemens
+Ozzie Smith / Alan Trammell / Barry Larkin
+Ozzie Smith / Brett Hull / Marshall Faulk
+Ozzie Smith / Yadier Molina
+Peyton Manning / Barry Sanders / Drew Brees / Emmitt Smith / Warren Moon / Eric Dickerson / Joe Montana / Marcus Allen
+Peyton Manning / Joe Montana
+Peyton Manning / Ryan Leaf
+Randy White / Warren Sapp / William Perry / Richard Dent / Ndamukong Suh / Neil Smith / Michael Dean Perry / Elvin Bethea
+Ray Lewis / Roquan Smith
+Reggie Jackson / Walt Frazier
+Rick Pitino / Jim Boeheim / John Calipari
+Roberto Alomar / Craig Biggio / Chuck Knoblauch
+Roger Staubach / Terry Bradshaw
+Roger Staubach / Terry Bradshaw / Fran Tarkenton / Joe Montana / Dan Marino / Peyton Manning / Drew Brees / Eli Manning
+Rollie Fingers / Jeff Reardon / Trevor Hoffman / Eric Gagne
+Ronaldo Nazário / Pavel Nedvěd / Frank Lampard / Kaka
+Ryne Sandberg / Andre Dawson / Shawon Dunston / Sammy Sosa / Ferguson Jenkins / Fred McGriff / Leon Durham / Greg Maddux
+Ryne Sandberg / Bobby Hull / Jim McMahon
+Sammy Sosa / Mark McGwire
+Shaquille O'Neal / Patrick Ewing / Yao Ming
+Sid Bream / Terry Pendleton / Steve Avery / Tom Glavine
+Steve Austin / Ric Flair / Bret Hart / Goldberg
+Steve Francis / Baron Davis / Lamar Odom
+Steve Garvey / Reggie Jackson / Johnny Bench
+Steve Nash / John Stockton
+Steve Spurrier / Barry Switzer / Urban Meyer / Nick Saban
+Sugar Ray Leonard / Tommy Hearns
+Sugar Ray Leonard / Tommy Hearns / Floyd Mayweather Jr.
+Sugar Ray Leonard / Tommy Hearns / Floyd Mayweather Jr. / Oscar De La Hoya
+Tedy Bruschi / Danny Amendola / Mike Vrabel
+Terry Bradshaw / Bert Jones
+Terry Bradshaw / Joe Greene / Jack Ham / Rocky Bleier
+Tim Hudson / Curt Schilling / Dwight Gooden / David Wells
+Vladimir Guerrero / Jim Edmonds
+Wade Boggs / George Brett / Mike Schmidt
+Walt Frazier / Reggie Jackson / Lawrence Taylor
+Yadier Molina / José Molina

@@ -1,0 +1,227 @@
+# name: 2026 Leaf Slideshow
+# sport: Leaf Pop Culture
+# added: 2026-11-22
+# source: https://www.leaftradingcards.com/products/2026-leaf-slideshow
+# note: Leaf is unlicensed: no team names, so team breaks are not available. Print runs from the official checklist.
+
+[auto]
+Alicia Silverstone
+Alyssa Milano
+Anthony Hopkins
+Christian Slater
+Clint Eastwood
+Geena Davis
+Halle Berry
+Henry Thomas
+Ian Ziering
+Kate Beckinsale
+Lou Ferrigno
+Meg Ryan
+Mel Gibson
+Mena Suvari
+Michael Biehn
+Nicolas Cage
+Spike Lee
+Susan Sarandon
+Tiffani Thiessen
+Tim Robbins
+Tori Spelling
+Uma Thurman
+William Shatner
+Winona Ryder
+
+[insert]
+Alicia Silverstone
+Amanda Peet
+America's Sweethearts
+American Beauty
+American Pie
+Analyze This
+Babylon 5
+Barbara Eden
+Batman Returns
+Baywatch
+Beverly Hills 90210
+Billy Madison
+Bird on a Wire
+Blade Runner
+Blast from the Past
+Bob Dylan
+Bonanza
+Boomerang
+Bram Stoker's Dracula
+Brats of the Lost Nebula
+Braveheart
+Bridget Jones's Diary
+Bring It On
+Britney Spears
+Bruce Springsteen
+Buffy the Vampire Slayer
+Bugsy
+Bull Durham
+Bulworth
+Butch Patrick
+Cameron Diaz
+Carmen Electra
+Carson Daly
+Casino
+Charlize Theron
+Charlton Heston
+Charmed
+Cheers
+CHiPs
+Claire Danes
+Clint Eastwood
+Coming to America
+Con Air
+Conspiracy Theory
+Contact
+Cypress Hill
+Dallas
+Dead Man Walking
+Denise Richards
+Dennis Hopper
+Die Hard 2
+Disclosure
+Do the Right Thing
+Donna Mills
+Double Jeopardy
+Dune
+E.T. the Extra-Terrestrial
+Edward Furlong
+Edward Scissorhands
+Elizabeth Taylor
+Emilio Estevez
+Entrapment
+Eric Clapton
+Erin Brockovich
+Ernest Borgnine
+Evita
+Family Ties
+Frasier
+From Russia with Love
+Futurama
+Galapagos: Beyond Darwin
+Gina Gershon
+Halle Berry
+Halloween H20: 20 Years Later
+Harry Potter and the Sorcerer's Stone
+Heathers
+Howard the Duck
+Ice-T
+Jane Russell
+Jane's Addiction
+Jeff Beck
+Jimmy Page
+Kate Beckinsale
+Kirsten Dunst
+Kiss
+Kristanna Loken
+Late Night with Conan O'Brien
+Late Night with David Letterman
+Leave It to Beaver
+Led Zeppelin
+Lindsay Wagner
+Little House on the Prairie
+Lost in Space
+Lou Ferrigno
+Madonna
+Metallica
+Michael Jackson
+Ministry
+Miss Congeniality
+Mission: Impossible
+Mission: Impossible 2
+Mitch Gaylord
+Moulin Rouge!
+Mr. Holland's Opus
+MTV's Celebrity Deathmatch
+MTV's Fight for Your Rights: Criminal
+Natalie Wood
+Neve Campbell
+New Kids on the Block
+Nichelle Nichols
+Oklahoma!
+Oprah Winfrey
+Page and Plant
+Paul Newman
+Pearl Jam
+Planet of the Apes
+Primus
+Queen
+Rage Against the Machine
+Raiders of the Lost Ark
+Red Hot Chili Peppers
+Return to Oz
+Richard Gere
+Richard Panebianco
+Rita Hayworth
+Robert Plant
+Rupert Everett
+Rush
+Sabrina the Teenage Witch
+Sandra Bullock
+Santana
+Sarah Michelle Gellar
+Scared Straight! '99
+Se7en
+Seinfeld
+Shakespeare in Love
+Sharon Stone
+Shirley Temple
+Sleepless in Seattle
+Sophia Loren
+Spider-Man
+Star Trek
+Star Trek V: The Final Frontier
+Star Wars: Episode IV - A New Hope
+Star Wars: Episode V - The Empire Strikes Back
+Star Wars: Episode VI - Return of the Jedi
+Stargate
+Stefanie Powers
+Stone Temple Pilots
+Superman: The Movie
+Terminator 2: Judgment Day
+The Band
+The Beatles
+The Beverly Hillbillies
+The Bone Collector
+The Bonfire of the Vanities
+The China Syndrome
+The Cosby Show
+The Crow
+The Dark Crystal
+The Firm
+The Fresh Prince of Bel-Air
+The Honeymooners
+The King of Queens
+The Larry Sanders Show
+The Merrie Melodies Show
+The Mickey Mouse Club
+The Muse
+The Rolling Stones
+The Shining
+The Silence of the Lambs
+The Sixth Sense
+The Sopranos
+The Terminator
+The Who
+The Young and the Restless
+U2
+Uma Thurman
+Van Halen
+Verne Troyer
+William Shatner
+Young Frankenstein
+Ziggy Marley
+
+[multi]
+Batman / Robin
+Cameron Diaz / Jim Carrey
+Conan O'Brien / Jay Leno
+James Dean / Natalie Wood
+Laverne / Shirley
+Law / Order
+Law / Order: SVU
+Sense / Sensibility
+William Shatner / Leonard Nimoy

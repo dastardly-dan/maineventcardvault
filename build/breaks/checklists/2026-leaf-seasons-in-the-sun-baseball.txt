@@ -1,0 +1,412 @@
+# name: 2026 Leaf Seasons in the Sun Baseball
+# sport: Leaf Baseball
+# added: 2026-11-22
+# source: https://www.leaftradingcards.com/products/2026-leaf-seasons-in-the-sun-baseball
+# note: Leaf is unlicensed: no team names, so team breaks are not available. Print runs from the official checklist.
+
+[auto]
+AJ Gracia
+Al Leiter
+Alan Trammell
+Andruw Jones
+Anthony Rizzo
+Archer Horn
+Babe Ruth
+Bill Lee
+Bob Horner
+Bobby Abreu
+Bobby Valentine
+Brien Taylor
+Caden Bogenpohl
+Caden Sorrell
+Cameron Flukey
+Carson Tinney
+Chase Brunson
+Chris Chambliss
+Chris Hacopian
+Cliff Floyd
+Cole Carlon
+Curt Schilling
+Darrell Evans
+Darryl Strawberry
+Dave Justice
+Dave Winfield
+Denny Neagle
+Denton Lord
+Derek Curiel
+Dexter McCleon Jr.
+Doug Mientkiewicz
+Dwight Gooden
+Eddie Murray
+Edgar Martinez
+Ellis Valentine
+Eric Becker
+Ethan Kleinschmit
+Ferguson Jenkins
+Frank Thomas
+Frank Viola
+Freddy García
+Gabe Gaeckle
+Gary Morse
+Gary Sheffield
+Gavin Gallaher
+George Brett
+George Foster
+Gio Rojas
+Graig Nettles
+Greg Maddux
+Harold Baines
+Howard Johnson
+Ivan Rodriguez
+Jackson Flora
+Jacob Lombard
+Jake McCoy
+Jarren Advincula
+Jason Amalbert
+Jason DeCaro
+Jason Giambi
+Jason Isringhausen
+Jeff Kent
+Jensen Hirschkorn
+Jim Edmonds
+Joe DiMaggio
+Joe Rudi
+Joey Volchko
+John Smoltz
+Johnny Bench
+Jose Canseco
+Joseph Contreras
+José Cruz
+José Cruz Jr.
+José Rijo
+Justin Lebron
+Kaden Waechter
+Keon Johnson
+Kevin Roberts Jr.
+Lou Whitaker
+Lucas Moore
+Maddox Molony
+Mariano Rivera
+Mark Grace
+Mark McGwire
+Mark Mulder
+Miguel Cabrera
+Mike Mussina
+Mike Piazza
+Mike Schmidt
+Myles Bailey
+Nolan Ryan
+Paul Molitor
+Paul Skenes
+Pete Incaviglia
+Pete Rose
+Randy Johnson
+Reggie Jackson
+Rick Dempsey
+Rintaro Sasaki
+Roberto Alomar
+Roch Cholowsky
+Ron Darling
+Ryder Helfrick
+Ryne Sandberg
+Sawyer Strosnider
+Shawn Green
+Sid Bream
+Steve Carlton
+Steve Garvey
+Ted Simmons
+Ted Williams
+Tegan Kuhns
+Tim Tebow
+Tom Glavine
+Tommy LaPour
+Tony Armas
+Tony Pérez
+Tre Phelps
+Tyler Bell
+Vahn Lackey
+Vladimir Guerrero
+Will Brick
+Will Clark
+Willie Mays
+Willie Wilson
+Zion Rose
+
+[insert]
+Aaron Judge
+Albert Pujols
+Alex Rodriguez
+Andy Pettitte
+Babe Ruth
+Barry Bonds
+Bert Blyleven
+Bill Mazeroski
+Bob Gibson
+Brooks Robinson
+Bryce Harper
+Cal Ripken Jr.
+Carlton Fisk
+Craig Biggio
+Dave Parker
+Derek Jeter
+Dizzy Dean
+Don Mattingly
+Dutch Leonard
+Eddie Stanky
+Ernie Banks
+Frank Chance
+Frank Robinson
+Frank Thomas
+Frank Viola
+Fred Lynn
+Fred McGriff
+Greg Maddux
+Ichiro
+Ivan Rodriguez
+Jason Varitek
+Jeff Bagwell
+Jeff Kent
+Jim Kaat
+Jim Leyritz
+Jimmie Foxx
+Joe Mauer
+Joe Morgan
+Johnny Bench
+Juan Soto
+Keith Hernandez
+Ken Griffey Jr.
+Kenny Lofton
+Kirby Puckett
+Leo Durocher
+Lou Gehrig
+Mariano Rivera
+Mark McGwire
+Mickey Mantle
+Mike Piazza
+Mike Schmidt
+Nolan Ryan
+Omar Vizquel
+Ozzie Smith
+Pedro Martinez
+Pete Rose
+Rickey Henderson
+Roberto Alomar
+Roberto Clemente
+Roger Clemens
+Roger Maris
+Roy Campanella
+Ryne Sandberg
+Sam Crawford
+Satchel Paige
+Scott Rolen
+Steve Garvey
+Ted Williams
+Tim Tebow
+Tony Gwynn
+Warren Spahn
+Will Clark
+Willie Mays
+
+[multi]
+AJ Gracia / Gio Rojas / Jackson Flora
+Al Leiter / Orestes Destrade / Cliff Floyd / Liván Hernández
+Alan Trammell / Lou Whitaker
+Alan Trammell / Lou Whitaker / Miguel Cabrera / Denny McLain
+Alan Trammell / Will Clark / Roger Clemens / Dave Stewart / Nolan Ryan / Robin Yount
+Albert Pujols / Ichiro
+Albert Pujols / Manny Ramirez / Mike Piazza
+Albert Pujols / Ozzie Smith
+Andre Dawson / Mark McGwire / Darryl Strawberry / Darrell Evans / Wally Joyner / Jose Canseco
+Andre Dawson / Tom Glavine / Roger Clemens / Nolan Ryan / Rafael Palmeiro / Will Clark
+Andruw Jones / Dave Justice / Bob Horner / Darrell Evans
+Babe Ruth / Eddie Collins / Sam Crawford
+Babe Ruth / Lou Gehrig / Eddie Collins
+Babe Ruth / Lou Gehrig / Jimmie Foxx / Eddie Collins / Ted Williams / Mickey Mantle
+Barry Bonds / Will Clark / Bo Jackson / Greg Maddux
+Barry Bonds / Willie Mays / Willie McCovey / Will Clark / Juan Marichal / Jeff Kent / Orlando Cepeda / Matt Williams
+Bert Blyleven / Andy Messersmith / Phil Niekro / Ferguson Jenkins / Nolan Ryan / Jim Kaat
+Bert Blyleven / Frank Viola
+Bill Skowron / Dick Groat / Willie Mays / Roberto Clemente / Don Hoak / Warren Spahn
+Billy Williams / Bobby Thomson / Hank Bauer
+Bo Jackson / Deion Sanders
+Bob Lemon / Tom Seaver / Juan Marichal
+Bobby Abreu / Jay Buhner / Dave Justice
+Bobby Abreu / Scott Rolen / Curt Schilling
+Brett Butler / Cal Ripken Jr. / Ryne Sandberg / Kent Hrbek
+Bucky Dent / Graig Nettles / Ron Guidry
+Cal Ripken Jr. / Alex Rodriguez
+Cal Ripken Jr. / Derek Jeter
+Cal Ripken Jr. / Frank Robinson / Brooks Robinson / Earl Weaver / Hoyt Wilhelm / Eddie Murray / Rafael Palmeiro / Jim Palmer
+Cal Ripken Jr. / Robin Yount / Reggie Jackson / Eddie Murray / Wade Boggs / Toby Harrah
+Cameron Flukey / Jackson Flora / Gio Rojas
+Carl Yastrzemski / Jim Wynn / Tony Oliva / Bill Mazeroski / Rusty Staub / Harmon Killebrew
+Carl Yastrzemski / Pete Rose / Reggie Jackson
+Carl Yastrzemski / Willie Mays / Billy Williams / Tony Conigliaro / Ernie Banks / Willie Stargell
+Carl Yastrzemski / Willie McCovey / Willie Mays / Frank Robinson / Mickey Mantle / Bill Mazeroski
+Carl Yastrzemski / Willie Stargell / Johnny Bench
+Carlton Fisk / Bill Buckner / Darrell Evans / George Foster
+Carlton Fisk / Jason Varitek
+Cleon Jones / Dwight Gooden
+Cliff Floyd / Liván Hernández
+Curt Schilling / Terry Mulholland / John Kruk
+Darryl Strawberry / Dwight Gooden / Howard Johnson
+Darryl Strawberry / Howard Johnson
+Dave Parker / Steve Garvey / Dave Winfield / Jim Rice / Rusty Staub / Jack Clark
+Derek Jeter / Bernie Williams / Aaron Judge / Roger Clemens / Andy Pettitte / Mariano Rivera / Reggie Jackson / Don Mattingly
+Derek Jeter / Mariano Rivera
+Derek Jeter / Tony Gwynn / Barry Bonds
+Dizzy Dean / Warren Spahn / Satchel Paige
+Don Drysdale / Bob Gibson / Robin Roberts
+Duke Snider / Gil Hodges / Eddie Mathews / Don Drysdale / Warren Spahn / Ernie Banks
+Dusty Baker / Andy Messersmith / Al Oliver / Ted Simmons
+Dwight Evans / Goose Gossage / Mike Schmidt / Gary Matthews
+Dwight Gooden / Mike Mussina / John Smoltz
+Dwight Gooden / Ron Darling
+Eddie Collins / Rickey Henderson / Jimmie Foxx / Reggie Jackson / Mark McGwire / Jose Canseco / Vida Blue / Dave Stewart
+Eddie Murray / Harold Baines / Paul Molitor
+Ellis Valentine / Vladimir Guerrero
+Ernie Banks / Billy Williams / Bobby Thomson
+Ernie Banks / Billy Williams / Ferguson Jenkins / Ryne Sandberg / Anthony Rizzo / Andre Dawson / Greg Maddux / Frank Chance
+Ernie Banks / Ferguson Jenkins
+Ernie Banks / Frank Robinson
+Ernie Banks / Mickey Mantle / Roger Maris / Harmon Killebrew / Rocky Colavito / Orlando Cepeda
+Ernie Banks / Willie Mays
+Ernie Banks / Willie Mays / Orlando Cepeda
+Fernando Valenzuela / Phil Niekro / Paul Molitor / Bill Buckner / Ted Simmons / Rickey Henderson
+Frank Robinson / Eddie Mathews / Willie Mays
+Frank Thomas / Edgar Martinez / Jose Canseco
+Frankie Frisch / Willie Mays / Eddie Mathews
+Fred McGriff / Mark McGwire / Rafael Palmeiro / Jamie Moyer
+George Brett / Dave Winfield / Bill Madlock / Dave Parker
+George Brett / Ken Griffey Sr. / Pete Rose / George Foster / Thurman Munson / Graig Nettles
+George Brett / Willie Wilson / Amos Otis
+George Foster / Dave Parker
+George Foster / Mike Schmidt / Jim Rice
+Greg Maddux / John Smoltz / Tom Glavine
+Greg Maddux / Pedro Martinez
+Greg Maddux / Pedro Martinez / Roger Clemens / Randy Johnson / David Wells / Curt Schilling
+Greg Maddux / Randy Johnson / Curt Schilling
+Greg Maddux / Tom Glavine / John Smoltz / Steve Avery
+Hank Aaron / Dale Murphy / Andruw Jones / Chipper Jones / Warren Spahn / Greg Maddux / John Smoltz / Brett Butler
+Hank Bauer / Frankie Frisch / Bobby Thomson
+Harmon Killebrew / Tony Oliva / Rod Carew / Bert Blyleven / Joe Mauer / Frank Viola / Johan Santana / Chuck Knoblauch
+Harold Baines / Cal Ripken Jr. / Kirk Gibson / Bert Blyleven / Dwight Gooden / Frank Viola
+Harold Baines / Joe Charboneau / Lee Smith / Fernando Valenzuela
+Hideo Nomo / John Smoltz / Kevin Brown / Greg Maddux / Andy Pettitte / Tom Glavine
+Ichiro / Manny Ramirez / Albert Pujols / Jeff Kent / Alex Rodriguez / Ivan Rodriguez
+Jason Giambi / Mark Mulder / Jose Canseco / Joe Rudi
+Jason Isringhausen / Rey Ordóñez / Edgardo Alfonzo
+Jeff Bagwell / Billy Wagner / Craig Biggio / José Cruz
+Jeff Bagwell / Chuck Knoblauch / Bernie Williams / Ivan Rodriguez
+Jeff Kent / Pedro Martinez / Mike Piazza / Bret Boone
+Jerry Reuss / Bill Russell / Steve Yeager
+Jim Edmonds / Shawn Green / Darryl Strawberry
+Jim Palmer / Mike Mussina
+Jimmie Foxx / Frank Chance / Dutch Leonard
+Joe Morgan / Reggie Jackson / Bill Madlock / Rod Carew / Mike Schmidt / Carl Yastrzemski
+Joe Torre / Willie McCovey / Robin Roberts / Bob Gibson / Willie Horton / Pete Rose
+Johnny Bench / Bobby Murcer / Bobby Bonds / Carlton Fisk / Rod Carew / Dusty Baker
+Johnny Bench / Carl Yastrzemski / Dave Parker
+Johnny Bench / Frank Robinson / Gil Hodges
+Johnny Bench / George Foster / Pete Rose / Tony Pérez
+Johnny Bench / Nolan Ryan / Andre Dawson / Rickey Henderson / George Brett / George Foster
+Johnny Bench / Rod Carew / Reggie Jackson / Graig Nettles
+Johnny Bench / Tony Pérez
+Johnny Bench / Tony Pérez / George Foster
+Johnny Damon / Derek Jeter / Hideo Nomo / Mariano Rivera
+Jose Canseco / Jason Giambi
+José Cruz / Jeff Bagwell
+Juan González / Ken Griffey Jr. / Dave Justice / Deion Sanders
+Ken Griffey Jr. / Cal Ripken Jr. / Roberto Alomar / Derek Jeter / Pedro Martinez / Mark McGwire
+Ken Griffey Jr. / Frank Thomas
+Ken Griffey Jr. / Frank Thomas / Barry Bonds / Mike Piazza / Tony Gwynn / Albert Pujols
+Ken Griffey Jr. / Frank Thomas / Cal Ripken Jr.
+Ken Griffey Jr. / Julio Franco / Cal Ripken Jr. / Frank Thomas / Jose Canseco / Barry Bonds
+Ken Griffey Jr. / Manny Ramirez
+Ken Griffey Jr. / Willie Mays
+Kevin Mitchell / Howard Johnson / Bo Jackson / Fred McGriff / Julio Franco / Kirby Puckett
+Leo Durocher / Enos Slaughter / Red Schoendienst
+Leo Durocher / Red Schoendienst / Frankie Frisch / Eddie Stanky / Smoky Burgess / Chuck Dressen
+Liam Peterson / Cameron Flukey / Drew Burress
+Mariano Rivera / Johnny Damon / Nick Swisher
+Mark McGwire / Ken Griffey Jr. / Juan González / Mo Vaughn / Ken Caminiti / Frank Thomas
+Mark McGwire / Sammy Sosa / Larry Walker / Manny Ramirez / Ken Griffey Jr. / Barry Bonds
+Mark Mulder / Tim Hudson
+Mickey Mantle / Ted Williams / Roberto Clemente
+Mickey Mantle / Willie Mays
+Mickey Vernon / Johnny Pesky / Eddie Stanky
+Miguel Cabrera / Cecil Fielder
+Mike Mussina / Mariano Rivera / Jason Giambi / Joe Girardi
+Mike Piazza / Frank Thomas / Sammy Sosa
+Mike Piazza / Shawn Green
+Mike Schmidt / Gary Carter / Tony Armas / George Brett / Cecil Cooper / Reggie Jackson
+Mike Schmidt / Joe Morgan / Carlton Fisk
+Mike Schmidt / Pete Rose
+Mike Schmidt / Reggie Jackson / Steve Garvey / Richie Zisk / Rod Carew / Bill Madlock
+Mike Schmidt / Steve Carlton
+Mike Schmidt / Steve Carlton / Greg Luzinski / Pete Rose / Jim Thome / Tug McGraw / Pat Burrell / Ryan Howard
+Nolan Ryan / Dizzy Dean / Don Drysdale / Satchel Paige / Warren Spahn / Greg Maddux
+Nolan Ryan / Ferguson Jenkins / Jim Palmer
+Nolan Ryan / George Scott / Don Sutton / Clyde Wright
+Nolan Ryan / Paul Skenes / Randy Johnson
+Nolan Ryan / Roger Clemens
+Ozzie Smith / Willie McGee
+Pete Incaviglia / Juan González / Jeff Burroughs
+Pete Rose / George Foster
+Pete Rose / George Foster / Johnny Bench / Joe Morgan / Frank Robinson / Joey Votto / Tony Pérez / Ken Griffey Sr.
+Pete Rose / Johnny Bench
+Pete Rose / Reggie Jackson / Mike Schmidt / Carl Yastrzemski / George Foster / Steve Garvey
+Pete Rose / Reggie Jackson / Steve Garvey
+Phil Niekro / Gaylord Perry / Tom Seaver / Matty Alou / Tony Pérez / Clete Boyer
+Randy Johnson / Curt Schilling
+Ray Knight / Kevin Mitchell / Sid Fernandez
+Red Schoendienst / Enos Slaughter
+Reggie Jackson / Eddie Murray
+Rickey Henderson / Tim Raines
+Roberto Alomar / Craig Biggio / Randy Johnson / John Smoltz
+Roberto Alomar / Paul Molitor
+Roberto Clemente / Barry Bonds / Dave Parker / Bill Mazeroski / Willie Stargell / Dick Groat / Don Hoak / Ralph Kiner
+Roch Cholowsky / Justin Lebron / Jacob Lombard
+Rocky Colavito / Tony Conigliaro / Bill Mazeroski
+Roger Clemens / Eric Davis / Dwight Gooden / Kirby Puckett
+Ron Cey / Mickey Hatcher / Dave Stewart
+Ron Darling / Dwight Gooden / Frank Viola / David Cone
+Ron Darling / Frank Viola / Al Leiter
+Ron Guidry / Gaylord Perry / Tom Seaver / Andre Dawson / Eddie Murray / George Foster
+Roy Campanella / Don Drysdale / Steve Garvey / Mike Piazza / Shohei Ohtani / Tommy Lasorda / Don Sutton / Duke Snider
+Roy Campanella / Gil Hodges / Red Schoendienst / Ernie Banks / Ted Kluszewski / Eddie Mathews
+Ryne Sandberg / Anthony Rizzo
+Ryne Sandberg / Tony Gwynn / Don Mattingly / Dave Winfield / Kent Hrbek / Tim Raines
+Sam Crawford / Babe Ruth / Frank Chance / Eddie Collins / Lou Gehrig / Dutch Leonard
+Sammy Sosa / Vladimir Guerrero / Jose Canseco
+Stan Musial / Ozzie Smith / Albert Pujols / Dizzy Dean / Mark McGwire / Ted Simmons / Bob Gibson / Rogers Hornsby
+Stan Musial / Roberto Clemente / Duke Snider
+Stan Musial / Ted Williams
+Steve Avery / Darrell Evans / Bob Horner
+Steve Carlton / Ferguson Jenkins / Tug McGraw / Bobby Murcer
+Steve Carlton / Keith Hernandez / Al Oliver / Joe Charboneau / Rickey Henderson / Robin Yount
+Steve Garvey / Johnny Bench / Dave Winfield
+Steve Garvey / Reggie Smith / Dusty Baker
+Ted Simmons / Don Sutton / Gaylord Perry / Bill Buckner / Billy Williams / Joe Morgan
+Ted Williams / Carl Yastrzemski / Wade Boggs / Dwight Evans / Fred Lynn / Jason Varitek / Johnny Pesky / Roger Clemens
+Ted Williams / Mickey Mantle / Stan Musial / Willie Mays / Hank Aaron / Frank Robinson
+Ted Williams / Mickey Mantle / Willie Mays
+Terry Pendleton / Dave Justice / Andruw Jones
+Tino Martinez / Paul O'Neill / Jim Leyritz
+Tom Seaver / Dwight Gooden / Tug McGraw / Darryl Strawberry / Keith Hernandez / Gary Carter / Pete Alonso / Juan Soto
+Tony Oliva / Pete Rose / Bobby Murcer
+Tony Pérez / Nolan Ryan / Joe Rudi
+Wade Boggs / Tony Gwynn
+Wade Boggs / Tony Gwynn / Don Mattingly / Willie McGee
+Will Clark / Barry Bonds
+Will Clark / Bret Saberhagen / Greg Maddux / Don Mattingly / Wade Boggs / Mark Grace
+Will Clark / Jeff Bagwell / Juan González / Cal Ripken Jr. / Fred McGriff / Paul Molitor
+Will Clark / Jeff Kent
+Will Clark / Jim Edmonds / Vladimir Guerrero
+Will Clark / Kevin Mitchell / Jeff Kent / Jack Clark
+Will Clark / Rafael Palmeiro
+Willie Horton / Willie McCovey / Willie Stargell
+Willie Mays / Bobby Thomson
+Willie Mays / Duke Snider
+Willie Mays / Will Clark
+Yadier Molina / Ted Simmons

@@ -1,0 +1,209 @@
+# name: 2026 Leaf Originals Multi-Sport
+# sport: Leaf Multi-Sport
+# added: 2026-11-22
+# source: https://www.leaftradingcards.com/products/2026-leaf-originals-multi-sport
+# note: Leaf is unlicensed: no team names, so team breaks are not available. Print runs from the official checklist.
+
+[auto]
+Adrian Dantley
+Allan Houston
+Allen Iverson
+Alonzo Mourning
+Andre Agassi
+Andre Reed
+Azzi Fudd
+Barry Sanders
+Bob McAdoo
+Boris Becker
+Brad Gilbert
+Brady Quinn
+Byrum Brown
+Calvin Murphy
+Cam Coleman
+Cayden Griffiths
+Cheryl Miller
+Chris Webber
+Christian Collins
+Christopher Vargas
+Chuck Person
+CJ Carr
+Dante Hall
+Dante Moore
+Darian Mensah
+Darrell Evans
+Dave Concepcion
+DeMarcus Henry
+Demond Williams Jr.
+Dennis Martinez
+Dennis Rodman
+Dexter McCleon Jr.
+Dez Bryant
+DJ Lagway
+Dolph Lundgren
+Dominic Thiem
+Drew Brees
+Drew Mestemaker
+Dwyane Wade
+Earl Monroe
+Ed O'Neill
+Eddie Murray
+Eli Holstein
+Eric Davis
+Fabrizio Romano
+Faizon Brandon
+Floyd Mayweather Jr.
+Gary Sheffield
+George MacIntyre
+Gheorghe Mureșan
+Greg Maddux
+Gunner Stockton
+Irving Fryar
+Ivan Lendl
+Jack Clark
+Jack Youngblood
+Jackie Smith
+Jaden O'Neal
+Jamal Lewis
+James Blake
+Jan Stenerud
+Jared Curtis
+Jayden Maiava
+Jeremiah Smith
+Jerry Stackhouse
+Jim McMahon
+Joe Dumars
+Joe Theismann
+John Arne Riise
+John Daly
+John Mateer
+John Smoltz
+Johnny Bench
+Johnny Manziel
+Jon Jones
+Jose Canseco
+Josh Beckett
+Josh Gordon
+Joshua Van
+Ju Ju Lewis
+Juan González
+Julius Erving
+Justice Haynes
+Jutta Leerdam
+Kama
+Kate Harpring
+Kayla Harrison
+Ken Anderson
+Kevin Garnett
+Korey Dropkin
+Kyle Daukaus
+Kyle Walker
+LaNorris Sellers
+Larry Bird
+Lennox Lewis
+Leonard Moore
+LeRoy Butler
+Malachi Toney
+Mariano Rivera
+Mario Cristobal
+Marshall Faulk
+Martina Hingis
+Matt Schaub
+Max Holloway
+Mia Williams
+Michael Cooper
+Michael Strahan
+Mike Mussina
+Mike Schmidt
+Mike Tyson
+Mr. T
+Muggsy Bogues
+Míchel Salgado
+Nancy Lieberman
+Nate Diaz
+Nick Kurtz
+Noah Grubbs
+Nolan Ryan
+Nuno Gomes
+Olivia Dunne
+Olivia Vukoša
+Oscar Collazo
+Otis Birdsong
+Ousmane Dembélé
+Patrick Ewing
+Paul Molitor
+Paul O'Neill
+Pete Sampras
+Peyton Manning
+Radamel Falcao
+Ralph Sampson
+Randy Moss
+Ray Mancini
+Ric Flair
+Richard Dent
+Ricky Williams
+Rollie Fingers
+Ron Yary
+Ronnie Coleman
+Rudy Ruettiger
+Ryne Sandberg
+Sam Leavitt
+Saniyah Hall
+Shaquille O'Neal
+Shawn Kemp
+Sidney Moncrief
+Stefan Edberg
+Steffi Graf
+Steve Carlton
+Steve Largent
+Steve Nash
+Striker Pence
+Tatianna Griffin
+Tatum Bittick
+Terrell Davis
+Terrence Brown
+Tim Tebow
+Toby Fournier
+Tom Glavine
+Tommy Haas
+Tommy John
+Tonya Harding
+Tyler Hansbrough
+Tyrese Maxey
+Vicente Luque
+Victor Ortiz
+Vladimir Guerrero
+Warlord
+Youssef Zalal
+Zuby Ejiofor
+
+[multi]
+Andre Dawson / Vladimir Guerrero
+Andruw Jones / Gary Sheffield
+Byrum Brown / Demond Williams Jr.
+Dan Hampton / Richard Dent
+Darian Mensah / Malachi Toney
+Earl Monroe / Walt Frazier
+Edgerrin James / Marshall Faulk
+Gunner Stockton / Sam Leavitt
+Jack Ham / James Harrison
+Jack Morris / Chuck Knoblauch
+Jim Kelly / Andre Reed
+Jim Kelly / Jim McMahon
+Jose Canseco / Nick Kurtz
+Juan González / Adrián Beltré
+LaNorris Sellers / Demond Williams Jr.
+Leonard Moore / CJ Carr
+Malachi Toney / Cam Coleman
+Mike Tyson / Lennox Lewis
+Patrick Ewing / Alonzo Mourning
+Pete Sampras / Andre Agassi
+Randy Moss / Kevin Garnett
+Sam Leavitt / Darian Mensah
+Sam Leavitt / Jayden Maiava
+Shaquille O'Neal / Ralph Sampson
+Steve Nash / Tony Parker
+Tom Glavine / Steve Avery
+Tony Oliva / Chuck Knoblauch
+Troy Aikman / Roger Staubach
+Vince Young / Colt McCoy
+Willie McGinest / Tedy Bruschi

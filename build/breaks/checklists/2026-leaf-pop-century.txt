@@ -1,0 +1,413 @@
+# name: 2026 Leaf Metal Pop Century
+# sport: Leaf Pop Culture
+# added: 2026-11-22
+# source: https://www.leaftradingcards.com/products/2026-leaf-pop-century
+# note: Leaf is unlicensed: no team names, so team breaks are not available. Print runs from the official checklist.
+
+[auto]
+42 Dugg
+Aaron Paul
+AJ McLean
+Alan Ritchson
+Alicia Silverstone
+Allen Covert
+Allie LaForce
+Alyssa Milano
+Amanda Seyfried
+Amber Rose
+Amy Yasbeck
+Andrew Bryniarski
+Andrew Garfield
+Angelica Bridges
+Anjelica Huston
+Ann-Margret
+Annabeth Gish
+Anson Williams
+Anthony Daniels
+Anthony Hopkins
+Ari Lehman
+Arnold Vosloo
+Ashley Eckstein
+Austin "Chumlee" Russell
+Barbara Eden
+Bella Ramsey
+Ben Affleck
+Benedict Cumberbatch
+BernNadette Stanis
+Bitty Schram
+Bo Derek
+Bobbi Althoff
+Bradley Whitford
+Brooke Burke
+Bryan Cranston
+Bryce Dallas Howard
+C. Thomas Howell
+Caleb Pressley
+Carice van Houten
+Carmen Electra
+Catherine Bach
+Catherine Bell
+Chanel West Coast
+Charles Bronson
+Charlie Sheen
+Chazz Palminteri
+Chelcie Ross
+Chevy Chase
+Chris Pine
+Christina Applegate
+Christopher Eccleston
+Christopher Lloyd
+Christopher McDonald
+Christopher Mintz-Plasse
+Chuck Norris
+Chukwudi Iwuji
+Dale Bozzio
+Dan Lauria
+Danny Elfman
+Danny Glover
+Danny Trejo
+Dave Portnoy
+David Harris
+Dean Martin
+Denis O'Hare
+Derek Mears
+Dick Van Dyke
+Dolph Lundgren
+Dominic Chianese
+Donna Pescow
+Drake Bell
+Dylan Baker
+Dylan McDermott
+Ed Marinaro
+Ed O'Neill
+Elijah Wood
+Elisabeth Shue
+Elizabeth Berkley
+Elizabeth Hurley
+Emilia Clarke
+Emilio Estevez
+Engelbert Humperdinck
+Eric Stoltz
+Ernest Thomas
+Ethan Hawke
+Famke Janssen
+Federico Castelluccio
+Frank "The Tank" Fleming
+Fred Dryer
+Gal Gadot
+Geena Davis
+Gena Lee Nolin
+Gene Hackman
+Giancarlo Esposito
+Gillian Anderson
+Gillie Da King
+Gisele Bündchen
+Griffin Dunne
+Hailee Steinfeld
+Halle Berry
+Hank Azaria
+Heather Graham
+Helen Hunt
+Helena Bonham Carter
+Henry Cavill
+Henry Thomas
+Henry Winkler
+Herbert Hoover
+Howie Mandel
+Huey Lewis
+Ian Ziering
+Isabelle Fuhrman
+Jack Osbourne
+James DeBello
+James Tolkan
+Jamie Farr
+Jamie Kennedy
+Jay North
+Jenilee Harrison
+Jennie Garth
+Jennifer Carpenter
+Jennifer Grey
+Jenny McCarthy
+Jeremy Renner
+Jerry Mathers
+Jessica Alba
+Jimmie Walker
+Joan Collins
+Joey Fatone
+John Boyega
+John C. McGinley
+John Goodman
+John O'Hurley
+John Rhys-Davies
+John Schneider
+John Travolta
+Johnny Depp
+Johnny Whitaker
+Jon Bernthal
+Jon Cryer
+Jon Gries
+Josh Gad
+Josh Henderson
+Joyce DeWitt
+Julia Stiles
+Juliette Lewis
+Kate Beckinsale
+Kate Jackson
+Katey Sagal
+Kato Kaelin
+Keith David
+Kelly Osbourne
+Kelsey Grammer
+Kevin Dillon
+Kevin Smith
+Kristen Schaal
+Kristy McNichol
+Kristy Swanson
+Lara Flynn Boyle
+Larry Thomas
+Larry Wilcox
+Laura Prepon
+Laurence Fishburne
+Lea Michele
+Lea Thompson
+Leonard Maltin
+Leslie Jordan
+Liane Curtis
+Lil Durk
+Lil Uzi Vert
+Linda Blair
+Linda Hamilton
+Lindsay Wagner
+Liv Tyler
+Lorraine Bracco
+Lou Diamond Phillips
+Lou Ferrigno
+Lupita Nyong'o
+Macaulay Culkin
+Mackenzie Phillips
+Margot Robbie
+Mario Lopez
+Marisa Tomei
+Mark Wahlberg
+Mark-Paul Gosselaar
+Marley Shelton
+Matthew Lillard
+Maxwell Caulfield
+Megan Cavanagh
+Mel Gibson
+Melissa Gilbert
+Mena Suvari
+Method Man
+Michael B. Jordan
+Michael Beck
+Michael Madsen
+Mike Love
+Mike Majlak
+Milla Jovovich
+Mimi Rogers
+Mira Sorvino
+Morena Baccarin
+Morgan Fairchild
+Mr. T
+Muhammad Ali
+Natalie Portman
+Nathan Morris
+Nick Carter
+Nick Castle
+Nick Lachey
+Nick Nayersina
+Nicky Smigs
+Nicolas Cage
+Nicole Eggert
+Norman Rockwell
+Orianthi
+P.J. Soles
+Pam Grier
+Parker Posey
+Patrick Renna
+Paul Anderson
+Paul Rudd
+Pete Best
+Peter Ostrum
+Priscilla Barnes
+Priscilla Presley
+Quavo
+Rachel Bush
+Rachel DeMita
+Rainn Wilson
+Ralph Fiennes
+Ralph Macchio
+Randy Quaid
+Ray Park
+Richard Dreyfuss
+Richard Kline
+Rick Ross
+Robert Carradine
+Robert De Niro
+Robert Romanus
+Robin Thicke
+Roger L. Jackson
+Ron Howard
+Ron Perlman
+Rosanna Arquette
+Rosario Dawson
+Rose McGowan
+Salim The Dream
+Sally Kirkland
+Salma Hayek
+Sam J. Jones
+Sam Neill
+Sara Saffari
+Sean Astin
+Sean Gunn
+Sean Young
+Seth Green
+Sharon Osbourne
+Shawnee Smith
+Sheree J. Wilson
+Sid Krofft
+Sigourney Weaver
+Simon Wright
+Sissy Spacek
+Skeet Ulrich
+Soleil Moon Frye
+Spike Lee
+Steve McQueen
+Susan Sarandon
+Tatiana Maslany
+Tatum O'Neal
+Teri Hatcher
+Thomas Ian Nicholas
+Thomas Jane
+Tiffani Thiessen
+Tim Curry
+Tim Matheson
+Timonthy Olyphant
+Tobin Bell
+Tom Arnold
+Tom Hiddleston
+Tom O'Connell
+Tom Sandoval
+Tom Wilson
+Tom Wopat
+Tommy Lee
+Tony Todd
+Tori Spelling
+Tracy "The D.O.C." Curry
+Trae tha Truth
+Uma Thurman
+Val Kilmer
+Vanessa Angel
+Vanessa Marcil
+Vera Farmiga
+Waka Flocka Flame
+Wanyá Morris
+Wayne Knight
+Wil Wheaton
+William H. Taft
+William Shatner
+Winona Ryder
+Zoe Saldaña
+
+[multi]
+Adrian Grenier / Jerry Ferrara / Kevin Dillon / Kevin Connolly / Jeremy Piven
+Alicia Silverstone / Liv Tyler
+Alicia Silverstone / Paul Rudd / Stacey Dash
+Anthony Daniels / Ewan McGregor
+Anthony Hopkins / Ralph Fiennes
+Anthony Hopkins / Val Kilmer
+Ben Affleck / Jeremy Renner
+Ben Affleck / Mel Gibson / Richard Dreyfuss / Val Kilmer
+Ben Affleck / Parker Posey / Cole Hauser / Milla Jovovich / Jason London
+Ben Stiller / Winona Ryder / Ethan Hawke
+Brie Larson / Paul Rudd / Elizabeth Olsen / Tom Hiddleston / Karen Gillan / Jeremy Renner / Benedict Cumberbatch / Pom Klementieff
+Bryan Cranston / Aaron Paul / Giancarlo Esposito
+Carmen Electra / Gena Lee Nolin / Nicole Eggert / Traci Bingham
+Carmen Electra / Nicole Eggert / Gena Lee Nolin / Angelica Bridges / Traci Bingham
+Catherine Bach / John Schneider / Tom Wopat
+Charlie Sheen / Chelcie Ross / Corbin Bernsen
+Charlie Sheen / Emilio Estevez
+Charlie Sheen / Jennifer Grey / C. Thomas Howell / Lea Thompson
+Charlie Sheen / Jon Cryer
+Chauncey Leopardi / Marley Shelton
+Cheech Marin / Tommy Chong
+Chevy Chase / Dan Aykroyd
+Chevy Chase / Dana Wheeler-Nicholson / Tim Matheson
+Chevy Chase / Garrett Morris
+Chevy Chase / Garrett Morris / Dan Aykroyd
+Chevy Chase / Tim Matheson
+Christian Slater / Winona Ryder
+Christopher Lloyd / Chevy Chase
+Christopher Lloyd / Lea Thompson / Tom Wilson
+Christopher Lloyd / Lea Thompson / Tom Wilson / James Tolkan
+Chuck Norris / Danny Trejo / Jon Bernthal
+Chuck Norris / Dolph Lundgren
+Chuck Norris / Ralph Macchio
+Cillian Murphy / Paul Anderson
+Danny Glover / Mel Gibson
+Dick Van Dyke / Ann-Margret
+Dominic Chianese / Drea de Matteo / Federico Castelluccio / Michael Imperioli / Lorraine Bracco / Kathrine Narducci / Matt Servitto
+Drew Barrymore / Matthew Lillard / Rose McGowan / Jamie Kennedy / Skeet Ulrich / Heather Graham / David Arquette / Marley Shelton
+Ed O'Neill / Katey Sagal / Christina Applegate
+Elijah Wood / Sean Astin
+Elisabeth Shue / Jennifer Grey
+Emilia Clarke / Kit Harington / Bella Ramsey
+Emilio Estevez / Sean Astin
+Eric Stoltz / Lea Thompson
+Eric Stoltz / Rosanna Arquette
+Ethan Hawke / Tim Robbins / Ewan McGregor / Jeremy Renner
+Geena Davis / Rosie O'Donnell / Megan Cavanagh / Bitty Schram
+Halle Berry / Ian McKellen / Famke Janssen / Ray Park
+Henry Cavill / Ben Affleck
+Henry Cavill / Laurence Fishburne / John Travolta / Nicolas Cage
+Henry Winkler / Ron Howard / Anson Williams / Don Most
+Henry Winkler / Ron Howard / Don Most / Anson Williams
+Jeremy Renner / Hailee Steinfeld
+Jeremy Renner / Paul Bettany / Elizabeth Olsen / Paul Rudd
+Jimmie Walker / BernNadette Stanis / Ralph Carter
+John Goodman / Dan Aykroyd
+John O'Hurley / Wayne Knight / Larry Thomas
+Jon Bernthal / Michael Rooker
+Joyce DeWitt / Richard Kline / Jenilee Harrison / Priscilla Barnes
+Kate Beckinsale / Gillian Anderson / Uma Thurman
+Linda Hamilton / Michael Biehn / Edward Furlong
+Lou Diamond Phillips / Charlie Sheen
+Mark Wahlberg / Mel Gibson / Chuck Norris / Jean-Claude Van Damme / Kate Beckinsale / Gillian Anderson / Uma Thurman / Gal Gadot
+Mark-Paul Gosselaar / Tiffani Thiessen / Mario Lopez / Elizabeth Berkley
+Mena Suvari / Thomas Ian Nicholas / Tara Reid
+Michael B. Jordan / Hailee Steinfeld
+Mimi Rogers / Elizabeth Hurley
+Molly Ringwald / Emilio Estevez / Ally Sheedy
+Molly Ringwald / Ralph Macchio
+Nick Carter / AJ McLean
+Nick Carter / Chris Kirkpatrick / Nick Lachey / Joey Fatone / AJ McLean
+Nick Castle / Ari Lehman
+Nicolas Cage / Elisabeth Shue
+Nicolas Cage / John Travolta
+Pam Grier / Halle Berry
+Patrick Renna / Grant Gelt / Tom Guiry / Marty York / Victor DiMattia / Shane Obedzinski / Chauncey Leopardi / Brandon Quintin Adams
+Paul Rudd / Christopher Mintz-Plasse
+Ralph Macchio / Chevy Chase
+Ralph Macchio / Elisabeth Shue
+Richard Dreyfuss / Christopher Lloyd
+Richard Dreyfuss / Emilio Estevez
+Robert De Niro / Anthony Hopkins / Val Kilmer / Ralph Fiennes / Susan Sarandon / Halle Berry / Sigourney Weaver / Marisa Tomei
+Robert De Niro / Harrison Ford / Anthony Hopkins / Ralph Fiennes
+Robert De Niro / Nicolas Cage / Anthony Hopkins
+Ron Howard / Bryce Dallas Howard
+Ron Perlman / Charlie Hunnam / Katey Sagal
+Sharon Osbourne / Jack Osbourne / Kelly Osbourne
+Susan Sarandon / Geena Davis
+Susan Sarandon / Geena Davis / Michael Madsen / Christopher McDonald
+Susan Sarandon / Michelle Pfeiffer
+Tatum O'Neal / Sissy Spacek
+Tim Robbins / Charlie Sheen
+Tim Robbins / Nicolas Cage
+Tori Spelling / Ian Ziering / Jennie Garth
+Tori Spelling / Ian Ziering / Tiffani Thiessen / Jennie Garth
+Uma Thurman / Michael Madsen
+Val Kilmer / Ben Affleck
+Val Kilmer / Charlie Sheen
+Val Kilmer / Mel Gibson
+William Shatner / Chris Pine
+William Shatner / Henry Thomas

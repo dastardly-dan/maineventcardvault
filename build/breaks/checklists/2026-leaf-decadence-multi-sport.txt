@@ -1,0 +1,192 @@
+# name: 2026 Leaf Decadence Multi-Sport
+# sport: Leaf Multi-Sport
+# added: 2026-11-22
+# source: https://www.leaftradingcards.com/products/2026-leaf-decadence-multi-sport
+# note: Leaf is unlicensed: no team names, so team breaks are not available. Print runs from the official checklist.
+
+[auto]
+Aaron Paul
+Adrian Peterson
+Alicia Silverstone
+Allen Iverson
+Andy Reid
+Anna Leigh Waters
+Anthony Hopkins
+Austin Reaves
+Barry Sanders
+Bo Jackson
+Bret Hart
+Brooks Koepka
+Bryan Cranston
+Charlie Sheen
+Chevy Chase
+Chris Pratt
+Christina Applegate
+Chuck Norris
+CJ Carr
+Conor McGregor
+Dan Aykroyd
+Dante Moore
+Dennis Quaid
+Dennis Rodman
+Dez Bryant
+Drew Brees
+Elisabeth Shue
+Elizabeth Hurley
+Emilia Clarke
+Emmitt Smith
+Erling Haaland
+Floyd Mayweather Jr.
+Giannis Antetokounmpo
+Gillian Anderson
+Heather Graham
+Helen Hunt
+Ja Morant
+Jacob Lombard
+Jerry Stackhouse
+Jim McMahon
+Joe Montana
+John Elway
+Johnny Depp
+Julian Edelman
+Karl Malone
+Kate Beckinsale
+Ken Griffey Jr.
+Kevin Garnett
+Lamar "Bo" Jackson
+Lamine Yamal
+LaNorris Sellers
+Larry Bird
+Lauren Betts
+Linda Hamilton
+Lou Gramm
+Macaulay Culkin
+Magic Johnson
+Malachi Toney
+Manny Pacquiao
+Mariano Rivera
+Mario Andretti
+Marisa Tomei
+Michelle Pfeiffer
+Miguel Cabrera
+Mike Piazza
+Mike Tyson
+Nick Kurtz
+Nick Saban
+Nikola Jokić
+Nolan Ryan
+Olivia Dunne
+Patrick Ewing
+Peyton Manning
+Phil Ivey
+Rainn Wilson
+Richard Dreyfuss
+Roger Staubach
+Samuel L. Jackson
+Shakur Stevenson
+Shaquille O'Neal
+Spike Lee
+Steve Carlton
+Steve Nash
+Sugar Ray Leonard
+Ted Danson
+Terry Bradshaw
+Tim Tebow
+Timothy Olyphant
+Troy Aikman
+Tyrese Maxey
+Val Kilmer
+William Shatner
+
+[multi]
+Aaron Donald / Warren Sapp
+Adrian Peterson / Terrell Davis
+Allen Iverson / Jason Williams
+Allen Iverson / Jason Williams / Tony Parker / Stephon Marbury / Tim Hardaway / Mark Price
+Allen Iverson / John Stockton / Steve Nash / Tony Parker / Stephon Marbury / Jason Kidd / Kenny Anderson / Jason Williams
+Austin Reaves / Tyler Herro
+Barry Sanders / Adrian Peterson
+Barry Sanders / Emmitt Smith / Adrian Peterson
+Barry Sanders / Emmitt Smith / Earl Campbell / Adrian Peterson / LaDainian Tomlinson / Thurman Thomas / Marshall Faulk / Edgerrin James
+Bo Jackson / Tim Tebow / Doug Flutie / Barry Sanders / Vinny Testaverde / Johnny Manziel / Steve Spurrier / Earl Campbell
+Brad Daugherty / Mark Price
+Bret Hart / Ric Flair
+Chris Webber / Dennis Rodman
+Conor McGregor / Chuck Norris
+Conor McGregor / Max Holloway
+Conor McGregor / Max Holloway / Dustin Poirier / Shavkat Rakhmonov / Michael Bisping / Merab Dvalishvili
+Dan Aykroyd / Chevy Chase / Jim Belushi
+Darryl Strawberry / Dwight Gooden / Howard Johnson / Ron Darling / Ray Knight / Kevin Mitchell
+Dennis Quaid / Charlie Sheen / Tim Robbins
+Dominique Wilkins / Jerry Stackhouse
+Earl Campbell / Ricky Williams / Adrian Peterson / Billy Sims / Jamal Lewis / Lenny Moore
+Emmitt Smith / Troy Aikman / Jay Novacek
+Erling Haaland / Lamine Yamal
+Floyd Mayweather Jr. / Oscar De La Hoya / Sugar Ray Leonard / Manny Pacquiao / Tommy Hearns / "Sugar" Shane Mosley
+Frank Thomas / Fred McGriff
+Fred McGriff / Andruw Jones
+Fred McGriff / Andruw Jones / Dave Justice
+Geena Davis / Jon Lovitz / Rosie O'Donnell
+Giannis Antetokounmpo / Chris Webber
+Giannis Antetokounmpo / Ja Morant / Nikola Jokić
+Giannis Antetokounmpo / Jaylen Brown
+Jake Roberts / Cheryl Roberts
+Jeff Goldblum / Anthony Hopkins / Cillian Murphy / Johnny Depp / Richard Dreyfuss / Sam Neill / Tim Robbins / Val Kilmer
+Jim Kelly / Drew Brees / Joe Montana / Terry Bradshaw / Dan Fouts / Roger Staubach
+Jim McMahon / Jim Kelly / Joe Montana
+Jim Thome / Nick Kurtz
+John Stockton / Steve Nash
+Johnny Bench / Tony Pérez / George Foster
+Jon Gruden / Andy Reid
+Karl Malone / Dennis Rodman
+Karl Malone / Kevin Garnett
+Ken Griffey Jr. / Frank Thomas / Jeff Bagwell / Fred McGriff / Will Clark / Jeff Kent
+Larry Bird / Bill Bradley / Walt Frazier / Jerry West
+Larry Bird / Chris Mullin / Joe Johnson / Glen Rice / J. R. Smith / Chauncey Billups
+Larry Bird / Robert Parish
+Lawrence Taylor / Ray Lewis / Jack Ham / Mike Singletary / Aaron Donald / Warren Sapp / Alan Page / Randy White
+Linda Blair / Tony Todd / Tobin Bell / Sissy Spacek / Ari Lehman / Nick Castle / Andrew Bryniarski / Tim Curry
+Malachi Toney / Dante Moore / CJ Carr / Lamar "Bo" Jackson / Ahmad Hardy / Cam Coleman / Drew Mestemaker / LaNorris Sellers
+Malachi Toney / Lamar "Bo" Jackson / Cam Coleman
+Manny Pacquiao / Floyd Mayweather Jr. / Oscar De La Hoya / Sugar Ray Leonard
+Mariano Rivera / Trevor Hoffman
+Mario Andretti / Richard Petty / Tony Stewart
+Matt Hardy / Jeff Hardy
+Mike Mussina / Curt Schilling / John Smoltz
+Mike Schmidt / Johnny Bench / Eddie Murray / Reggie Jackson
+Mike Schmidt / Steve Carlton
+Mike Tyson / Floyd Mayweather Jr. / Manny Pacquiao / Sugar Ray Leonard / Conor McGregor / Dustin Poirier / Max Holloway / Forrest Griffin
+Nick Kurtz / Jose Canseco
+Nick Kurtz / Reggie Jackson / Jose Canseco / Jason Giambi / Joe Rudi / Rollie Fingers
+Nick Saban / Steve Spurrier
+Nick Saban / Urban Meyer / Steve Spurrier
+Nolan Ryan / Dwight Gooden
+Nolan Ryan / Steve Carlton / Ferguson Jenkins / Jim Palmer / John Smoltz / Mike Mussina / Dwight Gooden / Tom Glavine
+Olivia Dunne / Anna Leigh Waters / Kai Trump
+Patrick Ewing / Shaquille O'Neal / Dennis Rodman / Chris Webber
+Peyton Manning / Eli Manning
+Peyton Manning / Joe Montana / Troy Aikman / Terry Bradshaw
+Peyton Manning / Terry Bradshaw
+Randy Moss / Adrian Peterson
+Randy Moss / Malachi Toney
+Reggie Jackson / Nick Kurtz
+Ric Flair / Bret Hart / Goldberg
+Ric Flair / Bret Hart / Goldberg / Steve Austin / Tatanka / Koko B. Ware / Greg Valentine / Carlito
+Ric Flair / Bret Hart / Goldberg / Ted DiBiase
+Rick Pitino / John Calipari
+Roger Staubach / Emmitt Smith / Drew Pearson / Bob Lilly / Randy White / Charles Haley / Jay Novacek / Tony Dorsett
+Roger Staubach / Jim Kelly / Joe Montana / Terry Bradshaw
+Rollie Fingers / Dennis Eckersley
+Sean McVay / Andy Reid / Jon Gruden
+Shaquille O'Neal / James Worthy / Jamaal Wilkes / Magic Johnson / Bob McAdoo / Gail Goodrich / Lamar Odom / Michael Cooper
+Shaquille O'Neal / Patrick Ewing
+Shaquille O'Neal / Patrick Ewing / Artis Gilmore / Dwight Howard / Larry Johnson / Chris Webber / Dennis Rodman / Shawn Kemp
+Shaquille O'Neal / Patrick Ewing / Dwight Howard
+Steve Largent / Julian Edelman
+Terry Bradshaw / Fran Tarkenton / Roger Staubach
+Terry Bradshaw / Jack Ham / Donnie Shell / Rocky Bleier / Hines Ward / Kordell Stewart / Rod Woodson / Barry Foster
+Terry Bradshaw / Joe Montana / Peyton Manning / Roger Staubach / Drew Brees / Jim McMahon / Jim Kelly / Warren Moon
+Troy Aikman / Emmitt Smith
+Vladimir Guerrero / Sammy Sosa / Fred McGriff / Jason Giambi
+Warren Moon / Earl Campbell
+Warren Sapp / James Harrison / Brian Dawkins Sr. / Earl Thomas / Aaron Donald / Willie McGinest

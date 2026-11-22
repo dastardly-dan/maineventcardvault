@@ -1,0 +1,329 @@
+# name: 2026 Leaf City of Champions
+# sport: Leaf Multi-Sport
+# added: 2026-11-22
+# source: https://www.leaftradingcards.com/products/2026-leaf-city-of-champions
+# note: Leaf is unlicensed: no team names, so team breaks are not available. Print runs from the official checklist.
+
+[auto]
+Aaron Donald
+Anthony Rizzo
+Babe Ruth
+Barry Switzer
+Ben Coates
+Bernie Williams
+Billy Joe DuPree
+Bob Lilly
+Bobby Clarke
+Bobby Hull
+Brian Scalabrine
+Bruce Bochy
+Bucky Dent
+Cecil Fielder
+Cedric Maxwell
+Chris Chambliss
+Chuck Knoblauch
+Cleon Jones
+Cliff Harris
+Curt Schilling
+Darryl Strawberry
+Dave Cowens
+Dave Justice
+Dave Schultz
+David Cone
+Deion Sanders
+Dennis Rodman
+Denny Neagle
+Dominik Hasek
+Drew Pearson
+Dusty Baker
+Dwight Gooden
+Ed Belfour
+Emmitt Smith
+Fred Baxter
+Freddy García
+Gerald Henderson
+Goose Gossage
+Graig Nettles
+Hank Greenberg
+Homer Bush
+Howard Johnson
+Jay Novacek
+Jeff Nelson
+Jerry West
+Jesse Orosco
+Jim Covert
+Jim Leyritz
+Jim McMahon
+Joba Chamberlain
+Joe DiMaggio
+Joe Dumars
+Joe Girardi
+Joe Montana
+John Taylor
+Jose Canseco
+Julian Edelman
+Ken Clay
+Kevin Garnett
+Kevin McHale
+Kevin Smith
+Larry Bird
+Lawrence Taylor
+Lee Mazzilli
+LeGarrette Blount
+Lenny Dykstra
+Lisa Leslie
+Lou Gehrig
+Lou Whitaker
+Magic Johnson
+Malcolm Butler
+Mariano Rivera
+Mark Messier
+Michael Cooper
+Mickey Mantle
+Mike Richter
+Mike Schmidt
+Mike Singletary
+Mike Vrabel
+Mitch Richmond
+Nick Sirianni
+Nolan Ryan
+Otis Smith
+Ramiro Mendoza
+Randy White
+Rasheed Wallace
+Reggie Jackson
+Richard Dent
+Rick Dempsey
+Ricky Ledée
+Robert Horry
+Robert Parish
+Roger Clemens
+Roger Staubach
+Ron Darling
+Ron Guidry
+Roy White
+Sean McVay
+Shaquille O'Neal
+Sid Fernandez
+Steve Carlton
+Steve Larmer
+Ted Johnson
+Tedy Bruschi
+Tim Raines
+Tim Thomas
+Tom Landry
+Toni Kukoc
+Vince Wilfork
+Wade Boggs
+Walter Payton
+William Perry
+Willie Gault
+Willie McGinest
+
+[insert]
+Alex Rodriguez
+Babe Ruth
+Bernie Parent
+Bill Parcells
+Bobby Clarke
+Brendan Shanahan
+Brett Hull
+Clete Boyer
+Curt Schilling
+David Ortiz
+Deion Sanders
+Dennis Rodman
+Derek Jeter
+Dirk Nowitzki
+Don Drysdale
+Drew Pearson
+Duke Snider
+Dutch Leonard
+Ed Belfour
+Emmitt Smith
+Fernando Valenzuela
+Frankie Frisch
+Gil Hodges
+Gordie Howe
+Hank Bauer
+Howie Long
+Hoyt Wilhelm
+Jason Kidd
+Jason Varitek
+Jim McMahon
+Joe DiMaggio
+Joe Montana
+Julius Erving
+Kareem Abdul-Jabbar
+Kevin Garnett
+Kirk Gibson
+Klay Thompson
+Kobe Bryant
+Larry Bird
+LeBron James
+Leo Durocher
+Lou Gehrig
+Madison Bumgarner
+Magic Johnson
+Mariano Rivera
+Mark Messier
+Mel Ott
+Michael Strahan
+Mickey Mantle
+Mike Richter
+Mike Schmidt
+Mike Singletary
+Moses Malone
+Nolan Ryan
+Paul Pierce
+Pedro Martinez
+Pete Rose
+Phil Simms
+Rasheed Wallace
+Reggie Jackson
+Richard Hamilton
+Rick Mahorn
+Robert Parish
+Roger Clemens
+Roger Maris
+Roy Campanella
+Sandy Koufax
+Scottie Pippen
+Sergei Fedorov
+Sergei Zubov
+Shaquille O'Neal
+Shawn Marion
+Steve Garvey
+Steve Young
+Steve Yzerman
+Tom Brady
+Tom Rathman
+Tom Seaver
+Tony Kubek
+Tug McGraw
+Walt Alston
+Walter Payton
+Willie Mays
+Yogi Berra
+
+[multi]
+Alan Trammell / Lou Whitaker
+Alan Trammell / Lou Whitaker / Darrell Evans
+Babe Ruth / Joe Namath / Phil Simms / Tom Seaver / Walt Frazier / Mark Messier
+Babe Ruth / Lou Gehrig
+Babe Ruth / Lou Gehrig / Mickey Mantle / Joe DiMaggio / Yogi Berra / Derek Jeter / Reggie Jackson / Mariano Rivera
+Babe Ruth / Mickey Mantle / Lou Gehrig / Roger Maris / Derek Jeter / Tom Seaver / Willie Mays / Reggie Jackson
+Brett Hull / Ed Belfour
+Brett Hull / Mike Modano
+Darryl Strawberry / Dwight Gooden / Ray Knight / Kevin Mitchell
+Davey Johnson / Dwight Gooden / Ray Knight
+David Cone / Ramiro Mendoza / Jeff Nelson
+David Ortiz / Tom Brady / Larry Bird / Gerry Cheevers / Manny Ramirez / Robert Parish
+Dennis Rodman / Rick Mahorn
+Derek Jeter / Andy Pettitte
+Derek Jeter / Mariano Rivera
+Derek Jeter / Phil Simms / Michael Strahan / Alex Rodriguez / Eli Manning / Plaxico Burress / Mariano Rivera / Mark Messier
+Dirk Nowitzki / Shawn Marion
+Duke Snider / Roy Campanella / Gil Hodges
+Dwight Gooden / Ron Darling / Sid Fernandez
+Emmitt Smith / Dirk Nowitzki
+Emmitt Smith / Dirk Nowitzki / Brett Hull / Roger Staubach / Ed Belfour / Deion Sanders / Troy Aikman / Drew Pearson
+Emmitt Smith / Dirk Nowitzki / Ed "Too Tall" Jones / Ed Belfour / Troy Aikman / Drew Pearson / Brett Hull / Deion Sanders
+Emmitt Smith / Dirk Nowitzki / Mike Modano / Deion Sanders / Troy Aikman / Ed Belfour
+Emmitt Smith / Troy Aikman
+Emmitt Smith / Troy Aikman / Jay Novacek
+Fernando Valenzuela / Kirk Gibson / Steve Garvey / Davey Lopes / Duke Snider / Shohei Ohtani / Dusty Baker / Steve Yeager
+Gordie Howe / Dennis Rodman / Kirk Gibson / Steve Yzerman / Joe Dumars / Sparky Anderson
+Gordie Howe / Kirk Gibson / Dennis Rodman / Steve Yzerman / Joe Dumars / Lou Whitaker / Chris Osgood / Alan Trammell
+Gordie Howe / Kirk Gibson / Dennis Rodman / Steve Yzerman / Joe Dumars / Sergei Fedorov / Willie Horton / Isiah Thomas
+Jayson Tatum / Kristaps Porzingis / Jaylen Brown
+Jerry West / Wilt Chamberlain / Pat Riley
+Jim McMahon / William Perry / Willie Gault
+Jim McMahon / Willie Gault
+Jim McMahon / Willie Gault / Jim Covert / Mike Singletary
+Joe Dumars / Chauncey Billups
+Joe Girardi / Ricky Ledée / Chuck Knoblauch
+Joe Torre / Derek Jeter / Roger Clemens
+Julian Edelman / Danny Amendola
+Julian Edelman / Danny Amendola / Malcolm Butler
+Julius Erving / Moses Malone
+Julius Erving / Moses Malone / Maurice Cheeks
+Kareem Abdul-Jabbar / Magic Johnson
+Kareem Abdul-Jabbar / Magic Johnson / Pat Riley
+Kareem Abdul-Jabbar / Shaquille O'Neal
+Kevin Durant / Andre Iguodala
+Kevin Garnett / Paul Pierce
+Kevin Garnett / Paul Pierce / Ray Allen
+Kevin McHale / Cedric Maxwell / Gerald Henderson
+Kirk Gibson / Kobe Bryant / Orel Hershiser / Shaquille O'Neal / Tommy Lasorda / Pau Gasol
+Kobe Bryant / James Worthy
+Kobe Bryant / Magic Johnson
+Kobe Bryant / Magic Johnson / LeBron James / Kareem Abdul-Jabbar / Robert Horry / Pau Gasol / Shaquille O'Neal / Lamar Odom
+Kobe Bryant / Shaquille O'Neal
+Kobe Bryant / Shaquille O'Neal / LeBron James / Kareem Abdul-Jabbar / Kirk Gibson / Steve Garvey / Fernando Valenzuela / Tommy Lasorda
+Kobe Bryant / Shaquille O'Neal / Robert Horry
+Larry Bird / Kevin McHale
+Larry Bird / Kevin McHale / Cedric Maxwell
+Larry Bird / Nate Archibald / Robert Parish / Gerald Henderson
+Larry Bird / Robert Parish
+Larry Bird / Robert Parish / Bill Walton
+Larry Bird / Robert Parish / Kevin McHale / Bill Walton / Kevin Garnett / Jaylen Brown / Paul Pierce / Ray Allen
+Larry Bird / Robert Parish / Kevin McHale / Bill Walton / Tom Brady / Pedro Martinez / Manny Ramirez / David Ortiz
+Larry Bird / Robert Parish / Kevin McHale / Cedric Maxwell
+Larry Bird / Tom Brady
+Larry Bird / Tom Brady / Pedro Martinez / Robert Parish / Manny Ramirez / Bill Walton / Jason Varitek / Kevin Garnett
+Lou Piniella / Reggie Jackson / Graig Nettles
+Magic Johnson / James Worthy / Michael Cooper
+Magic Johnson / James Worthy / Michael Cooper / Bob McAdoo
+Magic Johnson / LeBron James
+Magic Johnson / Michael Cooper
+Magic Johnson / Orel Hershiser
+Manny Ramirez / David Ortiz
+Mariano Rivera / Bernie Williams / Derek Jeter
+Mariano Rivera / Nick Swisher / Joba Chamberlain
+Mariano Rivera / Ramiro Mendoza / David Cone / Chuck Knoblauch
+Mark Messier / Mike Richter / Brian Leetch
+Mark Messier / Mike Richter / Steve Larmer / Stéphane Matteau
+Mickey Mantle / Bill Skowron / Tony Kubek
+Mickey Mantle / Roger Maris
+Mike Schmidt / Bob Boone
+Mike Schmidt / Jalen Hurts / Bobby Clarke / Pete Rose / Bernie Parent / Moses Malone / Steve Carlton / Julius Erving
+Mike Schmidt / Julius Erving / Bobby Clarke / Pete Rose / Jalen Hurts / Bernie Parent
+Mike Schmidt / Julius Erving / Jalen Hurts / Pete Rose / Moses Malone / Bobby Clarke / Steve Carlton / Bob Boone
+Mike Schmidt / Moses Malone
+Mike Schmidt / Pete Rose
+Mike Schmidt / Steve Carlton
+Nolan Ryan / Cleon Jones
+Paul Pierce / Jaylen Brown
+Pedro Martinez / Jason Varitek / David Ortiz / Curt Schilling / Manny Ramirez / Jacoby Ellsbury / David Price / Dustin Pedroia
+Pedro Martinez / Manny Ramirez / David Ortiz
+Phil Simms / Derek Jeter
+Reggie Jackson / Graig Nettles
+Reggie Jackson / Graig Nettles / Bucky Dent / Ron Guidry
+Reggie Jackson / Michael Strahan / Gary Carter / Mike Richter / Derek Jeter / Tug McGraw
+Reggie Jackson / Ron Guidry / Goose Gossage
+Rob Gronkowski / Danny Amendola / Julian Edelman
+Rob Gronkowski / Malcolm Butler / Tedy Bruschi / Julian Edelman
+Roger Clemens / Alex Rodriguez / Derek Jeter / Mariano Rivera / Andy Pettitte / David Wells / Wade Boggs / Tim Raines
+Roger Staubach / Randy White
+Roy Campanella / Gil Hodges
+Roy Campanella / Kareem Abdul-Jabbar / Steve Garvey / Kobe Bryant / Duke Snider / Magic Johnson
+Scottie Pippen / Dennis Rodman
+Shaquille O'Neal / Glen Rice
+Shaquille O'Neal / Kobe Bryant
+Shaquille O'Neal / Robert Horry
+Steve Garvey / Jerry Reuss / Dusty Baker / Joe Ferguson
+Steve Yzerman / Sergei Fedorov
+Steve Yzerman / Sergei Fedorov / Brendan Shanahan
+Tedy Bruschi / Willie McGinest
+Tom Brady / Ben Coates
+Tom Seaver / Nolan Ryan
+Tony Dorsett / Drew Pearson
+Troy Aikman / Emmitt Smith
+Troy Aikman / Emmitt Smith / Deion Sanders
+Walter Payton / Anthony Rizzo / Scottie Pippen / Jim McMahon / Dennis Rodman / Paul Konerko
+Walter Payton / Scottie Pippen / Jim McMahon / Anthony Rizzo / Gary Fencik / Kris Bryant / Steve Kerr / Mike Singletary
+Willie Mays / Hoyt Wilhelm
+Willie Mays / Mickey Mantle / Reggie Jackson / Phil Simms / Roger Maris / Derek Jeter / Eli Manning / Michael Strahan
+Willie McGinest / Tedy Bruschi / Fred Baxter
+Wilt Chamberlain / Duke Snider / Kobe Bryant / Roy Campanella / Kareem Abdul-Jabbar / Fernando Valenzuela / Magic Johnson / Kirk Gibson

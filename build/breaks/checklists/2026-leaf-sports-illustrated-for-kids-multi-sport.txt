@@ -1,0 +1,382 @@
+# name: 2026 Leaf Sports Illustrated For Kids Multi-Sport
+# sport: Leaf Multi-Sport
+# added: 2026-11-22
+# source: https://www.leaftradingcards.com/products/2026-leaf-sports-illustrated-for-kids-multi-sport
+# note: Leaf is unlicensed: no team names, so team breaks are not available. Print runs from the official checklist.
+
+[base]
+Alan Trammell
+Allen Iverson
+Anna Leigh Waters
+Barry Sanders
+Bo Jackson
+Bret Hart
+Brian Bosworth
+Brooks Koepka
+Cameron Brink
+CJ Carr
+Conor McGregor
+Dennis Rodman
+Don Mattingly
+Dustin Poirier
+Eli Manning
+Emmitt Smith
+Erin Andrews
+Erling Haaland
+Giannis Antetokounmpo
+Goldberg
+Hope Solo
+Jack Ham
+Jake Roberts
+Jay Novacek
+Jim Craig
+Jim McMahon
+Joe Montana
+Joey Chestnut
+John Daly
+John Elway
+John Stockton
+Johnny Bench
+Jose Canseco
+Karl Malone
+Ken Griffey Jr.
+Kevin Garnett
+Kevin McHale
+Lawrence Taylor
+Lionel Messi
+Malachi Toney
+Manny Pacquiao
+Mariano Rivera
+Mario Lemieux
+Mark McGwire
+Mark Messier
+Megan Keller
+Mick Foley
+Miguel Cabrera
+Mike Schmidt
+Mike Tyson
+Nolan Ryan
+Olivia Dunne
+Oscar De La Hoya
+Ozzie Smith
+Peyton Manning
+Reggie Jackson
+Ric Flair
+Richard Petty
+Roberto Durán
+Shaquille O'Neal
+Steve Young
+Tim Tebow
+Tom Glavine
+Tony Dorsett
+Tony Parker
+Troy Aikman
+Vince Wilfork
+
+[auto]
+Aaron Gregory
+Adam Oates
+Adrian Dantley
+Adrian Peterson
+AJ Hill Jr.
+Ajša Sivka
+Akili Smith Jr.
+Akylin Dear
+Alan Trammell
+Allen Iverson
+Andre Agassi
+Andre Johnson
+Andre Reed
+Andy Van Slyke
+Anna Leigh Waters
+Antoine Walker
+Artis Gilmore
+Barry Sanders
+Bill Bradley
+Bo Jackson
+Bobby Hull
+Brady Edmunds
+Brady Hart
+Brady Smigiel
+Brandon Arrington
+Bret Hart
+Brian Bosworth
+Brooks Koepka
+Byrd Ficklin
+Byrum Brown
+Calvin Murphy
+Calvin Russell
+Cam Coleman
+Cameron Brink
+Carlos Boozer
+Chad Johnson
+Charles Oliveira
+Chris Bosh
+Chris Chelios
+Chris Mullin
+Christian Collins
+Christopher Vargas
+Chuck Knoblauch
+CJ Carr
+Claudio Caniggia
+Conor McGregor
+Cynthia Cooper
+Daniel Mielke
+Danny Amendola
+Dante Hall
+Demond Williams Jr.
+Dennis Rodman
+Derek Meadows
+Derrick Baker
+Deuce Knight
+Devin Carter
+Dez Bryant
+Didier Drogba
+Dierre Hill
+Dilin Jones
+DJ Lagway
+Dominique Wilkins
+Don Mattingly
+Donnie Shell
+Donovan Olugbode
+Drew Brees
+Dustin Poirier
+Dwight Gooden
+Dwight Stephenson
+Earl Campbell
+Edgardo Alfonzo
+Edgerrin James
+Eli Manning
+Erin Andrews
+Erling Haaland
+Ethan Grunkemeyer
+Faizon Brandon
+Felix Potvin
+Ferguson Jenkins
+Frank Gore
+Fred McGriff
+Freddie Roach
+Gabby Douglas
+Gabrielle Thomas
+George MacIntyre
+Gheorghe Mureșan
+Giannis Antetokounmpo
+Gilbert Burns
+Goldberg
+Gregory Rodrigues
+Gunner Stockton
+Harlem Berry
+Hines Ward
+Hope Solo
+Ivan Lendl
+Ja Morant
+Jabari Mack
+Jack Ham
+Jack Morris
+Jaden O'Neal
+Jake Roberts
+Jamal Lewis
+James Simon
+Jameson Purcell
+Jamier Brown
+Jason Williams
+Jay Novacek
+Jean Silva
+Jen Schroeder
+Jerry Stackhouse
+Jerry West
+Jim Craig
+Jim Duggan
+Jim McMahon
+Jimmer Fredette
+Jocelyn Thibault
+Joe Dumars
+Joe Montana
+Joe Theismann
+Joey Chestnut
+John Daly
+John Elway
+John Mateer
+John Stockton
+Johnny Bench
+Johnny Manziel
+Jon Gruden
+Jon Jones
+Jordon Davison
+Jose Canseco
+Joseph Parker
+Joshua Edwards
+Joy Fawcett
+JT Lindsey
+Ju Ju Lewis
+Justice Haynes
+Kaleb Jackson
+Kaliq Lockett
+Karl Malone
+Kate Harpring
+Kayden Dixon-Wyatt
+Ken Griffey Jr.
+Kennedy Fuller
+Kevin Garnett
+Kevin McHale
+Kiki VanDeWeghe
+Kim Mulkey
+Kirk McLean
+KJ Lacey
+Kurt Angle
+Lamar "Bo" Jackson
+Landen Holley
+Lawrence Taylor
+Luc Robitaille
+Luis Figo
+Luka Vušković
+Luke Kuechly
+Luke Nickel
+Malachi Toney
+Malachi Zeigler
+Manny Pacquiao
+Manny Ramirez
+Marcos Maidana
+Mariano Rivera
+Mario Andretti
+Mario Lemieux
+Mark Grace
+Mark McGwire
+Mark Messier
+Marv Levy
+Mason Holtzclaw
+Mats Sundin
+Matt Schaub
+Mauricio Ruffy
+Megan Keller
+Michael Hawkins Jr.
+Michael Moorer
+Michael Pyne
+Michael Spinks
+Michael Vick
+Mick Foley
+Miguel Cabrera
+Mike Quick
+Mike Rozier
+Mike Schmidt
+Mike Tyson
+Nate Diaz
+Neil Smith
+Neimann Lawrence
+Nick Kurtz
+Noah Grubbs
+Nolan Ryan
+Olivia Dunne
+Orlando Pace
+Oscar De La Hoya
+Oscar Rios
+Ozzie Smith
+Patrick Ewing
+Patrick Peterson
+Paul Krause
+Paul Molitor
+Pedro Guerrero
+Pete Weber
+Peter Bourque
+Peyton Falzone
+Peyton Houston
+Peyton Manning
+Raphinha
+Ray Mercer
+Reggie Jackson
+Renato Moicano
+Ric Flair
+Ricardo Quaresma
+Richard Petty
+Rick Dempsey
+Ricky Williams
+Riddick Bowe
+Robbie Fowler
+Roberto Durán
+Robin Yount
+Rollie Fingers
+Ronnie Coleman
+Ronnie O'Sullivan
+Ryan Leaf
+Ryan Montgomery
+Ryan Rakowski
+Ryder Lyons
+Ryne Sandberg
+Sam Leavitt
+Sean Brady
+Sebastian Telfair
+Shakur Stevenson
+Shaquille O'Neal
+Shaun White
+Shawn Kemp
+Sheryl Swoopes
+Sid Bream
+Sidney Moncrief
+Steffi Graf
+Steve Largent
+Steve Nash
+Steve Young
+Steven Stamkos
+Striker Pence
+Ted Johnson
+Ted Simmons
+Terrell Davis
+Terrell Suggs
+The Boogeyman
+Thurman Thomas
+Tim Brown
+Tim Couch
+Tim Raines
+Tim Tebow
+Tom Glavine
+Tony Dorsett
+Tony La Russa
+Tony Parker
+Tony Richardson
+Tristan Sabb
+Troy Aikman
+Troy Huhn
+Tyler Cherry
+Tyler Hansbrough
+Tyrese Maxey
+Vince Wilfork
+Vinny Testaverde
+Vladimir Guerrero
+Wade Boggs
+Walter Jones
+Warren Moon
+Wayne Rooney
+Willie Roaf
+Willis McGahee
+Wonderful "Champ" Monds IV
+Zac Katz
+
+[multi]
+Allen Iverson / Tyrese Maxey
+Andre Agassi / Steffi Graf
+Anna Leigh Waters / Olivia Dunne
+Artis Gilmore / Spencer Haywood
+Azzi Fudd / Lauren Betts
+Demolition Ax / Demolition Smash
+Denny McLain / Jack Morris
+Don Mattingly / Lawrence Taylor
+Dwight Gooden / Ron Darling
+Kevin Garnett / Adrian Peterson
+Kevin Garnett / Kevin McHale
+Lamar "Bo" Jackson / Jamier Brown
+Lauren Betts / Gabriela Jaquez
+Malachi Toney / Cam Coleman
+Manny Pacquiao / Miguel Cotto
+Manny Ramirez / Miguel Cabrera
+Marcus Freeman / Mario Cristobal
+Mick Foley / Edge
+Mr. T / Dolph Lundgren
+Ozzie Smith / Andy Van Slyke
+Papa Shango / Bret Hart
+Ric Flair / Jim Duggan
+Shaquille O'Neal / Patrick Ewing
+Steve Nash / John Stockton
+Steve Spurrier / Tim Tebow
+Steve Young / Joe Montana
+Tim Brown / Raghib "Rocket" Ismail
+Willie McGinest / Vince Wilfork

@@ -1,0 +1,511 @@
+# name: 2025 Leaf In The Game Used Sports
+# sport: Leaf Multi-Sport
+# added: 2026-11-22
+# source: https://www.leaftradingcards.com/products/2025-leaf-in-the-game-used-sports
+# note: Leaf is unlicensed: no team names, so team breaks are not available. Print runs from the official checklist.
+
+[auto]
+Allen Iverson
+Alonzo Mourning
+Amar'e Stoudemire
+Art Monk
+Artis Gilmore
+Aryna Sabalenka
+Ashton Jeanty
+Barry Sanders
+Bernard King
+Bob McAdoo
+Brooks Koepka
+Bruce Smith
+Cade Klubnik
+Cameron Boozer
+Cameron Brink
+Carl Yastrzemski
+Carlos Boozer
+Cayden Boozer
+Charles Barkley
+Cole Palmer
+Conor McGregor
+Dale Murphy
+Dan Marino
+Davante Adams
+Declan Rice
+Dennis Rodman
+Detlef Schrempf
+Deuce Knight
+DJ Lagway
+Dominique Wilkins
+Donovan McNabb
+Drew Brees
+Dusty Baker
+Emmitt Smith
+Eric Dickerson
+Eric Gagne
+Faizon Brandon
+Francesco Totti
+Franck Ribéry
+Frank Thomas
+Fred Biletnikoff
+Gabriel Batistuta
+Gary Payton
+Gavi
+Geoff Hurst
+George Gervin
+George MacIntyre
+Giannis Antetokounmpo
+Greg Maddux
+Hulk Hogan
+Ja Morant
+Ja'Marr Chase
+Jack Ham
+Jared Curtis
+Jason Giambi
+Jerry Stackhouse
+Jerry West
+Joe Torre
+John Elway
+Johnny Bench
+Jose Canseco
+Ju Ju Lewis
+Julius Erving
+Ken Griffey Jr.
+Kevin "KC" Concepcion
+LaDainian Tomlinson
+Larry Bird
+Larry Csonka
+Larry Johnson
+Latrell Sprewell
+Lionel Messi
+Magic Johnson
+Mark McGwire
+Marshall Faulk
+Micheal Ray Richardson
+Mike Schmidt
+Mike Tyson
+Neymar Jr.
+Nolan Ryan
+Odell Beckham Jr.
+Olivia Dunne
+Ozzie Smith
+Pedri
+Pedro Martinez
+Peyton Manning
+Phil Foden
+Randy Johnson
+Rasheed Wallace
+Reggie Jackson
+Renato Moicano
+Rod Woodson
+Ronaldo Nazário
+Ronnie Coleman
+Ryne Sandberg
+Steve Garvey
+Ted DiBiase
+Terrell Davis
+Terry Bradshaw
+Tim Tebow
+Toby Fournier
+Todd Helton
+Tony Armas
+Travis Pastrana
+Tyreek Hill
+Wade Boggs
+Yao Ming
+
+[insert]
+Aaron Judge
+Alex Rodriguez
+Andre Iguodala
+Andy Messersmith
+Anthony Carter
+Arnold Palmer
+Arthur Ashe
+Babe Ruth
+Barry Bonds
+Barry Sanders
+Bill Mazeroski
+Bill Walton
+Björn Borg
+Blake Griffin
+Bob Gibson
+Bob Waterfield
+Bruce Lee
+Bubba Watson
+Cade Cunningham
+Carl Yastrzemski
+Carmelo Anthony
+Casemiro
+Charles Barkley
+Chris Paul
+Clyde Drexler
+Cristiano Ronaldo
+Dan Marino
+Darrell Evans
+Dave Casper
+David Beckham
+David Robinson
+Deion Sanders
+Dennis Johnson
+Dennis Rodman
+Derek Jeter
+Derrick Rose
+Detlef Schrempf
+Dick Williams
+Diego Maradona
+Dikembe Mutombo
+Dirk Nowitzki
+Dizzy Dean
+Don Mattingly
+Don Shula
+Eddie Collins
+Eddie Murray
+Ederson
+Emmitt Smith
+Endrick
+Erling Haaland
+Ernie Banks
+Frank Robinson
+Frankie Frisch
+Franz Beckenbauer
+Garrincha
+Gary Payton
+Gaylord Perry
+Gene Sarazen
+George Brett
+Grant Hill
+Greg Maddux
+Harry Kane
+Howie Long
+Hoyt Wilhelm
+Ichiro
+James Harden
+Jim Kelly
+Jim McMahon
+Jimmie Foxx
+Joe DiMaggio
+Joe McCarthy
+John Elway
+John McEnroe
+John Stallworth
+John Stockton
+Johnny Bench
+Jude Bellingham
+Kareem Abdul-Jabbar
+Karim Benzema
+Karl Malone
+Ken Griffey Jr.
+Ken Stabler
+Kevin De Bruyne
+Kevin Garnett
+Kobe Bryant
+Kylian Mbappé
+Kyrie Irving
+Larry Bird
+Larry Holmes
+Larry Johnson
+LeBron James
+Leo Durocher
+Lionel Messi
+Lou Gehrig
+Lou Holtz
+Luka Doncic
+Luka Modrić
+Magic Johnson
+Manny Mota
+Marcus Dupree
+Marcus Rashford
+Maria Sharapova
+Marquinhos
+Marvin Harrison
+Michael Strahan
+Mickey Mantle
+Mickey Vernon
+Mike Schmidt
+Mitch Richmond
+Mohamed Salah
+Muhammad Ali
+Neymar Jr.
+Nikola Jokic
+Nolan Ryan
+Novak Djokovic
+Orlando Cepeda
+Ousmane Dembélé
+Ozzie Smith
+Patrick Ewing
+Patrick Mahomes
+Paul Pierce
+Paul Pogba
+Pelé
+Pete Rose
+Phil Foden
+Rafael Nadal
+Randy Moss
+Ray Allen
+Rickey Henderson
+Robert Lewandowski
+Robin Roberts
+Rod Carew
+Roger Federer
+Rogers Hornsby
+Rolando Blackman
+Ronaldo Nazário
+Roy Campanella
+Sam Snead
+Satchel Paige
+Scottie Pippen
+Shaquille O'Neal
+Smoky Burgess
+Stan Musial
+Stephen Curry
+Steve Grogan
+Steve Kerr
+Steve Nash
+Sócrates
+Ted Williams
+Tim Duncan
+Tim Tebow
+Toby Harrah
+Tom Brady
+Tom Seaver
+Tony Dorsett
+Tostão
+Trae Young
+Tug McGraw
+Vida Blue
+Vinícius Júnior
+Virgil van Dijk
+Warren Spahn
+Will Clark
+Willie Horton
+Willie Mays
+Wilt Chamberlain
+
+[multi]
+Aaron Judge / Barry Bonds / Mark McGwire / Ken Griffey Jr. / Jose Canseco / George Foster / Alex Rodriguez / Shohei Ohtani
+Aaron Judge / Derek Jeter
+Aaron Judge / Patrick Ewing / Lawrence Taylor / Don Mattingly / Darryl Strawberry / Mark Messier
+Alex Rodriguez / Derek Jeter / Roberto Alomar / Fred McGriff / Juan González / Cal Ripken Jr. / Kenny Lofton / Will Clark
+Allen Iverson / Gary Payton
+Allen Iverson / John Stockton / Steve Nash / Gary Payton
+Allen Iverson / Vince Carter / John Stockton / Charles Barkley / Larry Bird / Chris Webber / Moses Malone / Dikembe Mutombo
+Alonzo Mourning / Larry Johnson
+Andrew Luck / Carson Palmer / Boomer Esiason / Drew Bledsoe / Michael Vick / Tony Romo / Donovan McNabb / Steve McNair
+Andy Pettitte / Mariano Rivera / Derek Jeter / Wade Boggs
+Babe Ruth / Lou Gehrig
+Babe Ruth / Lou Gehrig / Jimmie Foxx / Rogers Hornsby / Eddie Collins / Frank Chance / Miller Huggins / Joe DiMaggio
+Babe Ruth / Lou Gehrig / Mickey Mantle / Aaron Judge
+Babe Ruth / Lou Gehrig / Ted Williams / Willie Mays / Mickey Mantle / Hank Aaron / Joe DiMaggio / Stan Musial
+Babe Ruth / Mickey Mantle / Roger Maris / Joe McCarthy / Joe DiMaggio / Elston Howard / Thurman Munson / Derek Jeter
+Barry Bonds / Jack Ham / Mario Lemieux / Willie Stargell / John Stallworth / Jaromír Jágr
+Barry Bonds / Willie Mays / Tony Gwynn / Willie Stargell / Roberto Alomar / Ozzie Smith / George Brett / Carlton Fisk
+Barry Sanders / Emmitt Smith
+Barry Sanders / Steve Yzerman / Kirk Gibson / Gordie Howe / Willie Horton / Dennis Rodman
+Bernard King / Allan Houston
+Bill Walton / Kareem Abdul-Jabbar
+Bob Gibson / Alex Rodriguez / Joe Morgan / Dave Parker / Warren Spahn / Derek Jeter / George Brett / Randy Johnson
+Bob Gibson / Roger Maris / Orlando Cepeda / Lou Brock
+Bob Waterfield / Joe Namath / Roger Staubach / Fran Tarkenton / Ken Stabler / Jim Hart / Ken Anderson / Jim Plunkett
+Cal Ripken Jr. / Andre Dawson / Eddie Murray / Ozzie Smith / Robin Yount / Cecil Cooper / Ted Simmons / Keith Hernandez
+Cal Ripken Jr. / Ozzie Smith / Robin Yount
+Carl Yastrzemski / Ken Griffey Jr. / Reggie Jackson / Frank Thomas / Joe Morgan / Cal Ripken Jr. / Mike Schmidt / Johnny Bench
+Carl Yastrzemski / Tom Brady / Larry Bird / Raymond Bourque / Rob Gronkowski / Pedro Martinez
+Carl Yastrzemski / Wade Boggs
+Carl Yastrzemski / Wade Boggs / David Ortiz / Pedro Martinez / Curt Schilling / Johnny Damon
+Cecil Cooper / Paul Molitor
+Charles Barkley / Dennis Rodman / Karl Malone
+Charles Barkley / Kevin Garnett
+Charles Barkley / Kevin Garnett / Giannis Antetokounmpo
+Cole Palmer / Phil Foden
+Craig Biggio / Jeff Bagwell
+Cristiano Ronaldo / Diego Maradona
+Cristiano Ronaldo / Neymar Jr.
+Curt Schilling / Johnny Damon / Pedro Martinez / Manny Ramirez
+Dale Murphy / Deion Sanders / Dominique Wilkins / Greg Maddux / Trae Young / Chipper Jones
+Dan Marino / Dwyane Wade / Larry Csonka / Shaquille O'Neal / Chris Bosh / Tyreek Hill
+Dan Marino / Joe Montana / Brett Favre / Emmitt Smith / Barry Sanders / Thurman Thomas
+Dan Marino / John Elway
+Dave Parker / Willie Stargell / Omar Moreno / Bill Madlock
+David Beckham / Lionel Messi / Cristiano Ronaldo
+Derek Jeter / Roger Clemens / Bernie Williams / Andy Pettitte
+Diego Maradona / Pelé
+Diego Maradona / Pelé / Lionel Messi / Cristiano Ronaldo
+Dirk Nowitzki / Julius Erving / Chris Paul / Patrick Ewing / Giannis Antetokounmpo / Dwyane Wade / Steve Nash / Scottie Pippen
+Don Sutton / Duke Snider
+Dwight Gooden / Darryl Strawberry / Keith Hernandez / Gary Carter
+Eddie Collins / Frank Thomas
+Emmitt Smith / Barry Sanders
+Emmitt Smith / Barry Sanders / Jerome Bettis / LaDainian Tomlinson
+Emmitt Smith / Barry Sanders / LaDainian Tomlinson
+Erling Haaland / Cole Palmer / Endrick / Alejandro Garnacho / Lamine Yamal / Jude Bellingham / Vinícius Júnior / Kylian Mbappé
+Erling Haaland / Vinícius Júnior / Cole Palmer / Lamine Yamal
+Ernie Banks / Jim McMahon / Scottie Pippen / Billy Williams / Walter Payton / Bobby Hull
+Gary Payton / Dirk Nowitzki / Jason Kidd / Vince Carter / Carmelo Anthony / Chris Paul / Steve Nash / Dwyane Wade
+Gary Payton / Steve Nash / Reggie Miller / LeBron James / Dennis Rodman / Tim Duncan / Bill Walton / Kareem Abdul-Jabbar
+Greg Maddux / Dave Justice / Fred McGriff / Chipper Jones
+Greg Maddux / Pedro Martinez / Randy Johnson
+Hakeem Olajuwon / David Robinson / Shaquille O'Neal / Charles Barkley / Patrick Ewing / Karl Malone / Grant Hill / Chris Webber
+Hank Aaron / Warren Spahn / Eddie Mathews / Joe Adcock
+Harry Kane / Jude Bellingham
+Hulk Hogan / Ric Flair
+Ichiro / Ken Griffey Jr.
+Jack Ham / Lawrence Taylor
+Jason Kidd / James Harden / Tony Parker / Pau Gasol / Allen Iverson / Reggie Miller / Ray Allen / Paul Pierce
+Jerry Rice / John Stallworth / Randy Moss
+Jerry West / Magic Johnson
+Joe Dumars / Rick Mahorn / Dennis Rodman / Isiah Thomas
+Joe Montana / Barry Bonds / Stephen Curry / Will Clark / Jerry Rice / Steve Young
+Joe Montana / Tom Brady / Dan Marino / Patrick Mahomes
+Joe Morgan / Carl Yastrzemski / Dwight Evans / Greg Luzinski / Darrell Evans / Lou Piniella / Rusty Staub / Steve Garvey
+Jose Canseco / Mark McGwire / Rickey Henderson / Dave Stewart
+Kareem Abdul-Jabbar / Magic Johnson
+Kareem Abdul-Jabbar / Wilt Chamberlain / Larry Bird / Kobe Bryant / LeBron James / Magic Johnson / Hakeem Olajuwon / Tim Duncan
+Keith Hernandez / Ted Simmons
+Keith Hernandez / Willie McGee / Jim Kaat / Ozzie Smith
+Ken Griffey Jr. / Barry Bonds / Tony Gwynn / Frank Thomas / Mark McGwire / Mike Piazza / Jeff Bagwell / Manny Ramirez
+Ken Griffey Jr. / Barry Bonds / Tony Gwynn / Mike Piazza / Frank Thomas / Derek Jeter / Mark McGwire / Don Mattingly
+Ken Griffey Jr. / Frank Thomas / Barry Bonds / Mark McGwire
+Ken Griffey Jr. / Ichiro / Randy Johnson
+Ken Stabler / Dave Casper
+Ken Stabler / Jim Plunkett
+Ken Stabler / Ken Anderson / Fran Tarkenton
+Ken Stabler / Reggie Jackson / Dave Casper / Mark McGwire / Howie Long / Rickey Henderson
+Kevin Garnett / Charles Barkley / Dennis Rodman / Larry Johnson
+Kirby Puckett / Kent Hrbek / Chuck Knoblauch / Brian Harper
+Kirk Gibson / Orel Hershiser / Mike Marshall / Mike Scioscia
+Kobe Bryant / Allen Iverson / Stephen Curry / Tim Duncan / Karl Malone / Dirk Nowitzki / Shaquille O'Neal / Patrick Ewing
+Kobe Bryant / LeBron James
+Kobe Bryant / LeBron James / Giannis Antetokounmpo / Stephen Curry
+Kobe Bryant / LeBron James / Kevin Garnett / Tracy McGrady / Dirk Nowitzki / Tim Duncan / Carmelo Anthony / Paul Pierce
+Kobe Bryant / LeBron James / Magic Johnson / Kareem Abdul-Jabbar
+Kobe Bryant / LeBron James / Shaquille O'Neal / Kevin Garnett / Tracy McGrady / Allen Iverson / Tim Duncan / Paul Pierce
+Kobe Bryant / LeBron James / Tim Duncan / Allen Iverson / Shaquille O'Neal / Dirk Nowitzki / Kevin Garnett / Gary Payton
+Kobe Bryant / LeBron James / Tim Duncan / Dirk Nowitzki / Shaquille O'Neal / Dwyane Wade / Ray Allen / Allen Iverson
+Kobe Bryant / Luka Doncic / LeBron James
+Kobe Bryant / Magic Johnson / LeBron James / Kareem Abdul-Jabbar / Wilt Chamberlain / Luka Doncic / Shaquille O'Neal / Pau Gasol
+Kobe Bryant / Shaquille O'Neal / Kevin Garnett / Jason Kidd / Giannis Antetokounmpo / Damian Lillard / Paul George / Joel Embiid
+Kobe Bryant / Shaquille O'Neal / Robert Horry / Mitch Richmond
+Kobe Bryant / Stephen Curry / LeBron James
+Kobe Bryant / Vince Carter / Jerry Stackhouse / Tracy McGrady / Grant Hill / Ray Allen / Allen Iverson / Paul Pierce
+Lamine Yamal / Endrick / Erling Haaland
+Lamine Yamal / Kylian Mbappé
+Lamine Yamal / Vinícius Júnior / Kylian Mbappé / Endrick / Cole Palmer / Pedri / Jude Bellingham / Gavi
+Larry Bird / Bill Walton / Dennis Johnson / Robert Parish
+Larry Bird / Dennis Johnson
+Larry Bird / Dennis Johnson / Kevin McHale / Robert Parish
+Larry Bird / Kevin McHale / Bill Walton / Dennis Johnson / Robert Parish / Kevin Garnett / Paul Pierce / Jayson Tatum
+Larry Bird / Kevin McHale / Dennis Johnson
+Larry Bird / Magic Johnson / Julius Erving / Kareem Abdul-Jabbar / Giannis Antetokounmpo / Stephen Curry / Luka Doncic / Nikola Jokic
+LeBron James / Bernie Kosar / Donovan Mitchell / Manny Ramirez / Joe Charboneau / Jim Thome
+Lionel Messi / Barry Sanders / Ken Griffey Jr. / Stephen Curry
+Lionel Messi / Cristiano Ronaldo
+Lionel Messi / Cristiano Ronaldo / Neymar Jr.
+Lionel Messi / Cristiano Ronaldo / Ronaldo Nazário
+Lionel Messi / Diego Maradona
+Lionel Messi / Diego Maradona / Pelé / Cristiano Ronaldo / Lamine Yamal / Erling Haaland / Kylian Mbappé / Vinícius Júnior
+Lionel Messi / Neymar Jr.
+Lionel Messi / Pelé
+Lionel Messi / Pelé / Diego Maradona
+Lou Gehrig / Mickey Mantle
+Magic Johnson / Charles Barkley / Patrick Ewing / Dennis Rodman
+Magic Johnson / John Stockton / Jason Kidd / Kevin Garnett / Charles Barkley / Giannis Antetokounmpo / David Robinson / Nikola Jokic
+Magic Johnson / Kobe Bryant
+Magic Johnson / Larry Bird
+Magic Johnson / Larry Bird / Bernard King / Charles Barkley / Kevin Garnett / Yao Ming
+Magic Johnson / Larry Bird / Kareem Abdul-Jabbar / Wilt Chamberlain / Moses Malone / Bill Walton / Julius Erving / Bernard King
+Magic Johnson / Mike Piazza / Howie Long / Kobe Bryant / Fernando Valenzuela / Jim Plunkett
+Magic Johnson / Ray Allen / Clyde Drexler / Kevin Garnett / Larry Bird / LeBron James / David Robinson / Yao Ming
+Magic Johnson / Steve Nash / Allen Iverson / Gary Payton
+Mark McGwire / Jason Giambi / Jose Canseco
+Mark McGwire / Wally Joyner
+Mickey Mantle / Clete Boyer / Elston Howard / Tony Kubek
+Mickey Mantle / Elston Howard / Tony Kubek / Roger Maris
+Mickey Mantle / Willie Mays
+Mike Schmidt / Charles Barkley / Pete Rose / Allen Iverson / Eric Lindros / Donovan McNabb
+Mike Schmidt / George Brett
+Mike Schmidt / Ryne Sandberg / Dale Murphy / Willie McGee / Don Mattingly / Wade Boggs / Rickey Henderson / George Brett
+Moses Malone / Shaquille O'Neal / Patrick Ewing
+Muhammad Ali / Bruce Lee
+Muhammad Ali / Pelé / Willie Mays / Wilt Chamberlain
+Neymar Jr. / Cristiano Ronaldo / Lionel Messi
+Nolan Ryan / Dirk Nowitzki / Emmitt Smith / Mike Modano / Rolando Blackman / Troy Aikman
+Nolan Ryan / Don Sutton / Tom Seaver / Phil Niekro / Gaylord Perry / Vida Blue / Andy Messersmith / Jim Kaat
+Nolan Ryan / Randy Johnson / Greg Maddux
+Nolan Ryan / Reggie Jackson / Steve Garvey / Carl Yastrzemski / Mike Schmidt / Johnny Bench
+Nolan Ryan / Tom Seaver
+Nolan Ryan / Tom Seaver / Don Sutton / Gaylord Perry / Phil Niekro / Vida Blue / Andy Messersmith / Ron Guidry
+Nolan Ryan / Vladimir Guerrero
+Ousmane Dembélé / Kylian Mbappé
+Patrick Mahomes / Aaron Judge / Lionel Messi
+Patrick Mahomes / Cristiano Ronaldo / LeBron James / Aaron Judge / Jalen Hurts / Juan Soto / Erling Haaland / Nikola Jokic
+Patrick Mahomes / Dan Marino
+Patrick Mahomes / Dan Marino / John Elway
+Patrick Mahomes / George Brett / Joe Montana / Bret Saberhagen / Bo Jackson / Jan Stenerud
+Patrick Mahomes / Tom Brady
+Pedro Martinez / Greg Maddux
+Pedro Martinez / Greg Maddux / Randy Johnson / Curt Schilling
+Pelé / Diego Maradona
+Pelé / Diego Maradona / Lionel Messi / Cristiano Ronaldo / Neymar Jr. / David Beckham / Franz Beckenbauer / Ronaldo Nazário
+Pelé / Lionel Messi
+Pelé / Lionel Messi / Diego Maradona / Cristiano Ronaldo / David Beckham / Franz Beckenbauer / Neymar Jr. / Wayne Rooney
+Pelé / Lionel Messi / Diego Maradona / Cristiano Ronaldo / Neymar Jr. / David Beckham / Franz Beckenbauer / Ronaldo Nazário
+Pelé / Tom Brady / Ken Griffey Jr. / Kobe Bryant / Muhammad Ali / Roger Federer / Gordie Howe / Jack Nicklaus
+Pete Rose / Johnny Bench
+Pete Rose / Johnny Bench / Joe Morgan / George Foster
+Pete Rose / Mike Schmidt / Tug McGraw / Bob Boone
+Pete Rose / Pedro Martinez / Ernie Banks / Greg Maddux / Rickey Henderson / Tony Gwynn / Tom Seaver / Albert Pujols
+Pete Rose / Reggie Jackson / Johnny Bench / Carlton Fisk / Mike Schmidt / Willie Stargell / Thurman Munson / George Foster
+Phil Foden / Pedri / Declan Rice / Gavi / Endrick / Eduardo Camavinga
+Reggie Jackson / Steve Garvey / Johnny Bench
+Reggie Jackson / Thurman Munson / Lou Piniella / Willie Randolph
+Rickey Henderson / Mark McGwire
+Robert Parish / Kevin McHale / Pete Maravich / Artis Gilmore / Dennis Johnson / Clyde Drexler / Rolando Blackman / Darryl Dawkins
+Roberto Alomar / Rickey Henderson / Joe Carter / Paul Molitor
+Roberto Clemente / Bill Mazeroski / Don Hoak / Dick Groat
+Roberto Clemente / Willie Stargell
+Roberto Clemente / Willie Stargell / Al Oliver / Bill Mazeroski
+Robin Yount / Paul Molitor
+Robin Yount / Ted Simmons / Paul Molitor / Cecil Cooper
+Rod Carew / Harmon Killebrew
+Roger Clemens / Carl Yastrzemski / Nolan Ryan / Mariano Rivera / Wade Boggs / Cal Ripken Jr. / Frank Thomas / Ichiro
+Roger Clemens / Orel Hershiser / Bret Saberhagen / Fernando Valenzuela / Dave Stewart / Dwight Gooden / Nolan Ryan / Dennis Martinez
+Roger Federer / Rafael Nadal / Andy Murray
+Roger Staubach / Fran Tarkenton / Ken Anderson / Ken Stabler / Jim Plunkett / Jim Hart / Steve Grogan / Joe Montana
+Rogers Hornsby / Roberto Clemente / Jimmie Foxx / Mike Schmidt / Barry Bonds / Johnny Bench / Ken Griffey Jr. / Frank Robinson
+Roy Campanella / Gil Hodges
+Roy Campanella / Gil Hodges / Duke Snider / Don Hoak
+Roy Campanella / Johnny Bench / Thurman Munson / Carlton Fisk
+Ryne Sandberg / Wade Boggs / Don Mattingly
+Scottie Pippen / Gary Payton / John Stockton / Alonzo Mourning / Chris Mullin / Reggie Miller / Latrell Sprewell / Detlef Schrempf
+Shaquille O'Neal / Dennis Rodman / Robert Horry
+Shaquille O'Neal / Hakeem Olajuwon / Charles Barkley / David Robinson / Karl Malone / Patrick Ewing / Grant Hill / Chris Webber
+Shaquille O'Neal / Moses Malone / Kareem Abdul-Jabbar / Wilt Chamberlain / Patrick Ewing / Hakeem Olajuwon / Bill Walton / Artis Gilmore
+Shaquille O'Neal / Stephen Curry / Karl Malone / John Stockton / Kevin Garnett / Moses Malone / Charles Barkley / David Robinson
+Stan Musial / Rogers Hornsby
+Stephen Curry / Giannis Antetokounmpo
+Stephen Curry / Giannis Antetokounmpo / Nikola Jokic / Joel Embiid / Luka Doncic / Kevin Durant / James Harden / Jayson Tatum
+Stephen Curry / Giannis Antetokounmpo / Nikola Jokic / Kawhi Leonard / James Harden / Joel Embiid / Karl-Anthony Towns / Jayson Tatum
+Stephen Curry / Lionel Messi / Patrick Mahomes / Aaron Judge
+Steve Garvey / Dusty Baker / Fernando Valenzuela / Mike Scioscia
+Ted Williams / Carl Yastrzemski
+Ted Williams / Carl Yastrzemski / Roger Clemens / Carlton Fisk / Jim Rice / Dwight Evans / Pedro Martinez / Fred Lynn
+Ted Williams / Mickey Mantle / Babe Ruth / Lou Gehrig / Rogers Hornsby / Cal Ripken Jr. / Mike Schmidt / Roy Campanella
+Ted Williams / Stan Musial
+Tim Duncan / David Robinson / Steve Kerr / Sean Elliott
+Tim Duncan / Karl Malone / Kevin Garnett / Dirk Nowitzki
+Tom Brady / Emmitt Smith / Barry Sanders / Jerry Rice / Randy Moss / Bruce Smith / Deion Sanders / Junior Seau
+Tom Brady / Joe Montana / Dan Marino / Jim Kelly / John Elway / Patrick Mahomes / Troy Aikman / Brett Favre
+Tom Brady / Lionel Messi / Shohei Ohtani / Stephen Curry / Rafael Nadal / Kobe Bryant / Mike Trout / Luka Doncic
+Tom Brady / Patrick Mahomes / Dan Marino / Joe Montana / Ken Stabler / Bob Waterfield / Ken Anderson / Jim Kelly
+Tom Brady / Patrick Mahomes / Joe Montana / Dan Marino / Jim Kelly / John Elway / Steve Young / Brett Favre
+Tom Seaver / Darryl Strawberry
+Toni Kroos / Rodrygo
+Tracy McGrady / Clyde Drexler / Kevin McHale / Dennis Rodman / Dikembe Mutombo / Chris Webber / Alonzo Mourning / Gary Payton
+Vince McMahon / Ric Flair / Roddy Piper / Hulk Hogan
+Virgil van Dijk / Mohamed Salah
+Wade Boggs / Tony Gwynn
+Walter Payton / Emmitt Smith / Barry Sanders / Gale Sayers / Tony Dorsett / Jerome Bettis / Thurman Thomas / LaDainian Tomlinson
+Warren Spahn / Don Drysdale
+Willie Mays / Bobby Thomson
+Willie Mays / Mickey Mantle / Roger Maris / Roberto Clemente / Bill Mazeroski / Frank Robinson / Stan Musial / Ted Williams
+Willie Mays / Mickey Mantle / Ted Williams / Stan Musial
+Wilt Chamberlain / Shaquille O'Neal / Moses Malone / Kareem Abdul-Jabbar

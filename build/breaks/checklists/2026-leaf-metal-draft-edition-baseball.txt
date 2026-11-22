@@ -1,0 +1,163 @@
+# name: 2026 Leaf Metal Draft Edition Baseball
+# sport: Leaf Baseball
+# added: 2026-11-22
+# source: https://www.leaftradingcards.com/products/2026-leaf-metal-draft-edition-baseball
+# note: Leaf is unlicensed: no team names, so team breaks are not available. Print runs from the official checklist.
+
+[auto]
+AJ Gracia
+Alan Trammell
+Alex Hernandez
+Amos Otis
+Archer Horn
+Barry Larkin
+Bino Watters
+Bo Jackson
+Bob Horner
+Brodie Johnston
+Bucky Dent
+Cade Arrambide
+Caden Bogenpohl
+Caden Sorrell
+Cam Kozeal
+Cameron Flukey
+Carson Tinney
+Casan Evans
+Charles Nagy
+Charlie Bates
+Chase Brunson
+Cole Carlon
+Craig Biggio
+Darryl Strawberry
+Dave Justice
+Dave Winfield
+David Cone
+Dax Whitney
+Dennis Eckersley
+Denton Lord
+Derek Curiel
+Devon White
+Dexter McCleon Jr.
+Don Mattingly
+Drew Burress
+Duke Stone
+Dusty Baker
+Dwight Gooden
+Dylan Seward
+Dylan Volantis
+Eddie Murray
+Ellis Valentine
+Eric Becker
+Ethan Kleinschmit
+Gabe Gaeckle
+Garry Templeton
+Gary Matthews
+Gary Morse
+Gavin Gallaher
+George Brett
+Gio Rojas
+Graham Houston
+Graig Nettles
+Greg Maddux
+Harold Baines
+Jack Clark
+Jack McDowell
+Jackson Flora
+Jacob Lombard
+Jake McCoy
+Jarren Advincula
+Jason Amalbert
+Jason DeCaro
+Jeff Burroughs
+Jensen Hirschkorn
+Jerry Reuss
+Jim Edmonds
+Jim Rice
+Joey Volchko
+John Elway
+John Smoltz
+Johnny Bench
+Jose Canseco
+Joseph Contreras
+Justin Lebron
+Kaden Waechter
+Kelly Gruber
+Keon Johnson
+Kevin Roberts Jr.
+Leo Nockley
+Lou Whitaker
+Lucas Moore
+Maddox Molony
+Mike Morgan
+Mike Piazza
+Mike Schmidt
+Myles Bailey
+Nate Savoie
+Nolan Ryan
+Nolan Souza
+Paul Molitor
+Paul Skenes
+Pete Incaviglia
+Rafael Palmeiro
+Reggie Jackson
+Rick Dempsey
+Rintaro Sasaki
+Rob Deer
+Robin Yount
+Roch Cholowsky
+Ron Darling
+Ron Guidry
+Rustan Rigdon
+Ryder Helfrick
+Ryne Sandberg
+Sawyer Strosnider
+Shawon Dunston
+Steve Avery
+Steve Yeager
+Striker Pence
+Ted Simmons
+Tegan Kuhns
+Terry Francona
+Terry Mulholland
+Terry Pendleton
+Todd Zeile
+Tom Glavine
+Tomas Valincius
+Tommy LaPour
+Tre Phelps
+Trent Caraway
+Tyler Bell
+Tyler Spangler
+Urban Meyer
+Vahn Lackey
+Wade Boggs
+Will Brick
+Will Clark
+Will Gasparino
+Willie Randolph
+Zion Rose
+
+[multi]
+Bino Watters / Nate Savoie
+Darryl Strawberry / Kelly Gruber / Terry Francona / Eric Davis
+Dexter McCleon Jr. / Striker Pence
+Duke Stone / Casan Evans
+Dylan Seward / Graham Houston
+Dylan Volantis / Dax Whitney
+Dylan Volantis / Tomas Valincius
+Eric Becker / Tyler Bell
+Harold Baines / Paul Molitor / Mookie Wilson / Ozzie Smith
+Jackson Flora / Cameron Flukey
+Jackson Flora / Dax Whitney
+Jacob Lombard / Tyler Spangler
+Jim Rice / George Brett / Mike Schmidt / Ron Guidry
+Kevin Roberts Jr. / Keon Johnson
+Mark McGwire / Terry Mulholland / Greg Maddux / Tom Glavine
+Rintaro Sasaki / Myles Bailey
+Robin Yount / Dave Winfield / Eddie Murray / Jack Clark
+Roch Cholowsky / Justin Lebron
+Rustan Rigdon / Charlie Bates
+Ryder Helfrick / Vahn Lackey
+Shawon Dunston / Dwight Gooden / Duane Ward / Jose Canseco
+Will Clark / Barry Larkin / Pete Incaviglia / Rafael Palmeiro
+Zion Rose / Lucas Moore

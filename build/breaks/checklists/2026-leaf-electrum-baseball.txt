@@ -1,0 +1,260 @@
+# name: 2026 Leaf Electrum Baseball
+# sport: Leaf Baseball
+# added: 2026-11-22
+# source: https://www.leaftradingcards.com/products/2026-leaf-electrum-baseball
+# note: Leaf is unlicensed: no team names, so team breaks are not available. Print runs from the official checklist.
+
+[auto]
+Aaron Watson
+Adam Serwinowski
+Aidan West
+Aiden Kearney
+Aiva Arquette
+AJ Gracia
+AJ Russell
+Alan Trammell
+Alejandro Rosario
+Alex Hernandez
+Alex Lodise
+Alfredo Sena
+Anderson Brito
+Andrew Fischer
+Andrew Salas
+Anthony Eyanson
+Aroon Escobar
+Asbel Gonzalez
+Ben Hess
+Billy Carlson
+Bo Jackson
+Braden Montgomery
+Brady Ebel
+Brandon Compton
+Braylon Payne
+Brett Wichrowski
+Briggs McKenzie
+Brodie Johnston
+Brody Brecht
+Bryce Meccage
+Bryce Rainer
+Cade Arrambide
+Cade Obermueller
+Caden Bogenpohl
+Caden Sorrell
+Caleb Bonemer
+Cam Caminiti
+Cameron Flukey
+Carson Benge
+Casan Evans
+Charles Davalan
+Charlie Condon
+Chase Brunson
+Chase Shores
+Chen-Wei Lin
+Ching-Hsien Ko
+Chris Hacopian
+Christian Zazueta
+Cole Carlon
+Cole Mathis
+Cooper Flemming
+Cooper Pratt
+Coy James
+Daniel Pierce
+Darryl Strawberry
+Dasan Hill
+Dax Whitney
+Dean Curley
+Dean Moss
+Dennis Eckersley
+Denton Lord
+Derek Curiel
+Dexter McCleon Jr.
+Drew Burress
+Dylan Volantis
+Eddie Murray
+Edgar Martinez
+Eduardo Quintero
+Eduardo Tait
+Eli Willits
+Elmer Rodriguez
+Emil Morales
+Eric Becker
+Esteban Mejia
+Ethan Conrad
+Ethan Frey
+Felnin Celesten
+Francisco Renteria
+Frank Thomas
+Franklin Arias
+Gabe Gaeckle
+Gage Jump
+Gage Stanifer
+Gage Wood
+Gary Morse
+Gavin Fien
+Gavin Gallaher
+Gavin Kilen
+George Brett
+George Wolkow
+Gio Rojas
+Greg Maddux
+Hagen Smith
+Harold Baines
+Ike Irish
+Jackson Flora
+Jacob Lombard
+Jaden Fauske
+Jake McCoy
+James Tibbs III
+Jamie Arnold
+Jarren Advincula
+Jason DeCaro
+Jean Cabrera
+Jeff Bagwell
+Jensen Hirschkorn
+Jesús Made
+Jim Rice
+Joey Volchko
+John Gil
+John Smoltz
+Johnny Slawinski
+JoJo Parker
+Jordan Yost
+Jose Canseco
+Joseph Contreras
+Joseph Dzierwa
+Josh Hammond
+Joshua Kuroda-Grauer
+Josiah Hartshorn
+Josuar Gonzalez
+José Anderson
+José Cruz Jr.
+Jurrangelo Cijntje
+Justin Gonzales
+Justin Lebron
+Kade Anderson
+Kaden Waechter
+Kaelen Culpepper
+Kaleb Wing
+Kane Kepley
+Kash Mayfield
+Kayson Cunningham
+Kellon Lindsey
+Kenedy Corona
+Keon Johnson
+Kevin McGonigle
+Kevin Roberts Jr.
+Konnor Griffin
+Kyson Witherspoon
+Landon Harmon
+Leo De Vries
+Leo Nockley
+Leonardo Bernal
+Liam Doyle
+Luis Cova
+Luis Peña
+Luke Holman
+Maddox Molony
+Malachi Witherspoon
+Malcolm Moore
+Marcus Phillips
+Marek Houston
+Mariano Rivera
+Mark Grace
+Mason Neville
+Matthew Fisher
+Mavrick Rizy
+Max Belyeu
+Michael Oliveto
+Miguel Cabrera
+Miguel Sime Jr.
+Mike Piazza
+Mike Schmidt
+Mitch Voit
+Moisés Chace
+Myles Bailey
+Nestor German
+Nick Kurtz
+Nick Swisher
+Nicky Becker
+Nolan Souza
+Owen Hall
+Ozzie Smith
+Patrick Forbes
+Paul Molitor
+Quentin Young
+Rainiel Rodriguez
+Randy Johnson
+Raudi Rodriguez
+Riley Quick
+Rintaro Sasaki
+Robert Calaz
+Roch Cholowsky
+Rustan Rigdon
+Ryan Mitchell
+Ryan Waldschmidt
+Ryne Sandberg
+Sammy Sosa
+Scott Rolen
+Sean Gamble
+Seaver King
+Seth Hernandez
+Shawn Green
+Slater de Brun
+Steele Hall
+Steve Garvey
+Stiven Martinez
+Striker Pence
+Tate Southisene
+Tegan Kuhns
+Theo Gillen
+Tom Glavine
+Tommy LaPour
+Tre Phelps
+Tre' Morgan
+Trey Yesavage
+Ty Harvey
+Tyler Bremner
+Tyson Lewis
+Victor Arias
+Vladimir Guerrero
+Wade Boggs
+Walker Janek
+Wei-En Lin
+Welinton Herrera
+Xavier Neyens
+Yadier Molina
+Yairo Padilla
+Yolfran Castillo
+Yoniel Curet
+Yorger Bautista
+Zach Root
+Zion Rose
+Zyhir Hope
+
+[multi]
+Eddie Murray / Jim Thome / Anthony Rizzo / Nick Kurtz
+Eli Willits / Aiva Arquette / Billy Carlson / JoJo Parker
+Eli Willits / JoJo Parker
+Eli Willits / Roch Cholowsky
+Frank Thomas / Jeff Bagwell
+Greg Maddux / Tom Glavine / John Smoltz / Steve Avery
+Johnny Bench / Tony Pérez / George Foster / Pete Rose
+Kade Anderson / Seth Hernandez / Jamie Arnold / Liam Doyle
+Konnor Griffin / Billy Carlson
+Konnor Griffin / Charlie Condon / Nick Kurtz / James Tibbs III
+Konnor Griffin / Jesús Made
+Konnor Griffin / Kevin McGonigle
+Konnor Griffin / Kevin McGonigle / Leo De Vries / Jesús Made
+Konnor Griffin / Nick Kurtz / Kevin McGonigle / Carson Benge
+Konnor Griffin / Roch Cholowsky
+Liam Peterson / Jackson Flora / Cameron Flukey / Gabe Gaeckle
+Mike Mussina / Mariano Rivera
+Nick Kurtz / Trey Yesavage
+Nolan Ryan / Jim Palmer / Ferguson Jenkins / Tommy John
+Roch Cholowsky / Justin Lebron / Jacob Lombard / Drew Burress
+Ryne Sandberg / Jeff Kent
+Ryne Sandberg / Sammy Sosa / Mark Grace / Shawon Dunston
+Travis Bazzana / Franklin Arias / Aidan Miller / Bryce Rainer
+Tyler Bremner / Kade Anderson
+Will Clark / Rafael Palmeiro
+Zyhir Hope / Carson Benge / Braden Montgomery / Mike Sirota
