@@ -137,6 +137,13 @@ team spot, box by box. Linked from the storefront's Breaks menu; every page carr
   inserts, skips sketch, printing plate, redemption and "Moments" subsets, and keys Star Wars
   autographs by character, not actor. WWE names are aliased to one spelling across products
   (e.g. Nattie to Natalya, Rob VAN Dam to Rob Van Dam) so the builder merges them.
+- **Panini / Donruss CSVs:** Panini's official checklist export (one row per card and parallel) converts
+  with `python3 build/breaks/panini_csv.py <file.csv> <id> "<name>" <sport> [--team] [--women "A;B"]`.
+  Set names decide the section (Signatures/Autographs/Ink/Marks/Pen Pals = auto, Base/Ticket = base,
+  the rest = insert); "A/B" athletes become multi cards. Sports in the Add a box dropdown follow the
+  `order` list in `builder.py` (WWE, MLW, NFL, NBA, WNBA, EuroLeague, MLB, USA Baseball, MMA, ...).
+- **Boxes UI:** the builder lists only the boxes picked for the break; everything else is in the grouped
+  "Add a box" dropdown, so the library can grow without the panel getting longer.
 
 ## Iron Ledger and worker.js
 

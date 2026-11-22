@@ -1,0 +1,182 @@
+# name: 2026 Panini MLW Ring Royalty
+# sport: MLW
+# added: 2026-11-22
+# source:
+# note: Official Panini checklist (Panini MLW Ring Royalty CSV)
+
+[base]
+Alex Hammerstone
+Arn Anderson
+Atlantis
+Austin Aries
+Barbaro Cavernario
+Bishop Dyer
+Blue Panther
+Blue Panther Jr.
+Buff Bagwell
+Dark Panther
+Diego Hill
+Doc Gallows
+Don Gato
+Donovan Dijak
+Dutch Mantell
+Esfinge
+Festus
+Gary Hart
+Himawari | W
+Hulk Hogan
+Ikuro Kwon
+Jacob Fatu
+Jake Roberts
+Jesus Rodriguez
+Joe Coffey
+Joe Dombrowski
+Josef Samael
+Karl Anderson
+Kenta
+Killer Kross
+Kurt Angle
+Kushida
+Mads Krule Krugger
+Magnus
+Mark Coffey
+Matt Riddle
+Matthew Justice
+Minoru Suzuki
+Mistico
+Mr. Thomas
+Okumura
+Paul London
+Paul Walter Hauser
+Priscilla Kelly | W
+Raven
+Ric Flair
+Rich Bocchini
+Ricky Morton
+Rugido
+Salina De La Renta | W
+Satoshi Kojima
+Scarlett Bordeaux | W
+SENTAI Death Squad
+Shane Douglas
+Shoko Nakajima | W
+Shotzi Blackheart | W
+Soberano Jr.
+Star Jr.
+Taya Valkyrie | W
+Templario
+The Sandman
+Titan
+Tom Lawlor
+Tony Atlas
+Trevor Lee
+Ultimo Guerrero
+Volador Jr.
+Wakana Uehara | W
+Wolfgang
+Yuki Kamifuku | W
+Zamaya
+Zandokan Jr.
+
+[auto]
+Alex Hammerstone
+Arn Anderson
+Atlantis
+Austin Aries
+Bishop Dyer
+Blue Panther
+Buff Bagwell
+Cesar Duran
+Court Bauer
+Diego Hill
+Doc Gallows
+Don Gato
+Donovan Dijak
+Hulk Hogan
+Ikuro Kwon
+Jake Roberts
+Jesus Rodriguez
+Joe Coffey
+Josef Samael
+Karl Anderson
+Killer Kross
+Kurt Angle
+Kushida
+Mads Krule Krugger
+Magnus
+Mark Coffey
+Matt Riddle
+Matthew Justice
+Mistico
+Mr. Thomas
+Okumura
+Paul London
+Paul Walter Hauser
+Priscilla Kelly | W
+Raven
+Ric Flair
+Rich Bocchini
+Ricky Morton
+Rugido
+Salina De La Renta | W
+Satoshi Kojima
+Scarlett Bordeaux | W
+Shoko Nakajima | W
+Shotzi Blackheart | W
+Soberano Jr.
+Taya Valkyrie | W
+Templario
+Tom Lawlor
+Trevor Lee
+Ultimo Guerrero
+Wolfgang
+Yuki Kamifuku | W
+Zamaya
+
+[insert]
+Alex Hammerstone
+Atlantis
+Austin Aries
+Bishop Dyer
+Blue Panther
+Blue Panther Jr.
+Cesar Duran
+Dark Panther
+Diego Hill
+Doc Gallows
+Don Gato
+Donovan Dijak
+Festus
+Himawari | W
+Hulk Hogan
+Ikuro Kwon
+Jacob Fatu
+Jesus Rodriguez
+Karl Anderson
+Killer Kross
+Kurt Angle
+Kushida
+Mads Krule Krugger
+Magnus
+Matt Riddle
+Matthew Justice
+Mistico
+Mr. Thomas
+Paul London
+Priscilla Kelly | W
+Raven
+Ric Flair
+Rugido
+Salina De La Renta | W
+Satoshi Kojima
+Scarlett Bordeaux | W
+Shoko Nakajima | W
+Shotzi Blackheart | W
+Taya Valkyrie | W
+Templario
+The Sandman
+Tom Lawlor
+Trevor Lee
+Ultimo Guerrero
+Yuki Kamifuku | W
+Zamaya

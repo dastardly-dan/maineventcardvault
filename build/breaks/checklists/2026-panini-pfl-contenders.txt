@@ -1,0 +1,228 @@
+# name: 2026 Panini PFL Contenders
+# sport: MMA
+# added: 2026-11-22
+# source:
+# note: Official Panini checklist (Panini PFL Contenders CSV)
+
+[base]
+A.J. McKee
+Aaron Jeffery
+Abraham Bably
+Adam Borics
+Alexander Volkov
+Alexandr Shabliy
+Alexei Pergande
+Alfie Davis
+Ali Taleb
+Anthony Pettis
+Antonio Carlos Jr.
+Archie Colgan
+Asael Adjoudj
+Ben Askren
+Benson Henderson
+Biaggio Ali Walsh
+Boris Atangana
+Bryan Battle
+Cedric Doumbe
+Chael Sonnen
+Ciaran Clarke
+Corey Anderson
+Costello van Steenis
+Cris Cyborg | W
+Dakota Ditcheva | W
+Dalton Rosta
+Dan Hardy
+Darragh Kelly
+Denis Goltsov
+Dovletdzhan Yagshimuradov
+Eddie Alvarez
+Elora Dana | W
+Fabian Edwards
+Fedor Emelianenko
+Frank Mir
+Frederik Dupras
+Gabriel Braga
+Gadzhi Rabadanov
+Haider Khan
+Ibragim Ibragimov
+Ilima-Lei Macfarlane | W
+Impa Kasanganay
+Jake Hadley
+Jakub Kaszuba
+Jason Jackson
+Jay-Jay Wilson
+Jena Bishop | W
+Jesus Pinedo
+Johnny Eblen
+Jon Fitch
+Jordan Newman
+Josh Silveira
+Kana Watanabe | W
+Kasum Kasumov
+Kayla Harrison | W
+Ken Shamrock
+Khasan Magomedsharipov
+Kimbo Slice
+Lewis McGrillen
+Linton Vassell
+Liz Carmouche | W
+Lyoto Machida
+Magomed Magomedov
+Masayuki Kikuiri
+Melvin Manhoef
+Movlid Khaybulaev
+Muhammed Lawal
+Oleg Popov
+Patrick Habirora
+Paul Daley
+Paul Hughes
+Pouya Rahmani
+Quinton Jackson
+Rafael Lovato Jr.
+Ramazan Kuramagomedov
+Raufeon Stots
+Renan Ferreira
+Rob Wilkinson
+Rodrigo Nascimento
+Rory MacDonald
+Roy Nelson
+Ryan Bader
+Sarvarjon Khamidov
+Satoshi Ishii
+Sean O'Connell
+Sergey Bilostenniy
+Sergio Pettis
+Shamil Musaev
+Simeon Powell
+Sullivan Cauley
+Sumiko Inaba | W
+Thad Jean
+Timur Khizriev
+Tito Ortiz
+Usman Nurmagomedov
+Vadim Nemkov
+Valerie Loureda | W
+Wanderlei Silva
+Yaroslav Amosov
+
+[auto]
+A.J. McKee
+Aaron Jeffery
+Adam Borics
+Alfie Davis
+Ali Taleb
+Anthony Pettis
+Antonio Carlos Jr.
+Archie Colgan
+Asael Adjoudj
+Biaggio Ali Walsh
+Bryan Battle
+Cedric Doumbe
+Ciaran Clarke
+Costello van Steenis
+Cris Cyborg | W
+Dakota Ditcheva | W
+Dalton Rosta
+Dan Hardy
+Darragh Kelly
+Denis Goltsov
+Dovletdzhan Yagshimuradov
+Elora Dana | W
+Fabian Edwards
+Fedor Emelianenko
+Frank Mir
+Frederik Dupras
+Gabriel Braga
+Gadzhi Rabadanov
+Haider Khan
+Hattan Alsaif
+Ibragim Ibragimov
+Impa Kasanganay
+Jake Hadley
+Jakub Kaszuba
+Jay-Jay Wilson
+Jena Bishop | W
+Jesus Pinedo
+Johnny Eblen
+Josh Silveira
+Kana Watanabe | W
+Kasum Kasumov
+Khasan Magomedsharipov
+Lewis McGrillen
+Linton Vassell
+Liz Carmouche | W
+Magomed Magomedov
+Masayuki Kikuiri
+Movlid Khaybulaev
+Patrick Habirora
+Paul Hughes
+Pouya Rahmani
+Quinton Jackson
+Ramazan Kuramagomedov
+Raufeon Stots
+Renan Ferreira
+Rob Wilkinson
+Sean O'Connell
+Sergey Bilostenniy
+Shamil Musaev
+Simeon Powell
+Sullivan Cauley
+Sumiko Inaba | W
+Thad Jean
+Timur Khizriev
+Tito Ortiz
+Usman Nurmagomedov
+Vadim Nemkov
+
+[insert]
+A.J. McKee
+Adam Borics
+Alexander Volkov
+Alfie Davis
+Archie Colgan
+Biaggio Ali Walsh
+Cedric Doumbe
+Chael Sonnen
+Corey Anderson
+Costello van Steenis
+Cris Cyborg | W
+Dakota Ditcheva | W
+Darragh Kelly
+Denis Goltsov
+Dovletdzhan Yagshimuradov
+Fabian Edwards
+Fedor Emelianenko
+Frank Mir
+Gadzhi Rabadanov
+Impa Kasanganay
+Jason Jackson
+Jena Bishop | W
+Johnny Eblen
+Jordan Newman
+Kayla Harrison | W
+Ken Shamrock
+Kimbo Slice
+Linton Vassell
+Liz Carmouche | W
+Lyoto Machida
+Movlid Khaybulaev
+Muhammed Lawal
+Oleg Popov
+Patrick Habirora
+Paul Hughes
+Quinton Jackson
+Ramazan Kuramagomedov
+Renan Ferreira
+Rob Wilkinson
+Rory MacDonald
+Roy Nelson
+Ryan Bader
+Sergio Pettis
+Sumiko Inaba | W
+Thad Jean
+Timur Khizriev
+Tito Ortiz
+Usman Nurmagomedov
+Vadim Nemkov
+Wanderlei Silva
+Yaroslav Amosov

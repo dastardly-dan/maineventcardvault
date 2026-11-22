@@ -1,0 +1,393 @@
+# name: 2026 Donruss EuroLeague Classics
+# sport: EuroLeague
+# added: 2026-11-22
+# source:
+# note: Official Panini checklist (Donruss EuroLeague Classics CSV)
+
+[base]
+Adam Hanga | FC Barcelona
+Alex Abrines | FC Barcelona
+Alex Tyus | Maccabi Rapyd Tel Aviv
+Amar'e Stoudemire | Maccabi Rapyd Tel Aviv
+Andrea Bargnani | Kosner Baskonia Vitoria-Gasteiz
+Andres Nocioni | Kosner Baskonia Vitoria-Gasteiz
+Andres Nocioni | Real Madrid
+Andrey Vorontsevich | CSKA Moscow
+Ante Tomic | FC Barcelona
+Anthony Randolph | Real Madrid
+Antonis Fotsis | Panathinaikos AKTOR Athens
+Arturas Milaknis | Zalgiris Kaunas
+Arvydas Macijauskas | Olympiacos Piraeus
+Billy Baron | Zenit Saint Petersburg
+Bo McCalebb | Mens Sana Siena
+Bo McCalebb | Partizan Mozzart Bet Belgrade
+Bogdan Bogdanovic | Fenerbahce Istanbul
+Bogdan Bogdanovic | Partizan Mozzart Bet Belgrade
+Bojan Dubljevic | Valencia Basket
+Bostjan Nachbar | FC Barcelona
+Brandon Davies | FC Barcelona
+Carlos Arroyo | Galatasaray
+Chris Singleton | Anadolu Efes Istanbul
+Chus Mateo | Real Madrid
+Cory Higgins | CSKA Moscow
+Cory Higgins | FC Barcelona
+Danilo Gallinari | Armani Olimpia Milan
+Dario Saric | Anadolu Efes Istanbul
+Darjus Lavrinovic | Zalgiris Kaunas
+David Andersen | CSKA Moscow
+David Andersen | FC Barcelona
+David Blatt | Maccabi Rapyd Tel Aviv
+David Blu | Maccabi Rapyd Tel Aviv
+David Vanterpool | CSKA Moscow
+Dejan Tomasevic | Panathinaikos AKTOR Athens
+DeJuan Collins | Zalgiris Kaunas
+Deni Avdija | Maccabi Rapyd Tel Aviv
+Denis Marconato | FC Barcelona
+Derrick Sharp | Maccabi Rapyd Tel Aviv
+Devin Smith | Maccabi Rapyd Tel Aviv
+Dimitris Diamantidis | Panathinaikos AKTOR Athens
+Dimos Dikoudis | Panathinaikos AKTOR Athens
+Domantas Sabonis | Unicaja Malaga
+Drew Nicholas | Panathinaikos AKTOR Athens
+Dusan Ivkovic | Olympiacos Piraeus
+Dusko Savanovic | Anadolu Efes Istanbul
+Dusko Vujosevic | Partizan Mozzart Bet Belgrade
+Ekpe Udoh | Fenerbahce Istanbul
+Erazem Lorbek | FC Barcelona
+Ergin Ataman | Anadolu Efes Istanbul
+Ergin Ataman | Panathinaikos AKTOR Athens
+Ersan Ilyasova | FC Barcelona
+Ettore Messina | Armani Olimpia Milan
+Fabien Causeur | Real Madrid
+Felipe Reyes | Real Madrid
+Fernando San Emeterio | Kosner Baskonia Vitoria-Gasteiz
+Fernando San Emeterio | Valencia Basket
+Fragiskos Alvertis | Panathinaikos AKTOR Athens
+Georgios Bartzokas | Olympiacos Piraeus
+Georgios Printezis | Olympiacos Piraeus
+Gianluca Basile | Armani Olimpia Milan
+Gianluca Basile | FC Barcelona
+Goran Dragic | Cedevita Olimpija Ljubljana
+Gregor Fucka | Virtus Roma
+Guerschon Yabusele | Real Madrid
+Gustavo Ayon | Real Madrid
+Hugo Gonzalez | Real Madrid
+Igor Rakocevic | Anadolu Efes Istanbul
+Igor Rakocevic | Kosner Baskonia Vitoria-Gasteiz
+Ioannis Bourousis | Kosner Baskonia Vitoria-Gasteiz
+Ioannis Bourousis | Real Madrid
+Ioannis Papapetrou | Panathinaikos AKTOR Athens
+Jaka Lakovic | FC Barcelona
+James Gist | Panathinaikos AKTOR Athens
+Jaycee Carroll | Real Madrid
+Joe Ingles | FC Barcelona
+Jonas Maciulis | Panathinaikos AKTOR Athens
+Jonas Maciulis | Real Madrid
+Jorge Garbajosa | Real Madrid
+Jorge Garbajosa | Unicaja Malaga
+Josh Childress | Olympiacos Piraeus
+JR Holden | CSKA Moscow
+Juan Carlos Navarro | FC Barcelona
+KC Rivers | Panathinaikos AKTOR Athens
+Keith Langford | Armani Olimpia Milan
+Kevin Pangos | Zalgiris Kaunas
+Kostas Tsartsaris | Panathinaikos AKTOR Athens
+Krunoslav Simon | Anadolu Efes Istanbul
+Ksistof Lavrinovic | Zalgiris Kaunas
+Kyle Hines | CSKA Moscow
+Kyle Hines | Olympiacos Piraeus
+Lazaros Papadopoulos | Real Madrid
+Linas Kleiza | Olympiacos Piraeus
+Louis Bullock | Real Madrid
+Louis Olinde | ALBA Berlin
+Luigi Datome | Armani Olimpia Milan
+Luigi Datome | Fenerbahce Istanbul
+Luis Scola | Armani Olimpia Milan
+Luis Scola | Kosner Baskonia Vitoria-Gasteiz
+Luka Doncic | Real Madrid
+Lukas Lekavicius | Zalgiris Kaunas
+Marcelinho Huertas | FC Barcelona
+Marco Belinelli | Virtus Bologna
+Marco Popovic | Zalgiris Kaunas
+Marcus Brown | Zalgiris Kaunas
+Marko Jaric | Real Madrid
+Martin Hermannsson | ALBA Berlin
+Matjaz Smodis | CSKA Moscow
+Michalis Kakiouzis | Anadolu Efes Istanbul
+Miikka Muurinen | Partizan Mozzart Bet Belgrade
+Mike Batiste | Panathinaikos AKTOR Athens
+Milos Teodosic | CSKA Moscow
+Milos Vujanic | Panathinaikos AKTOR Athens
+Mirsad Turkcan | Fenerbahce Istanbul
+Mirza Teletovic | Kosner Baskonia Vitoria-Gasteiz
+Nando De Colo | CSKA Moscow
+Nemanja Bjelica | Fenerbahce Istanbul
+Nenad Krstic | CSKA Moscow
+Neoklis Avdalas | Panathinaikos AKTOR Athens
+Nikola Pekovic | Panathinaikos AKTOR Athens
+Nikola Pekovic | Partizan Mozzart Bet Belgrade
+Nikola Topic | Crvena Zvezda Meridianbet Belgrade
+Nikola Vujcic | Maccabi Rapyd Tel Aviv
+Nikola Vujcic | Olympiacos Piraeus
+Nikos Hatzivrettas | Panathinaikos AKTOR Athens
+Nikos Zisis | Bamberg Baskets
+Nikos Zisis | Mens Sana Siena
+Omri Casspi | Maccabi Rapyd Tel Aviv
+Pablo Laso | Real Madrid
+Pablo Prigioni | Kosner Baskonia Vitoria-Gasteiz
+Pablo Prigioni | Real Madrid
+Pau Gasol | FC Barcelona
+Paulius Jankunas | Zalgiris Kaunas
+Pedro Martinez | Valencia Basket
+Pero Antic | Fenerbahce Istanbul
+Pero Antic | Olympiacos Piraeus
+Pete Mickeal | FC Barcelona
+Pini Gershon | Maccabi Rapyd Tel Aviv
+Ramunas Siskauskas | CSKA Moscow
+Ramunas Siskauskas | Panathinaikos AKTOR Athens
+Ricky Rubio | FC Barcelona
+Roger Grimau | FC Barcelona
+Romain Sato | Panathinaikos AKTOR Athens
+Rudy Fernandez | Real Madrid
+Sani Becirovic | Panathinaikos AKTOR Athens
+Saras Jasikevicius | Fenerbahce Istanbul
+Saras Jasikevicius | Panathinaikos AKTOR Athens
+Sergio Rodriguez | CSKA Moscow
+Sergio Rodriguez | Real Madrid
+Sergio Scariolo | Real Madrid
+Simone Fontecchio | Armani Olimpia Milan
+Sofoklis Schortsanitis | Maccabi Rapyd Tel Aviv
+Sofoklis Schortsanitis | Olympiacos Piraeus
+Stephane Lasme | Panathinaikos AKTOR Athens
+Stratos Perperoglou | Olympiacos Piraeus
+Tanoka Beard | Zalgiris Kaunas
+Terrell McIntyre | Mens Sana Siena
+Thanasis Antetokounmpo | Panathinaikos AKTOR Athens
+Theodoros Papaloukas | CSKA Moscow
+Tiago Splitter | Kosner Baskonia Vitoria-Gasteiz
+Tibor Pleiss | Anadolu Efes Istanbul
+Trajan Langdon | CSKA Moscow
+Tyrese Rice | Maccabi Rapyd Tel Aviv
+Tyrese Rice | Panathinaikos AKTOR Athens
+Vassilis Spanoulis | AS Monaco
+Vassilis Spanoulis | Olympiacos Piraeus
+Victor Claver | Valencia Basket
+Victor Khryapa | CSKA Moscow
+Victor Wembanyama | LDLC ASVEL Villeurbanne
+Vladimir Micov | Armani Olimpia Milan
+Willie Solomon | Fenerbahce Istanbul
+Xavi Pascual | FC Barcelona
+Zaccharie Risacher | LDLC ASVEL Villeurbanne
+Zaza Pachulia | Galatasaray
+Zeljko Obradovic | Panathinaikos AKTOR Athens
+
+[auto]
+Alex Tyus | Maccabi Rapyd Tel Aviv
+Andrea Bargnani | Kosner Baskonia Vitoria-Gasteiz
+Andrei Kirilenko | CSKA Moscow
+Andres Nocioni | Real Madrid
+Andrey Vorontsevich | CSKA Moscow
+Ante Tomic | FC Barcelona
+Anthony Parker | Maccabi Rapyd Tel Aviv
+Anthony Randolph | Real Madrid
+Antonis Fotsis | Panathinaikos AKTOR Athens
+Arturas Milaknis | Zalgiris Kaunas
+Billy Baron | Zenit Saint Petersburg
+Bogdan Bogdanovic | Fenerbahce Istanbul
+Bostjan Nachbar | FC Barcelona
+Brandon Davies | FC Barcelona
+Carlos Arroyo | Galatasaray
+Codi Miller-McIntyre | Kosner Baskonia Vitoria-Gasteiz
+Dario Saric | Anadolu Efes Istanbul
+Darjus Lavrinovic | Zalgiris Kaunas
+David Andersen | CSKA Moscow
+David Vanterpool | CSKA Moscow
+Dejan Bodiroga | Panathinaikos AKTOR Athens
+Dejan Bodiroga | Virtus Roma
+Dejan Tomasevic | Panathinaikos AKTOR Athens
+Denis Marconato | FC Barcelona
+Derrick Sharp | Maccabi Rapyd Tel Aviv
+Dimitris Diamantidis | Panathinaikos AKTOR Athens
+Dimos Dikoudis | Panathinaikos AKTOR Athens
+Domantas Sabonis | Unicaja Malaga
+Drew Nicholas | Panathinaikos AKTOR Athens
+Dusko Savanovic | Anadolu Efes Istanbul
+Evan Fournier | Olympiacos Piraeus
+Felipe Reyes | Real Madrid
+Fragiskos Alvertis | Panathinaikos AKTOR Athens
+Frank Kaminsky | Partizan Mozzart Bet Belgrade
+Georgios Printezis | Olympiacos Piraeus
+Gianluca Basile | FC Barcelona
+Goran Dragic | Cedevita Olimpija Ljubljana
+Gregor Fucka | Virtus Roma
+Guerschon Yabusele | Real Madrid
+Gustavo Ayon | Real Madrid
+Hugo Gonzalez | Real Madrid
+Igor Rakocevic | Kosner Baskonia Vitoria-Gasteiz
+Ioannis Bourousis | Real Madrid
+Jaka Lakovic | FC Barcelona
+James Gist | Panathinaikos AKTOR Athens
+Jaycee Carroll | Real Madrid
+Joffrey Lauvergne | LDLC ASVEL Villeurbanne
+Jonas Maciulis | Real Madrid
+Jorge Garbajosa | Unicaja Malaga
+Juan Carlos Navarro | FC Barcelona
+Kevin Pangos | Zalgiris Kaunas
+Khalifa Koumadje | ALBA Berlin
+Kostas Sloukas | Panathinaikos AKTOR Athens
+Kostas Tsartsaris | Panathinaikos AKTOR Athens
+Krunoslav Simon | Anadolu Efes Istanbul
+Ksistof Lavrinovic | Zalgiris Kaunas
+Kyle Hines | CSKA Moscow
+Lazaros Papadopoulos | Real Madrid
+Louis Bullock | Real Madrid
+Luigi Datome | Armani Olimpia Milan
+Luigi Datome | Fenerbahce Istanbul
+Luis Scola | Kosner Baskonia Vitoria-Gasteiz
+Luka Mitrovic | Crvena Zvezda Meridianbet Belgrade
+Lukas Lekavicius | Zalgiris Kaunas
+Manu Ginobili | Virtus Bologna
+Marcelinho Huertas | FC Barcelona
+Marcelinho Huertas | Kosner Baskonia Vitoria-Gasteiz
+Marco Belinelli | Virtus Bologna
+Martin Hermannsson | ALBA Berlin
+Matjaz Smodis | CSKA Moscow
+Miikka Muurinen | Partizan Mozzart Bet Belgrade
+Mike Batiste | Panathinaikos AKTOR Athens
+Milos Vujanic | Panathinaikos AKTOR Athens
+Mirza Teletovic | Kosner Baskonia Vitoria-Gasteiz
+Nando De Colo | CSKA Moscow
+Nemanja Bjelica | Fenerbahce Istanbul
+Nenad Krstic | CSKA Moscow
+Neoklis Avdalas | Panathinaikos AKTOR Athens
+Nick Calathes | Panathinaikos AKTOR Athens
+Nikola Mirotic | FC Barcelona
+Nikola Pekovic | Panathinaikos AKTOR Athens
+Nikola Vujcic | Maccabi Rapyd Tel Aviv
+Nikos Zisis | CSKA Moscow
+Nikos Zisis | Mens Sana Siena
+Pablo Prigioni | Kosner Baskonia Vitoria-Gasteiz
+Pau Gasol | FC Barcelona
+Paulius Jankunas | Zalgiris Kaunas
+Pete Mickeal | FC Barcelona
+Ricky Rubio | FC Barcelona
+Roger Grimau | FC Barcelona
+Rudy Fernandez | Real Madrid
+Sani Becirovic | Panathinaikos AKTOR Athens
+Saras Jasikevicius | Fenerbahce Istanbul
+Saras Jasikevicius | Panathinaikos AKTOR Athens
+Sofoklis Schortsanitis | Maccabi Rapyd Tel Aviv
+Stratos Perperoglou | Olympiacos Piraeus
+Stratos Perperoglou | Panathinaikos AKTOR Athens
+Theodoros Papaloukas | CSKA Moscow
+Thomas Walkup | Olympiacos Piraeus
+Tornike Shengelia | Kosner Baskonia Vitoria-Gasteiz
+Trajan Langdon | CSKA Moscow
+Tyrese Rice | Maccabi Rapyd Tel Aviv
+Vassilis Spanoulis | Olympiacos Piraeus
+Victor Claver | Valencia Basket
+Victor Khryapa | CSKA Moscow
+Yam Madar | Partizan Mozzart Bet Belgrade
+Zaza Pachulia | Galatasaray
+
+[insert]
+Alex Abrines | FC Barcelona
+Alexey Shved | Khimki Moscow Region
+Andreas Obst | FC Bayern Munich
+Andrei Kirilenko | CSKA Moscow
+Andres Nocioni | Real Madrid
+Anthony Parker | Maccabi Rapyd Tel Aviv
+Antonis Fotsis | Panathinaikos AKTOR Athens
+Bogdan Bogdanovic | Fenerbahce Istanbul
+Bojan Bogdanovic | Fenerbahce Istanbul
+Bryant Dunston | Olympiacos Piraeus
+Codi Miller-McIntyre | Kosner Baskonia Vitoria-Gasteiz
+Danilo Gallinari | Armani Olimpia Milan
+Dejan Bodiroga | Panathinaikos AKTOR Athens
+Deni Avdija | Maccabi Rapyd Tel Aviv
+Dimitris Diamantidis | Panathinaikos AKTOR Athens
+Ekpe Udoh | Fenerbahce Istanbul
+Evan Fournier | Olympiacos Piraeus
+Felipe Reyes | Real Madrid
+Fragiskos Alvertis | Panathinaikos AKTOR Athens
+Georgios Printezis | Olympiacos Piraeus
+Guerschon Yabusele | Real Madrid
+Hugo Gonzalez | Real Madrid
+Ioannis Bourousis | Real Madrid
+Jan Vesely | Fenerbahce Istanbul
+Jean Montero | Valencia Basket
+Juan Carlos Navarro | FC Barcelona
+Kendrick Nunn | Panathinaikos AKTOR Athens
+Kostas Sloukas | Fenerbahce Istanbul
+Kostas Sloukas | Olympiacos Piraeus
+Kostas Sloukas | Panathinaikos AKTOR Athens
+Kostas Tsartsaris | Panathinaikos AKTOR Athens
+Kyle Hines | CSKA Moscow
+Luis Scola | Kosner Baskonia Vitoria-Gasteiz
+Luka Doncic | Real Madrid
+Manu Ginobili | Virtus Bologna
+Marco Belinelli | Virtus Bologna
+Miikka Muurinen | Partizan Mozzart Bet Belgrade
+Mike Batiste | Panathinaikos AKTOR Athens
+Mike James | AS Monaco
+Milos Teodosic | CSKA Moscow
+Mirsad Turkcan | Fenerbahce Istanbul
+Nando De Colo | CSKA Moscow
+Nemanja Bjelica | Fenerbahce Istanbul
+Neoklis Avdalas | Panathinaikos AKTOR Athens
+Nick Calathes | Panathinaikos AKTOR Athens
+Nigel Hayes-Davis | Fenerbahce Istanbul
+Nikola Mirotic | FC Barcelona
+Nikola Topic | Crvena Zvezda Meridianbet Belgrade
+Nikola Vujcic | Maccabi Rapyd Tel Aviv
+Pablo Prigioni | Kosner Baskonia Vitoria-Gasteiz
+Pau Gasol | FC Barcelona
+Ramunas Siskauskas | CSKA Moscow
+Ricky Rubio | FC Barcelona
+Rudy Fernandez | Real Madrid
+Saras Jasikevicius | Fenerbahce Istanbul
+Saras Jasikevicius | Panathinaikos AKTOR Athens
+Sasha Vezenkov | Olympiacos Piraeus
+Sergio Llull | Real Madrid
+Sergio Rodriguez | CSKA Moscow
+Sergio Rodriguez | Real Madrid
+Shane Larkin | Anadolu Efes Istanbul
+Sofoklis Schortsanitis | Maccabi Rapyd Tel Aviv
+Stratos Perperoglou | Olympiacos Piraeus
+Stratos Perperoglou | Panathinaikos AKTOR Athens
+Theodoros Papaloukas | CSKA Moscow
+Thomas Walkup | Olympiacos Piraeus
+Tiago Splitter | Kosner Baskonia Vitoria-Gasteiz
+TJ Shorts | Paris Basketball
+Tornike Shengelia | Kosner Baskonia Vitoria-Gasteiz
+Trajan Langdon | CSKA Moscow
+Tyrese Rice | Maccabi Rapyd Tel Aviv
+Vasilije Micic | Anadolu Efes Istanbul
+Vassilis Spanoulis | Olympiacos Piraeus
+Victor Wembanyama | LDLC ASVEL Villeurbanne
+Walter Tavares | Real Madrid
+Will Clyburn | CSKA Moscow
+Yam Madar | Partizan Mozzart Bet Belgrade
+Zaccharie Risacher | LDLC ASVEL Villeurbanne
+
+[multi]
+Sergio Rodriguez | Real Madrid / Ante Tomic | FC Barcelona
+Mike Batiste | Panathinaikos AKTOR Athens / Kyle Hines | Olympiacos Piraeus
+Vassilis Spanoulis | Olympiacos Piraeus / Nick Calathes | Panathinaikos AKTOR Athens
+Luka Doncic | Real Madrid / Bogdan Bogdanovic | Fenerbahce Istanbul
+Luka Doncic | Real Madrid / Vassilis Spanoulis | Olympiacos Piraeus
+Antonis Fotsis | Panathinaikos AKTOR Athens / Georgios Printezis | Olympiacos Piraeus
+Ramunas Siskauskas | CSKA Moscow / Rudy Fernandez | Real Madrid
+Nenad Krstic | CSKA Moscow / Sofoklis Schortsanitis | Maccabi Rapyd Tel Aviv
+Milos Teodosic | Crvena Zvezda Meridianbet Belgrade / Kevin Punter | Partizan Mozzart Bet Belgrade
+Vassilis Spanoulis | AS Monaco / Saras Jasikevicius | Fenerbahce Istanbul
+Rudy Fernandez | Real Madrid / Ramunas Siskauskas | CSKA Moscow
+Sofoklis Schortsanitis | Maccabi Rapyd Tel Aviv / Nenad Krstic | CSKA Moscow
+Ante Tomic | FC Barcelona / Sergio Rodriguez | Real Madrid
+Kyle Hines | Olympiacos Piraeus / Mike Batiste | Panathinaikos AKTOR Athens
+Nick Calathes | Panathinaikos AKTOR Athens / Vassilis Spanoulis | Olympiacos Piraeus
+Bogdan Bogdanovic | Fenerbahce Istanbul / Luka Doncic | Real Madrid
+Kevin Punter | Partizan Mozzart Bet Belgrade / Milos Teodosic | Crvena Zvezda Meridianbet Belgrade
+Georgios Printezis | Olympiacos Piraeus / Antonis Fotsis | Panathinaikos AKTOR Athens
+Saras Jasikevicius | Fenerbahce Istanbul / Vassilis Spanoulis | AS Monaco
+Vassilis Spanoulis | Olympiacos Piraeus / Luka Doncic | Real Madrid

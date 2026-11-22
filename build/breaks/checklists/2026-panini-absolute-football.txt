@@ -1,0 +1,855 @@
+# name: 2026 Panini Absolute Football
+# sport: NFL
+# added: 2026-11-22
+# source:
+# note: Official Panini checklist (Panini Absolute CSV)
+
+[base]
+A.J. Green | Bengals
+Aaron Donald | Rams
+Abu Sama III | Badgers
+Adrian Peterson | Vikings
+Ahmad Hardy | Tigers
+Ahman Green | Packers
+Alessio Milivojevic | Spartans
+Amani Toomer | Giants
+Andre Johnson | Texans
+Andrew Marsh | Wolverines
+Aneyas Williams | Fighting Irish
+Anquan Boldin | Ravens
+Anthony Colandrea | Cornhuskers
+Antonio Brown | Steelers
+Antonio Gates | Chargers
+Archie Manning | Saints
+Art Monk | Redskins
+Ashton Daniels | Seminoles
+Austin Simmons | Tigers
+Avery Johnson | Wildcats
+Barry Sanders | Lions
+Bear Bachmeier | Cougars
+Ben Coates | Patriots
+Bodpegn Miller | Huskies
+Boomer Esiason | Bengals
+Brad Johnson | Buccaneers
+Braden Pegan | Utes
+Brandon Inniss | Buckeyes
+Braylon Edwards | Browns
+Brett Favre | Jets
+Brian Dawkins | Eagles
+Brian Sipe | Browns
+Bryce Underwood | Wolverines
+Bryce Young | Fighting Irish
+Caleb Hawkins | Cowboys
+Cam Coleman | Longhorns
+Cam Cook | Mountaineers
+Cameron Dickey | Red Raiders
+Charles Becker | Hoosiers
+Charles Woodson | Packers
+Charlie Joiner | Chargers
+Chauncey Bowens | Bulldogs
+Chris Denson | Tigers
+Chris Henry Jr. | Buckeyes
+CJ Carr | Fighting Irish
+CJ Sadler | Tar Heels
+Clinton Portis | Redskins
+Colin Simmons | Longhorns
+Colton Joseph | Badgers
+Coy Eakin | Red Raiders
+Dallas Wilson | Gators
+Dan Marino | Dolphins
+Daniel Hill | Crimson Tide
+Daniel Odom | Sooners
+Dante Moore | Ducks
+Darian Mensah | Hurricanes
+Darrelle Revis | Jets
+Deion Sanders | Falcons
+Denard Robinson | Jaguars
+Deron Cherry | Chiefs
+Desmond Howard | Packers
+Deuce Alexander | Rebels
+Deuce McAllister | Saints
+Devin Hester | Bears
+Dia Bell | Longhorns
+Donovan McNabb | Eagles
+Drew Mestemaker | Cowboys
+Drew Pearson | Cowboys
+Dylan Faison | Fighting Irish
+Ed "Too Tall" Jones | Cowboys
+Ed Reed | Ravens
+Eddie George | Titans
+Eli Holstein | Cavaliers
+Eli Manning | Giants
+Elija Lofton | Hurricanes
+Emmitt Smith | Cowboys
+Eric Dickerson | Rams
+Eric Moulds | Bills
+Evan Stewart | Ducks
+Gunner Stockton | Bulldogs
+Howie Long | Raiders
+Ickey Woods | Bengals
+Isaiah Marshall | Jayhawks
+Isaiah Sategna III | Sooners
+Isaiah West | Buckeyes
+Jacob Washington | Wolverines
+Jaden Craig | Horned Frogs
+Jake Delhomme | Panthers
+Jake Plummer | Cardinals
+Jamaal Charles | Chiefs
+Jamal Anderson | Falcons
+Jamal Lewis | Ravens
+James Harrison | Steelers
+Jared Allen | Chiefs
+Jaron Pula | Cougars
+Jayce Brown | Tigers
+Jayden "Duke" Scott | Wolfpack
+Jayden Maiava | Trojans
+Jerome Bettis | Steelers
+Jett Thomalla | Crimson Tide
+Jevon Kearse | Titans
+Jim Kelly | Bills
+Jim McMahon | Bears
+Joe Haden | Browns
+Joe Montana | 49ers
+John Mateer | Sooners
+John Randle | Vikings
+Jordan Marshall | Wolverines
+Joseph Addai | Colts
+Josh Hoover | Hoosiers
+Joshua Moore | Hurricanes
+Julian Sayin | Buckeyes
+Justin Tuck | Giants
+Kaliq Lockett | Longhorns
+Kam Chancellor | Seahawks
+Kam Perry | Buffaloes
+Keelon Russell | Crimson Tide
+Keisean Henderson | Cougars
+Kendrick Raphael | Mustangs
+Kennan Pula | Cougars
+Kenny Minchey | Wildcats
+Keshaun Singleton | Tigers
+Kevin Dyson | Titans
+Kevin Jennings | Mustangs
+Kewan Lacy | Rebels
+Keyshawn Johnson | Buccaneers
+King Miller | Trojans
+KJ Jackson | Razorbacks
+Koby Howard | Nittany Lions
+Kurt Warner | Rams
+Kyson Brown | Sun Devils
+LaNorris Sellers | Gamecocks
+Larry Fitzgerald | Cardinals
+LeGarrette Blount | Patriots
+LeSean McCoy | Eagles
+London Fletcher | Bills
+Luke Kuechly | Panthers
+Lynn Swann | Steelers
+Malachi Thomas | Tigers
+Marcel Reed | Aggies
+Marcus Freeman | Fighting Irish
+Mario Craver | Aggies
+Mario Williams | Texans
+Mark Bowman | Trojans
+Mark Brunell | Jaguars
+Mark Duper | Dolphins
+Mark Fletcher Jr. | Hurricanes
+Mark van Eeghen | Raiders
+Mason Williams | Buckeyes
+Matt Hasselbeck | Seahawks
+Matt Schaub | Texans
+Maurice Jones-Drew | Jaguars
+Merton Hanks | 49ers
+Micah Ford | Cardinal
+Michael Crabtree | 49ers
+Mike Vrabel | Patriots
+Milan Parris | Hurricanes
+Nate Frazier | Bulldogs
+Nate Sheppard | Blue Devils
+Natrone Means | Chargers
+Ndamukong Suh | Lions
+Parker Livingstone | Sooners
+Pat Tillman | Cardinals
+Peyton Manning | Colts
+Phillip Wright III | Tigers
+Raleek Brown | Longhorns
+Randall Cunningham | Vikings
+Randy Gradishar | Broncos
+Randy Moss | Patriots
+Raycine Guillory Jr. | Tigers
+Re'Shaun Sanford II | Cougars
+Reggie Wayne | Colts
+Rickey Jackson | Saints
+Rocco Becht | Nittany Lions
+Rod Moore | Wolverines
+Rod Smith | Broncos
+Roddy White | Falcons
+Ryan Wingo | Longhorns
+Sam Leavitt | Tigers
+Sean McVay | Rams
+Sean Taylor | Redskins
+Shaun Alexander | Seahawks
+Steve Smith Sr. | Panthers
+Tavien St. Clair | Buckeyes
+Ted Hendricks | Colts
+Terrell Davis | Broncos
+Tim Brown | Raiders
+TJ Moore | Tigers
+Tony Dorsett | Cowboys
+Trae Taylor | School
+Trent Mosley | Trojans
+Trinidad Chambliss | Rebels
+Tristian Gentry | Red Raiders
+Turbo Richard | Hoosiers
+Walker Eget | Blue Devils
+Walter Payton | Bears
+Warren Sapp | Buccaneers
+Will Hammond | Red Raiders
+William Perry | Bears
+Zach Thomas | Dolphins
+
+[auto]
+A.J. Green | Bengals
+Aaron Donald | Rams
+Abu Sama III | Badgers
+Adrian Peterson | Vikings
+Ahmad Hardy | Tigers
+Ahmad Rashad | Vikings
+Ahman Green | Packers
+Alessio Milivojevic | Spartans
+Amani Toomer | Giants
+Andre Johnson | Texans
+Andre Reed | Bills
+Andrew Marsh | Wolverines
+Aneyas Williams | Fighting Irish
+Anquan Boldin | 49ers
+Anquan Boldin | Ravens
+Anthony Colandrea | Cornhuskers
+Antonio Brown | Steelers
+Antonio Gates | Chargers
+Archie Griffin | Bengals
+Archie Manning | Saints
+Art Monk | Redskins
+Asante Samuel | Patriots
+Ashton Daniels | Seminoles
+Austin Simmons | Tigers
+Avery Johnson | Wildcats
+Barry Sanders | Lions
+Bear Bachmeier | Cougars
+Ben Coates | Patriots
+Bernie Kosar | Browns
+Bodpegn Miller | Huskies
+Boomer Esiason | Bengals
+Bowe Bentley | Sooners
+Brad Johnson | Buccaneers
+Brandon Inniss | Buckeyes
+Braylon Edwards | Browns
+Brett Favre | Jets
+Brett Favre | Packers
+Brian Bosworth | Sooners
+Brian Dawkins | Eagles
+Brian Hartline | Buckeyes
+Brian Sipe | Browns
+Bryant Wesco Jr. | Tigers
+Bryant Young | 49ers
+Bryce Underwood | Wolverines
+Caleb Hawkins | Cowboys
+Calvin Johnson | Lions
+Cam Coleman | Longhorns
+Cameron Dickey | Red Raiders
+Carl Banks | Giants
+Carnell "Cadillac" Williams | Buccaneers
+Chad Johnson | Bengals
+Charles Becker | Hoosiers
+Charles Woodson | Packers
+Charles Woodson | Raiders
+Charlie Joiner | Chargers
+Chauncey Bowens | Bulldogs
+Chris Denson | Tigers
+Chris Henry Jr. | Buckeyes
+Christopher Vizzina | Tigers
+CJ Carr | Fighting Irish
+CJ Sadler | Tar Heels
+Clinton Portis | Broncos
+Colin Simmons | Longhorns
+Colton Joseph | Badgers
+Dakorien Moore | Ducks
+Dallas Wilson | Gators
+Dan Marino | Dolphins
+Daniel Hill | Crimson Tide
+Dante Moore | Ducks
+Darian Mensah | Hurricanes
+Darrelle Revis | Jets
+Daunte Culpepper | Dolphins
+David Boston | Cardinals
+Deion Sanders | 49ers
+Deion Sanders | Falcons
+DeMarcus Ware | Broncos
+DeMarcus Ware | Cowboys
+Denard Robinson | Jaguars
+Deron Cherry | Chiefs
+Desmond Howard | Packers
+Desmond Howard | Wolverines
+Deuce Alexander | Rebels
+Deuce McAllister | Saints
+Devin Hester | Bears
+Dez Bryant | Cowboys
+Dia Bell | Longhorns
+Dick Vermeil | Rams
+Donald Driver | Packers
+Doug Flutie | Chargers
+Doug Flutie | Eagles
+Drew Brees | Saints
+Drew Mestemaker | Cowboys
+Drew Pearson | Cowboys
+Duce Staley | Eagles
+Earl Campbell | Oilers
+Ed "Too Tall" Jones | Cowboys
+Eddie George | Titans
+Eli Holstein | Cavaliers
+Eli Manning | Giants
+Elija Lofton | Hurricanes
+Emmitt Smith | Cowboys
+Emmitt Thomas | Chiefs
+Eric Dickerson | Rams
+Eric Moulds | Bills
+Eric Weddle | Chargers
+Evan Stewart | Ducks
+Felix Jones | Cowboys
+Fred Biletnikoff | Raiders
+Gunner Stockton | Bulldogs
+Haven Moses | Broncos
+Herman Moore | Lions
+Hines Ward | Steelers
+Howie Long | Raiders
+Ickey Woods | Bengals
+Isaac Bruce | Rams
+Isaiah Marshall | Jayhawks
+Isaiah Sategna III | Sooners
+Isaiah West | Buckeyes
+Jacob Washington | Wolverines
+Jacoby Ford | Raiders
+Jadan Baugh | Gators
+Jaden Craig | Horned Frogs
+Jake Delhomme | Panthers
+Jake Plummer | Cardinals
+Jamaal Charles | Chiefs
+Jamal Anderson | Falcons
+Jamal Lewis | Ravens
+James Harrison | Steelers
+James Lofton | Bills
+Jared Allen | Vikings
+Jaron Pula | Cougars
+Jaron-Keawe Sagapolutele | Golden Bears
+Jayce Brown | Tigers
+Jayden "Duke" Scott | Wolfpack
+Jeff Blake | Bengals
+Jermichael Finley | Packers
+Jerome Bettis | Steelers
+Jett Thomalla | Crimson Tide
+Jevon Kearse | Titans
+Jim Kelly | Bills
+Jim McMahon | Bears
+Jimmy Smith | Jaguars
+Joe Greene | Steelers
+Joe Haden | Browns
+Joe Horn | Saints
+Joe Montana | 49ers
+John Elway | Broncos
+John Mateer | Sooners
+John Randle | Vikings
+John Riggins | Redskins
+Jonathan Stewart | Panthers
+Jordan Marshall | Wolverines
+Joseph Addai | Colts
+Josh Gordon | Browns
+Josh Hoover | Hoosiers
+Joshua Moore | Hurricanes
+Julian Sayin | Buckeyes
+Justin Tuck | Giants
+Kaliq Lockett | Longhorns
+Kam Chancellor | Seahawks
+Keelon Russell | Crimson Tide
+Keisean Henderson | Cougars
+Kellen Winslow | Chargers
+Kendrick Raphael | Mustangs
+Kennan Pula | Cougars
+Kenny Minchey | Wildcats
+Kerry Collins | Panthers
+Keshaun Singleton | Tigers
+Kevin Dyson | Titans
+Kevin Jennings | Mustangs
+Kevin O'Connell | Patriots
+Kewan Lacy | Rebels
+Keyshawn Johnson | Buccaneers
+Keyshawn Johnson | Jets
+King Miller | Trojans
+KJ Jackson | Razorbacks
+Koby Howard | Nittany Lions
+Kurt Warner | Rams
+LaDainian Tomlinson | Chargers
+LaNorris Sellers | Gamecocks
+Larry Fitzgerald | Cardinals
+Lawrence Taylor | Giants
+LeGarrette Blount | Patriots
+Legend Bey | Buckeyes
+LeSean McCoy | Eagles
+London Fletcher | Bills
+London Fletcher | Redskins
+Luke Kuechly | Panthers
+Malachi Thomas | Tigers
+Marcel Reed | Aggies
+Marcus Allen | Raiders
+Marcus Freeman | Fighting Irish
+Mario Craver | Aggies
+Mario Williams | Texans
+Mark Bavaro | Giants
+Mark Bowman | Trojans
+Mark Brunell | Jaguars
+Mark Duper | Dolphins
+Mark Fletcher Jr. | Hurricanes
+Mark Gastineau | Jets
+Mark Rypien | Redskins
+Mark van Eeghen | Raiders
+Mason Williams | Buckeyes
+Matt Bahr | Giants
+Matt Hasselbeck | Seahawks
+Matt Schaub | Texans
+Maurice Jones-Drew | Jaguars
+Merton Hanks | 49ers
+Micah Ford | Cardinal
+Michael Crabtree | 49ers
+Michael Irvin | Cowboys
+Michael Strahan | Giants
+Mike Vrabel | Patriots
+Nate Frazier | Bulldogs
+Nate Sheppard | Blue Devils
+Natrone Means | Chargers
+Ndamukong Suh | Lions
+Parker Livingstone | Sooners
+Patrick Peterson | Cardinals
+Patrick Willis | 49ers
+Peter Warrick | Bengals
+Peyton Manning | Colts
+Phillip Wright III | Tigers
+Pierre Garcon | Colts
+Raleek Brown | Longhorns
+Randall Cunningham | Eagles
+Randall Cunningham | Vikings
+Randy Gradishar | Broncos
+Ray Lewis | Ravens
+Ray Rice | Ravens
+Raycine Guillory Jr. | Tigers
+Re'Shaun Sanford II | Cougars
+Reggie Wayne | Colts
+Rick Mirer | Fighting Irish
+Rickey Jackson | Saints
+Ricky Williams | Longhorns
+Robert Smith | Vikings
+Rocco Becht | Nittany Lions
+Rod Moore | Wolverines
+Rod Smith | Broncos
+Roddy White | Falcons
+Roger Staubach | Cowboys
+Ron Jaworski | Eagles
+Ryan Wingo | Longhorns
+Sam Leavitt | Tigers
+Sam Madison | Dolphins
+Sean McVay | Rams
+Shaun Alexander | Seahawks
+Simeon Rice | Buccaneers
+Stephen Davis | Redskins
+Sterling Sharpe | Packers
+Steve DeBerg | Buccaneers
+Steve Smith Sr. | Panthers
+Steve Young | 49ers
+Steven Jackson | Rams
+Tavien St. Clair | Buckeyes
+Ted Hendricks | Colts
+Terrell Davis | Broncos
+Tiki Barber | Giants
+Tim Tebow | Gators
+TJ Moore | Tigers
+Tony Dorsett | Cowboys
+Tony Gonzalez | Falcons
+Trae Taylor | School
+Trent Mosley | Trojans
+Trinidad Chambliss | Rebels
+Tristian Gentry | Red Raiders
+Troy Brown (WR) | Patriots
+Turbo Richard | Hoosiers
+Vince Young | Titans
+Walker Eget | Blue Devils
+Warren Sapp | Buccaneers
+Wayne Chrebet | Jets
+Wes Chandler | Chargers
+Wilbert Montgomery | Eagles
+William Perry | Bears
+Willie Roaf | Saints
+Willis McGahee | Bills
+Zach Thomas | Dolphins
+Zach Thomas | Red Raiders
+
+[insert]
+A.J. Green | Bengals
+Aaron Donald | Rams
+Abu Sama III | Badgers
+Adrian Peterson | Vikings
+Ahmad Hardy | Tigers
+Alessio Milivojevic | Spartans
+Andre Johnson | Texans
+Andre Reed | Bills
+Andrew Marsh | Wolverines
+Aneyas Williams | Fighting Irish
+Anthony Colandrea | Cornhuskers
+Antonio Brown | Steelers
+Antonio Gates | Chargers
+Archie Griffin | Bengals
+Archie Manning | Saints
+Arian Foster | Texans
+Art Monk | Redskins
+Ashton Daniels | Seminoles
+Austin Simmons | Tigers
+Avery Johnson | Wildcats
+Barry Sanders | Lions
+Bear Bachmeier | Cougars
+Ben Roethlisberger | Steelers
+Bo Jackson | Raiders
+Bodpegn Miller | Huskies
+Bowe Bentley | Sooners
+Brad Johnson | Buccaneers
+Braylon Staley | Volunteers
+Brett Favre | Packers
+Brian Bosworth | Sooners
+Brian Hartline | Buckeyes
+Bruce Smith | Bills
+Bryant Wesco Jr. | Tigers
+Bryant Young | 49ers
+Bryce Underwood | Wolverines
+Ca'Lil Valentine | Fighting Illini
+Caleb Hawkins | Cowboys
+Calvin Johnson | Lions
+Cam Coleman | Longhorns
+Cameron Dickey | Red Raiders
+Carl Banks | Giants
+Carson Palmer | Bengals
+Chad Johnson | Bengals
+Charles Becker | Hoosiers
+Charles Woodson | Packers
+Charles Woodson | Raiders
+Charlie Joiner | Chargers
+Chauncey Bowens | Bulldogs
+Chris Henry Jr. | Buckeyes
+Chris Johnson | Titans
+Christopher Vizzina | Tigers
+CJ Carr | Fighting Irish
+Colin Simmons | Longhorns
+Coy Eakin | Red Raiders
+Dakorien Moore | Ducks
+Dan Fouts | Chargers
+Dan Marino | Dolphins
+Daniel Hill | Crimson Tide
+Dante Moore | Ducks
+Darian Mensah | Hurricanes
+Darrelle Revis | Jets
+Daunte Culpepper | Dolphins
+Deion Sanders | Cowboys
+Deion Sanders | Falcons
+DeMarcus Ware | Broncos
+DeMarcus Ware | Cowboys
+Desmond Howard | Wolverines
+Deuce Alexander | Rebels
+Devin Hester | Bears
+Dez Bryant | Cowboys
+Dia Bell | Longhorns
+Donald Driver | Packers
+Doug Flutie | Chargers
+Doug Flutie | Eagles
+Drew Bledsoe | Patriots
+Drew Brees | Saints
+Drew Mestemaker | Cowboys
+Drew Pearson | Cowboys
+Duce Staley | Eagles
+Dylan Faison | Fighting Irish
+Earl Campbell | Oilers
+Earl Thomas III | Seahawks
+Ed Reed | Ravens
+Eddie George | Titans
+Eli Manning | Giants
+Emmitt Smith | Cowboys
+Eric Weddle | Chargers
+Evan Stewart | Ducks
+Fran Tarkenton | Vikings
+Fred Biletnikoff | Raiders
+Fred Taylor | Jaguars
+Gunner Stockton | Bulldogs
+Hines Ward | Steelers
+Isaac Bruce | Rams
+Isaiah Sategna III | Sooners
+Jadan Baugh | Gators
+Jamaal Charles | Chiefs
+Jamal Anderson | Falcons
+James Lofton | Bills
+James Lofton | Packers
+Jan Stenerud | Chiefs
+Jared Allen | Vikings
+Jaron-Keawe Sagapolutele | Golden Bears
+Jayce Brown | Tigers
+Jayden Maiava | Trojans
+Jerome Bettis Jr. | Fighting Irish
+Jett Thomalla | Crimson Tide
+Jim Kelly | Bills
+Jimmy Smith | Jaguars
+Joe Greene | Steelers
+Joe Horn | Saints
+John Elway | Broncos
+John Mateer | Sooners
+John Riggins | Redskins
+Johnny Manziel | Aggies
+Jordan Faison | Fighting Irish
+Jordan Marshall | Wolverines
+Joseph Addai | Colts
+Josh Gordon | Browns
+Josh Hoover | Hoosiers
+Julian Sayin | Buckeyes
+Julius Peppers | Panthers
+Keelon Russell | Crimson Tide
+Keisean Henderson | Cougars
+Kellen Winslow | Chargers
+Kennedy Urlacher | Trojans
+Kenny Minchey | Wildcats
+Kerry Collins | Panthers
+Kevin Jennings | Mustangs
+Kewan Lacy | Rebels
+King Miller | Trojans
+KJ Jackson | Razorbacks
+Kurt Warner | Cardinals
+Kurt Warner | Rams
+Lamar "Bo" Jackson | Buckeyes
+LaNorris Sellers | Gamecocks
+Larry Fitzgerald | Cardinals
+Lawrence Taylor | Giants
+Le'Veon Bell | Steelers
+LeGarrette Blount | Buccaneers
+LeGarrette Blount | Patriots
+Legend Bey | Buckeyes
+Luke Kuechly | Panthers
+Madden Williams | Aggies
+Marcel Reed | Aggies
+Marcus Allen | Raiders
+Mario Craver | Aggies
+Mark Bavaro | Giants
+Mark Bowman | Trojans
+Mark Fletcher Jr. | Hurricanes
+Mark Gastineau | Jets
+Marshall Faulk | Rams
+Matt Schaub | Texans
+Maurice Jones-Drew | Jaguars
+Micah Ford | Cardinal
+Michael Crabtree | 49ers
+Michael Crabtree | Red Raiders
+Michael Irvin | Cowboys
+Michael Strahan | Giants
+Michael Vick | Falcons
+Mike Alstott | Buccaneers
+Mike Singletary | Bears
+Milan Parris | Hurricanes
+Nate Frazier | Bulldogs
+Ndamukong Suh | Lions
+Ozzie Newsome | Browns
+Pat Tillman | Cardinals
+Patrick Peterson | Cardinals
+Peyton Manning | Broncos
+Peyton Manning | Colts
+Raghib "Rocket" Ismail | Fighting Irish
+Raleek Brown | Longhorns
+Randall Cunningham | Eagles
+Randy Moss | Patriots
+Randy Moss | Vikings
+Randy White | Cowboys
+Ray Lewis | Ravens
+Ray Rice | Ravens
+Raycine Guillory Jr. | Tigers
+Reggie Wayne | Colts
+Richard Dent | Bears
+Richard Sherman | Seahawks
+Rick Mirer | Fighting Irish
+Ricky Williams | Longhorns
+Rob Gronkowski | Patriots
+Robert Smith | Vikings
+Rocco Becht | Nittany Lions
+Rod Moore | Wolverines
+Rod Smith | Broncos
+Roger Craig | 49ers
+Roger Staubach | Cowboys
+Ryan Wingo | Longhorns
+Sam Leavitt | Tigers
+Sam Madison | Dolphins
+Sean Taylor | Redskins
+Shaun Alexander | Seahawks
+Simeon Rice | Buccaneers
+Stephen Davis | Redskins
+Sterling Sharpe | Packers
+Steve Smith Sr. | Panthers
+Steve Young | 49ers
+Steven Jackson | Rams
+Tavien St. Clair | Buckeyes
+Ted Hendricks | Colts
+Terrell Davis | Broncos
+Thurman Thomas | Bills
+Tiki Barber | Giants
+Tim Tebow | Gators
+TJ Moore | Tigers
+Tony Boselli | Jaguars
+Tony Dorsett | Cowboys
+Tony Gonzalez | Falcons
+Torry Holt | Rams
+Travis Henry | Bills
+Trent Mosley | Trojans
+Trinidad Chambliss | Rebels
+Troy Brown (WR) | Patriots
+Turbo Richard | Hoosiers
+Vince Young | Longhorns
+Vince Young | Titans
+Walter Payton | Bears
+Warren Moon | Oilers
+Warren Sapp | Buccaneers
+Wilbert Montgomery | Eagles
+Will Hammond | Red Raiders
+Willis McGahee | Bills
+Xavier Sabb | School
+Zach Thomas | Dolphins
+Zach Thomas | Red Raiders
+
+[multi]
+Haven Moses | Broncos / John Elway | Broncos
+Harry Carson | Giants / Lawrence Taylor | Giants
+Adrian Peterson | Vikings / Brett Favre | Vikings
+Mark Bavaro | Giants / Phil Simms | Giants
+Kellen Winslow | Chargers / Dan Fouts | Chargers
+James Lofton | Bills / Andre Reed | Bills
+Lawrence Taylor | Giants / Harry Carson | Giants
+Brett Favre | Vikings / Adrian Peterson | Vikings
+Phil Simms | Giants / Mark Bavaro | Giants
+Dan Fouts | Chargers / Kellen Winslow | Chargers
+Andre Reed | Bills / James Lofton | Bills
+Jimmy Graham | Saints / Drew Brees | Saints
+John Elway | Broncos / Haven Moses | Broncos
+Drew Brees | Saints / Jimmy Graham | Saints
+John Elway | Broncos / Terrell Davis | Broncos
+John Jefferson | Chargers / Dan Fouts | Chargers
+Wilbert Montgomery | Eagles / Randall Cunningham | Eagles
+Roger Staubach | Cowboys / Drew Pearson | Cowboys
+Isaac Bruce | Rams / Kurt Warner | Rams
+Carson Palmer | Bengals / Chad Johnson | Bengals
+Daunte Culpepper | Vikings / Randy Moss | Vikings
+Jim Zorn | Seahawks / Steve Largent | Seahawks
+Brett Favre | Packers / Donald Driver | Packers
+Mark Duper | Dolphins / Dan Marino | Dolphins
+Joe Theismann | Redskins / Art Monk | Redskins
+Reggie Wayne | Colts / Peyton Manning | Colts
+Bo Jackson | Raiders / Marcus Allen | Raiders
+Calvin Hill | Cowboys / Tony Dorsett | Cowboys
+Kerry Collins | Panthers / Wesley Walls | Panthers
+Julio Jones | Falcons / Matt Schaub | Falcons
+Wes Chandler | Chargers / Kellen Winslow | Chargers
+Thurman Thomas | Bills / Jim Kelly | Bills
+Terry Bradshaw | Steelers / Rocky Bleier | Steelers
+Terrell Davis | Broncos / John Elway | Broncos
+Randall Cunningham | Eagles / Wilbert Montgomery | Eagles
+Kurt Warner | Rams / Isaac Bruce | Rams
+Donald Driver | Packers / Brett Favre | Packers
+Peyton Manning | Colts / Reggie Wayne | Colts
+Tony Dorsett | Cowboys / Calvin Hill | Cowboys
+Wesley Walls | Panthers / Kerry Collins | Panthers
+Kellen Winslow | Chargers / Wes Chandler | Chargers
+Jim Kelly | Bills / Thurman Thomas | Bills
+Dan Fouts | Chargers / John Jefferson | Chargers
+Chad Johnson | Bengals / Carson Palmer | Bengals
+Randy Moss | Vikings / Daunte Culpepper | Vikings
+Dan Marino | Dolphins / Mark Duper | Dolphins
+Art Monk | Redskins / Joe Theismann | Redskins
+Marcus Allen | Raiders / Bo Jackson | Raiders
+Rocky Bleier | Steelers / Terry Bradshaw | Steelers
+Steve Largent | Seahawks / Jim Zorn | Seahawks
+Matt Schaub | Falcons / Julio Jones | Falcons
+Drew Pearson | Cowboys / Roger Staubach | Cowboys
+John Mateer | Sooners / Colin Simmons | Longhorns
+Julian Sayin | Buckeyes / Bryce Underwood | Wolverines
+Jayden Maiava | Trojans / CJ Carr | Fighting Irish
+Darian Mensah | Hurricanes / Kevin Jennings | Mustangs
+Gunner Stockton | Bulldogs / Keelon Russell | Crimson Tide
+Marcel Reed | Aggies / Trinidad Chambliss | Rebels
+Kewan Lacy | Rebels / Nate Frazier | Bulldogs
+Ryan Wingo | Longhorns / Mario Craver | Aggies
+Randy Moss | Patriots / Darrelle Revis | Jets
+Ray Lewis | Ravens / Ben Roethlisberger | Steelers
+Michael Irvin | Cowboys / Brian Dawkins | Eagles
+Dan Marino | Dolphins / Jim Kelly | Bills
+Brett Favre | Packers / Brian Urlacher | Bears
+Joe Greene | Steelers / Roger Staubach | Cowboys
+Bo Jackson | Raiders / Brian Bosworth | Seahawks
+John Elway | Broncos / Howie Long | Raiders
+Charles Woodson | Packers / Calvin Johnson | Lions
+Richard Sherman | Seahawks / Larry Fitzgerald | Cardinals
+Michael Vick | Falcons / Julius Peppers | Panthers
+Barry Sanders | Lions / Emmitt Smith | Cowboys
+Bryce Underwood | Wolverines / Julian Sayin | Buckeyes
+Keelon Russell | Crimson Tide / Gunner Stockton | Bulldogs
+Trinidad Chambliss | Rebels / Marcel Reed | Aggies
+Mario Craver | Aggies / Ryan Wingo | Longhorns
+Darrelle Revis | Jets / Randy Moss | Patriots
+Brian Dawkins | Eagles / Michael Irvin | Cowboys
+Brian Urlacher | Bears / Brett Favre | Packers
+Roger Staubach | Cowboys / Joe Greene | Steelers
+Julius Peppers | Panthers / Michael Vick | Falcons
+Emmitt Smith | Cowboys / Barry Sanders | Lions
+Colin Simmons | Longhorns / John Mateer | Sooners
+Kevin Jennings | Mustangs / Darian Mensah | Hurricanes
+Howie Long | Raiders / John Elway | Broncos
+Calvin Johnson | Lions / Charles Woodson | Packers
+CJ Carr | Fighting Irish / Jayden Maiava | Trojans
+Nate Frazier | Bulldogs / Kewan Lacy | Rebels
+Ben Roethlisberger | Steelers / Ray Lewis | Ravens
+Jim Kelly | Bills / Dan Marino | Dolphins
+Brian Bosworth | Seahawks / Bo Jackson | Raiders
+Larry Fitzgerald | Cardinals / Richard Sherman | Seahawks
+Bryce Underwood | Wolverines / Jordan Marshall | Wolverines
+Cam Coleman | Longhorns / Ryan Wingo | Longhorns
+Chris Henry Jr. | Buckeyes / Julian Sayin | Buckeyes
+Jayden Maiava | Trojans / King Miller | Trojans
+Gunner Stockton | Bulldogs / Nate Frazier | Bulldogs
+Mario Craver | Aggies / Marcel Reed | Aggies
+Rocco Becht | Nittany Lions / Koby Howard | Nittany Lions
+Evan Stewart | Ducks / Dante Moore | Ducks
+Trinidad Chambliss | Rebels / Deuce Alexander | Rebels
+Jordan Faison | Fighting Irish / CJ Carr | Fighting Irish
+Darian Mensah | Hurricanes / Milan Parris | Hurricanes
+Charles Becker | Hoosiers / Josh Hoover | Hoosiers
+Jaron Pula | Cougars / Kennan Pula | Cougars
+Chris Johnson | Titans / Eddie George | Titans
+Richard Sherman | Seahawks / Kam Chancellor | Seahawks
+LeSean McCoy | Eagles / Duce Staley | Eagles
+Marshall Faulk | Rams / Kurt Warner | Rams
+Jimmy Smith | Jaguars / Mark Brunell | Jaguars
+Mario Williams | Texans / Matt Schaub | Texans
+Luke Kuechly | Panthers / Steve Smith Sr. | Panthers
+Jim Kelly | Bills / Bruce Smith | Bills
+Desmond Howard | Wolverines / Charles Woodson | Wolverines
+Jordan Marshall | Wolverines / Bryce Underwood | Wolverines
+Julian Sayin | Buckeyes / Chris Henry Jr. | Buckeyes
+Marcel Reed | Aggies / Mario Craver | Aggies
+Koby Howard | Nittany Lions / Rocco Becht | Nittany Lions
+Deuce Alexander | Rebels / Trinidad Chambliss | Rebels
+Milan Parris | Hurricanes / Darian Mensah | Hurricanes
+Josh Hoover | Hoosiers / Charles Becker | Hoosiers
+Duce Staley | Eagles / LeSean McCoy | Eagles
+Matt Schaub | Texans / Mario Williams | Texans
+Charles Woodson | Wolverines / Desmond Howard | Wolverines
+Dante Moore | Ducks / Evan Stewart | Ducks
+Kennan Pula | Cougars / Jaron Pula | Cougars
+King Miller | Trojans / Jayden Maiava | Trojans
+Nate Frazier | Bulldogs / Gunner Stockton | Bulldogs
+CJ Carr | Fighting Irish / Jordan Faison | Fighting Irish
+Eddie George | Titans / Chris Johnson | Titans
+Kurt Warner | Rams / Marshall Faulk | Rams
+Mark Brunell | Jaguars / Jimmy Smith | Jaguars
+Steve Smith Sr. | Panthers / Luke Kuechly | Panthers

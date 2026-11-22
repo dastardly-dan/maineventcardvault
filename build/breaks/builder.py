@@ -60,7 +60,7 @@ def parse(path):
 
 def main():
     prods = [parse(p) for p in sorted(glob.glob(os.path.join(HERE, 'checklists', '*.txt')))]
-    order = ['WWE', 'NFL', 'NBA', 'MLB', 'Marvel', 'Star Wars', 'Pokemon', 'Other']
+    order = ['WWE', 'MLW', 'NFL', 'NBA', 'WNBA', 'EuroLeague', 'MLB', 'USA Baseball', 'MMA', 'Marvel', 'Star Wars', 'Pokemon', 'Other']
     prods.sort(key=lambda p: (order.index(p['sport']) if p['sport'] in order else 99, p['name']))
     css = open(os.path.join(HERE, 'base.css')).read()
     icon = 'data:image/png;base64,' + base64.b64encode(open(os.path.join(ROOT, 'assets', 'favicon.png'), 'rb').read()).decode()
