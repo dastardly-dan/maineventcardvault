@@ -21,7 +21,7 @@ html = f'''<!DOCTYPE html>
 <header class="site"><div class="wrap"><div class="bar"><a class="brand" href="/"><img src="{icon}" alt=""><div><b class="display">Main Event Card Vault</b><span>Break guides</span></div></a><!--BMENU--><!--/BMENU--></div></div></header>
 <div class="wrap hero"><div class="kicker">Spot guides</div><h1 class="display">Break guides</h1>
 <p class="lede">Who you could pull in each spot, box by box, built from the published checklists. Pick-your-letter breaks show which spots are still open and what they cost.</p></div>
-<main class="wrap"><div class="grid">{cards}</div></main>
+<main class="wrap"><a class="tile" href="/breaks/builder" style="display:block;margin-bottom:18px;border-color:var(--gold)"><div class="kicker" style="font-size:11px">Breaker tool</div><div class="lab display" style="font-size:26px;margin-top:6px">Spot builder</div><div class="peek" style="margin-top:6px">Pick checklists, set a spot count, and get the most evenly balanced letter spots, with optional pricing.</div></a><div class="grid">{cards}</div></main>
 <footer><div class="wrap">Main Event Card Vault. Reference only; confirm checklists and house rules with the breaker.</div></footer>
 </body></html>'''
 open(os.path.join(ROOT,'breaks','index.html'),'w').write(html)
@@ -64,7 +64,8 @@ def menu_html(current=None):
         meta = ' · '.join([host] + parts[1:] + [short_date(i['when'])])
         cls = ' class="on"' if i['id'] == current else (' class="past"' if 'has passed' in i['when'] else '')
         links.append(f'<a href="/breaks/{i["id"]}"{cls}><b>{esc(code)}</b>{esc(name)}<span>{esc(meta)}</span></a>')
-    links.append('<a class="all" href="/breaks/">All break guides</a>')
+    links.append('<a class="all" href="/breaks/builder"' + (' style="background:rgba(230,190,85,.1)"' if current == 'builder' else '') + '>Spot builder<span>Turn checklists into balanced letter spots</span></a>')
+    links.append('<a class="all" href="/breaks/" style="border-top:0;margin-top:0;padding-top:9px">All break guides</a>')
     return '<!--BMENU--><details class="bmenu"><summary>Breaks</summary><div class="bmenu-list">' + ''.join(links) + '</div></details>' + MENU_JS + '<!--/BMENU-->'
 
 def fill(path, current=None):
@@ -76,5 +77,6 @@ def fill(path, current=None):
 for i in items:
     fill(os.path.join(ROOT, 'breaks', i['id'] + '.html'), i['id'])
 fill(os.path.join(ROOT, 'breaks', 'index.html'))
+if os.path.exists(os.path.join(ROOT, 'breaks', 'builder.html')): fill(os.path.join(ROOT, 'breaks', 'builder.html'), 'builder')
 fill(os.path.join(ROOT, 'build', 'template.html'))
 print('menu written to', len(items) + 2, 'files')

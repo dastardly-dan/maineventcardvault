@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Spot Builder | Main Event Card Vault</title>
+<meta name="theme-color" content="#081524">
+<link rel="icon" href="__ICON__">
+<style>
+__CSS__
+.layout { display: grid; grid-template-columns: 360px 1fr; gap: 20px; align-items: start; }
+@media (max-width: 900px) { .layout { grid-template-columns: 1fr; } }
+.panel { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px; }
+.panel + .panel { margin-top: 14px; }
+.panel h3 { margin: 0 0 10px; font-size: 15px; letter-spacing: .04em; text-transform: uppercase; color: var(--gold); }
+.prod { display: flex; align-items: center; gap: 10px; padding: 7px 0; border-bottom: 1px solid var(--line); font-size: 14px; }
+.prod:last-child { border-bottom: 0; }
+.prod .pn { flex: 1; min-width: 0; }
+.prod .pn small { display: block; color: var(--ink-3); font-size: 12px; }
+.sport { font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-3); margin: 12px 0 2px; }
+.sport:first-child { margin-top: 0; }
+.qty { display: inline-flex; align-items: center; border: 1px solid var(--line-2); border-radius: 999px; overflow: hidden; }
+.qty button { background: var(--bg-2); color: var(--ink); border: 0; width: 28px; height: 28px; font-size: 16px; cursor: pointer; }
+.qty button:hover { background: var(--panel-2); }
+.qty span { min-width: 24px; text-align: center; font-weight: 700; font-size: 14px; }
+.qty.on { border-color: var(--gold); }
+.qty.on span { color: var(--gold); }
+label.f { display: block; font-size: 13px; color: var(--ink-2); margin: 10px 0 4px; }
+label.f:first-of-type { margin-top: 0; }
+.in, select.in, textarea.in { width: 100%; padding: 9px 11px; border-radius: 10px; border: 1px solid var(--line-2); background: var(--bg-2); color: var(--ink); font: inherit; font-size: 14px; }
+textarea.in { min-height: 90px; resize: vertical; font-size: 13px; line-height: 1.45; }
+.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.row4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.seg { display: flex; border: 1px solid var(--line-2); border-radius: 10px; overflow: hidden; }
+.seg button { flex: 1; background: var(--bg-2); color: var(--ink-2); border: 0; padding: 8px 6px; font: inherit; font-size: 13px; cursor: pointer; }
+.seg button + button { border-left: 1px solid var(--line-2); }
+.seg button.on { background: var(--gold); color: #1a1405; font-weight: 700; }
+.hint { font-size: 12px; color: var(--ink-3); margin-top: 6px; line-height: 1.45; }
+.stats { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; margin-bottom: 14px; }
+.stat { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; }
+.stat b { display: block; font-size: 22px; color: var(--gold); }
+.stat span { font-size: 12px; color: var(--ink-3); text-transform: uppercase; letter-spacing: .08em; }
+.bars { display: flex; align-items: flex-end; gap: 3px; height: 90px; margin: 6px 0 4px; }
+.bars div { flex: 1; background: var(--line-2); border-radius: 3px 3px 0 0; position: relative; min-height: 2px; }
+.bars div.hot { background: var(--gold); }
+.barl { display: flex; gap: 3px; font-size: 10.5px; color: var(--ink-3); }
+.barl span { flex: 1; text-align: center; }
+.spotlist { display: grid; gap: 8px; }
+.spot { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.spot summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 34px minmax(110px, 200px) minmax(0, 1fr) auto; gap: 12px; align-items: center; padding: 11px 14px; }
+.spot summary::-webkit-details-marker { display: none; }
+.spot .no { color: var(--ink-3); font-size: 13px; }
+.spot .mid { min-width: 0; }
+.spot .lb { font-size: 22px; color: var(--gold); line-height: 1.05; }
+.spot .lb small { display: block; font-family: Inter, sans-serif; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-2); margin-top: 2px; }
+.spot .meter { height: 8px; background: var(--bg-2); border-radius: 99px; overflow: hidden; margin-bottom: 6px; }
+.spot .meter i { display: block; height: 100%; background: linear-gradient(90deg, #b8913a, var(--gold)); border-radius: 99px; }
+.spot .top { font-size: 13px; color: var(--ink-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.spot .nums { text-align: right; font-size: 13px; color: var(--ink-2); white-space: nowrap; }
+.spot .nums b { color: var(--ink); font-size: 15px; }
+.spot .nums .pr { color: var(--gold-2); font-weight: 700; font-size: 15px; }
+.spot .all { padding: 0 14px 14px 60px; font-size: 13.5px; color: var(--ink-2); line-height: 1.6; }
+.spot .all .a { color: var(--gold); font-size: 10.5px; font-weight: 700; margin-left: 3px; }
+@media (max-width: 640px) { .spot summary { grid-template-columns: 26px 1fr auto; } .spot summary .mid { grid-column: 1 / -1; } .spot .all { padding-left: 14px; } }
+.acts2 { display: flex; gap: 8px; flex-wrap: wrap; margin: 0 0 12px; }
+.warn { border: 1px solid rgba(210,60,70,.5); background: rgba(210,60,70,.1); color: #f6b3b8; border-radius: 12px; padding: 10px 14px; font-size: 14px; margin-bottom: 12px; }
+.empty { color: var(--ink-3); padding: 30px; text-align: center; border: 1px dashed var(--line-2); border-radius: 14px; }
+table.rows td small { color: var(--ink-3); }
+.toast { position: fixed; bottom: 18px; left: 50%; transform: translateX(-50%); background: var(--gold); color: #1a1405; font-weight: 700; padding: 9px 16px; border-radius: 999px; opacity: 0; transition: opacity .2s; pointer-events: none; z-index: 99; }
+.toast.show { opacity: 1; }
+/*BMENU-CSS*//*/BMENU-CSS*/
+</style>
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <div class="bar">
+      <a class="brand" href="/breaks/"><img src="__ICON__" alt=""><div><b class="display">Main Event Card Vault</b><span>Spot builder</span></div></a>
+      <!--BMENU--><!--/BMENU-->
+      <label class="search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <input id="q" type="search" placeholder="Find a name: which spot did it land in?" autocomplete="off" aria-label="Search names in the current build">
+      </label>
+    </div>
+    <nav class="tabs" id="tabs">
+      <a href="#/build" data-v="build">Build spots</a>
+      <a href="#/checklists" data-v="checklists">Checklist library</a>
+      <a href="#/how" data-v="how">How it works</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap hero">
+  <div class="kicker">Breaker tool</div>
+  <h1 class="display">Spot builder</h1>
+  <p class="lede">Pick the checklists in your break, set how many spots you want, and it splits the letters into the most even spots it can. Heavy letters get cut into two-letter ranges (SA-SH, SI-SZ) or Men and Women when that evens things out.</p>
+</div>
+
+<main class="wrap">
+  <section data-view="build">
+    <div class="layout">
+      <div>
+        <div class="panel">
+          <h3>1. Boxes in the break</h3>
+          <div id="prods"></div>
+          <label class="f" for="paste" style="margin-top:14px">Or paste your own names (one per line)</label>
+          <textarea class="in" id="paste" placeholder="John Cena&#10;Rhea Ripley | W&#10;Cody Rhodes | auto"></textarea>
+          <div class="hint">Add "| W" for women and "| auto" for autograph names. Pasted names count as one box.</div>
+        </div>
+        <div class="panel">
+          <h3>2. Spots</h3>
+          <div class="row2">
+            <div><label class="f" for="n">How many spots</label><input class="in" id="n" type="number" min="2" max="80" value="21"></div>
+            <div><label class="f" for="goal">Sales goal ($, optional)</label><input class="in" id="goal" type="number" min="0" step="5" placeholder="e.g. 2500"></div>
+          </div>
+          <label class="f">Group letters</label>
+          <div class="seg" id="group"><button data-v="free">Best balance</button><button data-v="alpha">Keep A to Z order</button></div>
+          <div class="hint">Best balance mixes light letters together (like Q/V/Z). A to Z keeps neighbors together (like E-F).</div>
+          <label class="f">Simple spots or even spots</label>
+          <div class="seg" id="tidy"><button data-v="simple">Simple</button><button data-v="balanced">Balanced</button><button data-v="even">Most even</button></div>
+          <div class="hint">Simple keeps whole letters wherever it can. Most even cuts more letters to get every spot closer to the same size.</div>
+          <label class="f">Split heavy letters into two-letter ranges</label>
+          <div class="seg" id="prefix"><button data-v="on">Yes</button><button data-v="off">No</button></div>
+          <label class="f">Men / Women spots</label>
+          <div class="seg" id="gender"><button data-v="auto">When it helps</button><button data-v="all">Every letter</button><button data-v="off">Never</button></div>
+          <div class="hint" id="genderHint"></div>
+        </div>
+        <div class="panel">
+          <h3>3. Letter rule</h3>
+          <label class="f">Go by</label>
+          <div class="seg" id="rule"><button data-v="first">First name</button><button data-v="last">Last name</button></div>
+          <label class="f">Nicknames on the card ("Stone Cold" Steve Austin)</label>
+          <div class="seg" id="nick"><button data-v="printed">As printed</button><button data-v="real">Real name</button></div>
+          <div class="hint">A leading "The" is always skipped, so The Rock is R.</div>
+        </div>
+        <div class="panel">
+          <h3>4. What counts more</h3>
+          <div class="row4">
+            <div><label class="f" for="wb">Base</label><input class="in" id="wb" type="number" step="0.5" min="0" value="1"></div>
+            <div><label class="f" for="wa">Auto</label><input class="in" id="wa" type="number" step="0.5" min="0" value="2"></div>
+            <div><label class="f" for="wi">Insert</label><input class="in" id="wi" type="number" step="0.5" min="0" value="0.5"></div>
+            <div><label class="f" for="wm">Multi</label><input class="in" id="wm" type="number" step="0.5" min="0" value="0.5"></div>
+          </div>
+          <div class="hint">Points per appearance, per box. A name in the base set and an auto set scores base plus auto.</div>
+          <label class="f" for="stars" style="margin-top:12px">Star names (name | multiplier)</label>
+          <textarea class="in" id="stars" placeholder="John Cena | 5&#10;Roman Reigns | 4&#10;Rhea Ripley | 3"></textarea>
+          <div class="hint">Use this for the names buyers actually chase, so their letters get treated as the heavy hitters they are. One huge star can't be split, so their spot may stay a bit heavier.</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="stats" id="stats"></div>
+        <div class="panel" style="margin-bottom:14px"><h3 style="margin-bottom:4px">Weight by letter</h3><div class="bars" id="bars"></div><div class="barl" id="barl"></div></div>
+        <div id="warn"></div>
+        <div class="acts2"><button class="btn gold" id="copy">Copy spot list</button><button class="btn" id="csv">Download CSV</button><button class="btn" id="expand">Show every name</button></div>
+        <div class="spotlist" id="spots"></div>
+      </div>
+    </div>
+  </section>
+
+  <section data-view="search" hidden><h2 class="display" id="srchead">Search</h2><p class="sub" id="srcsub"></p><div class="results" id="results"></div></section>
+
+  <section data-view="checklists" hidden>
+    <h2 class="display">Checklist library</h2>
+    <p class="sub">Every checklist the builder knows about. New ones get added as they come in; each is one plain text file in the site's build folder.</p>
+    <div id="lib"></div>
+  </section>
+
+  <section data-view="how" hidden>
+    <h2 class="display">How it works</h2>
+    <div class="cards">
+      <div class="card"><h3>1. Score every name</h3><ul><li>Each name earns points for every box it can come out of: base, autograph, insert, multi-person card.</li><li>Two boxes of the same product count twice.</li><li>Star multipliers scale a name up, so a Cena letter outweighs a letter full of NXT rookies.</li></ul></div>
+      <div class="card"><h3>2. Split the heavy letters</h3><ul><li>A fair share is the total score divided by your spot count.</li><li>Any letter above about 1.3 fair shares gets cut, either by second letter (SA-SH, SI-SZ) or into Men and Women, whichever evens it out better.</li><li>It keeps cutting until there are enough pieces to fill every spot.</li></ul></div>
+      <div class="card"><h3>3. Pack the spots</h3><ul><li>Best balance: biggest pieces go first into the lightest spot, then it swaps pieces between the heaviest and lightest spots until nothing improves.</li><li>A to Z order: finds the cut points along the alphabet that land closest to a fair share each.</li></ul></div>
+      <div class="card"><h3>4. Price it (optional)</h3><ul><li>Enter what you need the break to bring in, and each spot is priced by its share of the total score, rounded to the dollar.</li><li>Treat it as a starting point. Hype, rookies and case hits move real prices.</li></ul></div>
+    </div>
+    <p class="note">The score is only as good as the checklist and your star list. Breakers still make the final call on nicknames, multi-person cards and anything the checklist misses.</p>
+  </section>
+</main>
+<div class="toast" id="toast"></div>
+<footer><div class="wrap">Main Event Card Vault. A planning tool: check the final checklist and your house rules before you list spots. <a href="/breaks/">All break guides</a></div></footer>
+
+<script>
+(function () {
+  var PRODS = __DATA__;
+  var ORDER = "ABCDEFGHIJKLMNOPQRSTUVWXYZ#";
+  var SKEY = "mecv-builder-v1";
+  var $ = function (id) { return document.getElementById(id); };
+  function esc(t) { return String(t).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  function fold(t) { return String(t).normalize("NFD").replace(/[̀-ͯ]/g, ""); }
+
+  // ---------- settings ----------
+  var S = { init: false, tidy: "simple", qty: {}, n: 21, goal: "", group: "free", prefix: "on", gender: "auto", rule: "first", nick: "printed", wb: 1, wa: 2, wi: 0.5, wm: 0.5, stars: "", paste: "" };
+  try { var saved = JSON.parse(localStorage.getItem(SKEY) || "null"); if (saved) for (var k in saved) S[k] = saved[k]; } catch (e) {}
+  if (!S.init) {
+    S.init = true;
+    ["2026-topps-stadium-club-wwe", "2026-topps-chrome-wwe", "2026-topps-cosmic-chrome-wwe", "2026-topps-chrome-wwe-sapphire"].forEach(function (id) { if (PRODS.some(function (p) { return p.id === id; })) S.qty[id] = 1; });
+  }
+  function save() { try { localStorage.setItem(SKEY, JSON.stringify(S)); } catch (e) {} }
+
+  // ---------- inputs ----------
+  function drawProds() {
+    var h = "", last = "";
+    PRODS.forEach(function (p) {
+      if (p.sport !== last) { h += '<div class="sport">' + esc(p.sport) + "</div>"; last = p.sport; }
+      var q = S.qty[p.id] || 0;
+      h += '<div class="prod"><div class="pn">' + esc(p.name) + "<small>" + p.rows.length + " names" + (p.note ? " · " + esc(p.note) : "") + '</small></div><div class="qty' + (q ? " on" : "") + '" data-id="' + p.id + '"><button data-d="-1" aria-label="Fewer boxes">&minus;</button><span>' + q + '</span><button data-d="1" aria-label="More boxes">+</button></div></div>';
+    });
+    $("prods").innerHTML = h;
+    [].forEach.call(document.querySelectorAll(".qty"), function (el) {
+      el.addEventListener("click", function (e) {
+        var b = e.target.closest("button"); if (!b) return;
+        var id = el.getAttribute("data-id"); S.qty[id] = Math.max(0, Math.min(12, (S.qty[id] || 0) + (+b.getAttribute("data-d"))));
+        drawProds(); go();
+      });
+    });
+  }
+  function seg(id) {
+    var el = $(id);
+    [].forEach.call(el.querySelectorAll("button"), function (b) {
+      b.classList.toggle("on", b.getAttribute("data-v") === S[id]);
+      b.onclick = function () { S[id] = b.getAttribute("data-v"); seg(id); go(); };
+    });
+  }
+  ["group", "prefix", "gender", "rule", "nick", "tidy"].forEach(seg);
+  ["n", "goal", "wb", "wa", "wi", "wm"].forEach(function (id) { $(id).value = S[id]; $(id).addEventListener("input", function () { S[id] = $(id).value; go(); }); });
+  ["stars", "paste"].forEach(function (id) { $(id).value = S[id]; $(id).addEventListener("input", function () { S[id] = $(id).value; go(); }); });
+
+  // ---------- names ----------
+  var SUFFIX = /^(jr\.?|sr\.?|ii|iii|iv|v)$/i;
+  function letters(name) {
+    var printed = name.replace(/"/g, "");
+    var real = name.replace(/"[^"]*"/g, " ");
+    var src = S.nick === "real" ? real : printed;
+    src = fold(src).replace(/\s+/g, " ").trim().replace(/^[^A-Za-z0-9]+/, "").replace(/^the\s+/i, "");
+    if (S.rule === "last") {
+      var t = src.split(" ").filter(function (w) { return w && !SUFFIX.test(w.replace(/,/g, "")); });
+      if (t.length > 1) src = t[t.length - 1];
+    }
+    var k = src.replace(/[^A-Za-z0-9]/g, "").toUpperCase();
+    var L = k.charAt(0) || "#";
+    if (/[0-9]/.test(L)) return ["#", "A"];
+    var L2 = k.charAt(1); if (!/[A-Z]/.test(L2)) L2 = "A";
+    return [L, L2];
+  }
+  function starMap() {
+    var out = [];
+    String(S.stars || "").split(/\n/).forEach(function (l) {
+      var p = l.split("|"); var nm = fold(p[0] || "").toLowerCase().replace(/"/g, "").trim(); var m = parseFloat(p[1]);
+      if (nm.length >= 3) out.push([nm, isFinite(m) && m > 0 ? m : 3]);
+    });
+    return out;
+  }
+  function collect() {
+    var wb = +S.wb || 0, wa = +S.wa || 0, wi = +S.wi || 0, wm = +S.wm || 0;
+    var map = {}, boxes = 0;
+    function add(name, flags, g, q) {
+      var w = (flags.indexOf("B") > -1 ? wb : 0) + (flags.indexOf("A") > -1 ? wa : 0) + (flags.indexOf("I") > -1 ? wi : 0) + (flags.indexOf("M") > -1 ? wm : 0);
+      var r = map[name] || (map[name] = { n: name, w: 0, g: "", a: false });
+      r.w += w * q; if (g) r.g = g; if (flags.indexOf("A") > -1) r.a = true;
+    }
+    PRODS.forEach(function (p) { var q = S.qty[p.id] || 0; if (!q) return; boxes += q; p.rows.forEach(function (r) { add(r[0], r[1], r[2], q); }); });
+    String(S.paste || "").split(/\n/).forEach(function (l) {
+      var parts = l.split("|").map(function (x) { return x.trim(); }); if (!parts[0]) return;
+      var g = "", f = "B";
+      parts.slice(1).forEach(function (x) { var u = x.toUpperCase(); if (u === "W" || u === "F" || u === "WOMEN") g = "F"; else if (u === "AUTO" || u === "A") f = "BA"; });
+      add(parts[0], f, g, 1);
+    });
+    if (S.paste.trim()) boxes++;
+    var stars = starMap();
+    var list = Object.keys(map).map(function (k) { return map[k]; }).filter(function (r) { return r.w > 0; });
+    list.forEach(function (r) {
+      var f = fold(r.n).toLowerCase().replace(/"/g, ""), m = 1;
+      stars.forEach(function (s) { if (f === s[0] || (" " + f + " ").indexOf(" " + s[0] + " ") > -1) m = Math.max(m, s[1]); });
+      r.w *= m; r.star = m > 1;
+      var L = letters(r.n); r.L = L[0]; r.L2 = L[1];
+      if (r.g !== "F") r.g = "M";
+    });
+    return { list: list, boxes: boxes };
+  }
+
+  // ---------- units ----------
+  function sum(a) { var t = 0; a.forEach(function (x) { t += x.w; }); return t; }
+  function unit(L, g, lo, hi, names) { return { L: L, g: g, lo: lo, hi: hi, names: names, w: sum(names) }; }
+  function nextL(c) { return String.fromCharCode(c.charCodeAt(0) + 1); }
+  function splitOptions(u, allowGender) {
+    var opts = [];
+    if (allowGender && u.g === null) {
+      var m = u.names.filter(function (x) { return x.g !== "F"; }), f = u.names.filter(function (x) { return x.g === "F"; });
+      var wm = sum(m), wf = sum(f);
+      if (m.length && f.length && Math.min(wm, wf) >= 0.18 * u.w) opts.push([unit(u.L, "M", u.lo, u.hi, m), unit(u.L, "F", u.lo, u.hi, f)]);
+    }
+    if (S.prefix === "on" && u.L !== "#") {
+      var by = {}; u.names.forEach(function (x) { (by[x.L2] = by[x.L2] || []).push(x); });
+      var keys = Object.keys(by).sort();
+      if (keys.length > 1) {
+        var best = null, left = 0, tot = u.w;
+        for (var i = 0; i < keys.length - 1; i++) {
+          left += sum(by[keys[i]]);
+          var mx = Math.max(left, tot - left);
+          if (!best || mx < best.mx) best = { mx: mx, i: i };
+        }
+        var cut = keys[best.i];
+        var a = u.names.filter(function (x) { return x.L2 <= cut; }), b = u.names.filter(function (x) { return x.L2 > cut; });
+        opts.push([unit(u.L, u.g, u.lo, cut, a), unit(u.L, u.g, nextL(cut), u.hi, b)]);
+      }
+    }
+    return opts;
+  }
+  function buildUnits(list, N) {
+    var by = {}; list.forEach(function (x) { (by[x.L] = by[x.L] || []).push(x); });
+    var hasF = list.some(function (x) { return x.g === "F"; });
+    var gmode = hasF ? S.gender : "off";
+    var units = [];
+    ORDER.split("").forEach(function (L) {
+      var ns = by[L]; if (!ns) return;
+      var m = ns.filter(function (x) { return x.g !== "F"; }), f = ns.filter(function (x) { return x.g === "F"; });
+      if (gmode === "all" && m.length && f.length) { units.push(unit(L, "M", "A", "Z", m)); units.push(unit(L, "F", "A", "Z", f)); }
+      else units.push(unit(L, null, "A", "Z", ns));
+    });
+    var total = sum(units), T = total / N;
+    for (var guard = 0; guard < 400; guard++) {
+      var cand = units.filter(function (u) { return !u.stuck; }).sort(function (a, b) { return b.w - a.w; });
+      if (!cand.length) break;
+      var u = cand[0];
+      if (units.length >= N && u.w <= 1.3 * T) break;
+      var opts = splitOptions(u, gmode === "auto");
+      if (!opts.length) { u.stuck = true; continue; }
+      opts.sort(function (a, b) { return Math.max(a[0].w, a[1].w) - Math.max(b[0].w, b[1].w); });
+      var i = units.indexOf(u); units.splice(i, 1, opts[0][0], opts[0][1]);
+    }
+    return { units: units, total: total, gmode: gmode, hasF: hasF, base: Object.keys(by).length };
+  }
+  function uorder(u) { return ORDER.indexOf(u.L) * 1000 + (u.lo.charCodeAt(0) - 65) * 10 + (u.g === "F" ? 2 : u.g === "M" ? 1 : 0); }
+
+  // ---------- packing ----------
+  function packFree(units, N) {
+    var bins = []; for (var i = 0; i < N; i++) bins.push({ u: [], w: 0 });
+    units.slice().sort(function (a, b) { return b.w - a.w; }).forEach(function (u) {
+      var t = bins.reduce(function (m, b) { return b.w < m.w ? b : m; }, bins[0]); t.u.push(u); t.w += u.w;
+    });
+    for (var it = 0; it < 3000; it++) {
+      var H = bins.reduce(function (m, b) { return b.w > m.w ? b : m; }, bins[0]);
+      var L = bins.reduce(function (m, b) { return b.w < m.w ? b : m; }, bins[0]);
+      var diff = H.w - L.w; if (diff <= 1e-9) break;
+      var best = null;
+      H.u.forEach(function (a, ai) {
+        if (a.w < diff && H.u.length > 1) { var g = Math.abs(diff / 2 - a.w); if (!best || g < best.g) best = { g: g, ai: ai, bi: -1, d: a.w }; }
+        L.u.forEach(function (b, bi) { var d = a.w - b.w; if (d > 1e-9 && d < diff) { var g2 = Math.abs(diff / 2 - d); if (!best || g2 < best.g) best = { g: g2, ai: ai, bi: bi, d: d }; } });
+      });
+      if (!best) break;
+      var a = H.u[best.ai];
+      if (best.bi < 0) { H.u.splice(best.ai, 1); L.u.push(a); }
+      else { var b = L.u[best.bi]; H.u[best.ai] = b; L.u[best.bi] = a; }
+      H.w -= best.d; L.w += best.d;
+    }
+    return bins;
+  }
+  function packAlpha(units, N) {
+    var u = units.slice().sort(function (a, b) { return uorder(a) - uorder(b); });
+    var U = u.length, K = Math.min(N, U), T = sum(u) / N;
+    var pre = [0]; u.forEach(function (x, i) { pre.push(pre[i] + x.w); });
+    var INF = 1e18, dp = [], cut = [];
+    for (var k = 0; k <= K; k++) { dp.push(new Array(U + 1).fill(INF)); cut.push(new Array(U + 1).fill(0)); }
+    dp[0][0] = 0;
+    for (k = 1; k <= K; k++) for (var j = k; j <= U; j++) for (var i = k - 1; i < j; i++) {
+      if (dp[k - 1][i] >= INF) continue; var s = pre[j] - pre[i], c = dp[k - 1][i] + (s - T) * (s - T);
+      if (c < dp[k][j]) { dp[k][j] = c; cut[k][j] = i; }
+    }
+    var bins = [], j2 = U;
+    for (k = K; k >= 1; k--) { var i2 = cut[k][j2]; var part = u.slice(i2, j2); bins.unshift({ u: part, w: sum(part) }); j2 = i2; }
+    while (bins.length < N) bins.push({ u: [], w: 0 });
+    return bins;
+  }
+
+  function ratio(bins) { var w = bins.map(function (b) { return b.w; }); var hi = Math.max.apply(null, w); return hi ? Math.min.apply(null, w) / hi : 0; }
+  function solve(U, N) {
+    var best = null;
+    for (var r = 0; r < 24; r++) {
+      var bins = S.group === "alpha" ? packAlpha(U.units, N) : packFree(U.units, N);
+      var lam = S.tidy === "balanced" ? 0.012 : S.tidy === "even" ? 0.003 : 0.035;
+      var crowd = 0; bins.forEach(function (b) { crowd += Math.max(0, b.u.length - 2); });
+      var score = ratio(bins) - lam * Math.max(0, U.units.length - U.base) - lam / 2 * crowd;
+      if (!best || score > best.score) best = { bins: bins, score: score };
+      var H = bins.reduce(function (m, b) { return b.w > m.w ? b : m; }, bins[0]);
+      var cand = H.u.filter(function (u) { return !u.stuck; }).sort(function (a, b) { return b.w - a.w; });
+      var u = cand[0]; if (!u) break;
+      var opts = splitOptions(u, U.gmode === "auto");
+      if (!opts.length) { u.stuck = true; continue; }
+      opts.sort(function (a, b) { return Math.max(a[0].w, a[1].w) - Math.max(b[0].w, b[1].w); });
+      var i = U.units.indexOf(u); U.units.splice(i, 1, opts[0][0], opts[0][1]);
+    }
+    return best.bins;
+  }
+
+  // ---------- labels ----------
+  function ulabel(u) { return u.L === "#" ? "123" : (u.lo === "A" && u.hi === "Z" ? u.L : u.lo === u.hi ? u.L + u.lo : u.L + u.lo + "-" + u.L + u.hi); }
+  function mergeUnits(us) {
+    var out = [];
+    us.slice().sort(function (a, c) { return uorder(a) - uorder(c); }).forEach(function (u) {
+      var p = out[out.length - 1];
+      if (p && p.L === u.L && p.g === u.g && nextL(p.hi) === u.lo) out[out.length - 1] = { L: u.L, g: u.g, lo: p.lo, hi: u.hi, w: p.w + u.w };
+      else out.push({ L: u.L, g: u.g, lo: u.lo, hi: u.hi, w: u.w });
+    });
+    // a letter whose Men and Women halves are both whole and both here reads as the plain letter
+    var res = [];
+    out.forEach(function (u) {
+      var twin = res.filter(function (r) { return r.L === u.L && r.lo === "A" && r.hi === "Z" && r.g && u.g && r.g !== u.g && u.lo === "A" && u.hi === "Z"; })[0];
+      if (twin) { twin.g = null; } else res.push(u);
+    });
+    return res;
+  }
+  function binLabel(b) {
+    var us = mergeUnits(b.u);
+    // collapse a letter back to plain when the bin holds all of it
+    var byL = {}; us.forEach(function (u) { (byL[u.L] = byL[u.L] || []).push(u); });
+    var parts = [];
+    Object.keys(byL).sort(function (a, c) { return ORDER.indexOf(a) - ORDER.indexOf(c); }).forEach(function (L) {
+      var g = byL[L]; parts.push({ L: L, us: g });
+    });
+    var genders = {};
+    var segs = parts.map(function (p) {
+      var labs = p.us.map(ulabel).filter(function (v, i, a) { return a.indexOf(v) === i; });
+      var gs = p.us.map(function (u) { return u.g; }).filter(function (v, i, a) { return a.indexOf(v) === i; });
+      var g = gs.length === 1 ? gs[0] : null;
+      genders[g || "x"] = 1;
+      var full = p.us.some(function (u) { return u.lo === "A"; }) && p.us.some(function (u) { return u.hi === "Z"; }) && labs.length > 1;
+      return { lab: full ? (p.L === "#" ? "123" : p.L) : labs.join(" + "), g: g, plain: full || (labs.length === 1 && labs[0].length === 1) };
+    });
+    var gk = Object.keys(genders);
+    var sub = gk.length === 1 && gk[0] !== "x" ? (gk[0] === "M" ? "Men" : "Women") : "";
+    var txt = [], run = [];
+    function flush() { if (run.length >= 3 && S.group === "alpha") txt.push(run[0] + "-" + run[run.length - 1]); else txt = txt.concat(run); run = []; }
+    segs.forEach(function (s) {
+      var lab = s.lab + (!sub && s.g ? " " + (s.g === "M" ? "Men" : "Women") : "");
+      if (s.plain && !(!sub && s.g) && /^[A-Z]$/.test(s.lab)) { if (run.length && ORDER.indexOf(s.lab) !== ORDER.indexOf(run[run.length - 1]) + 1) flush(); run.push(s.lab); }
+      else { flush(); txt.push(lab); }
+    });
+    flush();
+    return { label: txt.join(" / "), sub: sub };
+  }
+
+  // ---------- render ----------
+  var LAST = null, expandAll = false;
+  function go() { save(); clearTimeout(go.t); go.t = setTimeout(run, 60); }
+  function run() {
+    var N = Math.max(2, Math.min(80, parseInt(S.n, 10) || 21));
+    var c = collect(), list = c.list;
+    $("genderHint").textContent = list.length && !list.some(function (x) { return x.g === "F"; }) ? "None of the picked checklists mark women, so there are no Men / Women splits." : "Only checklists that mark women can split this way (WWE ones do).";
+    if (!list.length) { $("stats").innerHTML = ""; $("bars").innerHTML = ""; $("barl").innerHTML = ""; $("warn").innerHTML = ""; $("spots").innerHTML = '<div class="empty">Pick at least one checklist, or paste some names, to build spots.</div>'; LAST = null; return; }
+    var U = buildUnits(list, N), bins = solve(U, N);
+    bins.forEach(function (b) { var l = binLabel(b); b.label = l.label; b.sub = l.sub; b.names = []; b.u.forEach(function (u) { b.names = b.names.concat(u.names); }); b.ord = b.u.length ? Math.min.apply(null, b.u.map(uorder)) : 1e9; });
+    bins.sort(function (a, b) { return a.ord - b.ord; });
+    var used = bins.filter(function (b) { return b.u.length; });
+    var total = U.total, fair = total / N, goal = parseFloat(S.goal) || 0;
+    var ws = used.map(function (b) { return b.w; }), hi = Math.max.apply(null, ws), lo = Math.min.apply(null, ws);
+    LAST = { bins: bins, total: total, N: N, goal: goal };
+    $("stats").innerHTML = [
+      [list.length, "names"], [c.boxes, c.boxes === 1 ? "box" : "boxes"], [used.length + (used.length < N ? " of " + N : ""), "spots"],
+      [Math.round(lo / hi * 100) + "%", "lightest vs heaviest"]
+    ].concat(goal ? [["$" + Math.round(goal * lo / total) + " to $" + Math.round(goal * hi / total), "price range"]] : []).map(function (s) { return '<div class="stat"><b>' + s[0] + "</b><span>" + s[1] + "</span></div>"; }).join("");
+    // letter bars
+    var lw = {}; list.forEach(function (x) { lw[x.L] = (lw[x.L] || 0) + x.w; });
+    var mx = Math.max.apply(null, ORDER.split("").map(function (L) { return lw[L] || 0; }));
+    $("bars").innerHTML = ORDER.split("").map(function (L) { var w = lw[L] || 0; return '<div class="' + (w > 1.3 * fair ? "hot" : "") + '" style="height:' + Math.max(2, w / mx * 100) + '%" title="' + L + ": " + (w / total * 100).toFixed(1) + '% of the total"></div>'; }).join("");
+    $("barl").innerHTML = ORDER.split("").map(function (L) { return "<span>" + (L === "#" ? "1" : L) + "</span>"; }).join("");
+    $("warn").innerHTML = used.length < N ? '<div class="warn">These checklists can only fill ' + used.length + " spots without splitting letters further than they can go. Try fewer spots, or turn on two-letter splits.</div>" : "";
+    $("spots").innerHTML = bins.map(function (b, i) {
+      if (!b.u.length) return "";
+      var top = b.names.slice().sort(function (x, y) { return y.w - x.w; }).slice(0, 7).map(function (x) { return x.n; });
+      var autos = b.names.filter(function (x) { return x.a; }).length;
+      var share = b.w / total * 100;
+      return '<details class="spot"' + (expandAll ? " open" : "") + "><summary><span class=\"no\">" + (i + 1) + '</span><span class="lb display">' + esc(b.label) + (b.sub ? "<small>" + b.sub + "</small>" : "") + '</span><span class="mid"><div class="meter"><i style="width:' + Math.min(100, b.w / hi * 100) + '%"></i></div><div class="top">' + esc(top.join(", ")) + '</div></span><span class="nums">' +
+        (goal ? '<span class="pr">$' + Math.round(goal * b.w / total) + "</span><br>" : "") + "<b>" + share.toFixed(1) + "%</b> · " + b.names.length + " names<br>" + autos + " with autos</span></summary>" +
+        '<div class="all">' + b.names.slice().sort(function (x, y) { return fold(x.n.replace(/^"|^the /i, "")).localeCompare(fold(y.n.replace(/^"|^the /i, ""))); }).map(function (x) { return esc(x.n) + (x.a ? '<span class="a">AUTO</span>' : "") + (x.star ? '<span class="a">STAR</span>' : ""); }).join(", ") + "</div></details>";
+    }).join("");
+    if (location.hash.indexOf("#/search/") === 0) drawSearch(decodeURIComponent(location.hash.slice(9)));
+  }
+
+  function textOut() {
+    if (!LAST) return "";
+    return LAST.bins.filter(function (b) { return b.u.length; }).map(function (b, i) {
+      return (i + 1) + ". " + b.label + (b.sub ? " (" + b.sub + ")" : "") + (LAST.goal ? ": $" + Math.round(LAST.goal * b.w / LAST.total) : "") + " | " + b.names.length + " names | " + b.names.slice().sort(function (x, y) { return y.w - x.w; }).slice(0, 5).map(function (x) { return x.n; }).join(", ");
+    }).join("\n");
+  }
+  function toast(m) { var t = $("toast"); t.textContent = m; t.classList.add("show"); setTimeout(function () { t.classList.remove("show"); }, 1600); }
+  $("copy").onclick = function () {
+    var txt = textOut(); if (!txt) return;
+    function fallback() { var ta = document.createElement("textarea"); ta.value = txt; document.body.appendChild(ta); ta.select(); try { document.execCommand("copy"); toast("Spot list copied"); } catch (e) { toast("Copy failed"); } ta.remove(); }
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(function () { toast("Spot list copied"); }, fallback); else fallback();
+  };
+  $("csv").onclick = function () {
+    if (!LAST) return;
+    var q = function (s) { return '"' + String(s).replace(/"/g, '""') + '"'; };
+    var rows = [["Spot", "Label", "Group", "Share %", "Names", "Price", "All names"]].concat(LAST.bins.filter(function (b) { return b.u.length; }).map(function (b, i) {
+      return [i + 1, b.label, b.sub, (b.w / LAST.total * 100).toFixed(1), b.names.length, LAST.goal ? Math.round(LAST.goal * b.w / LAST.total) : "", b.names.map(function (x) { return x.n; }).join("; ")];
+    }));
+    var a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([rows.map(function (r) { return r.map(q).join(","); }).join("\n")], { type: "text/csv" }));
+    a.download = "spot-list.csv"; document.body.appendChild(a); a.click(); a.remove();
+  };
+  $("expand").onclick = function () { expandAll = !expandAll; this.textContent = expandAll ? "Hide names" : "Show every name"; [].forEach.call(document.querySelectorAll(".spot"), function (d) { d.open = expandAll; }); };
+
+  function drawSearch(raw) {
+    var q = fold(raw.trim()).toLowerCase(), out = [];
+    if (LAST && q) LAST.bins.forEach(function (b, i) { b.names.forEach(function (x) { if (fold(x.n).toLowerCase().indexOf(q) > -1) out.push([x, b, i]); }); });
+    $("srchead").textContent = q ? 'Where "' + raw.trim() + '" lands' : "Search";
+    $("srcsub").textContent = !LAST ? "Build some spots first." : q ? (out.length ? out.length + " match" + (out.length === 1 ? "" : "es") + " in the current build." : "Not in the checklists you picked.") : "Type a name.";
+    $("results").innerHTML = out.slice(0, 200).map(function (r) { return '<a class="res" style="--c:var(--gold)" href="#/build"><span><span class="nm">' + esc(r[0].n) + '</span><br><span class="pr">Spot ' + (r[2] + 1) + (r[1].sub ? " · " + r[1].sub : "") + '</span></span><span class="sp display">' + esc(r[1].label) + "</span></a>"; }).join("");
+  }
+
+  function drawLib() {
+    $("lib").innerHTML = '<table class="rows"><tbody>' + PRODS.map(function (p) {
+      var a = p.rows.filter(function (r) { return r[1].indexOf("A") > -1; }).length, w = p.rows.filter(function (r) { return r[2] === "F"; }).length;
+      return "<tr><th style=\"width:auto\"><span style=\"color:var(--ink)\">" + esc(p.name) + "</span><br><small style=\"color:var(--ink-3);font-weight:400\">" + esc(p.sport) + (p.added ? " · added " + esc(p.added) : "") + "</small></th><td>" + p.rows.length + " names<br><small>" + a + " with autos" + (w ? ", " + w + " women" : "") + "</small></td><td>" + (p.note ? esc(p.note) + "<br>" : "") + (p.source ? '<a href="' + esc(p.source) + '" target="_blank" rel="noopener" style="color:var(--gold-2)">Source checklist</a>' : "") + "</td></tr>";
+    }).join("") + "</tbody></table>";
+  }
+
+  var qEl = $("q"), typing;
+  qEl.addEventListener("input", function () { clearTimeout(typing); typing = setTimeout(function () { var v = qEl.value.trim(); var h = v ? "#/search/" + encodeURIComponent(v) : "#/build"; if (location.hash !== h) history.replaceState(null, "", h); route(); }, 120); });
+  function show(v) {
+    [].forEach.call(document.querySelectorAll("[data-view]"), function (el) { el.hidden = el.getAttribute("data-view") !== v; });
+    [].forEach.call(document.querySelectorAll("#tabs a"), function (a) { a.classList.toggle("on", a.getAttribute("data-v") === v); });
+    document.body.classList.toggle("compact", v !== "build");
+  }
+  function route() {
+    var h = location.hash.replace(/^#\/?/, ""), parts = h.split("/"), v = parts[0] || "build";
+    if (v === "search") { var term = decodeURIComponent(parts.slice(1).join("/")); if (qEl.value.trim() !== term) qEl.value = term; show("search"); drawSearch(term); return; }
+    qEl.value = "";
+    if (v === "checklists") { show("checklists"); drawLib(); } else if (v === "how") show("how"); else show("build");
+  }
+  window.addEventListener("hashchange", function () { route(); window.scrollTo(0, 0); });
+  drawProds(); run(); route();
+})();
+</script>
+</body>
+</html>

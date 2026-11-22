@@ -117,6 +117,19 @@ team spot, box by box. Linked from the storefront's Breaks menu; every page carr
   `<!--BMENU-->` markers, including into `build/template.html`. After adding a break, run
   `build.py`, then `hub.py`, then `python3 build/build_site.py` so the storefront picks it up.
 
+### Spot builder and the checklist library
+
+- `breaks/builder.html` (served at `/breaks/builder`) is the Spot Builder: pick checklists and box
+  counts, set a spot count, and it balances letters into that many spots. Heavy letters get split
+  into two-letter ranges or Men / Women. It also offers an optional sales goal for pricing, and
+  copy and CSV export. Settings save in the visitor's browser.
+- **Checklist library:** `build/breaks/checklists/*.txt`, one plain text file per product. The format
+  is documented at the top of `build/breaks/builder.py` (`[base]` / `[auto]` / `[insert]` /
+  `[multi]` sections, `| W` marks women, `| Team` for team products).
+- **Weekly routine when Daniel sends new checklists:** add one `.txt` per product, then run
+  `python3 build/breaks/builder.py && python3 build/breaks/hub.py`, check the Checklist library
+  tab, and push. Break guide pages built by `build.py` still read `wwe_data.py` / `team_data.py`.
+
 ## Iron Ledger and worker.js
 
 - `iron-ledger.html` is Daniel's personal workout tracker, served at `/iron-ledger`.

@@ -1,0 +1,359 @@
+# name: 2026 Topps Chrome Star Wars
+# sport: Star Wars
+# added: 2026-11-22
+# source: https://www.checklistcenter.com/2026-topps-chrome-star-wars-entertainment-card-checklist/
+
+[base]
+8D8
+Aayla Secura
+Admiral Ackbar
+Ahsoka Tano
+Anakin Skywalker
+Asajj Ventress
+At Attin frogdog
+B-1 Mercenary Droid
+B-2 Mercenary Droid
+B2EMO
+Babu Frik
+Bail Organa
+Bardi
+Barriss Offee
+Baylan Skoll
+BB-8
+BDX Droid
+Beef
+Beela
+Ben Quadinaros
+Bix Caleen
+Bo-Katan Kryze
+Boba Fett
+Bobbajo
+Bossk
+Brander Lawson
+Bubbles
+C-3PO
+Cad Bane
+Captain Canady
+Captain Enoch
+Captain Gilad Pellaeon
+Captain Kaido
+Captain Peavey
+Captain Phasma
+Captain Typho
+Carro Rylanz
+Cassian Andor
+Chewbacca
+Chirrut Îmwe
+Chopper
+Cinta Kaz
+Clem Andor
+Clone Captain Rex
+Cobb Vanth
+Colonel Aftab Ackbar
+Colonel Ward
+Commissioner Helgait
+Count Dooku
+D-O
+Darth Maul
+Darth Vader
+Davo Sculdun
+Dedra Meero
+Devon Izara
+Dobbu Scay
+Dr. Royce Hemlock
+Drash
+Dreena
+Droopy McCool
+Dryden Vos
+Eedy Karn
+Eleventh Brother
+Elia Kane
+Embo
+Emperor Palpatine
+Enza Rylanz
+Erskin Semaj
+Even Piell
+Ezra Bridger
+Fennec Shand
+Finn
+Freck
+Gatori
+General Draven
+General Grievous
+General Hux
+General Maximilian Veers
+Gerdis
+Ghorman Spider
+Grand Admiral Thrawn
+Great Mother Lakesis
+Greef Karga
+Grogu
+Haja Estree
+Hamato Xiono
+Han Solo
+Hera Syndulla
+Hugo Durant
+Hutt Brother
+Hutt Sister
+Huyang
+Hype Fazon
+Icarus
+Imperial Inquisitor
+Imperial Remnant Snowtrooper
+Jabba the Hutt
+Jace Rucklin
+Jan Dodonna
+Jar Jar Binks
+Jawa
+Jedi Master Indara
+Jedi Master Sol
+Jedi Padawan Jecki Lon
+Jod Na Nawood
+Jyn Erso
+K-2SO
+Kanan Jarrus
+Keibu
+Klatooinian Crime Boss
+Kleya Marki
+Krrsantan
+Kuiil
+Kylo Ren
+L3-37
+Lando Calrissian
+Leia Organa
+Leida Mothma
+Lezine
+Lieutenant Connix
+Looti Vario
+Lord Janu
+Lovey
+Luke Skywalker
+Luminara Unduli
+Luthen Rael
+Lyco Strata
+Mace Windu
+Massiff
+Master Eeko-Dio Daki
+Maul
+Maz Kanata
+Moff Gideon
+Moff Tarkin
+Mon Mothma
+Morgan Elsbeth
+Mrs. Ikk
+Neel
+Niro
+Nooma
+Noti
+Oathkeeper
+Obi-Wan Kenobi
+Omega
+Omera
+Oppo Rancisis
+Owen Lars
+Padmé Amidala
+Perrin Fertha
+Pix the Tooka
+Plo Koon
+Poe Dameron
+Ponda Baba
+Qi'ra
+Qui-Gon Jinn
+R2-D2
+Rabé
+Ralakili
+Ranzar "Ran" Malk
+Raxshir
+Rey
+Rook Kast
+Rose Tico
+Rotta the Hutt
+Runai Sculdun
+Rune Haako
+Sabine Wren
+Samm
+Saw Gerrera
+Scorn
+Senator Oran
+Sergeant Gharial
+Sergeant Heert
+Shin Hati
+Sidon Ithano
+SM-33
+Spybot
+Stekan Sculdun
+Supervisor Lagret
+Supervisor Lonni Jung
+Supreme Leader Snoke
+Sy Snootles
+Syril Karn
+Tallie Lintra
+Taun We
+The Armorer
+The Duchess of Plazir
+The Grand Inquisitor
+The Mandalorian
+The Stranger
+Tusken Raider Warrior
+Vane
+Vel Sartha
+Vult Skerris
+Wizzich Mozzer
+Yaddle
+Yoda
+Zeb Orrelios
+Zorii Bliss
+
+[auto]
+Adi Gallia
+Alexsandr Kallus
+Amilyn Holdo
+Anée-San
+AZI-3
+Bala-Tik
+Bandit Leader
+Beaumont Kin
+Bendu
+Bodhi Rook
+Brasso
+Captain Brutus
+Captain Panaka
+Commander D'Acy
+Crane
+DJ
+Dr. Gorst
+Duke Kayo Organa
+F
+Gall Trayvis
+Gha Nachkt
+IG-11
+Jedi Master Kratu
+Ketsu Onyo
+Klothow
+Kravas Drezzer
+Lah Zhima
+Lieutenant Beyta
+Lieutenant Mitaka
+Lok Durd
+Lux Bonteri
+Maarva Andor
+Major Partagaz
+Peli Motto
+Phee Genoa
+Poggle the Lesser
+Quinlan Vos
+Reva
+Rio Durant
+Ryder Azadi
+Sabé
+Seventh Sister
+Shaak Ti
+Snap Wexley
+Tay Kolma
+The Client
+Tion Medon
+Unkar Plutt
+Val
+Wilmon Paak
+Wrobie Tyce
+Yuko
+
+[insert]
+Anzellan
+Bai
+Chita
+Clang
+Clone Commander Cody
+Clone Trooper
+Darth Sidious
+Death Trooper
+Director Krennic
+Dokma
+Ewok
+Fox-Ear
+Ghhhk
+Grand Master
+Greedo
+Houjix
+Hutt Twins
+Imperial Red Guard
+Imperial Remnant AT-AT Driver
+Jango Fett
+K'lor'slug
+Kaydel Ko Connix
+Keeto
+Kintan Strider
+Kit Fisto
+Lah Kara
+Lava Meerkat
+Loth-Cat
+Mantellian Savrip
+Max Rebo
+Minch
+Molatar
+Monnok
+Myykian
+Nakime
+Ng'ok
+Oki-Poki
+Paz Vizsla
+Porg
+Puffer Pig
+Queen Amidala
+R5-D4
+Ronin
+Savage Opress
+Scout Trooper
+Shad-Rah
+Stormtrooper
+Teto
+The Emperor
+Tie Fighter Pilot
+Tooka Cat
+Trash Crab
+Vice Admiral Holdo
+Wookiee
+Woopas
+
+[multi]
+Clone Commander Cody / Darth Sidious
+Cassian Andor / K-2SO
+Han Solo / Chewbacca
+Rey / Lando Calrissian
+Captain Phasma / DJ
+Chewbacca / Darth Vader
+C-3PO / R2-D2
+Dedra Meero / Luthen Rael
+Jango Fett / Boba Fett
+Jyn Erso / Mon Mothma
+Darth Vader / Obi-Wan Kenobi
+Rey / Unkar Plutt
+Boba Fett / Han Solo
+Garsa Fwip / Fennec Shand
+Anakin Skywalker / Padmé Amidala
+Sabé / Senator Palpatine
+Jedi Master Sol / The Stranger
+Padmé Amidala / C-3PO
+Kleya Marki / Luthen Rael
+Supreme Chancellor Palpatine / Mace Windu
+Kylo Ren / Han Solo
+IG-11 / Moff Gideon
+Major Partagaz / Syril Karn / Dedra Meero
+Cassian Andor / Kleya Marki / Mon Mothma
+Rex / Ezra Bridger / Kanan Jarrus
+Rey / Chewbacca / R2-D2
+Syril Karn / Eedy Karn / Dedra Meero
+Han Solo / Qi'ra / Dryden Vos
+Leida Mothma / Mon Mothma / Perrin Fertha
+Hera Syndulla / Mon Mothma / C-3PO
+Darth Sidious / Darth Maul / Padmé Amidala
+Koska Reeves / Bo-Katan Kryze / The Armorer
+SM-33 / Jod Na Nawood / KB
+Zorii Bliss / Poe Dameron / D-O
+Ahsoka Tano / Huyang / Sabine Wren
+Bodhi Rook / Saw Gerrera / Jyn Erso
+Mace Windu / Jango Fett / Boba Fett
+Babu Frik / Zorii Bliss / BB-8
+BB-8 / D-O / Babu Frik
+Drash / Krrsantan / Fennec Shand
+Luke Skywalker / Han Solo / Chewbacca

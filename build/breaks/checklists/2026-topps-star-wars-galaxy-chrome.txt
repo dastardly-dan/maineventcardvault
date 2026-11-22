@@ -1,0 +1,285 @@
+# name: 2026 Topps Star Wars Galaxy Chrome
+# sport: Star Wars
+# added: 2026-11-22
+# source: https://www.checklistcenter.com/2026-topps-star-wars-galaxy-chrome-entertainment-card-checklist/
+# note: Base cards are art titles, not character names
+
+[base]
+"Look, Sir, Droids!"
+A Chilly Reception
+A New Day for Luke Skywalker
+Ahsoka Tano and Sabine Wren
+Ahsoka Tano's Path
+Anakin Skywalker's Sunset
+Aurra Sing
+Battle In the Arena
+Battle of Endor
+Boba Fett
+Bounty Hunters
+C-3PO & Babu Frik
+Can You Speak Bocce?
+Carbonite
+Carbonite Captor
+Cassian Andor & K-2SO
+Celebration On Endor
+Chewbacca On Hoth
+Cloud City Escape
+Count Dooku
+Crait Showdown
+Darth Vader
+Darth Vader at Hoth
+Death Star Duel
+Educating Luke
+Fighting Back
+FOR MANDALORE
+General Grievous
+Grand Master Yoda
+Grogu
+Grogu Reaches Out
+I Have You Now
+Imminent Danger
+Into the Storm
+It's A Trap!
+Jango Fett's Legacy
+Jawas' Score
+Lando Calrissian
+Last Look Back
+Life in Exile
+Life On Hoth
+Logray
+Luke Skywalker
+Machines of Dominion
+Master And Apprentice
+Maz Kanata
+Naboo Space Battle
+No Squeezie!
+Obi-Wan Kenobi On The Run
+On Hoth
+Only Hope
+Padmé Amidala In The Senate
+Padmé Amidala vs. the Nexu
+Peace Is A Lie
+Poe Dameron & BB-8
+Power of the Dark Side
+Pull To The Light
+Qui-Gon Jinn
+Raider Ambush
+Rebel Base
+Rebel Pilot
+Released From Carbonite
+Save The Dream
+Scarif Attack
+Shin Hati
+Smugglers
+Sol
+Solo Standoff
+Tarkin
+The Chosen One
+The Clones Advance
+The Dark Lord
+The Emperor
+The Failed Execution
+The Falcon Escapes
+The Generals
+The Gift
+The Knights Of Ren
+The Mandalorian's Escape
+The Queen of Naboo
+The Rematch
+The Royal Guard
+The Savior
+The Seeker
+The Stranger
+The Trinity of Evil
+The Twins
+There Aren't Many Jedi Left
+Three Bounty Hunters
+Through the Asteroid Field
+Trust the Force
+Unyielding
+Vel Sartha
+Vulture Droids
+We Meet Again, At Last
+What Lies Beneath!
+YAHOOO
+You Need A Teacher
+You're Not Actually Going Into an Asteroid Field?
+Zorii Bliss
+
+[auto]
+Ahsoka Tano
+Am
+Anakin Skywalker
+Bix Caleen
+Bo-Katan Kryze
+Boba Fett
+C-3PO
+Cassian Andor
+Chewbacca
+Cobb Vanth
+Commissioner Helgait
+Darth Maul
+Darth Sidious
+Dedra Meero
+Fennec Shand
+Finn
+General Hux
+Grand Admiral Thrawn
+Han Solo
+Hera Syndulla
+Huyang
+Hype Fazon
+IG-11
+Jar Jar Binks
+Jecki Lon
+Jedi Master Indara
+Jedi Master Sol
+Jod Na Nawood
+Jyn Erso
+K-2SO
+Kanan Jarrus
+Kylo Ren
+Lando Calrissian
+Lok Durd
+Luke Skywalker
+Luthen Rael
+Mace Windu
+Obi-Wan Kenobi
+Padmé Amidala
+Pokkit
+Qi'ra
+Reva
+Rey
+Sabé
+Sabine Wren
+Shin Hati
+SM-33
+Supreme Leader Snoke
+The Armorer
+The Duchess
+The Grand Inquisitor
+The Mandalorian
+The Stranger
+Unkar Plutt
+Vice Admiral Holdo
+Zorii Bliss
+
+[insert]
+Adi Gallia
+Admiral Raddus
+Ahsoka Tano
+Anakin Skywalker
+Asajj Ventress
+Atton Rand
+Axe Woves
+Bail Organa
+Bastila Shan
+Baze Malbus
+Ben (Obi-Wan) Kenobi
+Bix Caleen
+Bo-Katan Kryze
+Bodhi Rook
+Cad Bane
+Canderous Ordo
+Captain Phasma
+Carth Onasi
+Cassian Andor
+Chirrut Îmwe
+Clone Commander Cody
+Clone Troopers
+Count Dooku
+Darth Malak
+Darth Maul
+Darth Revan
+Darth Sidious
+Darth Sion
+Darth Vader
+Dedra Meero
+Director Krennic
+Eeth Koth
+Even Piell
+Fifth Brother
+Galen Erso
+General Grievous
+Grand Admiral Thrawn
+Grand Moff Tarkin
+Grogu
+Han Solo: Imperial Stormtrooper Outfit
+Hera Syndulla
+HK-47
+Imperial TIE Fighter Pilot
+Jabba the Hutt
+Jango Fett
+Jar Jar Binks
+Jod Na Nawood
+Jolee Bindo
+Juhani
+Jyn Erso
+K-2SO
+Kanan Jarrus
+Ki-Adi-Mundi
+Kit Fisto
+Kleya Marki
+Koska Reeves
+Kylo Ren
+Lando Calrissian
+Leia Organa
+Luke Skywalker
+Luthen Rael
+Mace Windu
+Maul
+Mission Vao
+Moff Gideon
+Mon Mothma
+Morgan Elsbeth
+Mother Talzin
+Obi-Wan Kenobi
+Padmé Amidala
+Paz Vizsla
+Plo Koon
+Qui-Gon Jinn
+Ragnar Vizsla
+Rey
+Sabine Wren
+Saesee Tiin
+Savage Opress
+Saw Gerrera
+Shaak Ti
+Shin Hati
+Sith Soldier
+T3-M4
+The Armorer
+The Mandalorian
+The Stranger
+Vice Admiral Holdo
+Visas Marr
+Wicket W. Warrick
+Yaddle
+Yoda
+Zorii Bliss
+
+[multi]
+Cad Bane / Boba Fett
+Dryden Vos / Maul
+Asajj Ventress / Darth Maul
+General Hux / General Pryde
+Sabé / Obi-Wan Kenobi
+Jod Na Nawood / Gunter
+Mon Mothma / Kleya Marki
+Jabba the Hutt / Lando Calrissian
+Darth Sidious / Darth Vader
+The Mandalorian / Fennec Shand
+Huyang / Ahsoka Tano / Sabine Wren
+Dedra Meero / Luthen Rael / Cassian Andor
+Chewbacca / C-3PO / Han Solo
+Maz Kanata / Chewbacca / Rey
+Chancellor Palpatine / Jango Fett / Mace Windu
+Sully Stark / Obi-Wan Kenobi / Kawlan Roken
+Bodhi Rook / Galen Erso / Jyn Erso
+Kaydel Connix / Poe Dameron / Rose Tico
+Chewbacca / Han Solo / Dryden Vos
+Cassian Andor / Mon Mothma / Luthen Rael / Bail Organa
+Boba Fett / Darth Vader / Han Solo / Lando Calrissian
+Finn / Captain Phasma / DJ / Rose Tico
+BB-8 / Finn / Rey / Unkar Plutt
+The Duchess / Commissioner Helgait / The Mandalorian / Bo-Katan Kryze
