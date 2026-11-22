@@ -1,0 +1,216 @@
+# name: 2025-26 Topps NBL Basketball
+# sport: NBL
+# added: 2026-11-22
+# source: https://cdn.shopify.com/s/files/1/0662/9749/5709/files/26NBLC_Checklist_Final.pdf
+
+[base]
+Admiral Schofield
+Akech Aliir
+Alex Ducas
+Alex Higgins-Titsha
+Andrew Andrews
+Angus Glover
+Anthony Drmic
+Ben Ayre
+Ben Henshall
+Bryce Cotton
+Bryce Hamilton
+Bul Kuol
+Carlin Davison
+Casey Prather
+Chris Goulding
+Dakota Mathias
+Daniel Grida
+Dash Daniels
+David Duke Jr.
+David Johnson
+David Okwera
+Dejan Vasiljevic
+DJ Mitchell
+Dylan Windler
+Elijah Pepper
+Fabijan Krslovic
+Finn Delany
+Flynn Cameron
+Ian Clark
+Isaac Humphries
+Isaac White
+Izaiah Brockington
+Izayah Le'Afa
+Jack McVeigh
+Jacob Holt
+Jaron Rillie
+JaVale McGee
+Javon Freeman-Liberty
+Jaylin Galloway
+Jesse Edwards
+Jesse Wagstaff
+Jo Lual-Acuil Jr.
+John Brown III
+John Jenkins
+Jonah Bolden
+Jordan Hunter
+Josh Bannan
+Karim Lopez
+Keanu Rasmussen
+Kendric Davis
+Kouat Noi
+Kristian Doolittle
+Kyle Bowen
+Kyrin Galloway
+Majok Deng
+Makuach Maluach
+Malique Lewis
+Marcus Lee
+Mason Peatling
+Matt Kenyon
+Matthew Dellavedova
+Mawot Mag
+Milton Doyle
+Mitch Norton
+Mojave King
+Nathan Sobey
+Nicholas Stoddart
+Nick Marshall
+Nick Rakocevic
+Noa Kouakou-Heugue
+Owen Foxwell
+Parker Jackson-Cartwright New Zealand Breakers
+Quentin Peterson
+Reuben Te Rangi
+Reyne Smith
+Rob Loe
+Robert Baker
+Sam Froling
+Sam McDaniel
+Sam Mennenga
+Sam Waardenburg
+Shaun Bruce
+Shea Ili
+Tai Webster
+Taine Murray
+Tanner Krebs
+Terry Taylor
+Tim Soares
+Todd Blanchfield
+Torrey Craig
+Tyger Campbell
+Tyler Harvey
+Tyrell Harrison
+Tyson Walker
+Wani Swaka Lo Buluk
+Wes Iwundu
+Will Magnay
+William Hickey
+Xavier Cooks
+Zylan Cheatham
+
+[auto]
+Admiral Schofield
+Andrew Vlahov
+Ben Henshall
+Bryce Cotton
+Bryce Hamilton
+Casey Prather
+Chris Goulding
+Dash Daniels
+Dejan Vasiljevic
+Isaac Humphries
+Izaiah Brockington
+Jack McVeigh
+Javon Freeman-Liberty
+Jaylin Galloway
+Jo Lual-Acuil Jr.
+Jonah Bolden
+Jordan Hunter
+Josh Bannan
+Kendric Davis
+Kevin Brooks
+Kristian Doolittle
+Malique Lewis
+Mark Worthington
+Martin Cattalini
+Milton Doyle
+Nathan Sobey
+Noa Kouakou-Heugue
+Parker Jackson-Cartwright New Zealand Breakers
+Reyne Smith
+Sam Froling
+Sam Mennenga
+Scott Fisher
+Shawn Redhage
+Tyler Harvey
+Tyrell Harrison
+Tyson Walker
+Warrick Giddey
+Will Magnay
+Xavier Cooks
+
+[insert]
+Admiral Schofield
+Alex Ducas
+Alex Higgins-Titsha
+Andrew Andrews
+Angus Glover
+Ben Henshall
+Bryce Cotton
+Bryce Hamilton
+Bul Kuol
+Casey Prather
+Chris Goulding
+Dakota Mathias
+Dash Daniels
+David Duke Jr.
+David Johnson
+Dejan Vasiljevic
+Dylan Windler
+Fabijan Krslovic
+Finn Delany
+Flynn Cameron
+Ian Clark
+Isaac Humphries
+Izaiah Brockington
+Jack McVeigh
+JaVale McGee
+Javon Freeman-Liberty
+Jaylin Galloway
+Jesse Edwards
+Jesse Wagstaff
+Jo Lual-Acuil Jr.
+John Brown III
+John Jenkins
+Jonah Bolden
+Jordan Hunter
+Josh Bannan
+Karim Lopez
+Kendric Davis
+Kouat Noi
+Kristian Doolittle
+Kyrin Galloway
+Majok Deng
+Malique Lewis
+Marcus Lee
+Matthew Dellavedova
+Milton Doyle
+Nathan Sobey
+Nick Marshall
+Noa Kouakou-Heugue
+Owen Foxwell
+Parker Jackson-Cartwright New Zealand Breakers
+Quentin Peterson
+Reuben Te Rangi
+Reyne Smith
+Robert Baker
+Sam Mennenga
+Sam Waardenburg
+Terry Taylor
+Tim Soares
+Tyger Campbell
+Tyler Harvey
+Tyrell Harrison
+Tyson Walker
+Wani Swaka Lo Buluk
+Will Magnay
+William Hickey
+Xavier Cooks
+Zylan Cheatham

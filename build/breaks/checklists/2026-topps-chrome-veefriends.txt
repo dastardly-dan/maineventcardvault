@@ -1,0 +1,544 @@
+# name: 2026 Topps Chrome VeeFriends
+# sport: Entertainment
+# added: 2026-11-22
+# source: https://cdn.shopify.com/s/files/1/0662/9749/5709/files/2026_Topps_Chrome_VeeFriends_Checklist.pdf
+
+[base]
+Accountable Ant
+Adaptable Alien
+Adventurous Astronaut
+Alert Ape
+Ambitious Angel
+Amiable Anchovy
+Amped Aye Aye
+Arbitraging Admiral
+Articulate Armadillo
+Aspiring Alpaca
+Authentic Anaconda
+Awesome African Civet
+Bad Intentions
+Bad-Ass Bulldog
+Balanced Beetle
+Bashful Blobfish
+Be The Bigger Person
+Befuddled Burglar
+Big Game Bandicoot
+Boisterous Beaver
+Bombastic Baboon
+Boss Bobcat
+Brave Bison
+Brilliant Barb
+Bubbly Buzzard
+Bullish Bull
+Calm Clam
+Candid Clownfish
+Capable Caterpillar
+Caring Camel
+Charming Cheetah
+Cheerful Chipmunk
+Chill Chinchilla
+Clever Crocodile
+Common Sense Cow
+Compassionate Catfish
+Competitive Clown
+Confident Cobra
+Considerate Cowboy
+Consistent Cougar
+Content Condor
+Conviction Cockroach
+Courageous Cockatoo
+Creative Crab
+Curious Crane
+Cynical Cat
+Dapper Dachshund
+Decisive Duck
+Dedicated Dragonfly
+Detail-Oriented Dumbo Octopus
+Determined Dolphin
+Dialed In Dog
+Dope Dodo
+Driven Dragon
+Dynamic Dinosaur
+Eager Eagle
+Earnest Ermine
+Empathy Elephant
+Enamoured Emu
+Entrepreneur Elf
+Faithful Pheasant
+Fearless Fairy
+Flex'n Fox
+Focused Falcon
+Forever Phoenix
+Forgiving Horned Frog
+Forthright Flamingo
+Gary Bee
+Gentle Giant
+Genuine Giraffe
+Gifted Gopher
+Gleeful Sugar Glider
+Glowing Glow Worm
+Gracious Goose
+Gracious Grasshopper
+Gracious Grizzly Bear
+Grateful Gar
+Gratitude Gorilla
+Gritty Ghost
+Happy Hermit Crab
+Hard-Working Wombat
+Headstrong Honey Badger
+Heart Trooper
+Helpful Hippo
+Honorable Olm
+Hot Shot Hornet
+Humble Hedgehog
+Humble Hummingbird
+Hungry Hammerhead
+Hustling Hamster
+Hype Horse
+Impeccable Inostranet
+Independent Inch Worm
+Intuitive Iguana
+Jolly Jack-O
+Joyous Jellyfish
+Just Jackal
+Keen Kingfisher
+Kind Warrior
+Kindred Kangaroo
+Knowing Gnome
+Last Glass Standing
+Legendary Lemur
+Likable Leopard
+Like A Sponge
+Lit Lamb
+Logical Lion
+Loyal Lobster
+Macho Manta Ray
+Macro Micro
+Magnanimous Maltese
+Meticulous Magpie
+Mindful Minokawa
+Mint Mink
+Modest Moose
+Mojo Mouse
+Monday Mole
+Moral Monkey
+Motivated Monster
+Noble Numbat
+Notorious Ninja
+Observant Oyster
+Offense Oriented Orangutan
+Optimistic Otter
+Organized Ostrich
+Outgoing Octopus
+Passionate Parrot
+Patient Pig
+Pea Salad
+Perfect Persian Cat
+Persistent Penguin
+Perspective Pigeon
+Persuasive Pigeon
+Polished Poodle
+Ponder It From All Angles
+Positive Porcupine
+Practical Peacock
+Productive Puffin
+Profound Possum
+Protective Panther
+Prudent Polar Bear
+Radical Rabbit
+Rare Robot
+Reliable Rat
+Resilient Red Devil
+Respectful Racoon
+Responsive Ram
+Secure Sparrow
+Self-Aware Hare
+Selfless Sloth
+Sensible Sommelier
+Sensitive Centipede
+Sentimental Salamander
+Serious Sperm Whale
+Sharing Squirrel
+Shrewd Sheep
+Sincere Skunk
+Skilled Skeleton
+Slay'n Slug
+Spiffy Salmon
+Spontaneous Seahorse
+Steadfast Snake
+Stoic Slime
+Stunned Sun
+Sufficient Shrimp
+Suffocate Hate
+Swaggy Sea Lion
+Tasteful Malayan Tapir
+Tenacious Termite
+Tenacious Turkey
+The Oak Monster
+The World Has Plenty Of Love Start Listening To It
+Thoughtful Three Horned Harpik
+Tidy Troll
+To The Moon Meerkat
+Tolerant Tortoise
+Tolerant Tuna
+Tough To Beat A Worm From The Dirt!
+Tranquil Toad
+Tremendous Tiger
+Truculent T-Rex
+Trusting Tarantula
+Turnt Tick
+Unwavering Urchin
+Versatile Viking
+Very, Very, Very, Very, Lucky Black Cat
+Vibe'n Vampire
+Warm Wolverine
+Well-Connected Werewolf
+Well-Rounded Warthog
+Whimsical Wolf
+Wild Wallaby
+Willful Wizard
+Wily Wild Boar
+Woke Walrus
+Yolo Yak
+You're Gonna Die Fly
+Your Poor Relationship With Time Is Your Biggest Vulnerability
+Zealous Zombie
+Zestful Zebra
+
+[auto]
+Accountable Ant
+Adaptable Alien
+Adventurous Astronaut
+Alert Ape
+Ambitious Angel
+Amiable Anchovy
+Amped Aye Aye
+Arbitraging Admiral
+Articulate Armadillo
+Aspiring Alpaca
+Authentic Anaconda
+Awesome African Civet
+Bad Intentions
+Bad-Ass Bulldog
+Balanced Beetle
+Bashful Blobfish
+Be The Bigger Person
+Befuddled Burglar
+Big Game Bandicoot
+Boisterous Beaver
+Bombastic Baboon
+Boss Bobcat
+Brave Bison
+Brilliant Barb
+Bubbly Buzzard
+Bullish Bull
+Calm Clam
+Candid Clownfish
+Capable Caterpillar
+Caring Camel
+Charming Cheetah
+Cheerful Chipmunk
+Chill Chinchilla
+Clever Crocodile
+Common Sense Cow
+Compassionate Catfish
+Competitive Clown
+Confident Cobra
+Considerate Cowboy
+Consistent Cougar
+Content Condor
+Conviction Cockroach
+Courageous Cockatoo
+Creative Crab
+Curious Crane
+Cynical Cat
+Dapper Dachshund
+Decisive Duck
+Dedicated Dragonfly
+Detail-Oriented Dumbo Octopus
+Determined Dolphin
+Dialed In Dog
+Dope Dodo
+Driven Dragon
+Dynamic Dinosaur
+Eager Eagle
+Earnest Ermine
+Empathy Elephant
+Enamoured Emu
+Entrepreneur Elf
+Faithful Pheasant
+Fearless Fairy
+Flex'n Fox
+Focused Falcon
+Forever Phoenix
+Forgiving Horned Frog
+Forthright Flamingo
+Gary Bee
+Gentle Giant
+Genuine Giraffe
+Gifted Gopher
+Gleeful Sugar Glider
+Glowing Glow Worm
+Gracious Goose
+Gracious Grasshopper
+Gracious Grizzly Bear
+Grateful Gar
+Gratitude Gorilla
+Gritty Ghost
+Happy Hermit Crab
+Hard-Working Wombat
+Headstrong Honey Badger
+Heart Trooper
+Helpful Hippo
+Honorable Olm
+Hot Shot Hornet
+Humble Hedgehog
+Humble Hummingbird
+Hungry Hammerhead
+Hustling Hamster
+Hype Horse
+Impeccable Inostranet
+Independent Inch Worm
+Intuitive Iguana
+Jolly Jack-O
+Joyous Jellyfish
+Just Jackal
+Keen Kingfisher
+Kind Warrior
+Kindred Kangaroo
+Knowing Gnome
+Last Glass Standing
+Legendary Lemur
+Likable Leopard
+Like A Sponge
+Lit Lamb
+Logical Lion
+Loyal Lobster
+Macho Manta Ray
+Macro Micro
+Magnanimous Maltese
+Meticulous Magpie
+Mindful Minokawa
+Mint Mink
+Modest Moose
+Mojo Mouse
+Monday Mole
+Moral Monkey
+Motivated Monster
+Noble Numbat
+Notorious Ninja
+Observant Oyster
+Offense Oriented Orangutan
+Optimistic Otter
+Organized Ostrich
+Outgoing Octopus
+Passionate Parrot
+Patient Pig
+Pea Salad
+Perfect Persian Cat
+Persistent Penguin
+Perspective Pigeon
+Persuasive Pigeon
+Polished Poodle
+Ponder It From All Angles
+Positive Porcupine
+Practical Peacock
+Productive Puffin
+Profound Possum
+Protective Panther
+Prudent Polar Bear
+Radical Rabbit
+Rare Robot
+Reliable Rat
+Resilient Red Devil
+Respectful Racoon
+Responsive Ram
+Secure Sparrow
+Self-Aware Hare
+Selfless Sloth
+Sensible Sommelier
+Sensitive Centipede
+Sentimental Salamander
+Serious Sperm Whale
+Sharing Squirrel
+Shrewd Sheep
+Sincere Skunk
+Skilled Skeleton
+Slay'n Slug
+Spiffy Salmon
+Spontaneous Seahorse
+Steadfast Snake
+Stoic Slime
+Stunned Sun
+Sufficient Shrimp
+Suffocate Hate
+Swaggy Sea Lion
+Tasteful Malayan Tapir
+Tenacious Termite
+Tenacious Turkey
+The Oak Monster
+The World Has Plenty Of Love Start Listening To It
+Thoughtful Three Horned Harpik
+Tidy Troll
+To The Moon Meerkat
+Tolerant Tortoise
+Tolerant Tuna
+Tough To Beat A Worm From The Dirt!
+Tranquil Toad
+Tremendous Tiger
+Truculent T-Rex
+Trusting Tarantula
+Turnt Tick
+Unwavering Urchin
+Versatile Viking
+Very, Very, Very, Very, Lucky Black Cat
+Vibe'n Vampire
+Warm Wolverine
+Well-Connected Werewolf
+Well-Rounded Warthog
+Whimsical Wolf
+Wild Wallaby
+Willful Wizard
+Wily Wild Boar
+Woke Walrus
+Yolo Yak
+You're Gonna Die Fly
+Your Poor Relationship With Time Is Your Biggest Vulnerability
+Zealous Zombie
+Zestful Zebra
+
+[insert]
+Accountable Ant
+Adaptable Alien
+Adventurous Astronaut
+Alert Ape
+Ambitious Angel
+Arbitraging Admiral
+Articulate Armadillo
+Bad Intentions
+Bashful Blobfish
+Be The Bigger Person
+Befuddled Burglar
+Big Game Bandicoot
+Boisterous Beaver
+Bubbly Buzzard
+Bullish Bull
+Charming Cheetah
+Chill Chinchilla
+Clever Crocodile
+Common Sense Cow
+Competitive Clown
+Confident Cobra
+Considerate Cowboy
+Consistent Cougar
+Content Condor
+Conviction Cockroach
+Creative Crab
+Cynical Cat
+Decisive Duck
+Determined Dolphin
+Dialed In Dog
+Dope Dodo
+Driven Dragon
+Dynamic Dinosaur
+Eager Eagle
+Empathy Elephant
+Enamoured Emu
+Entrepreneur Elf
+Fearless Fairy
+Flex'n Fox
+Focused Falcon
+Forgiving Horned Frog
+Gary Bee
+Gentle Giant
+Genuine Giraffe
+Gifted Gopher
+Gracious Goose
+Gracious Grizzly Bear
+Gratitude Gorilla
+Gritty Ghost
+Headstrong Honey Badger
+Heart Trooper
+Hustling Hamster
+Hype Horse
+Intuitive Iguana
+Jolly Jack-O
+Kind Warrior
+Knowing Gnome
+Last Glass Standing
+Like A Sponge
+Logical Lion
+Loyal Lobster
+Macro Micro
+Mindful Minokawa
+Modest Moose
+Moral Monkey
+Motivated Monster
+Noble Numbat
+Notorious Ninja
+Offense Oriented Orangutan
+Optimistic Otter
+Outgoing Octopus
+Passionate Parrot
+Patient Pig
+Persuasive Pigeon
+Ponder It From All Angles
+Positive Porcupine
+Productive Puffin
+Protective Panther
+Prudent Polar Bear
+Radical Rabbit
+Rare Robot
+Reliable Rat
+Resilient Red Devil
+Responsive Ram
+Secure Sparrow
+Self-Aware Hare
+Sensible Sommelier
+Sensitive Centipede
+Shrewd Sheep
+Skilled Skeleton
+Spontaneous Seahorse
+Steadfast Snake
+Tenacious Termite
+Tenacious Turkey
+Thoughtful Three Horned Harpik
+Tidy Troll
+To The Moon Meerkat
+Tolerant Tortoise
+Tough To Beat A Worm From The Dirt!
+Tranquil Toad
+Tremendous Tiger
+Truculent T-Rex
+Trusting Tarantula
+Turnt Tick
+Unwavering Urchin
+VeeFriends #1 - The Battle For Balance Begins!
+VeeFriends #2 - The Origin Of Fearless Fairy
+VeeFriends #3 - World Tour
+VeeFriends #4 - Hunt for Harpik
+VeeFriends #5 - Motivated Monster
+VeeFriends #6 - Vee Is For Viking
+VeeFriends #7 - Notorious Ninja
+VeeFriends #8 - Gary Bee
+VeeFriends #9 - Kind Warrior
+Versatile Viking
+Very, Very, Very, Very, Lucky Black Cat
+Vibe'n Vampire
+Warm Wolverine
+Well-Connected Werewolf
+Well-Rounded Warthog
+Whimsical Wolf
+Willful Wizard
+Zealous Zombie
+Zestful Zebra
+
+[multi]
+Candid Clownfish / Compassionate Catfish
+Chill Chinchilla / Hard-Working Wombat
+Confident Cobra / Humble Hedgehog
+Curious Crane / Knowing Gnome
+Happy Hermit Crab / Accountable Ant
+Intuitive Iguana / Logical Lion
+Patient Pig / Ambitious Angel
+Practical Peacock / Optimistic Otter

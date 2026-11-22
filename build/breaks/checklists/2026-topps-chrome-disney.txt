@@ -1,0 +1,460 @@
+# name: 2026 Topps Chrome Disney
+# sport: Disney
+# added: 2026-11-22
+# source: https://cdn.shopify.com/s/files/1/0662/9749/5709/files/26DNYC_Checklist.pdf
+
+[base]
+A Court of Cards
+A Garden of Flowers
+A Mad Tea Party
+Agent P
+Aladdin
+Alebrije Dante
+Alex Russo
+Alice
+Alice and The Doorknob
+Alice and the White Rabbit
+Alice in Wonderland
+Alien
+Am I still to create the perfect system?
+Anger
+Anna
+Anxiety
+Ares
+Ariel
+Asha
+Atlas
+B.E.N.
+Bambi
+Basil of Baker Street
+Baymax
+Beaker
+Beautiful Ornament Valley
+Beauty and the Beast
+Belle
+Bile
+Bing Bong
+Bio-digital jazz, man
+Blackbeard Pirates of the Caribbean: On Stranger
+Bo Peep
+Bob Peterson
+Bolt
+Boo
+Cadillac Range
+Caitlyn Gellar
+Captain B. McCrea
+Captain Gantu
+Captain Jack Sparrow
+Carl Fredricksen
+Caterpillar
+CDA Agent
+CeCe Jones
+Celia Mae
+Chad Danforth
+Cheshire Cat
+Chick Hicks
+Chicken Little
+Chien-Po
+Christopher Robin
+Cinderella
+Clarabelle
+Coach Bolton
+Cobra Bubbles
+Combat Carl
+Copper
+Cruella de Vil
+Crush
+Daisy Duck
+Dante
+Darkwing Duck
+Darkwing Duck and Negaduck
+David Kawena
+Dewey
+Disgust
+Doc Hudson
+Donald Duck
+Doorknob
+Dopey
+Dory
+Down the Rabbit Hole
+Downtown Radiator Springs
+Dr. Bunsen Honeydew
+Dr. Facilier
+Dr. Fuzzby
+Dr. Reginald Bushroot
+Drake Mallard
+Dug
+Dumbo
+Dusty Crophopper
+Edna Mode
+Eeyore
+Elio
+Ellen Bear
+Elliott
+Elsa
+Emile
+Emperor Kuzco
+Esmeralda
+EVE
+Evil Queen
+Fairy Godmother
+Fantasia
+Fear
+Ferb
+Fillmore
+Flower
+Following the White Rabbit
+Forky
+Fox and the Hound
+Fozzie Bear
+Frozone
+Fungus
+Gabriella Montez
+Gary De'Snake
+Gaston
+Gazelle
+Genie
+Genie and Aladdin
+George Sanderson
+Geppetto
+Gill
+Giselle
+Gizmoduck
+Glordon
+Gonzo
+Goofy
+Gosalyn Mallard
+Gramma Tala
+Grand Councilwoman
+Guido
+Gus
+Hannah Montana
+Harper Finkle
+He fights for the Users
+Hector Barbossa
+Heffalump
+Heihei
+Henry J. Waternoose III
+Hi-Tech Edition Buzz Lightyear
+Horace
+Huey
+Hunchback of Notre Dame
+Héctor
+I'm a User, I'll improvise
+Jack Sparrow Pirates of the Caribbean: On Stranger
+Jacques
+Jafar
+James P. Sullivan
+Jaq and Gus
+Jasmine
+Jason Cross
+Jason Gray
+Jerry Russo
+Jessie
+Jim Hawkins
+Joe Gardner
+John Silver
+José Carioca
+Joy
+Judge Claude Frollo
+Judy Hopps
+Jumba
+Justin Russo
+Kakamora
+Kanga
+Karen Beverly
+Kelsi Nielsen
+Kermit the Frog
+Kevin
+King George
+Kirby
+Koda
+Kotu Pirates of the Caribbean: On Stranger
+Kronk
+Kuzco
+Launchpad McQuack
+Lightning McQueen
+Lilo
+Lilypad
+Ling
+Linguini
+Liv and Maddie
+Lizzie McGuire
+Louie
+M-O
+Mabel Beaver
+Mad Hatter
+Mamá Coco
+March Hare
+Marlin
+Matangi
+Mater
+Mater Meets Lightning
+Maui
+Max Russo
+Maya Hart
+Mayor Jerry
+Mayor Winddancer
+Megavolt
+Mei Lee
+Melephant Brooks
+Mickey Mouse
+Miguel
+Mike Wazowski
+Mini Maui
+Minnie Mouse
+Mirabel
+Miss Piggy
+Mitchie Torres
+Moana
+Mowgli
+Mr. Incredible
+Mr. Toad
+Mrs. Jumbo
+Ms. Darbus
+Mufasa
+Mulan
+My world is coming to destroy yours
+Nani
+Nate Gray
+Needleman
+Negaduck
+Nemo
+Nibbles Maplestick
+Nick Wilde
+Nigel
+Nostalgia
+Olaf
+Olivia Flaversham
+One Hundred and One Dalmatians
+Ooooo
+Our Founder: Stanley
+Owl
+Painting the Roses Red
+Panchito
+Pascal
+Pawbert Lynxley
+Pegasus
+Perry the Platypus
+Pete
+Peter Pan
+Phineas
+Piglet
+Pinocchio
+Pleakley
+Pluto
+Pocahontas
+Prince Edward
+Princess Aurora
+Proceed to Games
+Professor Ratigan
+Pua
+Quackerjack
+Quasimodo
+Rabbit
+Randall Boggs
+Rapunzel
+Raven Baxter
+Red
+Remy
+Riley Matthews
+Robert Furwin
+Robert Philip
+Rocky Blue
+Roo
+Roz
+Russell
+Ryan Evans
+Sadness
+Sally
+Sally and Red
+Sally Goes for a Drive
+Sam Eagle
+Scar
+Scrooge McDuck
+Sebastian
+Shane Gray
+Sharpay Evans
+Sheriff
+Simba
+Simba and Mufasa
+Sisu
+Sleepy Mack
+Smarty Pants
+Smitty
+Snappy
+Snow White
+Splatter Phoenix
+Star
+Steaming Teapots
+Stitch
+Sulley
+Tamatoa
+Taylor McKessie
+Te Fiti
+Te Kā
+Ted Pauley
+Tex Dinoco
+The Beast
+The Crocodile
+The Emperor
+The Heart of Te Fiti
+The King Advises The Rookie
+The Last ISO
+The Mad Hatter
+The Rose
+Theresa Russo
+Thumper
+Tiana
+Tigger
+Timothy Q. Mouse
+Tinker Bell
+Tod
+Together, we will be complete
+Tom Lizard
+Tron Lives
+Troy Bolton
+Ursula
+Vacate entry port, program!
+WALL-E
+Walt Disney
+Wardrobe
+Wendy
+White Rabbit
+Who Are You?
+Winnie the Pooh
+Woody
+Woody The Many Adventures of Winnie the
+Wreck-It Ralph
+Yao
+Zeke Baylor
+Zeus
+Zootopia
+
+[auto]
+Albert
+Alexander
+Alyson
+Andrew
+Anika Noni
+Auli'i
+BD
+Belle
+Benjamin
+Bill
+Billy
+Bret
+Chris
+Christopher Daniel
+Dan
+Dave
+David
+Dee Bradley
+Demi
+Donald Duck
+Donna
+Donnie
+Ed
+Elio Solís
+Ernesto de la Cruz
+Ernie
+Gael
+Ginnifer
+Goofy
+Halle
+Idina
+Irene
+Jacques
+Jim
+Jodi
+Johnny
+Jonathan
+Josh
+Jude
+Julia
+Kaitlyn
+Keira
+Kelly
+Linda
+Luke
+Margaret
+Matthew
+Mel
+Melissa
+Mena
+Mickey Mouse
+Miguel
+Miley
+Ming-Na
+Minnie Mouse
+Mirabel
+Moana
+Naomi
+Nathan
+Nemo
+Orlando
+Owen
+Paige
+Patrick
+Patton
+Peter
+Phyllis
+Rapunzel
+Raven-Symoné
+Richard
+Robby
+Samuel L.
+Santino
+Scott
+Scrooge McDuck
+Sharpay Evans
+Stephanie
+Susan
+Tate
+Tim
+Tom
+Tony
+Troy Bolton
+Vanessa
+Vincent
+Whoopi
+Will
+
+[multi]
+Mrs. Potts / Chip
+Kristoff / Sven
+Chip / Dale
+Mickey Mouse / Minnie Mouse
+Scrooge McDuck / Donald Duck
+Mr. Incredible / Mrs. Incredible
+Miguel / Ernesto de la Cruz
+Troy Bolton / Gabriella Montez
+WALL-E / EVE
+Chip / Pluto / Dale
+Elsa / Moana / Mirabel
+Ariel / Mulan / Belle
+Huey / Dewey / Louie
+Clarabelle Cow / Horace Horsecollar / Pete
+Mickey Mouse / Minnie Mouse / Goofy / Pluto
+Woody / Sulley / Mr. Incredible / Lightning McQueen
+Troy Bolton / Gabriella Montez / Sharpay Evans / Chad Danforth
+Donnie / Peter
+Jodi / Christopher Daniel
+Paige / Robby
+Scott / Linda
+Tate / Susan
+David / Patrick
+Tom / Tim
+Benjamin / Gael
+Albert / Alexander
+Jameela / Brad
+Donnie / Peter / Stan
+Paige / Richard / Robby
+Linda / Jonathan / Scott
+Jodi / Paige / Linda
+Ming-Na / Anika Noni / Auli'i
+Johnny / Keira / Orlando
+Matthew / Nathan / Ernie
+Anika Noni / Michael-Leon / Jenifer / Jim
+Jodi / Paige / Linda / Ming-Na
+Anika Noni / Kelly / Auli'i / Kelly Marie

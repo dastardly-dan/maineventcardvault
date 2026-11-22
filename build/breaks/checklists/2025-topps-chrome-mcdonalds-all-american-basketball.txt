@@ -1,0 +1,166 @@
+# name: 2025 Topps Chrome McDonald's All-American Basketball
+# sport: NBA
+# added: 2026-11-22
+# source: https://cdn.shopify.com/s/files/1/0662/9749/5709/files/2025_Topps_Chrome_McDonald_s_All-American_Basketball_Checklist.pdf
+
+[base]
+Aaliyah Chavez
+Aaliyah Crump
+Addie Deal
+Agot Makeer
+AJ Dybantsa
+Al Harrington
+Alexandra Eschmeyer
+Aliyahna Morris
+Amar'e Stoudemire
+Amari Bailey
+Anthony Black
+Ayla McDowell
+Brayden Burries
+Bronny James
+Brynn McGaughy
+Caleb Wilson
+Chris Cenac Jr.
+Cole Anthony
+Darius Adams
+Darriana Alexander
+Darryn Peterson
+Deniya Prawl
+Dereck Lively II
+Dwight Howard
+Emilee Skinner
+Eric Gordon
+Eric Reibe
+Grace Knox
+Gradey Dick
+Hailee Swain
+Immanuel Quickley
+Jaida Civil
+Jalen Haralson
+Jaliya Davis
+Jarace Walker
+Jaren Jackson Jr.
+Jayson Tatum
+Jordan Speiser
+JuJu Watkins
+Juwan Howard
+Kaelyn Carroll
+Kel'el Ware
+Koa Peat
+Lara Somfai
+Leah Macy
+Lebron James
+Marcus Smart
+Mia Pauldo
+Mikel Brown Jr.
+Myles Turner
+Nate Ament
+Nikola Bundalo
+Nyla Brooks
+Quentin Grimes
+Rip Hamilton
+Ron Holland II
+Shon Abaev
+Sienna Betts
+Tounde Yessoufou
+Tyrese Maxey
+Zai Harwell
+Zakiyah Johnson
+
+[auto]
+Aaliyah Chavez
+Aaliyah Crump
+Addie Deal
+Agot Makeer
+AJ Dybantsa
+Alexandra Eschmeyer
+Aliyahna Morris
+Amari Bailey
+Ayla McDowell
+Brayden Burries
+Brynn McGaughy
+Caleb Wilson
+Chris Cenac Jr.
+Cole Anthony
+Darius Adams
+Darriana Alexander
+Darryn Peterson
+Deniya Prawl
+Dereck Lively II
+Dwight Howard
+Emilee Skinner
+Eric Gordon
+Eric Reibe
+Grace Knox
+Hailee Swain
+Immanuel Quickley
+Jaida Civil
+Jalen Haralson
+Jaliya Davis
+Jaren Jackson Jr.
+Jayson Tatum
+Jordan Speiser
+JuJu Watkins
+Juwan Howard
+Kaelyn Carroll
+Kel'el Ware
+Koa Peat
+Lara Somfai
+Leah Macy
+Lebron James
+Marcus Smart
+Mia Pauldo
+Mikel Brown Jr.
+Myles Turner
+Nate Ament
+Nikola Bundalo
+Nyla Brooks
+Quentin Grimes
+Rip Hamilton
+Ronald Holland II
+Shon Abaev
+Sienna Betts
+Tounde Yessoufou
+Tyrese Maxey
+Zai Harwell
+Zakiyah Johnson
+
+[insert]
+Aaliyah Chavez
+Aaliyah Crump
+Addie Deal
+Agot Makeer
+AJ Dybantsa
+Alexandra Eschmeyer
+Aliyahna Morris
+Ayla McDowell
+Brayden Burries
+Brynn McGaughy
+Caleb Wilson
+Chris Cenac Jr.
+Darius Adams
+Darriana Alexander
+Darryn Peterson
+Deniya Prawl
+Emilee Skinner
+Eric Reibe
+Grace Knox
+Hailee Swain
+Jaida Civil
+Jalen Haralson
+Jaliya Davis
+Jordan Speiser
+Kaelyn Carroll
+Koa Peat
+Lara Somfai
+Leah Macy
+Mia Pauldo
+Mikel Brown Jr.
+Nate Ament
+Nikola Bundalo
+Nyla Brooks
+Shon Abaev
+Sienna Betts
+Tounde Yessoufou
+Zai Harwell
+Zakiyah Johnson

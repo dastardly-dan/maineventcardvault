@@ -1,0 +1,319 @@
+# name: 2026 Topps Finest Fantastic Four
+# sport: Marvel
+# added: 2026-11-22
+# source: https://cdn.shopify.com/s/files/1/0662/9749/5709/files/2026_Topps_Finest_Fantastic_Four_Checklist.pdf
+
+[base]
+Adam Warlock
+Agatha Harkness
+Air-Walker
+Alicia Masters
+Alpha
+Ant-Man
+Artie Maddicks
+Attuma
+Awesome Android
+Bentley-23
+Beyonder
+Black Bolt
+Black Panther
+Blastaar
+Captain America
+Crystal
+Dazzler
+Devil Dinosaur
+Diablo
+Doctor Doom
+Doctor Strange
+Doom 2099
+Doomasaur
+Dragon Man
+Ego
+Fallen One
+Firelord
+Flux
+Franklin Richards
+Galactus
+Ghost Rider
+Gorgon
+H.E.R.B.I.E.
+Hulk
+Human Torch
+Iceman
+Immortus
+Impossible Man
+Invisible Man
+Invisible Woman
+Iron Man
+Jack Of Hearts
+Kang
+Karnak
+Klaw
+Leech
+Lockjaw
+Luke Cage
+Lyja
+Mad Thinker
+Maker
+Malice
+Medusa
+Miss Thing
+Mister Fantastic
+Mobius M. Mobius
+Mole Man
+Molecule Man
+Moon Girl
+Morg
+Namor
+Namorita
+Nathaniel Richards
+Nick Fury
+Nova
+Over-Mind
+Power Skrull
+Psycho-Man
+Puppet Master
+Rama-Tut
+Red Ghost
+Ronan
+Sandman
+Scarlet Witch
+She-Hulk
+She-Thing
+Silver Surfer
+Sleepwalker
+Spider-Man
+Storm
+SUBJECT TO CHANGE
+Super-Skrull
+Terrax
+Thanos
+The Bombastic Bagman
+The High Evolutionary
+The Thing
+The Watcher
+Thor
+Thundra
+Tigra
+Titania
+Trapster
+Triton
+Ultron
+Valeria Richards
+Victorious
+Vision
+Wasp
+Wizard
+Wolverine
+
+[auto]
+Adam Kubert
+Adi Granov
+Alex Hyde-White
+Ariel Diaz
+Arthur Adams
+Bill Sienkiewicz
+Derrick Chew
+E.M. Gist
+Ebon Moss-Bachrach
+Ed McGuinness
+Esad Ribić
+Frank Miller
+Greg Capullo
+Greg Horn
+InHyuk Lee
+Jay Underwood
+Jim Cheung
+Joseph Quinn
+Joshua Cassara
+Lucio Parrillo
+Marc Silvestri
+Mark Bagley
+Mark Brooks
+Matthew Wood
+Michael Bailey Smith
+Mike Mayhew
+Mike McKone
+Mike Zeck
+Natasha Lyonne
+Paul Pelletier
+Paul Walter Hauser
+Pedro Pascal
+Ralph Ineson
+Rebecca Staab
+Ryan Brown
+Ryan Stegman
+Sarah Niles
+Scott Williams
+Steve Epting
+Steve McNiven
+Vanessa Kirby
+Whilce Portacio
+
+[insert]
+1960s
+1970s
+1980s
+1990s
+2000s
+2010s
+2020s
+Adam Warlock
+Agatha Harkness
+Air-Walker
+Alex Power
+Alicia Masters
+Alpha
+Annihilus
+Ant-Man
+Artie Maddicks
+Attuma
+Awesome Android
+Benjamin Grimm
+Bentley-23
+Beyonder
+Birth of Franklin Richards
+Black Bolt
+Black Cat
+Black Panther
+Blastaar
+Captain America
+Crystal
+Daredevil
+Dazzler
+Devil Dinosaur
+Diablo
+Doctor Doom
+Doctor Strange
+Doom 2099
+Doom Questions Thanos
+Doom Wields the Power Cosmic
+Doomasaur
+Draconus
+Dragon Man
+Ego
+Fallen One
+Fantastic Four
+Fantastic Four #14
+Fantastic Four #25
+Fantastic Four #3
+Fantastic Four #348
+Fantastic Four #39
+Fantastic Four #45
+Fantastic Four #49
+Fantastic Four #51
+Fantastic Four #52
+Fantastic Four #55
+Fantastix
+Firelord
+Flux
+Four Fantastics
+Franklin Richards
+Future Foundation
+Galactus
+Ghost Rider
+Ghost-Spider
+Gorgon
+H.E.R.B.I.E.
+Hulk
+Hulk vs. Thing
+Human Torch
+Iceman
+Immortus
+Impossible Man
+Invisible Man
+Invisible Woman
+Iron Man
+Jack Kirby
+Jack Of Hearts
+Johnny Storm
+Kang
+Karnak
+Klaw
+Leech
+Lockjaw
+Luke Cage
+Lyja
+Lynne Nichols
+Mad Thinker
+Mad Thinker's Fantastic Four
+Maker
+Malice
+Medusa
+Miles Morales
+Miss Thing
+Mister Fantastic
+Mobius M. Mobius
+Mole Man
+Molecule Man
+Moon Girl
+Moon Knight
+Morg
+Namor
+Namorita
+Nathaniel Richards
+New Fantastic Four
+Newer Fantastic Four
+Nick Fury
+Nightcrawler
+Nova
+Over-Mind
+Peter Parker
+Power Skrull
+Psycho-Man
+Puppet Master
+Rachel Rozman
+Rama-Tut
+Red Ghost
+Reed Revealed as The Maker
+Reed Richards
+Ronan
+Sandman
+Scarlet Witch
+She-Hulk
+She-Thing
+Silver Surfer
+Sleepwalker
+Spider-Boy
+Spider-Man
+Stan Lee
+Storm
+Super-Skrull
+Surfing through the Cosmos
+Susan Storm
+Terrax
+Thanos
+The Birth of the Fantastic Four
+The Bombastic Bagman
+The Coming of Galactus
+The Fantastic Four
+The High Evolutionary
+The Thing
+The Ultimate Sacrifice
+The Watcher
+Thor
+Thundra
+Tigra
+Titania
+To Me… My Galactus!
+Trapster
+Triton
+Ultimate Fantastic Four
+Ultimate Future Foundation
+Ultron
+Valeria Richards
+Victor von Doom
+Victorious
+Vision
+Wasp
+Wizard
+Wolverine
+
+[multi]
+Alex Hyde-White / Rebecca Staab
+Jay Underwood / Michael Bailey Smith
+Ebon Moss-Bachrach / Joseph Quinn
+Pedro Pascal / Vanessa Kirby
+Ralph Ineson / Paul Walter Hauser
+Matthew Wood / Sarah Niles
+Matthew Wood / Sarah Niles / Natasha Lyonne

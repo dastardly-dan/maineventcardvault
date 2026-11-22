@@ -1,0 +1,565 @@
+# name: Topps Chrome UEFA Club Competitions 2025-26
+# sport: Soccer
+# added: 2026-11-22
+# source: https://cdn.shopify.com/s/files/1/0662/9749/5709/files/26TUCC_ChromeChecklist_FINAL.pdf
+
+[base]
+Abde
+Abdoul
+Alejo
+Alessandro
+Alexander
+Alexis
+Alistair
+Alphonso
+Andrey
+Anthony
+Antoine
+Antony
+Archie
+Arthur
+Axel
+Ben
+Bernardo
+Bradley
+Brennan
+Bruno
+Bukayo
+Callum
+Chris
+Christian
+Claudio
+Cole
+Conor
+Cucho
+Daizen
+Dean
+Declan
+Denzel
+Divine
+Dominic
+Dominik
+Don-Angelo
+Dro
+Dušan
+Désiré
+Eberechi
+Eduardo
+Elliot
+Elye
+Emiliano
+Emmanuel
+Endrick
+Erling
+Estêvão
+Ethan
+Federico
+Ferran
+Florian
+Franco
+Frenkie
+Gabri
+Gabriel
+Gavi
+George
+Geovany
+Giovanni
+Giuliano
+Gleison
+Guela
+Guille
+Harry
+Hugo
+Ibrahim
+Igor
+Isco
+Ivan
+Iñaki
+Jamal
+Jamaldeen
+James
+Jarne
+Jeremie
+Jobe
+Joelinton
+John
+Jonathan
+Joshua
+Jota
+João
+Jude
+Julien
+Julián
+Jérémy
+Kang-in
+Karim
+Kenan
+Kendry
+Kenneth
+Kevin
+Khvicha
+Khéphren
+Konstantinos
+Kylian
+Lamine
+Lautaro
+Leandro
+Lennart
+Liam
+Lucas
+Luis
+Malik
+Marcus
+Mario
+Maroan
+Marquinhos
+Martim
+Martin
+Mathis
+Matteo
+Max
+Michael
+Mika
+Mikey
+Minjae
+Mohamed
+Mohammed
+Morgan
+Morten
+Myles
+Nasser
+Nick
+Nico
+Nicolò
+Noah
+Nuno
+Oihan
+Ollie
+Omar
+Ousmane
+Pablo
+Patrik
+Pau
+Pedri
+Phil
+Pio
+Quentin
+Quim
+Raphinha
+Rayan
+Reggie
+Reigan
+Reo
+Ricardo
+Richard
+Rio
+Robert
+Robin
+Rodri
+Rodrigo
+Rodrygo
+Romelu
+Ryan
+Samu
+Sandro
+Savinho
+Scott
+Sean
+Senny
+Sergiño
+Serhou
+Shumaira
+Stanislav
+Takumi
+Tijjani
+Trent
+Tyrique
+Vangelis
+Victor
+Viktor
+Vini Jr.
+Virgil
+Vitinha
+Warren
+Weston
+William
+Wisdom
+Xavi
+
+[auto]
+Adriano
+Alan
+Alejo
+Alessandro
+Alessandro Bastoni
+Alessandro Del Piero
+Alistair
+Alphonso
+Andrea
+Andriy
+Andrés
+Anthony
+Antoine
+Antony
+Arda
+Arnaud
+Arne
+Aurélien
+Bastian
+Bradley
+Brennan
+Bruno
+Bukayo
+Cameron
+Carlos
+Chris
+Christian
+Clarence
+Cody
+Cole
+Colin
+Daizen
+Dani
+Daniel
+Dave "Phoenix"Farrell
+David
+Dean
+Declan
+Dennis
+Destiny
+Divine
+Dominic
+Don-Angelo Konadu
+Donyell
+Dušan
+Eden
+Eduardo
+Elye
+Emiliano
+Emily
+Endrick
+Erling
+Estêvão
+Federico
+Fernando
+Ferran
+Filippo
+Folarin
+Francisco
+Franck
+Franco
+Frank
+Freddie
+Gabriel
+Gareth
+Gary
+Gavi
+Gennaro
+Geovany
+Giovanni
+Guille
+Guti
+Harry
+Henrik
+Hugo
+Héctor
+Ian
+Ibrahima
+Iker
+Isco
+Jamal
+Jamie
+Javier
+Jeremie
+Jobe
+Joe
+John
+Joshua
+João
+Juan
+Jude
+Julián
+Kaká
+Kenan
+Kendry
+Kenny
+Kevin
+Khvicha
+Konstantinos
+Konstantinos Karetsas
+Lamine
+Lautaro
+Lennart
+Lionel
+Lothar
+Loïs
+Luis
+Luka
+Manuel
+Marc
+Marco
+Mario
+Martin
+Mathis
+Matthias
+Max
+Maximilian
+Mesut
+Michael
+Mike
+Mikey
+Milos
+Miroslav
+Mohamed
+Mohammed
+Morgan
+Myles
+Nemanja
+Neymar Jr
+Nico
+Nuno
+Ollie
+Oscar
+Ousmane
+Pablo
+Paolo
+Paris
+Patrick
+Paul
+Pavel
+Pedri
+Petr
+Phil
+Philipp
+Quentin
+Quim
+Rasmus
+Raúl
+Reggie
+Reigan
+Reo
+Rio
+Rivaldo
+Riyad
+Robert
+Roberto
+Robin
+Rodrigo
+Rodrygo
+Romário
+Ronald
+Ronaldinho
+Ronaldo
+Ryan
+Sadio
+Samuel
+Samuele
+Sandro
+Santi
+Savinho
+Senny
+Sergio
+Serhou
+Shinji
+Sir Alex
+Teddie
+Thiago
+Thierry
+Thomas
+Tijjani
+Toni
+Vini Jr.
+Virgil
+Wayne
+Wesley
+Weston
+William
+Willian
+Xavi
+Yaya
+Zinédine
+Zlatan
+Ángel
+
+[insert]
+Alessandro
+Alexander
+Alistair
+Alphonso
+Andriy
+Antoine
+Antony
+Bradley
+Bukayo
+Chris
+Christian
+Claudio
+David
+Dean
+Dennis
+Denzel
+Didier
+Diego
+Divine
+Dominic
+Dro
+Dušan
+Désiré
+Ebrima
+Erling
+Estêvão
+Fabián
+Federico
+Fernando
+Florian
+Floyd
+Folarin
+Franck
+Franco
+Frank
+Gabriel
+Gareth
+George
+Geovany
+Giuliano
+Henrik
+Hugo
+Iñaki
+Jaden
+Jamal
+Javier
+Jeremie
+Jobe
+Joelinton
+Johan
+John
+João
+Jude
+Jérémy
+Kaká
+Kang-in
+Karim
+Kendry
+Khvicha
+Konstantinos
+Konstantinos Karetsas
+Kylian
+Lamine
+Lamine Yamal
+Lautaro
+Lennart
+Liam
+Lionel
+Lucá
+Luis
+Mario
+Marquinhos
+Martin
+Mathis
+Max
+Michael
+Mohamed
+Mohammed
+Morgan
+Myles
+Neymar Jr
+Nico
+Nuno
+Oliver
+Ousmane
+Pablo
+Paolo
+Paris Saint-Germain
+Patrik
+Pau
+Pedri
+Phil
+Philipp
+Pierre-Emerick Aubameyang
+Pio
+Quentin
+Raphinha
+Raúl
+Reggie
+Reigan
+Richard
+Rio
+Robert
+Roberto
+Rodrigo
+Romelu
+Ronaldinho
+Ronaldo
+Ryan
+Samu
+Samuel
+Samuele
+Senny
+Sergio
+Serhou
+Shane
+Stephen
+Steven
+Teddie
+Thierry
+Toni
+Tyrique
+Victor
+Viktor
+Vini Jr.
+Virgil
+Vitinha
+Wayne
+Weston
+William
+Willian
+Wisdom
+Xavi
+Yaya
+Zlatan
+Ángel
+
+[multi]
+David / Sir Alex
+Bastian / Miroslav
+Cole / Frank
+Antoine / Julián
+Erling / Phil
+Reo / Shunsuke
+Zlatan / Ronaldo
+Konstantinos Karetsas / Kevin
+Kaká / Andrea
+Shinji / Marco
+Luka / Gareth
+Martin / Declan
+Alessandro / Roberto
+Paul / Ryan
+Pedri / Andrés
+Ronaldo / Adriano
+Ronaldinho / Samuel
+Raphinha / Robert
+Rio / Nemanja
+Mohamed / Steven
+Bukayo / Thierry
+Xavi / Mohammed
+Wayne / Robin
+Lamine / Lionel
+Lamine / Neymar Jr
+Zinédine / Raúl
+David / Paul / Ryan
+Giorgio / Leonardo / Gianluigi
+Petr / Gianluigi / Manuel
+Kevin / Paul / Alan
+Kaká / Andrea / Gennaro
+Patrick / Clarence / Frank
+Paolo / Alessandro Nesta / Dida
+Lionel / Luis / Neymar Jr
+Neymar Jr / Ronaldinho / Rivaldo
+Pedri / Gavi / Fermín
+Mohamed / Roberto / Sadio
+William / Gabriel / Declan
+Fernando / Sergio / Antoine
+Zinédine / Roberto / Alessandro Del Piero
+Vini Jr. / Rodrygo / Jude / Arda
+Ronaldo / Neymar Jr / Ronaldinho / Kaká
+Mike / Emily

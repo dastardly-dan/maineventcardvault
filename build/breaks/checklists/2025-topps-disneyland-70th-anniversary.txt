@@ -1,0 +1,416 @@
+# name: 2025 Topps Disneyland 70th Anniversary
+# sport: Disney
+# added: 2026-11-22
+# source: https://cdn.shopify.com/s/files/1/0662/9749/5709/files/2025_Topps_Disneyland_70th_Anniversary_Checklist.pdf
+
+[base]
+1957 New Year's Eve Ticket
+1958 New Year's Eve Ticket
+1959 Date Nite Pass
+1960 An Old Fashioned Picnic Ticket
+1960 Special Admission Ticket
+1961 First Annual Grad Nite Party Ticket
+1961 Magic Kingdom Club Special Guest Card
+1961 Magic Kingdom Guided Tour Ticket
+1961 New Year's Eve Ticket
+1961 Passport to Disneyland Guided Tour Ticket
+1962 Spring Fling Ticket
+2005 Disneyland 50th Anniversary Umbrella
+2015 Disneyland 60th Anniversary Sleeping Beauty Castle Banner
+2017 Main Street Electrical Parade Banner
+2023 Disney100 Sleeping Beauty Castle Drawbridge Banner
+70th Anniversary Minnie Caramel Apple
+A Dream of the Happiest Place on Earth
+A Great Big Beautiful Tomorrow
+A Happy Haunt Materializes
+A Swinging Wake
+A Swirl of Magic – Mickey
+A Very Merry Unbirthday
+A Vista into a World of Wondrous Ideas
+Adventure Thru Inner Space
+Adventureland
+Alexander Nitrokoff
+Alice
+Alien Pizza Planet
+Aliens
+Aloha!
+America Sings
+Astro Orbitor
+Astronaut
+Astronaut Donald Duck
+Astronaut Goofy
+Astronaut Mickey Mouse
+Astronaut Pluto
+Astronauts Chip 'n' Dale
+AT-AT Battle on Hoth
+Auctioneer
+Autopia
+Autopia Cars Zoom in the First Parade
+Autopia Robot
+Balloon Mickey Marshmallow Pop
+Ballroom Dancers
+Bathing Elephants
+Beating-Heart Bride
+Beehive
+Beware of Hitchhiking Ghosts
+Big Thunder Hosts its First Wild Ride
+Big Thunder Mountain
+Birthday Ghost
+Black Spire Outpost, Batuu
+Blue Fairy
+Blue Milk and Green Milk
+Bobsled
+Bobsledder
+Bonjour!
+Buzz Lightyear Astro Blasters Cast Member Costume
+Buzz Lightyear Astro Blasters Cast Member Trousers
+Buzz Lightyear to Star Command
+C-3PO
+Canal Boat
+Canoe
+Captain Charles Gibbs
+Car
+Caramel Corn and Kettle Corn
+Carnation Café
+Carousel of Progress
+Cars Electric Roadway Jam – Mack
+Cascade Peak
+Casey Jr. Circus Train
+Casey Jr. Train and the Drum
+Celebrate Happy Cavalcade
+Celebration Matterhorn Macaroon
+Chip 'n' Dale's GADGETcoaster Cast Member Costume
+Churro
+Ciao!
+Classic Mickey-Shaped Beignets
+Collector's Pin Relic Card
+Come on, have a nice bone, eh?
+Constance
+Constance Hatchaway
+Constance Hatchaway Dress
+Corn Dog
+Country Bear Jamboree
+Darth Vader
+Dead Men Tell No Tales
+Developing Pirates of the Caribbean in Miniature
+Dia Duit!
+Disney Dollar
+Disney Dollar - 50th Anniversary Castle
+Disney Dollar - Goofy
+Disney Dollar - Mark Twain Riverboat
+Disney Dollar - Mickey
+Disney Dollar - Stitch
+Disneyland Monorail
+Disneyland Railroad
+Disneyland Tenth Anniversary on TV
+Don't Worry, They Have Their Trunks On
+Doom Buggy
+Dream of Enchantment – Cogsworth
+Dream of Laughter – Geppetto
+Driver
+Dumbo Flying Elephants
+Dumbo the Flying Elephant
+Emperor Zurg
+Enter A Galaxy Far, Far Away
+Entering Isla Tesoro Jail
+Entrance to Magic
+Ezra
+Fantasia Magic Brooms
+Fantasyland
+Fantasyland Cast Member Blouse
+Fantasyland Cast Member Shirt
+Fantasyland Cast Member Trousers
+Fantasyland Duck Bumps
+Fantasyland Skyway Station
+Farewell!
+Finding Nemo Submarine Voyage
+Fleet Transport
+Flyer
+Flying Elephant
+Flying Saucers
+Fritz
+Frontierland
+Frontierland Aerial
+Frozen Fractals – Anna and Elsa
+Frozen Live Coronation Ball Ensemble Dress
+G2-4T
+Genie, Tigger, and Lumière
+Ghost Galaxy
+Ghost Host
+Gingerbread House – Goofy
+Goodbye!
+Great Moments with Mr. Lincoln
+Green Alien
+Grey Stuff
+Grim Grinning Ghosts Come Out to Socialize
+Gus
+Hallo!
+Hatter
+Haunted Mansion Cast Member Costume
+Haunted Mansion Cast Member Shirt
+Haunted Mansion Cast Member Skirt
+Haunted Mansion Cast Member Trousers
+Hello!
+Helmsman
+Henry
+Highway of the Future
+Hitchhiking Ghost Phineas Costume
+Hitchhiking Ghost Phineas Hat
+Hondo Ohnaka
+How's About a Nice, Juicy Bone?
+Howdy!
+I Just Can't Wait To Be King
+Imagination and Beyond
+Indiana Jones
+Indiana Jones Adventure
+Indiana Jones Contains the Spirit
+Innoventions
+Island Skeleton
+"it's a small world"
+"it's a small world" Debuts After the World's Fair
+Jambo!
+José
+Jungle Cruise
+Kinetic Energy: Monorail Over Submarine Lagoon
+King Arthur Carrousel
+Kylo Ren
+Left Duelist
+Lightspeed to Endor
+Lillian's Petrified Tree "Gift"
+Locomotive
+Log Raft
+Look Not into the Eyes of the Idol
+Lucky People
+Mad Tea Party
+Madame Leota
+Magic from the Sky
+Main Street, U.S.A.
+Mama Odie
+Mark II Monorail
+Mark Twain Riverboat
+Mark V Monorail
+Master Gracey
+Matterhorn
+Matterhorn Mountain
+Mermaid Lagoon
+Michael
+Mickey and Donald Celebrate the Grand Opening
+Mickey Mouse
+Mickey Waffle
+Mickey's Premium Ice Cream Bar
+Mickey's Toontown
+Mickey, Minnie, and Donald Balloons
+Millennium Falcon: Smugglers Run
+Mine Train
+Mine Train Through Nature's Wonderland
+Minnie Mouse
+Monsters, Inc. Dance Party – Mike Wazowski
+Monsters, Inc. Dance Party – Sulley
+Monstro the Whale
+Moonliner
+Mr. Toad's Wild Ride
+Mushu
+Ned Low
+Neon Astronaut Mickey
+Neon Mickey Mouse
+New Orleans Square
+New Tomorrowland
+Nothing Can Stop Us Now
+Observatron
+Off to Never Land
+PeopleMover
+Pete's Dragon Elliott
+Peter Pan's Flight
+Phineas
+Pickwick
+Pierre
+Piles of Treasure
+Pillaging and Plundering
+Pineapple Soft Serve
+Pirate
+Pirate Galleon
+Pirate Redd
+Pirate Robber
+Pirates of the Caribbean
+Pluto
+Podracing on Tatooine
+Popcorn
+Primeval World
+Privet!
+R2-D2
+Rafiki and Zazu
+Rainbow Caverns
+Rebel
+Red Wagon Inn
+Redd
+Redd Rockett's Pizza Port
+Riding the Jolly Roger
+Right Duelist
+Riverboat
+Rivers of America and the Living Desert
+Rocket Jets
+Rocket Rod
+Rocket Rods
+Rocket Ship
+Rocket to the Moon
+Ronto Morning Wrap
+Rooted in History
+Rowboat Ghost
+RX-24
+Sailing Ship
+Sally Slater
+Sawadee!
+Schweitzer Falls and the Eighth Wonder of the World
+Seasonal: Evil Queen Caramel Apple
+Seasonal: Mickey Gingerbread
+See You Later!
+Shopping at the Bazaar
+Singing Pirates
+Sir Francis Verney
+Sir Henry Mainwaring
+Skyway Buckets
+Skyway Gondola
+Sleeping Beauty Castle
+Sleeping Beauty Castle Construction
+Snow White's Adventures with Dopey
+Something Lurks Inside the Mountain
+Sorcerer's Apprentice Mickey
+Space Mountain
+Space Mountain Shoots for the Stars
+Space Station X-1
+Stage Coach Ride
+Star Tours
+Star Tours: The Adventures Continue
+Star Wars: Rise of the Resistance
+StarSpeeder
+StarSpeeder 1000
+StarSpeeder 1000 Cabin
+StarSpeeder 3000
+StarSpeeder 3000 Cabin
+Storybook Land Canal Boats
+Storybook Land Lighthouse Ticket Booth
+Submarine
+Submarine Voyage
+Teacup
+Thar Be Treasure
+The Abominable Snowman
+The Blue Bayou
+The Bride
+The Caretaker
+The Cruise that Goes on for Niles and Niles
+The El CapiTOON Theater
+The First Parade
+The Gorgon
+The Haunted Mansion
+The Hub
+The Jolly Roger
+The Jungle Cruise
+The Land that Toons Built
+The Mansion's Organ
+The Mansion's Organist
+The Many Adventures of Winnie the Pooh
+The Moonliner and Astro-Jets
+The Most Dangerous Animal in the Jungle: the Hippo
+The One, The Only, Backside of Water
+The PeopleMover
+The Primeval World Meets the Modern World
+The Temple of Mara Opens to Tourists
+The Toy Soldiers
+This is your skipper speaking. First time? Me too.
+Three Unfortunate Men in Quicksand
+Tiana
+Tigger
+Tinker Bell and Peter Pan
+To Honor America
+Tom Morrow
+Tomorrowland
+Toontown Cast Member Accessory
+Toontown Cast Member Costume
+Toontown Cast Member Skirt
+Toontown Cast Member Trousers
+Toontown Cast Member Vest
+Town Square
+Tramp Steamer
+Turkey Leg
+Ugh, the Ancient Temple is Ruined
+Uranium Hunt
+Walt and Mickey in Engine No. 1
+Walt Disney
+Walt Disney's Enchanted Tiki Room
+Walt's Plans to Take the Park to New Heights
+Wave Goodbye to the Folks on the Dock
+Winnie the Pooh
+World Traveler
+¡Hola!
+
+[auto]
+Albert
+Alex
+Alexander
+Alice
+Andrew
+Anika Noni
+Anna
+Ariel
+Aurora
+Belle
+Ben
+Bill
+Bob
+Bret
+Captain Hook
+Captain Jack Sparrow
+Chip
+Chris
+Cinderella
+Clarabelle Cow
+Daisy Duck
+Dale
+Debra
+Donald Duck
+Eeyore
+Elsa
+Evil Queen
+Gaston
+Genie
+Geppetto
+Goofy
+Jeff
+Jenifer
+Jim
+Mad Hatter
+Margaret
+Mary Poppins
+Michael-Leon Wooley
+Mickey Mouse
+Miguel
+Minnie Mouse
+Mirabel
+Moana
+Patrick
+Pete
+Peter Pan
+Pinocchio
+Pluto
+Rapunzel
+Snow White
+Stitch
+TC
+Tiana
+Tigger
+Tim
+Tinker Bell
+Winnie the Pooh
+
+[multi]
+Toontown Five / Dime and The Gag Factory
+The PeopleMover and "Spaceport / Rocket Flight"
+Bayou Country / Bear Country
+Star Wars: Galaxy's Edge / Big Thunder Ranch
+Mickey / Friends
+Mickey / Friends Lightastic Finale – Donald Duck
+Mad Tea Party, Dumbo, / King Arthur Carrousel
+Stitch / Buzz Lightyear
+Anne Bonny / Mary Read
+Mickey / Minnie's Runaway Railway Cast Member Costume
+Toontown Food / Beverage Cast Member Apron

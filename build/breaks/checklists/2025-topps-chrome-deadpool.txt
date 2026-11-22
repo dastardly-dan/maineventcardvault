@@ -1,0 +1,235 @@
+# name: 2025 Topps Chrome Deadpool
+# sport: Marvel
+# added: 2026-11-22
+# source: https://cdn.shopify.com/s/files/1/0662/9749/5709/files/2025_Topps_Chrome_Deadpool_Checklist.pdf
+
+[base]
+A Daring Escape
+A Dire Situation
+A Fiery Entrance
+A Momentary Pause In Chaos
+A Pool's Best Friend
+A Reminder Of What You Are
+A Way Back
+Accessing The Time Ripper
+Advanced Weaponry
+Aftermath
+All Or Nothing
+An All-Out Brawl
+An Army of Two
+B-15
+Babypool
+Battle Prowess
+Blade
+Blind Al
+Blob
+Bullseye
+Cable
+Cassandra Exits The Void
+Cassandra Nova
+Cassandra's Wrath
+Caught In The Action
+Colossus
+Cowboypool
+Deadpool
+Deadpool Finds His Logan
+Deadpool Strikes Back
+Deadpool's Baby Knife
+Destroying All Timelines
+Disrupting Cassandra's Plot
+Dogpool
+Dogpool Taking A Stroll
+Domino
+Dopinder
+Elektra
+Enjoying His New Threads
+Face-To-Face With The Hulk
+Fashion and Function
+Fighting Fire With Fire
+Finding The Cavillrine
+First Tango With Wolverine
+Fleeing The TVA
+Fracas In The Fortress
+Gambit
+Happy Hogan
+Headpool
+Hiding From The TVA
+Into Logan's Mind
+Juggernaut
+Kidpool
+Lady Deathstrike
+Ladypool
+Magnet Trap
+Mercenary Melee
+Minutemen In Pursuit
+Mr. Paradox
+Negasonic Teenage Warhead
+Old Man Logan
+Patch
+Patrolling The Void
+Peter
+Psylocke
+Pyro
+Pyro's Fury
+Quill
+Ready For Round 2
+Russian
+Sabretooth
+Searching for Logan
+Shatterstar
+Special Delivery
+Standoff with Cowboypool
+Subdued by Cassandra
+Taking Matters Into His Own Hands
+The Adventure Begins
+The Coup Gone Wrong
+The FantastiCar
+The Nefarious Cassandra Nova
+The Scheming Mr. Paradox
+The TVA Office
+Toad
+Unstoppable
+Variant Madness
+Wade Wilson
+Wade's Big Interview
+Waking Up In A Den of Rebels
+Weapon X
+Welshpool
+Wolverine
+X-23
+
+[auto]
+Aaron Stanford
+Aaron W. Reed
+Billy Clements
+Brianna Hildebrand
+Carlo Barberi
+Chris Evans
+Curtis Small
+Dafne Keen
+Daniel Medina Ramos
+Ed McGuinness
+Eduardo Gago Muñoz
+Emma Corrin
+Henry Cavill
+Hugh Jackman
+Jade Lye
+James Dryden
+Josh Brolin
+Karan Soni
+Leslie Uggams
+Lewis Tan
+Mark Brooks
+Mike McKone
+Nathan Fillion
+Nilly Cetin
+Paco Medina
+Paul Mullin
+Peggy the Dog
+Rob Delaney
+Ryan Brown
+Ryan Reynolds
+Stefan Kapičić
+Terry Crews
+Tyler Mane
+Wunmi Mosaku
+
+[insert]
+Archangel
+Azazel
+Babypool
+Blade
+Blind Al
+Cable
+Captain America #11
+Cassandra Nova
+Classic Brown-and-Tan Wolverine
+Colossus
+Cowboypool
+Deadpool
+Deadpool #1
+Deadpool #27
+Deadpool #4
+Deadpool 2099
+Deadpool Vs. Wolverine: Slash 'Em Up Infinity Comic #1
+Deadpool Vs. Wolverine: Slash 'Em Up Infinity Comic #3
+Dogpool
+Domino
+Dreadpool
+Elektra
+Evil Deadpool
+Fantastic Four #22
+Fantomex
+Fever Dream Wolverine
+FIRE
+Gambit
+Golden Age Deadpool
+Headpool
+Hellverine #3
+Johnny Storm
+Juggernaut
+Kidpool
+King Deadpool
+Lady Deadpool
+Ladypool
+Mr. Paradox
+Negasonic Teenage Warhead
+Nightcrawler
+Old Man Logan
+Patch
+Peter
+Professor X
+Psylocke
+Pyro
+Rogue
+Russian
+Sabretooth
+Short King Wolverine
+Spider-Gwen: The Ghost-Spider #3
+The Avengers #16
+The Avengers #17
+The Cavillrine
+The Immortal Thor #13
+The Incredible Hulk #181
+The New Mutants #98
+The Spectacular Spider-Men #6
+Toad
+Ultimate Deadpool
+Ultimate Wolverine
+Vanessa
+Wade Wilson
+Weapon X
+Welshpool
+Wild Thing
+Wolverine
+Wolverine #20
+Wolverine: Deep Cut #1
+Wolverine: Origins #25
+X-23
+X-Men #2
+X-Men: Blood Hunt - Laura Kinney The Wolverine #1
+X-Men: Heir of Apocalypse #3
+Zenpool
+
+[multi]
+Deadpool / Wolverine #2
+Deadpool / Wolverine: WWIII #3
+Deadpool / Wolverine: WWIII #1
+Deadpool / Wolverine #7
+Deadpool / Wolverine #1
+Wolverines / Deadpools #1
+Wolverines / Deadpools #2
+Psylocke / Deadpool
+Wolverine / Deadpool
+Cable / Deadpool
+Deadpool / Colossus
+Wolverine / Gambit
+Daniel Medina Ramos / Aaron Stanford
+Emma Corrin / Aaron Stanford
+Hugh Jackman / Dafne Keen
+Henry Cavill / Hugh Jackman
+Karan Soni / Leslie Uggams
+Leslie Uggams / Rob Delaney
+Ryan Reynolds / Henry Cavill
+Ryan Reynolds / Hugh Jackman
+Aaron Stanford / Tyler Mane

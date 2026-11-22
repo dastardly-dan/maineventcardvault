@@ -1,0 +1,437 @@
+# name: 2026 Topps Chrome UFC
+# sport: UFC
+# added: 2026-11-22
+# source: https://cdn.shopify.com/s/files/1/0662/9749/5709/files/FINAL_CheckList_2026_TOPPS_CHROME_UFC_V2.xls
+
+[base]
+Aaron Pico
+Ailin Perez | W
+Aleksandre Topuria
+Alex Pereira
+Alexa Grasso | W
+Alexander Volkanovski
+Alexander Volkov
+Alexandre Pantoja
+Alexia Thainara | W
+Alvin Hines
+Amanda Lemos | W
+Amanda Nunes | W
+Amanda Ribas | W
+Amir Albazi
+Anderson Silva
+Andre Lima
+Andreas Gustafsson
+Arman Tsarukyan
+Arnold Allen
+Austin Vanderford
+Azamat Murzakanov
+Belal Muhammad
+Benoit Saint Denis
+Bo Nickal
+Brandon Moreno
+Brandon Royval
+Brian Ortega
+Bruna Brasil | W
+Caio Borralho
+Carlos Leal
+Carlos Prates
+Carlos Ulberg
+Casey O'Neill | W
+Chang Ho Lee
+Charles Jourdain
+Charles Oliveira
+Chase Hooper
+Chris Padilla
+Chuck Liddell
+Ciryl Gane
+Clayton Carpenter
+Cody Garbrandt
+Colby Covington
+Conor McGregor
+Cory Sandhagen
+Curtis Blaydes
+Daniel Cormier
+Daniel Hooker
+Daniel Marcos
+Daniel Santos
+Daniel Zellhuber
+Danny Barlow
+David Onama
+Deiveson Figueiredo
+Derrick Lewis
+Diego Lopes
+Dione Barbosa | W
+Dricus Du Plessis
+Dustin Poirier
+Elijah Smith
+Erin Blanchfield | W
+Esteban Ribovics
+Fatima Kline | W
+Felipe Lima
+Francis Marshall
+Gabriel Bonfim
+Gabriel Santos
+Gautier Ateba
+Georges St-Pierre
+Gillian Robertson | W
+Hyder Amil
+Hyunsung Park
+Ian Machado Garry
+Iasmin Lucindo | W
+Ibo Aslan
+Ilia Topuria
+Irene Aldana | W
+Islam Dulatov
+Islam Makhachev
+Israel Adesanya
+Jack Della Maddalena
+Jackson McVey
+Jacqueline Cavalcanti | W
+Jailton Almeida
+Jamahal Hill
+Jan Błachowicz
+Jaqueline Amorim | W
+Jasmine Jasudavicius | W
+Jean Matsumoto
+Jean Silva
+Jeong Yeong Lee
+Jessica Andrade | W
+Jiri Prochazka
+JJ Aldrich | W
+Joanna Jędrzejczyk | W
+Joaquin Buckley
+Jon Jones
+Joo Sang Yoo
+Jose Mariscal
+Josh Emmett
+Joshua Van
+José Aldo
+Julianna Peña | W
+Justin Gaethje
+Kai Asakura
+Kai Kara-France
+Kamaru Usman
+Karine Silva | W
+Kaue Fernandes
+Kayla Harrison | W
+Ketlen Vieira | W
+Kevin Holland
+Khabib Nurmagomedov
+Khalil Rountree Jr.
+Khamzat Chimaev
+Kody Steele
+Leon Edwards
+Lerone Murphy
+Lone'er Kavanagh
+Luana Santos | W
+Ludovit Klein
+Mackenzie Dern | W
+Macy Chiasson | W
+Magomed Ankalaev
+Malcolm Wellmaker
+Manel Kape
+Manon Fiorot | W
+Mansur Abdul-Malik
+Marco Silva
+Marcus Almeida
+Marcus McGhee
+Mario Bautista
+Mario Pinto
+Mark Choinski
+MarQuel Mederos
+Mauricio Santos
+Max Holloway
+Maycee Barber | W
+Merab Dvalishvili
+Michael Aswell
+Michael Chandler
+Michael Morales
+Michael Page
+Michael Parkin
+Mingyang Zhang
+Miranda Maverick | W
+Movsar Evloev
+Muhammadjon Naimov
+Nasrat Haqparast
+Nassourdine Imavov
+Natalia Cristina da Silva | W
+Navajo Stirling
+Nazim Sadykhov
+Nora Cornolle | W
+Norma Dumont | W
+Nursulton Ruziboev
+Oban Elliott
+Oumar Sy
+Paddy Pimblett
+Patricio Freire
+Patrick Mix
+Payton Talbott
+Petr Yan
+Piera Rodriguez | W
+Quillan Salkilld
+Rafael Estevam
+Ramazan Temirov
+Raquel Pennington | W
+Raul Rosas
+Rei Tsuruya
+Reinier De Ridder
+Rizvan Kuniev
+Robert Whittaker
+Roman Kopylov
+Rose Namajunas | W
+Sean Brady
+Sean O'Malley
+Sean Strickland
+Seok Hyeon Ko
+Sergei Pavlovich
+Sharabutdin Magomedov
+Shavkat Rakhmonov
+Shi Ming | W
+Stephen Erceg
+Stipe Miocic
+Tabatha Ricci | W
+Talita Alencar | W
+Tallison Teixeira
+Tatiana Suarez | W
+Tatsuro Taira
+Thiago Moises
+Tim Elliott
+Tofiq Musayev
+Tom Aspinall
+Tom Nolan
+Torrez Finney
+Tracy Cortez | W
+Trevor Peek
+Umar Nurmagomedov
+Valentina Shevchenko | W
+Vinicius Oliveira
+Virna Jandiroba | W
+Waldo Cortes
+Wang Cong | W
+Yadong Song
+Yair Rodríguez
+Yan Xiaonan | W
+Youssef Zalal
+Zhang Weili | W
+Zhu Rong
+
+[auto]
+Aaron Pico
+Ailin Perez | W
+Aleksandar Rakic
+Alex Pereira
+Alex Perez
+Alexa Grasso | W
+Alexander Volkanovski
+Alexander Volkov
+Alexandre Pantoja
+Alexia Thainara | W
+Aljamain Sterling
+Alvin Hines
+Amanda Lemos | W
+Amanda Nunes | W
+Amanda Ribas | W
+Anderson Silva
+Andre Lima
+Andreas Gustafsson
+Anthony Hernandez
+Arman Tsarukyan
+Arnold Allen
+Assu Almabayev
+Austin Vanderford
+Belal Muhammad
+BJ Penn
+Bo Nickal
+Bogdan Guskov
+Brandon Moreno
+Brandon Royval
+Brian Ortega
+Bruna Brasil | W
+Caio Borralho
+Carlos Leal
+Carlos Prates
+Carlos Ulberg
+Chang Ho Lee
+Charles Oliveira
+Chase Hooper
+Chris Padilla
+Chuck Liddell
+Clayton Carpenter
+Colby Covington
+Conor McGregor
+Cory Sandhagen
+Curtis Blaydes
+Dan Ige
+Dana White
+Daniel Cormier
+Daniel Hooker
+Daniel Santos
+Daniel Zellhuber
+David Onama
+Deiveson Figueiredo
+Diego Lopes
+Dione Barbosa | W
+Dominick Reyes
+Dricus Du Plessis
+Dustin Poirier
+Elijah Smith
+Erin Blanchfield | W
+Felipe Lima
+Francis Marshall
+Gabriel Santos
+Gautier Ateba
+Geoff Neal
+Georges St-Pierre
+Gilbert Burns
+Gillian Robertson | W
+Hyder Amil
+Ian Machado Garry
+Iasmin Lucindo | W
+Ibo Aslan
+Ilia Topuria
+Irene Aldana | W
+Islam Makhachev
+Israel Adesanya
+Jack Della Maddalena
+Jackson McVey
+Jacqueline Cavalcanti | W
+Jailton Malhadinho
+Jamahal Hill
+Jan Błachowicz
+Jaqueline Amorim | W
+Jean Matsumoto
+Jean Silva
+Jiri Prochazka
+JJ Aldrich | W
+Joaquin Buckley
+Joe Pyfer
+Johnny Walker
+Jon Jones
+Joo Sang Yoo
+Josh Emmett
+Joshua Van
+José Aldo
+Julianna Peña | W
+Justin Gaethje
+Kai Asakura
+Kai Kara-France
+Karol Rosa | W
+Kaue Fernandes
+Kayla Harrison | W
+Ketlen Vieira | W
+Kevin Holland
+Khabib Nurmagomedov
+Khalil Rountree Jr.
+Khamzat Chimaev
+Kody Steele
+Leon Edwards
+Lerone Murphy
+Lone'er Kavanagh
+Mackenzie Dern | W
+Macy Chiasson | W
+Magomed Ankalaev
+Manel Kape
+Manon Fiorot | W
+Mansur Abdul-Malik
+Marco Silva
+Marcus Almeida
+Marina Rodriguez | W
+Mario Pinto
+Mark Choinski
+Mark Kerr
+Marlon Vera
+MarQuel Mederos
+Mauricio Santos
+Max Holloway
+Maycee Barber | W
+Mayra Bueno | W
+Merab Dvalishvili
+Michael Aswell
+Michael Chandler
+Michael Morales
+Michael Page
+Michael Parkin
+Montel Jackson
+Movsar Evloev
+Nasrat Haqparast
+Nassourdine Imavov
+Natalia Cristina da Silva | W
+Nora Cornolle | W
+Norma Dumont | W
+Nursulton Ruziboev
+Oban Elliott
+Paddy Pimblett
+Patricio Freire
+Payton Talbott
+Petr Yan
+Quillan Salkilld
+Rafael Estevam
+Ramazan Temirov
+Raquel Pennington | W
+Raul Rosas
+Rei Tsuruya
+Reinier De Ridder
+Renato Moicano
+Robert Whittaker
+Roman Dolidze
+Roman Kopylov
+Rose Namajunas | W
+Sean Brady
+Sean O'Malley
+Sean Strickland
+Seok Hyeon Ko
+Sergei Pavlovich
+Shamil Gaziev
+Sharabutdin Magomedov
+Shavkat Rakhmonov
+Shi Ming | W
+Stephen Erceg
+Stephen Thompson
+Stipe Miocic
+Tabatha Ricci | W
+Tai Tuivasa
+Talita Alencar | W
+Tallison Teixeira
+Tatiana Suarez | W
+Tatsuro Taira
+Tom Aspinall
+Tom Nolan
+Torrez Finney
+Umar Nurmagomedov
+Valentina Shevchenko | W
+Vinicius Oliveira
+Virna Jandiroba | W
+Waldo Cortes
+Wang Cong | W
+Yadong Song
+Yan Xiaonan | W
+Youssef Zalal
+Zhang Weili | W
+Zhu Rong
+
+[multi]
+Amanda Nunes | W / Kayla Harrison | W
+Jon Jones / Daniel Cormier
+Ian Machado Garry / Shavkat Rakhmonov
+Charles Oliveira / Ilia Topuria
+Alexandre Pantoja / Joshua Van
+Kevin Holland / Michael Page
+Dustin Poirier / Max Holloway
+Khamzat Chimaev / Dricus Du Plessis
+Belal Muhammad / Jack Della Maddalena
+Valentina Shevchenko | W / Alexa Grasso | W
+Manon Fiorot | W / Erin Blanchfield | W
+Rose Namajunas | W / Zhang Weili | W
+Khabib Nurmagomedov / Conor McGregor
+Raquel Pennington | W / Julianna Peña | W
+Arman Tsarukyan / Islam Makhachev
+Diego Lopes / Alexander Volkanovski
+Jiri Prochazka / Jamahal Hill
+Merab Dvalishvili / Sean O'Malley
+Colby Covington / Joaquin Buckley
+Alex Pereira / Israel Adesanya
+Gregory Rodrigues / Jared Cannonier
+Ciryl Gane / Tom Aspinall
+Anderson Silva / Chael Sonnen
+Dricus Du Plessis / Sean Strickland
+BJ Penn / Georges St-Pierre

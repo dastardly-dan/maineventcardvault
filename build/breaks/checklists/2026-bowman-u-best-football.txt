@@ -1,0 +1,439 @@
+# name: 2026 Bowman U Best Football
+# sport: NFL
+# added: 2026-11-22
+# source: https://cdn.shopify.com/s/files/1/0662/9749/5709/files/2026_Bowman_U_Best_FB_Checklist.pdf
+
+[base]
+Aaron Philo | Florida
+AJ Surace | Rutgers
+Alessio Milivojevic | Michigan State
+Amari Odom | Syracuse
+Antwann Hill Jr. | Arkansas
+Ashton Bethel-Roman | Texas A&M University
+Baylor Hayes | Tulsa
+Bear Bachmeier | BYU
+Bo Jackson | Ohio State
+Brad Jackson | Texas State
+Braden Pegan | Utah
+Brandon Tullis | Michigan State
+Braylon Staley | Tennessee
+Bryce Underwood | Michigan
+Byrd Ficklin | Utah
+Caden Durham | LSU
+Caden High | Stanford
+Caleb Hawkins | Oklahoma State
+Cam Coleman | Texas
+Cameron Dickey | Texas Tech
+Carlos Hernandez | Wake Forest
+Cederian Morgan | Alabama
+CharMar Brown | Miami
+Chase Jenkins | Kansas
+Chris Barnes | Oklahoma State
+Chris Marshall | Arkansas
+CJ Carr | Notre Dame
+Cooper Barkate | Miami
+Cutter Boley | Arizona State
+Cyncir Bowers | Uconn
+Danny Scudero | Colorado
+Darian Mensah | Miami
+Demond Williams Jr. | Washington
+Dezmen Roebuck | Washington
+Donte Lee Jr. | Texas Tech
+Drew Mestemaker | Oklahoma State
+Dylan Lonergan | Rutgers
+Dylan Wade | UCF
+Elijah Brown | Washington
+Emmett Mosley V | Texas
+Ethan Davis | Tennessee
+Ezavier Crowell | Alabama
+Fluff Bothwell | Mississippi State
+Garrett Oakley | Kansas State
+Gio Lopez | Wake Forest
+Hollywood Smothers | Texas
+Jack Layne | New Mexico
+Jake Merklinger | Uconn
+James Simon | Texas
+Jared Curtis | Vanderbilt
+Jaron-Keawe Sagapolutele | California
+Javin Gordon | Tennessee
+Jayden Limar | Washington
+Jayden Maiava | USC
+Jeremiah McClellan | Oregon
+Jerome Myles | Texas A&M University
+JJ Buchanan | Michigan
+Jordan Napier | San Diego State
+Joseph Himon II | Northwestern
+Joseph Williams | Colorado
+Josh Hoover | Indiana
+Joshua Moore | Miami
+Kamario Taylor | Mississippi State
+Katin Houser | Illinois
+Kenny Minchey | Kentucky
+Kewan Lacy | Ole Miss
+King Miller | USC
+KJ Jackson | Arkansas
+Kyri Shoels | Utah
+LaNorris Sellers | South Carolina
+Lawayne McCoy | Florida State
+Leonard Moore | Notre Dame
+London Montgomery | Florida
+Lotzeir Brooks | Alabama
+Lunch Winfield | Louisiana
+Mason Heintschel | Pittsburgh
+Matt Fuller | South Carolina
+Micah Ford | Stanford
+Micahi Danzy | Florida State
+Mikey Matthews | UCLA
+Nick Marsh | Indiana
+Parker Livingstone | The University of Oklahoma
+Raiden Vines-Bright | Arizona State
+Re'Shaun Sanford | Houston
+Rodney Tisdale Jr. | Western Kentucky
+Ryan Browne | Purdue
+Sammy Brown | Clemson
+Samuel Harris | Wyoming
+Scotty Fox Jr. | West Virginia
+T.J. Moore | Clemson
+Taylor Wein | The University of Oklahoma
+Terrell Anderson | USC
+Tory Blaylock | The University of Oklahoma
+Turbo Richard | Indiana
+Ty Clark III | Wake Forest
+Tyrique Tucker | Indiana
+Vandrevius Jacobs | Miami
+Waymond Jordan | USC
+Will Hammond | Texas Tech
+Wyatt Young | Oklahoma State
+
+[auto]
+Aaron Philo | Florida
+Adam Schobel | TCU
+AJ Surace | Rutgers
+Alessio Milivojevic | Michigan State
+Alonza Barnett III | UCF
+Amare Thomas | Houston
+Amari Odom | Syracuse
+Anthony Colandrea | Nebraska
+Antwan Raymond | Rutgers
+Antwann Hill Jr. | Arkansas
+Arch Manning | Texas
+Ashton Bethel-Roman | Texas A&M University
+Baylor Hayes | Tulsa
+Bear Bachmeier | BYU
+Big Jay and Baby Jay | Kansas
+Big Red | Western Kentucky University
+Bo Jackson | Ohio State
+Brad Jackson | Texas State
+Braden Pegan | Utah
+Brandon Tullis | Michigan State
+Broc Lowry | Western Michigan
+Bruiser | Baylor
+Brutus Buckeye | Ohio State
+Bryce Underwood | Michigan
+Bryson Donelson | Fresno State
+Bryson Washington | Auburn
+Butch T. Cougar | WSU
+Byrd Ficklin | Utah
+Ca'Lil Valentine | Illinois
+Caden Durham | LSU
+Caden High | Stanford
+Caleb Hawkins | Oklahoma State
+Caleb Komolafe | Northwestern
+Cam Coleman | Texas
+Cam Pickett | Kansas
+Cameron Dickey | Texas Tech
+Carlos Hernandez | Wake Forest
+Cataurus Hicks | Pittsburgh
+Cavman | Virginia
+Cederian Morgan | Alabama
+CharMar Brown | Miami
+Chase Jenkins | Kansas
+Chauncey Bowens | Georgia
+Chris Barnes | Oklahoma State
+Chris Marshall | Arkansas
+CJ Carr | Notre Dame
+Colton Joseph | Wisconsin
+Cooper Barkate | Duke
+Cooper Barkate | Miami
+Cutter Boley | Arizona State
+Cy The Cardinal | Iowa State
+Cyncir Bowers | Uconn
+Danny Scudero | Colorado
+Dante Moore | Oregon
+Darian Mensah | Duke
+Darian Mensah | Miami
+Demon Deacon | Wake Forest
+Demon June | North Carolina
+Demond Williams Jr. | Washington
+Dezmen Roebuck | Washington
+DJ Vonnahme | Iowa
+Donte Lee Jr. | Texas Tech
+Drew Mestemaker | Oklahoma State
+Duane Thomas Jr. | UCF
+Dylan Lonergan | Rutgers
+Dylan Wade | UCF
+Elijah Brown | Washington
+Emmett Mosley V | Texas
+Ethan Davis | Tennessee
+Ezavier Crowell | Alabama
+Fluff Bothwell | Mississippi State
+Garrett Oakley | Kansas State
+Gio Lopez | Wake Forest
+Herbie Husker | Nebraska
+Hollywood Smothers | Texas
+Hoosier The Bison | Indiana
+Isaiah West | Ohio State
+J'Koby Williams | Texas Tech
+Jack Layne | New Mexico
+Jackson Harris | LSU
+Jaden Craig | TCU
+Jai'Den Thomas | UNLV
+Jalen Smith | Minnesota
+Jamal Roberts | Missouri
+Jamari Johnson | Oregon
+Jamarion Morrow | Texas A&M University
+James Simon | Texas
+Jared Curtis | Vanderbilt
+Jaron Tibbs | Kansas State
+Jaron-Keawe Sagapolutele | California
+Javin Gordon | Tennessee
+Jayden Limar | Washington
+Jayden Maiava | USC
+Jaylen Raynor | Iowa State
+JC French IV | Cincinnati
+Jeremiah Cobb | Auburn
+Jeremiah Hasley | Duke
+Jeremiah McClellan | Oregon
+Jerome Myles | Texas A&M University
+JJ Buchanan | Michigan
+Joe Bruin | UCLA
+Joe Jackson | Kansas State
+John Henry Daley | Michigan
+Jordan Gant | Akron
+Jordan Napier | San Diego State
+Joseph Himon II | Northwestern
+Joseph Williams | Colorado
+Josh Allen | Firebaugh High School
+Josh Hoover | Indiana
+Joshua Moore | Miami
+Kaelan Chudzinski | Boston College
+Kamario Taylor | Mississippi State
+Katin Houser | Illinois
+Kenny Minchey | Kentucky
+Kewan Lacy | Ole Miss
+Keyjuan Brown | Louisville
+King Miller | USC
+KJ Duff | Rutgers
+KJ Jackson | Arkansas
+Kyri Shoels | Utah
+LaNorris Sellers | South Carolina
+Lawson Luckie | Georgia
+Leonard Moore | Notre Dame
+London Humphreys | Georgia
+London Montgomery | Florida
+Lotzeir Brooks | Alabama
+Lucky Sutton | San Diego State
+Lunch Winfield | Louisiana
+Marcel Reed | Texas A&M University
+Mason Heintschel | Pittsburgh
+Matt Fuller | South Carolina
+Micah Ford | Stanford
+Micahi Danzy | Florida State
+Michael Turner | Baylor
+Mikey Matthews | UCLA
+Nick Marsh | Indiana
+Nick Minicucci | Delaware
+Otto The Orange | Syracuse
+Parker Livingstone | The University of Oklahoma
+Peruna | SMU
+Peyton Manning | Isidore Newman School
+Raiden Vines-Bright | Arizona State
+Raider Red | Texas Tech
+Rameses | UNC
+Re'Shaun Sanford | Houston
+Rodney Tisdale Jr. | Western Kentucky
+Ryan Browne | Purdue
+Sammy Brown | Clemson
+Samuel Harris | Wyoming
+Scotty Fox Jr. | West Virginia
+Sire Gaines | Boise State
+Sparky | Arizona State
+Stanford Tree | Stanford
+SuperFrog | TCU
+Swoop | Utah
+T.J. Moore | Clemson
+Taylor Wein | The University of Oklahoma
+Terrance Carter Jr. | Texas Tech
+Terrell Anderson | USC
+Tiger Bachmeier | BYU
+TJ Abrams | Florida
+Tory Blaylock | The University of Oklahoma
+Truman The Tiger | Missouri
+Turbo Richard | Indiana
+Ty Clark III | Wake Forest
+Tyrique Tucker | Indiana
+Victor Snow | NC State
+Waymond Jordan | USC
+Wyatt Young | Oklahoma State
+Yamir Knight | SMU
+Zahir Mathis | Maryland
+
+[insert]
+Aaron Philo | Florida
+Alessio Milivojevic | Michigan State
+Alonza Barnett III | UCF
+Amare Thomas | Houston
+Anthony Colandrea | Nebraska
+Bear Bachmeier | BYU
+Beaver Stadium | Penn State
+Ben Hill Griffin Stadium "The Swamp" | Florida
+Big Jay and Baby Jay | Kansas
+Big Red | Western Kentucky University
+Bo Jackson | Ohio State
+Braylon Staley | Tennessee
+Bruiser | Baylor
+Brutus Buckeye | Ohio State
+Bryce Fitzgerald | Miami
+Bryce Underwood | Michigan
+Butch T. Cougar | WSU
+Caden Durham | LSU
+Caleb Hawkins | Oklahoma State
+Caleb Komolafe | Northwestern
+Cam Coleman | Texas
+Cam Cook | West Virginia
+Cameron Dickey | Texas Tech
+Cavman | Virginia
+Cederian Morgan | Alabama
+CharMar Brown | Miami
+Chase Jenkins | Kansas
+Chauncey Bowens | Georgia
+CJ Carr | Notre Dame
+Colton Joseph | Wisconsin
+Cooper Barkate | Miami
+Cutter Boley | Arizona State
+Cy The Cardinal | Iowa State
+Danny Scudero | Colorado
+Darian Mensah | Miami
+Demon Deacon | Wake Forest
+Demond Williams Jr. | Washington
+Dezmen Roebuck | Washington
+Drew Mestemaker | Oklahoma State
+Dylan Lonergan | Rutgers
+Emmett Mosley V | Texas
+Fluff Bothwell | Mississippi State
+Garrett Oakley | Kansas State
+Gavin Freeman | Baylor
+Herbie Husker | Nebraska
+Hollywood Smothers | Texas
+Hoosier The Bison | Indiana
+Jackson Harris | LSU
+Jaden Craig | TCU
+Jake Merklinger | Uconn
+Jamal Roberts | Missouri
+Jamarion Morrow | Texas A&M University
+James Simon | Texas
+Jared Curtis | Vanderbilt
+Jaron-Keawe Sagapolutele | California
+Javin Gordon | Tennessee
+Jayden Maiava | USC
+Jaylen Raynor | Iowa State
+JC French IV | Cincinnati
+Jeremiah Cobb | Auburn
+Jeremiah McClellan | Oregon
+Jerome Myles | Texas A&M University
+Joe Bruin | UCLA
+John Henry Daley | Michigan
+Jordan-Hare Stadium | Auburn
+Josh Allen | Firebaugh High School
+Josh Hoover | Indiana
+Kamario Taylor | Mississippi State
+Kendrick Raphael | SMU
+Kenny Minchey | Kentucky
+Kewan Lacy | Ole Miss
+Keyjuan Brown | Louisville
+King Miller | USC
+KJ Duff | Rutgers
+KJ Jackson | Arkansas
+LaNorris Sellers | South Carolina
+Leonard Moore | Notre Dame
+London Humphreys | Georgia
+Lotzeir Brooks | Alabama
+Lunch Winfield | Louisiana
+Mandrell Desir | Florida State
+Marcel Reed | Texas A&M
+Marcel Reed | Texas A&M University
+Mason Heintschel | Pittsburgh
+Micah Ford | Stanford
+Micahi Danzy | Florida State
+Michigan Stadium | Michigan
+Neyland Stadium | Tennessee
+Nick Marsh | Indiana
+Notre Dame Stadium | Notre Dame
+Otto The Orange | Syracuse
+Parker Livingstone | The University of Oklahoma
+Peruna | SMU
+Peyton Manning | Isidore Newman School
+Raider Red | Texas Tech
+Rameses | UNC
+Rodney Tisdale Jr. | Western Kentucky
+Saban Field at Bryant-Denny Stadium | Alabama
+Sammy Brown | Clemson
+Sparky | Arizona State
+Stanford Tree | Stanford
+SuperFrog | TCU
+Swoop | Utah
+T.J. Moore | Clemson
+Teitum Tuioti | Oregon
+Tiger Stadium | LSU
+Tory Blaylock | The University of Oklahoma
+Tre Spivey | Arizona
+Truman The Tiger | Missouri
+Turbo Richard | Indiana
+Tyrique Tucker | Indiana
+Vicari Swain | University of South Carolina
+Victor Snow | NC State
+Waymond Jordan | USC
+Yhonzae Pierre | Alabama
+Zahir Mathis | Maryland
+
+[multi]
+Omarion Miller | Arizona State / Cutter Boley | Arizona State
+Bear Bachmeier | BYU / Tiger Bachmeier | BYU
+Chase Hendricks | California / Jaron-Keawe Sagapolutele | California
+Cole Tabb | Cincinnati / JC French IV | Cincinnati
+Katin Houser | Illinois / Alex Perry | Illinois
+Nick Marsh | Indiana / Josh Hoover | Indiana
+Alessio Milivojevic | Michigan State / KK Smith | Michigan State
+Kamario Taylor | Mississippi State / Fluff Bothwell | Mississippi State
+CJ Carr | Notre Dame / Aneyas Williams | Notre Dame
+Anthony Colandrea | Nebraska / Kwazi Gilmer | Nebraska
+Drew Mestemaker | Oklahoma State / Wyatt Young | Oklahoma State
+Parker Livingstone | The University of Oklahoma / Tory Blaylock | The University of Oklahoma
+Ja'Kyrian Turner | Pittsburgh / Mason Heintschel | Pittsburgh
+Fame Ijeboi | Purdue / Ryan Browne | Purdue
+Ashton Bethel-Roman | Texas A&M University / Jamarion Morrow | Texas A&M University
+Cyncir Bowers | Uconn / Jake Merklinger | Uconn
+Alonza Barnett III | UCF / Duane Thomas Jr. | UCF
+Aaron Philo | Florida / TJ Abrams | Florida
+Waymond Jordan | USC / King Miller | USC
+Hollywood Smothers | Texas / Emmett Mosley V | Texas
+Byrd Ficklin | Utah / Braden Pegan | Utah
+Demond Williams Jr. | Washington / Dezmen Roebuck | Washington
+Scotty Fox Jr. | West Virginia / Cam Cook | West Virginia
+Sidney Stewart | Maryland / Jayden Jackson | The University of Oklahoma / Mandrell Desir | Florida State / Zahir Mathis | Maryland / John Henry Daley | Michigan / Tyrique Tucker | Indiana
+Jaron-Keawe Sagapolutele | California / Bear Bachmeier | BYU / Demond Williams Jr. | Washington / Kamario Taylor | Mississippi State / Kenny Minchey | Kentucky / CJ Carr | Notre Dame
+Micah Ford | Stanford / CharMar Brown | Miami / Waymond Jordan | USC / Fluff Bothwell | Mississippi State / Tory Blaylock | The University of Oklahoma / Cam Cook | West Virginia
+KJ Jackson | Arkansas / Chris Marshall | Arkansas / CJ Brown | Arkansas / Sutton Smith | Arkansas
+Dylan Lonergan | Rutgers / Anthony Colandrea | Nebraska / Bryce Underwood | Michigan / Colton Joseph | Wisconsin
+Alonza Barnett III | UCF / Byrd Ficklin | Utah / Scotty Fox Jr. | West Virginia / Jaylen Raynor | Iowa State
+Adam Mohammed | California / Jaron-Keawe Sagapolutele | California / Mason Mini | California / Chase Hendricks | California
+Turbo Richard | Indiana / Josh Hoover | Indiana / Khobie Martin | Indiana / Nick Marsh | Indiana
+Jaron Tibbs | Kansas State / Joe Jackson | Kansas State / Garrett Oakley | Kansas State / Rodney Fields Jr. | Kansas State
+Brandon Tullis | Michigan State / Alessio Milivojevic | Michigan State / KK Smith | Michigan State / Marvis Parrish | Michigan State
+CJ Carr | Notre Dame / Leonard Moore | Notre Dame / Nolan James Jr. | Notre Dame / Aneyas Williams | Notre Dame
+Chris Barnes | Oklahoma State / Wyatt Young | Oklahoma State / Drew Mestemaker | Oklahoma State / Caleb Hawkins | Oklahoma State
+Kamario Taylor | Mississippi State / Aaron Philo | Florida / Kenny Minchey | Kentucky / LaNorris Sellers | University of South Carolina
+Ashton Bethel-Roman | Texas A&M University / Jerome Myles | Texas A&M University / Jamarion Morrow | Texas A&M University / Marcel Reed | Texas A&M University
+Ryan Niblett | Texas / Hollywood Smothers | Texas / Emmett Mosley V | Texas / Cam Coleman | Texas
+Lawson Luckie | Georgia / London Humphreys | Georgia / Chauncey Bowens | Georgia / Isiah Canion | Georgia
+Katin Houser | Illinois / Alex Perry | Illinois / Ca'Lil Valentine | Illinois / Jayshon Platt | Illinois

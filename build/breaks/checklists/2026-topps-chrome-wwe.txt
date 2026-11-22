@@ -1,12 +1,9 @@
 # name: 2026 Topps Chrome WWE
 # sport: WWE
 # added: 2026-11-22
-# source: https://www.checklistcenter.com/2026-topps-chrome-wwe-wrestling-card-checklist/
+# source: https://cdn.shopify.com/s/files/1/0662/9749/5709/files/FINAL_CheckList_26CWWE_ChromeWWE.pdf
 
 [base]
-"Road Dogg" Jesse James
-"Stone Cold" Steve Austin
-"The American Nightmare" Cody Rhodes
 Adriana Rizzo | W
 AJ Lee | W
 AJ Styles
@@ -155,6 +152,7 @@ Rhea Ripley | W
 Ricky Saints
 Ridge Holland
 Rikishi
+"Road Dogg" Jesse James
 Roman Reigns
 Ron Killings
 Roxanne Perez | W
@@ -172,11 +170,13 @@ Solo Sikoa
 Stacy Keibler | W
 Stephanie Vaquer | W
 Stevie Turner | W
+"Stone Cold" Steve Austin
 Talla Tonga
 Tama Tonga
 Tank Ledger
 Tatum Paxley | W
 Tavion Heights
+"The American Nightmare" Cody Rhodes
 The Miz
 The Rock
 Thea Hail | W
@@ -207,12 +207,6 @@ Zelina Vega | W
 Zoey Stark | W
 
 [auto]
-"Cowboy" Bob Orton
-"Hacksaw" Jim Duggan
-"Mean" Mark Callous
-"Road Dogg" Jesse James
-"Stone Cold" Steve Austin
-"The American Nightmare" Cody Rhodes
 Adriana Rizzo | W
 AJ Styles
 Akira Tozawa
@@ -254,6 +248,7 @@ Charlotte Flair | W
 Chelsea Green | W
 Chris Sabin
 CM Punk
+"Cowboy" Bob Orton
 Cruz Del Toro
 D'Lo Brown
 D-Von Dudley
@@ -274,6 +269,7 @@ Finlay
 Finn Bálor
 Giulia | W
 Gunther
+"Hacksaw" Jim Duggan
 Hillbilly Jim
 Hornswoggle
 Hulk Hogan
@@ -297,6 +293,7 @@ Joaquin Wilde
 Joe Gacy
 Joe Hendry
 John Cena
+Johnny Gargano
 Jordan Devlin
 Jordynne Grace | W
 Julius Creed
@@ -327,6 +324,7 @@ Ludwig Kaiser
 Lyra Valkyria | W
 Marcel Barthel
 Maxxine Dupri | W
+"Mean" Mark Callous
 Michelle McCool | W
 Michin | W
 Mike Rotunda
@@ -353,6 +351,7 @@ Rey Mysterio
 Rhea Ripley | W
 Ricky Saints
 Rikishi
+"Road Dogg" Jesse James
 Rockabilly
 Rocky Maivia
 Roman Leakee
@@ -371,12 +370,13 @@ Solo Sikoa
 Stacy Keibler | W
 Stardust
 Stephanie Vaquer | W
+"Stone Cold" Steve Austin
 Syxx
 Talla Tonga
 Tama Tonga
 Tatum Paxley | W
 Terra Ryzing
-The Demon Finn Bálor
+"The American Nightmare" Cody Rhodes
 The Miz
 The Prototype
 The Ringmaster
@@ -410,26 +410,26 @@ Zelina Vega | W
 Zoey Stark | W
 
 [insert]
-"Mr. Wonderful" Paul Orndorff
-"Rowdy" Roddy Piper
-"Stone Cold" Steve Austin
-"The American Nightmare" Cody Rhodes
 AJ Lee | W
 AJ Styles
+Akira Tozawa
 Aleister Black
 Alex Shelley
 Alexa Bliss | W
-Angel
 Angelo Dawkins
+Asuka | W
+Austin Theory
 B-Fab | W
+Bad Girl Bayley | W
 Batista
 Bayley | W
 Becky Lynch | W
-Berto
 Bianca Belair | W
 Big John Studd
+Bo Dallas
+Boogie Knight
 Booker T
-Brandi Rhodes | W
+Braid-est Bianca | W
 Bray Wyatt
 Bret "Hit Man" Hart
 British Bulldog
@@ -439,21 +439,33 @@ Bronson Reed
 Bruno Sammartino
 Brutus "The Barber" Beefcake
 Bull Nakano | W
+Camacho
 Candice LeRae | W
 Carmelo Hayes
 Chad Gable
-Charlie Dempsey
 Charlotte Flair | W
 Chelsea Green | W
+Chelsea Shhhush! | W
 Chris Sabin
 Chyna | W
 CM Punk
+Cody Bomb
+Damaged Damian
 Damian Priest
+Dirty Dominik
+Disarm Her Becky | W
+Dominik Mysterio
 Don Muraco
+Drafty Drew
 Dragon Lee
 Drew McIntyre
 Earthquake
+El Grande Americano
+El Matador
+Elton Prince
 Fallon Henley | W
+Feral Fatu
+Finally! The Rock (Has Come Back to GPK!)
 Finn Bálor
 George "The Animal" Steele
 Giulia | W
@@ -461,6 +473,7 @@ Great Muta
 Gunther
 Hillbilly Jim
 Hulk Hogan
+Isaac Yankem, DDS
 Ivy Nile | W
 Iyo Sky | W
 Izzi Dame | W
@@ -471,58 +484,83 @@ Jaida Parker | W
 Jake "The Snake" Roberts
 JD McDonagh
 Je'Von Evans
-Jerry "The King" Lawler
 Jey Uso
+Jey Yeesh!
 Jimmy Uso
 Joe Hendry
 John Cena
+John See? Nah!
 Johnny Gargano
+Jordan Devlin
 Jordynne Grace | W
 Junkyard Dog
+Justin "Hawk" Bradshaw
+K-Kwik
 Kane
 Karmen Petrovic | W
 Kelani Jordan | W
 Kevin Owens
 Kiana James | W
 King Kong Bundy
+Kit Wilson
 Kofi Kingston
 Kurt Angle
 LA Knight
+Ladybird Lyra | W
 Lash Legend | W
 Lex Luger
+Lita | W
+Liv It Up | W
 Liv Morgan | W
 Lola Vice | W
 Ludwig Kaiser
 Lyra Valkyria | W
 Mankind
+Marcel Barthel
 Maxxine Dupri | W
+"Mean" Mark Callous
 Michelle McCool | W
 Michin | W
 Mike Rotunda
 Montez Ford
+Mr. America
 Mr. Fuji
+"Mr. Wonderful" Paul Orndorff
 Naomi | W
 Natalya | W
 Nia Jax | W
 Nikki Bella | W
 Nikki Cross | W
+Nikkita Lyons | W
 Nikolai Volkoff
 Oba Femi
+Otis
 Paul Heyman
 Penta
+Pete Dunne
 Piper Niven | W
+Pop-Out Penta
+Popped Roxanne | W
+Potty Mouth Punk
 R-Truth
 Randy Orton
 Raquel Rodriguez | W
+Repo Man
+Reptilian Randy
 Rey Fenix
 Rey Mysterio
 Rhea Ripley | W
 Rick Steiner
 Ricky Saints
 Rikishi
+Ripped Rhea | W
 Rob Van Dam
-Rocky Johnson
+Rockabilly
+Rocky Maivia
+Roman Empire
+Roman Leakee
 Roman Reigns
+"Rowdy" Roddy Piper
 Roxanne Perez | W
 Rusev
 Sami Zayn
@@ -533,32 +571,61 @@ Shawn Michaels
 Shawn Spears
 Sheamus
 Shinsuke Nakamura
+Soaring Sky | W
 Sol Ruca | W
 Solo Sikoa
-Stephanie McMahon | W
+Stardust
 Stephanie Vaquer | W
-Stevie Ray
-The Honky Tonk Man
+"Stone Cold" Steve Austin
+Supersized Seth
+Terra Ryzing
+"The American Nightmare" Cody Rhodes
 The Miz
+The Prototype
+The Ringmaster
+The Roadie
 The Rock
+The Sultan
+The Zodiac
 Thea Hail | W
 Tiffany Stratton | W
+Tiffany Time | W
 Tito Santana
 Tommaso Ciampa
 Tony D'Angelo
+Torrie Wilson | W
 Trick Williams
 Triple H
 Trish Stratus | W
+Tyler Breeze
 Typhoon
 Uncle Howdy
 Undertaker
-William Regal
+Unstitched Bliss | W
+Vinny Vegas
+Walter
 Wren Sinclair | W
+X-Pac
 Zaria | W
 Zelina Vega | W
+Zoey Stark | W
 
 [multi]
-D-Von Dudley / Bubba Ray Dudley
+CM Punk / AJ Lee | W
+Berto / Angel
+Brandi Rhodes | W / "The American Nightmare" Cody Rhodes
+Johnny Gargano / Candice LeRae | W
+Stephanie McMahon | W / Triple H
+Bret "Hit Man" Hart / Natalya | W
+Jimmy Uso / Naomi | W
+Rocky Johnson / The Rock
+Jerry "The King" Lawler / The Honky Tonk Man
+William Regal / Charlie Dempsey
+Becky Lynch | W / Seth Rollins
+Solo Sikoa / Rikishi
+Scott Steiner / Rick Steiner
+Stevie Ray / Booker T
+Michelle McCool | W / Undertaker
 Tommaso Ciampa / Johnny Gargano
 Montez Ford / Bianca Belair | W
 The Miz / Maryse | W
@@ -569,3 +636,4 @@ Lita | W / Trish Stratus | W
 Undertaker / Michelle McCool | W
 Giulia | W / Stephanie Vaquer | W
 Elton Prince / Kit Wilson
+D-Von Dudley / Bubba Ray Dudley

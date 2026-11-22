@@ -1,0 +1,675 @@
+# name: 2026 Topps Pro Debut Baseball
+# sport: MLB
+# added: 2026-11-22
+# source: https://cdn.shopify.com/s/files/1/0662/9749/5709/files/2026_Topps_Pro_Debut_Checklist.pdf
+
+[base]
+Aaron Walton
+Aaron Watson
+Adolfo Sanchez
+Aidan Miller
+Aidan West
+Aiva Arquette
+AJ Russell
+Alessander De La Cruz
+Alex Clemmey
+Alfonsin Rosario
+Alirio Ferrebus
+Andrew Salas
+Angel Feliz
+Anthony Eyanson
+Antonio Jimenez
+Arnaldo Lantigua
+Ashly Andujar
+Ben Hess
+Billy Carlson
+Blake Burke
+Blake Mitchell
+Bo Davidson
+Braden Montgomery
+Brady Ebel
+Brandon Compton
+Braylon Payne
+Brendan Tunink
+Brian Curley
+Briggs McKenzie
+Brody Brecht
+Brody Hopkins
+Bryce Rainer
+Caden Bodine
+Caleb Bonemer
+Caleb Lomavita
+Carlos Lagrange
+Carson Benge
+Charlee Soto
+Charles Davalan
+Charlie Condon
+Chase Shores
+Christian Oppor
+Cody Miller
+Colin Yeaman
+Conor Essenburg
+Cooper Flemming
+Cooper Pratt
+Daiber De Los Santos
+Daniel Pierce
+Dauri Fernandez
+David Shields
+Dax Kilby
+Dean Curley
+Dean Livingston
+Dean Moss
+Devin Fitz-Gerald
+Devin Taylor
+Easton Carmichael
+Eduardo Quintero
+Edward Florentino
+Edward Lantigua
+Eli Willits
+Elian Peña
+Emil Morales
+Ethan Conrad
+Ethan Frey
+Ethan Hedges
+Ethan Holliday
+Ethan Petry
+Franklin Arias
+Gage Jump
+Gage Wood
+Gary Gill Hill
+Gavin Kilen
+George Klassen
+George Lombard Jr.
+Gustavo Melendez
+Henry Baez
+Ike Irish
+Jack Gurevitch
+Jacob Reimer
+Jadher Areinamo
+Jadyn Fielder
+Jake Munroe
+Jamie Arnold
+Jansel Luis
+JB Middleton
+Jesús Made
+Jhonny Level
+Jhonny Severino
+JJ Wetherholt
+John Gil
+Johnny King
+Johnny Slawinski
+JoJo Parker
+Jordan Sanchez
+Jordan Yost
+Jorge Quintana
+Jose Perdomo
+Joseph Dzierwa
+Josh Adamczewski
+Josh Hammond
+Josh Hartle
+Josh Owens
+Josiah Hartshorn
+Josuar Gonzalez
+Josue Briceño
+Joswa Lugo
+José Anderson
+Juneiker Caceres
+Justin Gonzales
+Kade Anderson
+Kaeden Kent
+Kaelen Culpepper
+Kale Fountain
+Kane Kepley
+Kayson Cunningham
+Kellon Lindsey
+Kendry Chourio
+Kevin McGonigle
+Konnor Griffin
+Kyle DeBarge
+Kyle Lodise
+Kyson Witherspoon
+Landon Harmon
+Landon Hodge
+Leo De Vries
+Liam Doyle
+Luis Peña
+Luke Dickerson
+Marcus Phillips
+Marek Houston
+Mason Morris
+Mason Neville
+Matt Wilkinson
+Matthew Fisher
+Max Belyeu
+Max Clark
+Max Williams
+Michael Lombardi
+Michael Oliveto
+Miguel Sime Jr.
+Mitch Jebb
+Mitch Voit
+Murf Gray
+Naibel Mariano
+Natanael Yuten
+Nate George
+Nate Snead
+Nick Becker
+Nolan Sailors
+Nolan Schubart
+Patrick Forbes
+Paulino Santana
+Quentin Young
+Rainiel Rodriguez
+Riley Quick
+Robert Arias
+Roldy Brito
+Ronny Cruz
+Ryan Mitchell
+Ryan Sloan
+Ryan Waldschmidt
+Ryan Wideman
+Sammy Stafura
+Santiago Suarez
+Sean Gamble
+Seth Hernandez
+Shotaro Morii
+Slade Caldwell
+Slater de Brun
+Steele Hall
+Taitn Gray
+Tate Southisene
+Thomas White
+Tim Piasentin
+Tommy White
+Tony Blanco
+Travis Bazzana
+Travis Sykora
+Trevor Cohen
+Trevor Harrison
+Ty Harvey
+Tyler Bremner
+Tyson Lewis
+Walker Janek
+Walker Jenkins
+Wehiwa Aloy
+Wilder Dalis
+Will Taylor
+Wyatt Sanford
+Xavier Neyens
+Yairo Padilla
+Yandel Ricardo
+Yolfran Castillo
+Yophery Rodriguez
+Yovanny Rodriguez
+Zachary Root
+Zyhir Hope
+Émilien Pitre
+
+[auto]
+Aaron Walton
+Aaron Watson
+Adolfo Sanchez
+Aidan Miller
+Aidan West
+Aiva Arquette
+AJ Russell
+Alessander De La Cruz
+Alfonsin Rosario
+Andrew Salas
+Angel Feliz
+Anthony Eyanson
+Antonio Jimenez
+Arnaldo Lantigua
+Ben Hess
+Billy Carlson
+Blake Burke
+Blake Mitchell
+Bo Davidson
+Braden Montgomery
+Brady Ebel
+Brandon Compton
+Brayden Taylor
+Braylon Payne
+Brendan Tunink
+Briggs McKenzie
+Brody Brecht
+Bryce Rainer
+Caden Bodine
+Caleb Bonemer
+Caleb Lomavita
+Cam Caminiti
+Cam Collier
+Carlos Lagrange
+Carson Benge
+Charlee Soto
+Charles Davalan
+Charlie Condon
+Chase Shores
+Christian Oppor
+Cody Miller
+Colin Yeaman
+Colt Emerson
+Conor Essenburg
+Cooper Flemming
+Cooper Pratt
+Daniel Pierce
+Dauri Fernandez
+David Shields
+Dax Kilby
+Dean Curley
+Dean Livingston
+Devin Fitz-Gerald
+Devin Taylor
+Easton Carmichael
+Eduardo Quintero
+Edward Florentino
+Edward Lantigua
+Eli Willits
+Elian Peña
+Emil Morales
+Enrique Bradfield Jr.
+Esmerlyn Valdez
+Ethan Anderson
+Ethan Conrad
+Ethan Frey
+Ethan Hedges
+Ethan Holliday
+Ethan Petry
+Fenwick Trimble
+Franklin Arias
+Gage Wood
+Gary Gill Hill
+Gavin Kilen
+George Klassen
+George Lombard Jr.
+Gustavo Melendez
+Hagen Smith
+Ike Irish
+Jack Gurevitch
+Jacob Reimer
+Jadher Areinamo
+Jadyn Fielder
+Jake Munroe
+James Tibbs III
+Jamie Arnold
+Jansel Luis
+Jared Thomas
+JB Middleton
+Jesús Made
+Jhonny Level
+Jhonny Severino
+JJ Wetherholt
+John Gil
+Johnny King
+Johnny Slawinski
+JoJo Parker
+Jonny Farmelo
+Jordan Yost
+Jorge Quintana
+Jose Perdomo
+Joseph Dzierwa
+Josh Adamczewski
+Josh Hammond
+Josh Hartle
+Josh Owens
+Josiah Hartshorn
+Josuar Gonzalez
+Josue Briceño
+Joswa Lugo
+Justin Gonzales
+Kade Anderson
+Kaeden Kent
+Kaelen Culpepper
+Kane Kepley
+Kayson Cunningham
+Kellon Lindsey
+Kendry Chourio
+Kevin McGonigle
+Konnor Griffin
+Kyle DeBarge
+Kyle Lodise
+Kyson Witherspoon
+Landon Harmon
+Leo De Vries
+Leonardo Balcazar
+Liam Doyle
+Luis Peña
+Luke Dickerson
+Marcus Phillips
+Marek Houston
+Matt Wilkinson
+Max Anderson
+Max Belyeu
+Max Clark
+Max Williams
+Michael Oliveto
+Mike Sirota
+Mitch Jebb
+Mitch Voit
+Murf Gray
+Naibel Mariano
+Nick Becker
+Nolan Sailors
+Patrick Forbes
+Paulino Santana
+PJ Morlando
+Quentin Young
+Rainiel Rodriguez
+Riley Quick
+Robert Arias
+Roldy Brito
+Ryan Mitchell
+Ryan Sloan
+Ryan Waldschmidt
+Ryan Wideman
+Sammy Stafura
+Santiago Suarez
+Sean Gamble
+Seaver King
+Seth Hernandez
+Shotaro Morii
+Slade Caldwell
+Slater de Brun
+Steele Hall
+Tate Southisene
+Theo Gillen
+Thomas White
+Tim Piasentin
+Tommy White
+Tony Blanco
+Travis Bazzana
+Travis Sykora
+Trevor Cohen
+Trevor Harrison
+Ty Harvey
+Tyler Bremner
+Tyson Lewis
+Walker Janek
+Walker Jenkins
+Wehiwa Aloy
+Wyatt Sanford
+Xavier Neyens
+Yairo Padilla
+Yandel Ricardo
+Yolfran Castillo
+Yophery Rodriguez
+Yovanny Rodriguez
+Zachary Root
+Zyhir Hope
+Émilien Pitre
+
+[insert]
+A.J. Ewing
+Aaron Walton
+Aaron Watson
+Adolfo Sanchez
+Aidan Miller
+Aidan West
+Aiva Arquette
+AJ Russell
+Alessander De La Cruz
+Alex Clemmey
+Alfonsin Rosario
+Alirio Ferrebus
+Andrew Salas
+Angel Feliz
+Anthony Eyanson
+Antonio Jimenez
+Arnaldo Lantigua
+Ashly Andujar
+Ben Hess
+Billy Carlson
+Blake Burke
+Blake Mitchell
+Bo Davidson
+Braden Montgomery
+Brady Ebel
+Brandon Compton
+Brayden Taylor
+Braylon Payne
+Brendan Tunink
+Brian Curley
+Briggs McKenzie
+Brody Brecht
+Brody Hopkins
+Bryce Rainer
+Caden Bodine
+Caleb Bonemer
+Caleb Lomavita
+Cam Caminiti
+Cam Collier
+Carlos Lagrange
+Carson Benge
+Charlee Soto
+Charles Davalan
+Charles McAdoo
+Charlie Condon
+Chase Shores
+Christian Oppor
+Cody Miller
+Colin Yeaman
+Conor Essenburg
+Cooper Flemming
+Cooper Pratt
+Daiber De Los Santos
+Daniel Pierce
+Dauri Fernandez
+David Shields
+Dax Kilby
+Dean Curley
+Dean Livingston
+Dean Moss
+Devin Fitz-Gerald
+Devin Taylor
+Easton Carmichael
+Eduardo Quintero
+Edward Florentino
+Edward Lantigua
+Eli Willits
+Elian Peña
+Emil Morales
+Enrique Bradfield Jr.
+Esmerlyn Valdez
+Ethan Anderson
+Ethan Conrad
+Ethan Frey
+Ethan Hedges
+Ethan Holliday
+Ethan Petry
+Fenwick Trimble
+Franklin Arias
+Gage Jump
+Gage Wood
+Gary Gill Hill
+Gavin Kilen
+George Klassen
+George Lombard Jr.
+George Wolkow
+Gustavo Melendez
+Hagen Smith
+Henry Baez
+Ike Irish
+Jack Gurevitch
+Jacob Reimer
+Jadher Areinamo
+Jadyn Fielder
+Jake Munroe
+Jamie Arnold
+Jansel Luis
+Jared Thomas
+JB Middleton
+Jesús Made
+Jhonny Level
+Jhonny Severino
+JJ Wetherholt
+John Gil
+Johnny King
+Johnny Slawinski
+JoJo Parker
+Jonny Farmelo
+Jordan Sanchez
+Jordan Yost
+Jorge Quintana
+Jose Perdomo
+Joseph Dzierwa
+Josh Adamczewski
+Josh Hammond
+Josh Hartle
+Josh Owens
+Joshua Kuroda-Grauer
+Josiah Hartshorn
+Josuar Gonzalez
+Josue Briceño
+Joswa Lugo
+José Anderson
+Juneiker Caceres
+Justin Gonzales
+Kade Anderson
+Kaeden Kent
+Kaelen Culpepper
+Kale Fountain
+Kane Kepley
+Kayson Cunningham
+Kellon Lindsey
+Kendry Chourio
+Kevin McGonigle
+Konnor Griffin
+Kyle DeBarge
+Kyle Lodise
+Kyson Witherspoon
+Landon Harmon
+Landon Hodge
+Leo De Vries
+Leonardo Balcazar
+Liam Doyle
+Luis Peña
+Luke Dickerson
+Marcus Phillips
+Marek Houston
+Mason Morris
+Mason Neville
+Matt Wilkinson
+Matthew Fisher
+Max Anderson
+Max Belyeu
+Max Clark
+Max Williams
+Michael Lombardi
+Michael Oliveto
+Miguel Sime Jr.
+Mike Sirota
+Mitch Jebb
+Mitch Voit
+Murf Gray
+Naibel Mariano
+Natanael Yuten
+Nate George
+Nate Snead
+Nick Becker
+Nolan Sailors
+Nolan Schubart
+Patrick Forbes
+Paulino Santana
+Quentin Young
+Rainiel Rodriguez
+Riley Quick
+Robert Arias
+Robert Calaz
+Roldy Brito
+Ronny Cruz
+Ryan Mitchell
+Ryan Sloan
+Ryan Waldschmidt
+Ryan Wideman
+Sam Antonacci
+Sammy Stafura
+Santiago Suarez
+Sean Gamble
+Seaver King
+Seth Hernandez
+Shotaro Morii
+Slade Caldwell
+Slater de Brun
+Steele Hall
+Taitn Gray
+Tate Southisene
+Theo Gillen
+Thomas White
+Tim Piasentin
+Tommy White
+Tony Blanco
+Travis Bazzana
+Travis Sykora
+Trevor Cohen
+Trevor Harrison
+Ty Harvey
+Tyler Bremner
+Tyson Lewis
+Walker Janek
+Walker Jenkins
+Wehiwa Aloy
+Wilder Dalis
+Will Taylor
+Wyatt Sanford
+Xavier Neyens
+Yairo Padilla
+Yandel Ricardo
+Yolfran Castillo
+Yophery Rodriguez
+Yovanny Rodriguez
+Zachary Root
+Zyhir Hope
+Émilien Pitre
+
+[multi]
+Konnor Griffin / Seth Hernandez
+Max Clark / Kevin McGonigle
+Luis Peña / Jesús Made
+Shotaro Morii / Leo De Vries
+Liam Doyle / JJ Wetherholt
+Ryan Sloan / Kade Anderson
+Eli Willits / Gavin Fien
+Kaelen Culpepper / Walker Jenkins
+Mitch Voit / Carson Benge
+Thomas White / Aiva Arquette
+Juneiker Caceres / Travis Bazzana
+Dante Nori / Aidan Miller
+Mike Sirota / Eduardo Quintero
+Marcus Phillips / Kyson Witherspoon
+Dax Kilby / George Lombard Jr.
+Billy Carlson / Caleb Bonemer
+Johnny King / JoJo Parker
+Kane Kepley / Ethan Conrad
+Slade Caldwell / Kayson Cunningham
+Briggs McKenzie / Cam Caminiti
+Charlie Condon / Ethan Holliday
+Josh Hammond / Sean Gamble
+Slater de Brun / Daniel Pierce
+George Klassen / Tyler Bremner
+Justin Gonzales / Franklin Arias
+Kade Anderson / Ryan Sloan
+Eli Willits / Travis Bazzana
+Leo De Vries / Josuar Gonzalez
+Seth Hernandez / Konnor Griffin
+Kevin McGonigle / Konnor Griffin
+Theo Gillen / Daniel Pierce
+Billy Carlson / Seth Hernandez
+George Lombard Jr. / Dax Kilby
+Zyhir Hope / Eduardo Quintero
+Kendry Chourio / David Shields
+JJ Wetherholt / Liam Doyle
+Ethan Holliday / Eli Willits
+Carson Benge / A.J. Ewing / Jacob Reimer
+Josuar Gonzalez / Jesús Made / Leo De Vries
+Edward Florentino / Konnor Griffin / Seth Hernandez
+Konnor Griffin / Kevin McGonigle / JJ Wetherholt
+Daniel Pierce / Theo Gillen / Slater de Brun
+Brady Ebel / Seth Hernandez / Billy Carlson
+Eli Willits / George Lombard Jr. / Ethan Holliday
+Bryce Cunningham / Ben Hess / Carlos Lagrange
+Max Clark / Kevin McGonigle / Josue Briceño
+Blake Mitchell / Sean Gamble / Josh Hammond
+Kevin McGonigle / Colt Emerson / JJ Wetherholt
+Ethan Frey / Xavier Neyens / Walker Janek
+Eli Willits / Gavin Fien / Devin Fitz-Gerald
+Eli Willits / JoJo Parker / Ethan Holliday

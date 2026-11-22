@@ -1,0 +1,391 @@
+# name: 2025 Star Wars Masterwork
+# sport: Star Wars
+# added: 2026-11-22
+# source: https://cdn.shopify.com/s/files/1/0662/9749/5709/files/2025_Star_Wars_Masterwork_Checklist.pdf
+
+[base]
+Admiral Ackbar
+Ahsoka Tano
+Anakin Skywalker
+Arvel Skeen
+Asajj Ventress
+Babu Frik
+Bail Organa
+Baylan Skoll
+BB-8
+Bix Caleen
+Bo-Katan Kryze
+Boba Fett
+Boolio
+C-3PO
+Cad Bane
+Captain Brutus
+Captain Phasma
+Cassian Andor
+Chewbacca
+Chirrut Îmwe
+Chopper
+Cinta Kaz
+Cobb Vanth
+Darth Sidious
+Darth Vader
+Dedra Meero
+Director Orson Krennic
+Ezra Bridger
+Fennec Shand
+General Grievous
+General Hux
+Grand Admiral Thrawn
+Grand Moff Tarkin
+Greef Karga
+Grogu
+Gunter
+Haja Estree
+Han Solo
+Hera Syndulla
+IG-12
+Imperial Snowtrooper
+Jar Jar Binks
+Jawa
+Jedi Master Dooku
+Jedi Master Indara
+Jedi Master Kelnacca
+Jedi Master Sol
+Jedi Master Vernestra Rwoh
+Jedi Padawan Jecki Lon
+Jod Na Nawood
+Jyn Erso
+K-2SO
+Kaydel Connix
+Kh'ymm
+Kleya Marki
+Kylo Ren
+Lando Calrissian
+Leia Organa
+Lobot
+Luke Skywalker
+Luthen Rael
+Mace Windu
+Major Partagaz
+Maul
+Maz Kanata
+Migs Mayfeld
+Moff Gideon
+Mon Mothma
+Morgan Elsbeth
+Moroff
+Neel
+Obi-Wan Kenobi
+Padmé Amidala
+Poe Dameron
+Qi'ra
+Qui-Gon Jinn
+R2-D2
+Rebel Trooper
+Rey
+Ryder Azadi
+Sabine Wren
+Saw Gerrera
+Shin Hati
+SM-33
+Snap Wexley
+Supervisor Lonni Jung
+Syril Karn
+The Fifth Brother
+The Fourth Sister
+The Mandalorian
+The Seventh Sister
+The Stranger
+Tredgar Volk
+Vane
+Vect Nokru
+Vel Sartha
+Vulptex
+Wilmon Paak
+Yoda
+Zett Jukassa
+
+[auto]
+Admiral Ackbar
+Admiral Piett
+Ahsoka Tano
+Alexsandr Kallus
+Am
+Anakin Skywalker
+Anthony Daniels
+Babu Frik
+Bandit Leader
+BB-8
+Bib Fortuna
+Billy Dee Williams
+Bix Caleen
+Bo-Katan Kryze
+Boba Fett
+Bodhi Rook
+Boss Nass
+Brutus
+C-3PO
+Cad Bane
+Captain Enoch
+Captain Phasma
+Carrie Fisher
+Cassian Andor
+Chewbacca
+Commissioner Helgait
+Darth Maul
+Darth Vader
+Dedra Meero
+Dinghy Driver
+DJ
+Dryden Vos
+Emperor Palpatine
+Enfys Nest
+EV-9D9
+Ezra Bridger
+Fennec Shand
+Fifth Brother
+Finn
+Freck
+Gamorrean Guard
+General Grievous
+General Hux
+Gha Nachkt
+Grand Admiral Thrawn
+Gunter
+Han Solo
+Harrison Ford
+Hera Syndulla
+Hondo Ohnaka
+Huyang
+Hype Fazon
+Ian McDiarmid
+IG-11
+Imperial Royal Guard
+Jabba The Hutt
+Jace Rucklin
+Jannah
+Jar Jar Binks
+Jawa
+Jecki Lon
+Jedi Master Indara
+Jedi Master Sol
+Jedi Master Torbin
+Jeremy Bulloch
+Jod Na Nawood
+Jyn Erso
+K-2SO
+Kanan Jarrus
+Kawlan Roken
+Kaydel Connix
+KB
+Kelnacca
+Kenneth Colley
+Ki-Adi-Mundi
+Kino Loy
+Klaud
+Koska Reeves
+Krrsantan
+Lah Zhima
+Lando Calrissian
+Leia Organa
+Logray
+Lok Durd
+Luke Skywalker
+Luthen Rael
+Mace Windu
+Malakili
+Mark Hamill
+Master Codebreaker
+Maul
+Max Rebo
+Michael Pennington
+Mike Quinn
+Missle: Andor
+Moff Gideon
+Moff Jerjerrod
+Mon Mothma
+Morgan Elsbeth
+Neel
+Nien Nunb
+Outland TIE Fighter: The Mandalorian
+Poggle the Lesser
+Qi'ra
+R2-D2
+Rey
+Rose Tico
+Sabine Wren
+Sabé
+Salacious B. Crumb
+Saw Gerrera
+Shin Hati
+Simon Williamson
+Slowen Lo
+SM-33
+Starport Dinghy: Skeleton Crew
+Supreme Leader Snoke
+Sy Snootles
+The Armorer
+The Duchess
+The Emperor
+The Grand Inquisitor
+The Mandalorian
+The Stranger
+TIE Fighter: Ahsoka
+Tim Rose
+Torbin
+Unkar Plutt
+Vane
+Vaporator: Andor
+Vernestra "Vern" Rwoh
+Vice Admiral Holdo
+Warwick Davis
+Watto
+Wedge Antilles
+Wicket W. Warrick
+Wim
+Yoda
+Yord Fandar
+Zorii Bliss
+
+[insert]
+1-JAC
+A Brother's Final Goodbye
+A Fatal Choice
+A Request From Padmé Amidala
+A Sith Lord, Revealed
+AD-4M
+Aks Moe
+Alazmec
+An Initial Threat
+An Outburst At The Council
+An Unofficial Assignment
+Anakin Skywalker
+Anakin Skywalker's Troubling Vision
+Ap'Lek
+Ask Aak
+Bail Organa
+BB-8
+BD-72
+Blinded by Love
+Bo-Katan Kryze
+Boba Fett
+C-3PO
+C2-B5
+Captain Enoch
+Captain Rex
+Captain Silvo
+Cardo
+Carib Diss
+Carried by Chewbacca
+Chopper
+Conflicted
+Constable Zuvio
+D-0
+Darth Sidious
+Darth Vader
+"Do It"
+Fennec Shand
+Finis Valorum
+Finishing Off The Separatists
+First Order Interrogator Droid
+Fixing D-O
+Freed By Rey
+G2-1B7
+Gall Trayvis
+Halle Burtoni
+Hamato Xiono
+HK-87 Assassin Droid
+Homing Spider Droid
+"I Am The Senate"
+"I Sense Great Fear In You"
+Imperial Probe Droid
+Jango Fett
+Jar Jar Binks
+K-2SO
+Kharrus
+Knightfall
+Kuruk
+Kylo Ren
+Lando Calrissian
+Lola
+Lott Dod
+Mas Amedda
+MD-15C
+Mee Deechi
+Mina Bonteri
+Mon Mothma
+More Machine Than Man
+Nevarro Copper Droid
+Night Trooper
+Nix Card
+"Not From A Jedi"
+Nute Gunray
+Obi-Wan Kenobi
+Onaconda Farr
+Orn Free Taa
+Padmé Amidala
+Padmé Amidala's Confession
+Paz Vizsla
+Piece 1
+Piece 2
+Piece 3
+Piece 4
+Piece 5
+Piece 6
+Piece 7
+Piece 8
+Piece 9
+Pip
+R2-BHD
+R2-D2
+R4-DT
+R5-X3
+RA-7 Protocol Droid
+Reunited With Poe Dameron
+Riyo Chuchi
+Rolling In The Millennium Falcon
+Rolling Slot Machine
+Rush Clovis
+Scorpenek Annihilator Droid
+SE8 Waiter Droid
+Sheev Palpatine
+Shocking Finn
+Sith Trooper
+Sly Moore
+Star Navigator Droid
+The Armorer
+The End Of Brotherhood
+The Eyes, Ears, And Voice Of The Republic
+The First Galactic Empire
+The Mandalorian
+The Sith Lords
+The Stranger
+Thumbs Up
+Trudgen
+Ushar
+Vicrul
+Waking Up R2-D2
+Yoda's Counsel
+Zorii Bliss
+
+[multi]
+Watto / Jar Jar Binks
+Bix Caleen / Dedra Meero
+Cassian Andor / Mon Mothma
+Mace Windu / Padmé Amidala
+Saw Gerrera / Moroff
+Master Codebreaker / DJ
+Lando Calrissian / Boba Fett
+Syril Karn / Bix Caleen
+The Stranger / Jecki Lon
+Anakin Skywalker / Ahsoka Tano
+Obi-Wan Kenobi / Anakin Skywalker / C-3PO
+Rey / C-3PO / Chewbacca
+Hera Syndulla / Kanan Jarrus / Ahsoka Tano
+Jod Na Nawood / Neel / SM-33
+Drash / The Mandalorian / Boba Fett
+Jedi Master Indara / Jedi Padawan Jecki Lon / The Stranger / Master Sol
+Boba Fett / Darth Vader / Han Solo / Lando Calrissian
+Dedra Meero / Syril Karn / Cassian Andor / Bix Caleen
+Darth Vader / Darth Sidious / Obi-Wan Kenobi / Mace Windu
+Captain Brutus / Gunter / Jod Na Nawood / SM-33

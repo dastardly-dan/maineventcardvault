@@ -1,0 +1,98 @@
+# name: Topps Manchester United 2025-26 Team Set
+# sport: Soccer
+# added: 2026-11-22
+# source: https://cdn.shopify.com/s/files/1/0739/2015/1805/files/Manchester_United_Team_Set_2025-26_Checklist.pdf
+
+[base]
+Alexis Sánchez
+Amad
+Amir Ibragimov
+Andy Cole
+Antonio Valencia
+Ayden Heaven
+Bastian Schweinsteiger
+Bendito Mantato
+Benjamin Šeško
+Bruno Fernandes
+Bryan Mbeumo
+Chido Obi
+Diego León
+Dimitar Berbatov
+Dwight Yorke
+Edwin van der Sar
+Elisabeth Terland
+Ella Toone
+Fridolina Rolfö
+Harry Maguire
+Henrik Larsson
+Jaap Stam
+Joshua Zirkzee
+Kobbie Mainoo
+Leny Yoro
+Lisandro Martínez
+Manuel Ugarte
+Matheus Cunha
+Matthijs de Ligt
+Michael Carrick
+Nani
+Nemanja Vidić
+Noussair Mazraoui
+Patrice Evra
+Patrick Dorgu
+Paul Scholes
+Rio Ferdinand
+Robin van Persie
+Roy Keane
+Ryan Giggs
+Senne Lammens
+Shea Lacey
+Sir David Beckham
+Sékou Koné
+Wayne Rooney
+Zlatan Ibrahimović
+
+[auto]
+Amad
+Amir Ibragimov
+Ander Herrera
+Andy Cole
+Antonio Valencia
+Benjamin Šeško
+Bruno Fernandes
+Bryan Mbeumo
+Chido Obi
+Dimitar Berbatov
+Diogo Dalot
+Edinson Cavani
+Edwin van der Sar
+Ella Toone
+Fridolina Rolfö
+Gabriel Heinze
+Gary Neville
+Joshua Zirkzee
+Juan Mata
+Kobbie Mainoo
+Leny Yoro
+Lisandro Martínez
+Louis Saha
+Manuel Ugarte
+Matheus Cunha
+Matthijs de Ligt
+Maya Le Tissier
+Michael Carrick
+Nani
+Nemanja Vidić
+Patrice Evra
+Patrick Dorgu
+Paul Scholes
+Peter Schmeichel
+Phil Neville
+Rio Ferdinand
+Robin van Persie
+Roy Keane
+Ryan Giggs
+Sir Alex Ferguson
+Sékou Koné
+Wayne Rooney
+Wes Brown
+Zlatan Ibrahimović

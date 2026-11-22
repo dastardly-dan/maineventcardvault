@@ -1,0 +1,16 @@
+# name: 2026 Topps Collector Kit
+# sport: Other
+# added: 2026-11-22
+# source: https://cdn.shopify.com/s/files/1/0662/9749/5709/files/Collector_Kit_1.pdf
+
+[base]
+Ace Bailey
+Cooper Flagg
+Egor Dëmin
+Francisco Lindor
+Jac Caglianone
+Kevin Durant
+Roman Anthony
+Ronald Acuña Jr.
+Shohei Ohtani
+Victor Wembanyama

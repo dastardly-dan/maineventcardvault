@@ -1,0 +1,349 @@
+# name: 2025 Topps Chrome Black Football
+# sport: NFL
+# added: 2026-11-22
+# source: https://cdn.shopify.com/s/files/1/0662/9749/5709/files/2025_Topps_Chrome_Black_Football_Checklist.pdf
+
+[base]
+A.J. Brown | Eagles
+Aaron Rodgers | Steelers
+Abdul Carter | Giants
+Alvin Kamara | Saints
+Amon-Ra St. Brown | Lions
+Ashton Jeanty | Raiders
+Baker Mayfield | Buccaneers
+Bhayshul Tuten | Jaguars
+Bijan Robinson | Falcons
+Bo Nix | Broncos
+Brandon Aiyuk | 49ers
+Breece Hall | Jets
+Brian Thomas Jr. | Jaguars
+Brock Bowers | Raiders
+Brock Purdy | 49ers
+Bryce Young | Panthers
+Bucky Irving | Buccaneers
+Caleb Williams | Bears
+Calvin Ridley | Titans
+Cam Skattebo | Giants
+Cam Ward | Titans
+Carson Schwesinger | Browns
+CeeDee Lamb | Cowboys
+Chase Brown | Bengals
+Chimere Dike | Titans
+Chris Olave | Saints
+Christian McCaffrey | 49ers
+Chuba Hubbard | Panthers
+CJ Stroud | Texans
+Colston Loveland | Bears
+Cooper Kupp | Seahawks
+Courtland Sutton | Broncos
+Dak Prescott | Cowboys
+Davante Adams | Rams
+David Njoku | Browns
+De'Von Achane | Dolphins
+DeMario Douglas | Patriots
+Derek Stingley Jr. | Texans
+Derrick Henry | Ravens
+DeVonta Smith | Eagles
+Dexter Lawrence II | Giants
+DJ Moore | Bears
+DK Metcalf | Steelers
+Drake London | Falcons
+Drake Maye | Patriots
+Elijah Arroyo | Seahawks
+Emeka Egbuka | Buccaneers
+Garrett Wilson | Jets
+J.J. McCarthy | Vikings
+Ja'Marr Chase | Bengals
+Jack Bech | Raiders
+Jahmyr Gibbs | Lions
+Jalen Hurts | Eagles
+Jalen Milroe | Seahawks
+Jalen Royals | Chiefs
+Jalon Walker | Falcons
+James Cook | Bills
+James Pearce Jr. | Falcons
+Jameson Williams | Lions
+Jared Goff | Lions
+Jaxon Smith-Njigba | Seahawks
+Jaxson Dart | Giants
+Jaycee Horn | Panthers
+Jayden Daniels | Commanders
+Jayden Higgins | Texans
+Jayden Reed | Packers
+Jaydon Blue | Cowboys
+Jaylen Waddle | Dolphins
+Jaylin Lane | Commanders
+Jaylin Noel | Texans
+Jerry Jeudy | Browns
+Jihaad Campbell | Eagles
+Joe Burrow | Bengals
+Joey Bosa | Bills
+Jonathan Taylor | Colts
+Jordan Addison | Vikings
+Jordan James | 49ers
+Jordan Love | Packers
+Josh Allen | Bills
+Josh Jacobs | Packers
+Justin Fields | Jets
+Justin Herbert | Chargers
+Justin Jefferson | Vikings
+Kaleb Johnson | Steelers
+Kelvin Banks Jr. | Saints
+Keon Coleman | Bills
+Khalil Mack | Chargers
+Kyle McCord | Eagles
+Kyle Pitts | Falcons
+Kyler Murray | Cardinals
+Ladd McConkey | Chargers
+Lamar Jackson | Ravens
+Luther Burden III | Bears
+Malaki Starks | Ravens
+Malik Nabers | Giants
+Marvin Harrison Jr. | Cardinals
+Mason Graham | Browns
+Mason Taylor | Jets
+Matthew Golden | Packers
+Matthew Stafford | Rams
+Maxx Crosby | Raiders
+Micah Parsons | Packers
+Michael Penix Jr. | Falcons
+Michael Pittman Jr. | Colts
+Mike Evans | Buccaneers
+Mykel Williams | 49ers
+Myles Garrett | Browns
+Nico Collins | Texans
+Omarion Hampton | Chargers
+Pat Bryant | Broncos
+Pat Surtain II | Broncos
+Patrick Mahomes II | Chiefs
+Puka Nacua | Rams
+Quinn Ewers | Dolphins
+Quinshon Judkins | Browns
+Rashee Rice | Chiefs
+Ricky Pearsall | 49ers
+Riley Leonard | Colts
+RJ Harvey | Broncos
+Rome Odunze | Bears
+Roquan Smith | Ravens
+Sam Darnold | Seahawks
+Saquon Barkley | Eagles
+Sauce Gardner | Colts
+Shedeur Sanders | Browns
+Shemar Stewart | Bengals
+T.J. Watt | Steelers
+Tahj Brooks | Bengals
+Tee Higgins | Bengals
+Terrance Ferguson | Rams
+Terry McLaurin | Commanders
+Tetairoa McMillan | Panthers
+Tony Pollard | Titans
+Travis Etienne Jr. | Jaguars
+Travis Hunter | Jaguars
+Travis Kelce | Chiefs
+Tre Harris III | Chargers
+TreVeyon Henderson | Patriots
+Trevor Lawrence | Jaguars
+Trey McBride | Cardinals
+Tua Tagovailoa | Dolphins
+Tyler Shough | Saints
+Tyler Warren | Colts
+Tyreek Hill | Dolphins
+Tyrone Tracy Jr. | Giants
+Will Campbell | Patriots
+Will Howard | Steelers
+Will Johnson | Cardinals
+Xavier Worthy | Chiefs
+Zay Flowers | Ravens
+
+[auto]
+A.J. Brown | Eagles
+Aaron Rodgers | Steelers
+Alvin Kamara | Saints
+Amon-Ra St. Brown | Lions
+Ashton Jeanty | Raiders
+Bhayshul Tuten | Jaguars
+Bo Nix | Broncos
+Breece Hall | Jets
+Brock Bowers | Raiders
+Brock Purdy | 49ers
+Bryce Young | Panthers
+Bucky Irving | Buccaneers
+Caleb Williams | Bears
+Cam Skattebo | Giants
+Cam Ward | Titans
+Carson Schwesinger | Browns
+CeeDee Lamb | Cowboys
+Chase Brown | Bengals
+Chimere Dike | Titans
+Chris Olave | Saints
+Christian McCaffrey | 49ers
+Chuba Hubbard | Panthers
+CJ Stroud | Texans
+Colston Loveland | Bears
+Dak Prescott | Cowboys
+Davante Adams | Rams
+David Njoku | Browns
+De'Von Achane | Dolphins
+Derek Stingley Jr. | Texans
+Derrick Henry | Ravens
+Dillon Gabriel | Browns
+DJ Moore | Bears
+Drake Maye | Patriots
+Drew Brees | Saints
+Dylan Sampson | Browns
+Elijah Arroyo | Seahawks
+Emeka Egbuka | Buccaneers
+Isaac TeSlaa | Lions
+Isaiah Bond | Browns
+Jack Bech | Raiders
+Jahmyr Gibbs | Lions
+Jalen Hurts | Eagles
+Jalen Royals | Chiefs
+Jared Goff | Lions
+Jaxon Smith-Njigba | Seahawks
+Jaxson Dart | Giants
+Jayden Daniels | Commanders
+Jayden Higgins | Texans
+Jaydon Blue | Cowboys
+Jaylin Lane | Commanders
+Jaylin Noel | Texans
+Jerry Jeudy | Browns
+Jerry Rice | 49ers
+Joe Burrow | Bengals
+John Elway | Broncos
+Jonathan Taylor | Colts
+Jordan Addison | Vikings
+Jordan James | 49ers
+Josh Allen | Bills
+Josh Jacobs | Packers
+Justin Herbert | Chargers
+Justin Jefferson | Vikings
+Kaleb Johnson | Steelers
+Kyle McCord | Eagles
+Ladd McConkey | Chargers
+Luther Burden III | Bears
+Malik Nabers | Giants
+Marvin Harrison Jr. | Cardinals
+Mason Graham | Browns
+Mason Taylor | Jets
+Matthew Golden | Packers
+Matthew Stafford | Rams
+Maxx Crosby | Raiders
+Michael Penix Jr. | Falcons
+Mike Evans | Buccaneers
+Myles Garrett | Browns
+Nico Collins | Texans
+Omarion Hampton | Chargers
+Puka Nacua | Rams
+Quinshon Judkins | Browns
+Randy Moss | Vikings
+Rashee Rice | Chiefs
+Ricky Pearsall | 49ers
+Riley Leonard | Colts
+RJ Harvey | Broncos
+Roger Staubach | Cowboys
+Rome Odunze | Bears
+Sam Darnold | Seahawks
+Saquon Barkley | Eagles
+Shedeur Sanders | Browns
+T.J. Watt | Steelers
+Tahj Brooks | Bengals
+Terrance Ferguson | Rams
+Terry McLaurin | Commanders
+Tetairoa McMillan | Panthers
+Tom Brady | Buccaneers
+Travis Etienne Jr. | Jaguars
+Travis Hunter | Jaguars
+Tre Harris III | Chargers
+TreVeyon Henderson | Patriots
+Trevor Lawrence | Jaguars
+Trey McBride | Cardinals
+Tyler Shough | Saints
+Tyler Warren | Colts
+Will Howard | Steelers
+Xavier Worthy | Chiefs
+
+[insert]
+Abdul Carter | Giants
+Ashton Jeanty | Raiders
+Baker Mayfield | Buccaneers
+Barry Sanders | Lions
+Bijan Robinson | Falcons
+Bo Jackson | Raiders
+Bo Nix | Broncos
+Brashard Smith | Chiefs
+Brian Thomas Jr. | Jaguars
+Brock Purdy | 49ers
+Bryce Young | Panthers
+Caleb Williams | Bears
+Cam Skattebo | Giants
+Cam Ward | Titans
+CeeDee Lamb | Cowboys
+Christian McCaffrey | 49ers
+CJ Stroud | Texans
+Colston Loveland | Bears
+Dak Prescott | Cowboys
+De'Von Achane | Dolphins
+Drake Maye | Patriots
+Emeka Egbuka | Buccaneers
+Garrett Wilson | Jets
+Isaac TeSlaa | Lions
+J.J. McCarthy | Vikings
+Ja'Marr Chase | Bengals
+Jacory Croskey-Merritt | Commanders
+Jahmyr Gibbs | Lions
+Jalen Hurts | Eagles
+Jalen Milroe | Seahawks
+Jalon Walker | Falcons
+Jaxson Dart | Giants
+Jayden Daniels | Commanders
+Jaydon Blue | Cowboys
+Joe Burrow | Bengals
+Jordan Love | Packers
+Josh Allen | Bills
+Justin Herbert | Chargers
+Justin Jefferson | Vikings
+Kaleb Johnson | Steelers
+Kyler Murray | Cardinals
+Lamar Jackson | Ravens
+Luther Burden III | Bears
+Malik Nabers | Giants
+Marvin Harrison Jr. | Cardinals
+Matthew Golden | Packers
+Micah Parsons | Packers
+Michael Penix Jr. | Falcons
+Mykel Williams | 49ers
+Myles Garrett | Browns
+Omarion Hampton | Chargers
+Patrick Mahomes II | Chiefs
+Peyton Manning | Broncos
+Peyton Manning | Colts
+Quinn Ewers | Dolphins
+Quinshon Judkins | Browns
+Ray Lewis | Ravens
+Riley Leonard | Colts
+RJ Harvey | Broncos
+Rome Odunze | Bears
+Saquon Barkley | Eagles
+Shedeur Sanders | Browns
+T.J. Watt | Steelers
+Tetairoa McMillan | Panthers
+Tom Brady | Buccaneers
+Tom Brady | Patriots
+Travis Hunter | Jaguars
+Travis Kelce | Chiefs
+Tre Harris III | Chargers
+TreVeyon Henderson | Patriots
+Trevor Lawrence | Jaguars
+Tyler Shough | Saints
+Tyler Warren | Colts
+Tyreek Hill | Dolphins
+Will Howard | Steelers
+
+[multi]
+Joe Montana | 49ers / Brock Purdy | 49ers
+Dak Prescott | Cowboys / Troy Aikman | Cowboys
+Barry Sanders | Lions / Jahmyr Gibbs | Lions
+A.J. Brown | Eagles / Jalen Hurts | Eagles
+Quinshon Judkins | Browns / TreVeyon Henderson | Patriots
+Jaylen Waddle | Dolphins / Tua Tagovailoa | Dolphins

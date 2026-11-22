@@ -1,0 +1,225 @@
+# name: 2026 Topps Brooklyn Collection
+# sport: Marvel
+# added: 2026-11-22
+# source: https://cdn.shopify.com/s/files/1/0662/9749/5709/files/2026_Topps_Brooklyn_Collection_Checklist.pdf
+
+[base]
+Ant-Man
+Arnim Zola
+Baron Strucker
+Baron Zemo
+Batroc The Leaper
+Battlestar
+Beast
+Black Panther
+Black Widow
+Bucky Barnes
+Captain America
+Crossbones
+Cyclops
+Daredevil
+Diamondback
+Doctor Doom
+Doctor Faustus
+Doctor Strange
+Falcon
+Flag-Smasher
+Hawkeye
+Hulk
+Human Torch
+Iron Fist
+Iron Man
+Kang The Conqueror
+Loki
+Luke Cage
+M.O.D.O.K.
+Madame Hydra
+Mephisto
+Namor
+Nick Fury
+Quicksilver
+Red Guardian
+Scarlet Witch
+Sharon Carter
+Spider-Man
+Taskmaster
+Thanos
+The Thing
+Thor
+U.S. Agent
+Ultron
+Union Jack
+Vision
+War Machine
+Wasp
+Wolverine
+Wonder Man
+
+[auto]
+Aaron Taylor-Johnson
+Adam Kubert
+Andy Serkis
+Anthony Mackie
+Bradley Cooper
+Brie Larson
+Bruno Ricci
+Carl Lumbly
+Chris Evans
+Clark Gregg
+Cobie Smulders
+Danny Ramirez
+Derek Luke
+Dominic Cooper
+Don Cheadle
+Elizabeth Olsen
+Erin Kellyman
+Esad Ribic
+Evangeline Lilly
+Frank Grillo
+Giancarlo Esposito
+Harrison Ford
+Hayley Atwell
+Hugh Jackman
+Jeremy Renner
+JJ Feild
+Josh Brolin
+Julia Louis-Dreyfus
+Karen Gillan
+Kenneth Choi
+Lewis Pullman
+Lucio Parrillo
+Marc Silvestri
+Michael B. Jordan
+Mike Deodato
+Mike McKone
+Natalie Dormer
+Neal McDonough
+Paco Medina
+Paul Bettany
+Paul Rudd
+Pom Klementieff
+Richard Armitage
+Ryan Brown
+Ryan Stegman
+Samuel L. Jackson
+Sebastian Stan
+Shaun Toub
+Shira Haas
+Stellan Skarsgård
+Steve McNiven
+Wyatt Russell
+
+[insert]
+Abomination
+Agent Coulson
+All Winners (1941) #2
+Amazing Spider-Man (1963) #187
+Avengers (1963) #117
+Avengers (1963) #4
+Bay Ridge
+Beast
+Bed-Stuy
+Bensonhurst
+Beta Ray Bill
+Black Panther
+Black Widow
+Brooklyn Heights
+Bucky Barnes
+Bullseye
+Bushwick
+Cable
+Canarsie
+Captain America
+Captain Marvel
+Carroll Gardens
+Cobble Hill
+Colonel Chester Phillips
+Coney Island
+Crown Heights
+Cyclops
+Daredevil
+Defenders (1972) #106
+Doctor Strange
+Downtown Brooklyn
+Dum Dum Dugan
+Dumbo
+Dyker Heights
+Falcon
+Fear Itself (2010) #7
+Firestar
+Flash Thompson
+Flatbush
+Fort Greene
+Ghost Rider
+Ghost-Spider
+Gowanus
+Greenpoint
+Hawkeye
+Hercules
+Human Torch
+Invaders (1975) #3
+Invisible Woman
+Iron Fist
+Iron Man
+Isaiah Bradley
+Jessica Jones
+John F. Walker
+Kate Bishop
+Luke Cage
+Manhattan Beach
+Maria Hill
+Marvel Mystery Comics (1939) #84
+Mighty Thor
+Miles Morales
+Mister Fantastic
+Misty Knight
+Moon Knight
+Namor
+Navy Yard
+Nick Fury
+Park Slope
+Peggy Carter
+Professor X
+Prospect Heights
+Prospect Park
+Prowler
+Red Guardian
+Sam Wilson
+Scarlet Witch
+Sharon Carter
+Sheepshead Bay
+Spider-Man
+Steve Rogers
+Strange Tales (1951) #114
+Sunset Park
+Tales of Suspense (1959) #63
+Thaddeus Ross
+The Thing
+Thor
+Thor (1966) #390
+Uncanny X-Men (1963) #268
+Vision
+War Machine
+Wasp
+Williamsburg
+Winter Soldier
+Wolverine
+Yelena Belova
+
+[multi]
+Cloak / Dagger
+Hayley Atwell / Chris Evans
+Anthony Mackie / Chris Evans
+Wyatt Russell / David Harbour
+Clark Gregg / Samuel L. Jackson
+Cobie Smulders / Samuel L. Jackson
+Carl Lumbly / Anthony Mackie
+Danny Ramirez / Anthony Mackie
+Sebastian Stan / Anthony Mackie
+Chris Evans / Sebastian Stan
+Hayley Atwell / Dominic Cooper / Chris Evans
+Chris Evans / Anthony Mackie / Sebastian Stan
+Anthony Mackie / Carl Lumbly / Danny Ramirez
+Elizabeth Olsen / Paul Rudd / Anthony Mackie
+Don Cheadle / Sebastian Stan / Anthony Mackie
+Sebastian Stan / David Harbour / Wyatt Russell

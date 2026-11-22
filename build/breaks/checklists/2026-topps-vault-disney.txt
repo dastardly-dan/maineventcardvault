@@ -1,0 +1,256 @@
+# name: 2026 Topps Vault Disney
+# sport: Disney
+# added: 2026-11-22
+# source: https://cdn.shopify.com/s/files/1/0662/9749/5709/files/CheckList_25DSNV_VERSION4.pdf
+
+[auto]
+Albert Brooks
+Alexander Gould
+Anna
+Anne Hathaway
+Anthony Gonzalez
+Ariel
+Auli'i Cravalho
+BD Wong
+Belle
+Ben Burtt
+Benjamin Bratt
+Bill Farmer
+Billy Crystal
+Bonnie Hunt
+Brad Garrett
+Bret Iwan
+Bruce Reitherman
+Cate Blanchett
+Chris Sanders
+Christopher Daniel BarnesPrince Eric
+Cinderella
+Dan Stevens
+Dave Foley
+Donald Duck
+Donna Murphy
+Donnie Dunagan
+Eli Fucile
+Elsa
+Ernie Sabella
+Genie
+Geoffrey Rush
+Goofy
+Halle Bailey
+Hayden Panettiere
+Hayden Rolence
+Huckleberry Milner
+Ian Mckellen
+Idina Menzel
+Irene Bedard
+Jameela Jamil
+Jasmine
+Jim Cummings
+Joan Cusack
+Jodi Benson
+John Goodman
+John Morris
+Johnny Depp
+Jonathan Freeman
+Jonathan Groff
+Josh Gad
+Jude Law
+Julia Louis-Dreyfus
+Keira Knightley
+Keke Palmer
+Kensington Tallman
+Kristen Bell
+Larry the Cable Guy
+Leah Lewis
+Lewis Black
+Linda Larkin
+Liza Lapira
+Luke Evans
+Margaret Kerry
+Matthew Broderick
+Melissa McCarthy
+Mena Massoud
+Mickey Mouse
+Ming-Na Wen
+Minnie Mouse
+Moana
+Mulan
+Naomi Scott
+Nathan Lane
+Owen Wilson
+Paige O'Hara
+Patton Oswalt
+Peter Behn
+Phyllis Smith
+Pluto
+Rapunzel
+Raymond Ochoa
+Richard Kind
+Richard White
+Robby Benson
+Ron Miller
+Santino Fontana
+Scott Weinger
+Snow White
+Stitch
+Susan Egan
+Tate Donovan
+Tessa Thompson
+Tiana
+Tim Allen
+Tinker Bell
+Tony Anselmo
+Tony Hale
+Ursula
+Whoopi Goldberg
+Will Smith
+Willem Dafoe
+
+[insert]
+Aladdin
+Alice
+Anger
+Anna
+Ariel
+Aurora
+Baloo
+Bambi
+Beast
+Belle
+Bing Bong
+Bruce Davis
+Buzz Lightyear
+Captain Hook
+Carl Fredricksen
+Cheshire Cat
+Chip
+Cinderella
+Cogsworth
+Cruella
+Cruella de Vil
+Crump
+Daisy Duck
+Dale
+Dash Parr
+Disgust
+Donald Duck
+Duchess
+Dumbo
+Edna Mode
+Elizabeth Swann
+Elsa
+Ernesto de la Cruz
+Evil Queen
+Father Kent
+Flik
+Flounder
+Flynn Rider
+Forky
+Frank Wolff
+Frozone
+Gabbie
+Genie
+Goofy
+Guido
+Hercules
+Jafar
+Jasmine
+Jessie
+Jiminy Cricket
+Judy Hopps
+Kronk
+Kuzco
+Lady
+Lightning McQueen
+Lilo
+Lily Houghton
+Little John
+Lumière
+Mad Hatter
+Maid Marian
+Maleficent
+Mater
+Maui
+Max Goof
+Mickey Mouse
+Miguel
+Mike Wazowski
+Minnie Mouse
+Mirabel
+Moana
+Mr. Incredible
+Mrs. Incredible
+Mrs. Potts
+Mufasa
+Mulan
+Mushu
+Nemo
+Nick Wilde
+Olaf
+Peter Pan
+Piglet
+Pinocchio
+Pluto
+Pocahontas
+Powerline
+Pumbaa
+Rapunzel
+Raya
+Remy
+Robin Hood
+Roxanne
+Russell
+Sadness
+Scar
+Sebastian
+Simba
+Snow White
+Stitch
+Sulley
+Thomas O'Malley
+Tiana
+Tigger
+Timon
+Tinker Bell
+Tramp
+V.A. Vandevere
+Violet Parr
+WALL-E
+Winnie the Pooh
+Woody
+Yzma
+
+[multi]
+Anthony Gonzalez / Gael García Bernal
+Ben Burtt / Elissa Knight
+Joan Cusack / Kelsey Grammer
+Chris Evans / Keke Palmer
+Donnie Dunagan / Peter Behn
+Dave Foley / Julia Louis-Dreyfus
+Bill Farmer / Tony Anselmo
+Halle Bailey / Melissa McCarthy
+Bret Iwan / Kaitlyn Robrock
+John Goodman / Billy Crystal
+Keira Knightley / Orlando Bloom
+Nathan Lane / Ernie Sabella
+Mena Massoud / Will Smith
+Owen Wilson / Larry the Cable Guy
+Chris Pratt / Julia Louis-Dreyfus
+Phyllis Smith / Richard Kind
+Tony Shalhoub / Guido Quaroni
+Tom Hanks / Tim Allen
+Owen Wilson / Guido Quaroni
+Tim Allen / Andrew Stanton / Jeff Pidgeon
+Anthony Gonzalez / Gael García Bernal / Benjamin Bratt
+Halle Bailey / Daveed Diggs / Melissa McCarthy
+Matthew Broderick / Nathan Lane / Ernie Sabella
+Johnny Depp / Orlando Bloom / Keira Knightley
+Dave Foley / Julia Louis-Dreyfus / Hayden Panettiere
+Larry the Cable Guy / Tony Shalhoub / Guido Quaroni
+Tom Hanks / Joan Cusack / Kelsey Grammer
+Bret Iwan / Kaitlyn Robrock / Bill Farmer
+David Spade / John Goodman / Patrick Warburton
+Tom Hanks / Tim Allen / John Morris
+Anne Hathaway / Johnny Depp
+Tessa Thompson / Justin Theroux
+Alexander Molony / Ever Anderson / Jude Law

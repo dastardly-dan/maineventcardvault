@@ -1,0 +1,539 @@
+# name: 2026 National Sports Collectors Convention
+# sport: Other
+# added: 2026-11-22
+# source: https://cdn.shopify.com/s/files/1/0662/9749/5709/files/2026_National_Sports_Collectors_Convention_26NSCC_-_Checklist_1.pdf
+
+[base]
+Aaron Judge
+Ace Bailey
+Adam Driver
+Alexa Bliss
+Allen Iverson
+Alperen Sengun
+Anthony Daniels
+Anthony Edwards
+Antoine Griezmann
+Ashton Jeanty
+Asuka
+Austin Theory
+Bayley
+Becky Lynch
+Bianca Belair
+Billie Lourd
+Billy Dee Williams
+Blake Monroe
+Bo Nix
+Bobby Witt Jr.
+Brock Bowers
+Bron Breakker
+Bronson Reed
+Bruno Guimarães
+Bryce Eldridge
+Bryce Harper
+Bryce Underwood
+Bryce Young
+Bukayo Saka
+Cade Cunningham
+Caleb Williams
+Cam Schlittler
+Cam Skattebo
+Cam Ward
+Carmelo Hayes
+Carnell Tate
+Carson Beck
+Carson Benge
+Cedric Coward
+Chad Gable
+Charlotte Flair
+Chase Burns
+Chelsea Green
+Christian Kofane
+CM Punk
+Cole Palmer
+Colson Montgomery
+Colston Loveland
+Cooper Flagg
+Count Dooku
+Daisy Ridley
+Damian Priest
+Daniel Pierce
+Darth Maul
+David Barclay
+Dax Kilby
+De'Von Achane
+Declan Rice
+Derik Queen
+Devin Booker
+DeVonta Smith
+Diego Luna
+Dirk Nowitzki
+Dominik Mysterio
+Donovan Mitchell
+Drake Maye
+Drew McIntyre
+Dylan Harper
+Désiré Doué
+Edward Florentino
+Eli Willits
+Emeka Egbuka
+Emilia Clarke
+Emmitt Smith
+Erling Haaland
+Estêvão Willian
+Ethan Conrad
+Ethan Holliday
+Ethan Page
+Ewan McGregor
+Fernando Mendoza
+Finn Bálor
+Florian Wirtz
+Forest Whitaker
+Franco Mastantuono
+Franklin Arias
+Fred Tatascoire
+Gavi
+Genevieve O'Reilly
+George Lombard Jr.
+Giulia
+Grogu
+Gunther
+Harold Fannin Jr.
+Harrison Ford
+Harry Kane
+Hayden Christensen
+Ian McDiarmid
+IYO SKY
+Izzi Dame
+Ja Morant
+Jac Caglianone
+Jacob Fatu
+Jacob Misiorowski
+Jacory Croskey-Merritt
+Jadarian Price
+Jade Cargill
+Jalen Brunson
+Jalen Duren
+Jalen Johnson
+Jalen Williams
+Jamal Murray
+Jamal Musiala
+James Harden
+Jared Goff
+Jaxson Dart
+Jayden Daniels
+Jayden Maiava
+Jaylen Brown
+Jayson Tatum
+Je'Von Evans
+Jeremiah Fears
+Jeremiyah Love
+Jesús Made
+Jey Uso
+Jimmy Butler III
+JJ Wetherholt
+Jobe Bellingham
+Joe Burrow
+Joe Hendry
+Joe Montana
+Joel Edgerton
+John Boyega
+John Elway
+JoJo Parker
+Jonathan David
+Jonathan Taylor
+Jordyn Tyson
+Josh Allen
+Josh Giddey
+Josh Jacobs
+Josuar Gonzalez
+Josue De Paula
+João Pedro
+Juan Soto
+Jude Bellingham
+Jude Law
+Julián Alvarez
+K-2SO
+Kade Anderson
+Karim Adeyemi
+Karl-Anthony Towns
+Katee Sackhoff
+Kawhi Leonard
+Kazuma Okamoto
+Kenan Yildiz
+Keri Russell
+Kevin De Bruyne
+Kevin Durant
+Kevin McGonigle
+Kevin Owens
+Khvicha Kvaratskhelia
+Kofi Kingston
+Kon Knueppel
+Konnor Griffin
+Konstantinos Karetsas
+Kyle Monangai
+Kylian Mbappé
+LA Knight
+LaMelo Ball
+Lamine Yamal
+Larry Bird
+Lash Legend
+Laura Dern
+Lautaro Martínez
+LeBron James
+Lee-Jung Jae
+Leia Organa
+Lennart Karl
+Leo De Vries
+Liam Doyle
+Liv Morgan
+Luka Dončić
+Lupita Nyong'o
+Luther Burden III
+Lyra Valkyria
+Magic Johnson
+Makai Lemon
+Malik Nabers
+Marcel Reed
+Mark Hamill
+Matt Cardona
+Matthew Golden
+Max Clark
+Max Dowman
+Maxime Raynaud
+Maxxine Dupri
+Michael Olise
+Mike Trout
+Ming-Na Wen
+Mohamed Salah
+Mohammed Kudus
+Munetaka Murakami
+Myles Garrett
+Natalie Portman
+Neel
+Nick Kurtz
+Nick Woltemade
+Nico Collins
+Nicolò Barella
+Nikki Bella
+Nikola Jokić
+Nolan McLean
+Oba Femi
+Omarion Hampton
+Oscar Isaac
+Ousmane Dembélé
+Paolo Banchero
+Paul Bettany
+Paul Skenes
+Pedri
+Pedro Pascal
+Penta
+Pete Crow-Armstrong
+Peter Mayhew
+Phil Foden
+Pio Esposito
+Quentin Ndjantou
+Qui-Gon Jinn
+Quinshon Judkins
+R2-D2
+Randy Orton
+Raphinha
+Rhea Ripley
+Richard Ríos
+Ricky
+Rio Ngumoha
+RJ Harvey
+Robert Lewandowski
+Rodri
+Roman Anthony
+Ronald Acuña Jr.
+Rosario Dawson
+Roxanne Perez
+Ryan Waldschmidt
+Sabine Wren
+Sam Darnold
+Samuel L. Jackson
+Scott McTominay
+Scottie Barnes
+Sebastian Walcott
+Seth Hernandez
+Seth Rollins
+Shai Gilgeous-Alexander
+Shaquille O'Neal
+Sheamus
+Shin Hati
+Shohei Ohtani
+Simon Pegg
+Solo Sikoa
+Steele Hall
+Stephanie Vaquer
+Stephen Curry
+Stephon Castle
+Steve Blum
+Stormtrooper
+Taika Waititi
+Tatsuya Imai
+Temuera Morrison
+The Miz
+Tiffany Stratton
+Tim Duncan
+Travis Bazzana
+Tre Johnson III
+TreVeyon Henderson
+Trey Yesavage
+Trick Williams
+Ty Simpson
+Tyler Herro
+Tyler Shough
+Tyler Warren
+Tyrese Maxey
+Victor Froholdt
+Victor Wembanyama
+Vini Jr.
+Virgil van Dijk
+Vitinha
+VJ Edgecombe
+Walker Jenkins
+Warwick Davis
+Woody Marks
+Xavi Simons
+Xavier Neyens
+Xavier Worthy
+Yang Hansen
+Yao Ming
+Yoda
+Zion Williamson
+Zyhir Hope
+
+[auto]
+Aaron Judge
+Ace Bailey
+Adam Driver
+Alexa Bliss
+Anthony Daniels
+Anthony Edwards
+Ashton Jeanty
+Asuka
+Austin Theory
+Bayley
+Becky Lynch
+Bianca Belair
+Billie Lourd
+Billy Dee Williams
+Blake Monroe
+Bo Nix
+Brock Bowers
+Bron Breakker
+Bronson Reed
+Bryce Underwood
+Bryce Young
+Cade Cunningham
+Caleb Williams
+Cam Schlittler
+Cam Skattebo
+Cam Ward
+Carmelo Hayes
+Carnell Tate
+Carson Beck
+Carson Benge
+Cedric Coward
+Chad Gable
+Charlotte Flair
+Chelsea Green
+CM Punk
+Cole Palmer
+Cooper Flagg
+Daisy Ridley
+Damian Priest
+Daniel Pierce
+Dax Kilby
+De'Von Achane
+Derik Queen
+DeVonta Smith
+Diego Luna
+Dirk Nowitzki
+Dominik Mysterio
+Donovan Mitchell
+Drake Maye
+Drew McIntyre
+Dylan Harper
+Edward Florentino
+Eli Willits
+Emeka Egbuka
+Emilia Clarke
+Emmitt Smith
+Erling Haaland
+Estêvão Willian
+Ethan Conrad
+Ethan Page
+Ewan McGregor
+Fernando Mendoza
+Finn Bálor
+Florian Wirtz
+Forest Whitaker
+Franklin Arias
+Fred Tatascoire
+Gavi
+Genevieve O'Reilly
+George Lombard Jr.
+Gunther
+Harrison Ford
+Hayden Christensen
+Ian McDiarmid
+IYO SKY
+Izzi Dame
+Jac Caglianone
+Jacob Fatu
+Jacob Misiorowski
+Jadarian Price
+Jade Cargill
+Jalen Brunson
+Jamal Musiala
+Jared Goff
+Jaxson Dart
+Jayden Maiava
+Jayson Tatum
+Je'Von Evans
+Jeremiyah Love
+Jey Uso
+JJ Wetherholt
+Joe Burrow
+Joe Hendry
+Joe Montana
+Joel Edgerton
+John Boyega
+John Elway
+JoJo Parker
+Jordyn Tyson
+Josh Jacobs
+Josuar Gonzalez
+Jude Bellingham
+Jude Law
+Julián Alvarez
+K-2SO
+Kade Anderson
+Katee Sackhoff
+Kawhi Leonard
+Keri Russell
+Kevin De Bruyne
+Kevin McGonigle
+Kofi Kingston
+Kon Knueppel
+Konnor Griffin
+Konstantinos Karetsas
+Kyle Monangai
+LA Knight
+Lamine Yamal
+Larry Bird
+Lash Legend
+Laura Dern
+Lautaro Martínez
+Lee-Jung Jae
+Lennart Karl
+Leo De Vries
+Liam Doyle
+Liv Morgan
+Lupita Nyong'o
+Luther Burden III
+Lyra Valkyria
+Magic Johnson
+Makai Lemon
+Malik Nabers
+Marcel Reed
+Mark Hamill
+Matt Cardona
+Matthew Golden
+Max Clark
+Max Dowman
+Maxime Raynaud
+Maxxine Dupri
+Mike Trout
+Ming-Na Wen
+Mohamed Salah
+Mohammed Kudus
+Munetaka Murakami
+Myles Garrett
+Natalie Portman
+Nick Kurtz
+Nick Woltemade
+Nico Collins
+Nolan McLean
+Oba Femi
+Omarion Hampton
+Oscar Isaac
+Ousmane Dembélé
+Paul Bettany
+Pedro Pascal
+Penta
+Peter Mayhew
+Phil Foden
+Quinshon Judkins
+Randy Orton
+Rhea Ripley
+Richard Ríos
+Ricky
+Robert Lewandowski
+Rodri
+Rosario Dawson
+Roxanne Perez
+Ryan Waldschmidt
+Sam Darnold
+Samuel L. Jackson
+Seth Hernandez
+Seth Rollins
+Shai Gilgeous-Alexander
+Sheamus
+Simon Pegg
+Solo Sikoa
+Steele Hall
+Stephen Curry
+Steve Blum
+Taika Waititi
+Tatsuya Imai
+Temuera Morrison
+The Miz
+Tiffany Stratton
+Travis Bazzana
+TreVeyon Henderson
+Trey Yesavage
+Trick Williams
+Ty Simpson
+Victor Wembanyama
+Vini Jr.
+Virgil van Dijk
+Warwick Davis
+Xavier Neyens
+Xavier Worthy
+Yang Hansen
+Zyhir Hope
+
+[insert]
+Aaron Judge
+Ahsoka Tano
+Bron Breakker
+Caleb Williams
+CM Punk
+Cooper Flagg
+Dominik Mysterio
+Drake Maye
+Estêvão Willian
+Fernando Mendoza
+Han Solo
+Jac Caglianone
+Jaxson Dart
+Josh Allen
+Kon Knueppel
+Kylian Mbappé
+Lamine Yamal
+LeBron James
+Lennart Karl
+Luke Skywalker
+Mike Trout
+Queen Amidala
+Rhea Ripley
+Rio Ngumoha
+Roman Anthony
+Shohei Ohtani
+Stephanie Vaquer
+Stephen Curry
+The Mandalorian
+Victor Wembanyama

@@ -1,0 +1,142 @@
+# name: 2026 Topps MLB x KAWS
+# sport: MLB
+# added: 2026-11-22
+# source: https://cdn.shopify.com/s/files/1/0662/9749/5709/files/KAWs_Checklist.pdf
+
+[base]
+Aaron Judge
+Albert Pujols
+Alex Rodriguez
+Bobby Witt Jr.
+Bryce Harper
+Bubba Chandler
+Cal Raleigh
+Cal Ripken Jr.
+Cam Schlittler
+Carlton Fisk
+Carson Williams
+Chipper Jones
+Clayton Kershaw
+Colson Montgomery
+Corbin Carroll
+Darryl Strawberry
+David Ortiz
+Derek Jeter
+Elly De La Cruz
+Fernando Tatis Jr.
+Francisco Lindor
+Frank Thomas
+Gunnar Henderson
+Ichiro
+Jac Caglianone
+Jackson Chourio
+Jacob Misiorowski
+Jacob Wilson
+James Wood
+Jonah Tong
+José Ramírez
+Juan Marichal
+Juan Soto
+Julio Rodríguez
+Junior Caminero
+Ken Griffey Jr.
+Konnor Griffin
+Kyle Tucker
+Logan Webb
+Max Fried
+Mike Piazza
+Mike Trout
+Mookie Betts
+Nick Kurtz
+Paul Skenes
+Payton Tolle
+Pedro Martínez
+Randy Johnson
+Reggie Jackson
+Roger Clemens
+Roki Sasaki
+Roman Anthony
+Ronald Acuña Jr.
+Samuel Basallo
+Shohei Ohtani
+Tarik Skubal
+Trea Turner
+Vladimir Guerrero Jr.
+Wyatt Langford
+Yoshinobu Yamamoto
+
+[auto]
+Aaron Judge
+Albert Pujols
+Bobby Witt Jr.
+Cal Ripken Jr.
+Carlton Fisk
+Carson Williams
+Chipper Jones
+Clayton Kershaw
+Corbin Carroll
+Darryl Strawberry
+David Ortiz
+Derek Jeter
+Elly De La Cruz
+Francisco Lindor
+Frank Thomas
+Henderson
+Ichiro
+Jac Caglianone
+Jacob Misiorowski
+Jacob Wilson
+James Wood
+Jonah Tong
+José Ramírez
+Jr.
+Juan Marichal
+Juan Soto
+Julio Rodríguez
+Junior Caminero
+Ken Griffey Jr.
+Kyle Tucker
+Max Fried
+Mike Piazza
+Mike Trout
+Nick Kurtz
+Paul Skenes
+Payton Tolle
+Pedro Martínez
+Randy Johnson
+Reggie Jackson
+Roger Clemens
+Roki Saski
+Shohei Ohtani
+Tarik Skubal
+Trea Turner
+Wyatt Langford
+Yamamoto
+
+[insert]
+Aaron Judge
+Bobby Witt Jr.
+Bryce Harper
+Cal Raleigh
+Derek Jeter
+Elly De La Cruz
+Fernando Tatis Jr.
+Francisco Lindor
+Jacob Misiorowski
+Juan Soto
+Julio Rodríguez
+Junior Caminero
+KAWS
+Kyle Tucker
+Max Fried
+Mookie Betts
+Nick Kurtz
+Paul Skenes
+Roki Sasaki
+Roman Anthony
+Ronald Acuña Jr.
+Shohei Ohtani
+Tarik Skubal
+Vladimir Guerrero Jr.
+Wyatt Langford
+Yoshinobu Yamamoto

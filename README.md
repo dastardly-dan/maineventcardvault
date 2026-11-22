@@ -142,6 +142,12 @@ team spot, box by box. Linked from the storefront's Breaks menu; every page carr
   Set names decide the section (Signatures/Autographs/Ink/Marks/Pen Pals = auto, Base/Ticket = base,
   the rest = insert); "A/B" athletes become multi cards. Sports in the Add a box dropdown follow the
   `order` list in `builder.py` (WWE, MLW, NFL, NBA, WNBA, EuroLeague, MLB, USA Baseball, MMA, ...).
+- **Topps 2026 batch (Nov 22, 2026):** 97 products from the 2026 section of topps.com/pages/checklists were
+  added and Chrome WWE was swapped to its official list (`build/breaks/topps_manifest_2026-11-22.py` lists
+  each product, its Shopify file, sport group and team mode; `topps_batch_2026-11-22.py` is the run script,
+  for reference only since it points at session paths). topps.com shows a bot check that the person has to
+  click; the PDFs themselves on cdn.shopify.com download fine in the browser. 2026 Topps Update Series
+  Baseball was skipped: its link on the Topps page returns 404.
 - **Boxes UI:** the builder lists only the boxes picked for the break; everything else is in the grouped
   "Add a box" dropdown, so the library can grow without the panel getting longer.
 

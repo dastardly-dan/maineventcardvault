@@ -1,0 +1,64 @@
+# name: 2026 Topps Dynamic Duals Baseball
+# sport: MLB
+# added: 2026-11-22
+# source: https://cdn.shopify.com/s/files/1/0662/9749/5709/files/2026_Dynamic_Duals_Baseball_Checklist.pdf
+
+[base]
+Aaron Judge | Yankees
+Agustín Ramírez | Marlins
+Albert Pujols | Cardinals
+Ben Rice | Yankees
+Brice Matthews | Astros
+Bubba Chandler | Pirates
+Bucky Dent | Yankees
+Cam Schlittler | Yankees
+Carlos Beltrán | Mets
+Carson Williams | Rays
+Chase Burns | Reds
+Christian Moore | Angels
+Colson Montgomery | White Sox
+Connelly Early | Red Sox
+Corbin Carroll | Diamondbacks
+Darryl Strawberry | Mets
+David Wright | Mets
+Doc Gooden | Mets
+Don Mattingly | Yankees
+Dylan Crews | Nationals
+Elly De La Cruz | Reds
+Ernie Banks | Cubs
+Frank Thomas | White Sox
+Hank Aaron | Braves
+Harry Ford | Nationals
+Ichiro | Mariners
+Jac Caglianone | Royals
+Jackie Robinson | Dodgers
+Jacob Wilson | Athletics
+James Wood | Nationals
+Johnny Damon | Red Sox
+Juan Gonzalez | Rangers
+Juan Soto | Mets
+Junior Caminero | Rays
+Kyle Karros | Rockies
+Mark McGwire | Athletics
+Michael Busch | Cubs
+Miguel Tejada | Athletics
+Paul Molitor | Brewers
+Paul Skenes | Pirates
+Roger Clemens | Red Sox
+Roman Anthony | Red Sox
+Ronald Acuña Jr. | Braves
+Sammy Sosa | Cubs
+Samuel Basallo | Orioles
+Sandy Koufax | Dodgers
+Shohei Ohtani | Dodgers
+Shota Imanaga | Cubs
+Steve Carlton | Phillies
+Steven Kwan | Guardians
+Ted Williams | Red Sox
+Trey Yesavage | Blue Jays
+Will Smith | Dodgers
+Willie Mays | Giants
+Yoshinobu Yamamoto | Dodgers
+
+[insert]
+Seattle | Mariners

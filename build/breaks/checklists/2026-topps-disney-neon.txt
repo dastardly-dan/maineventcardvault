@@ -1,0 +1,395 @@
+# name: 2026 Topps Disney Neon
+# sport: Disney
+# added: 2026-11-22
+# source: https://cdn.shopify.com/s/files/1/0662/9749/5709/files/2026_Topps_Disney_Neon_Checklist.pdf
+
+[base]
+22
+Abner
+Aladdin
+Alan
+Alebrije Dante
+Alice
+Anastasia
+Angel
+Anger
+Animal
+Animatronic Daisy
+Animatronic Donald
+Anton Ego
+Anxiety
+Ariel
+Art
+B.E.N.
+Bambi
+Barley Lightfoot
+Basher Beetleworx
+Baymax
+Beaker
+Belle
+Bernard
+Bigfoot
+Bing Bong
+Bo Peep
+Bobby Zimuruski
+Bolt
+Boost
+Brave Little Tailor
+Broadway
+Brooklyn
+Bruce
+Bruni
+Buzz Lightyear
+Camilla the Chicken
+Candace
+Captain Basher Beetleworx
+Captain Gantu
+Captain Hook
+Carl Fredricksen
+Carl the Robot
+Carlos
+Chef Louis
+Chernabog
+Chicharrón
+Chick Hicks
+Chicken Little
+Clarabelle Cow
+Clock Tower
+Cruella de Vil
+Cruz Ramirez
+Daisy Duck
+Darkwing Duck
+Dash Parr
+Demona
+Dez
+Disgust
+DJ
+Donald Duck
+Dorothea Williams
+Dory
+Dr. Bunsen Honeydew
+Dr. Doofenshmirtz
+Dr. Facilier
+Dr. Teeth
+Duke Caboom
+Dumbo
+Elio Solís
+Elliott
+Elsa
+Embarrassment
+Ember Lumen
+Ennui
+Ernesto de la Cruz
+Eve
+Evie
+Evil Queen
+Fear
+Felix
+Ferb
+Fish Out of Water
+Flash
+Flotsam and Jetsam
+Floyd Pepper
+Flynn Rider
+Fozzie Bear
+Francesco Bernoulli
+Frozone
+Gaston
+Gazelle
+Genie
+Geppetto
+Gill
+Glordon
+Goliath
+Gonzo
+Goofy
+Gus the Gremlin
+Gusteau
+Hades
+Hank
+Hercules
+Hiro Hamada
+Horace Horsecollar
+Hudson
+Huey, Dewey, Louie
+Héctor
+Ian Lightfoot
+Isabella
+Jackson Storm
+Jafar
+Janice
+Jaq
+Jay
+Jessie
+Jim Hawkins
+Jiminy Cricket
+Joe Gardner
+Joy
+Judy Hopps
+Jumba
+Kanga
+Kele
+Kermit
+Kida
+King Candy
+King Triton
+Kirby
+Kronk
+Kuzco
+Lady
+Lance Slashblade
+Launchpad McQuack
+Lewis
+Lexington
+Li Shang
+Lightning McQueen
+Lilo
+Linguini
+Lord Grigon
+Loto
+Lumière
+Magic Carpet
+Mal
+Maleficent
+Marlin
+Matangi
+Mater
+Maui
+Max Goof
+Megara
+Mei Lee
+Merida
+Merlin
+Mickey Mouse
+Miguel
+Mike Wazowski
+Milo
+Minnie Mouse
+Mirabel
+Mirage
+Miss Piggy
+Moana
+Moni
+Moonwind
+Mowgli
+Mr. Incredible
+Mr. Smee
+Mrs. Incredible
+Mrs. Potts
+Mufasa
+Mulan
+Mushu
+Nala
+Nemo
+Nick Wilde
+Ortensia
+Oswald the Lucky Rabbit
+P.J.
+Pacha
+Pepita
+Pepé
+Perdita
+Perry the Platypus
+Pete
+Peter Pan
+Phineas
+Pinocchio
+Pirate Moody
+Pleakley
+Pluto
+Pongo
+Powerline
+Prince Charming
+Ralph
+Ramone
+Randall Boggs
+Rapunzel
+Red
+Remy
+Rex
+Rizzo
+Rowlf the Dog
+Roxanne
+Russell
+Sadness
+Sam Eagle
+Scar
+Scooter
+Screenslaver
+Scrooge McDuck
+Sebastian
+Seer Blotling
+Sergeant Calhoun
+Shadow Blot
+Shan Yu
+Shank
+Simba
+Small Pete
+Snot Rod
+Snow White
+Sour Bill
+Spatter Blotling
+Spladoosh Blotling
+Squishy
+Statler
+Steamboat Willie
+Stitch
+Sulley
+Swedish Chef
+Syndrome
+Tanker Beetleworx
+Terry
+The Beast
+The Kakamora
+The King
+The Swedish Chef
+The Underminer
+Tigger
+Timothy Q. Mouse
+Tinker Bell
+Tiny
+Tomorrow City Tanker Beetleworx
+Tweedle Dee
+Uma
+Ursula
+Vanellope von Schweetz
+Violet Parr
+Wade Ripple
+Waldorf
+WALL-E
+Walter
+Wendy
+Wilbur Robinson
+Wingo
+Witch Tanker Beetleworx
+Woody
+Wreck-It Ralph
+Yesss
+Yokai
+Yzma
+Zoot
+Zurg
+
+[auto]
+Albert
+Alexander
+Alyson
+Andrew
+Anika Noni
+Anthony
+Auli'i
+B.E.N.
+BD
+Benjamin
+Bill
+Billy
+Booboo
+Brad
+Bret
+Chris
+Christopher Daniel
+Dan
+David
+Dee Bradley
+Donna
+Frank
+Gael
+Gael Garcia
+Holly
+Huckleberry
+Idina
+Irene
+Jim
+Jodi
+John
+Jonathan
+Josh
+Kaitlyn
+Kellie
+Kelly
+Larry the Cable Guy
+Leah
+Lewis
+Linda
+Liza
+Mamoudou
+Margaret
+Matthew
+Ming-Na
+Owen
+Paige
+Patrick
+Patton
+Pauly
+Phyllis
+Prince Eric
+Richard
+Rob
+Robby
+Samuel L.
+Scott
+Spencer
+Stephanie
+Susan
+Tate
+Tim
+Tom
+Tony
+Vincent
+
+[multi]
+Ducky / Bunny
+Crush / Squirt
+Bowler Hat Guy / DOR-15
+Bloofy / Pouchy
+Dr. Bunsen Honeydew / Beaker
+Snow White / Evil Queen
+Sulley / Randall Boggs
+Buzz Lightyear / Zurg
+Robin Hood / Prince John
+Tiana / Dr. Facilier
+Stitch / Captain Gantu
+Mr. Incredible / Syndrome
+Peter Pan / Captain Hook
+Mowgli / Shere Khan
+Alice / Queen of Hearts
+Hercules / Hades
+Winnie the Pooh / Heffalumps
+Belle / Gaston
+Quasimodo / Judge Claude Frollo
+Vanellope von Schweetz / King Candy
+Aladdin / Jafar
+Ariel / Ursula
+Lewis Robinson / Bowler Hat Guy
+Asha / King Magnifico
+Mufasa / Scar
+Flik / Hopper
+Aurora / Maleficent
+The Dalmatians / Cruella de Vil
+Cinderella / Lady Tremaine
+Linguini / Remy / Anton Ego
+Rapunzel / Mother Gothel
+Jaq / Gus / Lucifer
+Anna / Prince Hans
+Pocahontas / Governor Ratcliffe
+Mulan / Shan Yu
+Hiro Hamada / Yokai
+Kuzco / Yzma
+Mickey / Pete
+Carl Fredricksen / Charles F. Muntz
+Woody / Lotso
+Mickey / Minnie Mouse
+Chris / Kaitlyn
+Chris / Tony
+Kaitlyn / Tony
+Chris / Kaitlyn / Bill
+Chris / Kaitlyn / Tony
+Chris / Bill / Kaitlyn
+Chris / Bill
+Chris / Bill / Tony
+Bill / Tony
+Bret / Kaitlyn / Bill
+Bret / Kaitlyn / Tony
+Bret / Bill / Kaitlyn
+Bret / Bill
+Bret / Bill / Tony

@@ -1,0 +1,488 @@
+# name: 2025 Topps Star Wars Smugglers Outpost
+# sport: Star Wars
+# added: 2026-11-22
+# source: https://cdn.shopify.com/s/files/1/0662/9749/5709/files/2025_Star_Wars_Smugglers_Outpost_Checklist.pdf
+
+[base]
+Aayla Secura
+Admiral Ackbar
+Ahsoka Tano
+Anakin Skywalker
+Asajj Ventress
+Axe Woves
+B2EM0
+Bail Organa
+Barriss Offee
+Baylan Skoll
+Baze Malbus
+BB-8
+Beru Lars
+Bib Fortuna
+Bix Caleen
+Bo-Katan Kryze
+Boba Fett
+Bodhi Rook
+Bossk
+C-3PO
+Cad Bane
+Captain Bombardier
+Captain Enoch
+Captain Typho
+Carson Teva
+Cassian Andor
+Chewbacca
+Chirrut Îmwe
+Chopper
+Clone Commander Cody
+Cobb Vanth
+Commissioner Helgait
+Count Dooku
+D-O
+Darth Maul
+Darth Sidious
+Darth Vader
+Dedra Meero
+Dexter Jettster
+Director Orson Krennic
+DJ
+Dr. Pershing
+Dryden Vos
+Edrio Two Tubes
+Emperor Palpatine
+Enfys Nest
+Ezra Bridger
+Fennec Shand
+Figrin D'an
+Finn
+Freedi Pamular
+Galen Erso
+Gamorrean Guard
+Garazeb Orrelios
+General Antoc Merrick
+General Grievous
+General Hux
+General Maximilian Veers
+Grand Admiral Thrawn
+Grand Moff Tarkin
+Greedo
+Greef Karga
+Grogu
+Han Solo
+Hera Syndulla
+HK-87
+IG-11
+IG-88
+Jabba The Hutt
+Jango Fett
+Jar Jar Binks
+Jawa
+Jecki Lon
+Jedi Knight Sol
+Jedi Master Sol
+Jod Na Nawood
+Jyn Erso
+K-2SO
+Kanan Jarrus
+Kawlan Roken
+Kelleran Beq
+Kh'ymm
+Ki-Adi-Mundi
+Kit Fisto
+Krrsantan
+Kylo Ren
+L3-37
+Lando Calrissian
+Leia Organa
+Lobot
+Luke Skywalker
+Luthen Rael
+Mace Windu
+Mae Aniseya
+Major Partagaz
+Marrok
+Max Rebo
+Maz Kanata
+Migs Mayfeld
+Moff Gideon
+Mon Mothma
+Morgan Elsbeth
+Neel
+Nien Nunb
+Nute Gunray
+Obi-Wan Kenobi
+Omega
+Osha Aniseya
+Owen Lars
+Padmé Amidala
+Paz Vizsla
+Peli Motto
+Pirate Captain Brutus
+Plo Koon
+Poe Dameron
+Porg
+Qi'ra
+Qui-Gon Jinn
+R2-D2
+Rancor
+Rey
+Rose Tico
+Sabine Wren
+Salacious B. Crumb
+Saw Gerrera
+Sebulba
+Sergeant Melshi
+Shaak Ti
+Shin Hati
+Shmi Skywalker
+Sly Moore
+SM-33
+Snowball
+Stormtrooper
+Supreme Leader Snoke
+Syril Karn
+Tala Durith
+The Armorer
+The Client
+The Mandalorian
+The Modifier
+The Seventh Sister
+The Stranger
+Tobias Beckett
+Tusken Raider
+Wat Tambor
+Watto
+Wedge Antilles
+Wicket W. Warrick
+Yoda
+Yord Fandar
+Zam Wesell
+Zorii Bliss
+
+[auto]
+Aayla Secura
+Admiral Ackbar
+Ahsoka Tano
+Anakin Skywalker
+Asajj Ventress
+B2EM0
+Barriss Offee
+Bazine Netal
+BB-8
+Bistan
+Bix Caleen
+Bo-Katan Kryze
+Boba Fett
+Bodhi Rook
+Brasso
+C-3PO
+Cad Bane
+Camie
+Captain Phasma
+Carson Teva
+Cassian Andor
+Chewbacca
+Clone Captain Rex
+Cobb Vanth
+Commissioner Helgait
+D-O
+Darth Maul
+Darth Sidious
+Darth Vader
+Dedra Meero
+Dryden Vos
+Edrio Two Tubes
+Enfys Nest
+Fennec Shand
+Finn
+Galen Erso
+Garazeb Orrelios
+General Engell
+General Grievous
+General Hux
+General Maximilian Veers
+General Parnadee
+Grand Admiral Thrawn
+Grand Moff Tarkin
+Greedo
+Han Solo
+Hera Syndulla
+IG-11
+IG-12
+Jabba The Hutt
+Jar Jar Binks
+Jecki Lon
+Jedi Master Indara
+Jedi Master Kelnacca
+Jedi Master Sol
+Jod Na Nawood
+Jyn Erso
+Kanan Jarrus
+Kassa
+Kawlan Roken
+Kelleran Beq
+Kerri
+Ketsu Onyo
+Kit Fisto
+Kylo Ren
+Lando Calrissian
+Lee Jung-jae
+Leida Mothma
+Luke Skywalker
+Luthen Rael
+Maarva
+Mace Windu
+Major Partagaz
+Marrok
+Maul
+Max Rebo
+Maz Kanata
+Moff Gideon
+Mon Mothma
+Morgan Elsbeth
+Nien Nunb
+Obi-Wan Kenobi
+Ochi of Bestoon
+Owen Lars
+Padmé Amidala
+Paz Vizsla
+Peli Motto
+Perrin Fertha
+Plo Koon
+Poe Dameron
+Qi'ra
+Queen Miraj Scintel
+Rey
+Rose Tico
+Sabine Wren
+Sabé
+Saw Gerrera
+Sebulba
+Sergeant Melshi
+Shaak Ti
+Shin Hati
+Sio Bibble
+Sol
+Supreme Leader Snoke
+Synara San
+Syril Karn
+The Armorer
+The Client
+The Duchess
+The Grand Inquisitor
+The Mandalorian
+The Modifier
+The Seventh Sister
+The Stranger
+Tusken Raider
+Vetch
+Watto
+Wedge Antilles
+Wicket W. Warrick
+Wim
+Yord Fandar
+Zam Wesell
+Zorii Bliss
+
+[insert]
+2-1B
+Aayla Secura
+Admiral Statura
+Agent Kallus
+Ahsoka Tano
+Ak-Rev
+Anakin Skywalker
+Asajj Ventress
+Aurra Sing
+B2EMO
+Bail Organa
+Bala-Tik
+Barriss Offee
+Battle Droid
+Baylan Skoll
+BB-8
+BB-9E
+BD-1
+Beezer Fortuna
+Bix Caleen
+Bo-Katan Kryze
+Boba Fett
+Boss Nass
+Bossk
+C-3PO
+C2-B5
+Cad Bane
+Cal Kestis
+Captain Phasma
+Cassian Andor
+Chancellor Palpatine
+Chewbacca
+Chirrut Îmwe
+Chopper
+Ciddarin Scaleback
+Clone Commander Cody
+Cobb Vanth
+Count Dooku
+D-O
+Darth Maul
+Darth Sidious
+Darth Vader
+Doda Bodonawieedo
+Doikk Na'ts
+Dr. Pershing
+Drash
+Droideka
+Droopy McCool
+Duchess Satine Kryze
+Ello Asty
+Emperor Palpatine
+Ezra Bridger
+Fennec Shand
+Fifth Brother
+Figrin D'an
+Finn
+Garazeb Orrelios
+General Grievous
+General Hux
+General Tarfful
+Grand Admiral Thrawn
+Grand Moff Tarkin
+Grogu
+Gunter
+Han Solo
+HK-87
+Hondo Ohnaka
+Huyang
+Ickabel G'ont
+IG-11
+IG-12
+Infrablue Zedbeddy Coggins
+Jango Fett
+Jar Jar Binks
+Jecki Lon
+Jedi Knight Aayla Secura
+Jedi Knight Luke Skywalker
+Jedi Knight Yord Fandar
+Jedi Master Depa Billaba
+Jedi Master Dooku
+Jedi Master Even Piell
+Jedi Master Indara
+Jedi Master Kelleran Beq
+Jedi Master Kelnacca
+Jedi Master Ki-Adi-Mundi
+Jedi Master Kit Fisto
+Jedi Master Mace Windu
+Jedi Master Obi-Wan Kenobi
+Jedi Master Plo Koon
+Jedi Master Qui-Gon Jinn
+Jedi Master Shaak Ti
+Jedi Master Sol
+Jedi Master Vernestra Rwoh
+Jedi Master Yoda
+Jedi Padawan Anakin Skywalker
+Jedi Padawan Caleb Dume
+Jedi Padawan Jecki Lon
+Jedi Padawan Mog Adana
+Jedi Padawan Tasi Lowa
+Jedi Padawan Torbin
+Jess Pava
+Jod Na Nawood
+Joh Yowza
+K-2SO
+Kanan Jarrus
+Kelnacca
+Ki-Adi-Mundi
+Kino Loy
+Kit Fisto
+Koska Reeves
+Krrsantan
+Kuiil
+Kylo Ren
+Lando Calrissian
+Leia Organa
+Lieutenant Mitaka
+Lor San Tekka
+Luke Skywalker
+Luminara Unduli
+Mace Windu
+MagnaGuard
+Marrok
+Mas Amedda
+Master Indara
+Master Torbin
+Max Rebo
+Mayor Mok Shaiz
+Maz Kanata
+Moff Gideon
+Mon Mothma
+NED-B
+Neel
+Nien Nunb
+Nute Gunray
+Obi-Wan Kenobi
+Omega
+Padmé Amidala
+Paz Vizsla
+Plo Koon
+Poe Dameron
+Pong Krell
+Qi'ra
+Qui-Gon Jinn
+R2-D2
+R5-D4
+Rey
+Sabine Wren
+Savage Opress
+Sergeant Mosk
+Seventh Sister
+Shaak Ti
+Shin Hati
+Sidon Ithano
+SM-33
+Snap Wexley
+Sol
+Stass Allie
+Stormtooper
+Stormtrooper
+Sudswater Dillifay Glon
+Super Battle Droid
+Supreme Leader Snoke
+Sy Snootles
+Tasu Leech
+Taybin Ralorsa
+Tech Mo'r
+The Armorer
+The Grand Inquisitor
+The Mandalorian
+The Stranger
+Ubert Quaril
+Umpass stay
+Unkar Plutt
+Vect Nokru
+Vel Sartha
+Vernestra Rwoh
+Vulture Droid
+Yoda
+Yord Fandar
+Zam Wessell
+Zett Jukassa
+Zorii Bliss
+
+[multi]
+Jar Jar Binks / Darth Vader
+Finn / Poe Dameron / Rey
+Han Solo / Lando Calrissian / Chewbacca
+Obi-Wan Kenobi / Padmé Amidala / Anakin Skywalker
+Darth Sidious / Anakin Skywalker / Mace Windu
+The Mandalorian / Ahsoka Tano / Luke Skywalker
+Qi'ra / Maul / Dryden Vos
+Hera Syndulla / Sabine Wren / Ahsoka Tano
+The Mandalorian / Boba Fett / Fennec Shand
+Kylo Ren / Finn / Poe Dameron / Rey
+Kylo Ren / General Hux / Supreme Leader Snoke / Captain Phasma
+Saw Gerrera / Luthen Rael / Mon Mothma / Cassian Andor
+Padmé Amidala / Mace Windu / Obi-Wan Kenobi / Anakin Skywalker
+Hera Syndulla / Ahsoka Tano / Ezra Bridger / Sabine Wren
+Bo-Katan Kryze / The Armorer / The Mandalorian / Moff Gideon
+Boba Fett / Cad Bane / Krrsantan / Fennec Shand
+Padmé Amidala / Anakin Skywalker / Rey / Poe Dameron / Obi-Wan Kenobi / Mace Windu / Leia Organa / Han Solo / Luke Skywalker / Maz Kanata / C-3PO / Jyn Erso / Kanan Jarrus / Mon Mothma / Cassian Andor / Ezra Bridger / The Mandalorian / Bo-Katan Kryze / Ahsoka Tano / Chewbacca
+Grand Admiral Thrawn / The Client / The Grand Inquisitor / The Third Sister / Grand Moff Tarkin / Major Partagaz / Supreme Leader Snoke / General Hux / Captain Phasma / The Fourth Sister / The Seventh Sister / Lok Durd / Darth Sidious / Darth Maul / Asajj Ventress / Darth Vader / General Grievous / Kylo Ren

@@ -1,0 +1,219 @@
+# name: 2026 Topps Mars Attacks Christmas
+# sport: Entertainment
+# added: 2026-11-22
+# source: https://cdn.shopify.com/s/files/1/0662/9749/5709/files/2026_Mars_Attacks_Xmas_24MARS_CHECKLIST_FINAL.pdf
+
+[base]
+A Christmas Miracle
+A Desperate Push
+A Martian Meteor
+A Plan is Formed
+Abominable Snowman
+Aerial Collision
+Army Captain
+Arriving Late
+Assault in the North
+Baker's Dozen
+Bigfoot
+Bird of Prey
+Bombing Run
+Bugs Attack!
+Cabin Ablaze
+Christmas Card Lane
+Christmas Day Invasion
+Clearing The Forests
+Clearing the Roads
+Coal Burns a Martian
+Cold Steel
+Collateral Damage
+Cupid
+Destroying A Present
+Earth Retaliates
+Earth Suffers Casualties
+Easter Bunny
+Elf Leader
+Elf Soldier
+Elves Fight Back
+Fighter Jet
+Fighter Pilot
+"Get Off My Lawn!"
+Giant Robot
+Giant Spider
+Gingerbread Man
+Greetings From The North Pole
+"Head North"
+Heavy Artillery
+Heavy Weaponry
+Imposters Among Us
+Imposters In The Street
+Jack Frost
+Krampus
+Leprechaun
+Martian
+Martian King
+Martian Leader
+Martian Mrs. Claus
+Martians Retreat
+Mrs. Claus
+Narwhal
+Over An Open Fire
+Peril on the Rails
+Reindeer
+Ring Of Fire
+Santa Approaches
+Santa Claus
+Santa's SNORAD
+Scramble The Jets
+Snowball Fight
+Snowman
+Sound The Alarm
+Terror At The Rock
+The Coldest War
+The Elves Prepare
+The Final Stand
+The Naughty List
+The Night Before
+Thinning The Herd
+Tooth Fairy
+UFO
+Unwelcome Guests
+Yetis
+
+[auto]
+Abominable Snowman
+Bigfoot
+Bill Nye
+Bootsy Collins
+Brent Spiner
+Chris Parnell
+Chris Ramsay
+Chuck Norris
+Cupid
+Dennis Rodman
+Easter Bunny
+George Noory
+George Takei
+Gingerbread Man
+Jack Frost
+Jeff Goldblum
+Krampus
+Leprechaun
+Mark Rolston
+Mike Tyson
+Santa Claus
+Tony Hawk
+Tooth Fairy
+Will Smith
+
+[insert]
+Abominable Snowman
+Ack View-Martian
+AckAckAcktis Jr.
+Acky Terrorsen
+Agylzen Dargoruz
+Alien Ian
+Ansad Pagurz
+Bezerka Bubble Gum
+Big MackAckAck
+Bigfoot
+Bill Nye
+Blue
+Blyzt Shellington
+Bootsy Collins
+Brent Spiner
+Chris Parnell
+Chris Ramsay
+Christmas Invasion!
+Chuck Norris
+Cupid
+Dennis Rodman
+Destroying A. Doug
+Earth Resources Dwindling!
+Easter Bunny
+Elf's Hat
+Elf's Socks
+Escape Pod
+Fighter Jet
+Galactic Tale Kids
+George Noory
+George Takei
+Gingerbread Man
+Green
+Greetings from California
+Greetings From Egypt
+Greetings From England
+Greetings From Japan
+Greetings From New York
+Greetings From The North Pole
+Jack Frost
+Jeff Goldblum
+Joe Terror
+Jozz KRAK
+Kalbreg Raygunz
+Krampus
+Kuyzel Martian
+Kyrg Szywargurg
+Leprechaun
+Lump of Coal
+Mark Rolston
+Mars Attacks Baseball Special
+Mars Attacks Earth!
+Mars Attacks High School #1
+Mars Attacks High School #2
+Mars Attacks Vol. 1 #1 - Cover A
+Mars Attacks Vol. 1 #1 - Cover B
+Mars Attacks Vol. 1 #2 - Cover A
+Mars Attacks Vol. 1 #2 - Cover B
+Mars Attacks Vol. 1 #3 - Cover A
+Mars Attacks Vol. 1 #3 - Cover B
+Mars Attacks Vol. 1 #4 - Cover A
+Mars Attacks Vol. 1 #4 - Cover B
+Mars Attacks Vol. 1 #5 - Cover A
+Mars Attacks Vol. 1 #5 - Cover B
+Mars Attacks Vol. 2 #1
+Mars Attacks Vol. 2 #3
+Mars Attacks Vol. 2 #6
+Mars Attacks Vol. 2 #7
+Martian
+Martian Leader
+Martian Meteor
+Martian Ship Fragment
+Martian Suit
+Martians Move North!
+Mashbot Superbroken
+Meteor Hits North Pole!
+Mike Tyson
+Milky Ray
+Mrs. Claus
+My Stinky Perfume
+New York Attacked!
+North Pole In Peril!
+Panic Kurtarz
+Pink
+Polar Princess Train
+Pozzell Skeeze
+Red
+Reindeer
+Reindeer Antler
+Reindeer Hide
+Robot Arm
+Santa Claus
+Santa's Hat
+Santa's Helpers
+Santa's Sleigh
+Santa's Suit
+Santa's Toy Bag
+Santa's Workshop
+Scarf
+Terran Squizzball
+Time's Up in Times Square!
+Tony Hawk
+Tooth Fairy
+UFO
+Victory For Earth!
+White
+Will Smith
+World at War!
+Wrapping Paper
+Wurp Chipperz
+Yeti Fur

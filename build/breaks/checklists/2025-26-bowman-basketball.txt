@@ -1,0 +1,701 @@
+# name: 2025-26 Bowman Basketball
+# sport: NBA
+# added: 2026-11-22
+# source: https://cdn.shopify.com/s/files/1/0662/9749/5709/files/2025-26_Bowman_Basketball_Checklist.pdf
+
+[base]
+Aaron Wiggins | Oklahoma City Thunder
+Ace Bailey | Utah Jazz
+Adou Thiero | Los Angeles Lakers
+AJ Green | Milwaukee Bucks
+AJ Johnson | Washington Wizards
+Alex Sarr | Washington Wizards
+Alex Toohey | Golden State Warriors
+Alijah Martin | Toronto Raptors
+Alperen Sengun | Houston Rockets
+Amen Thompson | Houston Rockets
+Andrew Nembhard | Indiana Pacers
+Andrew Wiggins | Miami Heat
+Anthony Black | Orlando Magic
+Anthony Davis | Dallas Mavericks
+Anthony Edwards | Minnesota Timberwolves
+Asa Newell | Atlanta Hawks
+Ausar Thompson | Detroit Pistons
+Austin Reaves | Los Angeles Lakers
+Bam Adebayo | Miami Heat
+Ben Saraf | Brooklyn Nets
+Bennedict Mathurin | Indiana Pacers
+Bilal Coulibaly | Washington Wizards
+Bradley Beal | Phoenix Suns
+Brandon Miller | Charlotte Hornets
+Bronny James Jr. | Los Angeles Lakers
+Brooks Barnhizer | Oklahoma City Thunder
+Bub Carrington | Washington Wizards
+Buddy Hield | Golden State Warriors
+Cade Cunningham | Detroit Pistons
+Cam Thomas | Brooklyn Nets
+Cameron Johnson | Brooklyn Nets
+Carter Bryant | San Antonio Spurs
+Cason Wallace | Oklahoma City Thunder
+Cedric Coward | Memphis Grizzlies
+Chaz Lanier | Detroit Pistons
+Chet Holmgren | Oklahoma City Thunder
+Chris Paul | San Antonio Spurs
+Christian Braun | Denver Nuggets
+Coby White | Chicago Bulls
+Collin Murray-Boyles | Toronto Raptors
+Cooper Flagg | Dallas Mavericks
+Dalton Knecht | Los Angeles Lakers
+Damian Lillard | Milwaukee Bucks
+Danny Wolf | Brooklyn Nets
+Darius Garland | Cleveland Cavaliers
+De'Aaron Fox | San Antonio Spurs
+Dejounte Murray | New Orleans Pelicans
+DeMar DeRozan | Sacramento Kings
+Deni Avdija | Portland Trail Blazers
+Dereck Lively II | Dallas Mavericks
+Derik Queen | New Orleans Pelicans
+Derrick White | Boston Celtics
+Desmond Bane | Memphis Grizzlies
+Devin Booker | Phoenix Suns
+Devin Carter | Sacramento Kings
+Domantas Sabonis | Sacramento Kings
+Donovan Clingan | Portland Trail Blazers
+Donovan Mitchell | Cleveland Cavaliers
+Drake Powell | Brooklyn Nets
+Draymond Green | Golden State Warriors
+Dylan Harper | San Antonio Spurs
+Dyson Daniels | Atlanta Hawks
+Egor Dëmin | Brooklyn Nets
+Evan Mobley | Cleveland Cavaliers
+Franz Wagner | Orlando Magic
+Gary Trent Jr. | Milwaukee Bucks
+Giannis Antetokounmpo | Milwaukee Bucks
+Gradey Dick | Toronto Raptors
+Guerschon Yabusele | Philadelphia 76ers
+Herbert Jones | New Orleans Pelicans
+Hugo González | Boston Celtics
+Immanuel Quickley | Toronto Raptors
+Isaiah Collier | Utah Jazz
+Ivica Zubac | Los Angeles Clippers
+Ja Morant | Memphis Grizzlies
+Jaden Ivey | Detroit Pistons
+Jahmai Mashack | Memphis Grizzlies
+Jaime Jaquez Jr. | Miami Heat
+Jalen Brunson | New York Knicks
+Jalen Duren | Detroit Pistons
+Jalen Green | Houston Rockets
+Jalen Johnson | Atlanta Hawks
+Jalen Suggs | Orlando Magic
+Jalen Williams | Oklahoma City Thunder
+Jalen Wilson | Brooklyn Nets
+Jamal Murray | Denver Nuggets
+James Harden | Los Angeles Clippers
+Jamir Watkins | Washington Wizards
+Jared McCain | Philadelphia 76ers
+Jaren Jackson Jr. | Memphis Grizzlies
+Jarrett Allen | Cleveland Cavaliers
+Jase Richardson | Orlando Magic
+Javon Small | Memphis Grizzlies
+Jaylen Brown | Boston Celtics
+Jaylon Tyson | Cleveland Cavaliers
+Jayson Tatum | Boston Celtics
+Jeremiah Fears | New Orleans Pelicans
+Jeremy Sochan | San Antonio Spurs
+Jimmy Butler III | Golden State Warriors
+Joan Beringer | Minnesota Timberwolves
+Joel Embiid | Philadelphia 76ers
+John Tonje | Utah Jazz
+Johni Broome | Philadelphia 76ers
+Jonathan Kuminga | Golden State Warriors
+Jordan Clarkson | Utah Jazz
+Jordan Poole | Washington Wizards
+Josh Giddey | Chicago Bulls
+Josh Hart | New York Knicks
+Julius Randle | Minnesota Timberwolves
+Kam Jones | Indiana Pacers
+Karl-Anthony Towns | New York Knicks
+Kasparas Jakučionis | Miami Heat
+Kawhi Leonard | Los Angeles Clippers
+Kel'el Ware | Miami Heat
+Kevin Durant | Houston Rockets
+Keyonte George | Utah Jazz
+Khaman Maluach | Phoenix Suns
+Klay Thompson | Dallas Mavericks
+Kobe Sanders | Los Angeles Clippers
+Koby Brea | Phoenix Suns
+Kon Knueppel | Charlotte Hornets
+Kristaps Porzingis | Boston Celtics
+Kyle Filipowski | Utah Jazz
+Kyle Kuzma | Milwaukee Bucks
+Kyrie Irving | Dallas Mavericks
+Kyshawn George | Washington Wizards
+Lachlan Olbrich | Chicago Bulls
+LaMelo Ball | Charlotte Hornets
+Lauri Markkanen | Utah Jazz
+LeBron James | Los Angeles Lakers
+Liam McNeeley | Charlotte Hornets
+Luguentz Dort | Oklahoma City Thunder
+Luka Dončić | Los Angeles Lakers
+Mark Williams | Charlotte Hornets
+Matas Buzelis | Chicago Bulls
+Max Shulga | Boston Celtics
+Maxime Raynaud | Sacramento Kings
+Micah Peavy | New Orleans Pelicans
+Michael Porter Jr. | Denver Nuggets
+Mikal Bridges | New York Knicks
+Myles Turner | Indiana Pacers
+Naz Reid | Minnesota Timberwolves
+Nic Claxton | Brooklyn Nets
+Nikola Jokić | Denver Nuggets
+Nikola Vučević | Chicago Bulls
+Nique Clifford | Sacramento Kings
+Noa Essengue | Chicago Bulls
+Noah Clowney | Brooklyn Nets
+Noah Penda | Orlando Magic
+Nolan Traore | Brooklyn Nets
+Norman Powell | Los Angeles Clippers
+Obi Toppin | Indiana Pacers
+OG Anunoby | New York Knicks
+Onyeka Okongwu | Atlanta Hawks
+Oso Ighodaro | Phoenix Suns
+Paolo Banchero | Orlando Magic
+Pascal Siakam | Indiana Pacers
+Patrick Williams | Chicago Bulls
+Paul George | Philadelphia 76ers
+Payton Pritchard | Boston Celtics
+Peyton Watson | Denver Nuggets
+Rasheer Fleming | Phoenix Suns
+Reed Sheppard | Houston Rockets
+RJ Barrett | Toronto Raptors
+Rob Dillingham | Minnesota Timberwolves
+Ron Holland II | Detroit Pistons
+Russell Westbrook | Denver Nuggets
+Ryan Dunn | Phoenix Suns
+Ryan Kalkbrenner | Charlotte Hornets
+Santi Aldama | Memphis Grizzlies
+Scoot Henderson | Portland Trail Blazers
+Scottie Barnes | Toronto Raptors
+Shaedon Sharpe | Portland Trail Blazers
+Shai Gilgeous-Alexander | Oklahoma City Thunder
+Sion James | Charlotte Hornets
+Stephen Curry | Golden State Warriors
+Stephon Castle | San Antonio Spurs
+Taelon Peter | Indiana Pacers
+Terrence Shannon Jr. | Minnesota Timberwolves
+Thomas Sorber | Oklahoma City Thunder
+Tidjane Salaün | Charlotte Hornets
+Toumani Camara | Portland Trail Blazers
+Trae Young | Atlanta Hawks
+Tre Johnson III | Washington Wizards
+Trey Murphy III | New Orleans Pelicans
+Tristan da Silva | Orlando Magic
+Tyler Herro | Miami Heat
+Tyrese Haliburton | Indiana Pacers
+Tyrese Maxey | Philadelphia 76ers
+Tyrese Proctor | Cleveland Cavaliers
+Victor Wembanyama | San Antonio Spurs
+VJ Edgecombe | Philadelphia 76ers
+Walter Clayton Jr. | Utah Jazz
+Will Richard | Golden State Warriors
+Will Riley | Washington Wizards
+Yang Hansen | Portland Trail Blazers
+Yanic Konan-Niederhäuser Los Angeles Clippers
+Zaccharie Risacher | Atlanta Hawks
+Zach Edey | Memphis Grizzlies
+Zach LAVine | Sacramento Kings
+
+[auto]
+Aaliyah Crump | Texas
+Aaron Nesmith | Indiana Pacers
+Acaden Lewis | Villanova
+Ace Bailey | Utah Jazz
+Ace Flagg | Maine
+Addison Deal | Iowa
+Adou Thiero | Los Angeles Lakers
+Agot Makeer | University Of South Carolina
+AJ Dybantsa | BYU
+Ajay Mitchell | Oklahoma City Thunder
+Alex Sarr | Washington Wizards
+Alex Toohey | Golden State Warriors
+Alexandra Eschmeyer | Stanford
+Alijah Martin | Toronto Raptors
+Aliyahna Morris | California
+Anthony Black | Orlando Magic
+Anthony Edwards | Minnesota Timberwolves
+Asa Newell | Atlanta Hawks
+Ayla McDowell | University Of South Carolina
+Ben Saraf | Brooklyn Nets
+Bennett Stirtz | Iowa
+Boopie Miller | SMU
+Braden Smith | Purdue
+Braeden Shrewsberry | Notre Dame
+Brandon Garrison | Kentucky
+Brandon Miller | Charlotte Hornets
+Brayden Burries | Arizona
+Bronny James Jr. | Los Angeles Lakers
+Brooks Barnhizer | Oklahoma City Thunder
+Bryce Lindsay | Villanova
+Bryson Tiller | Kansas
+Caleb Foster | Duke
+Caleb Wilson | UNC
+Cam Ward | Michigan State
+Cam Whitmore | Houston Rockets
+Cedric Coward | Memphis Grizzlies
+Chase Ross | Marquette
+Chaz Lanier | Detroit Pistons
+Christian Anderson | Texas Tech
+CJ Ingram | Florida
+Coen Carr | Michigan State
+Collin Murray-Boyles | Toronto Raptors
+Cooper Flagg | Dallas Mavericks
+Cotie McMahon | Ole Miss
+Danny Wolf | Brooklyn Nets
+Darianna Alexander | Cincinnati
+Darrion Williams | NC State
+Darryn Peterson | Kansas
+Davion Hannah | Alabama
+Davis Fogle | Gonzaga
+Deandre Ayton | Portland Trail Blazers
+Deniya Prawl | Tennessee
+Derek Dixon | UNC
+Derik Queen | New Orleans Pelicans
+Derrick White | Boston Celtics
+Devin McGlockton | Vanderbilt
+Dillon Jones | Oklahoma City Thunder
+Donald Hand Jr. | Boston College
+Dorian Finney-Smith | Los Angeles Lakers
+Drake Powell | Brooklyn Nets
+Dylan Harper | San Antonio Spurs
+Egor Dëmin | Brooklyn Nets
+Emilee Skinner | Duke
+Enrique Freeman | Indiana Pacers
+Giannis Antetokounmpo | Milwaukee Bucks
+Grace Knox | LSU
+Gradey Dick | Toronto Raptors
+Hailee Swain | Stanford
+Isaiah Collier | Utah Jazz
+Isaiah Denis | UNC
+Isiah Harwell | Houston
+Ivica Zubac | Los Angeles Clippers
+Ja'Kobi Gillespie | Tennessee
+Jahmai Mashack | Memphis Grizzlies
+Jaida Civil | Tennessee
+Jaland Lowe | Kentucky
+Jalen Brunson | New York Knicks
+Jalen Williams | Oklahoma City Thunder
+Jamal Murray | Denver Nuggets
+Jamier Jones | Providence
+Jamir Watkins | Washington Wizards
+Jarace Walker | Indiana Pacers
+Jase Richardson | Orlando Magic
+Jason Edwards | Providence
+Jasper Johnson | Kentucky
+Javon Small | Memphis Grizzlies
+Jaylin Williams | Oklahoma City Thunder
+Jaylon Tyson | Cleveland Cavaliers
+Jayson Tatum | Boston Celtics
+Jeremiah Wilkinson | Georgia
+Joan Beringer | Minnesota Timberwolves
+Joe Grahovac | St. Bonaventure
+John Blackwell | Wisconsin
+John Tonje | Utah Jazz
+Johni Broome | Philadelphia 76ers
+Jordan Clarkson | Utah Jazz
+Jordan Hawkins | New Orleans Pelicans
+Josh Dix | Creighton
+JT Toppin | Texas Tech
+Juju Watkins | USC
+Kaelyn Carroll | Kentucky
+Kam Jones | Indiana Pacers
+Kara Dunn | USC
+Kasparas Jakučionis | Miami Heat
+Kaylene Smikle | Maryland
+Kel'el Ware | Miami Heat
+Kelis Fisher | UConn
+Kevin Durant | Houston Rockets
+Keyshawn Hall | Auburn
+Khaman Maluach | Phoenix Suns
+Kiyan Anthony | Syracuse
+Kiyomi Mcmiller | Penn State
+Koa Peat | Arizona
+Kobe Sanders | Los Angeles Clippers
+Koby Brea | Phoenix Suns
+Kohl Rosario | Kansas
+Kon Knueppel | Charlotte Hornets
+Kyle Filipowski | Utah Jazz
+Lachlan Olbrich | Chicago Bulls
+Lara Somfai | Stanford
+Leah Macy | Notre Dame
+Liam McNeeley | Charlotte Hornets
+Madison Booker | Texas
+Max Shulga | Boston Celtics
+Maxime Raynaud | Sacramento Kings
+Micah Peavy | New Orleans Pelicans
+Michael Rataj | Baylor
+Mikel Brown Jr. | Louisville
+Milos Uzan | Houston
+Nate Ament | Tennessee
+Nate Bittle | Oregon
+Nate Calmese | Wake Forest
+Nick Martinelli | Northwestern
+Niko Bundalo | Ole Miss
+Nikola Jokić | Denver Nuggets
+Nikola Topić | Oklahoma City Thunder
+Nique Clifford | Sacramento Kings
+Noa Essengue | Chicago Bulls
+Noah Penda | Orlando Magic
+Nolan Traore | Brooklyn Nets
+Nyla Brooks | UNC
+Obi Agbim | Baylor
+Otega Oweh | Kentucky
+Owen Freeman | Creighton
+Oziyah Sellers | St. John's
+Paolo Banchero | Orlando Magic
+Pharrel Payne | Maryland
+Quinten Post | Golden State Warriors
+Raegan Beers | The University of Oklahoma
+Rasheer Fleming | Phoenix Suns
+Reed Bailey | Indiana
+Richie Saunders | BYU
+Rob Dillingham | Minnesota Timberwolves
+Ron Holland II | Detroit Pistons
+Ryan Dunn | Phoenix Suns
+Ryan Kalkbrenner | Charlotte Hornets
+Sadiq White | Syracuse
+Sarah Strong | UConn
+Scoot Henderson | Portland Trail Blazers
+Sebastian Wilkins | Duke
+Serah Williams | UConn
+Shai Gilgeous-Alexander
+Shelton Henderson | Miami
+Shon Abaev | Cincinnati
+Sienna Betts | UCLA
+Silas Demary Jr. | UConn
+Sion James | Charlotte Hornets
+Stephen Curry | Golden State Warriors
+Stephon Castle | San Antonio Spurs
+Ta'Niya Latson | University Of South Carolina
+Taelon Peter | Indiana Pacers
+Tarris Reed Jr. | UConn
+Thomas Sorber | Oklahoma City Thunder
+Tobe Awaka | Arizona
+Tounde Yessoufou | Baylor
+Trey Kaufman-Renn | Purdue
+Tyrese Proctor | Cleveland Cavaliers
+Victor Wembanyama | San Antonio Spurs
+Walter Clayton Jr. | Utah Jazz
+Wesley Yates III | Washington
+Will Richard | Golden State Warriors
+Will Riley | Washington Wizards
+Winters Grady | Michigan
+Xaivian Lee | Florida
+Yang Hansen | Portland Trail Blazers
+Yanic Konan-Niederhäuser Los Angeles Clippers
+Yarden Garzon | Maryland
+Zaccharie Risacher | Atlanta Hawks
+Zach Edey | Memphis Grizzlies
+ZaKiyah Johnson | LSU
+Zuby Ejiofor | St. Johns
+
+[insert]
+Aaliyah Crump | Texas
+Aaron Wiggins | Oklahoma City Thunder
+Acaden Lewis | Villanova
+Ace Bailey | Utah Jazz
+Ace Flagg | Maine
+Addison Deal | Iowa
+Adou Thiero | Los Angeles Lakers
+Agot Makeer | University Of South Carolina
+AJ Dybantsa | BYU
+AJ Green | Milwaukee Bucks
+AJ Johnson | Washington Wizards
+Alex Sarr | Washington Wizards
+Alex Toohey | Golden State Warriors
+Alexandra Eschmeyer | Stanford
+Alijah Martin | Toronto Raptors
+Aliyahna Morris | California
+Alperen Sengun | Houston Rockets
+Amen Thompson | Houston Rockets
+Andrew Nembhard | Indiana Pacers
+Andrew Wiggins | Miami Heat
+Anthony Black | Orlando Magic
+Anthony Davis | Dallas Mavericks
+Anthony Edwards | Minnesota Timberwolves
+Asa Newell | Atlanta Hawks
+Ausar Thompson | Detroit Pistons
+Austin Reaves | Los Angeles Lakers
+Ayla McDowell | University Of South Carolina
+Bam Adebayo | Miami Heat
+Ben Saraf | Brooklyn Nets
+Bennedict Mathurin | Indiana Pacers
+Bennett Stirtz | Iowa
+Bilal Coulibaly | Washington Wizards
+Boopie Miller | SMU
+Braden Smith | Purdue
+Bradley Beal | Phoenix Suns
+Braeden Shrewsberry | Notre Dame
+Brandon Garrison | Kentucky
+Brandon Miller | Charlotte Hornets
+Brayden Burries | Arizona
+Bronny James Jr. | Los Angeles Lakers
+Brooks Barnhizer | Oklahoma City Thunder
+Bryce Lindsay | Villanova
+Bryson Tiller | Kansas
+Bub Carrington | Washington Wizards
+Buddy Hield | Golden State Warriors
+Cade Cunningham | Detroit Pistons
+Caleb Foster | Duke
+Caleb Wilson | UNC
+Cam Thomas | Brooklyn Nets
+Cam Ward | Michigan State
+Cameron Johnson | Brooklyn Nets
+Carter Bryant | San Antonio Spurs
+Cason Wallace | Oklahoma City Thunder
+Cedric Coward | Memphis Grizzlies
+Chase Ross | Marquette
+Chaz Lanier | Detroit Pistons
+Chet Holmgren | Oklahoma City Thunder
+Chris Paul | San Antonio Spurs
+Christian Anderson | Texas Tech
+Christian Braun | Denver Nuggets
+CJ Ingram | Florida
+Coby White | Chicago Bulls
+Coen Carr | Michigan State
+Collin Murray-Boyles | Toronto Raptors
+Cooper Flagg | Dallas Mavericks
+Cotie McMahon | Ole Miss
+Dalton Knecht | Los Angeles Lakers
+Damian Lillard | Milwaukee Bucks
+Danny Wolf | Brooklyn Nets
+Darianna Alexander | Cincinnati
+Darius Garland | Cleveland Cavaliers
+Darrion Williams | NC State
+Darryn Peterson | Kansas
+Davion Hannah | Alabama
+Davis Fogle | Gonzaga
+De'Aaron Fox | San Antonio Spurs
+Dejounte Murray | New Orleans Pelicans
+DeMar DeRozan | Sacramento Kings
+Deni Avdija | Portland Trail Blazers
+Deniya Prawl | Tennessee
+Dereck Lively II | Dallas Mavericks
+Derek Dixon | UNC
+Derik Queen | New Orleans Pelicans
+Derrick White | Boston Celtics
+Desmond Bane | Memphis Grizzlies
+Devin Booker | Phoenix Suns
+Devin Carter | Sacramento Kings
+Devin McGlockton | Vanderbilt
+Domantas Sabonis | Sacramento Kings
+Donald Hand Jr. | Boston College
+Donovan Clingan | Portland Trail Blazers
+Donovan Mitchell | Cleveland Cavaliers
+Drake Powell | Brooklyn Nets
+Draymond Green | Golden State Warriors
+Dylan Harper | San Antonio Spurs
+Dyson Daniels | Atlanta Hawks
+Egor Dëmin | Brooklyn Nets
+Emilee Skinner | Duke
+Evan Mobley | Cleveland Cavaliers
+Franz Wagner | Orlando Magic
+Gary Trent Jr. | Milwaukee Bucks
+Giannis Antetokounmpo | Milwaukee Bucks
+Grace Knox | LSU
+Gradey Dick | Toronto Raptors
+Guerschon Yabusele | Philadelphia 76ers
+Hailee Swain | Stanford
+Herbert Jones | New Orleans Pelicans
+Hugo González | Boston Celtics
+Immanuel Quickley | Toronto Raptors
+Isaiah Collier | Utah Jazz
+Isaiah Denis | UNC
+Isiah Harwell | Houston
+Ivica Zubac | Los Angeles Clippers
+Ja Morant | Memphis Grizzlies
+Ja'Kobi Gillespie | Tennessee
+Jaden Ivey | Detroit Pistons
+Jahmai Mashack | Memphis Grizzlies
+Jaida Civil | Tennessee
+Jaime Jaquez Jr. | Miami Heat
+Jaland Lowe | Kentucky
+Jalen Brunson | New York Knicks
+Jalen Duren | Detroit Pistons
+Jalen Green | Houston Rockets
+Jalen Johnson | Atlanta Hawks
+Jalen Suggs | Orlando Magic
+Jalen Williams | Oklahoma City Thunder
+Jalen Wilson | Brooklyn Nets
+Jamal Murray | Denver Nuggets
+James Harden | Los Angeles Clippers
+Jamier Jones | Providence
+Jamir Watkins | Washington Wizards
+Jared McCain | Philadelphia 76ers
+Jaren Jackson Jr. | Memphis Grizzlies
+Jarrett Allen | Cleveland Cavaliers
+Jase Richardson | Orlando Magic
+Jason Edwards | Providence
+Jasper Johnson | Kentucky
+Javon Small | Memphis Grizzlies
+Jaylen Brown | Boston Celtics
+Jaylon Tyson | Cleveland Cavaliers
+Jayson Tatum | Boston Celtics
+Jeremiah Fears | New Orleans Pelicans
+Jeremiah Wilkinson | Georgia
+Jeremy Sochan | San Antonio Spurs
+Jimmy Butler III | Golden State Warriors
+Joan Beringer | Minnesota Timberwolves
+Joe Grahovac | St. Bonaventure
+Joel Embiid | Philadelphia 76ers
+John Blackwell | Wisconsin
+John Tonje | Utah Jazz
+Johni Broome | Philadelphia 76ers
+Jonathan Kuminga | Golden State Warriors
+Jordan Clarkson | Utah Jazz
+Jordan Poole | Washington Wizards
+Josh Dix | Creighton
+Josh Giddey | Chicago Bulls
+Josh Hart | New York Knicks
+JT Toppin | Texas Tech
+Juju Watkins | USC
+Julius Randle | Minnesota Timberwolves
+Kaelyn Carroll | Kentucky
+Kam Jones | Indiana Pacers
+Kara Dunn | USC
+Karl-Anthony Towns | New York Knicks
+Kasparas Jakučionis | Miami Heat
+Kawhi Leonard | Los Angeles Clippers
+Kaylene Smikle | Maryland
+Kel'el Ware | Miami Heat
+Kelis Fisher | UConn
+Kevin Durant | Houston Rockets
+Keyonte George | Utah Jazz
+Keyshawn Hall | Auburn
+Khaman Maluach | Phoenix Suns
+Kiyan Anthony | Syracuse
+Kiyomi Mcmiller | Penn State
+Klay Thompson | Dallas Mavericks
+Koa Peat | Arizona
+Kobe Sanders | Los Angeles Clippers
+Koby Brea | Phoenix Suns
+Kohl Rosario | Kansas
+Kon Knueppel | Charlotte Hornets
+Kristaps Porzingis | Boston Celtics
+Kyle Filipowski | Utah Jazz
+Kyle Kuzma | Milwaukee Bucks
+Kyrie Irving | Dallas Mavericks
+Kyshawn George | Washington Wizards
+Lachlan Olbrich | Chicago Bulls
+LaMelo Ball | Charlotte Hornets
+Lara Somfai | Stanford
+Lauri Markkanen | Utah Jazz
+Leah Macy | Notre Dame
+LeBron James | Los Angeles Lakers
+Liam McNeeley | Charlotte Hornets
+Luguentz Dort | Oklahoma City Thunder
+Luka Dončić | Los Angeles Lakers
+Madison Booker | Texas
+Mark Williams | Charlotte Hornets
+Matas Buzelis | Chicago Bulls
+Max Shulga | Boston Celtics
+Maxime Raynaud | Sacramento Kings
+Micah Peavy | New Orleans Pelicans
+Michael Porter Jr. | Denver Nuggets
+Michael Rataj | Baylor
+Mikal Bridges | New York Knicks
+Mikel Brown Jr. | Louisville
+Milos Uzan | Houston
+Myles Turner | Indiana Pacers
+Nate Ament | Tennessee
+Nate Bittle | Oregon
+Nate Calmese | Wake Forest
+Naz Reid | Minnesota Timberwolves
+Nic Claxton | Brooklyn Nets
+Nick Martinelli | Northwestern
+Niko Bundalo | Ole Miss
+Nikola Jokić | Denver Nuggets
+Nikola Vučević | Chicago Bulls
+Nique Clifford | Sacramento Kings
+Noa Essengue | Chicago Bulls
+Noah Clowney | Brooklyn Nets
+Noah Penda | Orlando Magic
+Nolan Traore | Brooklyn Nets
+Norman Powell | Los Angeles Clippers
+Nyla Brooks | UNC
+Obi Agbim | Baylor
+Obi Toppin | Indiana Pacers
+OG Anunoby | New York Knicks
+Onyeka Okongwu | Atlanta Hawks
+Oso Ighodaro | Phoenix Suns
+Otega Oweh | Kentucky
+Owen Freeman | Creighton
+Oziyah Sellers | St. John's
+Paolo Banchero | Orlando Magic
+Pascal Siakam | Indiana Pacers
+Patrick Williams | Chicago Bulls
+Paul George | Philadelphia 76ers
+Payton Pritchard | Boston Celtics
+Peyton Watson | Denver Nuggets
+Pharrel Payne | Maryland
+Raegan Beers | The University of Oklahoma
+Rasheer Fleming | Phoenix Suns
+Reed Bailey | Indiana
+Reed Sheppard | Houston Rockets
+Richie Saunders | BYU
+RJ Barrett | Toronto Raptors
+Rob Dillingham | Minnesota Timberwolves
+Ron Holland II | Detroit Pistons
+Russell Westbrook | Denver Nuggets
+Ryan Dunn | Phoenix Suns
+Ryan Kalkbrenner | Charlotte Hornets
+Sadiq White | Syracuse
+Santi Aldama | Memphis Grizzlies
+Sarah Strong | UConn
+Scoot Henderson | Portland Trail Blazers
+Scottie Barnes | Toronto Raptors
+Sebastian Wilkins | Duke
+Serah Williams | UConn
+Shaedon Sharpe | Portland Trail Blazers
+Shai Gilgeous-Alexander | Oklahoma City Thunder
+Shelton Henderson | Miami
+Shon Abaev | Cincinnati
+Sienna Betts | UCLA
+Silas Demary Jr. | UConn
+Sion James | Charlotte Hornets
+Stephen Curry | Golden State Warriors
+Stephon Castle | San Antonio Spurs
+Ta'Niya Latson | University Of South Carolina
+Taelon Peter | Indiana Pacers
+Tarris Reed Jr. | UConn
+Terrence Shannon Jr. | Minnesota Timberwolves
+Thomas Sorber | Oklahoma City Thunder
+Tidjane Salaün | Charlotte Hornets
+Tobe Awaka | Arizona
+Toumani Camara | Portland Trail Blazers
+Tounde Yessoufou | Baylor
+Trae Young | Atlanta Hawks
+Tre Holloman | NC State
+Tre Johnson III | Washington Wizards
+Trey Kaufman-Renn | Purdue
+Trey Murphy III | New Orleans Pelicans
+Tristan da Silva | Orlando Magic
+Tyler Herro | Miami Heat
+Tyrese Haliburton | Indiana Pacers
+Tyrese Maxey | Philadelphia 76ers
+Tyrese Proctor | Cleveland Cavaliers
+Victor Wembanyama | San Antonio Spurs
+VJ Edgecombe | Philadelphia 76ers
+Walter Clayton Jr. | Utah Jazz
+Wesley Yates III | Washington
+Will Richard | Golden State Warriors
+Will Riley | Washington Wizards
+Winters Grady | Michigan
+Xaivian Lee | Florida
+Yang Hansen | Portland Trail Blazers
+Yanic Konan-Niederhäuser Los Angeles Clippers
+Yarden Garzon | Maryland
+Zaccharie Risacher | Atlanta Hawks
+Zach Edey | Memphis Grizzlies
+Zach LAVine | Sacramento Kings
+ZaKiyah Johnson | LSU
+Zuby Ejiofor | St. John's

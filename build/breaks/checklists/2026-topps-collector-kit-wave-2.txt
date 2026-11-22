@@ -1,0 +1,16 @@
+# name: 2026 Topps Collector Kit Wave 2
+# sport: Other
+# added: 2026-11-22
+# source: https://cdn.shopify.com/s/files/1/0662/9749/5709/files/2026_Collector_Kit_Wave_2_Checklist.pdf
+
+[base]
+Aaron Judge
+Bobby Witt Jr.
+Carnell Tate
+Fernando Mendoza
+Josh Allen
+Juan Soto
+Justin Jefferson
+Konnor Griffin
+Munetaka Murakami
+Myles Garrett

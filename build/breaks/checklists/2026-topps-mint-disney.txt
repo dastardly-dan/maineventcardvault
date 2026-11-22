@@ -1,0 +1,268 @@
+# name: 2026 Topps Mint Disney
+# sport: Disney
+# added: 2026-11-22
+# source: https://cdn.shopify.com/s/files/1/0662/9749/5709/files/26DSNM_Mint_Disney_CHECKLIST_FINAL.pdf
+
+[base]
+22
+Abu
+Alebrije Dante
+Alice
+Angel
+Anger
+Animal
+Anna
+Anxiety
+Ariel
+Aurora
+Baloo
+Bambi
+Baymax
+Beast
+Belle
+Bolt
+Bruce
+Bullseye
+Buzz Lightyear
+Captain Hook
+Cheshire Cat
+Cinderella
+Cruella de Vil
+Daisy Duck
+Darkwing Duck
+Dash Parr
+Donald Duck
+Dory
+Dumbo
+Eeyore
+Elio Solís
+Elsa
+Ember Lumen
+Eve
+Evil Queen
+Ferb
+Fix-It Felix, Jr.
+Flash
+Flik
+Flounder
+Forky
+Frozone
+Gary De'Snake
+Genie
+Goliath
+Goofy
+Grumpy
+Hamm
+Hannah Montana
+Heihei
+Hercules
+Ian Lightfoot
+Jack Sparrow
+Jack-Jack Parr
+Jafar
+Jasmine
+Joe Gardner
+John Smith
+Joy
+Judy Hopps
+Kevin
+King George
+Kronk
+Kuzco
+Lady
+Lightning McQueen
+Lilo
+Lilypad
+Lizzie McGuire
+Luca Paguro
+Mabel Beaver
+Maleficent
+Marie
+Mater
+Maui
+Meeko
+Meg
+Mei Lee
+Merlin
+Mickey Mouse
+Miguel
+Mike Wazowski
+Minnie Mouse
+Mirabel
+Moana
+Mowgli
+Mr. Incredible
+Mrs. Incredible
+Mulan
+Mushu
+Nala
+Nemo
+Nick Wilde
+Olaf
+Perdita
+Peter Pan
+Phineas
+Pinocchio
+Pluto
+Pocahontas
+Rapunzel
+Remy
+Russell
+Scar
+Scrooge McDuck
+Simba
+Snow White
+Squirt
+Stitch
+Sulley
+The Muses
+Tiana
+Tigger
+Tinker Bell
+Tom Lizard
+Ursula
+Vanellope von Schweetz
+Violet Parr
+Wade Ripple
+WALL-E
+Winnie The Pooh
+Woody
+Wreck-It Ralph
+
+[insert]
+22
+Abu
+Alebrije Dante
+Alice
+Angel
+Anger
+Animal
+Anna
+Anxiety
+Ariel
+Aurora
+Baloo
+Bambi
+Baymax
+Beast
+Belle
+Bolt
+Bruce
+Bullseye
+Buzz Lightyear
+Captain Hook
+Cheshire Cat
+Cinderella
+Cruella de Vil
+Daisy Duck
+Darkwing Duck
+Dash Parr
+Donald Duck
+Dory
+Dumbo
+Eeyore
+Elemental
+Elio
+Elio Solís
+Elsa
+Ember Lumen
+Encanto
+Eve
+Evil Queen
+Ferb
+Fix-It Felix, Jr.
+Flash
+Flik
+Flounder
+Forky
+Frozone
+Gary De'Snake
+Genie
+Goliath
+Goofy
+Grumpy
+Hamm
+Hannah Montana
+Heihei
+Hercules
+Hoppers
+Ian Lightfoot
+Inside Out 2
+Jack Sparrow
+Jack-Jack Parr
+Jafar
+Jasmine
+Joe Gardner
+John Smith
+Joy
+Judy Hopps
+Kevin
+King George
+Kronk
+Kuzco
+Lady
+Lightning McQueen
+Lilo
+Lilypad
+Lizzie McGuire
+Luca Paguro
+Mabel Beaver
+Maleficent
+Marie
+Mater
+Maui
+Meeko
+Meg
+Mei Lee
+Merlin
+Mickey Mouse
+Miguel
+Mike Wazowski
+Minnie Mouse
+Mirabel
+Moana
+Moana 2
+Mowgli
+Mr. Incredible
+Mrs. Incredible
+Mulan
+Mushu
+Nala
+Nemo
+Nick Wilde
+Olaf
+Perdita
+Peter Pan
+Phineas
+Pinocchio
+Pluto
+Pocahontas
+Rapunzel
+Remy
+Russell
+Scar
+Scrooge McDuck
+Simba
+Snow White
+Squirt
+Stitch
+Sulley
+The Muses
+Tiana
+Tigger
+Tinker Bell
+Tom Lizard
+Ursula
+Vanellope von Schweetz
+Violet Parr
+Wade Ripple
+WALL-E
+Winnie The Pooh
+Wish
+Woody
+Wreck-It Ralph
+Zootopia 2
+
+[multi]
+Chip / Dale
+Lilo / Stitch

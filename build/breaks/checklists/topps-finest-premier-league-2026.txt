@@ -1,0 +1,485 @@
+# name: Topps Finest Premier League 2026
+# sport: Soccer
+# added: 2026-11-22
+# source: https://cdn.shopify.com/s/files/1/0739/2015/1805/files/Finest_Premier_League_Checklist.pdf
+
+[base]
+Adam Wharton
+Adama Traoré
+Alejandro Garnacho
+Alex Iwobi
+Alexander Isak
+Alexis Mac Allister
+Alfie Cresswell
+Amine Adli
+Amir Ibragimov
+André
+Anthony Elanga
+Anthony Gordon
+Antoine Semenyo
+Anton Stach
+Antoni Milambo
+Ao Tanaka
+Archie Gray
+Bashir Humphreys
+Ben Broggio
+Bendito Mantato
+Benjamin Šeško
+Brajan Gruda
+Brenden Aaronson
+Bruno Fernandes
+Bruno Guimarães
+Bryan Mbeumo
+Bukayo Saka
+Callum Hudson-Odoi
+Callum Marshall
+Charly Alcaraz
+Chris Richards
+Chris Rigg
+Christantus Uche
+Cole Palmer
+Cristhian Mosquera
+Crysencio Summerville
+Daichi Kamada
+Dango Ouattara
+Daniel Muñoz
+Declan Rice
+Divine Mukasa
+Djed Spence
+Dominic Calvert-Lewin
+Dominic Solanke
+Dwight McNeil
+El Hadji Malick Diouf
+Eli Junior Kroupi
+Eliezer Mayenda
+Emile Smith Rowe
+Enso González
+Enzo Fernández
+Enzo Le Fée
+Erling Haaland
+Estêvão Willian
+Evanilson
+Fabian Schär
+Fer López
+Florian Wirtz
+Freddie Potts
+Gabriel Gudmundsson
+Gabriel Magalhães
+Gianluigi Donnarumma
+Giovanni Leoni
+Granit Xhaka
+Gustavo Nunes
+Harrison Murray-Campbell
+Harry Gray
+Harry Howell
+Hugo Ekitike
+Igor Jesus
+Igor Thiago
+Iliman Ndiaye
+Jack Grealish
+Jaidon Anthony
+Jair
+Jamaldeen Jimoh-Aloba
+James McAtee
+Jarrad Branthwaite
+Jarrod Bowen
+Jaydee Canvot
+Jayden Bogle
+Jaydon Banel
+Jean-Philippe Mateta
+Jhon Arias
+Joelinton
+John McGinn
+Jonah Kusi-Asare
+Jordan Henderson
+Jorrel Hato
+Josh Acheampong
+Josh King
+Josh Laurent
+João Gomes
+João Palhinha
+João Pedro
+Julio Soler
+Jurriën Timber
+Justin Devenny
+Justin Kluivert
+Jørgen Strand Larsen
+Kaoru Mitoma
+Kevin
+Kevin Schade
+Kiernan Dewsbury-Hall
+Kyle Walker
+Kōta Takai
+Leandro Trossard
+Lesley Ugochukwu
+Liam Delap
+Lucas Bergvall
+Lucas Paquetá
+Luis Guilherme
+Lyle Foster
+Martin Ødegaard
+Martín Zubimendi
+Matheus Cunha
+Max Dowman
+Maxim De Cuyper
+Michael Kayode
+Micky van de Ven
+Mikkel Damsgaard
+Mohamed Salah
+Mohammed Kudus
+Moisés Caicedo
+Morgan Gibbs-White
+Morgan Rogers
+Murillo
+Myles Lewis-Skelly
+Nathan Collins
+Nick Woltemade
+Noah Okafor
+Noah Sadiki
+Noni Madueke
+Ollie Scarles
+Ollie Watkins
+Omar Marmoush
+Pape Matar Sarr
+Pedro Porro
+Phil Foden
+Piero Hincapié
+Quilindschy Hartman
+Rayan Cherki
+Raúl Jiménez
+Reggie Walsh
+Reigan Heskey
+Riccardo Calafiori
+Rio Ngumoha
+Rodri
+Rodrigo Muniz
+Romain Esse
+Roman Dixon
+Romelle Donovan
+Rory Wilson
+Samuel Chukwueze
+Sandro Tonali
+Sean Longstaff
+Seung-Soo Park
+Shea Lacey
+Shumaira Mheuka
+Simon Adingra
+Stefanos Tzimas
+Thierno Barry
+Tijjani Reijnders
+Tolu Arokodare
+Tom Watson
+Trent Koné-Doherty
+Tyler Adams
+Tyler Dibling
+Veljko Milosavljević
+Viktor Gyökeres
+Virgil van Dijk
+Wesley Okoduwa
+William Saliba
+Wilson Isidor
+Wilson Odobert
+Xavi Simons
+Yankuba Minteh
+Yasin Ayari
+Youri Tielemans
+Yéremy Pino
+Zach Abbott
+Zach Marsh
+Zian Flemming
+
+[auto]
+Alan Shearer
+Alexander Isak
+Alfie Cresswell
+Amir Ibragimov
+Andrei Kanchelskis
+Andy Cole
+Anne Hathaway
+Anthony Elanga
+Anthony Gordon
+Antonee Robinson
+Archie Gray
+Ashley Young
+Ben Broggio
+Bendito Mantato
+Benjamin Šeško
+Brajan Gruda
+Bruno Fernandes
+Bruno Guimarães
+Bryan Mbeumo
+Bukayo Saka
+Callum Hudson-Odoi
+Carlos Tevez
+Charlize Theron
+Chris Richards
+Chris Rigg
+Chris Wood
+Clint Dempsey
+Cody Gakpo
+Cole Palmer
+Dango Ouattara
+Darren Anderton
+David James
+David Luiz
+David Silva
+Declan Rice
+Denis Irwin
+Didier Drogba
+Diogo Dalot
+Dirk Kuyt
+Divine Mukasa
+Dominic Solanke
+Dominik Szoboszlai
+Dwight Yorke
+El Hadji Malick Diouf
+Emile Smith Rowe
+Emmanuel Adebayor
+Enzo Fernández
+Eric Cantona
+Erling Haaland
+Estêvão Willian
+Ethan Nwaneri
+Gabriel Magalhães
+Gareth Bale
+Gary Neville
+Granit Xhaka
+Gustavo Poyet
+Harry Gray
+Heung-Min Son
+Hugo Ekitike
+Ian Wright
+Iliman Ndiaye
+Jack Grealish
+Jacob Ramsey
+Jamie Gittens
+Jarrod Bowen
+Jayden Bogle
+Jill Scott
+Jimmy Floyd Hasselbaink
+Joe Marler
+John Arne Riise
+John McGinn
+John Terry
+Josh King
+Joshua Zirkzee
+João Palhinha
+João Pedro
+Jørgen Strand Larsen
+Kai Havertz
+Kevin Schade
+Kyle Walker
+Laura Woods
+LeBron James
+Leroy Sané
+Les Ferdinand
+Liam Delap
+Lucas Paquetá
+Luis Suárez
+Luka Modrić
+Marc Guiu
+Martín Zubimendi
+Matheus Cunha
+Max Dowman
+Mel B
+Mel C
+Millie Bobby Brown
+Milos Kerkez
+Mohamed Salah
+Mohammed Kudus
+Moisés Caicedo
+Morgan Rogers
+Myles Lewis-Skelly
+Nathan Collins
+Nemanja Vidić
+Niall Quinn
+Nick Woltemade
+Noni Madueke
+Olivier Giroud
+Ollie Watkins
+Omar Marmoush
+Pedro Neto
+Peter Schmeichel
+Phil Foden
+Ralph Ineson
+Reggie Walsh
+Rio Ngumoha
+Riyad Mahrez
+Rob Lee
+Robbie Fowler
+Robbie Keane
+Rodri
+Romelle Donovan
+Ruud Gullit
+Sadio Mané
+Samuel L. Jackson
+Sandro Tonali
+Santi Cazorla
+Shea Lacey
+Shumaira Mheuka
+Simon Adingra
+Sol Campbell
+Stan Collymore
+Steve Stone
+Stuart Broad
+Teddy Sheringham
+Thierry Henry
+Tijjani Reijnders
+Tom Watson
+Tony Adams
+Tyler Dibling
+Viktor Gyökeres
+Virgil van Dijk
+William Saliba
+Yasin Ayari
+Yehor Yarmolyuk
+
+[insert]
+Alan Shearer
+Alejandro Garnacho
+Alexander Isak
+Alexis Mac Allister
+Amine Adli
+Andy Cole
+Anthony Gordon
+Antoine Semenyo
+Antoni Milambo
+Ao Tanaka
+Armando Broja
+Arnaud Kalimuendo
+Benjamin Šeško
+Brajan Gruda
+Brenden Aaronson
+Bruno Fernandes
+Bruno Guimarães
+Bryan Mbeumo
+Bukayo Saka
+Carlos Tevez
+Charalampos Kostoulas
+Charly Alcaraz
+Chris Rigg
+Chris Wood
+Claude Makélélé
+Cole Palmer
+Dan Burn
+Dango Ouattara
+David Beckham
+David Raya
+David Silva
+Declan Rice
+Dennis Bergkamp
+Didier Drogba
+Diego León
+Divine Mukasa
+Dominik Szoboszlai
+Dário Essugo
+Eberechi Eze
+Eden Hazard
+El Hadji Malick Diouf
+Eliezer Mayenda
+Emile Smith Rowe
+Enzo Fernández
+Enzo Le Fée
+Eric Cantona
+Erling Haaland
+Estêvão Willian
+Ethan Nwaneri
+Evanilson
+Facundo Buonanotte
+Fer López
+Fernandinho
+Fernando Torres
+Florian Wirtz
+Frank Lampard
+Gareth Bale
+Gianfranco Zola
+Gianluigi Donnarumma
+Granit Xhaka
+Habib Diarra
+Harry Gray
+Harry Kane
+Harvey Elliott
+Heung-Min Son
+Hugo Ekitike
+Ian Wright
+Ismaïla Sarr
+Jack Grealish
+Jaidon Anthony
+Jarrod Bowen
+Jaydee Canvot
+Jean-Philippe Mateta
+Jhon Arias
+Jonah Kusi-Asare
+Jorrel Hato
+Josh King
+João Gomes
+João Palhinha
+João Pedro
+Justin Kluivert
+Jérémy Doku
+Kai Havertz
+Kaoru Mitoma
+Kevin
+Kevin De Bruyne
+Kiernan Dewsbury-Hall
+Lesley Ugochukwu
+Lewis Dunk
+Lucas Bergvall
+Lucas Paquetá
+Luis Guilherme
+Luka Modrić
+Malo Gusto
+Mario Balotelli
+Martin Ødegaard
+Martín Zubimendi
+Mateus Fernandes
+Matheus Cunha
+Max Dowman
+Micky van de Ven
+Mikkel Damsgaard
+Mohamed Salah
+Mohammed Kudus
+Moisés Caicedo
+Morgan Gibbs-White
+Morgan Rogers
+Murillo
+Nathan Collins
+Nick Woltemade
+Ollie Watkins
+Omar Marmoush
+Paul Gascoigne
+Paul Scholes
+Phil Foden
+Quilindschy Hartman
+Randal Kolo Muani
+Reggie Walsh
+Riccardo Calafiori
+Rio Ngumoha
+Robbie Fowler
+Rodri
+Romain Esse
+Romelle Donovan
+Roy Keane
+Ryan Yates
+Sandro Tonali
+Sergio Agüero
+Shea Lacey
+Stefanos Tzimas
+Steven Gerrard
+Thierno Barry
+Thierry Henry
+Tijjani Reijnders
+Tino Livramento
+Tolu Arokodare
+Tom Watson
+Tyler Dibling
+Viktor Gyökeres
+Virgil van Dijk
+Wayne Rooney
+Wilfried Gnonto
+William Saliba
+Xavi Simons
+Yasin Ayari
+Yaya Touré
+Youri Tielemans
+Yéremy Pino

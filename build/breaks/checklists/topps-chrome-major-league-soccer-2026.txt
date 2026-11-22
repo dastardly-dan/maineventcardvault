@@ -1,0 +1,443 @@
+# name: Topps Chrome Major League Soccer 2026
+# sport: Soccer
+# added: 2026-11-22
+# source: https://cdn.shopify.com/s/files/1/0662/9749/5709/files/CheckList_Subject_to_Change_3ac890e7-2e2f-4550-89d8-59689322cd5c.pdf
+
+[base]
+Adri Mehmeti
+Agustin Ojeda
+Aiden Hezarkhani
+Albert Rusnák
+Alexey Miranchuk
+Allan Oyirwoth
+Amahl Pellegrino
+Anders Dreyer
+Andrea Pirlo
+André Gomes
+Andy Nájar
+Anibal Godoy
+Antoine Griezmann
+Archie Goodwin
+Bastian Schweinsteiger
+Beau Leroux
+Bongokuhle Hlongwane
+Brad Stuver
+Brandon Vázquez
+Brian McBride
+Brian White
+Bryan Zamblé
+Cade Cowell
+Carles Gil
+Carlos Valderrama
+Cavan Sullivan
+Cedric Teuchert
+Chris Brady
+CJ Fodrey
+Clint Dempsey
+Cobi Jones
+Cole Bassett
+Cooper Sanchez
+Cristian Espinoza
+Cristian Roldan
+Cristiano Oliveira
+DaMarcus Beasley
+Daniel Edelman
+Daniel Pinter
+Danley Jean Jacques
+Darren Yapi
+David Beckham
+David Da Costa
+David Martínez
+Dayne St. Clair
+Dejan Joveljić
+DeJuan Jones
+Denis Bouanga
+Derrick Etienne Jr.
+Didier Drogba
+Diego Luna
+Diego Rossi
+Djordje Mihailovic
+Dor Turgeman
+Drew Baiera
+Dániel Gazdag
+Dániel Sallói
+Emil Forsberg
+Emmanuel Latte Lath
+Ender Echenique
+Eric Izoita
+Eric Maxim Choupo-Moting
+Evander
+Ezekiel Alladoh
+Facundo Torres
+Gabriel Pec
+Gareth Bale
+Gavin Turner
+Germán Berterame
+Guilherme
+Hany Mukhtar
+Hennadii Synchuk
+Hugo Cuypers
+Hugo Lloris
+Hugo Picard
+Hugo Sánchez
+Héctor Herrera
+Ian James
+Idan Toklomati
+Indiana Vassilev
+Iván Angulo
+Jack Elliott
+Jack McGlynn
+Jacob Bartlett
+Jacob Shaffelburg
+Jakob Glesnes
+James Rodríguez
+Jason Shokalook
+Jayden Nelson
+Jesús Ferreira
+Joaquín Pereyra
+Jonathan Bamba
+Jonathan Osorio
+Jordan Morris
+Jorge Ruvalcaba
+Joseph Paintsil
+Josh Sargent
+João Klauss
+João Peglow
+Jude Terry
+Julian Hall
+Justin Ellis
+Kaká
+Kelvin Yeboah
+Kevin Denkey
+Kevin Kelsy
+Lasse Berg Johnsen
+Liel Abada
+Lionel Messi
+Logan Farrington
+Louicius Deedson
+Louis Munteanu
+Luca Bombino
+Luca De La Torre
+Luca Langoni
+Luca Moisa
+Lucas Herrington
+Luis Suárez
+Malik Jakupovic
+Manu Duah
+Manu García
+Marcel Hartel
+Marco Pašalić
+Marco Reus
+Marcus Ingvartsen
+Martín Ojeda
+Mateo Silvetti
+Mateusz Bogusz
+Matt Freese
+Matt Turner
+Matthew Arana
+Matthew Dos Santos
+Max Arfsten
+Maxi Moralez
+Maya Yoshida
+Mbekezeli Mbokazi
+Miguel Almirón
+Milan Iloski
+Miles Robinson
+Morgan Guilavogui
+Máximo Carrizo
+Nariman Akhundzada
+Nicolas Fernandez
+Niko Tsakiris
+Nouhou
+Olger Escobar
+Olwethu Makhanya
+Osaze De Rosario
+Oscar Verhoeven
+Owen Graham-Roache
+Owen Wolff
+Paul Rothrock
+Paxten Aaronson
+Pep Biel
+Petar Musa
+Peyton Miller
+Philip Zinckernagel
+Preston Judd
+Prince Owusu
+Rafael Mosquera
+Rafael Márquez
+Rafael Navarro
+Rayan Elloumi
+Rob Holding
+Rodrigo De Paul
+Rubén Ramos Jr.
+Ryan Gauld
+Saba Lobjanidze
+Sam Surridge
+Samuel Piette
+Samuel Sarver
+Sebastian Berhalter
+Sergi Solans
+Sergio Reguilon
+Snyder Brunell
+Son Heung-Min
+Stephen Eustáquio
+Steven Moreira
+Tadeo Allende
+Tai Baribo
+Talles Magno
+Tanner Rosborough
+Taylor Twellman
+Telasco Segovia
+Thierry Henry
+Thomas Müller
+Tiago
+Tim Ream
+Timo Werner
+Tony Meola
+Tristan Blackmon
+Walker Zimmerman
+Warren Madrigal
+Wayne Rooney
+Wessam Abou Ali
+Wilfried Zaha
+Yannick Bright
+Zack Steffen
+Zavier Gozo
+Zlatan Ibrahimović
+
+[auto]
+Adri Mehmeti
+Aiden Hezarkhani
+Alexi Lalas
+Allan Oyirwoth
+Anders Dreyer
+Andrea Pirlo
+Anibal Godoy
+Anisse Saidi
+Antoine Griezmann
+Argentina
+Ayoub Jabbari
+Bastian Schweinsteiger
+Brian McBride
+Bryan Zamblé
+Cade Cowell
+Canada
+Carles Gil
+Carlos Valderrama
+Casemiro
+Cavan Sullivan
+Cayman Togashi
+Cesar Ruvalcaba
+Christian Cappis
+Clint Dempsey
+Cobi Jones
+Cooper Sanchez
+Cristian Espinoza
+Cristian Roldan
+DaMarcus Beasley
+Darren Yapi
+David Beckham
+David Villa
+Dayne St. Clair
+Dejan Joveljić
+Denis Bouanga
+Derrick Etienne Jr.
+Diego Luna
+Diego Rossi
+Dor Turgeman
+Eddie Pope
+Emil Forsberg
+Ender Echenique
+Enea Mihaj
+Eric Izoita
+Evander
+Ezekiel Alladoh
+Facundo Torres
+Frank Lampard
+Gareth Bale
+Gavin Turner
+Giorgio Chiellini
+Hany Mukhtar
+Hennadii Synchuk
+Hugo Cuypers
+Hugo Lloris
+Hugo Picard
+Héctor Herrera
+Jack McGlynn
+James Rodríguez
+Jayden Hibbert
+Jayden Nelson
+Jesús Ferreira
+Jonathan Osorio
+Jordan Morris
+Jordi Alba
+Joseph Paintsil
+Josh Sargent
+Josh Torquato
+Jude Terry
+Julian Hall
+Justin Ellis
+Kaick
+Kaká
+Kelvin Yeboah
+Liel Abada
+Lionel Messi
+Lothar Matthäus
+Louicius Deedson
+Luca Bombino
+Luca De La Torre
+Lucas Herrington
+Luis Suárez
+Marcel Hartel
+Marcelo Balboa
+Marco Pašalić
+Marco Reus
+Martín Ojeda
+Mateja Djordjevic
+Mateo Silvetti
+Mateusz Bogusz
+Matt Turner
+Max Arfsten
+Maxi Moralez
+Michael Collodi
+Miguel Almirón
+Miles Robinson
+Morgan Guilavogui
+Máximo Carrizo
+Nani
+Olger Escobar
+Owen Graham-Roache
+Paxten Aaronson
+Petar Musa
+Preston Judd
+Rafael Mosquera
+Rafael Márquez
+Rayan Elloumi
+Robert Lewandowski
+Rubén Ramos Jr.
+Samuel Gidi
+Samuel Sarver
+Sebastian Berhalter
+Sergio Busquets
+Seymour Reid
+Son Heung-Min
+South Korea
+Steven Alzate
+Steven Gerrard
+Steven Moreira
+Tai Baribo
+Talles Magno
+Tanner Rosborough
+Tate Johnson
+Thierry Henry
+Thomas Gillier
+Thomas Müller
+Tim Ream
+Timo Werner
+Tristan Brown
+USA
+Walker Zimmerman
+Wayne Rooney
+Wessam Abou Ali
+Will Reilly
+Yannick Bright
+Zack Steffen
+Zavier Gozo
+Zlatan Ibrahimović
+Álvaro Augusto
+
+[insert]
+Abby Cadabby
+Adri Mehmeti
+Aiden Hezarkhani
+Amahl Pellegrino
+Anders Dreyer
+Andrea Pirlo
+André Gomes
+Antoine Griezmann
+Bastian Schweinsteiger
+Beau Leroux
+Bert and Ernie
+Big Bird
+Brian White
+Bryan Zamblé
+Carles Gil
+Carlos Valderrama
+Cavan Sullivan
+Clint Dempsey
+Cookie Monster
+Cooper Sanchez
+Cristian Espinoza
+Cristian Roldan
+Daniel Pinter
+David Beckham
+David Da Costa
+David Martínez
+Dejan Joveljić
+Denis Bouanga
+Didier Drogba
+Diego Luna
+Diego Rossi
+Elmo
+Emil Forsberg
+Ender Echenique
+Eric Izoita
+Evander
+Facundo Torres
+Germán Berterame
+Hany Mukhtar
+Hennadii Synchuk
+Hugo Cuypers
+Hugo Lloris
+Hugo Sánchez
+Jack McGlynn
+James Rodríguez
+Jonathan Bamba
+Jordan Morris
+Josh Sargent
+Jude Terry
+Julian Hall
+Justin Ellis
+Kaká
+Kevin Kelsy
+Lionel Messi
+Lucas Herrington
+Luis Suárez
+Malik Jakupovic
+Marcel Hartel
+Marco Reus
+Martín Ojeda
+Mateo Silvetti
+Matt Freese
+Matt Turner
+Matthew Arana
+Matthew Dos Santos
+Max Arfsten
+Maxi Moralez
+Mbekezeli Mbokazi
+Miguel Almirón
+Miles Robinson
+MLS Trophy
+Máximo Carrizo
+Olger Escobar
+Owen Graham-Roache
+Pep Biel
+Petar Musa
+Peyton Miller
+Rafael Mosquera
+Rayan Elloumi
+Rodrigo De Paul
+Rubén Ramos Jr.
+Sebastian Berhalter
+Son Heung-Min
+Tanner Rosborough
+Thierry Henry
+Thomas Müller
+Tim Ream
+Timo Werner
+Warren Madrigal
+Wayne Rooney
+Wessam Abou Ali
+Wilfried Zaha
+Zavier Gozo
+Zlatan Ibrahimović

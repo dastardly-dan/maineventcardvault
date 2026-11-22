@@ -1,0 +1,365 @@
+# name: Topps Museum UEFA Club Competitions 2025-26
+# sport: Soccer
+# added: 2026-11-22
+# source: https://cdn.shopify.com/s/files/1/0739/2015/1805/files/Museum_Checklist_Subject_to_Change.pdf
+
+[base]
+Aaron Bouwman
+Abdoul Ouattara
+Alejandro Garnacho
+Alessandro Del Piero
+Alexander Isak
+Antoine Griezmann
+Antoine Semenyo
+Axel Tape
+Bradley Barcola
+Bukayo Saka
+Christian Kofane
+Cole Palmer
+David Beckham
+Declan Rice
+Deco
+Diego Maradona
+Don-Angelo Konadu
+Désiré Doué
+Eberechi Eze
+Emmanuel Emegha
+Enzo Fernández
+Erling Haaland
+Estêvão Willian
+Fernando Torres
+Florian Wirtz
+Franck Ribéry
+Franco Mastantuono
+Frank Lampard
+Gareth Bale
+Guille Fernández
+Harry Kane
+Hugo Ekitike
+Jamal Musiala
+Jarne Steuckers
+Joaquín Panichelli
+Jobe Bellingham
+Jonathan David
+Joshua Kimmich
+João Neves
+João Pedro
+Jude Bellingham
+Julián Alvarez
+Karim Adeyemi
+Kenan Yildiz
+Kevin De Bruyne
+Khvicha Kvaratskhelia
+Konstantinos Karetsas
+Kylian Mbappé
+Lamine Yamal
+Lautaro Martínez
+Lennart Karl
+Lionel Messi
+Lucas Michal
+Luis Díaz
+Maghnes Akliouche
+Malik Tillman
+Marcus Thuram
+Martin Ødegaard
+Mathis Amougou
+Max Dowman
+Michael Olise
+Micky van de Ven
+Mohamed Salah
+Mohammed Kudus
+Neymar Jr
+Nicolò Barella
+Noah Adedeji-Sternberg
+Omar Marmoush
+Ousmane Dembélé
+Phil Foden
+Pio Esposito
+Quentin Ndjantou
+Quim Junyent
+Raphinha
+Reigan Heskey
+Rio Ngumoha
+Robert Lewandowski
+Roberto Baggio
+Robin Mirisola
+Ronaldinho
+Ronaldo
+Samu Aghehowa
+Scott McTominay
+Sean Steur
+Serhou Guirassy
+Shumaira Mheuka
+Takumi Minamino
+Thierry Henry
+Tijjani Reijnders
+Trent Alexander-Arnold
+Victor Froholdt
+Viktor Gyökeres
+Vini Jr.
+Virgil van Dijk
+Vitinha
+William Saliba
+Wisdom Mike
+Xavi Simons
+Zinédine Zidane
+Zlatan Ibrahimović
+
+[auto]
+Adam Wharton
+Alessandro Bastoni
+Alessandro Del Piero
+Alexander Isak
+Andrea Pirlo
+Andriy Shevchenko
+Andrés Iniesta
+Anthony Gordon
+Antoine Griezmann
+Arda Güler
+Axel Tape
+Bastian Schweinsteiger
+Bernardo Silva
+Bradley Barcola
+Brennan Johnson
+Bruno Guimarães
+Bukayo Saka
+Cafu
+Callum McGregor
+Christian Vieri
+Clarence Seedorf
+Cody Gakpo
+Cole Palmer
+Conor Bradley
+David Beckham
+David Raya
+Declan Rice
+Deco
+Dennis Bergkamp
+Didier Drogba
+Don-Angelo Konadu
+Dušan Vlahović
+Désiré Doué
+Eden Hazard
+Eduardo Camavinga
+Emile Heskey
+Emiliano Martínez
+Enzo Fernández
+Erling Haaland
+Estêvão Willian
+Fabio Miretti
+Fabián Ruiz
+FC Barcelona
+FC Internazionale Milano
+Federico Valverde
+Fernando Morientes
+Fernando Torres
+Ferran Torres
+Francesco Totti
+Franck Ribéry
+Franco Baresi
+Franco Mastantuono
+Frank Lampard
+Gabriel Martinelli
+Gareth Bale
+Gavi
+Gianfranco Zola
+Gianluigi Buffon
+Guille Fernández
+Hakan Çalhanoğlu
+Harrison Murray-Campbell
+Harry Kane
+Heung-Min Son
+Hugo Ekitike
+Jamal Musiala
+Jeremie Frimpong
+John Stones
+Joshua Kimmich
+João Neves
+Jude Bellingham
+Julián Alvarez
+Jérémy Doku
+Kaká
+Kang-in Lee
+Karim Adeyemi
+Karim Benzema
+Kenny Dalglish
+Kevin De Bruyne
+Khvicha Kvaratskhelia
+Kingsley Coman
+Konstantinos Karetsas
+Kyle Walker
+Lamine Yamal
+Lautaro Martínez
+Lennart Karl
+Lewis Miley
+Lionel Messi
+Lucas Hernández
+Luis Suárez
+Marco Reus
+Marco van Basten
+Mateo Kovačić
+Matthias Sammer
+Max Dowman
+Michael Ballack
+Michael Owen
+Mohamed Salah
+Morgan Rogers
+Moussa Yeo
+Neymar Jr
+Nick Pope
+Nick Woltemade
+Nicky Butt
+Nico Williams
+Ollie Watkins
+Ousmane Dembélé
+Pablo García
+Paolo Maldini
+Patrick Vieira
+Paul Gascoigne
+Paul Scholes
+Paulo Dybala
+Pavel Nedvěd
+Phil Foden
+Pierre-Emerick Aubameyang
+Rasmus Højlund
+Raúl
+Real Madrid C.F.
+Reece James
+Reggie Walsh
+Reo Hatate
+Rio Ngumoha
+Robert Lewandowski
+Roberto Baggio
+Robin van Persie
+Rodrygo
+Romário
+Ronaldinho
+Ronaldo
+Roy Keane
+Rudi Völler
+Ruud Gullit
+Ryan Giggs
+Samuel Eto'o
+Sandro Tonali
+Savinho
+Scott McTominay
+Sergio Agϋero
+Sergio Busquets
+Shinji Kagawa
+Shumaira Mheuka
+Steven Gerrard
+Sven Botman
+Thiago Alcántara
+Thierry Henry
+Thomas Müller
+Tijjani Reijnders
+Tosin Adarabioyo
+Trent Kone-Doherty
+Vini Jr.
+Virgil van Dijk
+Vitinha
+Warren Zaïre-Emery
+Wayne Rooney
+William Saliba
+Willian Pacho
+Wisdom Mike
+Zinédine Zidane
+Zlatan Ibrahimović
+
+[insert]
+Alejandro Balde
+Alejandro Garnacho
+Alessandro Del Piero
+Antoine Griezmann
+Bradley Barcola
+Bruno Guimarães
+Bukayo Saka
+Christian Kofane
+Clarence Seedorf
+Cole Palmer
+Conor Bradley
+Cristian Romero
+David Raya
+Diego Maradona
+Don-Angelo Konadu
+Eden Hazard
+Eduardo Camavinga
+Emile Heskey
+Emiliano Martínez
+Erling Haaland
+Estêvão Willian
+Fabio Miretti
+Fabián Ruiz
+Federico Dimarco
+Fermín López
+Fernando Torres
+Gareth Bale
+Guille Fernández
+Hakan Çalhanoğlu
+Harrison Murray-Campbell
+Harry Kane
+Heung-Min Son
+Jamal Musiala
+Jobe Bellingham
+John McGinn
+Jordan Henderson
+Joshua Kimmich
+João Neves
+Jude Bellingham
+Julián Alvarez
+Karim Benzema
+Kasper Schmeichel
+Kevin De Bruyne
+Khvicha Kvaratskhelia
+Konstantinos Karetsas
+Kylian Mbappé
+Lamine Yamal
+Lautaro Martínez
+Lennart Karl
+Lewis Miley
+Lionel Messi
+Luis Díaz
+Malo Gusto
+Marcel Sabitzer
+Martin Ødegaard
+Mateo Kovačić
+Max Dowman
+Michael Owen
+Mohamed Salah
+Morgan Rogers
+Ousmane Dembélé
+Pablo García
+Patrick Vieira
+Paul Gascoigne
+Paul Scholes
+Paulo Dybala
+Pedri
+Pierre-Emerick Aubameyang
+Quentin Ndjantou
+Raphinha
+Reo Hatate
+Rio Ngumoha
+Robert Lewandowski
+Roberto Firmino
+Rodrygo
+Ronaldinho
+Ronaldo
+Roy Keane
+Rúben Dias
+Savinho
+Scott McTominay
+Sergio Busquets
+Shinji Kagawa
+Steven Gerrard
+Sven Botman
+Thiago Alcántara
+Thierry Henry
+Victor Froholdt
+Virgil van Dijk
+Warren Zaïre-Emery
+Wayne Rooney
+Zinédine Zidane
+Zlatan Ibrahimović
+
+[multi]
+Steven Gerrard / Jamie Carragher

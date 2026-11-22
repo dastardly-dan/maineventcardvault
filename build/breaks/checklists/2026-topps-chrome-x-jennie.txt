@@ -1,0 +1,55 @@
+# name: 2026 Topps Chrome x Jennie
+# sport: Entertainment
+# added: 2026-11-22
+# source: https://cdn.shopify.com/s/files/1/0662/9749/5709/files/2026_Topps_Chrome_x_Jennie_Checklist.pdf
+
+[base]
+Jennie
+Jennie ("ExtraL")
+Jennie ("Handlebars" 1)
+Jennie ("Handlebars" 2)
+Jennie ("Handlebars" 3)
+Jennie ("Handlebars" 4)
+Jennie ("Handlebars" 5)
+Jennie ("Handlebars" 6)
+Jennie ("Handlebars" 7)
+Jennie ("Handlebars")
+Jennie ("Mantra" 1)
+Jennie ("Mantra" 10)
+Jennie ("Mantra" 11)
+Jennie ("Mantra" 12)
+Jennie ("Mantra" 13)
+Jennie ("Mantra" 14)
+Jennie ("Mantra" 15)
+Jennie ("Mantra" 16)
+Jennie ("Mantra" 17)
+Jennie ("Mantra" 18)
+Jennie ("Mantra" 19)
+Jennie ("Mantra" 2)
+Jennie ("Mantra" 20)
+Jennie ("Mantra" 21)
+Jennie ("Mantra" 22)
+Jennie ("Mantra" 3)
+Jennie ("Mantra" 4)
+Jennie ("Mantra" 5)
+Jennie ("Mantra" 6)
+Jennie ("Mantra" 7)
+Jennie ("Mantra" 8)
+Jennie ("Mantra" 9)
+Jennie (Close-Up)
+Jennie (Stage)
+
+[auto]
+Jennie
+Jennie ("Handlebars" 1)
+Jennie ("Handlebars" 3)
+Jennie ("Handlebars" 4)
+Jennie ("Handlebars" 5)
+Jennie ("Handlebars" 6)
+Jennie ("Mantra" 1)
+Jennie ("Mantra" 19)
+Jennie ("Mantra" 20)
+Jennie ("Mantra" 3)
+Jennie ("Mantra" 8)
+Jennie (Close-Up)
+Jennie (Stage)

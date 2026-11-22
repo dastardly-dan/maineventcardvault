@@ -1,0 +1,293 @@
+# name: 2025-26 Bowman University Best Basketball
+# sport: NBA
+# added: 2026-11-22
+# source: https://cdn.shopify.com/s/files/1/0662/9749/5709/files/CheckList_26BUBB_VERSION2.pdf
+
+[base]
+Aaliyah Crump | Texas
+Acaden Lewis | Villanova
+Addison Deal | Iowa
+Agot Makeer | University Of South Carolina
+AJ Dybantsa | BYU
+Alexandra Eschmeyer | Stanford
+Aliyahna Morris | California
+Ayla McDowell | University Of South Carolina
+Bennett Stirtz | Iowa
+Boopie Miller | SMU
+Braden Smith | Purdue
+Braeden Shrewsberry | Notre Dame
+Brayden Burries | Arizona
+Bryce Lindsay | Villanova
+Bryson Tiller | Kansas
+Caleb Wilson | UNC
+Cam Ward | Michigan State
+Cameron Boozer | Duke
+Cayden Boozer | Duke
+Christian Anderson | Texas Tech
+Coen Carr | Michigan State
+Cotie McMahon | Ole Miss
+Darianna Alexander | Cincinnati
+Darrion Williams | NC State
+Darryn Peterson | Kansas
+Davion Hannah | Alabama
+Davis Fogle | Gonzaga
+Deniya Prawl | Tennessee
+Derek Dixon | UNC
+Devin McGlockton | Vanderbilt
+Donald Hand Jr. | Boston College
+Dwayne Aristode | Arizona
+Emilee Skinner | Duke
+Grace Knox | LSU
+Hailee Swain | Stanford
+Isaiah Denis | UNC
+Isiah Harwell | Houston
+Jaida Civil | Tennessee
+Jaland Lowe | Kentucky
+Jamier Jones | Providence
+Jason Edwards | Providence
+Jasper Johnson | Kentucky
+Jeremiah Wilkinson | Georgia
+Joe Grahovac | St. Bonaventure
+John Blackwell | Wisconsin
+Josh Dix | Creighton
+JT Toppin | Texas Tech
+Juju Watkins | USC
+Kaelyn Carroll | Kentucky
+Kam Williams | Kentucky
+Kara Dunn | USC
+Kaylene Smikle | Maryland
+Keyshawn Hall | Auburn
+Kiyan Anthony | Syracuse
+Kiyomi McMiller | Penn State
+Koa Peat | Arizona
+Kohl Rosario | Kansas
+Lara Somfai | Stanford
+Madison Booker | Texas
+Malik Reneau | Miami
+Michael Rataj | Baylor
+Mikel Brown Jr. | Louisville
+Milos Uzan | Houston
+Nate Ament | Tennessee
+Nate Bittle | Oregon
+Nate Calmese | Wake Forest
+Nick Martinelli | Northwestern
+Niko Bundalo | Ole Miss
+Nyla Brooks | UNC
+Obi Agbim | Baylor
+Otega Oweh | Kentucky
+Owen Freeman | Creighton
+Oziyah Sellers | St. John's
+Pharrel Payne | Maryland
+Raegan Beers | The University of Oklahoma
+Reed Bailey | Indiana
+Richie Saunders | BYU
+Robert McCray V | Florida State
+Ryan Conwell | Louisville
+Sadiq White Jr. | Syracuse
+Sarah Strong | UConn
+Serah Williams | UConn
+Shelton Henderson | Miami
+Shon Abaev | Cincinnati
+Sienna Betts | UCLA
+Silas Demary Jr. | UConn
+Ta'Niya Latson | University Of South Carolina
+Tarris Reed Jr. | UConn
+Tobe Awaka | Arizona
+Tounde Yessoufou | Baylor
+Tre Donaldson | Miami
+Tre Holloman | NC State
+Trey Kaufman-Renn | Purdue
+Tylis Jordan | Ole Miss
+Wesley Yates III | Washington Huskies
+Winters Grady | Michigan
+Xaivian Lee | Florida
+Yarden Garzon | Maryland
+ZaKiyah Johnson | LSU
+Zuby Ejiofor | St. John's
+
+[auto]
+Aaliyah Crump | Texas
+Acaden Lewis | Villanova
+Ace Flagg | Maine
+Addison Deal | Iowa
+Agot Makeer | University Of South Carolina
+AJ Dybantsa | BYU
+Alexandra Eschmeyer | Stanford
+Aliyahna Morris | California
+Ayla McDowell | University Of South Carolina
+Bennett Stirtz | Iowa
+Boopie Miller | SMU
+Braden Smith | Purdue
+Braeden Shrewsberry
+Braeden Shrewsberry | Notre Dame
+Brandon Garrison | Kentucky
+Brayden Burries | Arizona
+Bryce Lindsay | Villanova
+Brynn McGaughy | Washington
+Bryson Tiller | Kansas
+Caleb Foster | Duke
+Caleb Wilson | UNC
+Cam Ward | Michigan State
+Cameron Boozer | Duke
+Cayden Boozer | Duke
+Chase Ross | Marquette
+Christian Anderson | Texas Tech
+CJ Ingram | Florida
+Coen Carr | Michigan State
+Cori Close | UCLA
+Cotie McMahon | Ole Miss
+Darianna Alexander | Cincinnati
+Darrion Williams | NC State
+Darryn Peterson | Kansas
+Davion Hannah | Alabama
+Davis Fogle | Gonzaga
+Deniya Prawl | Tennessee
+Derek Dixon | UNC
+Devin McGlockton | Vanderbilt
+Donald Hand Jr. | Boston College
+Dwayne Aristode | Arizona
+Emilee Skinner | Duke
+Grace Knox | LSU
+Hailee Swain | Stanford
+Isaiah Denis | UNC
+Isiah Harwell | Houston
+Ja'Kobi Gillespie | Tennessee
+Jaida Civil | Tennessee
+Jaland Lowe | Kentucky
+Jamier Jones | Providence
+Jason Edwards | Providence
+Jasper Johnson | Kentucky
+Jeremiah Wilkinson | Georgia
+Joe Grahovac | St. Bonaventure
+John Blackwell | Wisconsin
+Jon Scheyer | Duke
+Josh Dix | Creighton
+JT Toppin | Texas Tech
+Juju Watkins | USC
+Kaelyn Carroll | Kentucky
+Kam Williams | Kentucky
+Kara Dunn | USC
+Kaylene Smikle | Maryland
+Kelis Fisher | UConn
+Kelvin Sampson | Houston
+Keyshawn Hall | Auburn
+Kiyan Anthony | Syracuse
+Kiyomi McMiller | Penn State
+Koa Peat | Arizona
+Kohl Rosario | Kansas
+Lara Somfai | Stanford
+Leah Macy | Notre Dame
+Lindsay Gottlieb | USC
+Madison Booker | Texas
+Malik Reneau | Miami
+Michael Rataj | Baylor
+Mikel Brown Jr. | Louisville
+Milos Uzan | Houston
+Nate Ament | Tennessee
+Nate Bittle | Oregon
+Nate Calmese | Wake Forest
+Nick Martinelli | Northwestern
+Niko Bundalo | Ole Miss
+Nyla Brooks | UNC
+Obi Agbim | Baylor
+Otega Oweh | Kentucky
+Owen Freeman | Creighton
+Oziyah Sellers | St. John's
+Pharrel Payne | Maryland
+Raegan Beers | The University of Oklahoma
+Reed Bailey | Indiana
+Richie Saunders | BYU
+Robert McCray V | Florida State
+Ryan Conwell | Louisville
+Sadiq White Jr. | Syracuse
+Sarah Strong | UConn
+Sebastian Wilkins | Duke
+Serah Williams | UConn
+Shelton Henderson | Miami
+Shon Abaev | Cincinnati
+Sienna Betts | UCLA
+Silas Demary Jr. | UConn
+Ta'Niya Latson | University Of South Carolina
+Tarris Reed Jr. | UConn
+Tobe Awaka | Arizona
+Todd Golden | Florida
+Tounde Yessoufou | Baylor
+Tre Donaldson | Miami
+Tre Holloman | NC State
+Trey Kaufman-Renn | Purdue
+Tylis Jordan | Ole Miss
+Wesley Yates III | Washington Huskies
+Winters Grady | Michigan
+Xaivian Lee | Florida
+Yarden Garzon | Maryland
+ZaKiyah Johnson | LSU
+Zuby Ejiofor | St. John's
+
+[insert]
+Aaliyah Crump | Texas
+Acaden Lewis | Villanova
+Addison Deal | Iowa
+Agot Makeer | University Of South Carolina
+AJ Dybantsa | BYU
+Aliyahna Morris | California
+Ayla McDowell | University Of South Carolina
+Bennett Stirtz | Iowa
+Braden Smith | Purdue
+Brandon Garrison | Kentucky
+Brayden Burries | Arizona
+Bryson Tiller | Kansas
+Caleb Wilson | UNC
+Cam Ward | Michigan State
+Christian Anderson | Texas Tech
+Coen Carr | Michigan State
+Cotie McMahon | Ole Miss
+Darrion Williams | NC State
+Darryn Peterson | Kansas
+Davion Hannah | Alabama
+Davis Fogle | Gonzaga
+Derek Dixon | UNC
+Dwayne Aristode | Arizona
+Emilee Skinner | Duke
+Grace Knox | LSU
+Hailee Swain | Stanford
+Isaiah Denis | UNC
+Isiah Harwell | Houston
+Ja'Kobi Gillespie | Tennessee
+Jaida Civil | Tennessee
+Jaland Lowe | Kentucky
+Jasper Johnson | Kentucky
+Joe Grahovac | St. Bonaventure
+John Blackwell | Wisconsin
+JT Toppin | Texas Tech
+Juju Watkins | USC
+Kara Dunn | USC
+Kaylene Smikle | Maryland
+Keyshawn Hall | Auburn
+Kiyan Anthony | Syracuse
+Kiyomi McMiller | Penn State
+Koa Peat | Arizona
+Kohl Rosario | Kansas
+Lara Somfai | Stanford
+Leah Macy | Notre Dame
+Madison Booker | Texas
+Mikel Brown Jr. | Louisville
+Milos Uzan | Houston
+Nate Ament | Tennessee
+Nick Martinelli | Northwestern
+Nyla Brooks | UNC
+Otega Oweh | Kentucky
+Raegan Beers | The University of Oklahoma
+Richie Saunders | BYU
+Sarah Strong | UConn
+Serah Williams | UConn
+Shelton Henderson | Miami
+Shon Abaev | Cincinnati
+Sienna Betts | UCLA
+Silas Demary Jr. | UConn
+Ta'Niya Latson | University Of South Carolina
+Tarris Reed Jr. | UConn
+Tounde Yessoufou | Baylor
+Trey Kaufman-Renn | Purdue
+Xaivian Lee | Florida
+ZaKiyah Johnson | LSU
+Zuby Ejiofor | St. John's

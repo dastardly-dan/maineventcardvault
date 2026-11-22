@@ -11,7 +11,7 @@ GROUPS = {'BASE': 'base', 'INSERT': 'insert', 'INSERTS': 'insert', 'INSERT CARDS
 SKIP_SUBSETS = re.compile(r'SKETCH|PRINTING PLATE|REDEMPTION|BOOK CARD|MOMENTS|LOMBARDI TROPHY', re.I)
 AUTO_WORDS = re.compile(r'AUTOGRAPH|SIGNATURE|\bINK\b|MARKS|CALLIGRAPHY|CHROMOGRAPH|SIGNED|TRACES|INKED', re.I)
 TAGS = {'Rookie', 'RC', 'DEBUT', 'Debut', 'Rookie Debut', 'SP', 'SSP'}
-WWE_BRANDS = ['Smackdown', 'SmackDown', 'Raw', 'NXT', 'Legend', 'WWE', 'Hall of Fame', 'AAA', 'TNA', 'Alumni']
+WWE_BRANDS = ['Smackdown', 'SmackDown', 'Raw', 'NXT', 'Legends', 'Legend', 'WWE', 'Hall of Fame', 'AAA', 'TNA', 'Alumni']
 NFL = ('Cardinals Falcons Ravens Bills Panthers Bears Bengals Browns Cowboys Broncos Lions Packers Texans Colts '
        'Jaguars Chiefs Raiders Chargers Rams Dolphins Vikings Patriots Saints Giants Jets Eagles Steelers 49ers '
        'Seahawks Buccaneers Titans Commanders Redskins Oilers').split()

@@ -1,0 +1,218 @@
+# name: 2025 Topps 30 Years of Toy Story
+# sport: Disney
+# added: 2026-11-22
+# source: https://cdn.shopify.com/s/files/1/0662/9749/5709/files/Topps_30_Years_of_Toy_Story_Checklist.pdf
+
+[base]
+ABC Blocks
+Al McWhiggin
+Alien
+Andy Davis
+Andy Plays with "One-Eyed Bart"
+Andy Shows Bonnie Her New Toys
+Andy's Plane
+As Seen on TV: Buzz Lightyear
+Axel the Carnival Worker
+Babyhead
+Barbie
+Barrel of Monkeys
+Benson
+Big Baby
+Billy, Goat, and Gruff
+Bo Peep
+Bonnie
+Bonnie and Her New Toys
+Briefing the Toys
+Bucket o' Soldiers
+Bullseye
+Bunny
+Buster
+Buttercup
+Buzz and The Big One
+Buzz and Woody Exploration
+Buzz Lightyear
+Buzz Lightyear, Batteries Not Included
+Buzz Lightyear: Space Ranger, Universe Protection Unit
+Cast Aside
+Chatter Telephone
+Chuckles
+Chunk
+College-Bound Andy Encounters His Old Pals
+Combat Carl
+Cone Crossing
+Critter Armadillo
+Critter Beaver
+Critter Deer
+Demo-Mode Buzz
+Dolly
+Dragon the Cat
+Ducky
+Duke Caboom
+Duke Caboom: Canada's Greatest Stuntman
+Early Buzz Lightyear
+Emperor Zurg
+Etch-A-Sketch
+Evil Dr. Porkchop
+Facing the Incinerator Together
+Forky
+Gabby Gabby
+Gabby Gabby and Benson in Second Chance Antiques
+Green Army Soldiers
+Hamm
+Hand-in-the-Box
+Hannah Phillips
+Hannah's Doll
+Harmony
+Her Little Sister
+Hockey Puck
+Hurry on Down to Al's Toy Barn
+Jack-in-the-Box
+Janie Pterodactyl
+Jessie
+Jingle Joe
+Karen Beverly
+Ken
+Lenny
+Little Tikes Toddle Tots Firemen
+Lotso
+Lotso is Left Behind
+Lotso Welcomes the Gang to Sunnyside Daycare
+Margaret
+Melephant Brooks
+Mini Buzz
+Mini Zurg
+Molly Davis
+Mr. Mike
+Mr. Potato Head
+Mr. Pricklepants
+Mr. Spell
+Mrs. Davis
+Mrs. Nesbitt Has a Tea Party
+Mrs. Potato Head
+Mutant Toys
+New Buzz
+New Buzz Lightyear
+No sign of intelligent life anywhere
+Officer Giggle McDimples
+Peas-in-a-Pod
+Pixar Ball
+Pizza Planet Truck
+Pizza Planet Truck: Buzz is Safer in the Cockpit
+Pizza Planet's Robot Guard
+RC
+RC Propels Buzz and Woody
+Return of the Toys
+Rex
+Rex Games as Buzz, with Buzz
+Robot
+Rockmobile
+Rocky Gibraltar
+Roller Bob
+Roly Poly Clown
+Rubber Shark
+Sarge
+Scud
+See 'N Say, The Farmer Says
+Sheriff Woody
+Sid Phillips
+Slinky Dog
+Snake
+Spanish Buzz
+Sparks
+Stinky Pete
+Stretch
+Stuck in Sid's Room
+That's right, I'm talking to you
+The Aliens
+The Bookworm
+The Bucket o' Soldiers Deploy
+The Carnival Comes to Town
+The Claw
+The Cleaner
+The Dummies
+The Toys Get a New Home
+This isn't flying, this is falling with style
+Tinny
+To Infinity, and Beyond!
+Tour Guide Barbie
+Trixie
+Troikas
+Twitch
+Video Game Strategy Guide
+Wheezy
+Wheezy is Rescued from the Yard Sale
+Wind-Up Frog
+Woody
+Woody Exploration
+Woody Reassures Forky On the Road
+Woody Reunites with Bo
+Woody Throws a Line
+Woody's Escape Plan
+Woody's Nightmare: I don't wanna play with you anymore
+Woody's Round Up
+Woody's Roundup Carriage
+Woody, look under your boot
+You Are A Toy!
+Zurg
+Zurg's Robot
+
+[auto]
+Alan
+Ally
+Andrew
+Annie
+Blake
+Bonnie
+Christina
+Erik
+Frank
+Jeff
+Jess
+Joan
+Jodi
+John
+Kelsey
+Kristen
+Lori
+Mel
+Melissa
+Richard
+Steve
+Teddy
+Tim
+Tom
+Tony
+Wallace
+Wayne
+Whoopi
+
+[multi]
+Little Tikes Toddle Tots Doc / Cowboy
+Woody / Buzz Lightyear
+Hamm / Rex
+Mr. Potato Head / Mrs. Potato Head
+Jessie / Bullseye
+Buzz Lightyear / Jessie
+Woody / Slinky Dog
+Bo Peep / Billy, Goat, and Gruff
+Mr. Pricklepants / Buttercup
+Barbie / Ken
+Buzz Lightyear / Mini Buzz
+Rex / Trixie
+Woody / Forky
+Ducky / Bunny
+Bo Peep / Giggle McDimples
+Forky / Karen Beverly
+Tom / Tim
+Tim / Andrew
+John / Wallace
+John / Erik
+Tom / Annie
+Tim / Teddy
+Joan / Frank
+Wallace / Kristen
+Teddy / Jess
+Steve / Christina
+Richard / Mel
+Annie / Ally
+Tony / Melissa

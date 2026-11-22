@@ -1,0 +1,240 @@
+# name: 2025 Bowman Draft Baseball Sapphire Edition
+# sport: MLB
+# added: 2026-11-22
+# source: https://cdn.shopify.com/s/files/1/0662/9749/5709/files/2025_Bowman_Draft_Baseball_Checklist_-_Sapphire_Edition_1.pdf
+
+[base]
+Aaron Walton | Guardians
+Aaron Watson | Reds
+Adonys Guzman | Pirates
+Aidan Miller | Phillies
+Aidan West | Dodgers
+AJ Russell | Rangers
+Alfredo Duno | Reds
+Andrew Salas | Marlins
+Anthony Eyanson | Red Sox
+Antonio Jimenez | Mets
+Arjun Nimmala | Blue Jays
+Aroon Escobar | Phillies
+Ben Jacobs | Tigers
+Billy Carlson | White Sox
+Blake Mitchell | Royals
+Braden Montgomery | White Sox
+Brady Ebel | Brewers
+Brandon Compton | Marlins
+Brian Curley | Diamondbacks
+Briggs McKenzie | Braves
+Brody Brecht | Rockies
+Bryce Cunningham | Yankees
+Cade Crossland | Cardinals
+Cade Obermueller | Phillies
+Caden Bodine | Orioles
+Caleb Bonemer | White Sox
+Caleb Leys | Tigers
+Cam Caminiti | Braves
+Cameron Maldonado | Giants
+Cameron Millar | Royals
+Cameron Nelson | Rockies
+Carlos Lagrange | Yankees
+Carson Benge | Mets
+Charles Davalan | Dodgers
+Charlie Condon | Rockies
+Chase Shores | Angels
+Ching-Hsien Ko | Dodgers
+Christian Foutch | Red Sox
+CJ Gray | Angels
+Cody Bowker | Phillies
+Cody Miller | Braves
+Colin Yeaman | Orioles
+Conor Essenburg | Braves
+Cooper Flemming | Rays
+Cooper Pratt | Brewers
+Dakota Jordan | Giants
+Dante Nori | Phillies
+Dax Kilby | Yankees
+Dean Curley | Guardians
+Dean Livingston | Diamondbacks
+Dean Moss | Rays
+Devin Taylor | Athletics
+Dominic Fritton | Rays
+Dominick Reid | Cubs
+Easton Carmichael | Pirates
+Eduardo Quintero | Dodgers
+Eduardo Tait | Twins
+Eli Willits | Nationals
+Elian Peña | Mets
+Enrique Bradfield Jr. | Orioles
+Esmerlyn Valdez | Pirates
+Ethan Conrad | Cubs
+Ethan Frey | Astros
+Ethan Hedges | Rockies
+Ethan Petry | Nationals
+Felnin Celesten | Mariners
+Franklin Arias | Red Sox
+Gabe Davis | White Sox
+Gage Wood | Phillies
+Gavin Fien | Rangers
+Gavin Kilen | Giants
+Gavin Turley | Athletics
+George Lombard Jr. | Yankees
+Grant Richardson | Athletics
+Griffin Hugus | Mariners
+Gustavo Melendez | Pirates
+Hagen Smith | White Sox
+Ike Irish | Orioles
+J.D. Thompson | Brewers
+Jack Gurevitch | Cardinals
+Jacob Morrison | Brewers
+Jacob Reimer | Mets
+Jake Cook | Blue Jays
+Jake Munroe | Angels
+James Ellwanger | Twins
+James Tibbs III | Dodgers
+Jamie Arnold | Athletics
+Jared Thomas | Rockies
+Jaxon Wiggins | Cubs
+JB Middleton | Rockies
+JD Dix | Diamondbacks
+Jefferson Rojas | Cubs
+Jesús Made | Brewers
+Jhonny Level | Giants
+JJ Wetherholt | Cardinals
+Johnny Slawinski | Angels
+JoJo Parker | Blue Jays
+Jonny Farmelo | Mariners
+Jordan Yost | Tigers
+Joseph Dzierwa | Orioles
+Josh Hammond | Royals
+Josh Owens | Rangers
+Joshua Flores | Brewers
+Joshua Kuroda-Grauer | Athletics
+Josiah Hartshorn | Cubs
+Josuar Gonzalez | Giants
+Josue Briceño | Tigers
+Joswa Lugo | Angels
+JR Ritchie | Braves
+JT Quinn | Orioles
+Justin Lamkin | Royals
+Kade Anderson | Mariners
+Kaeden Kent | Yankees
+Kaelen Culpepper | Twins
+Kaleb Wing | Cubs
+Kane Kepley | Cubs
+Kash Mayfield | Padres
+Kayson Cunningham | Diamondbacks
+Kevin McGonigle | Tigers
+Konnor Griffin | Pirates
+Korbyn Dickerson | Mariners
+Kyle Lodise | White Sox
+Kyson Witherspoon | Red Sox
+Landon Harmon | Nationals
+Landon Hodge | White Sox
+Landyn Vidourek | Dodgers
+Leo De Vries | Athletics
+Liam Doyle | Cardinals
+Luis Peña | Brewers
+Luke Dickerson | Nationals
+Luke Lacourse | Angels
+Malachi Witherspoon | Tigers
+Malcolm Moore | Rangers
+Marcus Phillips | Red Sox
+Mason McConnaughey | Rangers
+Mason Morris | Reds
+Mason Neville | Reds
+Mason Peters | Mariners
+Matt Barr | Twins
+Matthew Fisher | Phillies
+Matthew Miura | Cardinals
+Max Belyeu | Rockies
+Max Clark | Tigers
+Max Williams | Marlins
+Michael Lombardi | Royals
+Michael Oliveto | Tigers
+Michael Salina | Padres
+Miguel Sime Jr. | Nationals
+Mike Sirota | Dodgers
+Mitch Voit | Mets
+Murf Gray | Pirates
+Nate George | Orioles
+Nate Snead | Angels
+Nick Becker | Mariners
+Nolan Sailors | Royals
+Nolan Schubart | Guardians
+Patrick Forbes | Diamondbacks
+Peter Kussow | Mets
+Pico Kohn | Yankees
+Quentin Young | Twins
+Rainiel Rodriguez | Cardinals
+Riley Kelly | Rockies
+Riley Quick | Twins
+Roc Riggio | Rockies
+Ryan Mitchell | Cardinals
+Ryan Sloan | Mariners
+Ryan Waldschmidt | Diamondbacks
+Ryan Wideman | Padres
+Sammy Stafura | Pirates
+Sean Episcope | Brewers
+Sean Gamble | Royals
+Sean Youngerman | Phillies
+Sebastian Walcott | Rangers
+Seth Hernandez | Pirates
+Shotaro Morii | Athletics
+Slade Caldwell | Diamondbacks
+Spencer Jones | Yankees
+Steele Hall | Reds
+Taitn Gray | Rays
+Tanner Franklin | Cardinals
+Tate Southisene | Braves
+Thayron Liranzo | Tigers
+Theo Gillen | Rays
+Thomas White | Marlins
+Tim Piasentin | Blue Jays
+Tommy Troy | Diamondbacks
+Tommy White | Athletics
+Travis Bazzana | Guardians
+Travis Sykora | Nationals
+Trevor Cohen | Giants
+Ty Harvey | Padres
+Tyler Bremner | Angels
+Tyson Lewis | Reds
+Walker Janek | Astros
+Walker Jenkins | Twins
+Xavier Neyens | Astros
+Yandel Ricardo | Royals
+Yohandy Morales | Nationals
+Yolfran Castillo | Rangers
+Zach Root | Dodgers
+
+[auto]
+Billy Carlson | White Sox
+Brady Ebel | Brewers
+Brandon Compton | Marlins
+Caden Bodine | Orioles
+Charles Davalan | Dodgers
+Dax Kilby | Yankees
+Eli Willits | Nationals
+Ethan Conrad | Cubs
+Ethan Petry | Nationals
+Gage Wood | Phillies
+Gavin Fien | Rangers
+Gavin Kilen | Giants
+Ike Irish | Orioles
+Jamie Arnold | Athletics
+JoJo Parker | Blue Jays
+Josh Hammond | Royals
+Kade Anderson | Mariners
+Kane Kepley | Cubs
+Kayson Cunningham | Diamondbacks
+Kyson Witherspoon | Red Sox
+Liam Doyle | Cardinals
+Marcus Phillips | Red Sox
+Max Belyeu | Rockies
+Mitch Voit | Mets
+Patrick Forbes | Diamondbacks
+Quentin Young | Twins
+Riley Quick | Twins
+Seth Hernandez | Pirates
+Steele Hall | Reds
+Tate Southisene | Braves
+Tyler Bremner | Angels
+Xavier Neyens | Astros

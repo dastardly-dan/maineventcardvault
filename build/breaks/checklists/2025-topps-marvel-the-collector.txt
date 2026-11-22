@@ -1,0 +1,199 @@
+# name: 2025 Topps Marvel The Collector
+# sport: Marvel
+# added: 2026-11-22
+# source: https://cdn.shopify.com/s/files/1/0662/9749/5709/files/2025_Marvel_The_Collector_Checklist.pdf
+
+[auto]
+Aaron Taylor-Johnson
+Angela Bassett
+Anthony Hopkins
+Barry Keoghan
+Benicio Del Toro
+Brie Larson
+Cate Blanchett
+Charlize Theron
+Christopher Eccleston
+Clark Gregg
+Cobie Smulders
+Colm Feore
+Corey Stoll
+Danny Ramirez
+Dominique Thorne
+Don Cheadle
+Ebon Moss-Bachrach
+Elizabeth Debicki
+Elizabeth Olsen
+Emilia Clarke
+Evangeline Lilly
+Forest Whitaker
+Giancarlo Esposito
+Gwyneth Paltrow
+Hayley Atwell
+Iman Vellani
+Jaimie Alexander
+Jeremy Renner
+Joseph Quinn
+Josh Brolin
+Josh Dallas
+Julia Louis-Dreyfus
+Karen Gillan
+Kathryn Hahn
+Lee Pace
+Lewis Pullman
+Maria Bakalova
+Michael B. Jordan
+Michael Rooker
+Natalie Portman
+Paul Bettany
+Paul Rudd
+Pom Klementieff
+Rene Russo
+Sebastian Stan
+Simu Liu
+Sophia Di Martino
+Stellan Skarsgård
+Taika Waititi
+Tatiana Maslany
+Tenoch Huerta
+Tessa Thompson
+Teyonah Parris
+Tilda Swinton
+Vanessa Kirby
+Wyatt Russell
+
+[insert]
+A Legacy Lives On
+A Universal Threat Emerges
+Adam Warlock
+Agatha Harkness
+Aldrich Killian
+America Chavez
+An Explosive Escape
+Ant-Man
+Avengers Assembled
+Bargaining with Dormammu
+Baron Zemo
+Black Panther
+Black Widow
+Bucky Barnes
+Captain America
+Captain Marvel
+Cassie Lang
+Clea
+Crossbones
+Dar-Benn
+Doctor Strange
+Dr. Christine Palmer
+Drax
+Druig
+Earth's Last Hope
+Ego
+Ego's Secrets Revealed
+Erik Killmonger
+Falcon
+Fending Off Fenris
+Frigga
+G'iah
+Galactus
+Ghost
+Grandmaster
+Groot
+Hawkeye
+Hela
+Hope van Dyne
+Hulk
+Human Torch
+Ikaris
+Introducing The New Avengers
+Invisible Woman
+Iron Man
+Iron Monger
+Ironheart
+John F. Walker
+Justin Hammer
+Kaecilius
+Kate Bishop
+Korg
+Loki
+M'Baku
+M.O.D.O.K.
+Malekith
+Maria Hill
+Mayhem in Monaco
+Mister Fantastic
+Monica Rambeau
+Moon Knight
+Mordo
+Ms. Marvel
+Namor
+Nebula
+Nick Fury
+Odin
+Peggy Carter
+Pepper Potts
+Pietro Maximoff
+Reaching For Infinity
+Red Guardian
+Red Hulk
+Rio Vidal
+Riri Williams
+Rocket
+Rocket Leads The Charge
+Ronan
+Rumble on the Runway
+Sentry
+Shang-Chi
+She-Hulk
+Shuri Takes Up The Mantle
+Sidewinder
+Sif
+Silver Surfer
+Spider-Man
+Star-Lord
+Strength of the Winter Soldier Black Widow Emerges
+Suiting Up For Battle
+Swinging Into Action
+Sylvie
+Talos
+Taskmaster
+Thanos
+The Ancient One
+The Battle of Wakanda
+The Collector
+The High Evolutionary
+The Leader
+The Marvels United
+The Mighty Thor
+The Thing
+The Vision
+The Void
+Thena
+Thor
+Thor Confronts Gorr
+Tony Stark's Final Stand
+Tony Tests His Mark
+Trevor Slattery
+Ultron
+Upgrades Unleashed
+Valentina Allegra de Fontaine
+Valkyrie
+Victorious
+Vision
+Wanda Maximoff
+Wanda's Sacrifice
+War Machine
+Wenwu
+Wilson Fisk
+Wong
+Yelena Belova
+Yellowjacket
+Yon-Rogg
+Yondu
+Zuri
+
+[multi]
+Chris Evans / Jeremy Renner
+Ebon Moss-Bachrach / Joseph Quinn
+Josh Brolin / Elizabeth Olsen
+Paul Rudd / Evangeline Lilly
+Pedro Pascal / Vanessa Kirby

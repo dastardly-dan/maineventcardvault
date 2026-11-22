@@ -1,0 +1,43 @@
+# name: 2026 Topps Chrome Baseball Team Samurai Japan Collection
+# sport: MLB
+# added: 2026-11-22
+# source: https://cdn.shopify.com/s/files/1/0662/9749/5709/files/2026_Topps_Chrome_Samurai_Japan_Checklist_update_8.26_1.pdf
+
+[base]
+Atsuki Taneichi
+Chihiro Sumida
+Hiromi Itoh
+Hiroto Takahashi
+Hiroya Miyagi
+Ichiro
+Kaito Kozono
+Kazuma Okamoto
+Kensuke Kondoh
+Kenya Wakatsuki
+Kodai Senga
+Koki Kitayama
+Masataka Yoshida
+Munenori Kawasaki
+Munetaka Murakami
+Roki Sasaki
+Ryuhei Sotani
+Sadaharu Oh
+Seishiro Sakamoto
+Seiya Suzuki
+Shohei Ohtani
+Shoma Fujihira
+Shota Imanaga
+Shota Morishita
+Shugo Maki
+Sosuke Genda
+Taisei
+Taisei Makihara
+Teruaki Sato
+Tomoyuki Sugano
+Ukyo Shuto
+Yoshinobu Yamamoto
+Yu Darvish
+Yuhei Nakamura
+Yuki Matsui
+Yuki Matsumoto
+Yusei Kikuchi

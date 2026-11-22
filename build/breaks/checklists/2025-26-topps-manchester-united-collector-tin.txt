@@ -1,0 +1,54 @@
+# name: 2025-26 Topps Manchester United Collector Tin
+# sport: Soccer
+# added: 2026-11-22
+# source: https://cdn.shopify.com/s/files/1/0739/2015/1805/files/2025-26_Manchester_United_Collector_Tin_Checklist.pdf
+
+[base]
+Amad
+André Onana
+Ayden Heaven
+Bruno Fernandes
+Chido Obi
+Diego León
+Dimitar Berbatov
+Diogo Dalot
+Harry Maguire
+Joshua Zirkzee
+Kobbie Mainoo
+Leny Yoro
+Lisandro Martínez
+Manuel Ugarte
+Mason Mount
+Matheus Cunha
+Matthijs de Ligt
+Michael Carrick
+Nemanja Vidic
+Noussair Mazraoui
+Patrick Dorgu
+Paul Scholes
+Rasmus Højlund
+Rio Ferdinand
+Robin van Persie
+Roy Keane
+Ryan Giggs
+Sir Alex Ferguson
+Sékou Koné
+Wayne Rooney
+
+[auto]
+André Onana
+Bruno Fernandes
+Diogo Dalot
+Edwin van der Sar
+Harry Amass
+Kobbie Mainoo
+Leny Yoro
+Lisandro Martínez
+Matheus Cunha
+Patrice Evra
+Patrick Dorgu
+Paul Scholes
+Ryan Giggs
+Sir Alex Ferguson
+Sékou Koné
+Wayne Rooney

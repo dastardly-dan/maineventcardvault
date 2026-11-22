@@ -1,0 +1,94 @@
+# name: 2026 Garbage Pail Kids Halloween
+# sport: Entertainment
+# added: 2026-11-22
+# source: https://cdn.shopify.com/s/files/1/0662/9749/5709/files/26GPK_Halloween_Checklist.pdf
+
+[base]
+Acne AMY
+Adam Bomb
+APRIL Showers
+ART Gallery
+Bad BRAD
+BILLY Bones
+Bite-Size RANDY
+Blasted BILLY
+Bobbin' ROBIN
+Bony JOANIE
+Brainy BRIAN
+Brainy Janie
+Brainy JANIE AUTOGRAPHS
+Broom HILDA
+Bucket Head JED
+BUZZ Cut
+Candy Head NED
+Charred CHAD
+Cheeky CHARLES
+CHRIS Hiss
+Cranky FRANKIE
+Crazed CRANE
+Dead TED
+Defanged DEVON
+Door to DORA
+Drac Drip PIP
+Evil EDDIE
+Flashy FLETCHER
+Fryin' RYAN
+Geeky GARY
+Ghastly ASHLEY
+Gluttonous GARY
+Graffiti PETEY
+Greaser GREG
+Haggy MAGGIE
+Hairless HELEN
+HEATHER Langentrapped
+HEIDI Voltage
+Hot SCOTT
+Insert WRAPPER PARALLEL
+JAMIE LEE Hurtus
+JANET Leeks
+JASON Basin
+Jay Decay
+JENNY Genius
+Jolly ROGER
+Jolly Rogers
+Junk Food JOHN
+Leaky LINDSAY
+Lizard LIZ
+LUKE Warm
+Lurking LAURIE
+Mad Max
+MANNY Eyeballs
+Messy TESSIE
+MICHELLE Yeller
+Mischievous MITCH
+Missed MISTY
+Muggin' MEGAN C NAMES
+Nasty NICK
+Nervous NEVE
+New Wave Dave
+Nightmre NANCY ART VARIATION
+One-Eyed JACK
+Parallel SCREAM QUEENS
+PATTY Melt
+PATTY Putty
+Pegleg PETER
+RAY Decay
+Razor RAYMOND
+Reptile KYLE
+SCOTTIE Potty
+Shrunken ED
+Slimy SAM
+Smashed ASH
+Snacky JACKIE
+Snotty SIDNEY
+Stormy HEATHER
+Street ART
+SY Clops
+Tatoo LOU
+Tee Vee STEVIE
+TELLY Vision
+Thin LYNN
+TOMMY Tomb
+Tricky TRISH
+Weird WENDY
+Wrappin' RUTH

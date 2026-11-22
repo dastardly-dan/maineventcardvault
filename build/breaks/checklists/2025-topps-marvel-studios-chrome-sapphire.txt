@@ -1,0 +1,292 @@
+# name: 2025 Topps Marvel Studios Chrome Sapphire
+# sport: Marvel
+# added: 2026-11-22
+# source: https://cdn.shopify.com/s/files/1/0662/9749/5709/files/2025_Topps_Marvel_Studios_Chrome_Sapphire_Checklist.pdf
+
+[base]
+Adam Warlock
+Agatha Harkness
+Agent 13
+Agent Maria Hill
+Agent Peggy Carter
+Agent Phil Coulson
+Ajak
+Aldrich Killian
+Alice Wu-Gulliver
+America Chavez
+Aneka
+Ant-Man
+Arishem
+Attuma
+B-15
+Baby Groot
+Baron Strucker
+Black Panther
+Black Widow
+Bob
+Brock Rumlow
+Bucky Barnes
+Captain America
+Captain Marvel
+Cassie Lang
+Classic Loki
+Clea
+Congressman Gary
+Corvus Glaive
+Cosmo
+Cull Obsidian
+Dane Whitman
+Daniel Blake
+Dar-Benn
+Darcy Lewis
+Daredevil
+Death
+Doctor Strange
+Dr. Abraham Erskine
+Dr. Arnim Zola
+Dr. Bill Foster
+Dr. Christine Palmer
+Dr. Hank Pym
+Dr. Ho Yinsen
+Dr. Jane Foster
+Dr. Maya Hansen
+Dr. Wendy Lawson
+Drax
+Dreykov
+Druig
+Ebony Maw
+Echo
+Ego
+Ellen Brandt
+Elsa Bloodstone
+Emperor Dro'ge
+Eric Savin
+Erik Killmonger
+Erik Selvig
+Falcon
+Foggy Nelson
+Frank Castle
+Frigga
+Galactus
+Gamora
+Ghost
+Gilgamesh
+Grandmaster
+Gravik
+Groot
+H.E.R.B.I.E.
+Happy Hogan
+Hawkeye
+Heimdall
+Hela
+Helmut Zemo
+Hope Van Dyne
+Howard Stark
+Hulk
+Human Torch
+Ikaris
+Invisible Woman
+Iron Man
+Iron Monger
+Iron Patriot
+Ironheart
+Isaiah Bradley
+Jack Russell
+Janet Van Dyne
+Jennifer Kale
+Jimmy Woo
+John F. Walker
+Justin Hammer
+K'uk'ulkan
+Kaecilius
+Karen Page
+Karl Mordo
+Karli Morgenthau
+Kate Bishop
+Katy Chen Phase Four
+Khonshu
+King T'Chaka
+Kingo
+Kingpin
+Korg
+Lady Sif
+Laufey
+Leila Taylor
+Li Phase Four
+Lilia Calderu
+Loki
+M'Baku
+M.O.D.O.K.
+Maggie Lang
+Makkari
+Malekith
+Mantis
+Mel
+Melina Vostokoff
+Mephisto
+Miek
+Mister Fantastic
+Mobius
+Monica Rambeau
+Moon Knight
+Ms. Marvel
+Nakia
+Namora
+Nebula
+Nick Fury
+Nova Prime
+O.B.
+Odin
+Okoye
+Pagon
+Pepper Potts
+Phastos
+Pietro Maximoff
+Prince Yan
+Proxima Midnight
+Queen Ramonda
+Ravonna Renslayer
+Razor Fist Phase Four
+Recorder Theel
+Recorder Vim
+Red Guardian
+Red Hulk
+Red Skull
+Rocket
+Ronan
+Ruth Bat-Seraph
+Sentry
+Sersi
+Shang-Chi Phase Four
+She-Hulk
+Shuri
+Sidewinder
+Silver Surfer
+Spider-Man
+Sprite
+Star-Lord
+Sylvie
+Talos
+Taskmaster
+Thanos
+The Ancient One
+The Collector
+The High Evolutionary
+The Leader
+"The Mandarin"
+The Mighty Thor
+The Thing
+The Void
+The Wasp
+Thor
+Ultron
+Ulysses Klaue
+Valentina Allegra de Fontaine
+Valkyrie
+Vanessa Fisk
+Vision
+Wanda Maximoff
+War Machine
+Wenwu Phase Four
+Whiplash
+Wiccan
+Winter Soldier
+Wong
+Xialing Phase Four
+Yelena Belova
+Yellow Jacket
+Ying Nan Phase Four
+Yon-Rogg
+Yondu Udonta
+
+[auto]
+Aaron
+Angela
+Anthony
+Barry
+Benicio
+Bradley
+Brie
+Cate
+Charlie
+Charlize
+Chris
+Danny
+Dominique
+Don
+Ebon
+Elizabeth
+Emilia
+F. Murray
+Forest
+Glenn
+Gwyneth
+Hailee
+Harrison
+Hayley
+Henry
+Hugh
+Jeremy
+Jon
+Joseph
+Josh
+Jude
+Julia
+Kathryn
+Lee
+Letitia
+Michael
+Michael B.
+Natalie
+Nathan
+Oscar
+Owen
+Patti
+Paul
+Pedro
+Ralph
+Randall
+Ryan
+Sam
+Samuel L.
+Sebastian
+Simu
+Sophia
+Stellan
+Taika
+Tatiana
+Tessa
+Tilda
+Tom
+Vanessa
+Vincent
+Will
+
+[multi]
+Paul / Elizabeth
+Charlie / Jon
+Charlie / Wilson
+Charlie / Hunter
+Charlie / Vincent
+Chris / Hayley
+Chris / Anthony
+Chris / Sebastian
+Anthony / Tom
+Hugh / Dafne
+Hugh / Ryan
+Julia / Lewis
+Brie / Iman
+Anthony / Danny
+Elizabeth / Aaron
+Pedro / Ralph
+Pedro / Vanessa
+Joseph / Ralph
+Paul / Evangeline
+Jeremy / Hailee
+Charlie / Jon / Wilson
+Charlie / Vincent / Jon
+Samuel L. / Clark / Cobie
+Julia / Lewis / Wyatt
+Brie / Teyonah / Iman
+Elizabeth / Aaron / Paul
+Pedro / Ralph / Vanessa

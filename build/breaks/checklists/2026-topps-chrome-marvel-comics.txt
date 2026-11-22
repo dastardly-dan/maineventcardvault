@@ -1,0 +1,467 @@
+# name: 2026 Topps Chrome Marvel Comics
+# sport: Marvel
+# added: 2026-11-22
+# source: https://cdn.shopify.com/s/files/1/0662/9749/5709/files/26MACC_HobbyValueMega_Checklist.pdf
+
+[base]
+Abomination
+Adam Warlock
+Agatha Harkness
+Amaranth
+America Chavez
+Angela
+Ant-Man
+Anti-Venom
+Apocalypse
+Arachnix (DEBUT)
+Arcade
+Archangel
+Ares
+Baron Zemo
+Beast
+Beta Ray Bill
+Black Bolt
+Black Cat
+Black Knight
+Black Panther
+Black Widow
+Blade
+Blink
+Captain America
+Captain Britain
+Captain Marvel
+Carnage
+Chameleon
+Clea
+Colossus
+Cosmic Ghost Rider
+Cyclops
+Daredevil
+Dark Gwenpool (DEBUT)
+Dazzler
+Deathlok
+Devil Dinosaur
+Doctor Doom
+Doctor Octopus
+Doctor Strange
+Domino
+Doom 2099
+Doomasaur
+Dormammu
+Doyle Dormammu
+Dragonfire (DEBUT)
+Elbecca Voss (DEBUT)
+Electro
+Elektra
+Emma Frost
+Enchantress
+Eternity
+Evangeline (DEBUT)
+Exodus
+Forge
+Galactus
+Gambit
+Gamora
+Ghost Rider
+Ghost-Spider
+Glitch (DEBUT)
+Glob
+Goblin Queen
+Grandmaster
+Green Goblin
+Groot
+Gwenpool
+Hallows' Eve
+Hawkeye
+Hellcat
+Hellgate (DEBUT)
+Hellverine
+Hercules
+Hobgoblin
+Hope Summers
+Hulk
+Human Torch
+Iceman
+Ikaris
+Infernal Hulk (DEBUT)
+Invisible Woman
+Iron Cat
+Iron Fist
+Iron Man
+Ironheart
+Jean Grey
+Jeff the Land Shark
+Jubilee
+Juggernaut
+Kate Bishop
+Kid Juggernaut
+Kid Venom
+Kingpin
+Kitty Pryde
+Knull
+Kraven the Hunter
+Lady Henrietta (DEBUT)
+Leader
+Lizard
+Lockjaw
+Loki
+Longshot
+Luke Cage
+Luna Snow
+M.O.D.O.K.
+Maestro
+Magik
+Magneto
+Man-Thing
+Mantis
+Mar-Vell
+Mary Jane
+Mary Jane 137 Misery
+Mephisto
+Miles Morales
+Misery
+Mister Fantastic
+Mister Sinister
+Moon Girl
+Moon Knight
+Moonstar
+Ms. Marvel
+Mutina (DEBUT)
+Mysterio
+Mystique
+Nightcrawler
+Nightdrifter (DEBUT)
+Nimrod
+Nova
+Omega Red
+Professor X
+Psylocke
+Quicksilver
+Rachel Summers
+Raelith (DEBUT)
+Rapid (DEBUT)
+Rasputin IV
+Rek-Rap
+Revelation
+Rhino
+Rocket Raccoon
+Rogue
+Sabretooth
+Scarlet Spider
+Scarlet Witch
+Scorpion
+Scream
+Sentry
+Shang-Chi
+She-Hulk
+She-Venom
+Shocker
+Shuri
+Silence
+Silk
+Silver Sable
+Silver Surfer
+Sister Sorrow (DEBUT)
+Sleeper Agent
+SP//dr
+Spider-Boy
+Spider-Girl
+Spider-Ham
+Spider-Man
+Spider-Man 2099
+Spider-Man Noir
+Spider-Punk
+Spider-Woman
+Star-Lord
+Storm
+Strong Guy
+Stryfe
+Sunspot
+Taskmaster
+Thanos
+The Thing
+Thena
+Thor
+Throg
+Tigra
+Tombstone
+Toxin
+U.S. Agent
+Ultimate Daredevil (DEBUT)
+Ultimate Wolverine
+Ultron
+Valeria Richards
+Venom
+Venomizer (DEBUT)
+Venomouse (DEBUT)
+Vision
+Vulcan
+Vulture
+War Machine
+Wasp
+Werewolf by Night
+White Fox
+White Tiger
+Wiccan
+Wolverine
+X-23
+
+[auto]
+Aaron Judge
+Adam Kubert
+Adi Granov
+Andy Kubert
+Apocalypse
+Ariel Diaz
+Artgerm
+Arthur Adams
+Bill Sienkiewicz
+Boom Boom
+Cable
+Caliban
+Cannonball
+Captain Britain
+Cyclops
+Derrick Chew
+Doctor Octopus
+Domino
+Drax
+E.M. Gist
+Ed McGuinness
+Emma Frost
+Esad Ribić
+Feral
+Frank Miller
+Galactus
+Gambit
+Ghost Rider
+Green Goblin
+Greg Capullo
+Greg Horn
+Human Torch
+InHyuk Lee
+Ivan Talavera
+Jean Grey
+Jim Cheung
+Joshua Cassara
+Juggernaut
+Kang
+Kevin Eastman
+Kevin Feige
+Lucio Parrillo
+Magneto
+Marc Silvestri
+Mark Bagley
+Mark Brooks
+Mary Jane
+Mighty Thor
+Mike Mayhew
+Mike McKone
+Mike Zeck
+Morbius
+Namor
+Nick Fury
+Nightcrawler
+Paco Medina
+Patton Oswalt
+Paul Pelletier
+Pete Alonso
+Psylocke
+Quasar
+Rictor
+Rocket Raccoon
+Rogue
+Ron Lim
+Ryan Brown
+Ryan Stegman
+Sam Wilson
+Scarlet Witch
+Scott Williams
+Seth Meyers
+Shatterstar
+Steve Aoki
+Steve Epting
+Steve McNiven
+Storm
+Sunspot
+The Thing
+Union Jack
+Venom
+Vision
+War Machine
+Warpath
+Weapon X
+Whilce Portacio
+
+[insert]
+60 Years of Black Panther #1
+60 Years of Black Panther #10
+60 Years of Black Panther #2
+60 Years of Black Panther #3
+60 Years of Black Panther #4
+60 Years of Black Panther #5
+60 Years of Black Panther #6
+60 Years of Black Panther #7
+60 Years of Black Panther #8
+60 Years of Black Panther #9
+A New Gwenpool
+A New Journey for Doctor Strange
+Aaron Judge
+Ajak
+Amazing Spider-Man #258
+Amazing Spider-Man #299
+Amazing Spider-Man #301
+Amazing Spider-Man #329
+Amazing Spider-Man #375
+Amazing Spider-Man #48
+Amazing Spider-Man #51
+Amazing Spider-Man #55
+Amazing Spider-Man #56
+Amazing Spider-Man #66
+Angela
+Apocalypse
+Arishem
+Avengers #16
+Beyonder
+Binary and the Phoenix Force
+Black Cat
+Black Panther
+Black Widow
+Cable
+Captain America
+Captain Britain
+Captain Marvel
+Cyclops
+Daredevil
+Dark Gwenpool
+Darkhawk
+Darkstar
+Death
+Defenders #67
+Doctor Doom
+Doctor Strange
+Echo
+Eddie Brock as Carnage
+Emma Frost
+Fantastic Four #72
+Franklin Richards
+Galactus
+Gambit
+Ghost Rider
+Ghost Riders Unite
+Glob
+Green Goblin
+Hell Hulk's 1st Appearance
+Hellverine
+Hulk
+Human Torch
+Ikaris
+Inari
+Invisible Woman
+Iron Man
+Jack of Hearts
+Jean Grey
+Jia Jing
+Kevin Feige
+Kid Juggernaut
+Kid Venom
+Knull
+Laura Kinney is Sabretooth
+Luna Snow
+Magik on her Own
+Magneto
+Maker
+Miles Morales
+Mister Fantastic
+Mister Sinister
+Molecule Man
+Moonstar
+Myrddin
+New Avengers Assemble Again
+Nightcrawler
+Nova
+One World Under Doom #1
+One World Under Doom #10
+One World Under Doom #11
+One World Under Doom #12
+One World Under Doom #13
+One World Under Doom #14
+One World Under Doom #15
+One World Under Doom #16
+One World Under Doom #17
+One World Under Doom #18
+One World Under Doom #19
+One World Under Doom #2
+One World Under Doom #20
+One World Under Doom #3
+One World Under Doom #4
+One World Under Doom #5
+One World Under Doom #6
+One World Under Doom #7
+One World Under Doom #8
+One World Under Doom #9
+Peni Parker
+Pete Alonso
+Peter Parker, The Spectacular Spider-Man #107
+Phoenix
+Psylocke
+Rachel Summers
+Radioactive Spider-Man
+Rand Rises Again as Iron Fist
+Reunited Loves
+Revelation
+Rogue
+Rogue vs. Storm
+Scarlet Witch
+Seth Meyers
+She-Hulk
+Silver Surfer
+Spider-Man
+Spider-Man #36
+Spidey Goes Cosmic
+Stan Lee
+Star-Lord
+Steve Aoki
+Steve Ditko
+Storm
+Thanos
+The Captain Transformed
+The Newest Avengers Team
+The Thing
+The Unstoppable Infernal Hulk
+The X-Men #39
+Thor
+Tom Cassidy
+Uncanny X-Men #200
+Valeria Richards
+Venom
+Weapon VIII
+Weapon X
+Web of Spider-Man #1
+Web of Spider-Man #32
+Web-Weaver
+Wendigo is the Last Wolverine
+White Fox
+White Tiger
+Wiccan and the Witches' Road
+Wonderful Wolverine
+X-Men #31
+X-Men of Apocalypse Arrive
+
+[multi]
+Blade / Mephisto
+Bruce Banner / Hulk
+Venom / Carnage
+X-23 / Sentinel
+Psylocke / Captain Britain
+Green Goblin / Harry Osborn
+Gwen Stacy / Mary Jane
+Spider-Man / Venom
+Scarlet Witch / Vision
+Iron Man / War Machine
+Vision / Agatha Harkness / Scarlet Witch
+Nick Fury / Iron Man / War Machine
+Gwen Stacy / Peter Parker / Mary Jane
+Cyclops / Storm / Nightcrawler
+Doctor Doom / Silver Surfer / Galactus / Namor
+Venom / Doctor Octopus / Green Goblin / Spider-Man

@@ -1,0 +1,216 @@
+# name: 2025 Topps Chrome Formula 1 Sapphire Edition
+# sport: F1
+# added: 2026-11-22
+# source: https://cdn.shopify.com/s/files/1/0662/9749/5709/files/2025_Topps_Chrome_Formula_1_Sapphire_Edition_Checklist.pdf
+
+[base]
+Alain Prost
+Alessandro Giusti
+Alex Albon
+Alexander Dunne
+Amaury Cordeel
+Andrea Stella
+Andy Cowell
+Arvid Lindblad
+Aston Martin Aramco Formula One Team
+Atlassian Williams Racing
+Ayao Komatsu
+Ayrton Senna
+Brando Badoer
+Bruno del Pino
+BWT Alpine Formula One Team
+Callum Voisin
+Carlos Sainz
+Charles Leclerc
+Charlie Wurz
+Christian Ho
+Christian Horner
+Cian Shields
+Damon Hill
+Daniel Ricciardo
+David Coulthard
+Dino Beganovic
+Emerson Fittipaldi
+Esteban Ocon
+Fernando Alonso
+Flavio Briatore
+Franco Colapinto
+Frédéric Vasseur
+Gabriel Bortoleto
+Gabriele Minì
+George Russell
+Gerhard Berger
+Gerrard Xie
+Isack Hadjar
+Ivan Domingues
+Jackie Stewart
+Jacques Villeneuve
+Jak Crawford
+James Hunt
+James Vowles
+James Wharton
+Javier Sagrera
+John Bennett
+Josep María Martí
+Joshua Dufek
+Joshua Dürksen
+Juan Pablo Montoya
+Kimi Antonelli
+Kimi Räikkönen
+Kush Maini
+Lance Stroll
+Lando Norris
+Laurens van Hoepen
+Laurent Mekies
+Leonardo Fornaroli
+Lewis Hamilton
+Liam Lawson
+Louis Sharp
+Luke Browning
+Mari Boya
+Mario Andretti
+Martinius Stenshorne
+Matías Zagazeta
+Max Esterson
+Max Verstappen
+McLaren Formula 1 Team
+Mercedes-AMG PETRONAS Formula One Team
+Michael Schumacher
+Mika Häkkinen
+MoneyGram Haas F1 Team
+Name
+Nico Hulkenberg
+Nicola Lacorte
+Nicola Marinangeli
+Nigel Mansell
+Nikita Bedrin
+Nikola Tsolov
+Noah Strømsted
+Noel León
+Oliver Bearman
+Oliver Goethe
+Oracle Red Bull Racing
+Oscar Piastri
+Pierre Gasly
+Rafael Câmara
+Rafael Villagómez
+Richard Verschoor
+Ritomo Miyata
+Roman Bilinski
+Roman Staněk
+Sami Meguetounif
+Santiago Ramos
+Scuderia Ferrari HP
+Sebastián Montoya
+Stake F1 Team KICK Sauber
+Tasanapol Inthraphuvasak
+Théophile Naël
+Tim Tramnitz
+Toto Wolff
+Tuukka Taponen
+Ugo Ugochukwu
+Victor Martins
+Visa Cash App Racing Bulls Formula One Team
+Yuki Tsunoda
+Zhou Guanyu
+
+[auto]
+Alessandro Giusti
+Alex Albon
+Alexander Dunne
+Amaury Cordeel
+Andrea Stella
+Andy Cowell
+Arvid Lindblad
+Ayao Komatsu
+Brando Badoer
+Bruno del Pino
+Carlos Sainz
+Christian Horner
+Cian Shields
+Dino Beganovic
+Esteban Ocon
+Fernando Alonso
+Franco Colapinto
+Frédéric Vasseur
+Gabriel Bortoleto
+Gabriele Minì
+George Russell
+Gerrard Xie
+Isack Hadjar
+Ivan Domingues
+Jak Crawford
+James Vowles
+James Wharton
+Javier Sagrera
+John Bennett
+Jonathan Wheatley
+Josep María Martí
+Joshua Dürksen
+Kimi Antonelli
+Kush Maini
+Lance Stroll
+Lando Norris
+Laurent Mekies
+Leonardo Fornaroli
+Lewis Hamilton
+Liam Lawson
+Louis Sharp
+Luke Browning
+Max Esterson
+Max Verstappen
+Nico Hulkenberg
+Nicola Lacorte
+Nicola Marinangeli
+Noah Strømsted
+Oliver Bearman
+Oliver Goethe
+Oscar Piastri
+Pierre Gasly
+Rafael Câmara
+Rafael Villagómez
+Richard Verschoor
+Ritomo Miyata
+Roman Bilinski
+Roman Staněk
+Sami Meguetounif
+Sebastián Montoya
+Subset
+Théophile Naël
+Toto Wolff
+Tuukka Taponen
+Ugo Ugochukwu
+Victor Martins
+Yuki Tsunoda
+
+[insert]
+Alain Prost
+Alex Albon
+Ayrton Senna
+Carlos Sainz
+Charles Leclerc
+Damon Hill
+Esteban Ocon
+Fernando Alonso
+Franco Colapinto
+Gabriel Bortoleto
+George Russell
+Gerhard Berger
+Isack Hadjar
+Jackie Stewart
+James Hunt
+Kimi Antonelli
+Kimi Räikkönen
+Lance Stroll
+Lando Norris
+Lewis Hamilton
+Liam Lawson
+Max Verstappen
+Michael Schumacher
+Mika Häkkinen
+Nico Hulkenberg
+Nigel Mansell
+Oliver Bearman
+Oscar Piastri
+Pierre Gasly
+Yuki Tsunoda
