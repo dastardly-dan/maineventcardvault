@@ -101,6 +101,13 @@ requested box, so a portrait card at `s-l500` comes back only ~280–380px wide 
 Photos committed to `assets/cards/` are used at one size for both the tile and the
 lightbox — resize to roughly 1200px on the long edge before committing.
 
+## Break guides
+
+- `breaks/cc874.html` is a reference page for the Colfax CC874 Monster Multi random-letter
+  break (who could land in each of the 21 letter spots, by box). Served at `/breaks/cc874`.
+  Not linked from the storefront and carries `noindex`. Self-contained; replace the whole
+  file to update it.
+
 ## Iron Ledger and worker.js
 
 - `iron-ledger.html` is Daniel's personal workout tracker, served at `/iron-ledger`.
