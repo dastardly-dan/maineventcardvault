@@ -162,6 +162,10 @@ team spot, box by box. Linked from the storefront's Breaks menu; every page carr
   (again adds another); arrows move the highlight. The grouped dropdown below is "Or browse by sport".
 - **Find a spot:** search box above the spot list filters to the spots holding a name or team (one or two
   letters match by letter range); the header search results link to `#/build/find/<name>`.
+- **Panini print runs:** Panini publishes no pack odds. `depth.py --panini` reads each CSV's SEQUENCE column:
+  per root set, each player's most plentiful version (unnumbered = 1,000 copies), median across players,
+  scored like odds (fewer copies = rarer). Mass products (Donruss) are mostly unnumbered so little changes;
+  high-end ones (Immaculate, Impeccable) spread out a lot.
 - **Player value (hit depth):** `build/breaks/depth.py` counts, per product, how many different autograph,
   insert and multi-person sets each player is in (parallels folded into their root set) and writes
   `build/breaks/depth.json`; `builder.py` appends `[autoSets, insertSets, multiSets]` to rows where any is above 1.

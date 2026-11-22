@@ -1,7 +1,7 @@
 """Hit depth: how many different autograph / insert / multi-person sets each player appears in, per product.
 
 Card makers put their stars and top rookies into far more hit sets than role players, so this count is a
-value signal that comes straight from the checklist. Where Topps pack odds are known (odds.json, from odds_parse.py), each set counts by how rare it is
+value signal that comes straight from the checklist. Where Topps pack odds are known (odds.json, from odds_parse.py), or for Panini CSVs the print runs, each set counts by how rare it is
 next to the product's typical set of that kind instead of as 1, so a 1-per-case autograph counts several
 times a 1-per-pack insert. Output: depth.json {product_id: {name_key: [A, I, M]}} (only players whose
 values differ from 1). builder.py attaches it to each checklist row.
@@ -66,6 +66,33 @@ def from_panini(path):
         for n in names: sets[key(n)][idx].add(root[cs])
     return sets
 
+UNNUMBERED = 1000  # copies assumed for a version with no print run
+
+def panini_rarity(path):
+    """Panini publishes print runs (the SEQUENCE column: /99, /25, 1/1) but no pack odds. For each root set,
+    take each player's most plentiful version (unnumbered counts as 1,000 copies), and use the median across
+    players. Returned as a rarity number on the same footing as odds.json (bigger = harder to pull)."""
+    rows = list(csv.DictReader(open(path, newline='', encoding='utf-8-sig')))
+    allsets = sorted({(r['CARD SET'] or '').strip() for r in rows})
+    root = {}
+    for s_ in allsets:
+        cands = [o for o in allsets if o != s_ and s_.startswith(o + ' ')]
+        root[s_] = min(cands, key=len) if cands else s_
+    best = collections.defaultdict(dict)
+    for r in rows:
+        cs = (r['CARD SET'] or '').strip()
+        if PC.SKIP.search(cs): continue
+        seq = (r.get('SEQUENCE') or '').strip()
+        n = int(seq) if seq.isdigit() and int(seq) > 0 else UNNUMBERED
+        who = (r['ATHLETE'] or '').strip()
+        rt = root[cs]
+        best[rt][who] = max(best[rt].get(who, 0), n)
+    out = {}
+    for rt, d in best.items():
+        v = sorted(d.values())
+        out[rt] = 10000.0 / v[len(v) // 2]
+    return out
+
 def mults(sets, odds):
     """Per kind (auto, insert, multi): how rare each set is next to the product's typical set of that kind.
     (packs per hit / median packs per hit) ** 0.4, kept between 0.4 and 5. Sets with no odds count as 1."""
@@ -103,7 +130,7 @@ if __name__ == '__main__':
     if '--panini' in args:
         i = args.index('--panini'); pan = args[i + 1:]; args = args[:i]
         for csvp, pid in zip(pan[::2], pan[1::2]):
-            D[pid] = pack(from_panini(csvp))
+            D[pid] = pack(from_panini(csvp), panini_rarity(csvp))
     for d in args:
         for f in sorted(glob.glob(os.path.join(d, '*.cards.json'))):
             pid = os.path.basename(f)[:-11]
