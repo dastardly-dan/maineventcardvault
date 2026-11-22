@@ -1,0 +1,281 @@
+# name: 2025-26 Topps Five Star Basketball
+# sport: NBA
+# added: 2026-11-22
+# source: https://cdn.shopify.com/s/files/1/0662/9749/5709/files/CheckList_25FSBK_FINAL.pdf?v=1795369710
+
+[base]
+Ace Bailey | Jazz
+Allen Iverson | 76ers
+Alperen Sengun | Rockets
+Amen Thompson | Rockets
+Andrew Nembhard | Pacers
+Anfernee Simons | Celtics
+Anthony Davis | Mavericks
+Anthony Edwards | Timberwolves
+Asa Newell | Hawks
+Austin Reaves | Lakers
+Bam Adebayo | Heat
+Bill Russell | Celtics
+Cade Cunningham | Pistons
+Carmelo Anthony | Knicks
+Cedric Coward | Grizzlies
+Chet Holmgren | Thunder
+Coby White | Bulls
+Collin Murray-Boyles | Raptors
+Cooper Flagg | Mavericks
+Damian Lillard | Trail Blazers
+Darius Garland | Clippers
+De'Aaron Fox | Spurs
+DeMar DeRozan | Kings
+Derik Queen | Pelicans
+Derrick White | Celtics
+Desmond Bane | Magic
+Devin Booker | Suns
+Dirk Nowitzki | Mavericks
+Domantas Sabonis | Kings
+Donovan Mitchell | Cavaliers
+Drake Powell | Nets
+Draymond Green | Warriors
+Dylan Harper | Spurs
+Egor Dëmin | Nets
+Evan Mobley | Cavaliers
+Fred VanVleet | Rockets
+Giannis Antetokounmpo | Bucks
+Ivica Zubac | Clippers
+Ja Morant | Grizzlies
+Jaden McDaniels | Timberwolves
+Jalen Brunson | Knicks
+Jalen Green | Suns
+Jalen Johnson | Hawks
+Jalen Williams | Thunder
+Jamal Murray | Nuggets
+James Harden | Cavaliers
+Jaren Jackson Jr. | Grizzlies
+Jaylen Brown | Celtics
+Jayson Tatum | Celtics
+Jimmy Butler III | Warriors
+Joel Embiid | 76ers
+Josh Hart | Knicks
+Jrue Holiday | Trail Blazers
+Julius Randle | Timberwolves
+Kareem Abdul-Jabbar | Lakers
+Karl-Anthony Towns | Knicks
+Kasparas Jakučionis | Heat
+Kawhi Leonard | Clippers
+Kevin Durant | Rockets
+Kevin Garnett | Celtics
+Khaman Maluach | Suns
+Klay Thompson | Mavericks
+Kon Knueppel | Hornets
+Kristaps Porzingis | Warriors
+Kyrie Irving | Mavericks
+LaMelo Ball | Hornets
+Larry Bird | Celtics
+LeBron James | Lakers
+Luka Dončić | Lakers
+Magic Johnson | Lakers
+Michael Porter Jr. | Nets
+Mikal Bridges | Knicks
+Myles Turner | Bucks
+Naz Reid | Timberwolves
+Nikola Jokić | Nuggets
+Noa Essengue | Bulls
+Nolan Traore | Nets
+Norman Powell | Heat
+Paolo Banchero | Magic
+Pascal Siakam | Pacers
+Paul George | 76ers
+Rick Barry | Warriors
+Rudy Gobert | Timberwolves
+Scottie Barnes | Raptors
+Shai Gilgeous-Alexander | Thunder
+Shaquille O'Neal | Lakers
+Stephen Curry | Warriors
+Stephon Castle | Spurs
+Thomas Sorber | Thunder
+Trae Young | Wizards
+Tyler Herro | Heat
+Tyrese Haliburton | Pacers
+Tyrese Maxey | 76ers
+Tyrese Proctor | Cavaliers
+Victor Wembanyama | Spurs
+Walter Clayton Jr. | Grizzlies
+Will Richard | Warriors
+Will Riley | Wizards
+Yang Hansen | Trail Blazers
+Zach Lavine | Kings
+
+[auto]
+Ace Bailey | Jazz
+Adou Thiero | Lakers
+Al Horford | Warriors
+Alex Sarr | Wizards
+Alijah Martin | Raptors
+Allen Iverson | 76ers
+Alonzo Mourning | Heat
+Anfernee Simons | Celtics
+Anthony Edwards | Timberwolves
+Asa Newell | Hawks
+Bam Adebayo | Heat
+Ben Saraf | Nets
+Bobby Portis | Bucks
+Brandon Ingram | Raptors
+Brandon Miller | Hornets
+Bronny James Jr. | Lakers
+Cade Cunningham | Pistons
+Cameron Johnson | Nuggets
+Cedric Coward | Grizzlies
+Chaz Lanier | Pistons
+Chet Holmgren | Thunder
+Chris Mullin | Warriors
+Chris Paul | Clippers
+Christian Laettner | Timberwolves
+Clyde Drexler | Trail Blazers
+Cole Anthony | Bucks
+Collin Murray-Boyles | Raptors
+Cooper Flagg | Mavericks
+Danny Wolf | Nets
+Deandre Ayton | Lakers
+Dereck Lively II | Mavericks
+Derek Fisher | Lakers
+Derik Queen | Pelicans
+Derrick White | Celtics
+Desmond Bane | Magic
+Dirk Nowitzki | Mavericks
+Dominique Wilkins | Hawks
+Donovan Mitchell | Cavaliers
+Dorian Finney-Smith | Rockets
+Drake Powell | Nets
+Dwyane Wade | Heat
+Dylan Harper | Spurs
+Dyson Daniels | Hawks
+Egor Dëmin | Nets
+Evan Mobley | Cavaliers
+Franz Wagner | Magic
+Giannis Antetokounmpo | Bucks
+Grayson Allen | Suns
+Isaiah Hartenstein | Thunder
+Jaden McDaniels | Timberwolves
+Jaime Jaquez Jr. | Heat
+Jalen Brunson | Knicks
+Jalen Williams | Thunder
+Jamal Crawford | Clippers
+Jamal Murray | Nuggets
+James Harden | Clippers
+Jarace Walker | Pacers
+Jaren Jackson Jr. | Grizzlies
+Jarrett Allen | Cavaliers
+Jase Richardson | Magic
+Jaylen Wells | Grizzlies
+Jayson Tatum | Celtics
+Joan Beringer | Timberwolves
+Joe Johnson | Hawks
+John Starks | Knicks
+Johni Broome | 76ers
+Jordan Clarkson | Knicks
+Josh Giddey | Bulls
+JR Smith | Knicks
+Jrue Holiday | Trail Blazers
+Kam Jones | Pacers
+Karl Malone | Jazz
+Karl-Anthony Towns | Knicks
+Kasparas Jakučionis | Heat
+Kel'el Ware | Heat
+Kelly Oubre Jr. | 76ers
+Kendrick Perkins | Celtics
+Kevin Durant | Rockets
+Kevin Garnett | Celtics
+Kevin Love | Jazz
+Khaman Maluach | Suns
+Kobe Sanders | Clippers
+Koby Brea | Suns
+Kon Knueppel | Hornets
+Kristaps Porzingis | Hawks
+Larry Bird | Celtics
+Lauri Markkanen | Jazz
+LeBron James | Lakers
+Liam McNeeley | Hornets
+Manu Ginóbili | Spurs
+Mark Jackson | Knicks
+Mark Williams | Suns
+Mason Plumlee | Hornets
+Maxime Raynaud | Kings
+Micah Peavy | Pelicans
+Michael Finley | Mavericks
+Michael Porter Jr. | Nets
+Mikal Bridges | Knicks
+Moritz Wagner | Magic
+Myles Turner | Bucks
+Nickeil Alexander-Walker | Hawks
+Nikola Jokić | Nuggets
+Nique Clifford | Kings
+Noa Essengue | Bulls
+Noah Penda | Magic
+Nolan Traore | Nets
+Norman Powell | Heat
+Obi Toppin | Pacers
+Paolo Banchero | Magic
+Pascal Siakam | Pacers
+Payton Pritchard | Celtics
+Rasheer Fleming | Suns
+Rob Dillingham | Timberwolves
+Robert Horry | Lakers
+Ron Holland II | Pistons
+Rudy Gay | Grizzlies
+Rudy Gobert | Timberwolves
+Rui Hachimura | Lakers
+Ryan Kalkbrenner | Hornets
+Scoot Henderson | Trail Blazers
+Shaedon Sharpe | Trail Blazers
+Shai Gilgeous-Alexander | Thunder
+Shaquille O'Neal | Lakers
+Sion James | Hornets
+Stephen Curry | Warriors
+Stephon Castle | Spurs
+Stephon Marbury | Nets
+Steve Kerr | Bulls
+Steve Nash | Suns
+Thomas Sorber | Thunder
+Tracy McGrady | Magic
+Trey Murphy III | Pelicans
+Tyrese Haliburton | Pacers
+Tyrese Maxey | 76ers
+Tyrese Proctor | Cavaliers
+Tyronn Lue | Hawks
+Udonis Haslem | Heat
+Victor Wembanyama | Spurs
+Walker Kessler | Jazz
+Walt Frazier | Knicks
+Walter Clayton Jr. | Jazz
+Will Richard | Warriors
+Will Riley | Wizards
+Yang Hansen | Trail Blazers
+Yanic Konan-Niederhäuser | Clippers
+Zaccharie Risacher | Hawks
+Zach Edey | Grizzlies
+Zach Lavine | Kings
+
+[multi]
+Dennis Rodman | Bulls / Horace Grant | Bulls
+Derek Fisher | Lakers / Pau Gasol | Lakers
+Karl Malone | Jazz / John Stockton | Jazz
+Magic Johnson | Lakers / Kareem Abdul-Jabbar | Lakers
+Steve Nash | Mavericks / Dirk Nowitzki | Mavericks
+Walt Frazier | Knicks / John Starks | Knicks
+Yao Ming | Rockets / Yang Hansen | Trail Blazers
+Ace Bailey | Jazz / Walter Clayton Jr. | Jazz
+Stephon Castle | Spurs / Dylan Harper | Spurs
+Collin Murray-Boyles | Raptors / Egor Dëmin | Nets
+Bam Adebayo | Heat / Kasparas Jakučionis | Heat
+Cooper Flagg | Mavericks / Kon Knueppel | Hornets
+Noa Essengue | Bulls / Khaman Maluach | Suns
+Anthony Edwards | Timberwolves / Shai Gilgeous-Alexander | Thunder
+Yang Hansen | Trail Blazers / Derik Queen | Pelicans
+Jalen Johnson | Hawks / Zaccharie Risacher | Hawks
+Russell Westbrook | Kings / LeBron James | Lakers
+Chris Paul | Clippers / Russell Westbrook | Kings
+John Stockton | Jazz / Russell Westbrook | Kings
+Jason Kidd | Nets / Russell Westbrook | Kings
+Russell Westbrook | Kings / Magic Johnson | Lakers
+Mark Jackson | Knicks / Russell Westbrook | Kings
+Russell Westbrook | Kings / Steve Nash | Mavericks

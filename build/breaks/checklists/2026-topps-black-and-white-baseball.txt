@@ -1,0 +1,273 @@
+# name: 2026 Topps Black and White Baseball
+# sport: MLB
+# added: 2026-11-22
+# source: https://cdn.sanity.io/files/hj34sz77/production/f35d21297ba8454445847908c26da42fad94253f.pdf
+
+[base]
+Aaron Judge
+Albert Pujols
+Alex Bregman
+Alex Rodriguez
+Andruw Jones
+Andy Pages
+Barry Bonds
+Ben Rice
+Bobby Witt Jr.
+Brandon Sproat
+Bryce Harper
+Bubba Chandler
+Byron Buxton
+Cal Raleigh
+Cam Schlittler
+Carlos Beltrán
+Carson Benge
+Carson Williams
+Carter Jensen
+CC Sabathia
+Chase Burns
+Chase DeLauter
+Chase Utley
+Chipper Jones
+Chris Sale
+Cj Abrams
+Cody Bellinger
+Cole Young
+Colson Montgomery
+Connelly Early
+Corbin Carroll
+Dave Winfield
+David Ortiz
+Derek Jeter
+Drake Baldwin
+Edgar Martinez
+Elly De La Cruz
+Evan Longoria
+Fernando Tatis Jr.
+Francisco Lindor
+Freddie Freeman
+Gary Sheffield
+Giancarlo Stanton
+Gunnar Henderson
+Hao-Yu Lee
+Harold Baines
+Hideki Matsui
+Hideo Nomo
+Ichiro
+Jac Caglianone
+Jackson Chourio
+Jackson Holliday
+Jackson Merrill
+Jacob Degrom
+Jacob Misiorowski
+Jacob Wilson
+James Wood
+Jeff Kent
+Jeremiah Jackson
+JJ Wetherholt
+Joe Mauer
+Jonah Tong
+Jordan Walker
+Jose Altuve
+José Ramírez
+Juan Soto
+Julio Rodríguez
+Junior Caminero
+Justin Crawford
+Kazuma Okamoto
+Ken Griffey Jr.
+Kevin McGonigle
+Konnor Griffin
+Kyle Karros
+Kyle Schwarber
+Kyle Teel
+Manny Machado
+Manny Ramirez
+Marcelo Mayer
+Mason Miller
+Matt Olson
+Mike Trout
+Mookie Betts
+Munetaka Murakami
+Nick Kurtz
+Noah Schultz
+Nolan Arenado
+Nolan McLean
+Nolan Ryan
+Oneil Cruz
+Owen Caissie
+Paul Skenes
+Payton Tolle
+Pedro Martínez
+Pete Alonso
+Pete Crow-Armstrong
+Rafael Devers
+Reggie Jackson
+Roger Clemens
+Roki Sasaki
+Roman Anthony
+Ronald Acuña Jr.
+Sal Stewart
+Salvador Perez
+Samuel Basallo
+Seiya Suziki
+Shea Langeliers
+Shohei Ohtani
+Shota Imanaga
+Sung-Mun Song
+Tatsuya Imai
+Tom Glavine
+Tony Gwynn
+Travis Bazzana
+Trey Yesavage
+Vladimir Guerrero Jr.
+Wyatt Langford
+Yordan Alvarez
+Yoshinobu Yamamoto
+Zack Wheeler
+
+[auto]
+Aaron Judge
+Albert Pujols
+Alex Rodriguez
+Andruw Jones
+Barry Bonds
+Ben Rice
+Bobby Witt Jr.
+Brandon Sproat
+Bubba Chandler
+Cam Schlittler
+Carlos Beltrán
+Carson Benge
+Carson Williams
+CC Sabathia
+Chase Burns
+Chase DeLauter
+Chipper Jones
+Chris Sale
+Colson Montgomery
+Connelly Early
+Corbin Carroll
+David Ortiz
+Derek Jeter
+Drake Baldwin
+Edgar Martinez
+Elly De La Cruz
+Evan Longoria
+Francisco Lindor
+Freddie Freeman
+Gunnar Henderson
+Hideki Matsui
+Hideo Nomo
+Ichiro
+Jac Caglianone
+Jackson Chourio
+Jackson Merrill
+Jacob Misiorowski
+Jacob Wilson
+James Wood
+JJ Wetherholt
+Jonah Tong
+Juan Soto
+Junior Caminero
+Ken Griffey Jr.
+Kevin McGonigle
+Konnor Griffin
+Kyle Karros
+Kyle Schwarber
+Kyle Teel
+Manny Ramirez
+Mike Trout
+Mookie Betts
+Munetaka Murakami
+Nolan McLean
+Nolan Ryan
+Owen Caissie
+Paul Skenes
+Payton Tolle
+Pedro Martínez
+Pete Alonso
+Pete Crow-Armstrong
+Reggie Jackson
+Roger Clemens
+Roki Sasaki
+Ronald Acuña Jr.
+Sal Stewart
+Samuel Basallo
+Shohei Ohtani
+Shota Imanaga
+Tatsuya Imai
+Travis Bazzana
+Trey Yesavage
+Vladimir Guerrero Jr.
+Yoshinobu Yamamoto
+
+[insert]
+Aaron Judge
+Albert Pujols
+Alex Rodriguez
+Ben Rice
+Bobby Witt Jr.
+Brandon Sproat
+Bryce Harper
+Bubba Chandler
+Cam Schlittler
+Carson Benge
+Carson Williams
+Carter Jensen
+CC Sabathia
+Chase Burns
+Chase DeLauter
+Chase Utley
+Chipper Jones
+Cole Young
+Colson Montgomery
+Connelly Early
+Corbin Carroll
+David Ortiz
+Derek Jeter
+Elly De La Cruz
+Hideo Nomo
+Ichiro
+Jac Caglianone
+Jackson Holliday
+Jackson Merrill
+Jacob Misiorowski
+Jacob Wilson
+James Wood
+Jeremiah Jackson
+JJ Wetherholt
+Joe Mauer
+Juan Soto
+Julio Rodríguez
+Junior Caminero
+Justin Crawford
+Kazuma Okamoto
+Ken Griffey Jr.
+Kevin McGonigle
+Konnor Griffin
+Kyle Schwarber
+Manny Ramirez
+Mason Miller
+Mike Trout
+Munetaka Murakami
+Nick Kurtz
+Noah Schultz
+Nolan McLean
+Nolan Ryan
+Owen Caissie
+Paul Skenes
+Payton Tolle
+Pedro Martínez
+Pete Crow-Armstrong
+Reggie Jackson
+Roger Clemens
+Roman Anthony
+Sal Stewart
+Samuel Basallo
+Shohei Ohtani
+Tatsuya Imai
+Tom Glavine
+Travis Bazzana
+Trey Yesavage
+Vladimir Guerrero Jr.
+Yoshinobu Yamamoto

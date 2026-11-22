@@ -6,7 +6,7 @@ Each source is first flattened to "layout lines" (code, 2+ spaces, name, 2+ spac
 """
 import re, sys, json, collections
 
-GROUPS = {'BASE': 'base', 'INSERT': 'insert', 'INSERTS': 'insert', 'AUTOGRAPH': 'auto', 'AUTOGRAPHS': 'auto',
+GROUPS = {'BASE': 'base', 'INSERT': 'insert', 'INSERTS': 'insert', 'INSERT CARDS': 'insert', 'AUTOGRAPH': 'auto', 'AUTOGRAPHS': 'auto',
           'RELIC': 'insert', 'RELICS': 'insert', 'AUTOGRAPH RELIC': 'auto', 'AUTOGRAPH RELICS': 'auto'}
 SKIP_SUBSETS = re.compile(r'SKETCH|PRINTING PLATE|REDEMPTION|BOOK CARD|MOMENTS|LOMBARDI TROPHY', re.I)
 AUTO_WORDS = re.compile(r'AUTOGRAPH|SIGNATURE|\bINK\b|MARKS|CALLIGRAPHY|CHROMOGRAPH|SIGNED|TRACES|INKED', re.I)
@@ -17,8 +17,12 @@ NFL = ('Cardinals Falcons Ravens Bills Panthers Bears Bengals Browns Cowboys Bro
        'Seahawks Buccaneers Titans Commanders Redskins Oilers').split()
 NBA = ('Hawks Celtics Nets Hornets Bulls Cavaliers Mavericks Nuggets Pistons Warriors Rockets Pacers Clippers Lakers '
        'Grizzlies Heat Bucks Timberwolves Pelicans Knicks Thunder Magic 76ers Suns Kings Spurs Raptors Jazz Wizards '
-       'SuperSonics Supersonics Bobcats Bullets').split() + ['Trail Blazers']
-CITIES = ['Arizona', 'Atlanta', 'Baltimore', 'Buffalo', 'Carolina', 'Chicago', 'Cincinnati', 'Cleveland', 'Dallas', 'Denver',
+       'SuperSonics Supersonics Bobcats Bullets Trailblazers').split() + ['Trail Blazers']
+MLB = ['Diamondbacks', 'Braves', 'Orioles', 'Red Sox', 'Cubs', 'White Sox', 'Reds', 'Guardians', 'Indians', 'Rockies',
+       'Tigers', 'Astros', 'Royals', 'Angels', 'Dodgers', 'Marlins', 'Brewers', 'Twins', 'Mets', 'Yankees', 'Athletics',
+       'Phillies', 'Pirates', 'Padres', 'Giants', 'Mariners', 'Cardinals', 'Rays', 'Rangers', 'Blue Jays', 'Nationals',
+       'Expos', 'Senators', 'Cleveland']
+CITIES = ['Colorado', 'Texas', 'Montreal', 'Arizona', 'Atlanta', 'Baltimore', 'Buffalo', 'Carolina', 'Chicago', 'Cincinnati', 'Cleveland', 'Dallas', 'Denver',
           'Detroit', 'Green Bay', 'Houston', 'Indianapolis', 'Jacksonville', 'Kansas City', 'Las Vegas', 'Los Angeles', 'Miami',
           'Minnesota', 'New England', 'New Orleans', 'New York', 'Philadelphia', 'Pittsburgh', 'San Francisco', 'Seattle',
           'Tampa Bay', 'Tennessee', 'Washington', 'San Diego', 'St. Louis', 'Oakland', 'Boston', 'Brooklyn', 'Charlotte',
@@ -36,7 +40,7 @@ def peel_team(name, teams):
     """'Channing "Stacks" LorenzoNXT' or '"The American Nightmare" Smackdown' -> (name, team)."""
     for t in sorted(teams, key=len, reverse=True):
         prefix = '' if t in WWE_BRANDS else '(?:(?:' + '|'.join(re.escape(c) for c in CITIES) + r')\s)?'
-        m = re.match(r'^(.*?)(?:\s+|(?<=[a-z\.]))(' + prefix + re.escape(t) + r')$', name)
+        m = re.match(r'^(.*?)(?:\s+|(?<=[a-z\."]))(' + prefix + re.escape(t) + r')$', name)
         if m and m.group(1).strip():
             return m.group(1).strip(), m.group(2).strip()
     return name, ''
@@ -48,7 +52,8 @@ def is_team(x, teams):
 
 def nickname(team):
     if not team: return ''
-    if team.endswith('Trail Blazers'): return 'Trail Blazers'
+    for two in ('Trail Blazers', 'Red Sox', 'White Sox', 'Blue Jays'):
+        if team.endswith(two): return two
     return team.split()[-1]
 
 
@@ -89,6 +94,7 @@ def parse_lines(lines, cfg):
         if is_card:
             last_card = True
             cells = [clean(c) for c in re.split(r'\s{2,}', rest) if clean(c)]
+            cells = [re.sub(r'\s+(Rookie|RC)$', '', c) if i else c for i, c in enumerate(cells)]
             tagc = [x for x in cells[1:] if x in TAGS]
             cells = [cells[0]] + [x for x in cells[1:] if x not in TAGS] if cells else cells
         else:
@@ -202,7 +208,7 @@ def write(path, meta, out, cfg, women=frozenset()):
     def fmt(p):
         n, t = p
         s = n
-        if team_mode and t: s += ' | ' + nickname(t)
+        if team_mode and t: s += ' | ' + (t if cfg.get('full_team') else nickname(t))
         if n in women: s += ' | W'
         return s
     L = ['# name: ' + meta['name'], '# sport: ' + meta['sport'], '# added: ' + meta['added'],
