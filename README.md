@@ -104,7 +104,7 @@ lightbox — resize to roughly 1200px on the long edge before committing.
 ## Break guides
 
 `/breaks/` is a hub of reference pages for group breaks: who could land in each letter or
-team spot, box by box. Not linked from the storefront, and every page carries `noindex`.
+team spot, box by box. Linked from the storefront's Breaks menu; every page carries `noindex`.
 
 - `breaks/index.html` is the hub. `breaks/<id>.html` is one break (served at `/breaks/<id>`).
 - `build/breaks/build.py` generates every break page except `cc874` from the data files next
@@ -113,6 +113,9 @@ team spot, box by box. Not linked from the storefront, and every page carries `n
 - Pick-your-letter breaks carry price and open/sold per spot, copied from the breaker's store
   data on the day the page was built. They don't update on their own.
 - `breaks/cc874.html` was built separately; replace the whole file to update it.
+- The **Breaks** menu (storefront nav, hub, every break page) is written by `hub.py` between
+  `<!--BMENU-->` markers, including into `build/template.html`. After adding a break, run
+  `build.py`, then `hub.py`, then `python3 build/build_site.py` so the storefront picks it up.
 
 ## Iron Ledger and worker.js
 

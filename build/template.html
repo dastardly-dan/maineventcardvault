@@ -687,6 +687,22 @@ footer.site {
   .price { font-size: 17px; }
 }
 
+/*BMENU-CSS*/.bmenu { position: relative; }
+.bmenu > summary { list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 7px; padding: 7px 13px; border-radius: 999px;
+  border: 1px solid var(--line-2); background: var(--panel); color: var(--ink); font-size: 14px; font-weight: 600; user-select: none; white-space: nowrap; }
+.bmenu > summary::-webkit-details-marker { display: none; }
+.bmenu > summary::after { content: ""; width: 7px; height: 7px; border-right: 2px solid var(--gold); border-bottom: 2px solid var(--gold); transform: rotate(45deg) translateY(-2px); }
+.bmenu[open] > summary { border-color: var(--gold); }
+.bmenu[open] > summary::after { transform: rotate(-135deg) translateY(-1px); }
+.bmenu-list { position: absolute; right: 0; top: calc(100% + 8px); z-index: 80; width: 340px; max-width: calc(100vw - 24px); background: #0d1f38;
+  border: 1px solid var(--line-2); border-radius: 14px; box-shadow: 0 18px 40px rgba(3,9,17,.7); padding: 6px; }
+.bmenu-list a { display: block; text-decoration: none; color: var(--ink); padding: 9px 11px; border-radius: 10px; font-size: 14px; line-height: 1.35; border: 0; }
+.bmenu-list a:hover, .bmenu-list a.on { background: rgba(230,190,85,.1); }
+.bmenu-list a b { color: var(--gold); font-weight: 700; margin-right: 4px; }
+.bmenu-list a span { display: block; font-size: 12px; color: var(--ink-3); margin-top: 2px; }
+.bmenu-list a.all { border-top: 1px solid var(--line); margin-top: 4px; padding-top: 11px; color: var(--gold-2, #f1d07a); font-weight: 600; }
+.bmenu-list a.past { opacity: .65; }
+@media (max-width: 760px) { .bmenu-list { position: fixed; left: 12px; right: 12px; top: 64px; width: auto; max-height: calc(100vh - 80px); overflow-y: auto; } }/*/BMENU-CSS*/
 </style>
 <link rel="icon" type="image/png" href="assets/favicon.png">
 </head>
@@ -707,6 +723,7 @@ footer.site {
       <a href="#about">Shipping &amp; Condition</a>
       <a href="#follow">Follow</a>
     </nav>
+    <!--BMENU--><details class="bmenu"><summary>Breaks</summary><div class="bmenu-list"><a href="/breaks/cc871"><b>CC871</b>Club &amp; Chrome PYL<span>Colfax · Pick your letter · WWE · Nov 22</span></a><a href="/breaks/cc872"><b>CC872</b>Chrome, Absolute &amp; Midnight (Random Team)<span>Colfax · Random team · NFL · Nov 22</span></a><a href="/breaks/cc874"><b>CC874</b>Monster Multi: Random Letter<span>Colfax · Random letter · Multi-sport · Nov 22</span></a><a href="/breaks/jwj0246"><b>JWJ #0246</b>Cosmic Exalted Logo Club PYL<span>JWJ · Pick your letter · WWE · Nov 23</span></a><a href="/breaks/jwj0247"><b>JWJ #0247</b>Chromed Up Galaxy<span>JWJ · Random letter · Star Wars · Nov 23</span></a><a href="/breaks/jwj0244" class="past"><b>JWJ #0244</b>Balling on a Budget with Flagship NBA<span>JWJ · Random team · NBA · Nov 16</span></a><a class="all" href="/breaks/">All break guides</a></div></details><script>document.querySelectorAll("details.bmenu").forEach(function(d){d.addEventListener("toggle",function(){var l=d.querySelector(".bmenu-list");if(d.open&&window.innerWidth<=760){l.style.top=(d.querySelector("summary").getBoundingClientRect().bottom+8)+"px";}else{l.style.top="";}});});document.addEventListener("click",function(e){document.querySelectorAll("details.bmenu[open]").forEach(function(d){if(!d.contains(e.target))d.removeAttribute("open");});});document.addEventListener("keydown",function(e){if(e.key==="Escape")document.querySelectorAll("details.bmenu[open]").forEach(function(d){d.removeAttribute("open");});});</script><!--/BMENU-->
     <a class="btn gold" data-store-link href="https://www.ebay.com/str/maineventcardvault" target="_blank" rel="noopener">Shop on eBay</a>
   </div>
 </header>
