@@ -312,7 +312,7 @@ table.rows td small { color: var(--ink-3); }
             <div class="seg" id="tgroup"><button data-v="free">Best balance</button><button data-v="div">By division</button></div>
             <div class="hint" id="tgroupHint">Best balance mixes strong and weak teams so every spot is worth about the same. Set the spot count to the number of teams for one team per spot (pick your team).</div>
             <label class="f">College / NIL players</label>
-            <div class="seg" id="nil"><button data-v="own">Own spot</button><button data-v="fill">Fill light spots</button><button data-v="off">Leave out</button></div>
+            <div class="seg" id="nil"><button data-v="own">Own spot</button><button data-v="fill">Split by letter</button><button data-v="off">Leave out</button></div>
             <div class="hint" id="nilHint">Players shown only with a college team. Anyone who also has a pro team in your boxes goes to that team.</div>
           </div>
           <div id="letteropts">
@@ -470,7 +470,7 @@ table.rows td small { color: var(--ink-3); }
             <li><b>Fewer spots than teams:</b> teams are grouped so every spot is worth about the same (a strong team rides with a couple of light ones).</li>
             <li><b>One spot per team:</b> set spots to the team count for a pick-your-team break; each team is priced by its weight.</li>
             <li><b>By division:</b> for one league (NFL, NBA or MLB) the spots follow the divisions.</li>
-            <li><b>College / NIL players:</b> anyone with a pro team goes to that team. College-only players can be their own spot, fill the lightest spots to even things out, or be left out.</li>
+            <li><b>College / NIL players:</b> anyone with a pro team goes to that team. College-only players can be their own spot, be split by the first letter of their first or last name (each letter goes to one of the lighter spots, and the spot shows "+ college A, K, T"), or be left out.</li>
             <li><b>Old franchises</b> roll into today's team: Oilers to Titans, Redskins to Commanders, SuperSonics to Thunder, Expos to Nationals.</li>
           </ul>
         </div>
@@ -658,7 +658,11 @@ table.rows td small { color: var(--ink-3); }
     });
     var nilW = 0; nil.forEach(function (x) { nilW += x.w; });
     if (nil.length && S.nil === "own") units.push({ team: "College / NIL", w: nilW, names: nil, nilspot: true });
-    var fillers = nil.length && S.nil === "fill" ? nil.map(function (x) { return { team: x.n, w: x.w, names: [x], filler: true }; }) : [];
+    var fillers = [];
+    if (nil.length && S.nil === "fill") {
+      var byL = {}; nil.forEach(function (x) { (byL[x.L] = byL[x.L] || []).push(x); });
+      fillers = Object.keys(byL).map(function (L) { var w = 0; byL[L].forEach(function (x) { w += x.w; }); return { team: "College " + L, L: L, w: w, names: byL[L], filler: true }; });
+    }
     var sp = sports.filter(function (s) { return DIVS[s]; }), dmap = sp.length === 1 && sports.length === 1 ? divOf(sp[0]) : null, bins, mode;
     var teamCount = units.length;
     if (S.tgroup === "div" && dmap) {
@@ -668,7 +672,7 @@ table.rows td small { color: var(--ink-3); }
       bins = units.slice().sort(function (a, b) { return a.nilspot ? 1 : b.nilspot ? -1 : a.team.localeCompare(b.team); }).map(function (u) { return { u: [u], w: u.w }; }); mode = "each";
     } else { bins = packFree(units, N); mode = "free"; }
     bins = bins.filter(function (b) { return b.u.length; });
-    // college players used as filler go to the lightest spots, biggest first
+    // college players, grouped by letter, go to the lightest spots, heaviest letter first
     fillers.sort(function (a, c) { return c.w - a.w; }).forEach(function (u) {
       var lo = bins.reduce(function (m, b) { return b.w < m.w ? b : m; }, bins[0]); if (!lo) return; lo.u.push(u); lo.w += u.w;
     });
@@ -678,7 +682,7 @@ table.rows td small { color: var(--ink-3); }
       var subs = [];
       if (b.div === "College / NIL") subs.push(b.names ? "" : ""); else if (b.div) subs.push(real.map(function (u) { return u.team; }).join(", ")); else if (real.length > 1) subs.push(real.length + " teams");
       if (real.some(function (u) { return u.star; })) subs.push("starred");
-      if (fill.length) subs.push("+ " + fill.length + " college player" + (fill.length === 1 ? "" : "s"));
+      if (fill.length) { var fl = fill.map(function (u) { return u.L === "#" ? "123" : u.L; }).sort(function (a, c) { return ORDER.indexOf(a) - ORDER.indexOf(c); }); var fc = 0; fill.forEach(function (u) { fc += u.names.length; }); subs.push("+ college " + fl.join(", ") + " (" + fc + ")"); }
       b.sub = subs.filter(function (s) { return s; }).join(" · ");
       var seen = {}; b.names = [];
       b.u.forEach(function (u) { u.names.forEach(function (x) { if (!seen[x.n]) { seen[x.n] = 1; b.names.push(x); } }); });
@@ -881,7 +885,7 @@ table.rows td small { color: var(--ink-3); }
   function run() {
     var N = Math.max(2, Math.min(80, parseInt(S.n, 10) || 21));
     var c = collect(), list = c.list, teams = S.split === "teams";
-    $("teamopts").hidden = !teams; $("letteropts").hidden = teams; $("p3").hidden = teams;
+    $("teamopts").hidden = !teams; $("letteropts").hidden = teams; $("p3").hidden = teams && S.nil !== "fill";
     $("barsTitle").textContent = teams ? "Weight by team" : "Weight by letter";
     $("genderHint").textContent = list.length && !list.some(function (x) { return x.g === "F"; }) ? "None of the picked checklists mark women, so there are no Men / Women splits." : "Only checklists that mark women can split this way (WWE ones do).";
     function empty(msg) { $("stats").innerHTML = ""; $("bars").innerHTML = ""; $("barl").innerHTML = ""; $("warn").innerHTML = ""; $("money").hidden = true; $("spots").innerHTML = '<div class="empty">' + msg + "</div>"; LAST = null; }
@@ -890,7 +894,7 @@ table.rows td small { color: var(--ink-3); }
     if (teams) {
       tb = teamBins(list, N, c.sports);
       $("splitHint").textContent = tb.teamCount ? tb.teamCount + " teams in these boxes." + (tb.none ? " " + tb.none + " names have no team and are left out." : "") : "Letters works for any checklist. Teams works for checklists with team names (football, basketball, baseball, college).";
-      $("nilHint").textContent = tb.nil ? tb.nil + " player" + (tb.nil === 1 ? " is" : "s are") + " shown only with a college team. Anyone who also has a pro team in your boxes goes to that team." : "No college-only players in these boxes. Anyone with a pro team goes to that team.";
+      $("nilHint").textContent = (tb.nil ? tb.nil + " player" + (tb.nil === 1 ? " is" : "s are") + " shown only with a college team. Anyone who also has a pro team in your boxes goes to that team." : "No college-only players in these boxes. Anyone with a pro team goes to that team.") + (S.nil === "fill" ? " Split by letter: every college player whose " + (S.rule === "last" ? "last" : "first") + " name starts with the same letter goes to the same spot (change first or last name in section 3)." : "");
       $("tgroupHint").textContent = !tb.divOK && S.tgroup === "div" ? "Divisions work when every box is the same league (NFL, NBA or MLB). Using best balance instead." : "Best balance mixes strong and weak teams so every spot is worth about the same. For one team per spot (pick your team), set spots to " + tb.eachN + (tb.eachN > tb.teamCount ? " (" + tb.teamCount + " teams plus the college spot)" : "") + ".";
       if (!tb.teamCount && !tb.nil) return empty("None of the picked checklists have team names, so they can't split by team. Switch to Letters, or add a football, basketball or baseball checklist.");
       bins = tb.bins; total = tb.total;
