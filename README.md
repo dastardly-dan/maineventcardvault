@@ -154,6 +154,9 @@ team spot, box by box. Linked from the storefront's Breaks menu; every page carr
   `depth.py` then scores each set against the product's typical set of that kind: (odds / median) ^ 0.4,
   kept between 0.4 and 5. Not on the odds page yet: 2026 Topps Universe WWE (its link is broken), the 2026
   Chrome / Stadium Club / Cosmic WWE products and the Panini CSV products; those sets count as typical.
+- **How it works guides:** the How it works tab has a "Section by section" guide (`#/how/boxes`, `spots`,
+  `letters`, `points`, `pricing`, `results`) explaining every setting with examples. Each builder section has a
+  "How this works" link to its guide, and each guide links back to its section (`#/build/at/<key>`).
 - **Find a spot:** search box above the spot list filters to the spots holding a name or team (one or two
   letters match by letter range); the header search results link to `#/build/find/<name>`.
 - **Player value (hit depth):** `build/breaks/depth.py` counts, per product, how many different autograph,

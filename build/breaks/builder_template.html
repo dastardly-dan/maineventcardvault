@@ -44,6 +44,58 @@ __CSS__
 [hidden] { display: none !important; }
 /* scoring explainer */
 .sc { margin-top: 26px; }
+.gd { margin-top: 26px; }
+.gd h3.big { font-size: 22px; margin: 0 0 4px; }
+.gd .intro { color: var(--ink-2); max-width: 780px; margin: 0 0 14px; }
+.gnav { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 16px; }
+.gnav a { display: inline-flex; align-items: center; gap: 8px; padding: 7px 12px 7px 7px; border: 1px solid var(--line-2); border-radius: 999px; background: var(--panel); color: var(--ink); text-decoration: none; font-size: 13.5px; }
+.gnav a:hover { border-color: var(--gold); }
+.gnav a b, .gnum { display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; border-radius: 50%; background: var(--gold); color: #0b1726; font-size: 12.5px; font-weight: 800; flex: none; }
+.gsec { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 18px 16px; margin: 0 0 14px; scroll-margin-top: 130px; }
+.ghead { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 8px; }
+.ghead .gnum { width: 32px; height: 32px; font-size: 15px; }
+.ghead h4 { margin: 2px 0 2px; font-size: 19px; }
+.ghead p { margin: 0; color: var(--ink-2); font-size: 14px; }
+.gsec h5 { margin: 14px 0 4px; font-size: 14px; color: var(--gold-2); letter-spacing: .02em; }
+.gsec p, .gsec li { font-size: 14px; color: var(--ink-2); line-height: 1.55; }
+.gsec p { margin: 0 0 6px; }
+.gsec ul { margin: 4px 0 6px; padding-left: 18px; }
+.gsec li { margin: 4px 0; }
+.gsec li b, .gsec p b { color: var(--ink); }
+.gcols { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 20px; }
+@media (max-width: 860px) { .gcols { grid-template-columns: 1fr; gap: 6px; } }
+.gfig { background: var(--bg-2); border: 1px solid var(--line); border-radius: 12px; padding: 12px; margin: 14px 0 0; }
+.gcap { font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); margin: 0 0 8px; }
+.gfig .eq { font-size: 13px; color: var(--ink-2); background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 8px 11px; margin-top: 10px; }
+.gfig .eq b { color: var(--gold-2); }
+.gfig .brow { display: grid; grid-template-columns: 130px minmax(0, 1fr); align-items: center; gap: 8px; margin: 7px 0; font-size: 13px; }
+.gfig .brow .nm { color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.gfig .track { display: flex; height: 22px; background: var(--panel); border-radius: 6px; overflow: hidden; }
+.gfig .track span { display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; color: #0b1726; white-space: nowrap; overflow: hidden; border-right: 1px solid rgba(8, 21, 36, .55); }
+.gfig .track span { min-width: 34px; }
+@media (max-width: 560px) { .gfig .brow { grid-template-columns: 92px minmax(0, 1fr); } }
+.gfig .c-b { background: #5aa9ff; } .gfig .c-a { background: var(--gold); } .gfig .c-i { background: #4fd1a5; } .gfig .c-m { background: #c86bff; }
+.mockrow { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; gap: 10px; align-items: center; padding: 8px 10px; border: 1px solid var(--line); border-radius: 10px; background: var(--panel); margin-bottom: 6px; font-size: 13.5px; color: var(--ink); }
+.mockrow small { display: block; color: var(--ink-3); font-size: 11.5px; }
+.mockrow .mq { display: inline-flex; border: 1px solid var(--line-2); border-radius: 8px; overflow: hidden; }
+.mockrow .mq i, .mockrow .mq b { font-style: normal; width: 26px; text-align: center; padding: 3px 0; }
+.mockrow .mq i { background: var(--bg-2); color: var(--ink-2); }
+.mockrow .mx { color: var(--ink-3); font-size: 17px; }
+.mockpaste { margin: 0; padding: 10px 12px; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; color: var(--ink); font-size: 13px; line-height: 1.6; white-space: pre-wrap; }
+.gtab { width: 100%; border-collapse: collapse; font-size: 13px; }
+.gtab th { text-align: left; color: var(--ink-3); font-weight: 600; font-size: 11.5px; padding: 4px 6px; border-bottom: 1px solid var(--line); }
+.gtab td { padding: 6px; border-bottom: 1px solid var(--line); color: var(--ink-2); }
+.gtab td:not(:first-child), .gtab th:not(:first-child) { text-align: center; }
+.gtab td:not(:first-child) { color: var(--gold-2); font-weight: 700; }
+.mrow2 { display: flex; justify-content: space-between; gap: 10px; padding: 5px 0; border-bottom: 1px solid var(--line); font-size: 13.5px; color: var(--ink-2); }
+.mrow2 b { color: var(--ink); }
+.gtip { font-size: 13px; color: var(--ink-2); border-left: 3px solid var(--gold); padding: 6px 10px; margin: 14px 0 0; background: var(--bg-2); border-radius: 0 8px 8px 0; }
+.gtip b { color: var(--ink); }
+.gback { display: inline-block; margin: 12px 14px 0 0; font-size: 13.5px; color: var(--ink-3); text-decoration: none; border-bottom: 1px dashed var(--line-2); }
+.gback:hover { color: var(--ink); }
+.gsec .morelink { margin-right: 14px; }
+.panel h3 .qlink, .acts2 .qlink { float: right; font-size: 12.5px; font-weight: 500; letter-spacing: 0; text-transform: none; color: var(--gold-2); text-decoration: none; border-bottom: 1px dashed var(--gold); margin-top: 2px; }
+.acts2 .qlink { float: none; margin: auto 0 auto auto; }
 .sc h3.big { font-size: 22px; margin: 0 0 4px; }
 .sc .intro { color: var(--ink-2); max-width: 780px; margin: 0 0 14px; }
 .sc .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 12px; }
@@ -162,15 +214,15 @@ table.rows td small { color: var(--ink-3); }
   <section data-view="build">
     <div class="layout">
       <div>
-        <div class="panel">
-          <h3>1. Boxes in the break</h3>
+        <div class="panel" data-g="boxes">
+          <h3>1. Boxes in the break <a class="qlink" href="#/how/boxes">How this works</a></h3>
           <div id="prods"></div>
           <label class="f" for="paste" style="margin-top:14px">Or paste your own names (one per line)</label>
           <textarea class="in" id="paste" placeholder="John Cena&#10;Rhea Ripley | W&#10;Cody Rhodes | auto"></textarea>
           <div class="hint">Add "| W" for women and "| auto" for autograph names. Pasted names count as one box.</div>
         </div>
-        <div class="panel">
-          <h3>2. Spots</h3>
+        <div class="panel" data-g="spots">
+          <h3>2. Spots <a class="qlink" href="#/how/spots">How this works</a></h3>
           <label class="f">Split spots by</label>
           <div class="seg" id="split"><button data-v="letters">Letters</button><button data-v="teams">Teams</button></div>
           <div class="hint" id="splitHint">Letters works for any checklist. Teams works for checklists with team names (football, basketball, baseball, college).</div>
@@ -200,16 +252,16 @@ table.rows td small { color: var(--ink-3); }
           <div class="hint" id="genderHint"></div>
           </div>
         </div>
-        <div class="panel" id="p3">
-          <h3>3. Letter rule</h3>
+        <div class="panel" id="p3" data-g="letters">
+          <h3>3. Letter rule <a class="qlink" href="#/how/letters">How this works</a></h3>
           <label class="f">Go by</label>
           <div class="seg" id="rule"><button data-v="first">First name</button><button data-v="last">Last name</button></div>
           <label class="f">Nicknames on the card ("Stone Cold" Steve Austin)</label>
           <div class="seg" id="nick"><button data-v="printed">As printed</button><button data-v="real">Real name</button></div>
           <div class="hint">A leading "The" is always skipped, so The Rock is R.</div>
         </div>
-        <div class="panel">
-          <h3>4. What counts more</h3>
+        <div class="panel" data-g="points">
+          <h3>4. What counts more <a class="qlink" href="#/how/points">How this works</a></h3>
           <div class="row4">
             <div><label class="f" for="wb">Base</label><input class="in" id="wb" type="number" step="0.5" min="0" value="1"></div>
             <div><label class="f" for="wa">Auto</label><input class="in" id="wa" type="number" step="0.5" min="0" value="2"></div>
@@ -225,8 +277,8 @@ table.rows td small { color: var(--ink-3); }
           <div class="hint">Use this for the names buyers actually chase, so their letters get treated as the heavy hitters they are. One huge star can't be split, so their spot may stay a bit heavier. In team breaks you can star a whole team too, like "Yankees | 2".</div>
           <a class="morelink" href="#/how/scoring">How the points work, with examples</a>
         </div>
-        <div class="panel">
-          <h3>5. Pricing (optional)</h3>
+        <div class="panel" data-g="pricing">
+          <h3>5. Pricing (optional) <a class="qlink" href="#/how/pricing">How this works</a></h3>
           <div class="hint" style="margin-top:0">Enter what the break costs you and it prices every spot by its share of the points, so the spot with the heavy hitters costs more.</div>
           <label class="f">What you paid</label>
           <div id="costs"></div>
@@ -245,11 +297,11 @@ table.rows td small { color: var(--ink-3); }
       </div>
 
       <div>
-        <div class="stats" id="stats"></div>
+        <div class="stats" id="stats" data-g="results"></div>
         <div class="money2" id="money" hidden></div>
         <div class="panel" style="margin-bottom:14px"><h3 style="margin-bottom:4px" id="barsTitle">Weight by letter</h3><div class="bars" id="bars"></div><div class="barl" id="barl"></div></div>
         <div id="warn"></div>
-        <div class="acts2"><button class="btn gold" id="copy">Copy spot list</button><button class="btn" id="csv">Download CSV</button><button class="btn" id="expand">Show every name</button></div>
+        <div class="acts2"><button class="btn gold" id="copy">Copy spot list</button><button class="btn" id="csv">Download CSV</button><button class="btn" id="expand">Show every name</button><a class="qlink" href="#/how/results">Reading the results</a></div>
         <div class="spotfind"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><input id="sf" type="search" placeholder="Find a spot: type a name, team or letter" autocomplete="off" aria-label="Find the spot a name or team is in"><span class="n" id="sfn"></span><button class="x" id="sfx" type="button" aria-label="Clear" hidden>&times;</button></div>
         <div class="spotlist" id="spots"></div>
       </div>
@@ -266,11 +318,227 @@ table.rows td small { color: var(--ink-3); }
 
   <section data-view="how" hidden>
     <h2 class="display">How it works</h2>
+    <p class="intro" style="color:var(--ink-2);max-width:780px;margin:0 0 14px">The short version first. Below it, every section of the builder explained setting by setting.</p>
     <div class="cards">
       <div class="card"><h3>1. Score every name</h3><ul><li>Each name earns points for every box it can come out of: base, autograph, insert, multi-person card.</li><li>Two boxes of the same product count twice.</li><li>Star multipliers scale a name up, so a Cena letter outweighs a letter full of NXT rookies.</li></ul></div>
       <div class="card"><h3>2. Split the heavy letters</h3><ul><li>A fair share is the total score divided by your spot count.</li><li>Any letter above about 1.3 fair shares gets cut, either by second letter (SA-SH, SI-SZ) or into Men and Women, whichever evens it out better.</li><li>It keeps cutting until there are enough pieces to fill every spot.</li></ul></div>
       <div class="card"><h3>3. Pack the spots</h3><ul><li>Best balance: biggest pieces go first into the lightest spot, then it swaps pieces between the heaviest and lightest spots until nothing improves.</li><li>A to Z order: finds the cut points along the alphabet that land closest to a fair share each.</li></ul></div>
-      <div class="card"><h3>4. Price it (optional)</h3><ul><li>Enter what you need the break to bring in, and each spot is priced by its share of the total score, rounded to the dollar.</li><li>Treat it as a starting point. Hype, rookies and case hits move real prices.</li></ul></div>
+      <div class="card"><h3>4. Price it (optional)</h3><ul><li>Enter what you paid (or a sales goal), and each spot is priced by its share of the total score, rounded to the dollar.</li><li>Treat it as a starting point. Hype, rookies and case hits move real prices.</li></ul></div>
+    </div>
+
+    <div class="gd" id="guides">
+      <h3 class="big">Section by section</h3>
+      <p class="intro">Every setting in the builder, what it does and when to change it. The defaults work for most breaks, so start there and only touch what you need.</p>
+      <div class="gnav">
+        <a href="#/how/boxes"><b>1</b>Boxes in the break</a>
+        <a href="#/how/spots"><b>2</b>Spots</a>
+        <a href="#/how/letters"><b>3</b>Letter rule</a>
+        <a href="#/how/points"><b>4</b>What counts more</a>
+        <a href="#/how/pricing"><b>5</b>Pricing</a>
+        <a href="#/how/results"><b>6</b>Reading the results</a>
+      </div>
+
+      <section class="gsec" id="g-boxes">
+        <div class="ghead"><span class="gnum">1</span><div><h4>Boxes in the break</h4><p>Tells the builder which names can come out of your break, and how many times.</p></div></div>
+        <div class="gcols">
+          <div>
+            <h5>Add a box</h5>
+            <p>The "Add a box" dropdown holds every checklist in the library, grouped by sport. Pick one and it moves into your list with a counter. The checklists come from the official Topps and Panini lists, and the Checklist library tab shows exactly what's in each one.</p>
+            <h5>How many of each</h5>
+            <p>Set the counter to the number of boxes you're actually opening. Every name's points get multiplied by that count, so two boxes of a product count twice as much as one. If a name shows up in two different products, the points from both add together.</p>
+            <h5>Taking a box out</h5>
+            <p>The x next to a box removes it. Your other settings stay put.</p>
+            <h5>Paste your own names</h5>
+            <p>For a product that isn't in the library yet, or a custom list, type or paste one name per line. Add "| W" after a woman's name so Men / Women splits work, and "| auto" after anyone with an autograph so they get auto points. The whole pasted list counts as one box.</p>
+          </div>
+          <div>
+            <div class="gfig">
+              <div class="gcap">What a picked box looks like</div>
+              <div class="mockrow"><span>2026 Topps Chrome WWE<small>WWE · 2 boxes</small></span><span class="mq"><i>-</i><b>2</b><i>+</i></span><span class="mx">&times;</span></div>
+              <div class="mockrow"><span>2026 Topps Stadium Club WWE<small>WWE · 1 box</small></span><span class="mq"><i>-</i><b>1</b><i>+</i></span><span class="mx">&times;</span></div>
+              <div class="eq">Cody Rhodes is in both. His Chrome points count <b>twice</b> (2 boxes) and his Stadium Club points count <b>once</b>, then they're added together.</div>
+            </div>
+            <div class="gfig">
+              <div class="gcap">Pasting names</div>
+<pre class="mockpaste">John Cena
+Rhea Ripley | W
+Cody Rhodes | auto
+Bianca Belair | W | auto</pre>
+            </div>
+            <div class="gtip"><b>Tip:</b> the box count also drives the Pricing section, since what you paid per box gets multiplied by it.</div>
+          </div>
+        </div>
+        <a class="gback" href="#/build/at/boxes">Back to Boxes in the builder</a>
+      </section>
+
+      <section class="gsec" id="g-spots">
+        <div class="ghead"><span class="gnum">2</span><div><h4>Spots</h4><p>How many spots you're selling, and whether they're cut by letter or by team.</p></div></div>
+        <div class="gcols">
+          <div>
+            <h5>Split spots by: Letters or Teams</h5>
+            <p><b>Letters</b> works for any checklist. Buyers get every name starting with their letter (or letters). <b>Teams</b> works for checklists that list a team next to each player: football, basketball, baseball and college products.</p>
+            <h5>How many spots</h5>
+            <p>Anywhere from 2 to 80. The builder figures out a "fair share" by dividing all the points by your spot count, then tries to get every spot close to it.</p>
+            <h5>Letter options</h5>
+            <ul>
+              <li><b>Group letters.</b> Best balance pairs up whatever evens things out, so light letters get bundled (Q / V / Z). Keep A to Z order only groups neighbors (E-F), which is easier to explain on a stream but a little less even.</li>
+              <li><b>Simple, Balanced or Most even.</b> This is the trade between clean labels and equal spots. Simple keeps whole letters whenever it can. Most even is willing to cut more letters into pieces to get every spot closer to the same size. Balanced sits in between.</li>
+              <li><b>Two-letter ranges.</b> When one letter is too big for a single spot, it gets cut at the second letter where the halves come out closest, like SA-SH and SI-SZ. Any letter over about 1.3 fair shares is a candidate. Turn this off if you never want a letter split this way.</li>
+              <li><b>Men / Women spots.</b> For checklists that mark women (the WWE and UFC ones do). "When it helps" splits a letter into Men and Women only when that evens things out better than a letter cut, and only if the smaller side is at least about a fifth of the letter. "Every letter" splits all of them. "Never" turns it off.</li>
+            </ul>
+          </div>
+          <div>
+            <div class="gfig">
+              <div class="gcap">Cutting a heavy letter (20 spots, fair share 50 points)</div>
+              <div class="brow"><div class="nm">S, 130 points</div><div class="track"><span class="c-a" style="width:100%">2.6 fair shares</span></div></div>
+              <div class="brow"><div class="nm">SA-SH</div><div class="track"><span class="c-a" style="width:50%">65</span></div></div>
+              <div class="brow"><div class="nm">SI-SZ</div><div class="track"><span class="c-a" style="width:50%">65</span></div></div>
+              <div class="brow"><div class="nm">Q / V / Z</div><div class="track"><span class="c-i" style="width:14%">Q 18</span><span class="c-m" style="width:12%">V 16</span><span class="c-b" style="width:11%">Z 14</span></div></div>
+              <div class="eq">S gets cut at its second letter. Three light letters share a spot (48 points) so it lands near the fair share too.</div>
+            </div>
+          </div>
+        </div>
+        <h5>Team options</h5>
+        <div class="gcols">
+          <div>
+            <ul>
+              <li><b>Fewer spots than teams.</b> Best balance mixes strong and weak teams so every spot is worth about the same, like Cowboys / Jaguars.</li>
+              <li><b>One team per spot (pick your team).</b> Set the spot count to the number of teams. The hint under "Group teams" tells you the exact number for your boxes.</li>
+              <li><b>By division.</b> When every box is the same league (NFL, NBA or MLB), you can sell divisions instead: AFC East, NL West and so on. The spot count is ignored in this mode.</li>
+              <li><b>Players on more than one team</b> split their points evenly between those teams.</li>
+              <li><b>Old franchises</b> fold into today's team: Oilers go to the Titans, Redskins to the Commanders, SuperSonics to the Thunder, Bullets to the Wizards, Bobcats to the Hornets, Expos to the Nationals and Indians to the Guardians.</li>
+              <li><b>Names with no team</b> (some legends and checklist extras) are left out of team breaks. The hint says how many.</li>
+            </ul>
+          </div>
+          <div>
+            <h5 style="margin-top:0">College / NIL players</h5>
+            <p>Anyone who also has a pro team in your boxes goes to that pro team. The setting only covers players who show up with a college team alone.</p>
+            <ul>
+              <li><b>Own spot</b> (the default): all of them become one "College / NIL" spot. For one team per spot you'll need the team count plus one.</li>
+              <li><b>Split by letter:</b> they're grouped by the first letter of their name (or last name, if section 3 is set that way), and each letter goes to whichever team spot is lightest. The spot shows it, like "+ college A, K (12)".</li>
+              <li><b>Leave out:</b> they aren't in the break at all.</li>
+            </ul>
+          </div>
+        </div>
+        <a class="gback" href="#/build/at/spots">Back to Spots in the builder</a>
+      </section>
+
+      <section class="gsec" id="g-letters">
+        <div class="ghead"><span class="gnum">3</span><div><h4>Letter rule</h4><p>Which letter a name belongs to. Settle this before the break and say it on stream, since it's the first thing buyers ask.</p></div></div>
+        <div class="gcols">
+          <div>
+            <h5>Go by first name or last name</h5>
+            <p>First name is the usual for wrestling. Last name is common for team sports. With last name, suffixes like Jr., Sr., II and III are skipped, so Ken Griffey Jr. is a G. One-word names (Rikishi, Sting) use that word either way.</p>
+            <h5>Nicknames on the card</h5>
+            <p>Some cards print a nickname in front of the name. <b>As printed</b> goes by what's on the card. <b>Real name</b> ignores the nickname.</p>
+            <h5>Always true</h5>
+            <ul>
+              <li>A leading "The" is skipped, so The Rock is an R.</li>
+              <li>Accents don't matter: Rey F&eacute;nix is an F.</li>
+              <li>Names starting with a number go in a "123" group.</li>
+              <li>In team breaks this section only shows when college players are split by letter.</li>
+            </ul>
+          </div>
+          <div>
+            <div class="gfig">
+              <div class="gcap">Which letter each setting gives</div>
+              <table class="gtab">
+                <thead><tr><th>Name on the card</th><th>First, as printed</th><th>First, real name</th><th>Last name</th></tr></thead>
+                <tbody>
+                  <tr><td>"Hacksaw" Jim Duggan</td><td>H</td><td>J</td><td>D</td></tr>
+                  <tr><td>"Million Dollar Man" Ted DiBiase</td><td>M</td><td>T</td><td>D</td></tr>
+                  <tr><td>"The American Nightmare" Cody Rhodes</td><td>A</td><td>C</td><td>R</td></tr>
+                  <tr><td>The Rock</td><td>R</td><td>R</td><td>R</td></tr>
+                  <tr><td>Ken Griffey Jr.</td><td>K</td><td>K</td><td>G</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <a class="gback" href="#/build/at/letters">Back to Letter rule in the builder</a>
+      </section>
+
+      <section class="gsec" id="g-points">
+        <div class="ghead"><span class="gnum">4</span><div><h4>What counts more</h4><p>How many points each kind of card is worth. Points decide how heavy each letter or team is, which decides the spots and their prices.</p></div></div>
+        <div class="gcols">
+          <div>
+            <h5>Base, Auto, Insert, Multi</h5>
+            <p>Points a name earns for showing up in that part of the checklist, per box. The defaults are 1 for base, 2 for an autograph set, 0.5 for an insert or relic set, and 0.5 for a card shared with other people (dual and triple cards). A name in the base set and an autograph set scores both. Raise Auto if your buyers are chasing autos; set Base to 0 if base cards don't matter to them.</p>
+            <h5>Player value: Off, Normal, Strong</h5>
+            <p>Turns two signals from the official lists into extra points. Stars and top rookies are in far more autograph and insert sets than role players, and the Topps pack odds show how hard each set is to pull, so a 1 per case autograph counts several times a 1 per pack insert. Normal is the default. Strong leans on it harder. Off scores every set the same.</p>
+          </div>
+          <div>
+            <h5>Star names</h5>
+            <p>One per line, "name | multiplier". The multiplier scales that name's points, so "John Cena | 5" makes him count five times as much. Leave the number off and it uses 3. A short name works if it's a whole word in the full name, so "Cena | 5" also catches John Cena. In team breaks, a team name works the same way: "Yankees | 2".</p>
+            <p>Use it for the names buyers actually chase. One huge star can't be split across spots, so their spot may stay a little heavier, and it'll cost more.</p>
+            <div class="eq">Rhea Ripley with the default points and Player value off: base <b>1</b> + auto <b>2</b> + insert <b>0.5</b> + multi <b>0.5</b> = <b>4 points</b> per box. Starred at 3: <b>12 points</b>.</div>
+          </div>
+        </div>
+        <a class="morelink" href="#/how/scoring">See the points worked out with graphics</a>
+        <a class="gback" href="#/build/at/points">Back to What counts more in the builder</a>
+      </section>
+
+      <section class="gsec" id="g-pricing">
+        <div class="ghead"><span class="gnum">5</span><div><h4>Pricing (optional)</h4><p>Tell it what the break costs you and it prices every spot by its share of the points, so the spot with the heavy hitters costs more.</p></div></div>
+        <div class="gcols">
+          <div>
+            <h5>What you paid</h5>
+            <p>One box for each product you picked. Enter the price of one box (or one case, if you're counting a case as one box) and it's multiplied by the box count from section 1.</p>
+            <h5>Other costs, Fees, Profit</h5>
+            <ul>
+              <li><b>Other costs:</b> shipping, supplies, giveaways, anything else the break costs you.</li>
+              <li><b>Fees:</b> your platform's selling and payment fees as a share of sales. It starts at 10%.</li>
+              <li><b>Profit:</b> what you want to make on top of your cost. It starts at 20%.</li>
+            </ul>
+            <h5>Lowest spot price</h5>
+            <p>Keeps the light spots from looking too cheap. Any spot under it gets raised to it, and the difference comes off the heavier spots so the total stays the same.</p>
+            <h5>Or set a sales goal</h5>
+            <p>Skip the math and type the total you want the spots to bring in. It overrides the cost, fees and profit fields.</p>
+          </div>
+          <div>
+            <div class="gfig">
+              <div class="gcap">Worked example: 2 boxes at $450, $40 other costs, 10% fees, 20% profit</div>
+              <div class="mrow2"><span>What the break costs you</span><b>$940</b></div>
+              <div class="mrow2"><span>Break even after fees: 940 &divide; 0.90</span><b>$1,045</b></div>
+              <div class="mrow2"><span>Target: 940 &times; 1.20 &divide; 0.90</span><b>$1,253</b></div>
+              <div class="eq">The target gets split by points. A spot holding 8% of the points is priced at about 8% of $1,253, or <b>$100</b>. Prices round to the dollar, so the total can be off by a few dollars.</div>
+            </div>
+            <div class="gfig">
+              <div class="gcap">Lowest spot price of $70 on a $300 goal</div>
+              <div class="brow"><div class="nm">Spot 1, 50%</div><div class="track"><span class="c-a" style="width:72%">$150 to $144</span></div></div>
+              <div class="brow"><div class="nm">Spot 2, 30%</div><div class="track"><span class="c-a" style="width:43%">$90 to $86</span></div></div>
+              <div class="brow"><div class="nm">Spot 3, 20%</div><div class="track"><span class="c-i" style="width:34%">$60 to $70</span></div></div>
+            </div>
+            <div class="gtip"><b>Treat it as a starting point.</b> Hype, a hot rookie or a chase case hit can move what a spot will really sell for.</div>
+          </div>
+        </div>
+        <a class="gback" href="#/build/at/pricing">Back to Pricing in the builder</a>
+      </section>
+
+      <section class="gsec" id="g-results">
+        <div class="ghead"><span class="gnum">6</span><div><h4>Reading the results</h4><p>Everything on the right side of the builder updates as soon as you change a setting.</p></div></div>
+        <div class="gcols">
+          <div>
+            <h5>The numbers across the top</h5>
+            <ul>
+              <li><b>Names, boxes, spots:</b> what went into the build.</li>
+              <li><b>Lightest vs heaviest:</b> the lightest spot's points as a share of the heaviest. 100% would be perfectly even, so the closer to 100%, the fairer the break.</li>
+              <li><b>Price range:</b> the cheapest and priciest spot, when pricing is on. The money box under it shows your cost, break even, target, what the spot prices add up to and the profit after fees if every spot sells.</li>
+            </ul>
+            <h5>Weight by letter (or team)</h5>
+            <p>Each bar is how many points a letter has. Highlighted bars are over about 1.3 fair shares, which are the ones that get cut. In team breaks the bars run from heaviest team to lightest.</p>
+          </div>
+          <div>
+            <h5>The spot list</h5>
+            <p>Each spot shows its number and label, a meter for its weight, the top names by points, its share of the total, how many names and how many have autos, plus its price. Click a spot to see every name in it, tagged AUTO or STAR.</p>
+            <h5>Find a spot</h5>
+            <p>The search box above the spot list narrows it to the spot holding a name or team and highlights the name. Type one or two letters ("s" or "sm") to find the spot covering them. The search at the top of the page works from any tab and links straight to the spot.</p>
+            <h5>Sharing it</h5>
+            <p><b>Copy spot list</b> copies a plain text list for your stream notes or listing. <b>Download CSV</b> gives you a spreadsheet. <b>Show every name</b> opens every spot at once. Your settings are saved in this browser, so the build is still there next time.</p>
+          </div>
+        </div>
+        <a class="gback" href="#/build/at/results">Back to the results in the builder</a>
+      </section>
     </div>
 
     <div class="sc" id="scoring">
@@ -937,14 +1205,19 @@ table.rows td small { color: var(--ink-3); }
     [].forEach.call(document.querySelectorAll("#tabs a"), function (a) { a.classList.toggle("on", a.getAttribute("data-v") === v); });
     document.body.classList.toggle("compact", v !== "build");
   }
+  function scrollToEl(el) {
+    var hd = document.querySelector("header"), pos = hd && getComputedStyle(hd).position, off = pos === "sticky" || pos === "fixed" ? hd.offsetHeight : 0;
+    window.scrollTo(0, el.getBoundingClientRect().top + window.scrollY - off - 12);
+  }
   function route() {
     var h = location.hash.replace(/^#\/?/, ""), parts = h.split("/"), v = parts[0] || "build";
     if (v === "search") { var term = decodeURIComponent(parts.slice(1).join("/")); if (qEl.value.trim() !== term) qEl.value = term; show("search"); drawSearch(term); return; }
     qEl.value = "";
+    if (v === "build" && parts[1] === "at") { show("build"); var key = parts[2]; history.replaceState(null, "", "#/build"); setTimeout(function () { var el = document.querySelector('[data-g="' + key + '"]'); if (key === "letters" && el && el.hidden) el = document.querySelector('[data-g="spots"]'); if (el) scrollToEl(el); }, 30); return; }
     if (v === "build" && parts[1] === "find") { show("build"); $("sf").value = decodeURIComponent(parts.slice(2).join("/")); history.replaceState(null, "", "#/build"); setTimeout(function () { applyFind(true); }, 30); return; }
-    if (v === "checklists") { show("checklists"); drawLib(); } else if (v === "how") { show("how"); if (parts[1] === "scoring") setTimeout(function () { var el = document.getElementById("scoring"); if (!el) return; var hd = document.querySelector("header"), off = hd && getComputedStyle(hd).position === "sticky" ? hd.offsetHeight : 0; window.scrollTo(0, el.getBoundingClientRect().top + window.scrollY - off - 12); }, 30); } else show("build");
+    if (v === "checklists") { show("checklists"); drawLib(); } else if (v === "how") { show("how"); if (parts[1]) setTimeout(function () { var el = document.getElementById(parts[1] === "scoring" ? "scoring" : "g-" + parts[1]); if (el) scrollToEl(el); }, 30); } else show("build");
   }
-  window.addEventListener("hashchange", function () { if (!/\/how\/scoring/.test(location.hash)) window.scrollTo(0, 0); route(); });
+  window.addEventListener("hashchange", function () { if (!/^#\/(how\/[a-z]|build\/(at|find)\/)/.test(location.hash)) window.scrollTo(0, 0); route(); });
   drawProds(); run(); route();
 })();
 </script>
