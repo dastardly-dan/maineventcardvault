@@ -1,8 +1,10 @@
 """Hit depth: how many different autograph / insert / multi-person sets each player appears in, per product.
 
 Card makers put their stars and top rookies into far more hit sets than role players, so this count is a
-value signal that comes straight from the checklist. Output: depth.json {product_id: {name_key: [A, I, M]}}
-(only players with a count above 1). builder.py attaches it to each checklist row.
+value signal that comes straight from the checklist. Where Topps pack odds are known (odds.json, from odds_parse.py), each set counts by how rare it is
+next to the product's typical set of that kind instead of as 1, so a 1-per-case autograph counts several
+times a 1-per-pack insert. Output: depth.json {product_id: {name_key: [A, I, M]}} (only players whose
+values differ from 1). builder.py attaches it to each checklist row.
 
   python3 build/breaks/depth.py <cards_dir> [<cards_dir> ...] [--panini <csv> <id> ...]
 
@@ -64,17 +66,39 @@ def from_panini(path):
         for n in names: sets[key(n)][idx].add(root[cs])
     return sets
 
-def pack(sets):
+def mults(sets, odds):
+    """Per kind (auto, insert, multi): how rare each set is next to the product's typical set of that kind.
+    (packs per hit / median packs per hit) ** 0.4, kept between 0.4 and 5. Sets with no odds count as 1."""
+    out = [{}, {}, {}]
+    for idx in range(3):
+        subs = {s for v in sets.values() for s in v[idx]}
+        known = sorted(odds[s] for s in subs if s in odds)
+        if len(known) < 2: continue
+        med = known[len(known) // 2]
+        for s in subs:
+            if s in odds: out[idx][s] = min(5.0, max(0.4, (odds[s] / med) ** 0.4))
+    return out
+
+def pack(sets, odds=None):
     out = {}
+    if not odds:
+        for k, v in sets.items():
+            c = [len(x) for x in v]
+            if max(c) > 1: out[k] = c
+        return out
+    m = mults(sets, odds)
     for k, v in sets.items():
-        c = [len(x) for x in v]
-        if max(c) > 1: out[k] = c
+        c = [round(sum(m[i].get(s, 1.0) for s in v[i]), 1) if v[i] else 1 for i in range(3)]
+        c = [x if x > 0 else 1 for x in c]
+        if any(abs(x - 1) > 0.1 for x in c): out[k] = [int(x) if x == int(x) else x for x in c]
     return out
 
 if __name__ == '__main__':
     args = sys.argv[1:]
     out_path = os.path.join(HERE, 'depth.json')
     D = json.load(open(out_path)) if os.path.exists(out_path) else {}
+    op = os.path.join(HERE, 'odds.json')
+    ODDS = json.load(open(op)) if os.path.exists(op) else {}
     lib = {os.path.basename(f)[:-4] for f in glob.glob(os.path.join(HERE, 'checklists', '*.txt'))}
     if '--panini' in args:
         i = args.index('--panini'); pan = args[i + 1:]; args = args[:i]
@@ -83,7 +107,7 @@ if __name__ == '__main__':
     for d in args:
         for f in sorted(glob.glob(os.path.join(d, '*.cards.json'))):
             pid = os.path.basename(f)[:-11]
-            if pid in lib: D[pid] = pack(from_cards(json.load(open(f))))
+            if pid in lib: D[pid] = pack(from_cards(json.load(open(f))), ODDS.get(pid))
     D = {k: v for k, v in D.items() if k in lib}
     json.dump(D, open(out_path, 'w'), separators=(',', ':'), sort_keys=True)
-    print(len(D), 'products,', sum(len(v) for v in D.values()), 'players with depth > 1; missing:', sorted(lib - set(D)))
+    print(len(D), 'products,', sum(len(v) for v in D.values()), 'players with a value other than 1; missing:', sorted(lib - set(D)))

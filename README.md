@@ -148,6 +148,14 @@ team spot, box by box. Linked from the storefront's Breaks menu; every page carr
   for reference only since it points at session paths). topps.com shows a bot check that the person has to
   click; the PDFs themselves on cdn.shopify.com download fine in the browser. 2026 Topps Update Series
   Baseball was skipped: its link on the Topps page returns 404.
+- **Topps pack odds:** `build/breaks/odds_parse.py` reads the odds PDFs linked from topps.com/pages/odds
+  (converted with `pdftotext -layout`, one `<product_id>.txt` each; links in `build/breaks/odds_sources.json`)
+  and writes `build/breaks/odds.json` (packs per hit for each checklist set, 81 products, about 1,230 sets).
+  `depth.py` then scores each set against the product's typical set of that kind: (odds / median) ^ 0.4,
+  kept between 0.4 and 5. Not on the odds page yet: 2026 Topps Universe WWE (its link is broken), the 2026
+  Chrome / Stadium Club / Cosmic WWE products and the Panini CSV products; those sets count as typical.
+- **Find a spot:** search box above the spot list filters to the spots holding a name or team (one or two
+  letters match by letter range); the header search results link to `#/build/find/<name>`.
 - **Player value (hit depth):** `build/breaks/depth.py` counts, per product, how many different autograph,
   insert and multi-person sets each player is in (parallels folded into their root set) and writes
   `build/breaks/depth.json`; `builder.py` appends `[autoSets, insertSets, multiSets]` to rows where any is above 1.
