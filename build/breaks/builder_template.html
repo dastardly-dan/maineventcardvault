@@ -26,6 +26,22 @@ __CSS__
 .qty span { min-width: 24px; text-align: center; font-weight: 700; font-size: 14px; }
 .qty.on { border-color: var(--gold); }
 .qty.on span { color: var(--gold); }
+.costrow { display: grid; grid-template-columns: minmax(0, 1fr) 110px; gap: 8px; align-items: center; padding: 6px 0; border-bottom: 1px solid var(--line); font-size: 13.5px; }
+.costrow .cn { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--ink-2); }
+.costrow .cn small { color: var(--ink-3); }
+.money { position: relative; }
+.money::before { content: "$"; position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: var(--ink-3); font-size: 13px; }
+.money input { padding-left: 21px; }
+.pct { position: relative; }
+.pct::after { content: "%"; position: absolute; right: 10px; top: 50%; transform: translateY(-50%); color: var(--ink-3); font-size: 13px; }
+.row3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.money2 { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; margin-bottom: 14px; font-size: 14px; color: var(--ink-2); }
+.money2 .mrow { display: flex; justify-content: space-between; gap: 10px; padding: 3px 0; }
+.money2 .mrow b { color: var(--ink); }
+.money2 .mrow.tot { border-top: 1px solid var(--line); margin-top: 5px; padding-top: 7px; }
+.money2 .mrow.tot b { color: var(--gold-2); }
+.money2 .neg { color: #ff8a8a !important; }
+[hidden] { display: none !important; }
 /* scoring explainer */
 .sc { margin-top: 26px; }
 .sc h3.big { font-size: 22px; margin: 0 0 4px; }
@@ -144,10 +160,22 @@ table.rows td small { color: var(--ink-3); }
         </div>
         <div class="panel">
           <h3>2. Spots</h3>
-          <div class="row2">
+          <label class="f">Split spots by</label>
+          <div class="seg" id="split"><button data-v="letters">Letters</button><button data-v="teams">Teams</button></div>
+          <div class="hint" id="splitHint">Letters works for any checklist. Teams works for checklists with team names (football, basketball, baseball, college).</div>
+          <div class="row2" style="margin-top:12px">
             <div><label class="f" for="n">How many spots</label><input class="in" id="n" type="number" min="2" max="80" value="21"></div>
-            <div><label class="f" for="goal">Sales goal ($, optional)</label><input class="in" id="goal" type="number" min="0" step="5" placeholder="e.g. 2500"></div>
+            <div></div>
           </div>
+          <div id="teamopts" hidden>
+            <label class="f">Group teams</label>
+            <div class="seg" id="tgroup"><button data-v="free">Best balance</button><button data-v="div">By division</button></div>
+            <div class="hint" id="tgroupHint">Best balance mixes strong and weak teams so every spot is worth about the same. Set the spot count to the number of teams for one team per spot (pick your team).</div>
+            <label class="f">College / NIL players</label>
+            <div class="seg" id="nil"><button data-v="own">Own spot</button><button data-v="fill">Fill light spots</button><button data-v="off">Leave out</button></div>
+            <div class="hint" id="nilHint">Players shown only with a college team. Anyone who also has a pro team in your boxes goes to that team.</div>
+          </div>
+          <div id="letteropts">
           <label class="f">Group letters</label>
           <div class="seg" id="group"><button data-v="free">Best balance</button><button data-v="alpha">Keep A to Z order</button></div>
           <div class="hint">Best balance mixes light letters together (like Q/V/Z). A to Z keeps neighbors together (like E-F).</div>
@@ -159,8 +187,9 @@ table.rows td small { color: var(--ink-3); }
           <label class="f">Men / Women spots</label>
           <div class="seg" id="gender"><button data-v="auto">When it helps</button><button data-v="all">Every letter</button><button data-v="off">Never</button></div>
           <div class="hint" id="genderHint"></div>
+          </div>
         </div>
-        <div class="panel">
+        <div class="panel" id="p3">
           <h3>3. Letter rule</h3>
           <label class="f">Go by</label>
           <div class="seg" id="rule"><button data-v="first">First name</button><button data-v="last">Last name</button></div>
@@ -179,14 +208,32 @@ table.rows td small { color: var(--ink-3); }
           <div class="hint">Points per appearance, per box. A name in the base set and an auto set scores base plus auto.</div>
           <label class="f" for="stars" style="margin-top:12px">Star names (name | multiplier)</label>
           <textarea class="in" id="stars" placeholder="John Cena | 5&#10;Roman Reigns | 4&#10;Rhea Ripley | 3"></textarea>
-          <div class="hint">Use this for the names buyers actually chase, so their letters get treated as the heavy hitters they are. One huge star can't be split, so their spot may stay a bit heavier.</div>
+          <div class="hint">Use this for the names buyers actually chase, so their letters get treated as the heavy hitters they are. One huge star can't be split, so their spot may stay a bit heavier. In team breaks you can star a whole team too, like "Yankees | 2".</div>
           <a class="morelink" href="#/how/scoring">How the points work, with examples</a>
+        </div>
+        <div class="panel">
+          <h3>5. Pricing (optional)</h3>
+          <div class="hint" style="margin-top:0">Enter what the break costs you and it prices every spot by its share of the points, so the spot with the heavy hitters costs more.</div>
+          <label class="f">What you paid</label>
+          <div id="costs"></div>
+          <div class="row3" style="margin-top:10px">
+            <div><label class="f" for="extra">Other costs</label><div class="money"><input class="in" id="extra" type="number" min="0" step="1" placeholder="0"></div></div>
+            <div><label class="f" for="fee">Fees</label><div class="pct"><input class="in" id="fee" type="number" min="0" max="60" step="0.5"></div></div>
+            <div><label class="f" for="profit">Profit</label><div class="pct"><input class="in" id="profit" type="number" min="0" step="1"></div></div>
+          </div>
+          <div class="hint">Other costs: shipping, supplies, giveaways. Fees: your platform's selling and payment fees as a share of sales. Profit: what you want to make on top of your cost.</div>
+          <div class="row2" style="margin-top:10px">
+            <div><label class="f" for="floor">Lowest spot price</label><div class="money"><input class="in" id="floor" type="number" min="0" step="1" placeholder="none"></div></div>
+            <div><label class="f" for="goal">Or set a sales goal</label><div class="money"><input class="in" id="goal" type="number" min="0" step="5" placeholder="optional"></div></div>
+          </div>
+          <div class="hint">A sales goal skips the math above and prices spots to add up to that number.</div>
         </div>
       </div>
 
       <div>
         <div class="stats" id="stats"></div>
-        <div class="panel" style="margin-bottom:14px"><h3 style="margin-bottom:4px">Weight by letter</h3><div class="bars" id="bars"></div><div class="barl" id="barl"></div></div>
+        <div class="money2" id="money" hidden></div>
+        <div class="panel" style="margin-bottom:14px"><h3 style="margin-bottom:4px" id="barsTitle">Weight by letter</h3><div class="bars" id="bars"></div><div class="barl" id="barl"></div></div>
         <div id="warn"></div>
         <div class="acts2"><button class="btn gold" id="copy">Copy spot list</button><button class="btn" id="csv">Download CSV</button><button class="btn" id="expand">Show every name</button></div>
         <div class="spotlist" id="spots"></div>
@@ -267,8 +314,29 @@ table.rows td small { color: var(--ink-3); }
           <div class="eq">A heavier C letter gets split sooner (CA-CH, CI-CZ) or shares a spot with fewer letters, so the Cena spot isn't also stacked with other strong names.</div>
         </div>
 
+        <div class="card">
+          <h4>6. Pricing from what you paid</h4>
+          <p class="sub2">Section 5 turns your cost into spot prices. Every spot is priced by its share of the points, so a spot holding the heavy hitters costs more.</p>
+          <div class="eq">Cost: 4 boxes at $275 = <b>$1,100</b><br>Break even after 10% fees: $1,100 / 0.90 = <b>$1,223</b><br>Target with 20% profit: $1,100 x 1.20 / 0.90 = <b>$1,467</b></div>
+          <div class="brow" style="margin-top:12px"><div class="nm">Spot with 8%</div><div class="track"><span class="c-a" style="width:80%">$117</span></div><div class="pt"></div></div>
+          <div class="brow"><div class="nm">Spot with 4%</div><div class="track"><span class="c-b" style="width:40%">$59</span></div><div class="pt"></div></div>
+          <p class="sub2" style="margin:10px 0 0">A lowest spot price keeps light spots from going out too cheap; the difference comes off the heavier spots so the total still hits the target. A sales goal skips the cost math and prices to that number.</p>
+        </div>
+
+        <div class="card">
+          <h4>7. Team breaks</h4>
+          <p class="sub2">Switch "Split spots by" to Teams. Each team gets the points of its players, so a team loaded with stars (or one you star, like "Yankees | 2") costs more.</p>
+          <ul>
+            <li><b>Fewer spots than teams:</b> teams are grouped so every spot is worth about the same (a strong team rides with a couple of light ones).</li>
+            <li><b>One spot per team:</b> set spots to the team count for a pick-your-team break; each team is priced by its weight.</li>
+            <li><b>By division:</b> for one league (NFL, NBA or MLB) the spots follow the divisions.</li>
+            <li><b>College / NIL players:</b> anyone with a pro team goes to that team. College-only players can be their own spot, fill the lightest spots to even things out, or be left out.</li>
+            <li><b>Old franchises</b> roll into today's team: Oilers to Titans, Redskins to Commanders, SuperSonics to Thunder, Expos to Nationals.</li>
+          </ul>
+        </div>
+
         <div class="card tips">
-          <h4>6. Quick settings</h4>
+          <h4>8. Quick settings</h4>
           <ul>
             <li><b>Hits drive the price</b> (high-end, auto-heavy boxes): raise Auto to 3 or 4.</li>
             <li><b>Buyers want base sets</b> (flagship, retail-style breaks): lower Auto toward 1.</li>
@@ -296,8 +364,9 @@ table.rows td small { color: var(--ink-3); }
   function fold(t) { return String(t).normalize("NFD").replace(/[̀-ͯ]/g, ""); }
 
   // ---------- settings ----------
-  var S = { init: false, tidy: "simple", qty: {}, n: 21, goal: "", group: "free", prefix: "on", gender: "auto", rule: "first", nick: "printed", wb: 1, wa: 2, wi: 0.5, wm: 0.5, stars: "", paste: "" };
+  var S = { init: false, tidy: "simple", qty: {}, n: 21, goal: "", group: "free", prefix: "on", gender: "auto", rule: "first", nick: "printed", wb: 1, wa: 2, wi: 0.5, wm: 0.5, stars: "", paste: "", split: "letters", tgroup: "free", nil: "own", cost: {}, extra: "", fee: 10, profit: 20, floor: "" };
   try { var saved = JSON.parse(localStorage.getItem(SKEY) || "null"); if (saved) for (var k in saved) S[k] = saved[k]; } catch (e) {}
+  if (!S.cost || typeof S.cost !== "object") S.cost = {};
   if (!S.init) {
     S.init = true;
     ["2026-topps-stadium-club-wwe", "2026-topps-chrome-wwe", "2026-topps-cosmic-chrome-wwe", "2026-topps-chrome-wwe-sapphire"].forEach(function (id) { if (PRODS.some(function (p) { return p.id === id; })) S.qty[id] = 1; });
@@ -323,6 +392,7 @@ table.rows td small { color: var(--ink-3); }
     });
     o += (last ? "</optgroup>" : "") + "</select>";
     $("prods").innerHTML = h + o;
+    drawCosts(picked);
     [].forEach.call(document.querySelectorAll("#prods .qty"), function (el) {
       el.addEventListener("click", function (e) {
         var b = e.target.closest("button"); if (!b) return;
@@ -338,6 +408,15 @@ table.rows td small { color: var(--ink-3); }
       S.qty[id] = 1; drawProds(); go();
     });
   }
+  function drawCosts(picked) {
+    $("costs").innerHTML = picked.length ? picked.map(function (p) {
+      var q = S.qty[p.id];
+      return '<div class="costrow"><div class="cn">' + esc(p.name) + ' <small>x' + q + '</small></div><div class="money"><input class="in" type="number" min="0" step="1" data-cost="' + p.id + '" placeholder="per box" value="' + (S.cost[p.id] != null ? esc(S.cost[p.id]) : "") + '" aria-label="Price per box for ' + esc(p.name) + '"></div></div>';
+    }).join("") : '<div class="noboxes">Add boxes in section 1 first.</div>';
+    [].forEach.call(document.querySelectorAll("#costs input"), function (el) {
+      el.addEventListener("input", function () { S.cost[el.getAttribute("data-cost")] = el.value; go(); });
+    });
+  }
   function seg(id) {
     var el = $(id);
     [].forEach.call(el.querySelectorAll("button"), function (b) {
@@ -345,8 +424,8 @@ table.rows td small { color: var(--ink-3); }
       b.onclick = function () { S[id] = b.getAttribute("data-v"); seg(id); go(); };
     });
   }
-  ["group", "prefix", "gender", "rule", "nick", "tidy"].forEach(seg);
-  ["n", "goal", "wb", "wa", "wi", "wm"].forEach(function (id) { $(id).value = S[id]; $(id).addEventListener("input", function () { S[id] = $(id).value; go(); }); });
+  ["group", "prefix", "gender", "rule", "nick", "tidy", "split", "tgroup", "nil"].forEach(seg);
+  ["n", "goal", "wb", "wa", "wi", "wm", "extra", "fee", "profit", "floor"].forEach(function (id) { $(id).value = S[id]; $(id).addEventListener("input", function () { S[id] = $(id).value; go(); }); });
   ["stars", "paste"].forEach(function (id) { $(id).value = S[id]; $(id).addEventListener("input", function () { S[id] = $(id).value; go(); }); });
 
   // ---------- names ----------
@@ -377,12 +456,14 @@ table.rows td small { color: var(--ink-3); }
   function collect() {
     var wb = +S.wb || 0, wa = +S.wa || 0, wi = +S.wi || 0, wm = +S.wm || 0;
     var map = {}, boxes = 0;
-    function add(name, flags, g, q) {
+    function add(name, flags, g, q, team, sport) {
       var w = (flags.indexOf("B") > -1 ? wb : 0) + (flags.indexOf("A") > -1 ? wa : 0) + (flags.indexOf("I") > -1 ? wi : 0) + (flags.indexOf("M") > -1 ? wm : 0);
-      var r = map[name] || (map[name] = { n: name, w: 0, g: "", a: false });
+      var r = map[name] || (map[name] = { n: name, w: 0, g: "", a: false, teams: {} });
       r.w += w * q; if (g) r.g = g; if (flags.indexOf("A") > -1) r.a = true;
+      if (team) String(team).split("/").forEach(function (t) { t = t.trim(); if (t) r.teams[t] = sport || 1; });
     }
-    PRODS.forEach(function (p) { var q = S.qty[p.id] || 0; if (!q) return; boxes += q; p.rows.forEach(function (r) { add(r[0], r[1], r[2], q); }); });
+    var sports = {};
+    PRODS.forEach(function (p) { var q = S.qty[p.id] || 0; if (!q) return; boxes += q; sports[p.sport] = 1; p.rows.forEach(function (r) { add(r[0], r[1], r[2], q, r[3], p.sport); }); });
     String(S.paste || "").split(/\n/).forEach(function (l) {
       var parts = l.split("|").map(function (x) { return x.trim(); }); if (!parts[0]) return;
       var g = "", f = "B";
@@ -399,7 +480,98 @@ table.rows td small { color: var(--ink-3); }
       var L = letters(r.n); r.L = L[0]; r.L2 = L[1];
       if (r.g !== "F") r.g = "M";
     });
-    return { list: list, boxes: boxes };
+    return { list: list, boxes: boxes, sports: Object.keys(sports) };
+  }
+
+  // ---------- teams ----------
+  var DIVS = {
+    NFL: { "AFC East": "Bills Dolphins Patriots Jets", "AFC North": "Ravens Bengals Browns Steelers", "AFC South": "Texans Colts Jaguars Titans Oilers",
+      "AFC West": "Broncos Chiefs Raiders Chargers", "NFC East": "Cowboys Giants Eagles Commanders Redskins", "NFC North": "Bears Lions Packers Vikings",
+      "NFC South": "Falcons Panthers Saints Buccaneers", "NFC West": "Cardinals Rams 49ers Seahawks" },
+    NBA: { "Atlantic": "Celtics Nets Knicks 76ers Raptors", "Central": "Bulls Cavaliers Pistons Pacers Bucks", "Southeast": "Hawks Hornets Heat Magic Wizards Bullets Bobcats",
+      "Northwest": "Nuggets Timberwolves Thunder Trail_Blazers Jazz SuperSonics Supersonics", "Pacific": "Warriors Clippers Lakers Suns Kings", "Southwest": "Mavericks Rockets Grizzlies Pelicans Spurs" },
+    MLB: { "AL East": "Orioles Red_Sox Yankees Rays Blue_Jays", "AL Central": "White_Sox Guardians Indians Tigers Royals Twins", "AL West": "Astros Angels Athletics Mariners Rangers",
+      "NL East": "Braves Marlins Mets Phillies Nationals Expos", "NL Central": "Cubs Reds Brewers Pirates Cardinals", "NL West": "Diamondbacks Rockies Dodgers Padres Giants" }
+  };
+  function divOf(sport) {
+    var d = DIVS[sport]; if (!d) return null; var m = {};
+    Object.keys(d).forEach(function (k) { d[k].split(" ").forEach(function (t) { m[t.replace(/_/g, " ")] = k; }); });
+    return m;
+  }
+  var LEGACY = { NFL: { "Oilers": "Titans", "Redskins": "Commanders" }, NBA: { "SuperSonics": "Thunder", "Supersonics": "Thunder", "Bullets": "Wizards", "Bobcats": "Hornets" }, MLB: { "Expos": "Nationals", "Indians": "Guardians" } };
+  var DMAP = {}; Object.keys(DIVS).forEach(function (s) { DMAP[s] = divOf(s); });
+  var PRO = (function () { var m = {}; Object.keys(DIVS).forEach(function (s) { var d = divOf(s); Object.keys(d).forEach(function (k) { m[k] = 1; }); }); return m; })();
+  function teamBins(list, N, sports) {
+    var tw = {}, tn = {}, none = 0, nil = [];
+    list.forEach(function (x) {
+      var all = Object.keys(x.teams || {}); if (!all.length) { none++; return; }
+      var pro = [];
+      all.forEach(function (t) { var sp = x.teams[t], t2 = (LEGACY[sp] && LEGACY[sp][t]) || t; if ((!DMAP[sp] || DMAP[sp][t2]) && pro.indexOf(t2) < 0) pro.push(t2); });
+      if (!pro.length) { nil.push(x); return; }
+      var share = x.w / pro.length;
+      pro.forEach(function (t) { tw[t] = (tw[t] || 0) + share; (tn[t] = tn[t] || []).push(x); });
+    });
+    var stars = starMap();
+    var units = Object.keys(tw).map(function (t) {
+      var f = fold(t).toLowerCase(), m = 1; stars.forEach(function (s) { if (s[0] === f) m = Math.max(m, s[1]); });
+      return { team: t, w: tw[t] * m, names: tn[t], star: m > 1 };
+    });
+    var nilW = 0; nil.forEach(function (x) { nilW += x.w; });
+    if (nil.length && S.nil === "own") units.push({ team: "College / NIL", w: nilW, names: nil, nilspot: true });
+    var fillers = nil.length && S.nil === "fill" ? nil.map(function (x) { return { team: x.n, w: x.w, names: [x], filler: true }; }) : [];
+    var sp = sports.filter(function (s) { return DIVS[s]; }), dmap = sp.length === 1 && sports.length === 1 ? divOf(sp[0]) : null, bins, mode;
+    var teamCount = units.length;
+    if (S.tgroup === "div" && dmap) {
+      var by = {}; units.forEach(function (u) { var d = u.nilspot ? "College / NIL" : (dmap[u.team] || "Other teams"); (by[d] = by[d] || { u: [], w: 0, div: d }).u.push(u); by[d].w += u.w; });
+      bins = Object.keys(by).map(function (k) { return by[k]; }); mode = "div";
+    } else if (N >= teamCount) {
+      bins = units.slice().sort(function (a, b) { return a.nilspot ? 1 : b.nilspot ? -1 : a.team.localeCompare(b.team); }).map(function (u) { return { u: [u], w: u.w }; }); mode = "each";
+    } else { bins = packFree(units, N); mode = "free"; }
+    bins = bins.filter(function (b) { return b.u.length; });
+    // college players used as filler go to the lightest spots, biggest first
+    fillers.sort(function (a, c) { return c.w - a.w; }).forEach(function (u) {
+      var lo = bins.reduce(function (m, b) { return b.w < m.w ? b : m; }, bins[0]); if (!lo) return; lo.u.push(u); lo.w += u.w;
+    });
+    bins.forEach(function (b) {
+      var real = b.u.filter(function (u) { return !u.filler; }).sort(function (a, c) { return c.w - a.w; }), fill = b.u.filter(function (u) { return u.filler; });
+      b.label = b.div || real.map(function (u) { return u.team; }).join(" / ");
+      var subs = [];
+      if (b.div === "College / NIL") subs.push(b.names ? "" : ""); else if (b.div) subs.push(real.map(function (u) { return u.team; }).join(", ")); else if (real.length > 1) subs.push(real.length + " teams");
+      if (real.some(function (u) { return u.star; })) subs.push("starred");
+      if (fill.length) subs.push("+ " + fill.length + " college player" + (fill.length === 1 ? "" : "s"));
+      b.sub = subs.filter(function (s) { return s; }).join(" · ");
+      var seen = {}; b.names = [];
+      b.u.forEach(function (u) { u.names.forEach(function (x) { if (!seen[x.n]) { seen[x.n] = 1; b.names.push(x); } }); });
+    });
+    var total = 0; bins.forEach(function (b) { total += b.w; });
+    if (mode === "div") bins.sort(function (a, c) { return a.label === "College / NIL" ? 1 : c.label === "College / NIL" ? -1 : a.label.localeCompare(c.label); });
+    else if (mode === "free") bins.sort(function (a, c) { return c.w - a.w; });
+    return { bins: bins, total: total, teamCount: Object.keys(tw).length, eachN: teamCount, none: none, nil: nil.length, mode: mode, divOK: !!dmap };
+  }
+
+  // ---------- money ----------
+  function money(c) {
+    var cost = 0, any = false;
+    Object.keys(S.qty).forEach(function (id) { var q = S.qty[id] || 0, v = parseFloat(S.cost[id]); if (q && v > 0) { cost += v * q; any = true; } });
+    var extra = parseFloat(S.extra) || 0; if (extra > 0) { cost += extra; any = true; }
+    var fee = Math.min(60, Math.max(0, parseFloat(S.fee) || 0)) / 100, profit = Math.max(0, parseFloat(S.profit) || 0) / 100;
+    var goalIn = parseFloat(S.goal) || 0;
+    var even = any ? cost / (1 - fee) : 0, target = goalIn || (any ? cost * (1 + profit) / (1 - fee) : 0);
+    return { cost: cost, any: any, fee: fee, profit: profit, even: even, goal: target, manual: !!goalIn, floor: Math.max(0, parseFloat(S.floor) || 0) };
+  }
+  function usd(v) { return "$" + Math.round(v).toLocaleString("en-US"); }
+  function priceBins(bins, goal, floor) {
+    var used = bins.filter(function (b) { return b.w > 0; }), fixed = [];
+    bins.forEach(function (b) { b.price = 0; });
+    if (!goal || !used.length) return 0;
+    if (floor * used.length >= goal) { used.forEach(function (b) { b.price = Math.round(floor); }); return used.length * Math.round(floor); }
+    for (var it = 0; it < 50; it++) {
+      var free = used.filter(function (b) { return fixed.indexOf(b) < 0; }), fw = 0; free.forEach(function (b) { fw += b.w; });
+      var pot = goal - floor * fixed.length, moved = false;
+      free.forEach(function (b) { if (floor && pot * b.w / fw < floor) { fixed.push(b); moved = true; } });
+      if (!moved) { free.forEach(function (b) { b.price = Math.round(pot * b.w / fw); }); fixed.forEach(function (b) { b.price = Math.round(floor); }); break; }
+    }
+    var tot = 0; used.forEach(function (b) { tot += b.price; }); return tot;
   }
 
   // ---------- units ----------
@@ -568,33 +740,74 @@ table.rows td small { color: var(--ink-3); }
   function go() { save(); clearTimeout(go.t); go.t = setTimeout(run, 60); }
   function run() {
     var N = Math.max(2, Math.min(80, parseInt(S.n, 10) || 21));
-    var c = collect(), list = c.list;
+    var c = collect(), list = c.list, teams = S.split === "teams";
+    $("teamopts").hidden = !teams; $("letteropts").hidden = teams; $("p3").hidden = teams;
+    $("barsTitle").textContent = teams ? "Weight by team" : "Weight by letter";
     $("genderHint").textContent = list.length && !list.some(function (x) { return x.g === "F"; }) ? "None of the picked checklists mark women, so there are no Men / Women splits." : "Only checklists that mark women can split this way (WWE ones do).";
-    if (!list.length) { $("stats").innerHTML = ""; $("bars").innerHTML = ""; $("barl").innerHTML = ""; $("warn").innerHTML = ""; $("spots").innerHTML = '<div class="empty">Pick at least one checklist, or paste some names, to build spots.</div>'; LAST = null; return; }
-    var U = buildUnits(list, N), bins = solve(U, N);
-    bins.forEach(function (b) { var l = binLabel(b); b.label = l.label; b.sub = l.sub; b.names = []; b.u.forEach(function (u) { b.names = b.names.concat(u.names); }); b.ord = b.u.length ? Math.min.apply(null, b.u.map(uorder)) : 1e9; });
-    bins.sort(function (a, b) { return a.ord - b.ord; });
-    var used = bins.filter(function (b) { return b.u.length; });
-    var total = U.total, fair = total / N, goal = parseFloat(S.goal) || 0;
-    var ws = used.map(function (b) { return b.w; }), hi = Math.max.apply(null, ws), lo = Math.min.apply(null, ws);
-    LAST = { bins: bins, total: total, N: N, goal: goal };
+    function empty(msg) { $("stats").innerHTML = ""; $("bars").innerHTML = ""; $("barl").innerHTML = ""; $("warn").innerHTML = ""; $("money").hidden = true; $("spots").innerHTML = '<div class="empty">' + msg + "</div>"; LAST = null; }
+    if (!list.length) return empty("Pick at least one checklist, or paste some names, to build spots.");
+    var bins, total, warn = "", tb = null;
+    if (teams) {
+      tb = teamBins(list, N, c.sports);
+      $("splitHint").textContent = tb.teamCount ? tb.teamCount + " teams in these boxes." + (tb.none ? " " + tb.none + " names have no team and are left out." : "") : "Letters works for any checklist. Teams works for checklists with team names (football, basketball, baseball, college).";
+      $("nilHint").textContent = tb.nil ? tb.nil + " player" + (tb.nil === 1 ? " is" : "s are") + " shown only with a college team. Anyone who also has a pro team in your boxes goes to that team." : "No college-only players in these boxes. Anyone with a pro team goes to that team.";
+      $("tgroupHint").textContent = !tb.divOK && S.tgroup === "div" ? "Divisions work when every box is the same league (NFL, NBA or MLB). Using best balance instead." : "Best balance mixes strong and weak teams so every spot is worth about the same. For one team per spot (pick your team), set spots to " + tb.eachN + (tb.eachN > tb.teamCount ? " (" + tb.teamCount + " teams plus the college spot)" : "") + ".";
+      if (!tb.teamCount && !tb.nil) return empty("None of the picked checklists have team names, so they can't split by team. Switch to Letters, or add a football, basketball or baseball checklist.");
+      bins = tb.bins; total = tb.total;
+      if (tb.mode === "each" && N > bins.length) warn = "You asked for " + N + " spots, but these boxes have " + bins.length + (tb.nil && S.nil === "own" ? " teams plus the college spot" : " teams") + ", so each team is its own spot.";
+      if (tb.mode === "div") warn = "Split by division: " + bins.length + " spots. The spot count is ignored in this mode.";
+    } else {
+      $("splitHint").textContent = "Letters works for any checklist. Teams works for checklists with team names (football, basketball, baseball, college).";
+      var U = buildUnits(list, N); bins = solve(U, N);
+      bins.forEach(function (b) { var l = binLabel(b); b.label = l.label; b.sub = l.sub; b.names = []; b.u.forEach(function (u) { b.names = b.names.concat(u.names); }); b.ord = b.u.length ? Math.min.apply(null, b.u.map(uorder)) : 1e9; });
+      bins.sort(function (a, b) { return a.ord - b.ord; });
+      bins = bins.filter(function (b) { return b.u.length; });
+      total = U.total;
+      if (bins.length < N) warn = "These checklists can only fill " + bins.length + " spots without splitting letters further than they can go. Try fewer spots, or turn on two-letter splits.";
+    }
+    var M = money(c), goal = M.goal, sumP = priceBins(bins, goal, M.floor);
+    var ws = bins.map(function (b) { return b.w; }), hi = Math.max.apply(null, ws), lo = Math.min.apply(null, ws);
+    LAST = { bins: bins, total: total, N: N, goal: goal, teams: teams };
+    var prices = bins.map(function (b) { return b.price; });
     $("stats").innerHTML = [
-      [list.length, "names"], [c.boxes, c.boxes === 1 ? "box" : "boxes"], [used.length + (used.length < N ? " of " + N : ""), "spots"],
+      [list.length, "names"], [c.boxes, c.boxes === 1 ? "box" : "boxes"], [bins.length, "spots"],
       [Math.round(lo / hi * 100) + "%", "lightest vs heaviest"]
-    ].concat(goal ? [["$" + Math.round(goal * lo / total) + " to $" + Math.round(goal * hi / total), "price range"]] : []).map(function (s) { return '<div class="stat"><b>' + s[0] + "</b><span>" + s[1] + "</span></div>"; }).join("");
-    // letter bars
-    var lw = {}; list.forEach(function (x) { lw[x.L] = (lw[x.L] || 0) + x.w; });
-    var mx = Math.max.apply(null, ORDER.split("").map(function (L) { return lw[L] || 0; }));
-    $("bars").innerHTML = ORDER.split("").map(function (L) { var w = lw[L] || 0; return '<div class="' + (w > 1.3 * fair ? "hot" : "") + '" style="height:' + Math.max(2, w / mx * 100) + '%" title="' + L + ": " + (w / total * 100).toFixed(1) + '% of the total"></div>'; }).join("");
-    $("barl").innerHTML = ORDER.split("").map(function (L) { return "<span>" + (L === "#" ? "1" : L) + "</span>"; }).join("");
-    $("warn").innerHTML = used.length < N ? '<div class="warn">These checklists can only fill ' + used.length + " spots without splitting letters further than they can go. Try fewer spots, or turn on two-letter splits.</div>" : "";
+    ].concat(goal ? [[usd(Math.min.apply(null, prices)) + " to " + usd(Math.max.apply(null, prices)), "price range"]] : []).map(function (s) { return '<div class="stat"><b>' + s[0] + "</b><span>" + s[1] + "</span></div>"; }).join("");
+    // money box
+    if (goal) {
+      var net = sumP * (1 - M.fee), prof = net - M.cost, rows = [];
+      if (M.any) rows.push(["What the break costs you", usd(M.cost)]);
+      if (M.any) rows.push(["Break even (after " + Math.round(M.fee * 100) + "% fees)", usd(Math.ceil(M.even))]);
+      rows.push([M.manual ? "Sales goal" : "Target (" + Math.round(M.profit * 100) + "% profit)", usd(goal)]);
+      rows.push(["Your spot prices add up to", usd(sumP)]);
+      var h = rows.map(function (r) { return '<div class="mrow"><span>' + r[0] + "</span><b>" + r[1] + "</b></div>"; }).join("");
+      if (M.any) h += '<div class="mrow tot"><span>Profit after fees, if every spot sells</span><b class="' + (prof < 0 ? "neg" : "") + '">' + (prof < 0 ? "-" : "") + usd(Math.abs(prof)) + "</b></div>";
+      $("money").innerHTML = h; $("money").hidden = false;
+    } else $("money").hidden = true;
+    // weight bars
+    if (teams) {
+      var tl = bins.slice().sort(function (a, b) { return b.w - a.w; }), tmx = tl.length ? tl[0].w : 1;
+      if (tb.mode === "each" || tb.mode === "div") {
+        $("bars").innerHTML = tl.map(function (b) { return '<div style="height:' + Math.max(2, b.w / tmx * 100) + '%" title="' + esc(b.label) + ": " + (b.w / total * 100).toFixed(1) + '% of the total"></div>'; }).join("");
+      } else {
+        var tm = {}; bins.forEach(function (b) { b.u.forEach(function (u) { if (!u.filler) tm[u.team] = u.w; }); });
+        var ks = Object.keys(tm).sort(function (a, b) { return tm[b] - tm[a]; }), mx2 = ks.length ? tm[ks[0]] : 1;
+        $("bars").innerHTML = ks.map(function (k) { return '<div style="height:' + Math.max(2, tm[k] / mx2 * 100) + '%" title="' + esc(k) + ": " + (tm[k] / total * 100).toFixed(1) + '% of the total"></div>'; }).join("");
+      }
+      $("barl").innerHTML = '<span style="flex:1;text-align:left">heaviest team</span><span style="flex:1;text-align:right">lightest</span>';
+    } else {
+      var fair = total / N, lw = {}; list.forEach(function (x) { lw[x.L] = (lw[x.L] || 0) + x.w; });
+      var mx = Math.max.apply(null, ORDER.split("").map(function (L) { return lw[L] || 0; }));
+      $("bars").innerHTML = ORDER.split("").map(function (L) { var w = lw[L] || 0; return '<div class="' + (w > 1.3 * fair ? "hot" : "") + '" style="height:' + Math.max(2, w / mx * 100) + '%" title="' + L + ": " + (w / total * 100).toFixed(1) + '% of the total"></div>'; }).join("");
+      $("barl").innerHTML = ORDER.split("").map(function (L) { return "<span>" + (L === "#" ? "1" : L) + "</span>"; }).join("");
+    }
+    $("warn").innerHTML = warn ? '<div class="warn">' + warn + "</div>" : "";
     $("spots").innerHTML = bins.map(function (b, i) {
-      if (!b.u.length) return "";
       var top = b.names.slice().sort(function (x, y) { return y.w - x.w; }).slice(0, 7).map(function (x) { return x.n; });
       var autos = b.names.filter(function (x) { return x.a; }).length;
       var share = b.w / total * 100;
-      return '<details class="spot"' + (expandAll ? " open" : "") + "><summary><span class=\"no\">" + (i + 1) + '</span><span class="lb display">' + esc(b.label) + (b.sub ? "<small>" + b.sub + "</small>" : "") + '</span><span class="mid"><div class="meter"><i style="width:' + Math.min(100, b.w / hi * 100) + '%"></i></div><div class="top">' + esc(top.join(", ")) + '</div></span><span class="nums">' +
-        (goal ? '<span class="pr">$' + Math.round(goal * b.w / total) + "</span><br>" : "") + "<b>" + share.toFixed(1) + "%</b> · " + b.names.length + " names<br>" + autos + " with autos</span></summary>" +
+      return '<details class="spot"' + (expandAll ? " open" : "") + "><summary><span class=\"no\">" + (i + 1) + '</span><span class="lb display">' + esc(b.label) + (b.sub ? "<small>" + esc(b.sub) + "</small>" : "") + '</span><span class="mid"><div class="meter"><i style="width:' + Math.min(100, b.w / hi * 100) + '%"></i></div><div class="top">' + esc(top.join(", ")) + '</div></span><span class="nums">' +
+        (goal ? '<span class="pr">' + usd(b.price) + "</span><br>" : "") + "<b>" + share.toFixed(1) + "%</b> · " + b.names.length + " names<br>" + autos + " with autos</span></summary>" +
         '<div class="all">' + b.names.slice().sort(function (x, y) { return fold(x.n.replace(/^"|^the /i, "")).localeCompare(fold(y.n.replace(/^"|^the /i, ""))); }).map(function (x) { return esc(x.n) + (x.a ? '<span class="a">AUTO</span>' : "") + (x.star ? '<span class="a">STAR</span>' : ""); }).join(", ") + "</div></details>";
     }).join("");
     if (location.hash.indexOf("#/search/") === 0) drawSearch(decodeURIComponent(location.hash.slice(9)));
@@ -602,8 +815,8 @@ table.rows td small { color: var(--ink-3); }
 
   function textOut() {
     if (!LAST) return "";
-    return LAST.bins.filter(function (b) { return b.u.length; }).map(function (b, i) {
-      return (i + 1) + ". " + b.label + (b.sub ? " (" + b.sub + ")" : "") + (LAST.goal ? ": $" + Math.round(LAST.goal * b.w / LAST.total) : "") + " | " + b.names.length + " names | " + b.names.slice().sort(function (x, y) { return y.w - x.w; }).slice(0, 5).map(function (x) { return x.n; }).join(", ");
+    return LAST.bins.map(function (b, i) {
+      return (i + 1) + ". " + b.label + (b.sub ? " (" + b.sub + ")" : "") + (LAST.goal ? ": $" + b.price : "") + " | " + b.names.length + " names | " + b.names.slice().sort(function (x, y) { return y.w - x.w; }).slice(0, 5).map(function (x) { return x.n; }).join(", ");
     }).join("\n");
   }
   function toast(m) { var t = $("toast"); t.textContent = m; t.classList.add("show"); setTimeout(function () { t.classList.remove("show"); }, 1600); }
@@ -615,8 +828,8 @@ table.rows td small { color: var(--ink-3); }
   $("csv").onclick = function () {
     if (!LAST) return;
     var q = function (s) { return '"' + String(s).replace(/"/g, '""') + '"'; };
-    var rows = [["Spot", "Label", "Group", "Share %", "Names", "Price", "All names"]].concat(LAST.bins.filter(function (b) { return b.u.length; }).map(function (b, i) {
-      return [i + 1, b.label, b.sub, (b.w / LAST.total * 100).toFixed(1), b.names.length, LAST.goal ? Math.round(LAST.goal * b.w / LAST.total) : "", b.names.map(function (x) { return x.n; }).join("; ")];
+    var rows = [["Spot", "Label", "Group", "Share %", "Names", "Price", "All names"]].concat(LAST.bins.map(function (b, i) {
+      return [i + 1, b.label, b.sub, (b.w / LAST.total * 100).toFixed(1), b.names.length, LAST.goal ? b.price : "", b.names.map(function (x) { return x.n; }).join("; ")];
     }));
     var a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([rows.map(function (r) { return r.map(q).join(","); }).join("\n")], { type: "text/csv" }));
     a.download = "spot-list.csv"; document.body.appendChild(a); a.click(); a.remove();
