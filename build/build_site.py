@@ -61,6 +61,8 @@ BASKETBALL_WORDS = [
     "jordan smith", "dylan harper", "prizm break",
     # added 2026-08-25, batch 2
     "rodman", "kingston flemings",
+    # added 2026-11-22 with the eBay refresh (set names, no team in title)
+    "prizm monopoly", "1992-93 ultra", "1990-91 hoops", "1992-93 upper deck", "1992-93 stadium club", "signature class", "bowman's best university",
 ]
 FOOTBALL_WORDS = [
     "chiefs", "nfl", "xavier worthy", "resurgence", "49ers", "cowboys",
@@ -75,6 +77,8 @@ FOOTBALL_WORDS = [
     "bryce underwood",
     # added 2026-08-25, batch 3
     "lions", "jared goff", "photogenic",
+    # added 2026-11-22 with the eBay refresh (college and set names)
+    "bowman university chrome", "panini phoenix", "prizm black", "mason taylor", "troy aikman",
 ]
 BASEBALL_WORDS = [
     "mlb", "brewers", "braves", "pirates", "red sox", "angels", "imanaga",
@@ -113,6 +117,8 @@ BASEBALL_WORDS = [
     "1991 topps baseball", "chrome platinum", "logofractor", "sapphire edition",
     "topps inception", "2026 finest #", "2026 panini prizm #", "2026 topps chrome #",
     "topps chrome black", "2026 topps #",
+    # added 2026-11-22 with the eBay refresh (set names)
+    "1989 upper deck", "1990 upper deck", "1993 pinnacle", "2026 topps allen & ginter", "2025 panini prizm #", "2026 bowman #",
 ]
 
 # Non-Marvel comics, combat sports and soccer arrived with the 2026-08-21 batch.
@@ -125,6 +131,8 @@ SOCCER_WORDS = [
     # added 2026-08-25, batch 2
     "neymar", "nottingham", "club leon", "lewandowski", "fermin lopez",
     "valverde", "mastantuono", "igor jesus",
+    # added 2026-11-22
+    "fifa world cup",
 ]
 # Pokemon and Disney arrived with the 2026-10-26 refresh.
 POKEMON_WORDS = ["pokemon", "30th celebration"]
@@ -149,9 +157,17 @@ CATEGORY_RULES = [
 ]
 
 
+# Checked before CATEGORY_RULES, for titles a broader keyword grabs by mistake
+# (added 2026-11-22: "inception" is a basketball word for Cooper Flagg, and "nba" sits
+# inside "Schwellenbach").
+PRIORITY_RULES = [
+    ("Baseball", ["2025 topps inception #", "schwellenbach"]),
+]
+
+
 def categorize(title: str) -> str:
     low = title.lower()
-    for name, words in CATEGORY_RULES:
+    for name, words in PRIORITY_RULES + CATEGORY_RULES:
         if any(w in low for w in words):
             return name
     return "Other"
