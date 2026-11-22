@@ -103,10 +103,16 @@ lightbox — resize to roughly 1200px on the long edge before committing.
 
 ## Break guides
 
-- `breaks/cc874.html` is a reference page for the Colfax CC874 Monster Multi random-letter
-  break (who could land in each of the 21 letter spots, by box). Served at `/breaks/cc874`.
-  Not linked from the storefront and carries `noindex`. Self-contained; replace the whole
-  file to update it.
+`/breaks/` is a hub of reference pages for group breaks: who could land in each letter or
+team spot, box by box. Not linked from the storefront, and every page carries `noindex`.
+
+- `breaks/index.html` is the hub. `breaks/<id>.html` is one break (served at `/breaks/<id>`).
+- `build/breaks/build.py` generates every break page except `cc874` from the data files next
+  to it (`wwe_data.py`, `team_data.py`) and `template.html`. To add a break, add its config
+  and spots in `build.py`, then run `python3 build/breaks/build.py && python3 build/breaks/hub.py`.
+- Pick-your-letter breaks carry price and open/sold per spot, copied from the breaker's store
+  data on the day the page was built. They don't update on their own.
+- `breaks/cc874.html` was built separately; replace the whole file to update it.
 
 ## Iron Ledger and worker.js
 
