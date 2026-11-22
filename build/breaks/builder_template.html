@@ -179,6 +179,14 @@ textarea.in { min-height: 90px; resize: vertical; font-size: 13px; line-height: 
 .spot .nums { text-align: right; font-size: 13px; color: var(--ink-2); white-space: nowrap; }
 .spot .nums b { color: var(--ink); font-size: 15px; }
 .spot .nums .pr { color: var(--gold-2); font-weight: 700; font-size: 15px; }
+.spot .nums .pr .pmine { font-style: normal; font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: #0b1726; background: var(--gold); border-radius: 999px; padding: 1px 6px; vertical-align: 2px; }
+.pset { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; margin: 0 14px 10px 60px; padding: 10px 12px; background: var(--bg-2); border: 1px solid var(--line); border-radius: 10px; font-size: 13px; color: var(--ink-2); }
+.pset label { display: flex; align-items: center; gap: 8px; color: var(--ink); }
+.pset .money { width: 110px; }
+.pset .sg { color: var(--ink-3); }
+.pset .sg2 { flex-basis: 100%; color: var(--ink-3); font-size: 12px; }
+.linkbtn { background: none; border: 0; padding: 0; color: var(--gold-2); font: inherit; font-size: 12.5px; cursor: pointer; border-bottom: 1px dashed var(--gold); }
+@media (max-width: 640px) { .pset { margin-left: 14px; } }
 .spot .all { padding: 0 14px 14px 60px; font-size: 13.5px; color: var(--ink-2); line-height: 1.6; }
 .spot .all .a { color: var(--gold); font-size: 10.5px; font-weight: 700; margin-left: 3px; }
 @media (max-width: 640px) { .spot summary { grid-template-columns: 26px 1fr auto; } .spot summary .mid { grid-column: 1 / -1; } .spot .all { padding-left: 14px; } }
@@ -515,6 +523,8 @@ Bianca Belair | W | auto</pre>
             </ul>
             <h5>Lowest spot price</h5>
             <p>Keeps the light spots from looking too cheap. Any spot under it gets raised to it, and the difference comes off the heavier spots so the total stays the same.</p>
+            <h5>Change one spot's price</h5>
+            <p>Open any spot in the results and type your own price in "Price for this spot". Say the Yankees come out at $166 and you know nobody will pay that: set them to $150, and the $16 gets spread over the other spots by their weight, so the total still hits your target. That spot shows a SET tag. "Use suggested" puts one spot back, and "Reset all" in the money box clears every price you set. A price you set sticks to that spot's name (the team, or letters like SA-SH), so if a settings change gives the spot a new name, it goes back to the suggested price.</p>
             <h5>Or set a sales goal</h5>
             <p>Skip the math and type the total you want the spots to bring in. It overrides the cost, fees and profit fields.</p>
           </div>
@@ -677,7 +687,7 @@ Bianca Belair | W | auto</pre>
   function fold(t) { return String(t).normalize("NFD").replace(/[̀-ͯ]/g, ""); }
 
   // ---------- settings ----------
-  var S = { init: false, tidy: "simple", qty: {}, n: 21, goal: "", group: "free", prefix: "on", gender: "auto", rule: "first", nick: "printed", wb: 1, wa: 2, wi: 0.5, wm: 0.5, stars: "", paste: "", split: "letters", tgroup: "free", nil: "own", depth: "normal", cost: {}, extra: "", fee: 10, profit: 20, floor: "" };
+  var S = { init: false, tidy: "simple", qty: {}, n: 21, goal: "", group: "free", prefix: "on", gender: "auto", rule: "first", nick: "printed", wb: 1, wa: 2, wi: 0.5, wm: 0.5, stars: "", paste: "", split: "letters", tgroup: "free", nil: "own", depth: "normal", cost: {}, extra: "", fee: 10, profit: 20, floor: "", setp: {} };
   try { var saved = JSON.parse(localStorage.getItem(SKEY) || "null"); if (saved) for (var k in saved) S[k] = saved[k]; } catch (e) {}
   if (!S.cost || typeof S.cost !== "object") S.cost = {};
   if (!S.init) {
@@ -971,10 +981,20 @@ Bianca Belair | W | auto</pre>
     return { cost: cost, any: any, fee: fee, profit: profit, even: even, goal: target, manual: !!goalIn, floor: Math.max(0, parseFloat(S.floor) || 0) };
   }
   function usd(v) { return "$" + Math.round(v).toLocaleString("en-US"); }
-  function priceBins(bins, goal, floor) {
-    var used = bins.filter(function (b) { return b.w > 0; }), fixed = [];
-    bins.forEach(function (b) { b.price = 0; });
-    if (!goal || !used.length) return 0;
+  // spots priced by hand keep their price; the rest of the goal is shared by the other spots by weight
+  function priceBins(bins, goal, floor, setp) {
+    var all = bins.filter(function (b) { return b.w > 0; }), locked = [], lt = 0;
+    bins.forEach(function (b) { b.price = 0; b.locked = false; });
+    if (!goal || !all.length) return 0;
+    if (setp) all.forEach(function (b) { var v = parseFloat(setp[b.pkey]); if (isFinite(v) && v >= 0) { b.locked = true; locked.push(b); lt += Math.round(v); } });
+    var rest = all.filter(function (b) { return !b.locked; });
+    var sub = rest.length ? priceFree(rest, Math.max(0, goal - lt), floor) : 0;
+    locked.forEach(function (b) { b.price = Math.round(parseFloat(setp[b.pkey])); });
+    return sub + lt;
+  }
+  function priceFree(used, goal, floor) {
+    var fixed = [];
+    if (!used.length) return 0;
     if (floor * used.length >= goal) { used.forEach(function (b) { b.price = Math.round(floor); }); return used.length * Math.round(floor); }
     for (var it = 0; it < 50; it++) {
       var free = used.filter(function (b) { return fixed.indexOf(b) < 0; }), fw = 0; free.forEach(function (b) { fw += b.w; });
@@ -1147,7 +1167,7 @@ Bianca Belair | W | auto</pre>
   }
 
   // ---------- render ----------
-  var LAST = null, expandAll = false;
+  var LAST = null, expandAll = false, OPENK = {};
   function go() { save(); clearTimeout(go.t); go.t = setTimeout(run, 60); }
   function run() {
     var N = Math.max(2, Math.min(80, parseInt(S.n, 10) || 21));
@@ -1176,7 +1196,10 @@ Bianca Belair | W | auto</pre>
       total = U.total;
       if (bins.length < N) warn = "These checklists can only fill " + bins.length + " spots without splitting letters further than they can go. Try fewer spots, or turn on two-letter splits.";
     }
-    var M = money(c), goal = M.goal, sumP = priceBins(bins, goal, M.floor);
+    bins.forEach(function (b) { b.pkey = (teams ? "T:" : "L:") + b.label + (b.sub === "Men" || b.sub === "Women" ? " " + b.sub : ""); });
+    var M = money(c), goal = M.goal;
+    priceBins(bins, goal, M.floor); bins.forEach(function (b) { b.sugg = b.price; });
+    var sumP = priceBins(bins, goal, M.floor, S.setp), nLocked = bins.filter(function (b) { return b.locked; }).length;
     var ws = bins.map(function (b) { return b.w; }), hi = Math.max.apply(null, ws), lo = Math.min.apply(null, ws);
     LAST = { bins: bins, total: total, N: N, goal: goal, teams: teams };
     var prices = bins.map(function (b) { return b.price; });
@@ -1191,6 +1214,7 @@ Bianca Belair | W | auto</pre>
       if (M.any) rows.push(["Break even (after " + Math.round(M.fee * 100) + "% fees)", usd(Math.ceil(M.even))]);
       rows.push([M.manual ? "Sales goal" : "Target (" + Math.round(M.profit * 100) + "% profit)", usd(goal)]);
       rows.push(["Your spot prices add up to", usd(sumP)]);
+      if (nLocked) rows.push([nLocked + (nLocked === 1 ? " spot priced" : " spots priced") + ' by you <button class="linkbtn" id="resetp" type="button">Reset all</button>', ""]);
       var h = rows.map(function (r) { return '<div class="mrow"><span>' + r[0] + "</span><b>" + r[1] + "</b></div>"; }).join("");
       if (M.any) h += '<div class="mrow tot"><span>Profit after fees, if every spot sells</span><b class="' + (prof < 0 ? "neg" : "") + '">' + (prof < 0 ? "-" : "") + usd(Math.abs(prof)) + "</b></div>";
       $("money").innerHTML = h; $("money").hidden = false;
@@ -1217,10 +1241,18 @@ Bianca Belair | W | auto</pre>
       var top = b.names.slice().sort(function (x, y) { return y.w - x.w; }).slice(0, 7).map(function (x) { return x.n; });
       var autos = b.names.filter(function (x) { return x.a; }).length;
       var share = b.w / total * 100;
-      return '<details class="spot"' + (expandAll ? " open" : "") + "><summary><span class=\"no\">" + (i + 1) + '</span><span class="lb display">' + esc(b.label) + (b.sub ? "<small>" + esc(b.sub) + "</small>" : "") + '</span><span class="mid"><div class="meter"><i style="width:' + Math.min(100, b.w / hi * 100) + '%"></i></div><div class="top">' + esc(top.join(", ")) + '</div></span><span class="nums">' +
-        (goal ? '<span class="pr">' + usd(b.price) + "</span><br>" : "") + "<b>" + share.toFixed(1) + "%</b> · " + b.names.length + " names<br>" + autos + " with autos</span></summary>" +
+      return '<details class="spot"' + (expandAll || OPENK[b.pkey] ? " open" : "") + ' data-pk="' + esc(b.pkey) + '">' + "<summary><span class=\"no\">" + (i + 1) + '</span><span class="lb display">' + esc(b.label) + (b.sub ? "<small>" + esc(b.sub) + "</small>" : "") + '</span><span class="mid"><div class="meter"><i style="width:' + Math.min(100, b.w / hi * 100) + '%"></i></div><div class="top">' + esc(top.join(", ")) + '</div></span><span class="nums">' +
+        (goal ? '<span class="pr">' + usd(b.price) + (b.locked ? ' <span class="pmine">set</span>' : "") + "</span><br>" : "") + "<b>" + share.toFixed(1) + "%</b> · " + b.names.length + " names<br>" + autos + " with autos</span></summary>" +
+        (goal ? '<div class="pset"><label>Price for this spot <span class="money"><input class="in" type="number" min="0" step="1" data-pk="' + esc(b.pkey) + '" value="' + (b.locked ? b.price : "") + '" placeholder="' + b.sugg + '"></span></label><span class="sg">Suggested ' + usd(b.sugg) + (b.locked ? ' · <button class="linkbtn" type="button" data-reset="' + esc(b.pkey) + '">Use suggested</button>' : "") + '</span><span class="sg2">Change it and the other spots move the other way, so the total stays at ' + usd(goal) + ".</span></div>" : "") +
         '<div class="all">' + allHtml(b, "") + "</div></details>";
     }).join("");
+    [].forEach.call(document.querySelectorAll("#spots .spot"), function (d) { d.addEventListener("toggle", function () { var k = d.getAttribute("data-pk"); if (d.open) OPENK[k] = 1; else delete OPENK[k]; }); });
+    [].forEach.call(document.querySelectorAll("#spots .pset input"), function (el) {
+      el.addEventListener("change", function () { var k = el.getAttribute("data-pk"), v = el.value.trim(); if (v === "") delete S.setp[k]; else S.setp[k] = Math.max(0, Math.round(parseFloat(v) || 0)); OPENK[k] = 1; go(); });
+      el.addEventListener("keydown", function (e) { if (e.key === "Enter") el.blur(); });
+    });
+    [].forEach.call(document.querySelectorAll("#spots [data-reset]"), function (el) { el.addEventListener("click", function (e) { e.preventDefault(); delete S.setp[el.getAttribute("data-reset")]; go(); }); });
+    if ($("resetp")) $("resetp").onclick = function () { S.setp = {}; go(); };
     applyFind(false);
     if (location.hash.indexOf("#/search/") === 0) drawSearch(decodeURIComponent(location.hash.slice(9)));
   }
@@ -1256,7 +1288,7 @@ Bianca Belair | W | auto</pre>
     [].forEach.call(document.querySelectorAll("#spots .spot"), function (d, i) {
       var b = LAST && LAST.bins[i]; if (!b) return;
       var all = d.querySelector(".all");
-      if (!q) { d.hidden = false; d.classList.remove("hit", "flash"); d.open = expandAll; all.innerHTML = allHtml(b, ""); return; }
+      if (!q) { d.hidden = false; d.classList.remove("hit", "flash"); d.open = expandAll || !!OPENK[d.getAttribute("data-pk")]; all.innerHTML = allHtml(b, ""); return; }
       var r = spotMatch(b, q);
       d.hidden = !r.on; d.classList.toggle("hit", r.on);
       if (r.on) { hits++; d.open = r.names.length > 0 || expandAll; all.innerHTML = allHtml(b, r.names.length ? q : ""); if (!first) first = d; r.names.slice(0, 3).forEach(function (x) { nm.push(x.n + " (spot " + (i + 1) + ")"); }); }
