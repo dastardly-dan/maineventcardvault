@@ -254,6 +254,7 @@ footer a { color: var(--ink-2); }
 .prod .rm:hover { color: var(--ink); background: var(--panel-2); }
 .noboxes { color: var(--ink-3); font-size: 13.5px; padding: 6px 0 10px; }
 .addbox { margin-top: 8px; }
+.addtypes { padding: 0 0 8px; margin-top: -2px; border-bottom: 1px solid var(--line); }
 .btype { background: var(--bg-2); color: var(--gold-2); border: 1px solid var(--line-2); border-radius: 7px; font: inherit; font-size: 12px; padding: 1px 4px; margin-top: 2px; max-width: 100%; cursor: pointer; }
 .boxfind { margin-top: 12px; }
 .bfin { display: flex; align-items: center; gap: 8px; padding: 0 11px; border: 1px solid var(--gold); border-radius: 10px; background: var(--bg-2); color: var(--ink-3); }
@@ -516,7 +517,7 @@ table.rows td small { color: var(--ink-3); }
             <h5>How many of each</h5>
             <p>Set the counter to the number of boxes you're actually opening. Every name's points get multiplied by that count, so two boxes of a product count twice as much as one. If a name shows up in two different products, the points from both add together.</p>
             <h5>Box type: Hobby, Jumbo, Breaker's Delight and more</h5>
-            <p>Products with an official Topps odds sheet get a box type menu under the name. Pick the format you're actually opening, and the odds for that format are used. A set that isn't in that format at all (a Sapphire-only parallel, a Breaker's Delight exclusive) doesn't count, and the rest are weighed against what's typical for that box. Each box type also gets its own price line in section 5. Opening 2 Hobby and 1 Jumbo of the same product? Add it twice from the search and set one to Jumbo. 27 products have box types so far; the rest are Hobby only.</p>
+            <p>Products with an official Topps odds sheet get a box type menu under the name. Pick the format you're actually opening, and the odds for that format are used. A set that isn't in that format at all (a Sapphire-only parallel, a Breaker's Delight exclusive) doesn't count, and the rest are weighed against what's typical for that box. Each box type also gets its own price line in section 5. Opening 2 Hobby and 1 Jumbo of the same product? Click "+ Add another box type" under it to get a second line (it picks Jumbo first when there is one), then set the counts. 27 products have box types so far; the rest are Hobby only.</p>
             <h5>Taking a box out</h5>
             <p>The x next to a box removes it. Your other settings stay put.</p>
             <h5>Paste your own names</h5>
@@ -850,12 +851,16 @@ Bianca Belair | W | auto</pre>
   function drawProds() {
     var h = "", n = 0, picked = entries(), prodsN = {};
     if (!picked.length) h += '<div class="noboxes">No boxes yet. Search for one below, or browse by sport.</div>';
+    var lastOf = {}; picked.forEach(function (e) { lastOf[e.p.id] = e.key; });
     picked.forEach(function (e) {
       var p = e.p, q = e.q; n += q; prodsN[p.id] = 1;
+      var usedT = picked.filter(function (x) { return x.p.id === p.id; }).map(function (x) { return x.t; });
+      var more = p.types && lastOf[p.id] === e.key && usedT.length < p.types.length ? '<button type="button" class="linkbtn addtype" data-id="' + esc(p.id) + '">+ Add another box type</button>' : "";
       var bt = p.types ? '<select class="btype" data-key="' + esc(e.key) + '" aria-label="Box type for ' + esc(p.name) + '">' + p.types.map(function (nm, i) { return '<option value="' + i + '"' + (i === e.t ? " selected" : "") + ">" + esc(nm) + "</option>"; }).join("") + "</select>" : "";
       h += '<div class="prod"><div class="pn">' + esc(p.name) + '<small><span class="tag">' + esc(p.sport) + "</span>" + (bt || p.rows.length + " names") +
         '</small></div><div class="qty on" data-id="' + esc(e.key) + '"><button data-d="-1" aria-label="Fewer boxes">&minus;</button><span>' + q +
-        '</span><button data-d="1" aria-label="More boxes">+</button></div><button class="rm" data-id="' + esc(e.key) + '" aria-label="Remove ' + esc(p.name) + '" title="Remove">&times;</button></div>';
+        '</span><button data-d="1" aria-label="More boxes">+</button></div><button class="rm" data-id="' + esc(e.key) + '" aria-label="Remove ' + esc(p.name) + '" title="Remove">&times;</button></div>' +
+        (more ? '<div class="addtypes">' + more + "</div>" : "");
     });
     var np = Object.keys(prodsN).length;
     if (picked.length) h += '<div class="boxsum">' + n + (n === 1 ? " box" : " boxes") + " from " + np + (np === 1 ? " checklist" : " checklists") + "</div>";
@@ -880,6 +885,16 @@ Bianca Belair | W | auto</pre>
     });
     [].forEach.call(document.querySelectorAll("#prods .rm"), function (el) {
       el.addEventListener("click", function () { delete S.qty[el.getAttribute("data-id")]; drawProds(); go(); });
+    });
+    [].forEach.call(document.querySelectorAll("#prods .addtype"), function (el) {
+      el.addEventListener("click", function () {
+        var id = el.getAttribute("data-id"), p = PBY[id], used = {};
+        Object.keys(S.qty).forEach(function (k) { var e = parseKey(k); if (e && e.p.id === id && S.qty[k] > 0) used[e.t] = 1; });
+        // next box type not in the break yet, Jumbo first if it's there
+        var order = p.types.map(function (nm, i) { return i; }).sort(function (a, b) { return (/^Jumbo/.test(p.types[b]) ? 1 : 0) - (/^Jumbo/.test(p.types[a]) ? 1 : 0) || a - b; });
+        var ti = order.filter(function (i) { return !used[i]; })[0]; if (ti == null) return;
+        S.qty[keyOf(id, ti)] = 1; drawProds(); go(); toast(p.name + ": " + p.types[ti] + " added");
+      });
     });
     [].forEach.call(document.querySelectorAll("#prods .btype"), function (el) {
       el.addEventListener("change", function () {
