@@ -131,10 +131,30 @@ if __name__ == '__main__':
         i = args.index('--panini'); pan = args[i + 1:]; args = args[:i]
         for csvp, pid in zip(pan[::2], pan[1::2]):
             D[pid] = pack(from_panini(csvp), panini_rarity(csvp))
+    bp = os.path.join(HERE, 'boxtypes.json')
+    BT = json.load(open(bp)) if os.path.exists(bp) else {}
+    tp = os.path.join(HERE, 'typedrows.json')
+    TR = json.load(open(tp)) if os.path.exists(tp) else {}
     for d in args:
         for f in sorted(glob.glob(os.path.join(d, '*.cards.json'))):
             pid = os.path.basename(f)[:-11]
-            if pid in lib: D[pid] = pack(from_cards(json.load(open(f))), ODDS.get(pid))
+            if pid not in lib: continue
+            sets = from_cards(json.load(open(f)))
+            D[pid] = pack(sets, ODDS.get(pid))
+            if pid in BT:
+                # box types: the browser works out each player's value for the chosen box type,
+                # so keep which sets (and of which kind) each player is in, plus each set's odds per type
+                idx, out, pl = {}, [], {}
+                for k, v in sets.items():
+                    for kind in range(3):
+                        for sub in sorted(v[kind]):
+                            if (sub, kind) not in idx:
+                                idx[(sub, kind)] = len(out); out.append([kind, BT[pid]['sets'].get(sub)])
+                            pl.setdefault(k, []).append(idx[(sub, kind)])
+                TR[pid] = {'types': BT[pid]['types'], 'main': BT[pid]['main'], 'sets': out, 'players': pl}
+    TR = {k: v for k, v in TR.items() if k in BT and k in lib}
+    json.dump(TR, open(tp, 'w'), separators=(',', ':'), sort_keys=True)
+    print(len(TR), 'products with box types,', sum(len(v['players']) for v in TR.values()), 'players with set lists')
     D = {k: v for k, v in D.items() if k in lib}
     json.dump(D, open(out_path, 'w'), separators=(',', ':'), sort_keys=True)
     print(len(D), 'products,', sum(len(v) for v in D.values()), 'players with a value other than 1; missing:', sorted(lib - set(D)))

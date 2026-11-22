@@ -160,6 +160,13 @@ team spot, box by box. Linked from the storefront's Breaks menu; every page carr
 - **Box search:** section 1 has a "Search boxes" field: any words in any order matched against product name,
   sport and plain sport words (football, wrestling, baseball...), newest years first. Click or Enter adds a box
   (again adds another); arrows move the highlight. The grouped dropdown below is "Or browse by sport".
+- **Box types:** `odds_columns.py` (pdfplumber) reads every box-type column of each Topps odds PDF;
+  `boxtypes_build.py` maps them to Hobby / Jumbo / Jumbo (HTA) / Breaker's Delight / First Day Issue / Sapphire /
+  LogoFractor / Mega Box / Value Box / Hanger / Fat Pack (store exclusives and regional boxes dropped), keeps a
+  product only if its columns check out against odds.json, and writes `boxtypes.json` (27 products; a hand fix for
+  2026 Flagship Football's stacked headings). `depth.py` then writes `typedrows.json` (each player's sets plus each
+  set's odds per type) and the browser scores the chosen box type; sets not in that box count 0. A picked box is
+  `S.qty["<id>"]` (main type) or `S.qty["<id>@<type index>"]`, and prices are keyed the same way.
 - **Find a spot:** search box above the spot list filters to the spots holding a name or team (one or two
   letters match by letter range); the header search results link to `#/build/find/<name>`.
 - **Panini print runs:** Panini publishes no pack odds. `depth.py --panini` reads each CSV's SEQUENCE column:

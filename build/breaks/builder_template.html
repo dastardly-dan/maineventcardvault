@@ -129,6 +129,7 @@ __CSS__
 .prod .rm:hover { color: var(--ink); background: var(--panel-2); }
 .noboxes { color: var(--ink-3); font-size: 13.5px; padding: 6px 0 10px; }
 .addbox { margin-top: 8px; }
+.btype { background: var(--bg-2); color: var(--gold-2); border: 1px solid var(--line-2); border-radius: 7px; font: inherit; font-size: 12px; padding: 1px 4px; margin-top: 2px; max-width: 100%; cursor: pointer; }
 .boxfind { margin-top: 12px; }
 .bfin { display: flex; align-items: center; gap: 8px; padding: 0 11px; border: 1px solid var(--gold); border-radius: 10px; background: var(--bg-2); color: var(--ink-3); }
 .bfin input { flex: 1; min-width: 0; background: transparent; border: 0; outline: 0; color: var(--ink); font: inherit; font-size: 14px; padding: 9px 0; }
@@ -366,6 +367,8 @@ table.rows td small { color: var(--ink-3); }
             <p> The checklists come from the official Topps and Panini lists, and the Checklist library tab shows exactly what's in each one.</p>
             <h5>How many of each</h5>
             <p>Set the counter to the number of boxes you're actually opening. Every name's points get multiplied by that count, so two boxes of a product count twice as much as one. If a name shows up in two different products, the points from both add together.</p>
+            <h5>Box type: Hobby, Jumbo, Breaker's Delight and more</h5>
+            <p>Products with an official Topps odds sheet get a box type menu under the name. Pick the format you're actually opening, and the odds for that format are used. A set that isn't in that format at all (a Sapphire-only parallel, a Breaker's Delight exclusive) doesn't count, and the rest are weighed against what's typical for that box. Each box type also gets its own price line in section 5. Opening 2 Hobby and 1 Jumbo of the same product? Add it twice from the search and set one to Jumbo. 27 products have box types so far; the rest are Hobby only.</p>
             <h5>Taking a box out</h5>
             <p>The x next to a box removes it. Your other settings stay put.</p>
             <h5>Paste your own names</h5>
@@ -485,7 +488,7 @@ Bianca Belair | W | auto</pre>
             <h5>Base, Auto, Insert, Multi</h5>
             <p>Points a name earns for showing up in that part of the checklist, per box. The defaults are 1 for base, 2 for an autograph set, 0.5 for an insert or relic set, and 0.5 for a card shared with other people (dual and triple cards). A name in the base set and an autograph set scores both. Raise Auto if your buyers are chasing autos; set Base to 0 if base cards don't matter to them.</p>
             <h5>Player value: Off, Normal, Strong</h5>
-            <p>Turns two signals from the official lists into extra points. Stars and top rookies are in far more autograph and insert sets than role players, and the Topps pack odds show how hard each set is to pull, so a 1 per case autograph counts several times a 1 per pack insert. Panini doesn't publish odds, so their print runs (/25, 1/1 and so on) do that job for Panini and Donruss boxes. Normal is the default. Strong leans on it harder. Off scores every set the same.</p>
+            <p>Turns two signals from the official lists into extra points. Stars and top rookies are in far more autograph and insert sets than role players, and the Topps pack odds show how hard each set is to pull, so a 1 per case autograph counts several times a 1 per pack insert. Panini doesn't publish odds, so their print runs (/25, 1/1 and so on) do that job for Panini and Donruss boxes. Normal is the default. Strong leans on it harder. Off scores every set the same. For products with a box type menu, the odds come from the box type you picked, and sets you can't pull from that box don't count even with Off.</p>
           </div>
           <div>
             <h5>Star names</h5>
@@ -503,7 +506,7 @@ Bianca Belair | W | auto</pre>
         <div class="gcols">
           <div>
             <h5>What you paid</h5>
-            <p>One box for each product you picked. Enter the price of one box (or one case, if you're counting a case as one box) and it's multiplied by the box count from section 1.</p>
+            <p>One line for each box you picked, and a separate line for each box type, since a Jumbo or Breaker's Delight box costs more than a Hobby box. Enter the price of one box (or one case, if you're counting a case as one box) and it's multiplied by the box count from section 1.</p>
             <h5>Other costs, Fees, Profit</h5>
             <ul>
               <li><b>Other costs:</b> shipping, supplies, giveaways, anything else the break costs you.</li>
@@ -684,21 +687,33 @@ Bianca Belair | W | auto</pre>
   function save() { try { localStorage.setItem(SKEY, JSON.stringify(S)); } catch (e) {} }
 
   // ---------- inputs ----------
+  // a picked box is S.qty[key]: key is the product id (its main box type) or "id@3" for box type 3
+  var PBY = {}; PRODS.forEach(function (p, i) { PBY[p.id] = p; p.ix = i; });
+  function keyOf(id, ti) { var p = PBY[id]; return !p || !p.types || ti == null || ti === p.main ? id : id + "@" + ti; }
+  function parseKey(k) { var m = String(k).split("@"), p = PBY[m[0]]; if (!p) return null; var ti = m.length > 1 ? parseInt(m[1], 10) : (p.types ? p.main : null); if (p.types && !(ti >= 0 && ti < p.types.length)) ti = p.main; return { key: k, p: p, t: ti }; }
+  function entries() {
+    return Object.keys(S.qty).filter(function (k) { return (S.qty[k] || 0) > 0; }).map(parseKey).filter(Boolean)
+      .map(function (e) { e.q = S.qty[e.key]; return e; }).sort(function (a, b) { return a.p.ix - b.p.ix || (a.t || 0) - (b.t || 0); });
+  }
+  function typeName(e) { return e.p.types ? e.p.types[e.t] : ""; }
+  function qtyOf(id) { var n = 0; Object.keys(S.qty).forEach(function (k) { if (k.split("@")[0] === id) n += S.qty[k] || 0; }); return n; }
   function drawProds() {
-    var h = "", n = 0, picked = PRODS.filter(function (p) { return (S.qty[p.id] || 0) > 0; });
+    var h = "", n = 0, picked = entries(), prodsN = {};
     if (!picked.length) h += '<div class="noboxes">No boxes yet. Search for one below, or browse by sport.</div>';
-    picked.forEach(function (p) {
-      var q = S.qty[p.id]; n += q;
-      h += '<div class="prod"><div class="pn">' + esc(p.name) + '<small><span class="tag">' + esc(p.sport) + "</span>" + p.rows.length + " names" +
-        '</small></div><div class="qty on" data-id="' + p.id + '"><button data-d="-1" aria-label="Fewer boxes">&minus;</button><span>' + q +
-        '</span><button data-d="1" aria-label="More boxes">+</button></div><button class="rm" data-id="' + p.id + '" aria-label="Remove ' + esc(p.name) + '" title="Remove">&times;</button></div>';
+    picked.forEach(function (e) {
+      var p = e.p, q = e.q; n += q; prodsN[p.id] = 1;
+      var bt = p.types ? '<select class="btype" data-key="' + esc(e.key) + '" aria-label="Box type for ' + esc(p.name) + '">' + p.types.map(function (nm, i) { return '<option value="' + i + '"' + (i === e.t ? " selected" : "") + ">" + esc(nm) + "</option>"; }).join("") + "</select>" : "";
+      h += '<div class="prod"><div class="pn">' + esc(p.name) + '<small><span class="tag">' + esc(p.sport) + "</span>" + (bt || p.rows.length + " names") +
+        '</small></div><div class="qty on" data-id="' + esc(e.key) + '"><button data-d="-1" aria-label="Fewer boxes">&minus;</button><span>' + q +
+        '</span><button data-d="1" aria-label="More boxes">+</button></div><button class="rm" data-id="' + esc(e.key) + '" aria-label="Remove ' + esc(p.name) + '" title="Remove">&times;</button></div>';
     });
-    if (picked.length) h += '<div class="boxsum">' + n + (n === 1 ? " box" : " boxes") + " from " + picked.length + (picked.length === 1 ? " checklist" : " checklists") + "</div>";
+    var np = Object.keys(prodsN).length;
+    if (picked.length) h += '<div class="boxsum">' + n + (n === 1 ? " box" : " boxes") + " from " + np + (np === 1 ? " checklist" : " checklists") + "</div>";
     var o = '<select class="in addbox" id="addbox" aria-label="Add a box to the break"><option value="">+ Add a box (' + PRODS.length + " checklists)</option>", last = "";
     PRODS.forEach(function (p) {
       if (p.sport !== last) { o += (last ? "</optgroup>" : "") + '<optgroup label="' + esc(p.sport) + '">'; last = p.sport; }
-      var on = (S.qty[p.id] || 0) > 0;
-      o += '<option value="' + p.id + '"' + (on ? " disabled" : "") + ">" + esc(p.name) + (on ? " (added)" : "") + "</option>";
+      var on = qtyOf(p.id) > 0;
+      o += '<option value="' + p.id + '">' + esc(p.name) + (on ? " (added)" : "") + "</option>";
     });
     o += (last ? "</optgroup>" : "") + "</select>";
     $("prods").innerHTML = h;
@@ -709,15 +724,25 @@ Bianca Belair | W | auto</pre>
       el.addEventListener("click", function (e) {
         var b = e.target.closest("button"); if (!b) return;
         var id = el.getAttribute("data-id"); S.qty[id] = Math.max(0, Math.min(12, (S.qty[id] || 0) + (+b.getAttribute("data-d"))));
+        if (!S.qty[id]) delete S.qty[id];
         drawProds(); go();
       });
     });
     [].forEach.call(document.querySelectorAll("#prods .rm"), function (el) {
-      el.addEventListener("click", function () { S.qty[el.getAttribute("data-id")] = 0; drawProds(); go(); });
+      el.addEventListener("click", function () { delete S.qty[el.getAttribute("data-id")]; drawProds(); go(); });
+    });
+    [].forEach.call(document.querySelectorAll("#prods .btype"), function (el) {
+      el.addEventListener("change", function () {
+        var old = el.getAttribute("data-key"), e = parseKey(old), nk = keyOf(e.p.id, parseInt(el.value, 10));
+        if (nk === old) return;
+        S.qty[nk] = Math.min(12, (S.qty[nk] || 0) + (S.qty[old] || 0)); delete S.qty[old];
+        if (S.cost[old] != null && S.cost[nk] == null) S.cost[nk] = S.cost[old];
+        drawProds(); go();
+      });
     });
     $("addbox").addEventListener("change", function () {
       var id = this.value; if (!id) return;
-      S.qty[id] = 1; drawProds(); go();
+      addBox(id);
     });
   }
   // ---------- box search ----------
@@ -725,7 +750,7 @@ Bianca Belair | W | auto</pre>
     MLB: "baseball", "USA Baseball": "baseball", WWE: "wrestling", MLW: "wrestling", UFC: "mma fighting", MMA: "fighting pfl", Soccer: "football futbol",
     F1: "formula 1 racing", "Star Wars": "starwars", Pokemon: "pokemon tcg" };
   var bqSel = 0, bqHits = [];
-  function hay(p) { return fold(p.name + " " + p.sport + " " + (SPORTWORDS[p.sport] || "")).toLowerCase().replace(/&/g, " and ").replace(/[^a-z0-9 ]+/g, " "); }
+  function hay(p) { return fold(p.name + " " + p.sport + " " + (SPORTWORDS[p.sport] || "") + " " + (p.types ? p.types.join(" ") : "")).toLowerCase().replace(/&/g, " and ").replace(/[^a-z0-9 ]+/g, " "); }
   function drawBoxFind() {
     var el = $("bq"), out = $("bqr"); if (!el) return;
     var raw = el.value.trim(), q = fold(raw).toLowerCase().replace(/&/g, " and ").replace(/[^a-z0-9 ]+/g, " ").split(/\s+/).filter(Boolean);
@@ -742,16 +767,16 @@ Bianca Belair | W | auto</pre>
       return s;
     }
     out.innerHTML = '<div class="bqcount">' + bqHits.length + (bqHits.length === 1 ? " box matches" : " boxes match") + "</div>" + bqHits.map(function (p, i) {
-      var q2 = S.qty[p.id] || 0;
-      return '<button type="button" class="bqi' + (i === bqSel ? " sel" : "") + (q2 ? " got" : "") + '" role="option" data-id="' + p.id + '"><span class="bqn">' + mark(p.name) + '<small><span class="tag">' + esc(p.sport) + "</span>" + p.rows.length + " names</small></span>" +
+      var q2 = qtyOf(p.id);
+      return '<button type="button" class="bqi' + (i === bqSel ? " sel" : "") + (q2 ? " got" : "") + '" role="option" data-id="' + p.id + '"><span class="bqn">' + mark(p.name) + '<small><span class="tag">' + esc(p.sport) + "</span>" + p.rows.length + " names" + (p.types ? " · " + esc(p.types.join(", ")) : "") + "</small></span>" +
         '<span class="bqa">' + (q2 ? "Added (" + q2 + ") +1" : "Add") + "</span></button>";
     }).join("");
   }
   function addBox(id) {
     S.qty[id] = Math.min(12, (S.qty[id] || 0) + 1);
-    var p = PRODS.filter(function (x) { return x.id === id; })[0];
+    var p = PBY[id], n = qtyOf(id);
     drawProds(); go();
-    if (p) toast(p.name + (S.qty[id] > 1 ? ": " + S.qty[id] + " boxes" : " added"));
+    if (p) toast(p.name + (n > 1 ? ": " + n + " boxes" : " added"));
   }
   $("bq").addEventListener("input", function () { bqSel = 0; drawBoxFind(); });
   $("bq").addEventListener("keydown", function (e) {
@@ -762,9 +787,9 @@ Bianca Belair | W | auto</pre>
   $("bqr").addEventListener("click", function (e) { var b = e.target.closest(".bqi"); if (b) addBox(b.getAttribute("data-id")); });
 
   function drawCosts(picked) {
-    $("costs").innerHTML = picked.length ? picked.map(function (p) {
-      var q = S.qty[p.id];
-      return '<div class="costrow"><div class="cn">' + esc(p.name) + ' <small>x' + q + '</small></div><div class="money"><input class="in" type="number" min="0" step="1" data-cost="' + p.id + '" placeholder="per box" value="' + (S.cost[p.id] != null ? esc(S.cost[p.id]) : "") + '" aria-label="Price per box for ' + esc(p.name) + '"></div></div>';
+    $("costs").innerHTML = picked.length ? picked.map(function (e) {
+      var tn = typeName(e);
+      return '<div class="costrow"><div class="cn">' + esc(e.p.name) + (tn ? " <small>" + esc(tn) + "</small>" : "") + ' <small>x' + e.q + '</small></div><div class="money"><input class="in" type="number" min="0" step="1" data-cost="' + esc(e.key) + '" placeholder="per box" value="' + (S.cost[e.key] != null ? esc(S.cost[e.key]) : "") + '" aria-label="Price per box for ' + esc(e.p.name + (tn ? " " + tn : "")) + '"></div></div>';
     }).join("") : '<div class="noboxes">Add boxes in section 1 first.</div>';
     [].forEach.call(document.querySelectorAll("#costs input"), function (el) {
       el.addEventListener("input", function () { S.cost[el.getAttribute("data-cost")] = el.value; go(); });
@@ -806,20 +831,46 @@ Bianca Belair | W | auto</pre>
     });
     return out;
   }
+  var MCACHE = {};
+  function boxMults(p, ti) {
+    var ck = p.id + "@" + ti; if (MCACHE[ck]) return MCACHE[ck];
+    var med = [0, 1, 2].map(function (k) {
+      var o = p.sets.filter(function (s) { return s[0] === k && s[1] && s[1][ti] > 0; }).map(function (s) { return s[1][ti]; }).sort(function (a, b) { return a - b; });
+      return o.length >= 2 ? o[Math.floor(o.length / 2)] : 0;
+    });
+    return (MCACHE[ck] = p.sets.map(function (s) {
+      if (!s[1]) return 1;
+      var o = s[1][ti]; if (!(o > 0)) return 0;
+      return med[s[0]] ? Math.min(5, Math.max(0.4, Math.pow(o / med[s[0]], 0.4))) : 1;
+    }));
+  }
   function collect() {
     var wb = +S.wb || 0, wa = +S.wa || 0, wi = +S.wi || 0, wm = +S.wm || 0;
     var map = {}, boxes = 0;
     var dpow = S.depth === "strong" ? 0.8 : S.depth === "off" ? 0 : 0.5;
     function dm(n) { return dpow && n > 0 && n !== 1 ? Math.pow(n, dpow) : 1; }
-    function add(name, flags, g, q, team, sport, dep) {
+    function tv(n) { return n < 0 ? 1 : n === 0 ? 0 : dpow ? Math.pow(n, dpow) : 1; }
+    function add(name, flags, g, q, team, sport, dep, typed) {
       dep = dep || [1, 1, 1];
-      var w = (flags.indexOf("B") > -1 ? wb : 0) + (flags.indexOf("A") > -1 ? wa * dm(dep[0]) : 0) + (flags.indexOf("I") > -1 ? wi * dm(dep[1]) : 0) + (flags.indexOf("M") > -1 ? wm * dm(dep[2]) : 0);
+      var f = typed ? tv : dm, d = typed || dep;
+      var w = (flags.indexOf("B") > -1 ? wb : 0) + (flags.indexOf("A") > -1 ? wa * f(d[0]) : 0) + (flags.indexOf("I") > -1 ? wi * f(d[1]) : 0) + (flags.indexOf("M") > -1 ? wm * f(d[2]) : 0);
       var r = map[name] || (map[name] = { n: name, w: 0, g: "", a: false, teams: {} });
       r.w += w * q; if (g) r.g = g; if (flags.indexOf("A") > -1) r.a = true;
       if (team) String(team).split("/").forEach(function (t) { t = t.trim(); if (t) r.teams[t] = sport || 1; });
     }
     var sports = {};
-    PRODS.forEach(function (p) { var q = S.qty[p.id] || 0; if (!q) return; boxes += q; sports[p.sport] = 1; p.rows.forEach(function (r) { add(r[0], r[1], r[2], q, r[3], p.sport, r[4]); }); });
+    entries().forEach(function (e) {
+      var p = e.p, q = e.q; boxes += q; sports[p.sport] = 1;
+      if (!p.types) { p.rows.forEach(function (r) { add(r[0], r[1], r[2], q, r[3], p.sport, r[4]); }); return; }
+      // box types: each set counts by its odds in this box type next to the typical set of its kind; sets not in this box count 0
+      var ti = e.t, M = boxMults(p, ti);
+      p.rows.forEach(function (r) {
+        if (!r[4]) { add(r[0], r[1], r[2], q, r[3], p.sport); return; }
+        var v = [0, 0, 0], has = [0, 0, 0];
+        r[4].forEach(function (i) { var k = p.sets[i][0]; has[k] = 1; v[k] += M[i]; });
+        add(r[0], r[1], r[2], q, r[3], p.sport, null, [has[0] ? v[0] : -1, has[1] ? v[1] : -1, has[2] ? v[2] : -1]);
+      });
+    });
     String(S.paste || "").split(/\n/).forEach(function (l) {
       var parts = l.split("|").map(function (x) { return x.trim(); }); if (!parts[0]) return;
       var g = "", f = "B";
@@ -1257,7 +1308,7 @@ Bianca Belair | W | auto</pre>
   function drawLib() {
     $("lib").innerHTML = '<table class="rows"><tbody>' + PRODS.map(function (p) {
       var a = p.rows.filter(function (r) { return r[1].indexOf("A") > -1; }).length, w = p.rows.filter(function (r) { return r[2] === "F"; }).length;
-      return "<tr><th style=\"width:auto\"><span style=\"color:var(--ink)\">" + esc(p.name) + "</span><br><small style=\"color:var(--ink-3);font-weight:400\">" + esc(p.sport) + (p.added ? " · added " + esc(p.added) : "") + "</small></th><td>" + p.rows.length + " names<br><small>" + a + " with autos" + (w ? ", " + w + " women" : "") + "</small></td><td>" + (p.note ? esc(p.note) + "<br>" : "") + (p.source ? '<a href="' + esc(p.source) + '" target="_blank" rel="noopener" style="color:var(--gold-2)">Source checklist</a>' : "") + "</td></tr>";
+      return "<tr><th style=\"width:auto\"><span style=\"color:var(--ink)\">" + esc(p.name) + "</span><br><small style=\"color:var(--ink-3);font-weight:400\">" + esc(p.sport) + (p.added ? " · added " + esc(p.added) : "") + (p.types ? "<br>Box types: " + esc(p.types.join(", ")) : "") + "</small></th><td>" + p.rows.length + " names<br><small>" + a + " with autos" + (w ? ", " + w + " women" : "") + "</small></td><td>" + (p.note ? esc(p.note) + "<br>" : "") + (p.source ? '<a href="' + esc(p.source) + '" target="_blank" rel="noopener" style="color:var(--gold-2)">Source checklist</a>' : "") + "</td></tr>";
     }).join("") + "</tbody></table>";
   }
 

@@ -73,6 +73,18 @@ def main():
         for r in p['rows']:
             v = d.get(dkey(r[0]))
             if v: r.append(v)
+    # box types (Hobby, Jumbo, Breaker's Delight...): per-type set odds, and each row's set list instead of fixed values
+    tp = os.path.join(HERE, 'typedrows.json')
+    TR = json.load(open(tp)) if os.path.exists(tp) else {}
+    for p in prods:
+        t = TR.get(p['id'])
+        if not t: continue
+        p['types'] = t['types']; p['main'] = t['main']
+        p['sets'] = [[k, [int(round(x)) if x >= 1 else round(x, 2) for x in o] if o else 0] for k, o in t['sets']]
+        for r in p['rows']:
+            del r[4:]
+            v = t['players'].get(dkey(r[0]))
+            if v: r.append(v)
     order = ['WWE', 'MLW', 'UFC', 'MMA', 'NFL', 'NBA', 'WNBA', 'NBL', 'EuroLeague', 'MLB', 'USA Baseball', 'Soccer', 'F1', 'Olympics', 'Marvel', 'Star Wars', 'Disney', 'Pokemon', 'Entertainment', 'Other']
     prods.sort(key=lambda p: (order.index(p['sport']) if p['sport'] in order else 99, p['name']))
     css = open(os.path.join(HERE, 'base.css')).read()
