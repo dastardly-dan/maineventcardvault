@@ -206,6 +206,9 @@ table.rows td small { color: var(--ink-3); }
             <div><label class="f" for="wm">Multi</label><input class="in" id="wm" type="number" step="0.5" min="0" value="0.5"></div>
           </div>
           <div class="hint">Points per appearance, per box. A name in the base set and an auto set scores base plus auto.</div>
+          <label class="f" style="margin-top:12px">Player value</label>
+          <div class="seg" id="depth"><button data-v="off">Off</button><button data-v="normal">Normal</button><button data-v="strong">Strong</button></div>
+          <div class="hint">Card makers put their stars and top rookies in far more autograph and insert sets than role players. Normal and Strong give a player more points the more hit sets they're in, so teams and letters with valuable players weigh (and cost) more.</div>
           <label class="f" for="stars" style="margin-top:12px">Star names (name | multiplier)</label>
           <textarea class="in" id="stars" placeholder="John Cena | 5&#10;Roman Reigns | 4&#10;Rhea Ripley | 3"></textarea>
           <div class="hint">Use this for the names buyers actually chase, so their letters get treated as the heavy hitters they are. One huge star can't be split, so their spot may stay a bit heavier. In team breaks you can star a whole team too, like "Yankees | 2".</div>
@@ -275,10 +278,11 @@ table.rows td small { color: var(--ink-3); }
         </div>
 
         <div class="card">
-          <h4>2. Each kind counts once per box</h4>
-          <p class="sub2">Five different autograph cards in one product still count as one "auto." That keeps a name with lots of parallels from swamping the list.</p>
-          <div class="stack"><div class="mini">Auto</div><div class="mini dim">Auto</div><div class="mini dim">Auto</div><div class="mini dim">Auto</div><div class="mini dim">Auto</div></div>
-          <div class="eq">5 autograph cards for John Cena in one checklist = <b>2 points</b>, not 10</div>
+          <h4>2. Player value: deeper players count more</h4>
+          <p class="sub2">Topps and Panini put their stars and top rookies in far more autograph and insert sets than role players. The "Player value" setting turns that into points: the more different hit sets a player is in, the more their auto and insert points grow.</p>
+          <div class="stack"><div class="mini">Auto</div><div class="mini">Auto</div><div class="mini">Auto</div><div class="mini">Auto</div><div class="mini">Auto</div><div class="mini dim">Auto</div></div>
+          <div class="eq">Drake Maye, 2026 Flagship Football: in <b>6</b> autograph sets and <b>26</b> insert sets.<br>Off: auto counts once, <b>2</b> points. Normal: 2 x the square root of 6 = <b>4.9</b> points. Strong: 2 x 6 to the 0.8 = <b>8.4</b> points.</div>
+          <p class="sub2" style="margin:10px 0 0">A role player in one autograph set gets the plain 2 points either way. Parallels of the same set don't count extra; only different sets do. Normal is the default.</p>
         </div>
 
         <div class="card">
@@ -364,7 +368,7 @@ table.rows td small { color: var(--ink-3); }
   function fold(t) { return String(t).normalize("NFD").replace(/[̀-ͯ]/g, ""); }
 
   // ---------- settings ----------
-  var S = { init: false, tidy: "simple", qty: {}, n: 21, goal: "", group: "free", prefix: "on", gender: "auto", rule: "first", nick: "printed", wb: 1, wa: 2, wi: 0.5, wm: 0.5, stars: "", paste: "", split: "letters", tgroup: "free", nil: "own", cost: {}, extra: "", fee: 10, profit: 20, floor: "" };
+  var S = { init: false, tidy: "simple", qty: {}, n: 21, goal: "", group: "free", prefix: "on", gender: "auto", rule: "first", nick: "printed", wb: 1, wa: 2, wi: 0.5, wm: 0.5, stars: "", paste: "", split: "letters", tgroup: "free", nil: "own", depth: "normal", cost: {}, extra: "", fee: 10, profit: 20, floor: "" };
   try { var saved = JSON.parse(localStorage.getItem(SKEY) || "null"); if (saved) for (var k in saved) S[k] = saved[k]; } catch (e) {}
   if (!S.cost || typeof S.cost !== "object") S.cost = {};
   if (!S.init) {
@@ -424,7 +428,7 @@ table.rows td small { color: var(--ink-3); }
       b.onclick = function () { S[id] = b.getAttribute("data-v"); seg(id); go(); };
     });
   }
-  ["group", "prefix", "gender", "rule", "nick", "tidy", "split", "tgroup", "nil"].forEach(seg);
+  ["group", "prefix", "gender", "rule", "nick", "tidy", "split", "tgroup", "nil", "depth"].forEach(seg);
   ["n", "goal", "wb", "wa", "wi", "wm", "extra", "fee", "profit", "floor"].forEach(function (id) { $(id).value = S[id]; $(id).addEventListener("input", function () { S[id] = $(id).value; go(); }); });
   ["stars", "paste"].forEach(function (id) { $(id).value = S[id]; $(id).addEventListener("input", function () { S[id] = $(id).value; go(); }); });
 
@@ -456,14 +460,17 @@ table.rows td small { color: var(--ink-3); }
   function collect() {
     var wb = +S.wb || 0, wa = +S.wa || 0, wi = +S.wi || 0, wm = +S.wm || 0;
     var map = {}, boxes = 0;
-    function add(name, flags, g, q, team, sport) {
-      var w = (flags.indexOf("B") > -1 ? wb : 0) + (flags.indexOf("A") > -1 ? wa : 0) + (flags.indexOf("I") > -1 ? wi : 0) + (flags.indexOf("M") > -1 ? wm : 0);
+    var dpow = S.depth === "strong" ? 0.8 : S.depth === "off" ? 0 : 0.5;
+    function dm(n) { return dpow && n > 1 ? Math.pow(n, dpow) : 1; }
+    function add(name, flags, g, q, team, sport, dep) {
+      dep = dep || [1, 1, 1];
+      var w = (flags.indexOf("B") > -1 ? wb : 0) + (flags.indexOf("A") > -1 ? wa * dm(dep[0]) : 0) + (flags.indexOf("I") > -1 ? wi * dm(dep[1]) : 0) + (flags.indexOf("M") > -1 ? wm * dm(dep[2]) : 0);
       var r = map[name] || (map[name] = { n: name, w: 0, g: "", a: false, teams: {} });
       r.w += w * q; if (g) r.g = g; if (flags.indexOf("A") > -1) r.a = true;
       if (team) String(team).split("/").forEach(function (t) { t = t.trim(); if (t) r.teams[t] = sport || 1; });
     }
     var sports = {};
-    PRODS.forEach(function (p) { var q = S.qty[p.id] || 0; if (!q) return; boxes += q; sports[p.sport] = 1; p.rows.forEach(function (r) { add(r[0], r[1], r[2], q, r[3], p.sport); }); });
+    PRODS.forEach(function (p) { var q = S.qty[p.id] || 0; if (!q) return; boxes += q; sports[p.sport] = 1; p.rows.forEach(function (r) { add(r[0], r[1], r[2], q, r[3], p.sport, r[4]); }); });
     String(S.paste || "").split(/\n/).forEach(function (l) {
       var parts = l.split("|").map(function (x) { return x.trim(); }); if (!parts[0]) return;
       var g = "", f = "B";

@@ -148,6 +148,11 @@ team spot, box by box. Linked from the storefront's Breaks menu; every page carr
   for reference only since it points at session paths). topps.com shows a bot check that the person has to
   click; the PDFs themselves on cdn.shopify.com download fine in the browser. 2026 Topps Update Series
   Baseball was skipped: its link on the Topps page returns 404.
+- **Player value (hit depth):** `build/breaks/depth.py` counts, per product, how many different autograph,
+  insert and multi-person sets each player is in (parallels folded into their root set) and writes
+  `build/breaks/depth.json`; `builder.py` appends `[autoSets, insertSets, multiSets]` to rows where any is above 1.
+  The builder's Player value setting scales auto/insert/multi points by count^0.5 (Normal, default) or
+  count^0.8 (Strong). Rerun depth.py with the cards.json folder (and any Panini CSVs) when adding checklists.
 - **Boxes UI:** the builder lists only the boxes picked for the break; everything else is in the grouped
   "Add a box" dropdown, so the library can grow without the panel getting longer.
 

@@ -58,8 +58,21 @@ def parse(path):
     return dict(id=pid, name=meta.get('name', pid), sport=meta.get('sport', 'Other'), added=meta.get('added', ''),
                 source=meta.get('source', ''), note=meta.get('note', ''), gender=any(r[2] == 'F' for r in rows), rows=rows)
 
+def dkey(n):
+    import unicodedata
+    n = unicodedata.normalize('NFKD', n).encode('ascii', 'ignore').decode().lower()
+    return re.sub(r'[^a-z]', '', n)
+
 def main():
     prods = [parse(p) for p in sorted(glob.glob(os.path.join(HERE, 'checklists', '*.txt')))]
+    # hit depth (see depth.py): append [autoSets, insertSets, multiSets] to rows where any is above 1
+    dp = os.path.join(HERE, 'depth.json')
+    D = json.load(open(dp)) if os.path.exists(dp) else {}
+    for p in prods:
+        d = D.get(p['id'], {})
+        for r in p['rows']:
+            v = d.get(dkey(r[0]))
+            if v: r.append(v)
     order = ['WWE', 'MLW', 'UFC', 'MMA', 'NFL', 'NBA', 'WNBA', 'NBL', 'EuroLeague', 'MLB', 'USA Baseball', 'Soccer', 'F1', 'Olympics', 'Marvel', 'Star Wars', 'Disney', 'Pokemon', 'Entertainment', 'Other']
     prods.sort(key=lambda p: (order.index(p['sport']) if p['sport'] in order else 99, p['name']))
     css = open(os.path.join(HERE, 'base.css')).read()
