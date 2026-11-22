@@ -125,8 +125,8 @@ WWE_BOX = {
                    types='Base with space-themed Refractors, inserts like Galaxy Greats and Planetary Pursuit, case hits like Cosmic Dust, autographs.'),
     'sapphire': dict(k='sapphire', short='Sapphire', c='#4fd1a5', full='2026 Topps Chrome WWE Sapphire', kind='201-card Sapphire base, autographs, inserts',
                      types='Sapphire versions of the Chrome base, Infinite Sapphire and Sapphire Selections inserts, 1 autograph per box.'),
-    'logo': dict(k='logo', short='LogoFractor', c='#f2c14e', full='2026 Topps Chrome WWE LogoFractor', kind='Chrome base and inserts (LogoFractor autograph list not published)',
-                 types='LogoFractor versions of the Chrome WWE base and inserts, plus LogoFractor Autographs (checklist not published yet).'),
+    'logo': dict(k='logo', short='LogoFractor', c='#f2c14e', full='2026 Topps Chrome WWE LogoFractor', kind='201-card LogoFractor base, 89 LogoFractor Autographs, 3 insert sets',
+                 types='LogoFractor versions of the Chrome WWE base, Eras of Excellence, Focus Reel and WrestleMania Recall inserts, plus LogoFractor Autographs.'),
     'exalted': dict(k='exalted', short='Exalted', c='#e2545e', full='Topps Exalted WWE (the "2025" set, released April 2026)', kind='100-card base, autographs, relics',
                     types='100-card foil base, several autograph sets and relics (multi-person relics included).'),
 }
@@ -166,10 +166,10 @@ cc871 = dict(
     notes=['Sapphire uses the same 201 base subjects as Chrome, so most base names show up in both.',
            'Autograph and insert lists come from the published checklists. A name only in an autograph set is much harder to pull than a base card.'],
     sources=[['CC871 break page (Colfax Collectibles)', 'https://colfaxcc.com/products/cc871-club-chrome-pyl-pick-your-letter'],
-             ['Stadium Club WWE checklist', 'https://www.checklistcenter.com/?p=63880'],
+             ['Stadium Club WWE checklist (official Topps)', 'https://cdn.shopify.com/s/files/1/0662/9749/5709/files/2026_Topps_Stadium_Club_WWE_-_Checklist.pdf?v=1791221305'],
              ['Chrome WWE checklist', 'https://www.checklistcenter.com/2026-topps-chrome-wwe-wrestling-card-checklist/'],
-             ['Cosmic Chrome WWE checklist', 'https://www.checklistcenter.com/2026-topps-cosmic-chrome-wwe-wrestling-card-checklist/'],
-             ['Chrome WWE Sapphire checklist', 'https://www.checklistcenter.com/2026-topps-chrome-sapphire-wwe-wrestling-card-checklist/']],
+             ['Cosmic Chrome WWE checklist (matches the official Topps list)', 'https://www.checklistcenter.com/2026-topps-cosmic-chrome-wwe-wrestling-card-checklist/'],
+             ['Chrome WWE Sapphire checklist (official Topps)', 'https://cdn.shopify.com/s/files/1/0662/9749/5709/files/FINAL_CHECKLIST_2026TOPPSCHROMEWWE_SAPPHIRE_1.pdf?v=1777570435']],
 )
 
 # JWJ #0246 Cosmic Exalted Logo Club PYL
@@ -196,10 +196,10 @@ jwj0246 = dict(
            'The listing says "2026 Topps Exalted WWE". The only Exalted WWE set out is the one Topps calls 2025 (released April 2026), so that checklist is used here.',
            'Here A Men and C Men are separate spots, so "The American Nightmare" Cody Rhodes matters: he shows under A, and under C with a "?" tag.'],
     sources=[['JWJ #0246 break page', 'https://jwjcollectorbreaks.com/products/jwj-0246-exalted-space-club-pyl'],
-             ['Stadium Club WWE checklist', 'https://www.checklistcenter.com/?p=63880'],
-             ['Cosmic Chrome WWE checklist', 'https://www.checklistcenter.com/2026-topps-cosmic-chrome-wwe-wrestling-card-checklist/'],
-             ['Chrome WWE checklist (LogoFractor base)', 'https://www.checklistcenter.com/2026-topps-chrome-wwe-wrestling-card-checklist/'],
-             ['Exalted WWE checklist', 'https://www.diamondcardsonline.com/blog/2025-topps-exalted-wwe-wrestling-cards-checklist/']],
+             ['Stadium Club WWE checklist (official Topps)', 'https://cdn.shopify.com/s/files/1/0662/9749/5709/files/2026_Topps_Stadium_Club_WWE_-_Checklist.pdf?v=1791221305'],
+             ['Cosmic Chrome WWE checklist (matches the official Topps list)', 'https://www.checklistcenter.com/2026-topps-cosmic-chrome-wwe-wrestling-card-checklist/'],
+             ['LogoFractor WWE checklist', 'https://www.checklistinsider.com/2026-topps-chrome-logofractor-wwe'],
+             ['Exalted WWE checklist (official Topps)', 'https://cdn.shopify.com/s/files/1/0662/9749/5709/files/FINAL_CHECKLIST_2025EXALTEDWWE.pdf?v=1774986961']],
 )
 
 # ---------------- Star Wars random letter ----------------
@@ -223,8 +223,8 @@ jwj0247 = dict(
            ['Multi-character cards', ['Dual, triple and quad autos are tagged "multi". Each character is listed under their own letter.']]],
     notes=['Autographs list the character, not the actor.', 'Characters starting with a number (8D8) don\'t fit any letter here; see the list below.'],
     sources=[['JWJ #0247 break page', 'https://jwjcollectorbreaks.com/products/jwj-0247-chromed-up-galaxy'],
-             ['Chrome Star Wars checklist', 'https://www.checklistcenter.com/2026-topps-chrome-star-wars-entertainment-card-checklist/'],
-             ['Star Wars Galaxy Chrome checklist', 'https://www.checklistcenter.com/2026-topps-star-wars-galaxy-chrome-entertainment-card-checklist/']],
+             ['Chrome Star Wars checklist (official Topps)', 'https://cdn.shopify.com/s/files/1/0662/9749/5709/files/CheckList_26SWCM4.pdf?v=1790785945'],
+             ['Star Wars Galaxy Chrome checklist (official Topps)', 'https://cdn.shopify.com/s/files/1/0662/9749/5709/files/26SWCGCHECKLISTUPDATE.pdf?v=1786632392']],
 )
 
 # ---------------- team breaks ----------------
@@ -255,8 +255,8 @@ cc872 = dict(
            'Topps Chrome and Midnight cards are listed with the team the checklist gives them.'],
     sources=[['CC872 break page (Colfax Collectibles)', 'https://colfaxcc.com/products/cc872-chrome-absolute-midnight-random-team'],
              ['Colfax group break rules', 'https://colfaxcc.com/pages/rules'],
-             ['Topps Chrome Football checklist', 'https://www.checklistcenter.com/?p=64386'],
-             ['Topps Midnight Football checklist', 'https://www.checklistcenter.com/?p=64273'],
+             ['Topps Chrome Football checklist (official Topps)', 'https://cdn.sanity.io/files/hj34sz77/production/2cfae3dbb6d90c93d7a660bdf96b71cee1251349.pdf'],
+             ['Topps Midnight Football checklist (official Topps)', 'https://cdn.shopify.com/s/files/1/0662/9749/5709/files/2026_Topps_Midnight_Football_checklist_ae614b15-64bd-4427-bebc-baa904c7368c.pdf?v=1791410806'],
              ['Panini Absolute Football overview', 'https://www.checklistinsider.com/2026-panini-absolute-football']],
 )
 nba_spots = [('Hawks / Trail Blazers', ['Hawks', 'Trail Blazers']), ('Nets', ['Nets']), ('Celtics', ['Celtics']), ('Hornets', ['Hornets']),
@@ -278,7 +278,7 @@ jwj0244 = dict(
     notes=['The autograph list is partial: the checklist page was too long to read in full, so some later autograph sets may be missing.',
            'Teams follow the checklist, which already reflects 2026-27 trades (Giannis shows up as both a Heat and a Bucks card, for example).'],
     sources=[['JWJ #0244 break page', 'https://jwjcollectorbreaks.com/products/jwj-0244-balling-on-a-budget-with-flagship-nba'],
-             ['Topps Flagship Basketball checklist', 'https://www.checklistcenter.com/?p=64137']],
+             ['Topps Flagship Basketball checklist (official Topps)', 'https://cdn.shopify.com/s/files/1/0662/9749/5709/files/26TBSK_-_Topps_Flagship_Basketball_Checklist.xls.pdf?v=1793888934']],
 )
 
 if __name__ == '__main__':

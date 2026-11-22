@@ -112,7 +112,7 @@ def parse_lines(lines, cfg):
                           name='', team='', tag=''))
         c = cards[-1]
         col = cfg.get('name_col', {}).get(group, 0)
-        if cfg.get('auto_name_col') is not None and (group == 'auto' or AUTO_WORDS.search(subset)):
+        if cfg.get('auto_name_col') is not None and (group == 'auto' or re.search(r'AUTOGRAPH|SIGNATURE', subset, re.I)):
             col = cfg['auto_name_col']
         name = cells[col] if len(cells) > col else (cells[0] if cells else '')
         rest_cells = [x for i, x in enumerate(cells) if i != col and i != 0 or (i == 0 and col != 0 and False)]
@@ -144,7 +144,8 @@ def bucket(cards, cfg):
         if SKIP_SUBSETS.search(c['subset']): continue
         if cfg.get('skip_subsets') and re.search(cfg['skip_subsets'], c['subset']): continue
         sec = c['group']
-        if sec != 'auto' and AUTO_WORDS.search(c['subset']): sec = 'auto'
+        if sec != 'auto' and (re.search(r'AUTOGRAPH|SIGNATURE', c['subset'], re.I) or
+                              (sec == 'base' and AUTO_WORDS.search(c['subset']))): sec = 'auto'
         people = []
         for g in grp:
             for nm in re.split(r'\s*(?:&|/)\s*(?=[A-Z"])', g['name']) if (' & ' in g['name'] or re.search(r'[A-Za-z\.]\s*/\s*[A-Z"]', g['name'])) and cfg.get('split_amp', True) else [g['name']]:
