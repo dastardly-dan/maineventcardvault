@@ -253,7 +253,21 @@ footer a { color: var(--ink-2); }
 .prod .rm { background: none; border: 0; color: var(--ink-3); font-size: 18px; line-height: 1; width: 26px; height: 28px; cursor: pointer; border-radius: 8px; }
 .prod .rm:hover { color: var(--ink); background: var(--panel-2); }
 .noboxes { color: var(--ink-3); font-size: 13.5px; padding: 6px 0 10px; }
-.addbox { margin-top: 10px; }
+.addbox { margin-top: 8px; }
+.boxfind { margin-top: 12px; }
+.bfin { display: flex; align-items: center; gap: 8px; padding: 0 11px; border: 1px solid var(--gold); border-radius: 10px; background: var(--bg-2); color: var(--ink-3); }
+.bfin input { flex: 1; min-width: 0; background: transparent; border: 0; outline: 0; color: var(--ink); font: inherit; font-size: 14px; padding: 9px 0; }
+.bqr { margin-top: 6px; border: 1px solid var(--line-2); border-radius: 10px; background: var(--bg-2); max-height: 320px; overflow-y: auto; }
+.bqcount, .bqnone { font-size: 12px; color: var(--ink-3); padding: 8px 11px 4px; }
+.bqnone { padding-bottom: 10px; font-size: 13px; }
+.bqi { display: flex; width: 100%; align-items: center; gap: 10px; text-align: left; background: none; border: 0; border-top: 1px solid var(--line); color: var(--ink); font: inherit; font-size: 13.5px; padding: 8px 11px; cursor: pointer; }
+.bqi:hover, .bqi.sel { background: var(--panel-2); }
+.bqi .bqn { flex: 1; min-width: 0; }
+.bqi .bqn small { display: block; color: var(--ink-3); font-size: 11.5px; margin-top: 1px; }
+.bqi .tag { display: inline-block; font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); border: 1px solid var(--line-2); border-radius: 999px; padding: 0 6px; margin-right: 6px; }
+.bqi mark { background: rgba(212, 175, 55, .28); color: var(--ink); border-radius: 3px; padding: 0 1px; }
+.bqi .bqa { flex: none; font-size: 12px; font-weight: 700; color: #0b1726; background: var(--gold); border-radius: 999px; padding: 3px 10px; }
+.bqi.got .bqa { background: transparent; color: var(--gold-2); border: 1px solid var(--gold); }
 .boxsum { font-size: 12px; color: var(--ink-3); margin-top: 6px; }
 label.f { display: block; font-size: 13px; color: var(--ink-2); margin: 10px 0 4px; }
 label.f:first-of-type { margin-top: 0; }
@@ -357,6 +371,11 @@ table.rows td small { color: var(--ink-3); }
         <div class="panel" data-g="boxes">
           <h3>1. Boxes in the break <a class="qlink" href="#/how/boxes">How this works</a></h3>
           <div id="prods"></div>
+          <div class="boxfind">
+            <label class="bfin"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><input id="bq" type="search" placeholder="Search boxes: product, year or sport" autocomplete="off" aria-label="Search the checklists to add a box" aria-controls="bqr"></label>
+            <div class="bqr" id="bqr" role="listbox" hidden></div>
+          </div>
+          <div id="addwrap"></div>
           <label class="f" for="paste" style="margin-top:14px">Or paste your own names (one per line)</label>
           <textarea class="in" id="paste" placeholder="John Cena&#10;Rhea Ripley | W&#10;Cody Rhodes | auto"></textarea>
           <div class="hint">Add "| W" for women and "| auto" for autograph names. Pasted names count as one box.</div>
@@ -482,8 +501,9 @@ table.rows td small { color: var(--ink-3); }
         <div class="ghead"><span class="gnum">1</span><div><h4>Boxes in the break</h4><p>Tells the builder which names can come out of your break, and how many times.</p></div></div>
         <div class="gcols">
           <div>
-            <h5>Add a box</h5>
-            <p>The "Add a box" dropdown holds every checklist in the library, grouped by sport. Pick one and it moves into your list with a counter. The checklists come from the official Topps and Panini lists, and the Checklist library tab shows exactly what's in each one.</p>
+            <h5>Find and add a box</h5>
+            <p>Type in "Search boxes" and the list narrows as you go. Any words work in any order: "chrome wwe", "2026 football", "sapphire" or "bowman basketball". Sports work as plain words too, so "wrestling" finds WWE and MLW, and "baseball" finds every MLB set. Newest years come first. Click a result (or press Enter for the highlighted one, using the up and down arrows to move) and it moves into your list with a counter. Clicking a box you already have adds another one. If you'd rather browse, the "Or browse by sport" dropdown below it lists everything grouped by sport.</p>
+            <p> The checklists come from the official Topps and Panini lists, and the Checklist library tab shows exactly what's in each one.</p>
             <h5>How many of each</h5>
             <p>Set the counter to the number of boxes you're actually opening. Every name's points get multiplied by that count, so two boxes of a product count twice as much as one. If a name shows up in two different products, the points from both add together.</p>
             <h5>Taking a box out</h5>
@@ -806,7 +826,7 @@ Bianca Belair | W | auto</pre>
   // ---------- inputs ----------
   function drawProds() {
     var h = "", n = 0, picked = PRODS.filter(function (p) { return (S.qty[p.id] || 0) > 0; });
-    if (!picked.length) h += '<div class="noboxes">No boxes yet. Pick one from the list below.</div>';
+    if (!picked.length) h += '<div class="noboxes">No boxes yet. Search for one below, or browse by sport.</div>';
     picked.forEach(function (p) {
       var q = S.qty[p.id]; n += q;
       h += '<div class="prod"><div class="pn">' + esc(p.name) + '<small><span class="tag">' + esc(p.sport) + "</span>" + p.rows.length + " names" +
@@ -821,7 +841,9 @@ Bianca Belair | W | auto</pre>
       o += '<option value="' + p.id + '"' + (on ? " disabled" : "") + ">" + esc(p.name) + (on ? " (added)" : "") + "</option>";
     });
     o += (last ? "</optgroup>" : "") + "</select>";
-    $("prods").innerHTML = h + o;
+    $("prods").innerHTML = h;
+    $("addwrap").innerHTML = o.replace("+ Add a box (", "Or browse by sport (");
+    drawBoxFind();
     drawCosts(picked);
     [].forEach.call(document.querySelectorAll("#prods .qty"), function (el) {
       el.addEventListener("click", function (e) {
@@ -838,6 +860,47 @@ Bianca Belair | W | auto</pre>
       S.qty[id] = 1; drawProds(); go();
     });
   }
+  // ---------- box search ----------
+  var SPORTWORDS = { NFL: "football", NBA: "basketball", WNBA: "basketball women", NBL: "basketball australia", EuroLeague: "basketball euroleague",
+    MLB: "baseball", "USA Baseball": "baseball", WWE: "wrestling", MLW: "wrestling", UFC: "mma fighting", MMA: "fighting pfl", Soccer: "football futbol",
+    F1: "formula 1 racing", "Star Wars": "starwars", Pokemon: "pokemon tcg" };
+  var bqSel = 0, bqHits = [];
+  function hay(p) { return fold(p.name + " " + p.sport + " " + (SPORTWORDS[p.sport] || "")).toLowerCase().replace(/&/g, " and ").replace(/[^a-z0-9 ]+/g, " "); }
+  function drawBoxFind() {
+    var el = $("bq"), out = $("bqr"); if (!el) return;
+    var raw = el.value.trim(), q = fold(raw).toLowerCase().replace(/&/g, " and ").replace(/[^a-z0-9 ]+/g, " ").split(/\s+/).filter(Boolean);
+    if (!q.length) { out.hidden = true; out.innerHTML = ""; bqHits = []; return; }
+    bqHits = PRODS.filter(function (p) { var h = " " + hay(p) + " "; return q.every(function (w) { return h.indexOf(w) > -1; }); });
+    // newest years first, then the library's own order
+    bqHits.sort(function (a, b) { var ya = parseInt((a.name.match(/20\d\d/) || ["0"])[0], 10), yb = parseInt((b.name.match(/20\d\d/) || ["0"])[0], 10); return yb - ya || PRODS.indexOf(a) - PRODS.indexOf(b); });
+    if (bqSel >= bqHits.length) bqSel = 0;
+    out.hidden = false;
+    if (!bqHits.length) { out.innerHTML = '<div class="bqnone">No boxes match "' + esc(raw) + '". Try fewer words, or browse by sport below.</div>'; return; }
+    function mark(name) {
+      var s = esc(name);
+      q.forEach(function (w) { if (w.length < 2) return; var re = new RegExp("(" + w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + ")", "ig"); s = s.replace(re, "<mark>$1</mark>"); });
+      return s;
+    }
+    out.innerHTML = '<div class="bqcount">' + bqHits.length + (bqHits.length === 1 ? " box matches" : " boxes match") + "</div>" + bqHits.map(function (p, i) {
+      var q2 = S.qty[p.id] || 0;
+      return '<button type="button" class="bqi' + (i === bqSel ? " sel" : "") + (q2 ? " got" : "") + '" role="option" data-id="' + p.id + '"><span class="bqn">' + mark(p.name) + '<small><span class="tag">' + esc(p.sport) + "</span>" + p.rows.length + " names</small></span>" +
+        '<span class="bqa">' + (q2 ? "Added (" + q2 + ") +1" : "Add") + "</span></button>";
+    }).join("");
+  }
+  function addBox(id) {
+    S.qty[id] = Math.min(12, (S.qty[id] || 0) + 1);
+    var p = PRODS.filter(function (x) { return x.id === id; })[0];
+    drawProds(); go();
+    if (p) toast(p.name + (S.qty[id] > 1 ? ": " + S.qty[id] + " boxes" : " added"));
+  }
+  $("bq").addEventListener("input", function () { bqSel = 0; drawBoxFind(); });
+  $("bq").addEventListener("keydown", function (e) {
+    if (e.key === "ArrowDown" || e.key === "ArrowUp") { if (!bqHits.length) return; e.preventDefault(); bqSel = (bqSel + (e.key === "ArrowDown" ? 1 : -1) + bqHits.length) % bqHits.length; drawBoxFind(); var s = $("bqr").querySelector(".sel"); if (s) s.scrollIntoView({ block: "nearest" }); }
+    else if (e.key === "Enter") { e.preventDefault(); if (bqHits[bqSel]) addBox(bqHits[bqSel].id); }
+    else if (e.key === "Escape") { this.value = ""; drawBoxFind(); }
+  });
+  $("bqr").addEventListener("click", function (e) { var b = e.target.closest(".bqi"); if (b) addBox(b.getAttribute("data-id")); });
+
   function drawCosts(picked) {
     $("costs").innerHTML = picked.length ? picked.map(function (p) {
       var q = S.qty[p.id];

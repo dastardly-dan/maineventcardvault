@@ -157,6 +157,9 @@ team spot, box by box. Linked from the storefront's Breaks menu; every page carr
 - **How it works guides:** the How it works tab has a "Section by section" guide (`#/how/boxes`, `spots`,
   `letters`, `points`, `pricing`, `results`) explaining every setting with examples. Each builder section has a
   "How this works" link to its guide, and each guide links back to its section (`#/build/at/<key>`).
+- **Box search:** section 1 has a "Search boxes" field: any words in any order matched against product name,
+  sport and plain sport words (football, wrestling, baseball...), newest years first. Click or Enter adds a box
+  (again adds another); arrows move the highlight. The grouped dropdown below is "Or browse by sport".
 - **Find a spot:** search box above the spot list filters to the spots holding a name or team (one or two
   letters match by letter range); the header search results link to `#/build/find/<name>`.
 - **Player value (hit depth):** `build/breaks/depth.py` counts, per product, how many different autograph,
