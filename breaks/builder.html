@@ -151,6 +151,34 @@ footer a { color: var(--ink-2); }
 .qty span { min-width: 24px; text-align: center; font-weight: 700; font-size: 14px; }
 .qty.on { border-color: var(--gold); }
 .qty.on span { color: var(--gold); }
+/* scoring explainer */
+.sc { margin-top: 26px; }
+.sc h3.big { font-size: 22px; margin: 0 0 4px; }
+.sc .intro { color: var(--ink-2); max-width: 780px; margin: 0 0 14px; }
+.sc .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 12px; }
+.sc .card h4 { margin: 0 0 4px; font-size: 16px; }
+.sc .card .sub2 { color: var(--ink-3); font-size: 13px; margin: 0 0 12px; }
+.sc .legend { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 12.5px; color: var(--ink-2); margin: 0 0 12px; }
+.sc .legend i { display: inline-block; width: 11px; height: 11px; border-radius: 3px; margin-right: 5px; vertical-align: -1px; }
+.sc .c-b { background: #5aa9ff; } .sc .c-a { background: var(--gold); } .sc .c-i { background: #4fd1a5; } .sc .c-m { background: #c86bff; } .sc .c-s { background: #e2545e; }
+.sc .brow { display: grid; grid-template-columns: 112px minmax(0, 1fr) 44px; align-items: center; gap: 8px; margin: 7px 0; font-size: 13px; }
+.sc .brow .nm { color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sc .brow .pt { color: var(--gold-2); font-weight: 700; text-align: right; }
+.sc .track { display: flex; height: 20px; background: var(--bg-2); border-radius: 6px; overflow: hidden; }
+.sc .track span { display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; color: #0b1726; min-width: 0; border-right: 1px solid rgba(8, 21, 36, .55); }
+.sc .eq { font-size: 13px; color: var(--ink-2); background: var(--bg-2); border: 1px solid var(--line); border-radius: 10px; padding: 8px 11px; margin-top: 10px; }
+.sc .eq b { color: var(--gold-2); }
+.sc .stack { display: flex; gap: 6px; align-items: flex-end; margin: 4px 0 10px; }
+.sc .mini { width: 34px; height: 48px; border-radius: 5px; background: var(--gold); opacity: .9; display: flex; align-items: flex-end; justify-content: center; font-size: 10px; font-weight: 700; color: #0b1726; padding-bottom: 3px; }
+.sc .mini.dim { opacity: .35; }
+.sc .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.sc .vs .col { background: var(--bg-2); border: 1px solid var(--line); border-radius: 10px; padding: 9px 10px; }
+.sc .vs .col b { display: block; font-size: 12.5px; margin-bottom: 4px; }
+.sc .vs .brow { grid-template-columns: 14px minmax(0, 1fr) 34px; gap: 6px; }
+.sc .tips li { margin-top: 6px; }
+.morelink { display: inline-block; margin-top: 10px; font-size: 13.5px; color: var(--gold-2); text-decoration: none; border-bottom: 1px dashed var(--gold); }
+.morelink:hover { color: var(--gold); }
+
 .prod .tag { display: inline-block; font-size: 10.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); border: 1px solid var(--line-2); border-radius: 999px; padding: 0 7px; margin-right: 6px; }
 .prod .rm { background: none; border: 0; color: var(--ink-3); font-size: 18px; line-height: 1; width: 26px; height: 28px; cursor: pointer; border-radius: 8px; }
 .prod .rm:hover { color: var(--ink); background: var(--panel-2); }
@@ -292,6 +320,7 @@ table.rows td small { color: var(--ink-3); }
           <label class="f" for="stars" style="margin-top:12px">Star names (name | multiplier)</label>
           <textarea class="in" id="stars" placeholder="John Cena | 5&#10;Roman Reigns | 4&#10;Rhea Ripley | 3"></textarea>
           <div class="hint">Use this for the names buyers actually chase, so their letters get treated as the heavy hitters they are. One huge star can't be split, so their spot may stay a bit heavier.</div>
+          <a class="morelink" href="#/how/scoring">How the points work, with examples</a>
         </div>
       </div>
 
@@ -320,6 +349,76 @@ table.rows td small { color: var(--ink-3); }
       <div class="card"><h3>2. Split the heavy letters</h3><ul><li>A fair share is the total score divided by your spot count.</li><li>Any letter above about 1.3 fair shares gets cut, either by second letter (SA-SH, SI-SZ) or into Men and Women, whichever evens it out better.</li><li>It keeps cutting until there are enough pieces to fill every spot.</li></ul></div>
       <div class="card"><h3>3. Pack the spots</h3><ul><li>Best balance: biggest pieces go first into the lightest spot, then it swaps pieces between the heaviest and lightest spots until nothing improves.</li><li>A to Z order: finds the cut points along the alphabet that land closest to a fair share each.</li></ul></div>
       <div class="card"><h3>4. Price it (optional)</h3><ul><li>Enter what you need the break to bring in, and each spot is priced by its share of the total score, rounded to the dollar.</li><li>Treat it as a starting point. Hype, rookies and case hits move real prices.</li></ul></div>
+    </div>
+
+    <div class="sc" id="scoring">
+      <h3 class="big">What counts more: how a name gets its points</h3>
+      <p class="intro">Every name gets a point total. The builder adds those totals up by letter, then splits the letters so each spot ends up with about the same number of points. The four boxes in "What counts more" decide how many points each kind of card is worth, and star names let you say who buyers really want.</p>
+      <div class="grid">
+
+        <div class="card">
+          <h4>1. Points stack up</h4>
+          <p class="sub2">Default values: Base 1, Auto 2, Insert 0.5, Multi 0.5. A name earns every kind it appears in.</p>
+          <div class="legend"><span><i class="c-b"></i>Base 1</span><span><i class="c-a"></i>Auto 2</span><span><i class="c-i"></i>Insert 0.5</span><span><i class="c-m"></i>Multi 0.5</span></div>
+          <div class="brow"><div class="nm">Rhea Ripley</div><div class="track"><span class="c-b" style="width:25.00%">1</span><span class="c-a" style="width:50.00%">2</span><span class="c-i" style="width:12.50%"></span><span class="c-m" style="width:12.50%"></span></div><div class="pt">4</div></div>
+          <div class="brow"><div class="nm">Jey Uso</div><div class="track"><span class="c-b" style="width:25.00%">1</span><span class="c-a" style="width:50.00%">2</span><span class="c-i" style="width:12.50%"></span></div><div class="pt">3.5</div></div>
+          <div class="brow"><div class="nm">Akira Tozawa</div><div class="track"><span class="c-b" style="width:25.00%">1</span></div><div class="pt">1</div></div>
+          <div class="brow"><div class="nm">Insert only</div><div class="track"><span class="c-i" style="width:12.50%"></span></div><div class="pt">0.5</div></div>
+          <div class="eq">Rhea Ripley: base <b>1</b> + auto <b>2</b> + insert <b>0.5</b> + multi <b>0.5</b> = <b>4 points</b></div>
+        </div>
+
+        <div class="card">
+          <h4>2. Each kind counts once per box</h4>
+          <p class="sub2">Five different autograph cards in one product still count as one "auto." That keeps a name with lots of parallels from swamping the list.</p>
+          <div class="stack"><div class="mini">Auto</div><div class="mini dim">Auto</div><div class="mini dim">Auto</div><div class="mini dim">Auto</div><div class="mini dim">Auto</div></div>
+          <div class="eq">5 autograph cards for John Cena in one checklist = <b>2 points</b>, not 10</div>
+        </div>
+
+        <div class="card">
+          <h4>3. More boxes, more points</h4>
+          <p class="sub2">Points are per box. Two boxes of a product double every name in it; names in two different products add together.</p>
+          <div class="brow"><div class="nm">1 box</div><div class="track"><span class="c-b" style="width:16.67%">1</span><span class="c-a" style="width:33.33%">2</span></div><div class="pt">3</div></div>
+          <div class="brow"><div class="nm">2 boxes</div><div class="track"><span class="c-b" style="width:16.67%">1</span><span class="c-a" style="width:33.33%">2</span><span class="c-b" style="width:16.67%">1</span><span class="c-a" style="width:33.33%">2</span></div><div class="pt">6</div></div>
+          <div class="eq">Same name, 2 boxes of Stadium Club: (1 + 2) x 2 = <b>6 points</b></div>
+        </div>
+
+        <div class="card">
+          <h4>4. Star names multiply</h4>
+          <p class="sub2">Type a name, a bar and a number, like "John Cena | 5". The star multiplies that name's total after everything else. No number means 3.</p>
+          <div class="brow"><div class="nm">John Cena</div><div class="track"><span class="c-b" style="width:5.71%">1</span><span class="c-a" style="width:11.43%">2</span><span class="c-i" style="width:2.86%"></span></div><div class="pt">3.5</div></div>
+          <div class="brow"><div class="nm">Cena | 5</div><div class="track"><span class="c-s" style="width:100.00%">x5</span></div><div class="pt">17.5</div></div>
+          <div class="eq">3.5 x 5 = <b>17.5 points</b>, so the C letters get heavier and the builder hands C fewer other names to even it out.</div>
+          <p class="sub2" style="margin:10px 0 0">Partial names work: "Cena" matches John Cena and "Rhodes" matches "The American Nightmare" Cody Rhodes (3 letters minimum). One person can't be split across spots, so a very big multiplier can leave that one spot a little heavy; the page warns you when it does.</p>
+        </div>
+
+        <div class="card">
+          <h4>5. What that does to the spots</h4>
+          <p class="sub2">Letter weight with and without a star on Cena, 4 boxes of WWE.</p>
+          <div class="vs">
+            <div class="col"><b>No stars</b>
+              <div class="brow"><div class="nm">C</div><div class="track"><span class="c-b" style="width:30.00%"></span></div><div class="pt">9%</div></div>
+              <div class="brow"><div class="nm">R</div><div class="track"><span class="c-b" style="width:26.67%"></span></div><div class="pt">8%</div></div>
+            </div>
+            <div class="col"><b>Cena | 5</b>
+              <div class="brow"><div class="nm">C</div><div class="track"><span class="c-b" style="width:30.00%"></span><span class="c-s" style="width:20.00%"></span></div><div class="pt">15%</div></div>
+              <div class="brow"><div class="nm">R</div><div class="track"><span class="c-b" style="width:26.67%"></span></div><div class="pt">8%</div></div>
+            </div>
+          </div>
+          <div class="eq">A heavier C letter gets split sooner (CA-CH, CI-CZ) or shares a spot with fewer letters, so the Cena spot isn't also stacked with other strong names.</div>
+        </div>
+
+        <div class="card tips">
+          <h4>6. Quick settings</h4>
+          <ul>
+            <li><b>Hits drive the price</b> (high-end, auto-heavy boxes): raise Auto to 3 or 4.</li>
+            <li><b>Buyers want base sets</b> (flagship, retail-style breaks): lower Auto toward 1.</li>
+            <li><b>Inserts are the chase</b> (case hits like Cosmic Dust or Kaboom): raise Insert to 1 or 2.</li>
+            <li><b>Ignore something completely:</b> set its box to 0.</li>
+            <li><b>A few names everyone asks about:</b> add 3 to 5 of them as stars, usually at 3 to 5.</li>
+          </ul>
+        </div>
+
+      </div>
     </div>
     <p class="note">The score is only as good as the checklist and your star list. Breakers still make the final call on nicknames, multi-person cards and anything the checklist misses.</p>
   </section>
@@ -690,9 +789,9 @@ table.rows td small { color: var(--ink-3); }
     var h = location.hash.replace(/^#\/?/, ""), parts = h.split("/"), v = parts[0] || "build";
     if (v === "search") { var term = decodeURIComponent(parts.slice(1).join("/")); if (qEl.value.trim() !== term) qEl.value = term; show("search"); drawSearch(term); return; }
     qEl.value = "";
-    if (v === "checklists") { show("checklists"); drawLib(); } else if (v === "how") show("how"); else show("build");
+    if (v === "checklists") { show("checklists"); drawLib(); } else if (v === "how") { show("how"); if (parts[1] === "scoring") setTimeout(function () { var el = document.getElementById("scoring"); if (!el) return; var hd = document.querySelector("header"), off = hd && getComputedStyle(hd).position === "sticky" ? hd.offsetHeight : 0; window.scrollTo(0, el.getBoundingClientRect().top + window.scrollY - off - 12); }, 30); } else show("build");
   }
-  window.addEventListener("hashchange", function () { route(); window.scrollTo(0, 0); });
+  window.addEventListener("hashchange", function () { if (!/\/how\/scoring/.test(location.hash)) window.scrollTo(0, 0); route(); });
   drawProds(); run(); route();
 })();
 </script>
