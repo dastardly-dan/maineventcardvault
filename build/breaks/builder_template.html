@@ -26,6 +26,12 @@ __CSS__
 .qty span { min-width: 24px; text-align: center; font-weight: 700; font-size: 14px; }
 .qty.on { border-color: var(--gold); }
 .qty.on span { color: var(--gold); }
+.prod .tag { display: inline-block; font-size: 10.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); border: 1px solid var(--line-2); border-radius: 999px; padding: 0 7px; margin-right: 6px; }
+.prod .rm { background: none; border: 0; color: var(--ink-3); font-size: 18px; line-height: 1; width: 26px; height: 28px; cursor: pointer; border-radius: 8px; }
+.prod .rm:hover { color: var(--ink); background: var(--panel-2); }
+.noboxes { color: var(--ink-3); font-size: 13.5px; padding: 6px 0 10px; }
+.addbox { margin-top: 10px; }
+.boxsum { font-size: 12px; color: var(--ink-3); margin-top: 6px; }
 label.f { display: block; font-size: 13px; color: var(--ink-2); margin: 10px 0 4px; }
 label.f:first-of-type { margin-top: 0; }
 .in, select.in, textarea.in { width: 100%; padding: 9px 11px; border-radius: 10px; border: 1px solid var(--line-2); background: var(--bg-2); color: var(--ink); font: inherit; font-size: 14px; }
@@ -201,19 +207,36 @@ table.rows td small { color: var(--ink-3); }
 
   // ---------- inputs ----------
   function drawProds() {
-    var h = "", last = "";
-    PRODS.forEach(function (p) {
-      if (p.sport !== last) { h += '<div class="sport">' + esc(p.sport) + "</div>"; last = p.sport; }
-      var q = S.qty[p.id] || 0;
-      h += '<div class="prod"><div class="pn">' + esc(p.name) + "<small>" + p.rows.length + " names" + (p.note ? " · " + esc(p.note) : "") + '</small></div><div class="qty' + (q ? " on" : "") + '" data-id="' + p.id + '"><button data-d="-1" aria-label="Fewer boxes">&minus;</button><span>' + q + '</span><button data-d="1" aria-label="More boxes">+</button></div></div>';
+    var h = "", n = 0, picked = PRODS.filter(function (p) { return (S.qty[p.id] || 0) > 0; });
+    if (!picked.length) h += '<div class="noboxes">No boxes yet. Pick one from the list below.</div>';
+    picked.forEach(function (p) {
+      var q = S.qty[p.id]; n += q;
+      h += '<div class="prod"><div class="pn">' + esc(p.name) + '<small><span class="tag">' + esc(p.sport) + "</span>" + p.rows.length + " names" +
+        '</small></div><div class="qty on" data-id="' + p.id + '"><button data-d="-1" aria-label="Fewer boxes">&minus;</button><span>' + q +
+        '</span><button data-d="1" aria-label="More boxes">+</button></div><button class="rm" data-id="' + p.id + '" aria-label="Remove ' + esc(p.name) + '" title="Remove">&times;</button></div>';
     });
-    $("prods").innerHTML = h;
-    [].forEach.call(document.querySelectorAll(".qty"), function (el) {
+    if (picked.length) h += '<div class="boxsum">' + n + (n === 1 ? " box" : " boxes") + " from " + picked.length + (picked.length === 1 ? " checklist" : " checklists") + "</div>";
+    var o = '<select class="in addbox" id="addbox" aria-label="Add a box to the break"><option value="">+ Add a box (' + PRODS.length + " checklists)</option>", last = "";
+    PRODS.forEach(function (p) {
+      if (p.sport !== last) { o += (last ? "</optgroup>" : "") + '<optgroup label="' + esc(p.sport) + '">'; last = p.sport; }
+      var on = (S.qty[p.id] || 0) > 0;
+      o += '<option value="' + p.id + '"' + (on ? " disabled" : "") + ">" + esc(p.name) + (on ? " (added)" : "") + "</option>";
+    });
+    o += (last ? "</optgroup>" : "") + "</select>";
+    $("prods").innerHTML = h + o;
+    [].forEach.call(document.querySelectorAll("#prods .qty"), function (el) {
       el.addEventListener("click", function (e) {
         var b = e.target.closest("button"); if (!b) return;
         var id = el.getAttribute("data-id"); S.qty[id] = Math.max(0, Math.min(12, (S.qty[id] || 0) + (+b.getAttribute("data-d"))));
         drawProds(); go();
       });
+    });
+    [].forEach.call(document.querySelectorAll("#prods .rm"), function (el) {
+      el.addEventListener("click", function () { S.qty[el.getAttribute("data-id")] = 0; drawProds(); go(); });
+    });
+    $("addbox").addEventListener("change", function () {
+      var id = this.value; if (!id) return;
+      S.qty[id] = 1; drawProds(); go();
     });
   }
   function seg(id) {
