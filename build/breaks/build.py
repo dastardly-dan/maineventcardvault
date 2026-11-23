@@ -104,12 +104,36 @@ def team_break(cfg, products):
             names[sid].setdefault(box['k'], []).append([n, ('A' if flags == {'A'} else '') + 'N', 'B' in flags])
     return names, unmatched
 
+# Each breaker's page takes on that breaker's own colors, read from their store and logo (Nov 23, 2026):
+# Acme Packs: forest green and gold logo. JWJ: leather brown, cream and rust red logo.
+# Colfax: black site, red #c8102e buttons, purple #6420a0, purple-to-red logo.
+# Open (green) and sold (red) badges keep their meaning on every page.
+THEMES = {
+    'acme': dict(bg='#08150a', bg2='#0e2111', panel='#142d17', panel2='#1c3b1f', line='#28502b', line2='#3a6a3c', ink='#eef2e8', ink2='#c3d1bd',
+                 ink3='#8fa48a', gold='#f2c14a', gold2='#f7d77f', goldrgb='242,193,74', ongold='#132a06', glow='#1f4a14', hdr='rgba(8,21,10,.92)',
+                 brandline='linear-gradient(90deg,#1b4a0a,#f2c14a 50%,#1b4a0a)'),
+    'jwj': dict(bg='#140d08', bg2='#1d140d', panel='#2a1d14', panel2='#36261a', line='#4a3426', line2='#644734', ink='#f5ebdc', ink2='#dcc8ad',
+                ink3='#a88f74', gold='#e9c48f', gold2='#f3d9b0', goldrgb='233,196,143', ongold='#2a170b', glow='#5a2a18', hdr='rgba(20,13,8,.92)',
+                brandline='linear-gradient(90deg,#ab2d1a,#f0dcc0 50%,#ab2d1a)'),
+    'colfax': dict(bg='#000000', bg2='#0d0a12', panel='#16111e', panel2='#20182b', line='#33264a', line2='#4a3868', ink='#efecf4', ink2='#c9c5bf',
+                   ink3='#8f8a9c', gold='#b57dff', gold2='#cda4ff', goldrgb='181,125,255', ongold='#12051f', glow='#3a1460', hdr='rgba(0,0,0,.9)',
+                   brandline='linear-gradient(90deg,#6420a0,#c8102e)'),
+}
+def breaker_of(cid): return 'acme' if cid.startswith('gb') else 'jwj' if cid.startswith('jwj') else 'colfax' if cid.startswith('cc') else ''
+def theme_css(key):
+    t = THEMES.get(key)
+    if not t: return ''
+    return (':root { --bg: %(bg)s; --bg-2: %(bg2)s; --panel: %(panel)s; --panel-2: %(panel2)s; --line: %(line)s; --line-2: %(line2)s; '
+            '--ink: %(ink)s; --ink-2: %(ink2)s; --ink-3: %(ink3)s; --gold: %(gold)s; --gold-2: %(gold2)s; --gold-rgb: %(goldrgb)s; '
+            '--on-gold: %(ongold)s; --glow: %(glow)s; --hdr: %(hdr)s; --brandline: %(brandline)s; }') % t
+
 def write(cfg, names, unmatched):
     data = dict(cfg)
     if cfg.get('ended'): data['spots'] = [{k: v for k, v in s.items() if k != 'status'} for s in cfg['spots']]
     data['names'] = names
     data['unmatched'] = unmatched
-    html = TPL.replace('__ICON__', ICON).replace('__TITLE__', cfg['title']).replace(
+    th = breaker_of(cfg['id'])
+    html = TPL.replace('__THEME__', theme_css(th)).replace('__THEMECOLOR__', THEMES[th]['bg'] if th else '#081524').replace('__ICON__', ICON).replace('__TITLE__', cfg['title']).replace(
         '__DATA__', json.dumps(data, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/'))
     os.makedirs(OUT, exist_ok=True)
     path = os.path.join(OUT, cfg['id'] + '.html')
@@ -195,7 +219,7 @@ jwj0246_spots = [
 jwj0246 = dict(
     id='jwj0246', title='JWJ #0246 Cosmic Exalted Logo Club PYL', kicker='JWJ Collector Breaks · Pick your letter · WWE',
     url='https://jwjcollectorbreaks.com/products/jwj-0246-exalted-space-club-pyl',
-    when='Monday, November 23, 2026 (time not listed) on the JWJ Breaks YouTube channel',
+    when='Monday, November 23, 2026, 8:00 pm Eastern on the JWJ Breaks YouTube channel',
     facts=['6 boxes', '27 letter spots'],
     live=dict(shop='jwj', handle='jwj-0246-exalted-space-club-pyl'),
     format='pyl', checked='Availability checked against JWJ\'s store data on November 22, 2026, around 12:20 pm Eastern. The page itself showed only 1 item left, so check it live before you buy.',
@@ -220,7 +244,7 @@ jwj0247_spots = [sw_spot(x.lower().replace('/', ''), x, x.replace('/', '')) for 
 jwj0247 = dict(
     id='jwj0247', title='JWJ #0247 Chromed Up Galaxy', kicker='JWJ Collector Breaks · Random letter · Star Wars',
     url='https://jwjcollectorbreaks.com/products/jwj-0247-chromed-up-galaxy',
-    when='Monday, November 23, 2026 (time not listed) on the JWJ Breaks YouTube channel',
+    when='Monday, November 23, 2026, 8:00 pm Eastern on the JWJ Breaks YouTube channel',
     facts=['2 boxes', '18 letter spots', '$66 per spot', 'Letters randomized live'],
     format='random', checked='Spots were still available when checked on November 22, 2026. The store data titles this break "#0248", but the page and link say #0247.',
     boxes=[dict(k='swc', short='Chrome Star Wars', c='#f2c14e', full='2026 Topps Chrome Star Wars Hobby', kind='200 characters, autographs, inserts',

@@ -157,6 +157,12 @@ textarea.in { min-height: 90px; resize: vertical; font-size: 13px; line-height: 
 .seg button + button { border-left: 1px solid var(--line-2); }
 .seg button.on { background: var(--gold); color: #1a1405; font-weight: 700; }
 .hint { font-size: 12px; color: var(--ink-3); margin-top: 6px; line-height: 1.45; }
+.xteams { display: flex; flex-wrap: wrap; gap: 6px; max-height: 300px; overflow: auto; padding: 2px; }
+.xteams button { background: var(--bg-2); color: var(--ink-2); border: 1px solid var(--line-2); border-radius: 999px; padding: 4px 10px; font: inherit; font-size: 12.5px; cursor: pointer; }
+.xteams button.on { background: rgba(210,60,70,.16); border-color: rgba(210,60,70,.6); color: #f3a1a8; text-decoration: line-through; }
+.xteams .none { font-size: 12px; color: var(--ink-3); }
+.leftout { margin: 10px 0 0; padding: 10px 14px; border: 1px dashed var(--line-2); border-radius: 12px; font-size: 13.5px; color: var(--ink-2); }
+.leftout b { color: var(--ink); }
 .stats { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; margin-bottom: 14px; }
 .stat { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; }
 .stat b { display: block; font-size: 22px; color: var(--gold); }
@@ -285,6 +291,9 @@ table.rows td small { color: var(--ink-3); }
             <label class="f">College / NIL players</label>
             <div class="seg" id="nil"><button data-v="own">Own spot</button><button data-v="fill">Split by letter</button><button data-v="off">Leave out</button></div>
             <div class="hint" id="nilHint">Players shown only with a college team. Anyone who also has a pro team in your boxes goes to that team.</div>
+            <label class="f">Leave teams out</label>
+            <div class="xteams" id="xteams"></div>
+            <div class="hint" id="xHint">For giveaway teams, like a free Dodgers or Raiders spot. Tap a team to take it off the spot list and out of the pricing. Tap again to put it back.</div>
           </div>
           <div id="letteropts">
           <label class="f">Group letters</label>
@@ -510,6 +519,8 @@ Bianca Belair | W | auto</pre>
               <li><b>Split by letter:</b> they're grouped by the first letter of their name (or last name, if section 3 is set that way), and each letter goes to whichever team spot is lightest. The spot shows it, like "+ college A, K (12)".</li>
               <li><b>Leave out:</b> they aren't in the break at all.</li>
             </ul>
+            <h5>Leave teams out (giveaways)</h5>
+            <p>Giving a team away, like a free Dodgers or Raiders spot? Tap it under "Leave teams out." It comes off the spot list, its players go with it, and the pricing spreads the break's cost over the spots you're actually selling. Results, Copy, CSV and Embed all show a "Left out" line so buyers know. Tap the team again to put it back.</p>
           </div>
         </div>
         <a class="gback" href="#/build/at/spots">Back to Spots in the builder</a>
@@ -718,6 +729,7 @@ Bianca Belair | W | auto</pre>
             <li><b>One spot per team:</b> set spots to the team count for a pick-your-team break; each team is priced by its weight.</li>
             <li><b>By division:</b> for one league (NFL, NBA or MLB) the spots follow the divisions.</li>
             <li><b>College / NIL players:</b> anyone with a pro team goes to that team. College-only players can be their own spot, be split by the first letter of their first or last name (each letter goes to one of the lighter spots, and the spot shows "+ college A, K, T"), or be left out.</li>
+            <li><b>Leave teams out:</b> tap any team to take it out of the break, for giveaways. It's left out of the spots and the pricing, and the results list it as "Left out."</li>
             <li><b>Old franchises</b> roll into today's team: Oilers to Titans, Redskins to Commanders, SuperSonics to Thunder, Expos to Nationals.</li>
           </ul>
         </div>
@@ -752,9 +764,10 @@ Bianca Belair | W | auto</pre>
   function fold(t) { return String(t).normalize("NFD").replace(/[̀-ͯ]/g, ""); }
 
   // ---------- settings ----------
-  var S = { init: false, tidy: "simple", qty: {}, n: 21, goal: "", group: "free", prefix: "on", gender: "auto", rule: "first", nick: "printed", wb: 1, wa: 2, wi: 0.5, wm: 0.5, stars: "", paste: "", split: "letters", tgroup: "free", nil: "own", depth: "normal", boost: "strong", heyman: "off", sexy: "3", cost: {}, extra: "", fee: 10, profit: 20, floor: "", setp: {} };
+  var S = { init: false, tidy: "simple", qty: {}, n: 21, goal: "", group: "free", prefix: "on", gender: "auto", rule: "first", nick: "printed", wb: 1, wa: 2, wi: 0.5, wm: 0.5, stars: "", paste: "", split: "letters", tgroup: "free", nil: "own", depth: "normal", boost: "strong", heyman: "off", sexy: "3", cost: {}, extra: "", fee: 10, profit: 20, floor: "", setp: {}, excl: [] };
   try { var saved = JSON.parse(localStorage.getItem(SKEY) || "null"); if (saved) for (var k in saved) S[k] = saved[k]; } catch (e) {}
   if (!S.cost || typeof S.cost !== "object") S.cost = {};
+  if (!Array.isArray(S.excl)) S.excl = [];
   if (!S.init) {
     S.init = true;
     ["2026-topps-stadium-club-wwe", "2026-topps-chrome-wwe", "2026-topps-cosmic-chrome-wwe", "2026-topps-chrome-wwe-sapphire"].forEach(function (id) { if (PRODS.some(function (p) { return p.id === id; })) S.qty[id] = 1; });
@@ -1025,6 +1038,9 @@ Bianca Belair | W | auto</pre>
       var f = fold(t).toLowerCase(), m = 1; stars.forEach(function (s) { if (s[0] === f) m = Math.max(m, s[1]); });
       return { team: t, w: tw[t] * m, names: tn[t], star: m > 1 };
     });
+    // giveaway teams the breaker leaves out: off the spot list and out of the pricing
+    var allTeams = units.map(function (u) { return u.team; }).sort(), out = [];
+    units = units.filter(function (u) { if (S.excl.indexOf(u.team) > -1) { out.push(u); return false; } return true; });
     var nilW = 0; nil.forEach(function (x) { nilW += x.w; });
     if (nil.length && S.nil === "own") units.push({ team: "College / NIL", w: nilW, names: nil, nilspot: true });
     var fillers = [];
@@ -1059,7 +1075,7 @@ Bianca Belair | W | auto</pre>
     var total = 0; bins.forEach(function (b) { total += b.w; });
     if (mode === "div") bins.sort(function (a, c) { return a.label === "College / NIL" ? 1 : c.label === "College / NIL" ? -1 : a.label.localeCompare(c.label); });
     else if (mode === "free") bins.sort(function (a, c) { return c.w - a.w; });
-    return { bins: bins, total: total, teamCount: Object.keys(tw).length, eachN: teamCount, none: none, nil: nil.length, mode: mode, divOK: !!dmap };
+    return { bins: bins, total: total, teamCount: Object.keys(tw).length, eachN: teamCount, allTeams: allTeams, out: out, none: none, nil: nil.length, mode: mode, divOK: !!dmap };
   }
 
   // ---------- money ----------
@@ -1260,6 +1276,16 @@ Bianca Belair | W | auto</pre>
 
   // ---------- render ----------
   var LAST = null, expandAll = false, OPENK = {};
+  function drawExcl(tb) {
+    var el = $("xteams"), all = tb.allTeams || [];
+    // forget left-out teams that aren't in the picked boxes any more, so they don't come back by surprise later
+    S.excl = S.excl.filter(function (t) { return all.indexOf(t) > -1; });
+    el.innerHTML = all.length ? all.map(function (t) { return '<button type="button" data-t="' + esc(t) + '" class="' + (S.excl.indexOf(t) > -1 ? "on" : "") + '"' + ' aria-pressed="' + (S.excl.indexOf(t) > -1) + '">' + esc(t) + "</button>"; }).join("") : '<span class="none">No pro teams in these boxes.</span>';
+    [].forEach.call(el.querySelectorAll("button"), function (b) {
+      b.onclick = function () { var t = b.getAttribute("data-t"), i = S.excl.indexOf(t); if (i > -1) S.excl.splice(i, 1); else S.excl.push(t); go(); };
+    });
+    $("xHint").textContent = S.excl.length ? S.excl.length + " left out: " + S.excl.slice().sort().join(", ") + ". Tap a team again to put it back." : "For giveaway teams, like a free Dodgers or Raiders spot. Tap a team to take it off the spot list and out of the pricing.";
+  }
   function go() { save(); clearTimeout(go.t); go.t = setTimeout(run, 60); }
   function run() {
     var N = Math.max(2, Math.min(80, parseInt(S.n, 10) || 21));
@@ -1283,6 +1309,8 @@ Bianca Belair | W | auto</pre>
       $("splitHint").textContent = tb.teamCount ? tb.teamCount + " teams" + (tb.none ? " · " + tb.none + " names with no team left out" : "") : "Only college teams in these boxes.";
       $("nilHint").textContent = tb.nil ? tb.nil + " college-only player" + (tb.nil === 1 ? "" : "s") + (S.nil === "fill" ? " · grouped by " + (S.rule === "last" ? "last" : "first") + " name" : "") : "No college-only players.";
       $("tgroupHint").textContent = !tb.divOK && S.tgroup === "div" ? "Divisions need every box in one league (NFL, NBA or MLB). Using best balance." : tb.teamCount ? "One team per spot: set spots to " + tb.eachN + "." : "";
+      drawExcl(tb);
+      if (tb.teamCount && !tb.bins.length) return empty("Every team is left out. Tap a team under Leave teams out to put it back.");
       if (!tb.teamCount && !tb.nil) return empty("None of the picked checklists have team names, so they can't split by team. Switch to Letters, or add a football, basketball or baseball checklist.");
       bins = tb.bins; total = tb.total;
       if (tb.mode === "each" && N > bins.length) warn = "You asked for " + N + " spots, but these boxes have " + bins.length + (tb.nil && S.nil === "own" ? " teams plus the college spot" : " teams") + ", so each team is its own spot.";
@@ -1302,10 +1330,12 @@ Bianca Belair | W | auto</pre>
     priceBins(bins, goal, M.floor); bins.forEach(function (b) { b.sugg = b.price; });
     var sumP = priceBins(bins, goal, M.floor, S.setp), nLocked = bins.filter(function (b) { return b.locked; }).length;
     var ws = bins.map(function (b) { return b.w; }), hi = Math.max.apply(null, ws), lo = Math.min.apply(null, ws);
-    LAST = { bins: bins, total: total, N: N, goal: goal, teams: teams };
+    var outT = teams && tb.out.length ? tb.out.map(function (u) { return u.team; }).sort() : [], outN = 0;
+    if (outT.length) { var os = {}; tb.out.forEach(function (u) { u.names.forEach(function (x) { if (!os[x.n]) { os[x.n] = 1; outN++; } }); }); }
+    LAST = { bins: bins, total: total, N: N, goal: goal, teams: teams, out: outT, outN: outN };
     var prices = bins.map(function (b) { return b.price; });
     $("stats").innerHTML = [
-      [list.length, "names"], [c.boxes, c.boxes === 1 ? "box" : "boxes"], [bins.length, "spots"],
+      [list.length - outN, "names"], [c.boxes, c.boxes === 1 ? "box" : "boxes"], [bins.length, "spots"],
       [Math.round(lo / hi * 100) + "%", "lightest vs heaviest"]
     ].concat(goal ? [[usd(Math.min.apply(null, prices)) + " to " + usd(Math.max.apply(null, prices)), "price range"]] : []).map(function (s) { return '<div class="stat"><b>' + s[0] + "</b><span>" + s[1] + "</span></div>"; }).join("");
     // money box
@@ -1337,7 +1367,8 @@ Bianca Belair | W | auto</pre>
       $("bars").innerHTML = ORDER.split("").map(function (L) { var w = lw[L] || 0; return '<div class="' + (w > 1.3 * fair ? "hot" : "") + '" style="height:' + Math.max(2, w / mx * 100) + '%" title="' + L + ": " + (w / total * 100).toFixed(1) + '% of the total"></div>'; }).join("");
       $("barl").innerHTML = ORDER.split("").map(function (L) { return "<span>" + (L === "#" ? "1" : L) + "</span>"; }).join("");
     }
-    $("warn").innerHTML = warn ? '<div class="warn">' + warn + "</div>" : "";
+    $("warn").innerHTML = (warn ? '<div class="warn">' + warn + "</div>" : "") +
+      (outT.length ? '<div class="leftout"><b>Left out:</b> ' + esc(outT.join(", ")) + " (" + outN + " name" + (outN === 1 ? "" : "s") + "). Not in any spot and not in the pricing.</div>" : "");
     $("spots").innerHTML = bins.map(function (b, i) {
       var top = b.names.slice().sort(function (x, y) { return y.w - x.w; }).slice(0, 7).map(function (x) { return x.n; });
       var autos = b.names.filter(function (x) { return x.a; }).length;
@@ -1414,7 +1445,7 @@ Bianca Belair | W | auto</pre>
   function embedData() {
     var showP = $("emp").checked && LAST.goal, showN = $("emn").checked;
     var boxes = entries().map(function (e) { return e.q + " x " + e.p.name + (typeName(e) ? " " + typeName(e) : ""); }).join(", ");
-    return { t: $("emt").value.trim(), n: boxes, d: $("emd").checked ? 1 : 0, s: LAST.bins.map(function (b) {
+    return { t: $("emt").value.trim(), n: boxes, d: $("emd").checked ? 1 : 0, x: LAST.out && LAST.out.length ? LAST.out : undefined, s: LAST.bins.map(function (b) {
       var sub = b.sub && !/^starred$/.test(b.sub) ? b.sub.replace(/ · starred$/, "") : "";
       return [b.label, sub, showP ? b.price : null, showN ? b.names.slice().sort(function (x, y) { return y.w - x.w; }).map(function (x) { return (x.a ? "*" : "") + x.n.replace(/\|/g, "/"); }).join("|") : ""];
     }) };
@@ -1427,6 +1458,7 @@ Bianca Belair | W | auto</pre>
       rows.push("<tr><td><strong>" + a[0] + "</strong></td>" + (D.s[0][2] != null ? "<td>" + a[1] + "</td>" : "") + "<td><strong>" + b[0] + "</strong></td>" + (D.s[0][2] != null ? "<td>" + b[1] + "</td>" : "") + "</tr>");
     }
     var h = (D.t ? "<h3>" + esc(D.t) + "</h3>\n" : "") + '<table style="width:100%;border-collapse:collapse">\n<tbody>\n' + rows.join("\n") + "\n</tbody>\n</table>";
+    if (D.x && D.x.length) h += "\n<p><strong>Not in the break (giveaway):</strong> " + esc(D.x.join(", ")) + "</p>";
     if (D.s.some(function (s) { return s[3]; })) {
       h += "\n<h4>Who's in each spot</h4>\n" + D.s.map(function (s) { return "<p><strong>" + esc(s[0]) + (s[1] ? " (" + esc(s[1]) + ")" : "") + ":</strong> " + s[3].split("|").map(function (n) { return n.replace(/^\*/, ""); }).sort(function (x, y) { return fold(x.replace(/^"|^the /i, "")).localeCompare(fold(y.replace(/^"|^the /i, ""))); }).map(esc).join(", ") + "</p>"; }).join("\n");
     }
@@ -1482,7 +1514,7 @@ Bianca Belair | W | auto</pre>
     if (!LAST) return "";
     return LAST.bins.map(function (b, i) {
       return (i + 1) + ". " + b.label + (b.sub ? " (" + b.sub + ")" : "") + (LAST.goal ? ": $" + b.price : "") + " | " + b.names.length + " names | " + b.names.slice().sort(function (x, y) { return y.w - x.w; }).slice(0, 5).map(function (x) { return x.n; }).join(", ");
-    }).join("\n");
+    }).join("\n") + (LAST.out && LAST.out.length ? "\nLeft out (giveaway): " + LAST.out.join(", ") : "");
   }
   function toast(m) { var t = $("toast"); t.textContent = m; t.classList.add("show"); setTimeout(function () { t.classList.remove("show"); }, 1600); }
   $("copy").onclick = function () {
@@ -1496,6 +1528,7 @@ Bianca Belair | W | auto</pre>
     var rows = [["Spot", "Label", "Group", "Share %", "Names", "Price", "All names"]].concat(LAST.bins.map(function (b, i) {
       return [i + 1, b.label, b.sub, (b.w / LAST.total * 100).toFixed(1), b.names.length, LAST.goal ? b.price : "", b.names.map(function (x) { return x.n; }).join("; ")];
     }));
+    if (LAST.out && LAST.out.length) rows.push(["Left out", LAST.out.join(" / "), "Giveaway, not in the pricing", "", LAST.outN, "", ""]);
     var a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([rows.map(function (r) { return r.map(q).join(","); }).join("\n")], { type: "text/csv" }));
     a.download = "spot-list.csv"; document.body.appendChild(a); a.click(); a.remove();
   };

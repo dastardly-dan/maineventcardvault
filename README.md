@@ -183,6 +183,15 @@ team spot, box by box. Linked from the storefront's Breaks menu; every page carr
   (`lib_team_product`), Absolute from the official Panini CSV (`absolute_2026.json`). Format "pyt" = pick your team with
   prices and open/sold. NIL letters go by first letter of the first name; college players already on an NFL roster in
   the Topps checklists go to that team (Acme's rule).
+- **Breaker colors (Nov 23, 2026):** each break page takes its breaker's colors (`THEMES` in `build.py`, picked by id
+  prefix: gb = Acme Packs green and gold, jwj = JWJ leather brown, cream and rust, cc = Colfax black, purple and red).
+  The template's colors are CSS variables (`--gold-rgb`, `--on-gold`, `--glow`, `--hdr`, `--brandline` plus the usual
+  ones); `__THEME__` gets a `:root` override. cc874.html carries the Colfax block by hand. Open (green) and sold (red)
+  keep their colors everywhere. Hub cards get a left edge in the breaker's color (`EDGE` in `hub.py`).
+- **Leave teams out (Nov 23, 2026):** builder team mode, for giveaway teams. `S.excl` holds the team names; `teamBins`
+  drops them before grouping, so they're out of the spots and the pricing. Results show a "Left out" line; Copy, CSV,
+  the HTML table and the iframe (`x` in the embed data) carry it too. Teams no longer in the picked boxes drop off the
+  list.
 - **Live open/sold status (Nov 23, 2026):** pick-your-team and pick-your-letter pages whose config has
   `live=dict(shop=..., handle=...)` (gb1037 and jwj0246 so far) refresh themselves. On load and about once a minute
   while the page is showing, the page asks `/api/break-status?shop=<shop>&handle=<product handle>`. The Worker

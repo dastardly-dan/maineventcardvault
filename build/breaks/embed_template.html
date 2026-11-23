@@ -63,6 +63,7 @@ mark { background: var(--tag); color: var(--ink); border-radius: 3px; padding: 0
     var hasNames = spots.some(function (s) { return s.names.length; });
     app.innerHTML = (D.t ? "<h1>" + esc(D.t) + "</h1>" : "") +
       '<p class="sub">' + spots.length + " spots" + (D.n ? " · " + esc(D.n) : "") + "</p>" +
+      (D.x && D.x.length ? '<p class="sub">Not in the break (giveaway): ' + esc(D.x.join(", ")) + "</p>" : "") +
       (hasNames ? '<label class="find"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><input id="q" type="search" placeholder="Find a player or team" autocomplete="off"><span class="cnt" id="cnt"></span></label>' : "") +
       '<div class="list" id="list"></div><div class="foot">Spots built with the <a href="https://maineventcardvault.com/breaks/builder" target="_blank" rel="noopener">Main Event Card Vault Spot Builder</a></div>';
     var list = document.getElementById("list");

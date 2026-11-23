@@ -10,7 +10,9 @@ order = ['cc871', 'cc872', 'cc874', 'jwj0246', 'jwj0247', 'jwj0244', 'gb1037', '
 def is_past(i): return bool(i.get('ended')) or 'has passed' in i['when']
 items.sort(key=lambda x: (is_past(x), order.index(x['id'])))
 def esc(s): return s.replace('&','&amp;').replace('<','&lt;')
-def card(i): return f'''<a class="tile" href="/breaks/{i['id']}"><div class="kicker" style="font-size:11px">{esc(i['kicker'])}</div><div class="lab display" style="font-size:26px;margin-top:6px">{esc(i['title'])}</div><div class="cnt" style="margin-top:8px">{esc(i['when'])}</div><div class="peek">{esc(' · '.join(i['facts']))}</div></a>'''
+EDGE = {'gb': '#4c9a2a', 'jwj': '#c2452c', 'cc': '#8a3fd6'}  # breaker colors: Acme green, JWJ rust, Colfax purple
+def edge(i): return next((c for k, c in EDGE.items() if i['id'].startswith(k)), 'var(--line)')
+def card(i): return f'''<a class="tile" href="/breaks/{i['id']}" style="border-left:4px solid {edge(i)}"><div class="kicker" style="font-size:11px">{esc(i['kicker'])}</div><div class="lab display" style="font-size:26px;margin-top:6px">{esc(i['title'])}</div><div class="cnt" style="margin-top:8px">{esc(i['when'])}</div><div class="peek">{esc(' · '.join(i['facts']))}</div></a>'''
 up = ''.join(card(i) for i in items if not is_past(i)); past = ''.join(card(i) for i in items if is_past(i))
 cards = up or '<p class="sub">No breaks on the schedule right now.</p>'  # past breaks stay online but aren't listed
 html = f'''<!DOCTYPE html>
@@ -39,7 +41,7 @@ MENU_CSS = '''.bmenu { position: relative; }
 .bmenu > summary::after { content: ""; width: 7px; height: 7px; border-right: 2px solid var(--gold); border-bottom: 2px solid var(--gold); transform: rotate(45deg) translateY(-2px); }
 .bmenu[open] > summary { border-color: var(--gold); }
 .bmenu[open] > summary::after { transform: rotate(-135deg) translateY(-1px); }
-.bmenu-list { position: absolute; right: 0; top: calc(100% + 8px); z-index: 80; width: 340px; max-width: calc(100vw - 24px); background: #0d1f38;
+.bmenu-list { position: absolute; right: 0; top: calc(100% + 8px); z-index: 80; width: 340px; max-width: calc(100vw - 24px); background: var(--bg-2, #0d1f38);
   border: 1px solid var(--line-2); border-radius: 14px; box-shadow: 0 18px 40px rgba(3,9,17,.7); padding: 6px; }
 .bmenu-list a { display: block; text-decoration: none; color: var(--ink); padding: 9px 11px; border-radius: 10px; font-size: 14px; line-height: 1.35; border: 0; }
 .bmenu-list a:hover, .bmenu-list a.on { background: rgba(230,190,85,.1); }
