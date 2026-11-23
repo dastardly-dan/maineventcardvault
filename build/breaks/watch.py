@@ -26,6 +26,8 @@ SHOPS = {
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, 'watch')
 ET = ZoneInfo('America/New_York')
+# Extra collections to read besides /products.json (some stores keep breaks in their own collection).
+COLLECTIONS = {'rgl': ['rgl-breaks'], 'acme': ['group-breaks'], 'jwj': ['group-breaks']}
 UA = {'User-Agent': 'MainEventCardVault break watcher (+https://maineventcardvault.com)', 'Accept': 'application/json'}
 
 
@@ -44,13 +46,21 @@ def plain(html):
     return re.sub(r'\n\s*\n+', '\n', s).strip()
 
 
-def products(origin):
-    out = []
-    for page in range(1, 6):
-        data = get(f'{origin}/products.json?limit=250&page={page}').get('products', [])
-        out += data
-        if len(data) < 250:
-            break
+def products(shop, origin):
+    out, have = [], set()
+    for base in [''] + [f'/collections/{c}' for c in COLLECTIONS.get(shop, [])]:
+        for page in range(1, 6):
+            try:
+                data = get(f'{origin}{base}/products.json?limit=250&page={page}').get('products', [])
+            except Exception:
+                if base:  # a missing collection is fine
+                    break
+                raise
+            for p in data:
+                if p['handle'] not in have:
+                    have.add(p['handle']); out.append(p)
+            if len(data) < 250:
+                break
     return out
 
 
@@ -108,7 +118,7 @@ def main():
     errors = []
     for shop, origin in SHOPS.items():
         try:
-            items = products(origin)
+            items = products(shop, origin)
         except Exception as e:  # one store being down shouldn't stop the rest
             errors.append(f'{shop}: {e}')
             continue

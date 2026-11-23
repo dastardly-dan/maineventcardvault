@@ -12,6 +12,11 @@
         ],
         [
           "New",
+          "Site",
+          "A break watcher checks Acme Packs, JWJ, Colfax and Run Good Life every 15 minutes for new breaks, and a scheduled task builds a guide page for each new one, turns on live sold tracking for pick-your-spot breaks, and closes pages once a break is gone."
+        ],
+        [
+          "New",
           "Break guides",
           "Breaker colors. Each break page has a clean white background, with the breaker's brand in the header and accents: Acme Packs green and gold, JWJ brown, cream and rust, and Colfax black, purple and red. Open spots stay green and sold spots stay red on every page."
         ],
@@ -54,6 +59,11 @@
           "Fixed",
           "Break guides",
           "Long team names like Buccaneers and Commanders no longer run under the \"+ Mine\" button. The button now sits in the bottom corner of each spot."
+        ],
+        [
+          "Fixed",
+          "Break guides",
+          "Titles match the breakers' new numbering: the Midnight Chrome Inception break is now GB1039 (Acme), and Chromed Up Galaxy is JWJ #0248."
         ]
       ]
     },

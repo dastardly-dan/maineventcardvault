@@ -268,7 +268,7 @@ def sw_spot(id, label, letters_):
 jwj0247_spots = [sw_spot(x.lower().replace('/', ''), x, x.replace('/', '')) for x in
                  ['A', 'B', 'C', 'D', 'E/F', 'G', 'H', 'I/N', 'J', 'K', 'L', 'M', 'O', 'P', 'Q/U', 'R', 'S', 'T/V/W/X/Y/Z']]
 jwj0247 = dict(
-    id='jwj0247', title='JWJ #0247 Chromed Up Galaxy', kicker='JWJ Collector Breaks · Random letter · Star Wars',
+    id='jwj0247', title='JWJ #0248 Chromed Up Galaxy', kicker='JWJ Collector Breaks · Random letter · Star Wars',
     url='https://jwjcollectorbreaks.com/products/jwj-0247-chromed-up-galaxy',
     when='Monday, November 23, 2026, 8:00 pm Eastern on the JWJ Breaks YouTube channel',
     facts=['2 boxes', '18 letter spots', '$66 per spot', 'Letters randomized live'],
@@ -453,7 +453,7 @@ gb1038b_spots = [('49ers', ['49ers']), ('Bears', ['Bears']), ('Bengals', ['Benga
                  ('Raiders', ['Raiders']), ('Rams', ['Rams']), ('Ravens', ['Ravens']), ('Saints', ['Saints']), ('Seahawks', ['Seahawks']), ('Steelers', ['Steelers']),
                  ('Titans', ['Titans']), ('Vikings / Jaguars', ['Vikings', 'Jaguars'])]
 gb1038b = dict(
-    id='gb1038b', title='GB1038 Midnight Chrome Inception', kicker='Acme Packs · Random team · NFL',
+    id='gb1038b', title='GB1039 Midnight Chrome Inception', kicker='Acme Packs · Random team · NFL',
     url=acme_url('gb1038-midnight-chrome-inception-random-team'),
     when='Tuesday, November 24, 2026, 7:00 pm Central (8:00 pm Eastern). If it doesn\'t fill, it rolls to the next break night.',
     facts=['5 boxes', '28 team spots (24 teams, 4 combos)', '$132 per spot', 'Teams randomized live'],

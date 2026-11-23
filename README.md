@@ -183,6 +183,40 @@ team spot, box by box. Linked from the storefront's Breaks menu; every page carr
   (`lib_team_product`), Absolute from the official Panini CSV (`absolute_2026.json`). Format "pyt" = pick your team with
   prices and open/sold. NIL letters go by first letter of the first name; college players already on an NFL roster in
   the Topps checklists go to that team (Acme's rule).
+- **Break watcher and automatic pages (Nov 23, 2026):** `.github/workflows/break-watch.yml` runs `build/breaks/watch.py`
+  every 15 minutes on GitHub (free, the repo is public). It reads the public Shopify product lists of Acme Packs (acme),
+  JWJ (jwj), Colfax (colfax) and Run Good Life (rgl), plus their breaks collections, and commits to `build/breaks/watch/`
+  only when a product is added or removed: `queue.json` (new or removed products with listing text, price options and
+  dates), `seen.json` (handles already known), `posts.json` and `stats.md` (when each breaker publishes). A scheduled
+  Claude task ("Break page builder") works the queue; its runbook is the next item.
+- **Break page builder runbook (for the scheduled task):**
+  1. `git pull --rebase`. Read `build/breaks/watch/queue.json`. If it's empty and no listed break is past its date, stop
+     with no changes and no message.
+  2. For each `added` item, decide whether it's a group break (break number like GB1039, JWJ #0248, CC875, RGL #6124, or
+     the listing describes a group break). Skip merch, fees, giveaway winners and mystery packs. A "25% chance filler"
+     listing isn't its own page: note it on the main break's page. If the break number or handle already has a page
+     (search `build.py` and `breaks/cc874.html`), update what changed (title or renumbering, date, price) instead.
+  3. New break: add a config to `build/breaks/build.py` modeled on the closest existing one (gb1037 pick your team,
+     jwj0246 pick your letter, gb1038b random team with combos, gb1038a NIL letters, cc872 random team, jwj0247 random
+     letter). Spots come from the variant titles; prices from the variants; `format` pyl / pyt / team / random; add
+     `live=dict(shop=..., handle=...)` for pyl and pyt. Use the breaker's house rules from the listing text and keep the
+     breaker's own wording for dates. The id prefix picks the breaker's colors (gb, jwj, cc). Multi-sport breaks: CC874
+     is the model.
+  4. Checklists come only from `build/breaks/checklists/`. If a box isn't in the library, try the official list through
+     WebFetch (Topps, Panini, checklistinsider); if a full official list can't be had, don't guess: skip that page and
+     say what's needed in the message (the shell can't reach cdn.shopify.com, so Daniel may have to paste a link).
+  5. `removed` items, or a break whose date is more than a day past: close it with `close(cfg, ran, facts)` (cc874 by
+     hand, `ended='yes'` in hub.py). Never delete a page.
+  6. Run `python3 build/breaks/build.py`, `builder.py` if checklists changed, `hub.py`, then `python3 build/build_site.py`
+     so the storefront's Breaks menu matches. Add new break ids to `order` in hub.py.
+  7. Add a line per change to `build/breaks/release_notes.json` (today's release; start a new one if the date changed),
+     rerun hub.py.
+  8. Remove handled items from queue.json; leave anything unresolved with a `note` field saying why. Commit, `git pull
+     --rebase`, then `git -c push.negotiate=true push origin main`.
+  9. Finish with a short message: new pages with their links, pages closed, anything Daniel needs to do.
+  House style for page text: US dates (November 24, 2026), no em or en dashes, no arrows, plain friendly wording,
+  spell out acronyms on first use. The shell can't reach the stores or maineventcardvault.com; queue.json has the
+  listing data, and WebFetch works for anything else.
 - **Breaker look (Nov 23, 2026):** break pages are white with the breaker's brand in the header band, the accent color
   (spot names, buttons, links) and a soft tint behind the title (`THEMES` and `LIGHT_CSS` in `build.py`, picked by id
   prefix: gb = Acme Packs green and gold, jwj = JWJ brown, cream and rust, cc = Colfax black, purple and red). The
