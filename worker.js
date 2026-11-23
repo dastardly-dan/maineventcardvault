@@ -9,7 +9,7 @@
 // asset handler, so 404s behave exactly as they did before.
 
 import { DurableObject } from "cloudflare:workers";
-import { breakStatus, STATUS_API } from "./breakstatus.js";
+import { breakStatus, breakList, STATUS_API, LIST_API } from "./breakstatus.js";
 
 const API = "/api/ironledger";
 const MAX_BODY = 1_000_000;          // a few years of workouts is well under this
@@ -20,6 +20,7 @@ export default {
   async fetch(request, env, ctx) {
     const { pathname } = new URL(request.url);
     if (pathname === STATUS_API) return breakStatus(request, ctx);
+    if (pathname === LIST_API) return breakList(request, ctx);
     if (pathname === API || pathname.startsWith(API + "/")) {
       // One store for one person: every request goes to the same Durable Object,
       // which keeps reads and writes in order (no stale reads between devices).
