@@ -46,6 +46,14 @@ __CSS__
 .sc { margin-top: 26px; }
 .gd { margin-top: 26px; }
 .gd h3.big { font-size: 22px; margin: 0 0 4px; }
+.walk { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; margin: 0 0 18px; }
+.walk h3.big { font-size: 22px; margin: 0 0 4px; }
+.walk .intro { color: var(--ink-2); max-width: 780px; margin: 0 0 12px; }
+.walkframe { position: relative; width: 100%; max-width: 900px; aspect-ratio: 4 / 3; min-height: 480px; border-radius: 12px; overflow: hidden; background: #fff; }
+.walkframe iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.walklink { margin: 10px 0 0; font-size: 14px; }
+.walklink a { color: var(--gold-2); }
+@media (max-width: 560px) { .walkframe { aspect-ratio: 3 / 4; min-height: 420px; } }
 .gd .intro { color: var(--ink-2); max-width: 780px; margin: 0 0 14px; }
 .gnav { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 16px; }
 .gnav a { display: inline-flex; align-items: center; gap: 8px; padding: 7px 12px 7px 7px; border: 1px solid var(--line-2); border-radius: 999px; background: var(--panel); color: var(--ink); text-decoration: none; font-size: 13.5px; }
@@ -256,7 +264,7 @@ table.rows td small { color: var(--ink-3); }
 <div class="wrap hero">
   <div class="kicker">Breaker tool</div>
   <h1 class="display">Spot builder</h1>
-  <p class="lede">Pick the checklists in your break, set how many spots you want, and it splits the letters into the most even spots it can. Heavy letters get cut into two-letter ranges (SA-SH, SI-SZ) or Men and Women when that evens things out.</p>
+  <p class="lede">Pick the checklists in your break, set how many spots you want, and it splits the letters into the most even spots it can. Heavy letters get cut into two-letter ranges (SA-SH, SI-SZ) or Men and Women when that evens things out. First time here? <a href="#/how" style="color:var(--gold-2)">Watch the step-by-step walkthrough</a>.</p>
 </div>
 
 <main class="wrap">
@@ -416,7 +424,13 @@ table.rows td small { color: var(--ink-3); }
 
   <section data-view="how" hidden>
     <h2 class="display">How it works</h2>
-    <p class="intro" style="color:var(--ink-2);max-width:780px;margin:0 0 14px">The short version first. Below it, every section of the builder explained setting by setting.</p>
+    <p class="intro" style="color:var(--ink-2);max-width:780px;margin:0 0 14px">Start with the step-by-step walkthrough, then the short version, then every section of the builder explained setting by setting.</p>
+    <div class="walk" id="walkthrough">
+      <h3 class="big">Watch it step by step</h3>
+      <p class="intro">A click-by-click walkthrough of a real pick-your-team break: four boxes of 2026 Topps Chrome Football, one giveaway team left out, priced from what you paid, then shared to your store. Each section has a note on what its settings mean.</p>
+      <div class="walkframe"><iframe src="https://scribehow.com/embed/Create_a_Pick_Your_Team_Break_Using_the_Spot_Builder__i662iMfUQLOjd_zVBY1FmA" title="Create a Pick Your Team Break Using the Spot Builder (Scribe walkthrough)" loading="lazy" allow="fullscreen" allowfullscreen></iframe></div>
+      <p class="walklink"><a href="https://scribehow.com/o/boFtw7r9SX-aliunTzhpYQ/viewer/Create_a_Pick_Your_Team_Break_Using_the_Spot_Builder__i662iMfUQLOjd_zVBY1FmA" target="_blank" rel="noopener">Open the walkthrough in Scribe</a></p>
+    </div>
     <div class="cards">
       <div class="card"><h3>1. Score every name</h3><ul><li>Each name earns points for every box it can come out of: base, autograph, insert, multi-person card.</li><li>Two boxes of the same product count twice.</li><li>Star multipliers scale a name up, so a Cena letter outweighs a letter full of NXT rookies.</li></ul></div>
       <div class="card"><h3>2. Split the heavy letters</h3><ul><li>A fair share is the total score divided by your spot count.</li><li>Any letter above about 1.3 fair shares gets cut, either by second letter (SA-SH, SI-SZ) or into Men and Women, whichever evens it out better.</li><li>It keeps cutting until there are enough pieces to fill every spot.</li></ul></div>

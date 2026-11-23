@@ -328,9 +328,9 @@ nba_spots = [('Hawks / Trail Blazers', ['Hawks', 'Trail Blazers']), ('Nets', ['N
 jwj0244 = dict(
     id='jwj0244', title='JWJ #0244 Balling on a Budget with Flagship NBA', kicker='JWJ Collector Breaks · Random team · NBA',
     url='https://jwjcollectorbreaks.com/products/jwj-0244-balling-on-a-budget-with-flagship-nba',
-    when='Listed for November 16 on the JWJ Breaks YouTube channel (no time listed). That date has passed, so check whether it already ran.',
+    when='Running this week on the JWJ Breaks YouTube channel. It didn\'t run on November 16, the date still on the listing, so check JWJ for the time.',
     facts=['3 boxes', '26 team spots listed', '$68 per spot', 'Teams randomized live'],
-    format='team', checked='When checked on November 22, 2026, the page showed 6 spots left. It says 27 spots but lists 26 teams, and the Cleveland Cavaliers aren\'t on the list.',
+    format='team', checked='Spots were still for sale when checked on November 23, 2026, around 5:00 pm Eastern (6 were left on November 22). It says 27 spots but lists 26 teams, and the Cleveland Cavaliers aren\'t on the list.',
     boxes=[dict(k='flag', short='Flagship', c='#f2c14e', full='2026-27 Topps Flagship Basketball (2 Hobby, 1 Jumbo)', kind='300-card base, autographs',
                 types='300-card base with rookies and legends, base variations, inserts, autographs and relics (Jumbo adds an auto and a relic).')],
     spots=[team_spot(re.sub(r'[^a-z0-9]', '', l.lower()), l, t) for l, t in nba_spots],
