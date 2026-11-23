@@ -320,6 +320,9 @@ table.rows td small { color: var(--ink-3); }
           <label class="f" for="stars" style="margin-top:12px">Star names (name | multiplier)</label>
           <textarea class="in" id="stars" placeholder="John Cena | 5&#10;Roman Reigns | 4&#10;Rhea Ripley | 3"></textarea>
           <div class="hint">Use this for the names buyers actually chase, so their letters get treated as the heavy hitters they are. One huge star can't be split, so their spot may stay a bit heavier. In team breaks you can star a whole team too, like "Yankees | 2".</div>
+          <label class="f" style="margin-top:12px">Superstar boost</label>
+          <div class="seg" id="boost"><button data-v="off">Off</button><button data-v="normal">Normal</button><button data-v="strong">Strong</button><button data-v="max">Max</button></div>
+          <div class="hint">How far the big names pull away from everyone else. Each player's points are raised to a power (so a star in many hit sets counts far more than a role player), and in team breaks a team counts its best players fully and gives a little less credit to each one after that, so a deep roster of role players doesn't add up to a star. Strong is the default; Off is the old straight sum.</div>
           <div id="heyopt" class="heyopt" hidden>
             <label class="f" style="margin-top:12px">Paul Heyman spot</label>
             <div class="seg" id="heyman"><button data-v="off">Off</button><button data-v="own">Break him out</button></div>
@@ -554,6 +557,8 @@ Bianca Belair | W | auto</pre>
             <p>Turns two signals from the official lists into extra points. Stars and top rookies are in far more autograph and insert sets than role players, and the Topps pack odds show how hard each set is to pull, so a 1 per case autograph counts several times a 1 per pack insert. Panini doesn't publish odds, so their print runs (/25, 1/1 and so on) do that job for Panini and Donruss boxes. Normal is the default. Strong leans on it harder. Off scores every set the same. For products with a box type menu, the odds come from the box type you picked, and sets you can't pull from that box don't count even with Off.</p>
           </div>
           <div>
+            <h5>Superstar boost: Off, Normal, Strong, Max</h5>
+            <p>Added after breakers said stars weren't pulling away enough in pick-your-team breaks. Each player's points are raised to a power against the typical player, so a star in many hit sets counts far more than a role player, and in team breaks a team counts its best player fully and each one after a little less. On 2026 Topps Chrome Baseball, 30 teams, the Dodgers go from 5x the cheapest team (Off) to about 9x (Strong), and the middle teams spread out instead of bunching. Strong is the default.</p>
             <h5>Star names</h5>
             <p>One per line, "name | multiplier". The multiplier scales that name's points, so "John Cena | 5" makes him count five times as much. Leave the number off and it uses 3. A short name works if it's a whole word in the full name, so "Cena | 5" also catches John Cena. In team breaks, a team name works the same way: "Yankees | 2".</p>
             <p><b>Paul Heyman spot</b> (WWE breaks with Paul Heyman in them): for the breaks where Paul Heyman cards are sexy. "Break him out" gives him a spot of his own, and "How sexy is Paul Heyman?" sets its weight, from A little sexy (his normal points) up to Paul Heyman Guy approved (10x). The other spots share the rest, and your spot count stays the same.</p>
@@ -743,7 +748,7 @@ Bianca Belair | W | auto</pre>
   function fold(t) { return String(t).normalize("NFD").replace(/[̀-ͯ]/g, ""); }
 
   // ---------- settings ----------
-  var S = { init: false, tidy: "simple", qty: {}, n: 21, goal: "", group: "free", prefix: "on", gender: "auto", rule: "first", nick: "printed", wb: 1, wa: 2, wi: 0.5, wm: 0.5, stars: "", paste: "", split: "letters", tgroup: "free", nil: "own", depth: "normal", heyman: "off", sexy: "3", cost: {}, extra: "", fee: 10, profit: 20, floor: "", setp: {} };
+  var S = { init: false, tidy: "simple", qty: {}, n: 21, goal: "", group: "free", prefix: "on", gender: "auto", rule: "first", nick: "printed", wb: 1, wa: 2, wi: 0.5, wm: 0.5, stars: "", paste: "", split: "letters", tgroup: "free", nil: "own", depth: "normal", boost: "strong", heyman: "off", sexy: "3", cost: {}, extra: "", fee: 10, profit: 20, floor: "", setp: {} };
   try { var saved = JSON.parse(localStorage.getItem(SKEY) || "null"); if (saved) for (var k in saved) S[k] = saved[k]; } catch (e) {}
   if (!S.cost || typeof S.cost !== "object") S.cost = {};
   if (!S.init) {
@@ -883,7 +888,7 @@ Bianca Belair | W | auto</pre>
       b.onclick = function () { S[id] = b.getAttribute("data-v"); seg(id); go(); };
     });
   }
-  ["group", "prefix", "gender", "rule", "nick", "tidy", "split", "tgroup", "nil", "depth", "heyman"].forEach(seg);
+  ["group", "prefix", "gender", "rule", "nick", "tidy", "split", "tgroup", "nil", "depth", "boost", "heyman"].forEach(seg);
   $("sexy").value = String(S.sexy || "3"); $("sexy").addEventListener("change", function () { S.sexy = this.value; go(); });
   ["n", "goal", "wb", "wa", "wi", "wm", "extra", "fee", "profit", "floor"].forEach(function (id) { $(id).value = S[id]; $(id).addEventListener("input", function () { S[id] = $(id).value; go(); }); });
   ["stars", "paste"].forEach(function (id) { $(id).value = S[id]; $(id).addEventListener("input", function () { S[id] = $(id).value; go(); }); });
@@ -926,6 +931,8 @@ Bianca Belair | W | auto</pre>
       return med[s[0]] ? Math.min(5, Math.max(0.4, Math.pow(o / med[s[0]], 0.4))) : 1;
     }));
   }
+  // superstar boost: [power on each player's points, falloff for a team's 2nd, 3rd... best player]
+  var BOOST = { off: [1, 1], normal: [1.5, 0.92], strong: [2, 0.85], max: [2.5, 0.8] };
   function collect() {
     var wb = +S.wb || 0, wa = +S.wa || 0, wi = +S.wi || 0, wm = +S.wm || 0;
     var map = {}, boxes = 0;
@@ -969,6 +976,12 @@ Bianca Belair | W | auto</pre>
       var L = letters(r.n); r.L = L[0]; r.L2 = L[1];
       if (r.g !== "F") r.g = "M";
     });
+    // superstar boost: each player's points raised to a power, measured against the typical player, so a star pulls away from role players
+    var sk = BOOST[S.boost] ? BOOST[S.boost][0] : 1;
+    if (sk !== 1 && list.length) {
+      var ws = list.map(function (r) { return r.w; }).sort(function (a, b) { return a - b; }), ref = ws[Math.floor(ws.length / 2)] || 1;
+      list.forEach(function (r) { r.w = ref * Math.pow(r.w / ref, sk); });
+    }
     return { list: list, boxes: boxes, sports: Object.keys(sports) };
   }
 
@@ -991,15 +1004,18 @@ Bianca Belair | W | auto</pre>
   var DMAP = {}; Object.keys(DIVS).forEach(function (s) { DMAP[s] = divOf(s); });
   var PRO = (function () { var m = {}; Object.keys(DIVS).forEach(function (s) { var d = divOf(s); Object.keys(d).forEach(function (k) { m[k] = 1; }); }); return m; })();
   function teamBins(list, N, sports) {
-    var tw = {}, tn = {}, none = 0, nil = [];
+    var tw = {}, tn = {}, ts = {}, none = 0, nil = [];
     list.forEach(function (x) {
       var all = Object.keys(x.teams || {}); if (!all.length) { none++; return; }
       var pro = [];
       all.forEach(function (t) { var sp = x.teams[t], t2 = (LEGACY[sp] && LEGACY[sp][t]) || t; if ((!DMAP[sp] || DMAP[sp][t2]) && pro.indexOf(t2) < 0) pro.push(t2); });
       if (!pro.length) { nil.push(x); return; }
       var share = x.w / pro.length;
-      pro.forEach(function (t) { tw[t] = (tw[t] || 0) + share; (tn[t] = tn[t] || []).push(x); });
+      pro.forEach(function (t) { (tn[t] = tn[t] || []).push(x); (ts[t] = ts[t] || []).push(share); });
     });
+    // a team is worth its best players: the 1st counts fully, then each one after counts a bit less (depth matters, stars matter more)
+    var dk = BOOST[S.boost] ? BOOST[S.boost][1] : 1;
+    Object.keys(ts).forEach(function (t) { var a = ts[t].sort(function (p, q) { return q - p; }), s = 0, f = 1; a.forEach(function (v) { s += v * f; f *= dk; }); tw[t] = s; });
     var stars = starMap();
     var units = Object.keys(tw).map(function (t) {
       var f = fold(t).toLowerCase(), m = 1; stars.forEach(function (s) { if (s[0] === f) m = Math.max(m, s[1]); });
