@@ -109,6 +109,25 @@ h2 { font-size: 30px; margin: 0 0 6px; }
 
 .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
 .chip { font: inherit; font-size: 13.5px; padding: 7px 13px; border-radius: 999px; cursor: pointer; background: var(--bg-2); color: var(--ink-2); border: 1px solid var(--line-2); }
+.boxpick { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 0 0 12px; }
+.boxpick .bplab { font-size: 12.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); }
+.boxpick .chips { margin: 0; }
+.avail { background: var(--panel); border: 1px solid var(--line); border-top: 4px solid var(--c, var(--gold)); border-radius: var(--radius); padding: 14px 16px; margin: 0 0 14px; }
+.avail h3 { margin: 0 0 2px; font-size: 19px; }
+.avail .asub { color: var(--ink-3); font-size: 13.5px; margin: 0 0 10px; }
+.avail .atools { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; margin-bottom: 10px; }
+.avail .atools input[type=search] { flex: 1; min-width: 180px; font: inherit; font-size: 14px; padding: 8px 11px; border-radius: 10px; border: 1px solid var(--line-2); background: var(--bg-2); color: var(--ink); }
+.avail .atools label { display: inline-flex; gap: 6px; align-items: center; font-size: 13.5px; color: var(--ink-2); cursor: pointer; }
+.alist { columns: 3 260px; column-gap: 18px; }
+.alist .ai { break-inside: avoid; display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 5px 2px; border-bottom: 1px solid var(--line); font-size: 14px; color: var(--ink); }
+.alist .ai .tag { font-size: 9.5px; }
+.alist .ai a { color: var(--gold-2); font-weight: 600; text-decoration: none; white-space: nowrap; }
+.alist .ai.me { background: rgba(230,190,85,.10); }
+.alist .ai.me a::after { content: " · yours"; color: var(--ink-3); font-weight: 400; }
+.alist .ai.sold { opacity: .5; }
+.alist .ai.sold a::after { content: " · sold"; color: var(--ink-3); font-weight: 400; }
+.alist .none { color: var(--ink-3); }
+.tile.dim { opacity: .38; }
 .chip.on { color: #0b1220; background: var(--c, var(--gold)); border-color: var(--c, var(--gold)); font-weight: 600; }
 
 table.rows { width: 100%; border-collapse: collapse; background: var(--panel); border-radius: var(--radius); overflow: hidden; }
@@ -193,7 +212,7 @@ table.rows td.n { white-space: nowrap; }
 </div>
 
 <main class="wrap">
-  <section data-view="spots"><h2 class="display" id="spotsHead">All spots</h2><p class="sub" id="spotsSub"></p><div class="chips" id="spotFilter"></div><div class="grid" id="spotgrid"></div></section>
+  <section data-view="spots"><h2 class="display" id="spotsHead">All spots</h2><p class="sub" id="spotsSub"></p><div class="chips" id="spotFilter"></div><div class="boxpick"><span class="bplab">Show a box</span><div class="chips" id="pickchips"></div></div><div class="avail" id="avail" hidden></div><div class="grid" id="spotgrid"></div></section>
   <section data-view="open" hidden><h2 class="display">What's still open</h2><p class="sub">Open spots, cheapest first, with how many names each one covers. "Autos" counts names that appear in an autograph set.</p><div id="openTable"></div></section>
   <section data-view="names" hidden><h2 class="display">Every name, A to Z</h2><p class="sub" id="namesSub"></p><div id="namesTools"></div><div class="jump" id="jump"></div><div id="nameIndex"></div></section>
   <section data-view="spot" hidden><div id="spot"></div></section>
@@ -263,7 +282,7 @@ table.rows td.n { white-space: nowrap; }
     save: function (a) { try { a.length ? localStorage.setItem(KEY, JSON.stringify(a)) : localStorage.removeItem(KEY); } catch (e) {} },
     toggle: function (id) { var a = store.all(), i = a.indexOf(id); if (i > -1) a.splice(i, 1); else a.push(id); a.sort(function (x, y) { return SP[x].i - SP[y].i; }); store.save(a); }
   };
-  var onlyMine = false;
+  var onlyMine = false, pickBox = "", availQ = "", availMine = false, availOpen = false;
 
   // header bits
   document.getElementById("kicker").textContent = D.kicker;
@@ -292,8 +311,36 @@ table.rows td.n { white-space: nowrap; }
     document.getElementById("clearmine").onclick = function () { store.save([]); onlyMine = false; redrawMine(); };
   }
   function redrawMine() {
-    drawMine(); drawGrid();
+    drawMine(); drawGrid(); if (pickBox) drawPick();
     var m = location.hash.match(/^#\/spot\/(.+)$/); if (m) drawSpot(decodeURIComponent(m[1]));
+  }
+
+  // pick a box: list every player in it with the spot they're in, and show each tile's names from that box
+  function drawPick() {
+    document.getElementById("pickchips").innerHTML = '<button class="chip' + (pickBox ? "" : " on") + '" data-k="">All boxes</button>' + D.boxes.map(function (b) {
+      return '<button class="chip' + (b.k === pickBox ? " on" : "") + '" style="--c:' + b.c + '" data-k="' + esc(b.k) + '">' + esc(b.short) + "</button>";
+    }).join("");
+    [].forEach.call(document.querySelectorAll("#pickchips .chip"), function (c) { c.onclick = function () { pickBox = c.getAttribute("data-k"); availQ = ""; drawPick(); drawGrid(); }; });
+    var el = document.getElementById("avail");
+    if (!pickBox) { el.hidden = true; el.innerHTML = ""; return; }
+    var b = D.boxes.filter(function (x) { return x.k === pickBox; })[0], mine = store.all(), rows = [];
+    D.spots.forEach(function (s) { list(s, pickBox).forEach(function (e) { rows.push({ e: e, s: s }); }); });
+    rows.sort(function (x, y) { return fold(x.e[0].replace(/^"|^the /i, "")).localeCompare(fold(y.e[0].replace(/^"|^the /i, ""))); });
+    el.style.setProperty("--c", b.c); el.hidden = false;
+    el.innerHTML = "<h3>" + esc(b.full) + '</h3><p class="asub">' + rows.length + " names in this box. Each one is listed with their spot." + '</p><div class="atools"><input id="aq" type="search" placeholder="Find a name in this box" autocomplete="off" value="' + esc(availQ) + '">' +
+      (PYL ? '<label><input type="checkbox" id="aopen"' + (availOpen ? " checked" : "") + "> Open spots only</label>" : "") +
+      (mine.length ? '<label><input type="checkbox" id="amine"' + (availMine ? " checked" : "") + "> Only my spots</label>" : "") + '</div><div class="alist" id="alist"></div>';
+    function draw() {
+      var q = fold(availQ.trim()), out = rows.filter(function (r) { return (!q || fold(r.e[0]).indexOf(q) > -1) && (!availMine || mine.indexOf(r.s.id) > -1) && (!availOpen || r.s.status === "open"); });
+      document.getElementById("alist").innerHTML = out.length ? out.map(function (r) {
+        var me = mine.indexOf(r.s.id) > -1, sold = r.s.status === "sold";
+        return '<div class="ai' + (me ? " me" : "") + (sold ? " sold" : "") + '"><span>' + esc(r.e[0]) + " " + tags(r.e) + '</span><a href="' + href(r.s.id) + '">' + esc(full(r.s)) + (PYL && r.s.price ? " " + money(r.s.price) : "") + "</a></div>";
+      }).join("") : '<div class="none">Nothing matches.</div>';
+    }
+    draw();
+    document.getElementById("aq").oninput = function () { availQ = this.value; draw(); };
+    var am = document.getElementById("amine"); if (am) am.onchange = function () { availMine = am.checked; draw(); };
+    var ao = document.getElementById("aopen"); if (ao) ao.onchange = function () { availOpen = ao.checked; draw(); };
   }
 
   var filt = "all";
@@ -306,10 +353,11 @@ table.rows td.n { white-space: nowrap; }
       [].forEach.call(fe.querySelectorAll(".chip"), function (c) { c.onclick = function () { filt = c.getAttribute("data-f"); drawGrid(); }; });
     }
     document.getElementById("spotgrid").innerHTML = D.spots.filter(function (s) { return (filt === "all" || s.status === filt) && (!onlyMine || mine.indexOf(s.id) > -1); }).map(function (s) {
-      var on = mine.indexOf(s.id) > -1, peek = [];
-      D.boxes.forEach(function (b) { var a = list(s, b.k); for (var i = 0; i < a.length && peek.length < 4; i++) { if (a[i][2] && peek.indexOf(a[i][0]) < 0 && a[i][1].indexOf("?") < 0) { peek.push(a[i][0]); break; } } });
+      var on = mine.indexOf(s.id) > -1, peek = [], inBox = pickBox ? list(s, pickBox) : null;
+      if (inBox) peek = inBox.slice(0, 4).map(function (e) { return e[0]; });
+      else D.boxes.forEach(function (b) { var a = list(s, b.k); for (var i = 0; i < a.length && peek.length < 4; i++) { if (a[i][2] && peek.indexOf(a[i][0]) < 0 && a[i][1].indexOf("?") < 0) { peek.push(a[i][0]); break; } } });
       var lab = s.label.length > 9 ? ' style="font-size:24px"' : "";
-      return '<div class="tilew"><a class="tile' + (on ? " pinned" : "") + (s.status === "sold" ? " sold" : "") + '" href="' + href(s.id) + '"><div class="lab display"' + lab + ">" + esc(s.label) + '</div><div class="row">' + badges(s) + '</div><div class="cnt">' + count(s) + " names" + (on ? " · yours" : "") + '</div><div class="peek">' + esc(peek.join(", ") || (s.nil ? "NIL letter " + s.nil + " only" : "")) + '</div><div class="dots">' +
+      return '<div class="tilew"><a class="tile' + (on ? " pinned" : "") + (inBox && !inBox.length ? " dim" : "") + (s.status === "sold" ? " sold" : "") + '" href="' + href(s.id) + '"><div class="lab display"' + lab + ">" + esc(s.label) + '</div><div class="row">' + badges(s) + '</div><div class="cnt">' + (inBox ? inBox.length + " in " + esc(D.boxes.filter(function (x) { return x.k === pickBox; })[0].short) : count(s) + " names") + (on ? " · yours" : "") + '</div><div class="peek">' + esc(peek.join(", ") || (s.nil ? "NIL letter " + s.nil + " only" : "")) + '</div><div class="dots">' +
         D.boxes.map(function (b) { var has = list(s, b.k).length; return '<i class="' + (has ? "" : "off") + '" style="background:' + b.c + '" title="' + esc(b.short) + (has ? "" : ": none listed") + '"></i>'; }).join("") + "</div></a>" +
         '<button type="button" class="minetog' + (on ? " on" : "") + '" data-id="' + esc(s.id) + '" aria-pressed="' + on + '" title="' + (on ? "Remove from my spots" : "Add to my spots") + '">' + (on ? "&#10003; Mine" : "+ Mine") + "</button></div>";
     }).join("");
@@ -427,7 +475,7 @@ table.rows td.n { white-space: nowrap; }
     if (v !== "search") qEl.value = "";
   }
   window.addEventListener("hashchange", function () { route(); window.scrollTo(0, 0); });
-  drawStatic(); drawGrid(); drawMine(); route();
+  drawStatic(); drawPick(); drawGrid(); drawMine(); route();
 })();
 </script>
 </body>
