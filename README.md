@@ -183,11 +183,14 @@ team spot, box by box. Linked from the storefront's Breaks menu; every page carr
   (`lib_team_product`), Absolute from the official Panini CSV (`absolute_2026.json`). Format "pyt" = pick your team with
   prices and open/sold. NIL letters go by first letter of the first name; college players already on an NFL roster in
   the Topps checklists go to that team (Acme's rule).
-- **Breaker colors (Nov 23, 2026):** each break page takes its breaker's colors (`THEMES` in `build.py`, picked by id
-  prefix: gb = Acme Packs green and gold, jwj = JWJ leather brown, cream and rust, cc = Colfax black, purple and red).
-  The template's colors are CSS variables (`--gold-rgb`, `--on-gold`, `--glow`, `--hdr`, `--brandline` plus the usual
-  ones); `__THEME__` gets a `:root` override. cc874.html carries the Colfax block by hand. Open (green) and sold (red)
-  keep their colors everywhere. Hub cards get a left edge in the breaker's color (`EDGE` in `hub.py`).
+- **Breaker look (Nov 23, 2026):** break pages are white with the breaker's brand in the header band, the accent color
+  (spot names, buttons, links) and a soft tint behind the title (`THEMES` and `LIGHT_CSS` in `build.py`, picked by id
+  prefix: gb = Acme Packs green and gold, jwj = JWJ brown, cream and rust, cc = Colfax black, purple and red). The
+  template's colors are CSS variables and `__THEME__` gets the override block. cc874.html carries the Colfax block by
+  hand. Open and sold use readable green and red on white. The hub, builder and release notes keep the navy site look.
+- **Release notes (Nov 23, 2026):** `build/breaks/release_notes.json` (newest first; tag New / Improved / Fixed; area
+  Break guides / Spot Builder / Site). `hub.py` writes `breaks/release-notes.html` from it and links it in the Breaks
+  menu and the hub footer. Add a line there with every change worth telling breakers about, then run hub.py.
 - **Leave teams out (Nov 23, 2026):** builder team mode, for giveaway teams. `S.excl` holds the team names; `teamBins`
   drops them before grouping, so they're out of the spots and the pricing. Results show a "Left out" line; Copy, CSV,
   the HTML table and the iframe (`x` in the embed data) carry it too. Teams no longer in the picked boxes drop off the

@@ -104,28 +104,54 @@ def team_break(cfg, products):
             names[sid].setdefault(box['k'], []).append([n, ('A' if flags == {'A'} else '') + 'N', 'B' in flags])
     return names, unmatched
 
-# Each breaker's page takes on that breaker's own colors, read from their store and logo (Nov 23, 2026):
-# Acme Packs: forest green and gold logo. JWJ: leather brown, cream and rust red logo.
-# Colfax: black site, red #c8102e buttons, purple #6420a0, purple-to-red logo.
-# Open (green) and sold (red) badges keep their meaning on every page.
+# Breaker pages: a plain white page so everything is easy to read, with the breaker's brand in the header
+# band, the accent color (spot names, buttons, links) and a soft tint behind the title.
+# Colors read from each store and logo (Nov 23, 2026): Acme Packs forest green and gold logo; JWJ leather
+# brown, cream and rust; Colfax black site, red #c8102e buttons, purple #6420a0, purple-to-red logo.
+# Open (green) and sold (red) keep their meaning on every page.
 THEMES = {
-    'acme': dict(bg='#08150a', bg2='#0e2111', panel='#142d17', panel2='#1c3b1f', line='#28502b', line2='#3a6a3c', ink='#eef2e8', ink2='#c3d1bd',
-                 ink3='#8fa48a', gold='#f2c14a', gold2='#f7d77f', goldrgb='242,193,74', ongold='#132a06', glow='#1f4a14', hdr='rgba(8,21,10,.92)',
-                 brandline='linear-gradient(90deg,#1b4a0a,#f2c14a 50%,#1b4a0a)'),
-    'jwj': dict(bg='#140d08', bg2='#1d140d', panel='#2a1d14', panel2='#36261a', line='#4a3426', line2='#644734', ink='#f5ebdc', ink2='#dcc8ad',
-                ink3='#a88f74', gold='#e9c48f', gold2='#f3d9b0', goldrgb='233,196,143', ongold='#2a170b', glow='#5a2a18', hdr='rgba(20,13,8,.92)',
+    'acme': dict(hdr='#173d0e', accent='#2f6b1a', accentrgb='47,107,26', link='#2a5f16', hon='#f2c14a', honink='#1d2a08', tint='#edf5e8',
+                 brandline='linear-gradient(90deg,#f2c14a,#f7d77f 50%,#f2c14a)'),
+    'jwj': dict(hdr='#2e1d12', accent='#a63a1f', accentrgb='166,58,31', link='#8f3119', hon='#f0dcc0', honink='#2e1d12', tint='#f8efe4',
                 brandline='linear-gradient(90deg,#ab2d1a,#f0dcc0 50%,#ab2d1a)'),
-    'colfax': dict(bg='#000000', bg2='#0d0a12', panel='#16111e', panel2='#20182b', line='#33264a', line2='#4a3868', ink='#efecf4', ink2='#c9c5bf',
-                   ink3='#8f8a9c', gold='#b57dff', gold2='#cda4ff', goldrgb='181,125,255', ongold='#12051f', glow='#3a1460', hdr='rgba(0,0,0,.9)',
+    'colfax': dict(hdr='#000000', accent='#6420a0', accentrgb='100,32,160', link='#571c8c', hon='#c8102e', honink='#ffffff', tint='#f2ecfa',
                    brandline='linear-gradient(90deg,#6420a0,#c8102e)'),
 }
+LIGHT_CSS = """
+:root { --bg: #ffffff; --bg-2: #f4f5f7; --panel: #ffffff; --panel-2: #f7f8fa; --line: #e2e5ea; --line-2: #cfd4db;
+  --ink: #16191d; --ink-2: #3d434b; --ink-3: #69707a; --gold: %(accent)s; --gold-2: %(link)s; --gold-rgb: %(accentrgb)s; --on-gold: #ffffff;
+  --hdr: %(hdr)s; --brandline: %(brandline)s; --hon: %(hon)s; --honink: %(honink)s; --tint: %(tint)s; }
+body { background: linear-gradient(180deg, var(--tint) 0, #ffffff 420px) no-repeat, #ffffff; }
+header.site { background: var(--hdr); backdrop-filter: none; border-bottom: 0;
+  --ink: #ffffff; --ink-2: rgba(255,255,255,.82); --ink-3: rgba(255,255,255,.66); --line-2: rgba(255,255,255,.28); --bg-2: rgba(255,255,255,.1); --panel: rgba(255,255,255,.1); }
+header.site .search input::placeholder { color: rgba(255,255,255,.6); }
+header.site { color: #ffffff; }
+header.site .search input { color: #ffffff; }
+header.site .search input:focus { outline-color: var(--hon); }
+header.site .bmenu > summary::after { border-color: var(--hon); }
+.bmenu-list { color: #16191d; }
+nav.tabs a.on { background: var(--hon); color: var(--honink); }
+.bmenu-list { --ink: #16191d; --ink-2: #3d434b; --ink-3: #69707a; --line: #e2e5ea; --line-2: #cfd4db; --bg-2: #f4f5f7; background: #ffffff !important; box-shadow: 0 12px 32px rgba(0,0,0,.18); }
+.bmenu-list a:hover { background: #f4f5f7; }
+.tile, .box, .avail, .card, .res, table.rows { box-shadow: 0 1px 2px rgba(16,24,40,.05); }
+.tile:hover { box-shadow: 0 6px 18px rgba(16,24,40,.08); }
+.ended { background: #f4f5f7; }
+.chip.on:not([style]) { color: #ffffff; }
+.badge.open { background: #e7f6ed; color: #17663a; border-color: #9fd7b5; }
+.badge.sold { background: #fdecee; color: #a3202d; border-color: #f1b3ba; }
+.badge.price { background: rgba(var(--gold-rgb),.08); color: var(--gold); border-color: rgba(var(--gold-rgb),.35); }
+.tag.m { color: #3557b7; } .tag.q { color: #a3202d; } .tag.i { color: #17663a; }
+.tag.n { background: #e8f0fe; color: #1f4fa8; border-color: #b7cdf5; }
+.ix .sp a.sold { color: #a3202d; border-color: #f1b3ba; }
+.ix .sp a.open { color: #17663a; border-color: #9fd7b5; }
+mark { background: #fff1a8; }
+.dots i { box-shadow: inset 0 0 0 1px rgba(0,0,0,.14); }
+.tile.sold { opacity: .6; }
+"""
 def breaker_of(cid): return 'acme' if cid.startswith('gb') else 'jwj' if cid.startswith('jwj') else 'colfax' if cid.startswith('cc') else ''
 def theme_css(key):
     t = THEMES.get(key)
-    if not t: return ''
-    return (':root { --bg: %(bg)s; --bg-2: %(bg2)s; --panel: %(panel)s; --panel-2: %(panel2)s; --line: %(line)s; --line-2: %(line2)s; '
-            '--ink: %(ink)s; --ink-2: %(ink2)s; --ink-3: %(ink3)s; --gold: %(gold)s; --gold-2: %(gold2)s; --gold-rgb: %(goldrgb)s; '
-            '--on-gold: %(ongold)s; --glow: %(glow)s; --hdr: %(hdr)s; --brandline: %(brandline)s; }') % t
+    return LIGHT_CSS % t if t else ''
 
 def write(cfg, names, unmatched):
     data = dict(cfg)
@@ -133,7 +159,7 @@ def write(cfg, names, unmatched):
     data['names'] = names
     data['unmatched'] = unmatched
     th = breaker_of(cfg['id'])
-    html = TPL.replace('__THEME__', theme_css(th)).replace('__THEMECOLOR__', THEMES[th]['bg'] if th else '#081524').replace('__ICON__', ICON).replace('__TITLE__', cfg['title']).replace(
+    html = TPL.replace('__THEME__', theme_css(th)).replace('__THEMECOLOR__', THEMES[th]['hdr'] if th else '#081524').replace('__ICON__', ICON).replace('__TITLE__', cfg['title']).replace(
         '__DATA__', json.dumps(data, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/'))
     os.makedirs(OUT, exist_ok=True)
     path = os.path.join(OUT, cfg['id'] + '.html')

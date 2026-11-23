@@ -28,7 +28,7 @@ html = f'''<!DOCTYPE html>
 <div class="wrap hero"><div class="kicker">Spot guides</div><h1 class="display">Break guides</h1>
 <p class="lede">Who you could pull in each spot, box by box, built from the published checklists. Pick-your-letter breaks show which spots are still open and what they cost.</p></div>
 <main class="wrap"><a class="tile" href="/breaks/builder" style="display:block;margin-bottom:18px;border-color:var(--gold)"><div class="kicker" style="font-size:11px">Breaker tool</div><div class="lab display" style="font-size:26px;margin-top:6px">Spot builder</div><div class="peek" style="margin-top:6px">Pick checklists, set a spot count, and get the most evenly balanced letter spots, with optional pricing.</div></a><div class="grid">{cards}</div></main>
-<footer><div class="wrap">Main Event Card Vault. Reference only; confirm checklists and house rules with the breaker.</div></footer>
+<footer><div class="wrap">Main Event Card Vault. Reference only; confirm checklists and house rules with the breaker. <a href="/breaks/release-notes">Release notes</a></div></footer>
 </body></html>'''
 open(os.path.join(ROOT,'breaks','index.html'),'w').write(html)
 print(len(html))
@@ -73,6 +73,7 @@ def menu_html(current=None):
         links.append(f'<a href="/breaks/{i["id"]}"{cls}><b>{esc(code)}</b>{esc(name)}<span>{esc(meta)}</span></a>')
     links.append('<a class="all" href="/breaks/builder"' + (' style="background:rgba(230,190,85,.1)"' if current == 'builder' else '') + '>Spot builder<span>Turn checklists into balanced letter spots</span></a>')
     links.append('<a class="all" href="/breaks/" style="border-top:0;margin-top:0;padding-top:9px">All break guides</a>')
+    links.append('<a class="all" href="/breaks/release-notes" style="border-top:0;margin-top:0;padding-top:4px' + (';background:rgba(230,190,85,.1)' if current == 'notes' else '') + '">Release notes<span>What changed, and when</span></a>')
     return '<!--BMENU--><details class="bmenu"><summary>Breaks</summary><div class="bmenu-list">' + ''.join(links) + '</div></details>' + MENU_JS + '<!--/BMENU-->'
 
 def fill(path, current=None):
@@ -80,6 +81,42 @@ def fill(path, current=None):
     s = re.sub(r'<!--BMENU-->.*?<!--/BMENU-->', lambda m: menu_html(current), s, count=1, flags=re.S)
     s = re.sub(r'/\*BMENU-CSS\*/.*?/\*/BMENU-CSS\*/', lambda m: '/*BMENU-CSS*/' + MENU_CSS + '/*/BMENU-CSS*/', s, count=1, flags=re.S)
     open(path, 'w').write(s)
+
+# ---------------- Release notes: breaks/release-notes.html from release_notes.json ----------------
+RN = json.load(open(os.path.join(HERE, 'release_notes.json')))['releases']
+TAGC = {'New': '#5ec98a', 'Improved': '#5aa9ff', 'Fixed': '#e6be55'}
+def rn_item(t):
+    tag, area, text = t
+    return f'<li><span class="rtag" style="--t:{TAGC.get(tag, "#8397ae")}">{esc(tag)}</span><span class="rarea">{esc(area)}</span><p>{esc(text)}</p></li>'
+rn_body = ''.join(f'<section class="rel"><div class="rdate">{esc(r["date"])}</div><h2 class="display">{esc(r["title"])}</h2><ul>{"".join(rn_item(t) for t in r["items"])}</ul></section>' for r in RN)
+rn = f'''<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex">
+<title>Release Notes | Main Event Card Vault</title><meta name="theme-color" content="#081524"><link rel="icon" href="{icon}">
+<style>{css}
+.bar .bmenu {{ margin-left: auto; }}
+.rel {{ background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 20px 8px; margin: 0 0 16px; }}
+.rdate {{ color: var(--gold); font-size: 12px; letter-spacing: .18em; text-transform: uppercase; font-weight: 600; }}
+.rel h2 {{ font-size: 26px; margin: 4px 0 10px; }}
+.rel ul {{ list-style: none; margin: 0; padding: 0; }}
+.rel li {{ padding: 10px 0 12px; border-top: 1px solid var(--line); }}
+.rel li p {{ margin: 6px 0 0; color: var(--ink-2); font-size: 15px; max-width: 860px; }}
+.rtag {{ display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; padding: 2px 9px; border-radius: 999px; color: var(--t); border: 1px solid var(--t); margin-right: 8px; }}
+.rarea {{ font-size: 13px; color: var(--ink-3); font-weight: 600; }}
+.rfilter {{ display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 16px; }}
+.rfilter button {{ font: inherit; font-size: 13.5px; padding: 7px 13px; border-radius: 999px; cursor: pointer; background: var(--bg-2); color: var(--ink-2); border: 1px solid var(--line-2); }}
+.rfilter button.on {{ background: var(--gold); color: #1a1405; border-color: var(--gold); font-weight: 600; }}
+/*BMENU-CSS*//*/BMENU-CSS*/
+</style></head><body>
+<header class="site"><div class="wrap"><div class="bar"><a class="brand" href="/"><img src="{icon}" alt=""><div><b class="display">Main Event Card Vault</b><span>Release notes</span></div></a><!--BMENU--><!--/BMENU--></div></div></header>
+<div class="wrap hero"><div class="kicker">What's new</div><h1 class="display">Release notes</h1>
+<p class="lede">Changes to the break guides, the Spot Builder and the site, newest first.</p></div>
+<main class="wrap"><div class="rfilter" id="rf"><button class="on" data-a="">Everything</button><button data-a="Break guides">Break guides</button><button data-a="Spot Builder">Spot Builder</button><button data-a="Site">Site</button></div>
+{rn_body}</main>
+<footer><div class="wrap">Main Event Card Vault. <a href="/breaks/">All break guides</a></div></footer>
+<script>(function(){{var bs=document.querySelectorAll("#rf button");bs.forEach(function(b){{b.onclick=function(){{var a=b.getAttribute("data-a");bs.forEach(function(x){{x.classList.toggle("on",x===b);}});document.querySelectorAll(".rel").forEach(function(r){{var n=0;r.querySelectorAll("li").forEach(function(li){{var ok=!a||li.querySelector(".rarea").textContent===a;li.hidden=!ok;if(ok)n++;}});r.hidden=!n;}});}};}});}})();</script>
+</body></html>'''
+open(os.path.join(ROOT, 'breaks', 'release-notes.html'), 'w').write(rn)
+fill(os.path.join(ROOT, 'breaks', 'release-notes.html'), 'notes')
 
 for i in items:
     fill(os.path.join(ROOT, 'breaks', i['id'] + '.html'), i['id'])
