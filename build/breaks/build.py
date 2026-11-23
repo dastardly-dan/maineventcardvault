@@ -94,6 +94,14 @@ def team_break(cfg, products):
             if not sid:
                 unmatched.append([n + ' (' + team + ')', box['short']]); continue
             names[sid].setdefault(box['k'], []).append([n, 'A' if flags == {'A'} else '', 'B' in flags])
+        nil_to_spot = {}
+        for s in cfg['spots']:
+            for l in (s.get('nil') or '').replace('/', ''): nil_to_spot[l] = s['id']
+        for n, flags in sorted(prod.get('nil', {}).items(), key=lambda x: fold(x[0]).lower()):
+            sid = nil_to_spot.get(first_char(n))
+            if not sid:
+                unmatched.append([n + ' (college, NIL ' + first_char(n) + ')', box['short']]); continue
+            names[sid].setdefault(box['k'], []).append([n, ('A' if flags == {'A'} else '') + 'N', 'B' in flags])
     return names, unmatched
 
 def write(cfg, names, unmatched):
@@ -282,6 +290,129 @@ jwj0244 = dict(
              ['Topps Flagship Basketball checklist (official Topps)', 'https://cdn.shopify.com/s/files/1/0662/9749/5709/files/26TBSK_-_Topps_Flagship_Basketball_Checklist.xls.pdf?v=1793888934']],
 )
 
+# ---------------- library-based team data (Acme breaks, Nov 23) ----------------
+LIB = os.path.join(os.path.dirname(__file__), 'checklists')
+TEAM_FOLD = {'Redskins': 'Commanders', 'Football Team': 'Commanders', 'Oilers': 'Titans'}
+def lib_team_product(pid):
+    """A Topps team checklist from the library: base names by team, plus everyone in the autograph, insert and multi lists."""
+    out = dict(base={}, other={})
+    sec = None
+    for line in open(os.path.join(LIB, pid + '.txt'), encoding='utf-8'):
+        line = line.strip()
+        if not line or line.startswith('#'): continue
+        if line.startswith('['): sec = line.strip('[]'); continue
+        for part in (line.split(' / ') if sec == 'multi' else [line]):
+            if ' | ' not in part: continue
+            n, team = [x.strip() for x in part.rsplit(' | ', 1)]
+            team = TEAM_FOLD.get(team, team)
+            bucket = out['base'] if sec == 'base' else out['other']
+            if n not in bucket.setdefault(team, []): bucket[team].append(n)
+    return out
+
+NFL_CITIES = {'Arizona', 'Phoenix', 'St. Louis', 'Atlanta', 'Baltimore', 'Buffalo', 'Carolina', 'Chicago', 'Cincinnati', 'Cleveland', 'Dallas', 'Denver',
+              'Detroit', 'Green Bay', 'Houston', 'Indianapolis', 'Jacksonville', 'Kansas City', 'Las Vegas', 'Oakland', 'Los Angeles', 'San Diego', 'Miami',
+              'Minnesota', 'New England', 'Boston', 'New Orleans', 'New York', 'Philadelphia', 'Pittsburgh', 'San Francisco', 'Seattle', 'Tampa Bay',
+              'Tennessee', 'Washington'}
+NFL_NICK = set(TD.NFL_CHROME['base']) | {'Redskins', 'Oilers', 'Football Team'}
+def nfl_team(full):
+    """'Arizona Cardinals' -> 'Cardinals'; college teams ('Louisville Cardinals', 'Oklahoma State Cowboys') -> None."""
+    for nick in NFL_NICK:
+        if full.endswith(' ' + nick) and full[:-len(nick) - 1] in NFL_CITIES:
+            return TEAM_FOLD.get(nick, nick)
+    return None
+def absolute_product(roster):
+    """2026 Panini Absolute from the official CSV (absolute_2026.json). NFL players go to their team. A college player who is
+    already on an NFL roster in the Topps checklists goes to that team (Acme's rule); everyone else is NIL, by first letter."""
+    out = dict(base={}, other={}, nil={})
+    rows = json.load(open(os.path.join(os.path.dirname(__file__), 'absolute_2026.json'), encoding='utf-8'))
+    for athletes, teams, f in rows:
+        an, tn = athletes.split('/'), teams.split('/')
+        for i, n in enumerate(an):
+            n = n.strip(); full = (tn[i] if i < len(tn) else tn[-1]).strip()
+            team = nfl_team(full) or roster.get(key_of(n))
+            if team:
+                bucket = out['base'] if f == 'B' else out['other']
+                if n not in bucket.setdefault(team, []): bucket[team].append(n)
+            else:
+                out['nil'].setdefault(n, set()).add('B' if f == 'B' else 'A')
+    return out
+
+ACME_RULES = [['Cards go to the team on the card', ['Acme\'s rules: a card goes to the team listed on the front or back, not the jersey.', 'Retired players go to the team on their card; if that team moved, it goes to the team it became (Oilers to Titans, Redskins to Commanders, San Diego to the Chargers).']],
+              ['College players', ['A player in a college uniform who\'s already in the NFL goes to his NFL team.', 'An NIL player (not in the NFL yet) is randomized to the group at the end of the break, unless the listing gives NIL letters.']],
+              ['Multi-player cards', ['Cards with players from different teams are randomized between those teams with dice or random.org.']]]
+ACME_TERMS = ['Acme Packs group break terms', 'https://acmepackscards.com/pages/terms-of-service']
+SRC_CHROME = ['Topps Chrome Football checklist (official Topps)', 'https://cdn.sanity.io/files/hj34sz77/production/2cfae3dbb6d90c93d7a660bdf96b71cee1251349.pdf']
+SRC_MIDNIGHT = ['Topps Midnight Football checklist (official Topps)', 'https://cdn.shopify.com/s/files/1/0662/9749/5709/files/2026_Topps_Midnight_Football_checklist_ae614b15-64bd-4427-bebc-baa904c7368c.pdf?v=1791410806']
+SRC_INCEPTION = ['Topps Inception Football checklist (official Topps)', 'https://cdn.shopify.com/s/files/1/0662/9749/5709/files/2026_Topps_Inception_Football_CheckList_26TIFB_VERSION.pdf']
+SRC_ABSOLUTE = ['Panini Absolute Football checklist (official Panini CSV)', 'https://www.paniniamerica.net/']
+BOX_CHROME_J = dict(k='chrome', short='Chrome Jumbo', c='#5aa9ff', full='2026 Topps Chrome Football Jumbo (2 boxes)', kind='400-card base (300 veterans, 100 rookies), autographs',
+                    types='Base and Refractors, rookie cards, autographs including legends, inserts. Jumbo boxes carry more autographs than Hobby.')
+BOX_CHROME_H = dict(BOX_CHROME_J, short='Topps Chrome', full='2026 Topps Chrome Football Hobby (2 boxes)', types='Base and Refractors, rookie cards, autographs including legends, inserts.')
+BOX_MIDNIGHT = dict(k='midnight', short='Midnight', c='#c86bff', full='2026 Topps Midnight Football Hobby (2 boxes)', kind='100-card base, 3 autographs per box, inserts',
+                    types='Dark chrome base, rookie and veteran autographs (3 per hobby box), inserts like Night Night and Constellations.')
+BOX_INCEPTION = dict(k='inception', short='Inception', c='#3ccf9a', full='2026 Topps Inception Football Hobby', kind='Rookie-focused, autographs and patches in every box',
+                     types='Base, rookie autographs and patch autographs, inserts.')
+BOX_ABSOLUTE = dict(k='absolute', short='Absolute', c='#e2545e', full='2026 Panini Absolute Football Hobby (12 boxes, full case)', kind='NFL veterans and legends plus college (NIL) players',
+                    types='Base, Kaboom-style inserts, autographs and memorabilia of NFL players, retired greats and college players.')
+
+def acme_url(h): return 'https://acmepackscards.com/products/' + h
+gb1037_prices = [('49ers', 145, 1), ('Bears', 185, 0), ('Bengals', 125, 0), ('Bills', 125, 1), ('Broncos', 125, 1), ('Browns', 135, 1), ('Buccaneers', 115, 1),
+                 ('Cardinals', 235, 1), ('Chargers', 60, 1), ('Chiefs', 285, 1), ('Colts', 65, 1), ('Commanders', 105, 1), ('Cowboys', 125, 1), ('Dolphins', 60, 1),
+                 ('Eagles', 105, 1), ('Falcons', 65, 1), ('Giants', 140, 1), ('Jaguars', 85, 1), ('Jets', 95, 1), ('Lions', 85, 0), ('Packers', 75, 0), ('Panthers', 85, 1),
+                 ('Patriots', 245, 1), ('Raiders', 350, 1), ('Rams', 185, 1), ('Ravens', 75, 1), ('Saints', 135, 1), ('Seahawks', 95, 0), ('Steelers', 105, 1),
+                 ('Texans', 55, 1), ('Titans', 145, 1), ('Vikings', 75, 1)]
+gb1037 = dict(
+    id='gb1037', title='GB1037 Midnight Chrome PYT', kicker='Acme Packs · Pick your team · NFL',
+    url=acme_url('gb1036-midnight-chrome-pyt-2-pick-your-team'),
+    when='Tuesday, November 24, 2026, 5:00 pm Central (6:00 pm Eastern). If it doesn\'t fill, it rolls to the next break night.',
+    facts=['4 boxes', '32 team spots', '$55 to $350 per team'],
+    format='pyt', checked='Availability checked against Acme\'s store data on November 23, 2026, around 2:00 pm Eastern: 27 of 32 teams open. The link says gb1036, but the listing is titled GB1037.',
+    boxes=[BOX_CHROME_J, BOX_MIDNIGHT],
+    spots=[dict(team_spot(t.lower(), t, [t]), price=p, status='open' if a else 'sold') for t, p, a in gb1037_prices],
+    rules=ACME_RULES,
+    notes=['Cards are listed with the team the official checklist gives them.'],
+    sources=[['GB1037 break page (Acme Packs)', acme_url('gb1036-midnight-chrome-pyt-2-pick-your-team')], ACME_TERMS, SRC_CHROME, SRC_MIDNIGHT],
+)
+gb1038a_spots = [('49ers', ['49ers'], None), ('Bears + Eagles', ['Bears', 'Eagles'], None), ('Bengals', ['Bengals'], None), ('Bills', ['Bills'], None),
+                 ('Browns', ['Browns'], 'E/I/N'), ('Buccaneers', ['Buccaneers'], 'M'), ('Cardinals + Vikings', ['Cardinals', 'Vikings'], None),
+                 ('Chargers + Broncos', ['Chargers', 'Broncos'], None), ('Chiefs', ['Chiefs'], 'K'), ('Colts', ['Colts'], None), ('Commanders', ['Commanders'], 'G/S/Z/V/X'),
+                 ('Cowboys', ['Cowboys'], None), ('Dolphins', ['Dolphins'], 'W/L/P'), ('Falcons', ['Falcons'], 'R'), ('Jaguars', ['Jaguars'], 'D'), ('Jets', ['Jets'], 'J'),
+                 ('Lions', ['Lions'], None), ('Packers', ['Packers'], None), ('Panthers', ['Panthers'], None), ('Patriots', ['Patriots'], None),
+                 ('Raiders + Giants', ['Raiders', 'Giants'], None), ('Rams', ['Rams'], None), ('Ravens', ['Ravens'], 'T'), ('Saints', ['Saints'], 'B'),
+                 ('Seahawks', ['Seahawks'], None), ('Steelers', ['Steelers'], None), ('Texans', ['Texans'], 'A'), ('Titans', ['Titans'], 'C')]
+gb1038a = dict(
+    id='gb1038a', title='GB1038 Full Case Absolute Football', kicker='Acme Packs · Random team · NFL and NIL letters',
+    url=acme_url('gb1038-full-case-absolute-football-random-team'),
+    when='The listing says Friday, November 20, 2026, 8:00 pm Central, but it went up on November 23, so that date looks like a leftover. Check the live page for the real date.',
+    facts=['12 boxes (full case)', '28 team spots', '$135 per spot', 'Teams randomized live'],
+    format='team', checked='When checked on November 23, 2026, around 2:00 pm Eastern, spots were still for sale. Acme lists two different breaks as GB1038 (this one and Midnight Chrome Inception).',
+    boxes=[BOX_ABSOLUTE],
+    spots=[team_spot(re.sub(r'[^a-z0-9]', '', l.lower()), l + (' + NIL ' + n if n else ''), ts, n) for l, ts, n in gb1038a_spots],
+    rules=[ACME_RULES[0], ['NIL letters cover the college cards', ['Absolute is full of college players. Thirteen spots also get NIL letters for players not in the NFL yet.', 'The listing doesn\'t say first or last name. This guide goes by first name, the way Acme\'s terms handle letters everywhere else, and the split fits: the busiest first-name letters (J, C, K, D, M) each get a spot, and the rare ones are grouped (G/S/Z/V/X).', 'No NIL player\'s first name starts with F, H, O, Q, U or Y, which is why no spot has those letters.']],
+           ['College players already in the NFL', ['A college-uniform card of a player who\'s in the NFL now goes to his NFL team. This guide matches them by name against the 2026 Topps football checklists.']],
+           ACME_RULES[2]],
+    notes=['From the official Panini Absolute checklist. Players tagged NIL are college players; their spot comes from the NIL letter.'],
+    sources=[['GB1038 Full Case Absolute break page (Acme Packs)', acme_url('gb1038-full-case-absolute-football-random-team')], ACME_TERMS, SRC_ABSOLUTE],
+)
+gb1038b_spots = [('49ers', ['49ers']), ('Bears', ['Bears']), ('Bengals', ['Bengals']), ('Bills', ['Bills']), ('Broncos', ['Broncos']), ('Browns', ['Browns']),
+                 ('Buccaneers', ['Buccaneers']), ('Cardinals', ['Cardinals']), ('Chargers / Dolphins', ['Chargers', 'Dolphins']), ('Chiefs', ['Chiefs']),
+                 ('Commanders', ['Commanders']), ('Cowboys', ['Cowboys']), ('Eagles', ['Eagles']), ('Falcons / Colts', ['Falcons', 'Colts']), ('Giants', ['Giants']),
+                 ('Jets', ['Jets']), ('Lions', ['Lions']), ('Packers / Texans', ['Packers', 'Texans']), ('Panthers', ['Panthers']), ('Patriots', ['Patriots']),
+                 ('Raiders', ['Raiders']), ('Rams', ['Rams']), ('Ravens', ['Ravens']), ('Saints', ['Saints']), ('Seahawks', ['Seahawks']), ('Steelers', ['Steelers']),
+                 ('Titans', ['Titans']), ('Vikings / Jaguars', ['Vikings', 'Jaguars'])]
+gb1038b = dict(
+    id='gb1038b', title='GB1038 Midnight Chrome Inception', kicker='Acme Packs · Random team · NFL',
+    url=acme_url('gb1038-midnight-chrome-inception-random-team'),
+    when='Tuesday, November 24, 2026, 7:00 pm Central (8:00 pm Eastern). If it doesn\'t fill, it rolls to the next break night.',
+    facts=['5 boxes', '28 team spots (24 teams, 4 combos)', '$132 per spot', 'Teams randomized live'],
+    format='team', checked='When checked on November 23, 2026, around 2:00 pm Eastern, spots were still for sale. Acme lists two different breaks as GB1038 (this one and Full Case Absolute).',
+    boxes=[BOX_INCEPTION, BOX_MIDNIGHT, BOX_CHROME_H],
+    spots=[team_spot(re.sub(r'[^a-z0-9]', '', l.lower()), l, ts) for l, ts in gb1038b_spots],
+    rules=ACME_RULES,
+    notes=['Cards are listed with the team the official checklist gives them.'],
+    sources=[['GB1038 Midnight Chrome Inception break page (Acme Packs)', acme_url('gb1038-midnight-chrome-inception-random-team')], ACME_TERMS, SRC_INCEPTION, SRC_MIDNIGHT, SRC_CHROME],
+)
+
 # ---------------- finished breaks ----------------
 # A break that has run keeps its guide, but loses the live sold/open status and buying prompts.
 def close(cfg, ran, facts):
@@ -298,6 +429,11 @@ if __name__ == '__main__':
     n, u = letter_break(jwj0247, {'swc': TD.SW_CHROME, 'swg': TD.SW_GALAXY}, None, alt=False); built.append(write(jwj0247, n, u))
     n, u = team_break(cc872, {'chrome': TD.NFL_CHROME, 'midnight': TD.NFL_MIDNIGHT, 'absolute': dict(base={}, other={})}); built.append(write(cc872, n, u))
     n, u = team_break(jwj0244, {'flag': TD.NBA_FLAGSHIP}); built.append(write(jwj0244, n, u))
+    CH, MN, IN = lib_team_product('2026-topps-chrome-football'), lib_team_product('2026-topps-midnight-football'), lib_team_product('2026-topps-inception-football')
+    roster = {key_of(n): t for p_ in (CH, MN, IN) for b_ in ('base', 'other') for t, ns in p_[b_].items() for n in ns}
+    n, u = team_break(gb1037, {'chrome': CH, 'midnight': MN}); built.append(write(gb1037, n, u))
+    n, u = team_break(gb1038a, {'absolute': absolute_product(roster)}); built.append(write(gb1038a, n, u))
+    n, u = team_break(gb1038b, {'chrome': CH, 'midnight': MN, 'inception': IN}); built.append(write(gb1038b, n, u))
     json.dump([{k: b[k] for k in ('id', 'title', 'kicker', 'when', 'facts', 'ended') if k in b} for b in built], open(os.path.join(os.path.dirname(__file__), 'index.json'), 'w'))
     for b in built:
         if b['unmatched']: print(b['id'], 'UNMATCHED', b['unmatched'][:40])

@@ -74,12 +74,12 @@ h2 { font-size: 30px; margin: 0 0 6px; }
 .tile.pinned { border-color: var(--gold); box-shadow: 0 0 0 1px var(--gold) inset; }
 .tilew { position: relative; }
 .tilew > .tile { height: 100%; }
-.minetog { position: absolute; top: 10px; right: 10px; font: inherit; font-size: 12px; font-weight: 600; padding: 3px 9px; border-radius: 999px; cursor: pointer; background: var(--bg-2, rgba(0,0,0,.25)); color: var(--ink-2); border: 1px solid var(--line-2); }
+.minetog { position: absolute; bottom: 10px; right: 10px; font: inherit; font-size: 12px; font-weight: 600; padding: 3px 9px; border-radius: 999px; cursor: pointer; background: var(--bg-2, rgba(0,0,0,.25)); color: var(--ink-2); border: 1px solid var(--line-2); }
 .minetog:hover { border-color: var(--gold); color: var(--ink); }
 .minetog.on { background: var(--gold); color: #1a1405; border-color: var(--gold); }
 .mine .macts { margin-left: auto; display: flex; gap: 8px; }
 .mine .macts .btn { padding: 6px 12px; font-size: 13px; }
-.tile .lab { font-size: 34px; line-height: 1; color: var(--gold); }
+.tile .lab { font-size: 34px; line-height: 1.05; color: var(--gold); }
 .tile .cnt { font-size: 12.5px; color: var(--ink-3); margin: 4px 0 8px; }
 .tile .peek { font-size: 13.5px; color: var(--ink-2); line-height: 1.4; }
 .dots { display: flex; gap: 4px; margin-top: 10px; }
@@ -170,7 +170,8 @@ footer a { color: var(--ink-2); }
 .tile .row { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px; align-items: center; }
 .badge { line-height: 1.5; white-space: nowrap; }
 .tag { font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; margin-left: 5px; color: var(--gold); }
-.tag.m { color: #9ab8ff; } .tag.q { color: #f08a92; } .tag.i { color: #7fe0a6; }
+.tag.m { color: #9ab8ff; }
+.tag.n { background: rgba(90,169,255,.16); color: #8cc4ff; border-color: rgba(90,169,255,.4); } .tag.q { color: #f08a92; } .tag.i { color: #7fe0a6; }
 .jump { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 14px; }
 .jump a { text-decoration: none; font-size: 13px; padding: 4px 9px; border-radius: 8px; background: var(--bg-2); border: 1px solid var(--line); color: var(--ink-2); }
 .jump a:hover { border-color: var(--gold); color: var(--ink); }
@@ -235,7 +236,7 @@ table.rows td.n { white-space: nowrap; }
 <script>
 (function () {
   var D = __DATA__;
-  var PYL = D.format === "pyl", TEAM = D.format === "team", ENDED = D.ended || "", LIVE = PYL && !ENDED;
+  var PYL = D.format === "pyl" || D.format === "pyt", TEAM = D.format === "team" || D.format === "pyt", ENDED = D.ended || "", LIVE = PYL && !ENDED;
   var BOX = {}; D.boxes.forEach(function (b) { BOX[b.k] = b; });
   var SP = {}; D.spots.forEach(function (s, i) { s.i = i; SP[s.id] = s; });
   var KEY = "mecv-" + D.id + "-mine";
@@ -263,6 +264,7 @@ table.rows td.n { white-space: nowrap; }
     else if (f.indexOf("A") > -1) h += '<span class="tag">auto</span>';
     if (f.indexOf("I") > -1 && !e[2] && f.indexOf("A") < 0) h += '<span class="tag i">insert</span>';
     if (f.indexOf("M") > -1) h += '<span class="tag m">multi</span>';
+    if (f.indexOf("N") > -1) h += '<span class="tag n">NIL</span>';
     if (f.indexOf("?") > -1) h += '<span class="tag q">? by real name</span>';
     return h;
   }
@@ -297,7 +299,7 @@ table.rows td.n { white-space: nowrap; }
   tabs.push(["names", "By name"], ["boxes", "By box"], ["rules", "Rules and sources"]);
   document.getElementById("tabs").innerHTML = tabs.map(function (t) { return '<a href="#/' + t[0] + '" data-v="' + t[0] + '">' + t[1] + "</a>"; }).join("");
   document.getElementById("spotsHead").textContent = TEAM ? "Every team spot" : "Every letter spot";
-  document.getElementById("spotsSub").textContent = ENDED ? "This break has already run. Tap a spot to see who was in it from each box." : (PYL ? "Pick-your-letter: green spots can still be bought, red ones are sold. " : TEAM ? "Teams are randomized live, so any spot could be yours. " : "Letters are randomized live, so any spot could be yours. ") + "Tap a spot to see who you could pull from each box.";
+  document.getElementById("spotsSub").textContent = ENDED ? "This break has already run. Tap a spot to see who was in it from each box." : (PYL ? (TEAM ? "Pick-your-team: green teams can still be bought, red ones are sold. " : "Pick-your-letter: green spots can still be bought, red ones are sold. ") : TEAM ? "Teams are randomized live, so any spot could be yours. " : "Letters are randomized live, so any spot could be yours. ") + "Tap a spot to see who you could pull from each box.";
 
   function drawMine() {
     var a = store.all(), el = document.getElementById("mine");
@@ -359,7 +361,7 @@ table.rows td.n { white-space: nowrap; }
       var on = mine.indexOf(s.id) > -1, peek = [], inBox = pickBox ? list(s, pickBox) : null;
       if (inBox) peek = inBox.slice(0, 4).map(function (e) { return e[0]; });
       else D.boxes.forEach(function (b) { var a = list(s, b.k); for (var i = 0; i < a.length && peek.length < 4; i++) { if (a[i][2] && peek.indexOf(a[i][0]) < 0 && a[i][1].indexOf("?") < 0) { peek.push(a[i][0]); break; } } });
-      var lab = s.label.length > 9 ? ' style="font-size:24px"' : "";
+      var L = s.label.length, lab = L > 14 ? ' style="font-size:19px"' : L > 9 ? ' style="font-size:22px"' : L > 5 ? ' style="font-size:28px"' : "";
       return '<div class="tilew"><a class="tile' + (on ? " pinned" : "") + (inBox && !inBox.length ? " dim" : "") + (s.status === "sold" ? " sold" : "") + '" href="' + href(s.id) + '"><div class="lab display"' + lab + ">" + esc(s.label) + '</div><div class="row">' + badges(s) + '</div><div class="cnt">' + (inBox ? inBox.length + " in " + esc(D.boxes.filter(function (x) { return x.k === pickBox; })[0].short) : count(s) + " names") + (on ? " · yours" : "") + '</div><div class="peek">' + esc(peek.join(", ") || (s.nil ? "NIL letter " + s.nil + " only" : "")) + '</div><div class="dots">' +
         D.boxes.map(function (b) { var has = list(s, b.k).length; return '<i class="' + (has ? "" : "off") + '" style="background:' + b.c + '" title="' + esc(b.short) + (has ? "" : ": none listed") + '"></i>'; }).join("") + "</div></a>" +
         '<button type="button" class="minetog' + (on ? " on" : "") + '" data-id="' + esc(s.id) + '" aria-pressed="' + on + '" title="' + (on ? "Remove from my spots" : "Add to my spots") + '">' + (on ? "&#10003; Mine" : "+ Mine") + "</button></div>";

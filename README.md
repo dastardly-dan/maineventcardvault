@@ -178,6 +178,11 @@ team spot, box by box. Linked from the storefront's Breaks menu; every page carr
   prefix z, or j for uncompressed) and shows a searchable spot list, light or dark. Nothing is stored on the server.
 - **Find a spot:** search box above the spot list filters to the spots holding a name or team (one or two
   letters match by letter range); the header search results link to `#/build/find/<name>`.
+- **Acme Packs pages (Nov 23, 2026):** gb1037 (Midnight Chrome PYT), gb1038a (Full Case Absolute) and gb1038b (Midnight
+  Chrome Inception) in `build/breaks/build.py`. Topps team data comes straight from the library checklists
+  (`lib_team_product`), Absolute from the official Panini CSV (`absolute_2026.json`). Format "pyt" = pick your team with
+  prices and open/sold. NIL letters go by first letter of the first name; college players already on an NFL roster in
+  the Topps checklists go to that team (Acme's rule).
 - **Breakninja lists (Nov 22, 2026):** when the maker hasn't posted a checklist, breakninja.com's card-by-card tables
   (name, number, set, print run, team) are scraped in the built-in browser, turned into a Panini-style CSV (multi-person
   sets regrouped, sketch cards dropped) and run through `panini_csv.py` and `depth.py --panini`, so print runs drive

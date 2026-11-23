@@ -6,7 +6,7 @@ tpl = open(os.path.join(HERE,'template.html')).read()
 icon = re.search(r'<link rel="icon" href="([^"]+)"', open(os.path.join(ROOT,'breaks','cc871.html')).read()).group(1)
 items = json.load(open(os.path.join(HERE,'index.json')))
 items.append(dict(id='cc874', title='CC874 Monster Multi: Random Letter', kicker='Colfax Collectibles · Random letter · Multi-sport', when='Ran Sunday, November 22, 2026', facts=['7 boxes', '21 letter spots'], ended='yes'))
-order = ['cc871', 'cc872', 'cc874', 'jwj0246', 'jwj0247', 'jwj0244']
+order = ['cc871', 'cc872', 'cc874', 'jwj0246', 'jwj0247', 'jwj0244', 'gb1037', 'gb1038b', 'gb1038a']
 def is_past(i): return bool(i.get('ended')) or 'has passed' in i['when']
 items.sort(key=lambda x: (is_past(x), order.index(x['id'])))
 def esc(s): return s.replace('&','&amp;').replace('<','&lt;')
@@ -56,7 +56,7 @@ def short_date(w):
     return (m.group(1)[:3] + ' ' + m.group(2)) if m else ''
 
 def code_and_name(title):
-    m = re.match(r'(CC\d+|JWJ #\d+)\s*[:\-]?\s*(.*)', title)
+    m = re.match(r'(CC\d+|JWJ #\d+|GB\d+)\s*[:\-]?\s*(.*)', title)
     return (m.group(1), m.group(2)) if m else ('', title)
 
 def menu_html(current=None):
