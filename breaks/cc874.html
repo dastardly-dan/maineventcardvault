@@ -70,6 +70,14 @@ h2 { font-size: 30px; margin: 0 0 6px; }
 }
 .tile:hover { border-color: var(--gold); transform: translateY(-2px); }
 .tile.pinned { border-color: var(--gold); box-shadow: 0 0 0 1px var(--gold) inset; }
+.tilew { position: relative; }
+.tilew > .tile { height: 100%; }
+.minetog { position: absolute; top: 10px; right: 10px; font: inherit; font-size: 12px; font-weight: 600; padding: 3px 9px; border-radius: 999px; cursor: pointer; background: var(--bg-2, rgba(0,0,0,.25)); color: var(--ink-2); border: 1px solid var(--line-2); }
+.minetog:hover { border-color: var(--gold); color: var(--ink); }
+.minetog.on { background: var(--gold); color: #1a1405; border-color: var(--gold); }
+.mine .mlinks a { margin-right: 2px; }
+.mine .macts { margin-left: auto; display: flex; gap: 8px; }
+.mine .macts .btn { padding: 6px 12px; font-size: 13px; }
 .tile .lab { font-size: 34px; line-height: 1; color: var(--gold); }
 .tile .cnt { font-size: 12.5px; color: var(--ink-3); margin: 4px 0 8px; }
 .tile .peek { font-size: 13.5px; color: var(--ink-2); line-height: 1.4; }
@@ -308,39 +316,67 @@ footer a { color: var(--ink-2); }
   }
   function count(s) { var t = 0; BOXES.forEach(function (b) { t += (s.products[b.k] || []).length; }); return t; }
 
-  var store = { get: function () { try { return localStorage.getItem("cc874-mine"); } catch (e) { return null; } },
-    set: function (v) { try { v ? localStorage.setItem("cc874-mine", v) : localStorage.removeItem("cc874-mine"); } catch (e) {} } };
+  // my spots: any number of them, saved in this browser (an older single pick carries over)
+  var store = {
+    all: function () {
+      var v = null; try { v = localStorage.getItem("cc874-mine"); } catch (e) {}
+      if (!v) return [];
+      var a; try { a = JSON.parse(v); } catch (e) { a = v; }
+      if (!Array.isArray(a)) a = [String(v)];
+      return a.filter(function (l) { return byLabel[l]; });
+    },
+    has: function (l) { return store.all().indexOf(l) > -1; },
+    save: function (a) { try { a.length ? localStorage.setItem("cc874-mine", JSON.stringify(a)) : localStorage.removeItem("cc874-mine"); } catch (e) {} },
+    toggle: function (l) { var a = store.all(), i = a.indexOf(l); if (i > -1) a.splice(i, 1); else a.push(l); a.sort(function (x, y) { return byLabel[x].i - byLabel[y].i; }); store.save(a); }
+  };
+  var onlyMine = false;
 
   function drawMine() {
-    var m = store.get(), el = document.getElementById("mine");
-    if (m && byLabel[m]) { el.innerHTML = "Your spot: <a href='" + href(m) + "' class='display' style='font-size:22px'>" + esc(m) + "</a><span style='color:var(--ink-3);font-size:14px'>" + count(byLabel[m]) + " names across " + boxesWith(byLabel[m]) + " boxes</span>"; el.classList.add("show"); }
-    else { el.classList.remove("show"); el.innerHTML = ""; }
+    var a = store.all(), el = document.getElementById("mine");
+    if (!a.length) { onlyMine = false; el.classList.remove("show"); el.innerHTML = ""; return; }
+    var names = 0, bx = {};
+    a.forEach(function (l) { var s = byLabel[l]; names += count(s); BOXES.forEach(function (b) { if ((s.products[b.k] || []).length) bx[b.k] = 1; }); });
+    el.innerHTML = "<span>" + (a.length === 1 ? "Your spot:" : "Your " + a.length + " spots:") + '</span><span class="mlinks">' +
+      a.map(function (l) { return "<a href='" + href(l) + "' class='display' style='font-size:22px'>" + esc(l) + "</a>"; }).join(", ") +
+      "</span><span style='color:var(--ink-3);font-size:14px'>" + names + " names across " + Object.keys(bx).length + (Object.keys(bx).length === 1 ? " box" : " boxes") + "</span>" +
+      '<span class="macts">' + (a.length > 1 || onlyMine ? '<button class="btn" id="onlymine">' + (onlyMine ? "Show all spots" : "Show only my spots") + "</button>" : "") + '<button class="btn" id="clearmine">Clear</button></span>';
+    el.classList.add("show");
+    var om = document.getElementById("onlymine");
+    if (om) om.onclick = function () { onlyMine = !onlyMine; drawMine(); drawGrid(); if (onlyMine) location.hash = "#/spots"; };
+    document.getElementById("clearmine").onclick = function () { store.save([]); onlyMine = false; redrawMine(); };
+  }
+  function redrawMine() {
+    drawMine(); drawGrid();
+    var m = location.hash.match(/^#\/spot\/(.+)$/); if (m) drawSpot(decodeURIComponent(m[1]));
   }
   function boxesWith(s) { return BOXES.filter(function (b) { return (s.products[b.k] || []).length; }).length; }
 
   function drawGrid() {
-    var m = store.get();
-    document.getElementById("spotgrid").innerHTML = SPOTS.map(function (s) {
+    var mine = store.all();
+    document.getElementById("spotgrid").innerHTML = SPOTS.filter(function (s) { return !onlyMine || mine.indexOf(s.label) > -1; }).map(function (s) {
+      var on = mine.indexOf(s.label) > -1;
       var peek = [];
       BOXES.forEach(function (b) { var a = s.products[b.k] || []; if (a.length && peek.length < 4) peek.push(split(a[0])[0]); });
-      return '<a class="tile' + (m === s.label ? " pinned" : "") + '" href="' + href(s.label) + '"><div class="lab display">' + esc(s.label) + '</div><div class="cnt">' + count(s) + " names" + (m === s.label ? " · your spot" : "") + '</div><div class="peek">' + esc(peek.join(", ")) + '</div><div class="dots">' +
-        BOXES.map(function (b) { var on = (s.products[b.k] || []).length; return '<i class="' + (on ? "" : "off") + '" style="background:' + b.c + '" title="' + esc(SHORT[b.k]) + (on ? "" : ": none listed") + '"></i>'; }).join("") + "</div></a>";
+      return '<div class="tilew"><a class="tile' + (on ? " pinned" : "") + '" href="' + href(s.label) + '"><div class="lab display">' + esc(s.label) + '</div><div class="cnt">' + count(s) + " names" + (on ? " · yours" : "") + '</div><div class="peek">' + esc(peek.join(", ")) + '</div><div class="dots">' +
+        BOXES.map(function (b) { var has = (s.products[b.k] || []).length; return '<i class="' + (has ? "" : "off") + '" style="background:' + b.c + '" title="' + esc(SHORT[b.k]) + (has ? "" : ": none listed") + '"></i>'; }).join("") + "</div></a>" +
+        '<button type="button" class="minetog' + (on ? " on" : "") + '" data-l="' + esc(s.label) + '" aria-pressed="' + on + '" title="' + (on ? "Remove from my spots" : "Add to my spots") + '">' + (on ? "&#10003; Mine" : "+ Mine") + "</button></div>";
     }).join("");
+    [].forEach.call(document.querySelectorAll("#spotgrid .minetog"), function (bt) { bt.onclick = function (e) { e.preventDefault(); store.toggle(bt.getAttribute("data-l")); if (!store.all().length) onlyMine = false; redrawMine(); }; });
   }
 
   function drawSpot(label) {
     var s = byLabel[label]; if (!s) { location.hash = "#/spots"; return; }
-    var prev = SPOTS[(s.i + SPOTS.length - 1) % SPOTS.length], next = SPOTS[(s.i + 1) % SPOTS.length], mine = store.get() === s.label;
+    var prev = SPOTS[(s.i + SPOTS.length - 1) % SPOTS.length], next = SPOTS[(s.i + 1) % SPOTS.length], mine = store.has(s.label);
     document.getElementById("spot").innerHTML =
       '<div class="spothead"><div class="big display">' + esc(s.label) + '</div><div class="meta">Spot ' + (s.i + 1) + " of 21<br><b>" + count(s) + " names</b> across " + boxesWith(s) + " of 7 boxes</div>" +
       '<div class="acts"><a class="btn" href="' + href(prev.label) + '">&lsaquo; ' + esc(prev.label) + '</a><a class="btn" href="' + href(next.label) + '">' + esc(next.label) + ' &rsaquo;</a>' +
-      '<button class="btn' + (mine ? "" : " gold") + '" id="pin">' + (mine ? "Unpin my spot" : "This is my spot") + "</button></div></div>" +
+      '<button class="btn' + (mine ? "" : " gold") + '" id="pin">' + (mine ? "Remove from my spots" : "Add to my spots") + "</button></div></div>" +
       '<div class="boxes">' + BOXES.map(function (b) {
         var a = s.products[b.k] || [];
         return '<div class="box" style="--c:' + b.c + '"><h3>' + esc(b.full) + '</h3><div class="kind">' + esc(b.kind) + (a.length ? " · " + a.length : "") + "</div>" +
           (a.length ? '<div class="pills">' + a.map(function (n) { return pill(n); }).join("") + "</div>" : '<div class="none">None listed for this spot</div>') + "</div>";
       }).join("") + "</div>";
-    document.getElementById("pin").onclick = function () { store.set(mine ? null : s.label); drawMine(); drawGrid(); drawSpot(label); };
+    document.getElementById("pin").onclick = function () { store.toggle(s.label); redrawMine(); };
   }
 
   var curBox = BOXES[0].k;
