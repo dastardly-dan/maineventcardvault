@@ -205,6 +205,9 @@ textarea.in { min-height: 90px; resize: vertical; font-size: 13px; line-height: 
 .empreview { margin-top: 10px; background: #fff; color: #15181d; border-radius: 8px; padding: 10px; max-height: 260px; overflow: auto; font-size: 13px; }
 .empreview table { width: 100%; border-collapse: collapse; }
 .empreview td { border: 1px solid #dde1e7; padding: 4px 8px; }
+.heyopt { border-top: 1px dashed var(--line-2); margin-top: 14px; padding-top: 2px; }
+.spot.hey { border-color: #e2548c; box-shadow: 0 0 0 1px #e2548c inset; }
+.spot.hey .lb { color: #ff7eb0; }
 .spotfind { display: flex; align-items: center; gap: 10px; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 8px 12px; margin: 0 0 12px; }
 .spotfind svg { color: var(--ink-3); flex: none; }
 .spotfind input { flex: 1; min-width: 0; background: transparent; border: 0; outline: 0; color: var(--ink); font: inherit; font-size: 15px; padding: 4px 0; }
@@ -317,6 +320,19 @@ table.rows td small { color: var(--ink-3); }
           <label class="f" for="stars" style="margin-top:12px">Star names (name | multiplier)</label>
           <textarea class="in" id="stars" placeholder="John Cena | 5&#10;Roman Reigns | 4&#10;Rhea Ripley | 3"></textarea>
           <div class="hint">Use this for the names buyers actually chase, so their letters get treated as the heavy hitters they are. One huge star can't be split, so their spot may stay a bit heavier. In team breaks you can star a whole team too, like "Yankees | 2".</div>
+          <div id="heyopt" class="heyopt" hidden>
+            <label class="f" style="margin-top:12px">Paul Heyman spot</label>
+            <div class="seg" id="heyman"><button data-v="off">Off</button><button data-v="own">Break him out</button></div>
+            <label class="f" for="sexy">How sexy is Paul Heyman?</label>
+            <select class="in" id="sexy">
+              <option value="1">A little sexy (1x)</option>
+              <option value="2">Sexy (2x)</option>
+              <option value="3">Very sexy (3x)</option>
+              <option value="5">Dangerously sexy (5x)</option>
+              <option value="10">Paul Heyman Guy approved (10x)</option>
+            </select>
+            <div class="hint">For the breaks where Paul Heyman cards are sexy. "Break him out" pulls him out of his letter into his own spot, and the sexier you set him, the more that spot weighs and costs. Your spot count stays the same. Only shows up when a box in the break has Paul Heyman.</div>
+          </div>
           <a class="morelink" href="#/how/scoring">How the points work, with examples</a>
         </div>
         <div class="panel" data-g="pricing">
@@ -540,6 +556,7 @@ Bianca Belair | W | auto</pre>
           <div>
             <h5>Star names</h5>
             <p>One per line, "name | multiplier". The multiplier scales that name's points, so "John Cena | 5" makes him count five times as much. Leave the number off and it uses 3. A short name works if it's a whole word in the full name, so "Cena | 5" also catches John Cena. In team breaks, a team name works the same way: "Yankees | 2".</p>
+            <p><b>Paul Heyman spot</b> (WWE breaks with Paul Heyman in them): for the breaks where Paul Heyman cards are sexy. "Break him out" gives him a spot of his own, and "How sexy is Paul Heyman?" sets its weight, from A little sexy (his normal points) up to Paul Heyman Guy approved (10x). The other spots share the rest, and your spot count stays the same.</p>
             <p>Use it for the names buyers actually chase. One huge star can't be split across spots, so their spot may stay a little heavier, and it'll cost more.</p>
             <div class="eq">Rhea Ripley with the default points and Player value off: base <b>1</b> + auto <b>2</b> + insert <b>0.5</b> + multi <b>0.5</b> = <b>4 points</b> per box. Starred at 3: <b>12 points</b>.</div>
           </div>
@@ -726,7 +743,7 @@ Bianca Belair | W | auto</pre>
   function fold(t) { return String(t).normalize("NFD").replace(/[̀-ͯ]/g, ""); }
 
   // ---------- settings ----------
-  var S = { init: false, tidy: "simple", qty: {}, n: 21, goal: "", group: "free", prefix: "on", gender: "auto", rule: "first", nick: "printed", wb: 1, wa: 2, wi: 0.5, wm: 0.5, stars: "", paste: "", split: "letters", tgroup: "free", nil: "own", depth: "normal", cost: {}, extra: "", fee: 10, profit: 20, floor: "", setp: {} };
+  var S = { init: false, tidy: "simple", qty: {}, n: 21, goal: "", group: "free", prefix: "on", gender: "auto", rule: "first", nick: "printed", wb: 1, wa: 2, wi: 0.5, wm: 0.5, stars: "", paste: "", split: "letters", tgroup: "free", nil: "own", depth: "normal", heyman: "off", sexy: "3", cost: {}, extra: "", fee: 10, profit: 20, floor: "", setp: {} };
   try { var saved = JSON.parse(localStorage.getItem(SKEY) || "null"); if (saved) for (var k in saved) S[k] = saved[k]; } catch (e) {}
   if (!S.cost || typeof S.cost !== "object") S.cost = {};
   if (!S.init) {
@@ -866,7 +883,8 @@ Bianca Belair | W | auto</pre>
       b.onclick = function () { S[id] = b.getAttribute("data-v"); seg(id); go(); };
     });
   }
-  ["group", "prefix", "gender", "rule", "nick", "tidy", "split", "tgroup", "nil", "depth"].forEach(seg);
+  ["group", "prefix", "gender", "rule", "nick", "tidy", "split", "tgroup", "nil", "depth", "heyman"].forEach(seg);
+  $("sexy").value = String(S.sexy || "3"); $("sexy").addEventListener("change", function () { S.sexy = this.value; go(); });
   ["n", "goal", "wb", "wa", "wi", "wm", "extra", "fee", "profit", "floor"].forEach(function (id) { $(id).value = S[id]; $(id).addEventListener("input", function () { S[id] = $(id).value; go(); }); });
   ["stars", "paste"].forEach(function (id) { $(id).value = S[id]; $(id).addEventListener("input", function () { S[id] = $(id).value; go(); }); });
 
@@ -1226,6 +1244,14 @@ Bianca Belair | W | auto</pre>
   function run() {
     var N = Math.max(2, Math.min(80, parseInt(S.n, 10) || 21));
     var c = collect(), list = c.list, teams = S.split === "teams";
+    // the Paul Heyman spot: out of his letter (or team) and into a spot of his own, weighted by how sexy he is
+    var hey = list.filter(function (x) { return fold(x.n).toLowerCase().replace(/"/g, "") === "paul heyman"; })[0], heySpot = null;
+    $("heyopt").hidden = !hey;
+    if (hey && S.heyman === "own" && list.length > 1 && N > 2) {
+      var sx = parseFloat(S.sexy) || 3, SXN = { 1: "A little sexy", 2: "Sexy", 3: "Very sexy", 5: "Dangerously sexy", 10: "Paul Heyman Guy approved" };
+      list = list.filter(function (x) { return x !== hey; }); N = N - 1;
+      heySpot = { label: "Paul Heyman", sub: "The sexy spot · " + (SXN[sx] || sx + "x") + " (" + sx + "x)", names: [hey], w: hey.w * sx, u: [], heyman: true };
+    }
     $("teamopts").hidden = !teams; $("letteropts").hidden = teams; $("p3").hidden = teams && S.nil !== "fill";
     $("barsTitle").textContent = teams ? "Weight by team" : "Weight by letter";
     $("genderHint").textContent = list.length && !list.some(function (x) { return x.g === "F"; }) ? "None of the picked checklists mark women, so there are no Men / Women splits." : "Only checklists that mark women can split this way (WWE ones do).";
@@ -1250,7 +1276,8 @@ Bianca Belair | W | auto</pre>
       total = U.total;
       if (bins.length < N) warn = "These checklists can only fill " + bins.length + " spots without splitting letters further than they can go. Try fewer spots, or turn on two-letter splits.";
     }
-    bins.forEach(function (b) { b.pkey = (teams ? "T:" : "L:") + b.label + (b.sub === "Men" || b.sub === "Women" ? " " + b.sub : ""); });
+    if (heySpot) { bins.push(heySpot); total += heySpot.w; N = N + 1; }
+    bins.forEach(function (b) { b.pkey = b.heyman ? "H:Paul Heyman" : (teams ? "T:" : "L:") + b.label + (b.sub === "Men" || b.sub === "Women" ? " " + b.sub : ""); });
     var M = money(c), goal = M.goal;
     priceBins(bins, goal, M.floor); bins.forEach(function (b) { b.sugg = b.price; });
     var sumP = priceBins(bins, goal, M.floor, S.setp), nLocked = bins.filter(function (b) { return b.locked; }).length;
@@ -1295,8 +1322,8 @@ Bianca Belair | W | auto</pre>
       var top = b.names.slice().sort(function (x, y) { return y.w - x.w; }).slice(0, 7).map(function (x) { return x.n; });
       var autos = b.names.filter(function (x) { return x.a; }).length;
       var share = b.w / total * 100;
-      return '<details class="spot"' + (expandAll || OPENK[b.pkey] ? " open" : "") + ' data-pk="' + esc(b.pkey) + '">' + "<summary><span class=\"no\">" + (i + 1) + '</span><span class="lb display">' + esc(b.label) + (b.sub ? "<small>" + esc(b.sub) + "</small>" : "") + '</span><span class="mid"><div class="meter"><i style="width:' + Math.min(100, b.w / hi * 100) + '%"></i></div><div class="top">' + esc(top.join(", ")) + '</div></span><span class="nums">' +
-        (goal ? '<span class="pr">' + usd(b.price) + (b.locked ? ' <span class="pmine">set</span>' : "") + "</span><br>" : "") + "<b>" + share.toFixed(1) + "%</b> · " + b.names.length + " names<br>" + autos + " with autos</span></summary>" +
+      return '<details class="spot' + (b.heyman ? " hey" : "") + '"' + (expandAll || OPENK[b.pkey] ? " open" : "") + ' data-pk="' + esc(b.pkey) + '">' + "<summary><span class=\"no\">" + (i + 1) + '</span><span class="lb display">' + esc(b.label) + (b.sub ? "<small>" + esc(b.sub) + "</small>" : "") + '</span><span class="mid"><div class="meter"><i style="width:' + Math.min(100, b.w / hi * 100) + '%"></i></div><div class="top">' + esc(top.join(", ")) + '</div></span><span class="nums">' +
+        (goal ? '<span class="pr">' + usd(b.price) + (b.locked ? ' <span class="pmine">set</span>' : "") + "</span><br>" : "") + "<b>" + share.toFixed(1) + "%</b> · " + b.names.length + (b.names.length === 1 ? " name" : " names") + "<br>" + autos + " with autos</span></summary>" +
         (goal ? '<div class="pset"><label>Price for this spot <span class="money"><input class="in" type="number" min="0" step="1" data-pk="' + esc(b.pkey) + '" value="' + (b.locked ? b.price : "") + '" placeholder="' + b.sugg + '"></span></label><span class="sg">Suggested ' + usd(b.sugg) + (b.locked ? ' · <button class="linkbtn" type="button" data-reset="' + esc(b.pkey) + '">Use suggested</button>' : "") + '</span><span class="sg2">Change it and the other spots move the other way, so the total stays at ' + usd(goal) + ".</span></div>" : "") +
         '<div class="all">' + allHtml(b, "") + "</div></details>";
     }).join("");
