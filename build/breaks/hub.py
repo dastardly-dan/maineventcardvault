@@ -12,7 +12,7 @@ items.sort(key=lambda x: (is_past(x), order.index(x['id'])))
 def esc(s): return s.replace('&','&amp;').replace('<','&lt;')
 def card(i): return f'''<a class="tile" href="/breaks/{i['id']}"><div class="kicker" style="font-size:11px">{esc(i['kicker'])}</div><div class="lab display" style="font-size:26px;margin-top:6px">{esc(i['title'])}</div><div class="cnt" style="margin-top:8px">{esc(i['when'])}</div><div class="peek">{esc(' · '.join(i['facts']))}</div></a>'''
 up = ''.join(card(i) for i in items if not is_past(i)); past = ''.join(card(i) for i in items if is_past(i))
-cards = up + ('</div><h2 class="display" style="margin:34px 0 4px">Past breaks</h2><p class="sub" style="margin:0 0 14px">These have already run. The guides stay up for reference.</p><div class="grid past">' + past if past else '')
+cards = up or '<p class="sub">No breaks on the schedule right now.</p>'  # past breaks stay online but aren't listed
 html = f'''<!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex">
 <title>Break Guides | Main Event Card Vault</title><meta name="theme-color" content="#081524"><link rel="icon" href="{icon}">
@@ -62,6 +62,7 @@ def code_and_name(title):
 def menu_html(current=None):
     links = []
     for i in items:
+        if is_past(i) and i['id'] != current: continue  # only current breaks in the menu
         code, name = code_and_name(i['title'])
         parts = i['kicker'].split(' · ')
         host = parts[0].replace(' Collectibles', '').replace(' Collector Breaks', '')
