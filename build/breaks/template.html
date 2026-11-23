@@ -54,6 +54,7 @@ body.compact .lede { display: none; }
 h1 { font-size: clamp(34px, 6vw, 58px); margin: 6px 0 8px; line-height: 1; }
 .facts { display: flex; flex-wrap: wrap; gap: 8px 22px; color: var(--ink-2); font-size: 15px; margin: 10px 0 0; padding: 0; list-style: none; }
 .facts b { color: var(--ink); }
+.ended { display: inline-block; margin: 14px 0 0; padding: 9px 14px; border-radius: 10px; border: 1px solid var(--line-2); background: rgba(255,255,255,.04); color: var(--ink-2); font-size: 14.5px; }
 .lede { color: var(--ink-2); max-width: 760px; margin: 14px 0 0; }
 
 .mine { margin: 18px 0 0; padding: 12px 16px; border: 1px solid var(--gold); border-radius: var(--radius); background: rgba(230,190,85,.08); display: none; align-items: center; gap: 12px; flex-wrap: wrap; }
@@ -207,6 +208,7 @@ table.rows td.n { white-space: nowrap; }
   <div class="kicker" id="kicker"></div>
   <h1 class="display" id="h1"></h1>
   <ul class="facts" id="facts"></ul>
+  <p class="ended" id="ended" hidden></p>
   <p class="lede" id="checked"></p>
   <div class="mine" id="mine"></div>
 </div>
@@ -233,7 +235,7 @@ table.rows td.n { white-space: nowrap; }
 <script>
 (function () {
   var D = __DATA__;
-  var PYL = D.format === "pyl", TEAM = D.format === "team";
+  var PYL = D.format === "pyl", TEAM = D.format === "team", ENDED = D.ended || "", LIVE = PYL && !ENDED;
   var BOX = {}; D.boxes.forEach(function (b) { BOX[b.k] = b; });
   var SP = {}; D.spots.forEach(function (s, i) { s.i = i; SP[s.id] = s; });
   var KEY = "mecv-" + D.id + "-mine";
@@ -289,12 +291,13 @@ table.rows td.n { white-space: nowrap; }
   document.getElementById("h1").textContent = D.title;
   document.getElementById("facts").innerHTML = '<li><b>' + esc(D.when) + "</b></li>" + D.facts.map(function (f) { return "<li>" + esc(f) + "</li>"; }).join("") + '<li><a href="' + D.url + '" target="_blank" rel="noopener">Break page</a></li>';
   document.getElementById("checked").textContent = D.checked;
+  if (ENDED) { var en = document.getElementById("ended"); en.textContent = ENDED; en.hidden = false; }
   var tabs = [["spots", "All spots"]];
-  if (PYL) tabs.push(["open", "Still open"]);
+  if (LIVE) tabs.push(["open", "Still open"]);
   tabs.push(["names", "By name"], ["boxes", "By box"], ["rules", "Rules and sources"]);
   document.getElementById("tabs").innerHTML = tabs.map(function (t) { return '<a href="#/' + t[0] + '" data-v="' + t[0] + '">' + t[1] + "</a>"; }).join("");
   document.getElementById("spotsHead").textContent = TEAM ? "Every team spot" : "Every letter spot";
-  document.getElementById("spotsSub").textContent = (PYL ? "Pick-your-letter: green spots can still be bought, red ones are sold. " : TEAM ? "Teams are randomized live, so any spot could be yours. " : "Letters are randomized live, so any spot could be yours. ") + "Tap a spot to see who you could pull from each box.";
+  document.getElementById("spotsSub").textContent = ENDED ? "This break has already run. Tap a spot to see who was in it from each box." : (PYL ? "Pick-your-letter: green spots can still be bought, red ones are sold. " : TEAM ? "Teams are randomized live, so any spot could be yours. " : "Letters are randomized live, so any spot could be yours. ") + "Tap a spot to see who you could pull from each box.";
 
   function drawMine() {
     var a = store.all(), el = document.getElementById("mine");
@@ -328,7 +331,7 @@ table.rows td.n { white-space: nowrap; }
     rows.sort(function (x, y) { return fold(x.e[0].replace(/^"|^the /i, "")).localeCompare(fold(y.e[0].replace(/^"|^the /i, ""))); });
     el.style.setProperty("--c", b.c); el.hidden = false;
     el.innerHTML = "<h3>" + esc(b.full) + '</h3><p class="asub">' + rows.length + " names in this box. Each one is listed with their spot." + '</p><div class="atools"><input id="aq" type="search" placeholder="Find a name in this box" autocomplete="off" value="' + esc(availQ) + '">' +
-      (PYL ? '<label><input type="checkbox" id="aopen"' + (availOpen ? " checked" : "") + "> Open spots only</label>" : "") +
+      (LIVE ? '<label><input type="checkbox" id="aopen"' + (availOpen ? " checked" : "") + "> Open spots only</label>" : "") +
       (mine.length ? '<label><input type="checkbox" id="amine"' + (availMine ? " checked" : "") + "> Only my spots</label>" : "") + '</div><div class="alist" id="alist"></div>';
     function draw() {
       var q = fold(availQ.trim()), out = rows.filter(function (r) { return (!q || fold(r.e[0]).indexOf(q) > -1) && (!availMine || mine.indexOf(r.s.id) > -1) && (!availOpen || r.s.status === "open"); });
@@ -347,7 +350,7 @@ table.rows td.n { white-space: nowrap; }
   function drawGrid() {
     var mine = store.all();
     var fe = document.getElementById("spotFilter");
-    if (PYL) {
+    if (LIVE) {
       var nOpen = D.spots.filter(function (s) { return s.status === "open"; }).length;
       fe.innerHTML = [["all", "All " + D.spots.length], ["open", "Open " + nOpen], ["sold", "Sold " + (D.spots.length - nOpen)]].map(function (c) { return '<button class="chip' + (filt === c[0] ? " on" : "") + '" data-f="' + c[0] + '">' + c[1] + "</button>"; }).join("");
       [].forEach.call(fe.querySelectorAll(".chip"), function (c) { c.onclick = function () { filt = c.getAttribute("data-f"); drawGrid(); }; });
@@ -388,8 +391,8 @@ table.rows td.n { white-space: nowrap; }
   function drawNames() {
     if (!IDX) buildIdx();
     document.getElementById("namesSub").textContent = IDX.length + " people and characters across " + D.boxes.length + " box" + (D.boxes.length > 1 ? "es" : "") + ". The chip shows which spot gets them" + (PYL ? " (green open, red sold)." : ".");
-    document.getElementById("namesTools").innerHTML = PYL ? '<label class="toggle"><input type="checkbox" id="oo"' + (onlyOpen ? " checked" : "") + "> Only show names in spots I can still buy</label>" : "";
-    if (PYL) document.getElementById("oo").onchange = function (e) { onlyOpen = e.target.checked; drawNames(); };
+    document.getElementById("namesTools").innerHTML = LIVE ? '<label class="toggle"><input type="checkbox" id="oo"' + (onlyOpen ? " checked" : "") + "> Only show names in spots I can still buy</label>" : "";
+    if (LIVE) document.getElementById("oo").onchange = function (e) { onlyOpen = e.target.checked; drawNames(); };
     var groups = {};
     IDX.forEach(function (r) {
       var ids = Object.keys(r.spots);
@@ -469,7 +472,7 @@ table.rows td.n { white-space: nowrap; }
     else if (v === "search") { if (qEl.value.trim() !== rest) qEl.value = rest; show("search"); drawSearch(rest); }
     else if (v === "boxes") { show("boxes"); drawBoxes(); }
     else if (v === "names") { show("names"); drawNames(); }
-    else if (v === "open" && PYL) { show("open"); drawOpen(); }
+    else if (v === "open" && LIVE) { show("open"); drawOpen(); }
     else if (v === "rules") { show("rules"); }
     else { show("spots"); }
     if (v !== "search") qEl.value = "";

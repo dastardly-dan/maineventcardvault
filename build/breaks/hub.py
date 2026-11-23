@@ -5,17 +5,21 @@ css = open(os.path.join(HERE,'base.css')).read()
 tpl = open(os.path.join(HERE,'template.html')).read()
 icon = re.search(r'<link rel="icon" href="([^"]+)"', open(os.path.join(ROOT,'breaks','cc871.html')).read()).group(1)
 items = json.load(open(os.path.join(HERE,'index.json')))
-items.append(dict(id='cc874', title='CC874 Monster Multi: Random Letter', kicker='Colfax Collectibles · Random letter · Multi-sport', when='Sunday, November 22, 2026, 5:00 pm Central', facts=['7 boxes', '21 letter spots']))
+items.append(dict(id='cc874', title='CC874 Monster Multi: Random Letter', kicker='Colfax Collectibles · Random letter · Multi-sport', when='Ran Sunday, November 22, 2026', facts=['7 boxes', '21 letter spots'], ended='yes'))
 order = ['cc871', 'cc872', 'cc874', 'jwj0246', 'jwj0247', 'jwj0244']
-items.sort(key=lambda x: order.index(x['id']))
+def is_past(i): return bool(i.get('ended')) or 'has passed' in i['when']
+items.sort(key=lambda x: (is_past(x), order.index(x['id'])))
 def esc(s): return s.replace('&','&amp;').replace('<','&lt;')
-cards = ''.join(f'''<a class="tile" href="/breaks/{i['id']}"><div class="kicker" style="font-size:11px">{esc(i['kicker'])}</div><div class="lab display" style="font-size:26px;margin-top:6px">{esc(i['title'])}</div><div class="cnt" style="margin-top:8px">{esc(i['when'])}</div><div class="peek">{esc(' · '.join(i['facts']))}</div></a>''' for i in items)
+def card(i): return f'''<a class="tile" href="/breaks/{i['id']}"><div class="kicker" style="font-size:11px">{esc(i['kicker'])}</div><div class="lab display" style="font-size:26px;margin-top:6px">{esc(i['title'])}</div><div class="cnt" style="margin-top:8px">{esc(i['when'])}</div><div class="peek">{esc(' · '.join(i['facts']))}</div></a>'''
+up = ''.join(card(i) for i in items if not is_past(i)); past = ''.join(card(i) for i in items if is_past(i))
+cards = up + ('</div><h2 class="display" style="margin:34px 0 4px">Past breaks</h2><p class="sub" style="margin:0 0 14px">These have already run. The guides stay up for reference.</p><div class="grid past">' + past if past else '')
 html = f'''<!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex">
 <title>Break Guides | Main Event Card Vault</title><meta name="theme-color" content="#081524"><link rel="icon" href="{icon}">
 <style>{css}
 .grid {{ grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }}
 .bar .bmenu {{ margin-left: auto; }}
+.grid.past .tile {{ opacity: .72; }}
 /*BMENU-CSS*//*/BMENU-CSS*/
 </style></head><body>
 <header class="site"><div class="wrap"><div class="bar"><a class="brand" href="/"><img src="{icon}" alt=""><div><b class="display">Main Event Card Vault</b><span>Break guides</span></div></a><!--BMENU--><!--/BMENU--></div></div></header>
@@ -61,8 +65,8 @@ def menu_html(current=None):
         code, name = code_and_name(i['title'])
         parts = i['kicker'].split(' · ')
         host = parts[0].replace(' Collectibles', '').replace(' Collector Breaks', '')
-        meta = ' · '.join([host] + parts[1:] + [short_date(i['when'])])
-        cls = ' class="on"' if i['id'] == current else (' class="past"' if 'has passed' in i['when'] else '')
+        meta = ' · '.join([host] + parts[1:] + [('ran ' if i.get('ended') else '') + short_date(i['when'])])
+        cls = ' class="on"' if i['id'] == current else (' class="past"' if is_past(i) else '')
         links.append(f'<a href="/breaks/{i["id"]}"{cls}><b>{esc(code)}</b>{esc(name)}<span>{esc(meta)}</span></a>')
     links.append('<a class="all" href="/breaks/builder"' + (' style="background:rgba(230,190,85,.1)"' if current == 'builder' else '') + '>Spot builder<span>Turn checklists into balanced letter spots</span></a>')
     links.append('<a class="all" href="/breaks/" style="border-top:0;margin-top:0;padding-top:9px">All break guides</a>')

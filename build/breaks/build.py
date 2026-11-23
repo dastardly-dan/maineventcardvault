@@ -98,6 +98,7 @@ def team_break(cfg, products):
 
 def write(cfg, names, unmatched):
     data = dict(cfg)
+    if cfg.get('ended'): data['spots'] = [{k: v for k, v in s.items() if k != 'status'} for s in cfg['spots']]
     data['names'] = names
     data['unmatched'] = unmatched
     html = TPL.replace('__ICON__', ICON).replace('__TITLE__', cfg['title']).replace(
@@ -281,6 +282,15 @@ jwj0244 = dict(
              ['Topps Flagship Basketball checklist (official Topps)', 'https://cdn.shopify.com/s/files/1/0662/9749/5709/files/26TBSK_-_Topps_Flagship_Basketball_Checklist.xls.pdf?v=1793888934']],
 )
 
+# ---------------- finished breaks ----------------
+# A break that has run keeps its guide, but loses the live sold/open status and buying prompts.
+def close(cfg, ran, facts):
+    cfg.update(ended='This break ran on ' + ran + '. Spots are closed, but the guide stays up so you can look back at who was in each spot.',
+               when='Ran ' + ran, facts=facts, checked='')
+
+close(cc871, 'Sunday, November 22, 2026', ['4 boxes', '27 letter spots'])
+close(cc872, 'Sunday, November 22, 2026', ['5 boxes', '32 team spots', '$95 per spot, $23.75 filler'])
+
 if __name__ == '__main__':
     built = []
     n, u = letter_break(cc871, WWE_PRODUCTS, wwe_gender); built.append(write(cc871, n, u))
@@ -288,6 +298,6 @@ if __name__ == '__main__':
     n, u = letter_break(jwj0247, {'swc': TD.SW_CHROME, 'swg': TD.SW_GALAXY}, None, alt=False); built.append(write(jwj0247, n, u))
     n, u = team_break(cc872, {'chrome': TD.NFL_CHROME, 'midnight': TD.NFL_MIDNIGHT, 'absolute': dict(base={}, other={})}); built.append(write(cc872, n, u))
     n, u = team_break(jwj0244, {'flag': TD.NBA_FLAGSHIP}); built.append(write(jwj0244, n, u))
-    json.dump([{k: b[k] for k in ('id', 'title', 'kicker', 'when', 'facts')} for b in built], open(os.path.join(os.path.dirname(__file__), 'index.json'), 'w'))
+    json.dump([{k: b[k] for k in ('id', 'title', 'kicker', 'when', 'facts', 'ended') if k in b} for b in built], open(os.path.join(os.path.dirname(__file__), 'index.json'), 'w'))
     for b in built:
         if b['unmatched']: print(b['id'], 'UNMATCHED', b['unmatched'][:40])
