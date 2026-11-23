@@ -1,0 +1,366 @@
+# name: 2026 Panini Immaculate Collection NASCAR
+# sport: NASCAR
+# added: 2026-11-22
+# source: https://www.breakninja.com/racing/2026-Panini-Immaculate-Collection-Nascar-Racing-Card-Checklist.php
+# note: Breakninja.com checklist (no official list on the maker's checklist page yet); sketch cards left out
+
+[base]
+Alex Bowman
+Aric Almirola
+Austin Dillon
+Austin Hill
+Bobby Labonte
+Brad Keselowski
+Brandon Jones
+Brenden Butterbean Queen
+Bubba Wallace
+Carl Edwards
+Carson Hocevar
+Carson Kvapil
+Chandler Smith
+Chase Briscoe
+Chase Elliott
+Chris Buescher
+Christian Eckes
+Christopher Bell
+Clint Bowyer
+Cole Custer
+Connor Zilisch
+Corey Day
+Corey Heim
+Dale Earnhardt Jr
+Dale Jarrett
+Danica Patrick
+Daniel Hemric
+Daniel Suarez
+Darrell Waltrip
+Denny Hamlin
+Erik Jones
+Ernie Irvan
+Geoff Bodine
+Hailie Deegan
+Harry Gant
+Jamie McMurray
+Jeff Burton
+Jeff Gordon
+Jesse Love
+Jimmie Johnson
+Joey Logano
+Josh Berry
+Justin Allgaier
+Kaden Honeycutt
+Kasey Kahne
+Ken Schrader
+Kevin Harvick
+Kurt Busch
+Kyle Busch
+Kyle Larson
+Kyle Petty
+Layne Riggs
+Mark Martin
+Martin Truex Jr.
+Matt Kenseth
+Michael McDowell
+Michael Waltrip
+Noah Gragson
+Rajah Caruth
+Richard Petty
+Ricky Stenhouse Jr.
+Riley Herbst
+Ross Chastain
+Rusty Wallace
+Ryan Blaney
+Ryan Newman
+Ryan Preece
+Sam Mayer
+Sammy Smith
+Shane Van Gisbergen
+Sheldon Creed
+Terry Labonte
+Todd Gilliland
+Toni Breidinger
+Tony Stewart
+Ty Dillon
+Ty Gibbs
+Tyler Reddick
+William Byron
+William Sawalich
+Zane Smith
+
+[auto]
+Alan Gustafson
+Alex Bowman
+Andres Perez De Lara
+Anthony Alfredo
+Aric Almirola
+Austin Beers
+Austin Cindric
+Austin Dillon
+Austin Hill
+Ben Rhodes
+Blaine Perkins
+Blake Harris
+Bobby Labonte
+Brad Keselowski
+Brandon Jones
+Brayton Laster
+Brenden Butterbean Queen
+Brennan Poole
+Brett Moffitt
+Brexton Busch
+Bubba Wallace
+Carl Edwards
+Carson Hocevar
+Carson Kvapil
+Chad Knaus
+Chandler Smith
+Chase Briscoe
+Chase Elliott
+Chris Buescher
+Christian Eckes
+Christopher Bell
+Cody Ware
+Cole Custer
+Connor Zilisch
+Corey Day
+Corey Heim
+Dale Earnhardt Jr
+Dale Jarrett
+Danica Patrick
+Daniel Hemric
+Daniel Suarez
+Darrell Waltrip
+David Ragan
+Dawson Sutton
+Denny Hamlin
+Erik Jones
+Ernie Irvan
+Frankie Muniz
+Geoff Bodine
+Gio Ruggiero
+Hailie Deegan
+Harrison Burton
+Harry Gant
+Jack Wood
+Jake Garcia
+Jamie McMurray
+Jeb Burton
+Jeff Burton
+Jeff Gordon
+Jeremy Clements
+Jesse Love
+Jimmie Johnson
+Joe Nemechek
+Joey Gase
+Joey Logano
+John Hunter Nemechek
+Josh Berry
+Josh Williams
+Juan Pablo Montoya
+Justin Allgaier
+Justin Bonsignore
+Justin Haley
+Kaden Honeycutt
+Kasey Kahne
+Keelan Harvick
+Ken Schrader
+Kevin Harvick
+Kurt Busch
+Kyle Larson
+Kyle Petty
+Landen Lewis
+Landon Huffman
+Lavar Scott
+Layne Riggs
+Luke Fenhaus
+Mark Martin
+Martin Truex Jr.
+Matt Kenseth
+Michael McDowell
+Michael Waltrip
+Nick Sanchez
+Noah Gragson
+Parker Retzlaff
+Paul Menard
+Rajah Caruth
+Richard Petty
+Ricky Stenhouse Jr.
+Riley Herbst
+Ross Chastain
+Rudy Fugle
+Rusty Wallace
+Ryan Newman
+Ryan Preece
+Ryan Truex
+Ryan Vargas
+Sally Mott
+Sam Mayer
+Sammy Smith
+Shane Van Gisbergen
+Sheldon Creed
+Tanner Gray
+Taylor Gray
+Taylor Reimer
+Terry Labonte
+Thad Moffitt
+Toni Breidinger
+Tony Stewart
+Ty Dillon
+Ty Gibbs
+Ty Majeski
+Tyler Ankrum
+Tyler Reddick
+Ward Burton
+William Byron
+William Sawalich
+Zachary Tinkle
+Zane Smith
+
+[insert]
+AJ Allmendinger
+Alex Bowman
+Alex Labbe
+Andres Perez De Lara
+Anthony Alfredo
+Aric Almirola
+Austin Cindric
+Austin Dillon
+Austin Hill
+B.J. McLeod
+Bayley Currey
+Ben Rhodes
+Bobby Labonte
+Brad Keselowski
+Brad Smith
+Brandon Jones
+Brayton Laster
+Brendan Gaughan
+Brenden Butterbean Queen
+Brennan Poole
+Brett Moffitt
+Brittney Zamora
+Bubba Wallace
+Cameron Hayley
+Carl Edwards
+Carson Hocevar
+Carson Kvapil
+Chad Knaus
+Chandler Smith
+Chase Briscoe
+Chase Elliott
+Chris Buescher
+Christian Eckes
+Christopher Bell
+Cliff Daniels
+Cody Ware
+Colby Howard
+Cole Custer
+Cole Whitt
+Connor Mosack
+Connor Zilisch
+Corey Day
+Corey Heim
+Corey LaJoie
+Dale Earnhardt Jr
+Danica Patrick
+Daniel Dye
+Daniel Hemric
+Daniel Suarez
+Darrell Waltrip
+David Ragan
+Denny Hamlin
+Erik Jones
+Garrett Smithley
+Hailie Deegan
+Harrison Burton
+Harry Gant
+J.J. Yeley
+Jade Buford
+Jamie McMurray
+Jeb Burton
+Jeff Gordon
+Jeremy Clements
+Jesse Iwuji
+Jesse Little
+Jesse Love
+Jimmie Johnson
+Joey Gase
+Joey Logano
+John Hunter Nemechek
+Jordan Anderson
+Josh Berry
+Josh Bilicki
+Josh Williams
+Juan Pablo Montoya
+Justin Allgaier
+Justin Haley
+Kaz Grala
+Kevin Harvick
+Kyle Busch
+Kyle Larson
+Kyle Petty
+Landon Cassill
+Lawless Alan
+Layne Riggs
+Mark Martin
+Martin Truex Jr.
+Mason Massey
+Matt Kenseth
+Matt Mills
+Matt Tifft
+Michael McDowell
+Myatt Snider
+Nick Sanchez
+Noah Gragson
+Parker Retzlaff
+Paul Menard
+Rajah Caruth
+Reed Sorenson
+Richard Petty
+Ricky Stenhouse Jr.
+Ross Chastain
+Ryan Blaney
+Ryan Newman
+Ryan Preece
+Ryan Reed
+Ryan Truex
+Sam Mayer
+Sammy Smith
+Shane Van Gisbergen
+Sheldon Creed
+Spencer Boyd
+Taylor Gray
+Timmy Hill
+Todd Gilliland
+Tommy Joe Martins
+Toni Breidinger
+Tony Stewart
+Ty Dillon
+Ty Gibbs
+Tyler Reddick
+William Byron
+William Sawalich
+Zane Smith
+
+[multi]
+AJ Allmendinger / Brenden Butterbean Queen / Ty Dillon
+Austin Cindric / Joey Logano / Ryan Blaney
+Austin Dillon / Austin Hill / Jesse Love
+Brad Keselowski / Chris Buescher / Ryan Preece
+Brandon Jones / Brent Crews / Taylor Gray
+Bubba Wallace / Corey Heim / Tyler Reddick
+Carl Edwards / Mark Martin / Matt Kenseth
+Carson Hocevar / Daniel Suarez / Michael McDowell
+Carson Kvapil / Justin Allgaier / Sammy Smith
+Chandler Smith / Layne Riggs / Noah Gragson
+Chase Briscoe / Christopher Bell / Denny Hamlin
+Chase Elliott / Kyle Larson / William Byron
+Christian Eckes / Daniel Dye / Daniel Hemric
+Connor Zilisch / Ross Chastain / Shane Van Gisbergen
+Dale Earnhardt Jr / Jeff Gordon / Jimmie Johnson
+Danica Patrick / Hailie Deegan / Toni Breidinger
+Darrell Waltrip / Jeff Gordon / Richard Petty
+Erik Jones / Jimmie Johnson / John Hunter Nemechek
+Gio Ruggiero / Kaden Honeycutt / Tanner Gray
+Harrison Burton / Jeff Burton / Ward Burton
+Noah Gragson / Todd Gilliland / Zane Smith

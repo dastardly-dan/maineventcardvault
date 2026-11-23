@@ -1,0 +1,334 @@
+# name: 2026 Topps Neon Marvel
+# sport: Marvel
+# added: 2026-11-22
+# source: https://www.breakninja.com/entertainment/2026-Topps-Neon-Marvel-Card-Checklist.php
+# note: Breakninja.com checklist (no official list on the maker's checklist page yet); sketch cards left out
+
+[base]
+Abomination
+Absorbing Man
+Adam Warlock
+America Chavez
+Angela
+Ant-Man
+Anti-Venom
+Apocalypse
+Archangel
+Ares
+Baron Mordo
+Baron Zemo
+Batroc
+Beast
+Beta Ray Bill
+Bishop
+Black Bolt
+Black Cat
+Black Knight
+Black Panther
+Black Widow
+Blade
+Cable
+Captain America
+Captain Britain
+Captain Marvel
+Carnage
+Chthon
+Clea
+Colossus
+Cosmic Ghost Rider
+Cyclops
+Cypher
+Daredevil
+Darkhawk
+Dazzler
+Deathdream
+Deathlok
+Doctor Doom
+Doctor Strange
+Doctor Voodoo
+Dormammu
+Doyle Dormammu
+Dragonfire
+Drax
+Echo
+Electro
+Elektra
+Emma Frost
+Enchantress
+Exodus
+Fantomex
+Fin Fang Foom
+Firestar
+Frenzy
+Gambit
+Genis-Vell
+Ghost Rider
+Ghost-Spider
+Gladiator
+Green Goblin
+Groot
+Gwenpool
+Hallows Eve
+Havok
+Hawkeye
+Hela
+Hellcat
+Hellverine
+Hercules
+High Evolutionary
+Hobgoblin
+Hulk
+Hulkette
+Human Torch
+Iceman
+Ikaris
+Invincible Woman
+Invisible Woman
+Iron Cat
+Iron Fist
+Iron Man
+Ironheart
+Jack of Hearts
+Jeff The Land Shark
+Jessica Jones
+Jitter
+Jocasta
+Jubilee
+Juggernaut
+Ka-Zar
+Kang The Conqueror
+Kate Bishop
+Kid Gladiator
+Killmonger
+Kingpin
+Kitty Pryde
+Kraven The Hunter
+Leader
+Lizard
+Loki
+Luna Snow
+M.O.D.O.K.
+Machine Man
+Maestro
+Magik
+Magneto
+Man-Thing
+Man-Wolf
+Mary Jane
+Medusa
+Mephisto
+Mighty Thor
+Miles Morales
+Mister Fantastic
+Mister Negative
+Mister Sinister
+Misty Knight
+Moon Girl
+Moon Knight
+Moonstar
+Morbius
+Ms. Marvel
+Multiple Man
+Mystique
+Namor
+Nightcrawler
+Nimrod
+Nova
+Odin
+Old Man Logan
+Omega Red
+Phoenix
+Phyla-Vell
+Polaris
+Professor X
+Prowler
+Psylocke
+Quasar
+Quicksilver
+Ransom
+Rescue
+Rhino
+Rocket Raccoon
+Rogue
+Sabretooth
+Scarlet Spider
+Scarlet Witch
+Schwarzschild
+Scorpion
+Sentry
+Shang-Chi
+She-Hulk
+Shocker
+Silk
+Silver Sable
+Silver Samurai
+Silver Surfer
+Slapstick
+Spider-Boy
+Spider-Girl
+Spider-Ham
+Spider-Man
+Spider-Man 2099
+Spider-Man Noir
+Spider-Punk
+Spider-Woman
+Squirrel Girl
+Star-Lord
+Storm
+Stryfe
+Sunspot
+Sword Master
+Taskmaster
+Terrax
+Thanos
+The Maker
+The Thing
+Thor
+Throg
+Tigra
+Toad
+U.S. Agent
+Ultron
+Venom
+Vision
+Vulture
+War Machine
+Warlock
+Wasp
+Werewolf By Night
+Whiplash
+White Tiger
+White Widow
+Wiccan
+Wolverine
+Wonder Man
+X-23
+Yondu
+
+[auto]
+Anjali Kunapaneni as Jeanne Foucault
+Bella Rachlin Dark Phoenix
+Bella Rachlin Galactus
+Bella Rachlin Ghost Spider
+Bella Rachlin Human Torch
+Bella Rachlin Iron Man
+Bella Rachlin Mister Fantastic
+Bella Rachlin Spider-Man
+Bella Rachlin Storm
+Bella Rachlin Thanos
+Bella Rachlin Thor
+Charlie Cox as Daredevil
+Ettore Big E Ewen as Bulldozer
+Eugene Byrd as Lonnie Lincoln
+Grace Song as Nico Minoru
+Hudson Thames as Spider-Man
+Jake Green as Butane
+Jonathan Medina as Scorpion
+Kari Wahlgren as May Parker
+Leilani Barrett as Big Donovan
+Leirix Black Cat
+Leirix Carnage
+Leirix Emma Frost
+Leirix Venom
+Leirix Wolverine
+Mick Wingert as Iron Man
+Robin Atkin Downes as Doctor Strange
+Rose Besch Ghost-Spider
+Rose Besch Psylocke
+Rose Besch Rogue
+Rose Besch Scarlet Witch
+Rose Besch Silk
+Sarah Natochenny as Mila Masaryk
+
+[insert]
+Alligator Loki
+Andi Benton
+Angela
+Apocalypse
+Bats
+Big Donovan
+Bishop
+Black Cat
+Black Panther
+Black Widow
+Blade
+Blob
+Bulldozer
+Butane
+Captain America
+Captain Marvel
+Carmilla Black
+Carnage
+Chameleon
+Chewie
+Clea
+Cosmo
+Cyclops
+Daredevil
+Dark Phoenix
+Devil Dinosaur
+Doctor Doom
+Doctor Strange
+Dr. Otto Octavius
+Emma Frost
+Firestar
+Galactus
+Gambit
+Ghost Rider
+Ghost-Spider
+Green Goblin
+Hallows Eve
+Harry Osborn
+Havok
+Hela
+Hellstrom
+Hulk
+Iceman
+Invincible Woman
+Invisible Woman
+Iron Man
+Jean Grey
+Jeff The Land Shark
+Juggernaut
+Kingpin
+Kitty Pryde
+Lady Loki
+Lockjaw
+Lonnie Lincoln
+Lucky The Pizza Dog
+Magik
+Magneto
+Mary Jane
+May Parker
+Mikhail Sytsevich
+Mila Masaryk
+Miles Morales
+Ms. Marvel
+Nico Minoru
+Norman Osborn
+Nova
+Omega Red
+Onslaught
+Phoenix
+Professor X
+Psylocke
+Red Goblin
+Rogue
+Scarlet Witch
+Scorpion
+She-Hulk
+Silk
+Spider-Man
+Storm
+Super-Skrull
+Symbiotic Alien
+Terrax The Tamer
+Thaddeus Ross
+Thor
+Throg
+Tippy-Toe
+Ultron
+Venom
+Wiccan
+Wolverine
+X-23

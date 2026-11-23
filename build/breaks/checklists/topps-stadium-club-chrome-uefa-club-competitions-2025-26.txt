@@ -1,0 +1,393 @@
+# name: Topps Stadium Club Chrome UEFA Club Competitions 2025-26
+# sport: Soccer
+# added: 2026-11-22
+# source: https://www.breakninja.com/soccer/25-26-Topps-Stadium-Club-UEFA-Club-Competitions-Soccer-Card-Checklist.php
+# note: Breakninja.com checklist (no official list on the maker's checklist page yet); sketch cards left out
+
+[base]
+Alan Shearer
+Alexander Isak
+Antoine Griezmann
+Antoine Semenyo
+Antonio Vergara
+Arda Guler
+Bastian Schweinsteiger
+Bruno Guimaraes
+Bukayo Saka
+Christian Kofane
+Cole Palmer
+Declan Rice
+Desire Doue
+Diego Maradona
+Dominic Solanke
+Dominik Szoboszlai
+Dro Fernandez
+Eberechi Eze
+Enzo Fernandez
+Erling Haaland
+Ernest Poku
+Estevao Willian
+Ethan Nwaneri
+Felix Nmecha
+Fermin Lopez
+Fernando Torres
+Florian Wirtz
+Franco Mastantuono
+Gareth Bale
+Harry Kane
+Hugo Ekitike
+Ibrahim Maza
+Ismael Saibari
+Jamal Musiala
+Jean-Pierre Papin
+Joao Neves
+Jobe Bellingham
+Johan Cruyff
+Jude Bellingham
+Julian Alvarez
+Junai Byfield
+Kenan Yildiz
+Kevin de Bruyne
+Khvicha Kvaratskhelia
+Kylian Mbappe
+Lamine Yamal
+Lautaro Martinez
+Lennart Karl
+Leroy Sane
+Lionel Messi
+Luis Diaz
+Mahamadou Sangare
+Malik Tillman
+Marco Reus
+Marcus Rashford
+Marcus Thuram
+Martin Odegaard
+Mathis Jangeal
+Mauro Icardi
+Max Dowman
+Michael Olise
+Mika Godts
+Mohamed Salah
+Mohammed Kudus
+Nick Woltemade
+Nico Schlotterbeck
+Noah Fernandez
+Nuno Mendes
+Ousmane Dembele
+Pedri
+Phil Foden
+Pierre-Emerick Aubameyang
+Pio Esposito
+Quentin Ndjantou
+Raphinha
+Rasmus Hojlund
+Rayan Cherki
+Reggie Walsh
+Rio Ngumoha
+Robert Lewandowski
+Rodri
+Rodrigo Mendoza
+Ronaldo
+Scott McTominay
+Sean Steur
+Serhou Guirassy
+Shumaira Mheuka
+Thierry Henry
+Timothy Weah
+Tosin Adarabioyo
+Trent Alexander-Arnold
+Victor Osimhen
+Viktor Gyokeres
+Vini Jr.
+Virgil van Dijk
+Vitinha
+Weston McKennie
+Wisdom Mike
+Xavi Simons
+Yoane Wissa
+
+[auto]
+Adriano
+Alan Shearer
+Alessandro Del Piero
+Andrea Pirlo
+Andres Iniesta
+Andy Robertson
+Antoine Griezmann
+Antoine Semenyo
+Antonin Kinsky
+Axel Tape
+Bastian Schweinsteiger
+Ben White
+Bruno Guimaraes
+Bukayo Saka
+Christian Kofane
+Clarence Seedorf
+Cole Palmer
+David Beckham
+David Ginola
+Dean Huijsen
+Dennis Bergkamp
+Destiny Udogie
+Didier Deschamps
+Diego Simeone
+Divine Mukasa
+Dominic Solanke
+Dro Fernandez
+Eberechi Eze
+Edinson Cavani
+Enzo Fernandez
+Erling Haaland
+Esteban Cambiasso
+Estevao Willian
+Federico DiMarco
+Federico Valverde
+Fernando Torres
+Francisco Conceicao
+Franck Ribery
+Franco Mastantuono
+Frank Lampard
+Frank Rijkaard
+Gareth Bale
+George Weah
+Gianfranco Zola
+Giorgio Chiellini
+Giuliano Simeone
+Goncalo Ramos
+Harrison Murray-Campbell
+Harry Kane
+Heung-min Son
+Hugo Ekitike
+Ian Wright
+Ibrahim Maza
+Jacob Murphy
+Javier Zanetti
+Jayden Danns
+Jeremy Doku
+Jimmy Floyd Hasselbaink
+Joao Neves
+Jofre Torrents
+Jude Bellingham
+Julian Alvarez
+Kaka
+Kenan Yildiz
+Kevin de Bruyne
+Khvicha Kvaratskhelia
+Lamine Yamal
+Lautaro Martinez
+Lennart Karl
+Leonardo Bonucci
+Leroy Sane
+Lewis Miley
+Lionel Messi
+Lothar Matthaus
+Lucas Beraldo
+Luis Diaz
+Luis Enrique
+Luis Figo
+Luis Suarez
+Luka Modric
+Mahamadou Sangare
+Malik Tillman
+Marcel Desailly
+Marco Reus
+Marco van Basten
+Marcus Thuram
+Mateo Kovacic
+Matheus Nunes
+Max Dowman
+Michael Laudrup
+Micky van de Ven
+Mika Godts
+Miroslav Klose
+Mohamed Salah
+Mohammed Kudus
+Nathan Ake
+Nick Woltemade
+Nico Schlotterbeck
+Nicolas Anelka
+Noah Fernandez
+Nuno Mendes
+Ousmane Dembele
+Ousmane Diallo
+Paolo Maldini
+Patrice Evra
+Patrick Kluivert
+Paul Scholes
+Paul Wanner
+Paulo Sousa
+Pedri
+Pedro Porro
+Pep Guardiola
+Phil Foden
+Pierre-Emerick Aubameyang
+Randal Kolo Muani
+Rasmus Hojlund
+Raul
+Rayan Cherki
+Reggie Walsh
+Reigan Heskey
+Rio Ngumoha
+Robert Lewandowski
+Ronald Koeman
+Ronaldinho
+Ronaldo
+Rudi Voller
+Ruud Gullit
+Ryan Giggs
+Salih Ozcan
+Samuel Etoo
+Sandro Tonali
+Sergio Aguero
+Sergio Busquets
+Shumaira Mheuka
+Sol Campbell
+Steven Gerrard
+Thiago Pitarch
+Thierry Henry
+Thomas Muller
+Tino Livramento
+Toni Fernandez
+Toni Kroos
+Tosin Adarabioyo
+Trent Kone-Doherty
+Vini Jr.
+Virgil van Dijk
+Vitinha
+Wayne Rooney
+Wesley Sneijder
+Wisdom Mike
+Xabi Alonso
+Zlatan Ibrahimovic
+
+[insert]
+Alessandro Bastoni
+Alessandro Del Piero
+Alexander Isak
+Alphonso Davies
+Andres Iniesta
+Antoine Griezmann
+Archie Gray
+Bruno Guimaraes
+Bukayo Saka
+Christian Kofane
+Clarence Seedorf
+Cody Gakpo
+Cole Palmer
+David Beckham
+Declan Rice
+Desire Doue
+Didier Drogba
+Dominic Solanke
+Dro Fernandez
+Enzo Fernandez
+Erling Haaland
+Ernest Poku
+Estevao Willian
+Fermin Lopez
+Filippo Inzaghi
+Florian Wirtz
+Franck Ribery
+Franco Mastantuono
+Frank Lampard
+Gareth Bale
+George Best
+George Weah
+Harry Kane
+Heung-min Son
+Hugo Ekitike
+Ibrahim Maza
+Ivan Perisic
+Jamal Musiala
+Joao Neves
+Joao Pedro
+Jobe Bellingham
+Johan Cruyff
+Jude Bellingham
+Julian Alvarez
+Kaka
+Karim Adeyemi
+Kenan Yildiz
+Kevin de Bruyne
+Khvicha Kvaratskhelia
+Kylian Mbappe
+Lamine Yamal
+Lautaro Martinez
+Lennart Karl
+Lionel Messi
+Luis Diaz
+Luis Figo
+Luka Modric
+Marco Reus
+Marco van Basten
+Marcus Rashford
+Marquinhos
+Martin Odegaard
+Mauro Icardi
+Max Dowman
+Michael Olise
+Mika Godts
+Mikel Merino
+Mohamed Salah
+Neymar Jr
+Nick Woltemade
+Nico Schlotterbeck
+Noah Fernandez
+Noni Madueke
+Nuno Mendes
+Omar Marmoush
+Ousmane Dembele
+Paul Scholes
+Pedri
+Phil Foden
+Pierre-Emerick Aubameyang
+Pio Esposito
+Puskas Arena
+Quentin Ndjantou
+Raphinha
+Rasmus Hojlund
+Rayan Cherki
+Reggie Walsh
+Riccardo Calafiori
+Rio Ngumoha
+Rivaldo
+Robert Lewandowski
+Rodri
+Ronaldinho
+Ronaldo
+Samuel Etoo
+Scott McTominay
+Senny Mayulu
+Sergio Aguero
+Serhou Guirassy
+Steven Gerrard
+Thibaut Courtois
+Thierry Henry
+Thomas Muller
+Timothy Weah
+Toni Kroos
+Trent Alexander-Arnold
+Victor Osimhen
+Vini Jr.
+Virgil van Dijk
+Wayne Rooney
+Wesley Sneijder
+Weston McKennie
+Wisdom Mike
+Zlatan Ibrahimovic
+
+[multi]
+Alessandro Del Piero / Roberto Baggio
+Andres Iniesta / Xavi Hernandez
+Erling Haaland / Sergio Aguero
+Gareth Bale / Heung-min Son
+Harry Kane / Robert Lewandowski
+Kaka / Marco van Basten
+Khvicha Kvaratskhelia / Neymar Jr
+Lautaro Martinez / Ronaldo
+Lionel Messi / Ronaldinho
+Marco Reus / Robert Lewandowski
+Neymar Jr / Ronaldinho
+Paul Scholes / Ryan Giggs
+Ronaldo / Vini Jr.
+Steven Gerrard / Xabi Alonso

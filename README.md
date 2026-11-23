@@ -178,6 +178,11 @@ team spot, box by box. Linked from the storefront's Breaks menu; every page carr
   prefix z, or j for uncompressed) and shows a searchable spot list, light or dark. Nothing is stored on the server.
 - **Find a spot:** search box above the spot list filters to the spots holding a name or team (one or two
   letters match by letter range); the header search results link to `#/build/find/<name>`.
+- **Breakninja lists (Nov 22, 2026):** when the maker hasn't posted a checklist, breakninja.com's card-by-card tables
+  (name, number, set, print run, team) are scraped in the built-in browser, turned into a Panini-style CSV (multi-person
+  sets regrouped, sketch cards dropped) and run through `panini_csv.py` and `depth.py --panini`, so print runs drive
+  Player value. Used for Select and Immaculate NASCAR, Joy of Basketball, Pristine Basketball, Five Star Baseball,
+  Neon Marvel, Mint Marvel and Stadium Club Chrome UEFA. Each file's `# source:` line points at the Breakninja page.
 - **Panini print runs:** Panini publishes no pack odds. `depth.py --panini` reads each CSV's SEQUENCE column:
   per root set, each player's most plentiful version (unnumbered = 1,000 copies), median across players,
   scored like odds (fewer copies = rarer). Mass products (Donruss) are mostly unnumbered so little changes;

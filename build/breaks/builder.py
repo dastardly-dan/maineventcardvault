@@ -85,7 +85,7 @@ def main():
             del r[4:]
             v = t['players'].get(dkey(r[0]))
             if v: r.append(v)
-    order = ['WWE', 'MLW', 'UFC', 'MMA', 'NFL', 'NBA', 'WNBA', 'NBL', 'EuroLeague', 'MLB', 'USA Baseball', 'Soccer', 'F1', 'Olympics', 'Marvel', 'Star Wars', 'Disney', 'Pokemon', 'Entertainment', 'Leaf Football', 'Leaf Baseball', 'Leaf Basketball', 'Leaf Hockey', 'Leaf Soccer', 'Leaf Tennis', 'Leaf Lacrosse', 'Leaf Wrestling & MMA', 'Leaf Multi-Sport', 'Leaf Pop Culture', 'Other']
+    order = ['WWE', 'MLW', 'UFC', 'MMA', 'NFL', 'NBA', 'WNBA', 'NBL', 'EuroLeague', 'MLB', 'USA Baseball', 'Soccer', 'F1', 'NASCAR', 'Olympics', 'Marvel', 'Star Wars', 'Disney', 'Pokemon', 'Entertainment', 'Leaf Football', 'Leaf Baseball', 'Leaf Basketball', 'Leaf Hockey', 'Leaf Soccer', 'Leaf Tennis', 'Leaf Lacrosse', 'Leaf Wrestling & MMA', 'Leaf Multi-Sport', 'Leaf Pop Culture', 'Other']
     prods.sort(key=lambda p: (order.index(p['sport']) if p['sport'] in order else 99, p['name']))
     css = open(os.path.join(HERE, 'base.css')).read()
     icon = 'data:image/png;base64,' + base64.b64encode(open(os.path.join(ROOT, 'assets', 'favicon.png'), 'rb').read()).decode()

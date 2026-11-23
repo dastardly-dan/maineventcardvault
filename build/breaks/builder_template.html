@@ -837,7 +837,7 @@ Bianca Belair | W | auto</pre>
   // ---------- box search ----------
   var SPORTWORDS = { NFL: "football", NBA: "basketball", WNBA: "basketball women", NBL: "basketball australia", EuroLeague: "basketball euroleague",
     MLB: "baseball", "USA Baseball": "baseball", WWE: "wrestling", MLW: "wrestling", UFC: "mma fighting", MMA: "fighting pfl", Soccer: "football futbol",
-    F1: "formula 1 racing", "Star Wars": "starwars", Pokemon: "pokemon tcg",
+    F1: "formula 1 racing", NASCAR: "racing stock car motorsport", "Star Wars": "starwars", Pokemon: "pokemon tcg",
     "Leaf Wrestling & MMA": "wwe ufc boxing fighting", "Leaf Pop Culture": "celebrity movies tv", "Leaf Lacrosse": "nll", "Leaf Multi-Sport": "multisport" };
   var bqSel = 0, bqHits = [];
   function hay(p) { return fold(p.name + " " + p.sport + " " + (SPORTWORDS[p.sport] || "") + " " + (p.types ? p.types.join(" ") : "")).toLowerCase().replace(/&/g, " and ").replace(/[^a-z0-9 ]+/g, " "); }

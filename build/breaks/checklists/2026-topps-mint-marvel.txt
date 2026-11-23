@@ -1,0 +1,268 @@
+# name: 2026 Topps Mint Marvel
+# sport: Marvel
+# added: 2026-11-22
+# source: https://www.breakninja.com/entertainment/2026-Topps-Mint-Marvel-Card-Checklist.php
+# note: Breakninja.com checklist (no official list on the maker's checklist page yet); sketch cards left out
+
+[base]
+Adam Warlock
+Annihilus
+Ant-Man
+Apocalypse
+Baron Zemo
+Beast
+Beta Ray Bill
+Bishop
+Black Bolt
+Black Cat
+Black Knight
+Black Panther
+Black Widow
+Black Winter
+Blade
+Blue Marvel
+Bullseye
+Cable
+Captain America
+Captain America Sam Wilson
+Captain Marvel
+Carnage
+Cloak and Dagger
+Colossus
+Corruption
+Cyclops
+Daredevil
+Dazzler
+Doctor Doom
+Doctor Octopus
+Doctor Strange
+Doomasaur
+Dormammu
+Drax
+Electro
+Elektra
+Emma Frost
+Enchantress
+Eternity
+Galactus
+Gambit
+Gamora
+Ghost Rider
+Ghost-Spider
+Green Goblin
+Groot
+Gwenpool
+Hawkeye
+Hobgoblin
+Howard the Duck
+Hulk
+Human Torch
+Iceman
+Infinity
+Invisible Woman
+Iron Fist
+Iron Man
+Iron Patriot
+Jean Grey
+Jeff the Land Shark
+Jubilee
+Juggernaut
+Kate Bishop
+Killmonger
+Kingpin
+Kitty Pryde
+Kraven the Hunter
+Lockjaw
+Loki
+Luke Cage
+Magik
+Magneto
+Major League Venom
+Man-Thing
+Mephisto
+Mighty Thor
+Miles Morales
+Mister Fantastic
+Moon Knight
+Mr. Sinister
+Ms. Marvel
+Mysterio
+Namor
+Nick Fury
+Nightcrawler
+Nova
+Odin
+Phantom Rider
+Phoenix
+Professor X
+Red Hulk
+Rocket Raccoon
+Rogue
+Sabretooth
+Scarlet Spider
+Scarlet Witch
+Sentry
+Shang-Chi
+She-Hulk
+Silver Sable
+Silver Surfer
+Spider-Girl
+Spider-Ham
+Spider-Man
+Spider-Man 2099
+Spider-Man Noir
+Spider-Punk
+Spider-Woman
+Squirrel Girl
+Star-Lord
+Storm
+Taskmaster
+Thanos
+The Prowler
+The Thing
+Thena
+Thor
+Ultron
+Venom
+Vision
+Wasp
+Wiccan
+Winter Soldier
+Wolverine
+Wonder Man
+
+[auto]
+Adam Kubert
+Adi Granov
+Andy Kubert
+Arthur Adams
+Bill Sienkiewicz
+Bradley Cooper as Rocket
+Christopher Yost
+Craig Kyle
+Donny Cates
+Frank Miller
+Greg Capullo
+Hailee Steinfeld as Kate Bishop
+Hugh Jackman as Wolverine
+Jason Aaron
+Jonathan Hickman
+Joshua Cassara
+Lucio Parrillo
+Marc Silvestri
+Mark Bagley
+Mark Brooks
+Mike Zeck
+Oscar Isaac as Moon Knight
+Paco Medina
+Rod Reis
+Ryan Ottley
+Ryan Stegman
+Samuel L. Jackson as Nick Fury
+Scott Williams
+Stan Lee
+Steve McNiven
+Tony Daniel
+Vincent DOnofrio as Mayor Wilson Fisk
+Whilce Portacio
+Zeb Wells
+
+[insert]
+Agent Venom
+Agony
+Angel
+Anti-Venom
+Apocalypse
+Beast
+Bishop
+Black Cat
+Black Panther
+Black Widow
+Blade
+Cable
+Captain America
+Carnage
+Colossus
+Cyclops
+Daredevil
+Daredevil 1964 Number 16
+Doctor Doom
+Doctor Strange
+Domino
+Emma Frost
+Forge
+Gambit
+Ghost Rider
+Grendel
+Havok
+Hope Summers
+Hulk
+Human Torch
+Iceman
+Invisible Woman
+Jean Grey
+Jeff the Venomized Land Shark
+Jubilee
+Juggernaut
+Kitty Pryde
+Knull
+Lasher
+Legion
+Loki
+Magik
+Magneto
+Major League Venom
+Mania
+Marvel Team-Up 1972 Number 150
+Marvel Team-Up 1972 Number 27
+Marvel Team-Up 1972 Number 43
+Marvel Team-Up 1972 Number 53
+Marvel Team-Up 1972 Number 54
+Marvel Team-Up Annual 1976 Number 1
+Mary Jane
+Miles Morales
+Misery
+Mister Fantastic
+Moon Knight
+Mystique
+Nightcrawler
+Onslaught
+Phage
+Phoenix
+Polaris
+Professor X
+Psylocke
+Punisher
+Quicksilver
+Rachel Summers
+Red Goblin
+Riot
+Rogue
+Sabretooth
+Scarlet Witch
+Scorn
+Scorpion
+Scream
+She-Venom
+Silence
+Sleeper
+Spider-Man
+Storm
+Symbiote Spider-Man 2099
+Thanos
+The Amazing Spider-Man 1963 Number 100
+The Amazing Spider-Man 1963 Number 101
+The Amazing Spider-Man 1963 Number 134
+The Amazing Spider-Man 1963 Number 16
+The Amazing Spider-Man 1963 Number 20
+The Amazing Spider-Man 1963 Number 345
+The Amazing Spider-Man 1963 Number 5
+The Thing
+Thor
+Toxin
+Uncanny X-Men 1963 Number 35
+Venom
+Venom 2099
+Widow
+Wolverine
+X-23
