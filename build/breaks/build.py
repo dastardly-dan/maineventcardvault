@@ -33,6 +33,15 @@ def first_char(s):
         if ch.isdigit(): return '#'
     return '?'
 
+def first_two(s):
+    """first two letters, for spots split on the second letter (CA-CH); a leading 'The' doesn't count"""
+    s = fold(s).strip().lstrip('"\'(').strip()
+    s = re.sub(r'^(the)\s+', '', s, flags=re.I).lstrip('"\'(')
+    return ''.join(ch for ch in s if ch.isalpha())[:2].upper()
+
+def in_spot(s, L, two):
+    return L in s['letters'] or any(lo <= two <= hi for lo, hi in s.get('pre', []))
+
 def letters(name):
     """printed letter (nickname counts, a leading 'The' doesn't), and the letter by real name if different"""
     p = first_char(name.replace('"', ''))
@@ -64,10 +73,10 @@ def letter_break(cfg, products, gender_of=None, alt=True):
             p, a = letters(n)
             g = gender_of(n) if gender_of else None
             hit = False
-            for L, extra in ((p, ''), (a, '?')):
+            for L, extra, two in ((p, '', first_two(n.replace('"', ''))), (a, '?', first_two(key_of(n)))):
                 if not L or (extra and not alt): continue
                 for s in cfg['spots']:
-                    if L in s['letters'] and (s.get('g') is None or s['g'] == g):
+                    if in_spot(s, L, two) and (s.get('g') is None or s['g'] == g):
                         f = ''.join(sorted(flags - {'B'})) + extra
                         if 'B' not in flags and not flags & {'A', 'I', 'M'}: f += ''
                         names[s['id']].setdefault(box['k'], []).append([n, f, 'B' in flags])
@@ -465,6 +474,48 @@ gb1038b = dict(
     sources=[['GB1038 Midnight Chrome Inception break page (Acme Packs)', acme_url('gb1038-midnight-chrome-inception-random-team')], ACME_TERMS, SRC_INCEPTION, SRC_MIDNIGHT, SRC_CHROME],
 )
 
+# ---------------- library-based letter data (Colfax NASCAR, Nov 23) ----------------
+def lib_letter_product(pid):
+    """A checklist from the library as a letter-break product: base / auto / insert / multi name lists."""
+    out = dict(base=[], auto=[], insert=[], multi=[])
+    sec = None
+    for line in open(os.path.join(LIB, pid + '.txt'), encoding='utf-8'):
+        line = line.strip()
+        if not line or line.startswith('#'): continue
+        if line.startswith('['): sec = line.strip('[]'); continue
+        if sec in out: out[sec].append(line.split(' | ')[0] if sec != 'multi' else ' / '.join(x.split(' | ')[0] for x in line.split(' / ')))
+    return {k: ';'.join(v) for k, v in out.items()}
+
+def cc_spot(label, letters_='', pre=()):
+    return dict(id=re.sub(r'[^a-z0-9]', '', label.lower().replace('-', 'to')), label=label, letters=list(letters_), pre=[list(r) for r in pre], g=None, price=None, status=None)
+cc875_spots = [cc_spot('A / N', 'AN'), cc_spot('B', 'B'), cc_spot('CA-CH', pre=[('CA', 'CH')]), cc_spot('CI-CY', pre=[('CI', 'CY')]), cc_spot('D', 'D'),
+               cc_spot('E / F / G / H', 'EFGH'), cc_spot('JA-JE', pre=[('JA', 'JE')]), cc_spot('JI-JY', pre=[('JI', 'JY')]), cc_spot('K', 'K'),
+               cc_spot('L / M / W', 'LMW'), cc_spot('P / S / V / Z', 'PSVZ'), cc_spot('R', 'R'), cc_spot('T', 'T')]
+SRC_PANINI = 'https://www.paniniamerica.net/'
+cc875 = dict(
+    id='cc875', title='CC875 Immaculate NASCAR (Random Letter)', kicker='Colfax Collectibles · Random letter · NASCAR',
+    url='https://colfaxcc.com/products/cc875-immaculate-nascar-random-letter',
+    when='Sunday, November 22, 2026, 5:00 pm Central (6:00 pm Eastern) on the Colfax YouTube channel',
+    facts=['3 boxes', '13 letter spots', '$90 per spot, $22.50 for a 25% filler', 'Letters randomized live'],
+    format='random', checked='',
+    boxes=[dict(k='select', short='Select', c='#5aa9ff', full='2026 Panini Select Racing Hobby (2 boxes)', kind='100 drivers and crew in the base set, 96 with autographs, inserts',
+                types='Base with Prizm parallels, inserts, driver autographs and dual autographs.'),
+           dict(k='immaculate', short='Immaculate', c='#e2545e', full='2026 Panini Immaculate Collection Racing', kind='81 in the base set, 127 with autographs, memorabilia and patch cards',
+                types='High-end numbered cards: autographs, memorabilia and patch cards, plus many dual and multi-driver cards.')],
+    spots=cc875_spots,
+    rules=[['First letter of the printed name', ['The spot goes by the first letter of the name printed on the card, which for drivers is the first name: Chase Elliott is C, Kyle Larson is K.', 'Colfax\'s listing doesn\'t spell out first or last name, but the C and J spots split on the second letter (CA-CH, JA-JE), which only fits first names.']],
+           ['Two-letter spots split on the second letter', ['Chase Elliott and Christopher Bell are CH, so CA-CH. Cole Custer and Corey Heim are CO, so CI-CY.', 'Jesse Love is JE, so JA-JE. Joey Logano, Josh Berry and Justin Allgaier land in JI-JY.']],
+           ['Letters with no spot', ['No spot lists I, O, Q, U, X or Y, and no one in these two checklists has a first name starting with those letters, so every card has a home.']],
+           ['Multi-driver cards', ['Dual and multi-driver cards are tagged "multi", and each person is listed under their own letter.', 'Colfax rules: non-numbered multi cards go to the top or left name on odd-numbered breaks; numbered ones and case hits get a dice roll or random.org.']]],
+    notes=['The listing says "2026 Select Hobby". This is a NASCAR break, so the 2026 Panini Select Racing checklist is used.',
+           'Lists come from the official Panini checklists and include crew chiefs (like Chad Knaus and Cliff Daniels) and others who have cards, not just drivers.',
+           'Filler spots were sold at a quarter of the price for a 25% chance at a spot.'],
+    sources=[['CC875 break page (Colfax Collectibles)', 'https://colfaxcc.com/products/cc875-immaculate-nascar-random-letter'],
+             ['Colfax group break rules', 'https://colfaxcc.com/pages/rules'],
+             ['Panini Select Racing checklist (official Panini CSV)', SRC_PANINI],
+             ['Panini Immaculate Collection Racing checklist (official Panini CSV)', SRC_PANINI]],
+)
+
 # ---------------- finished breaks ----------------
 # A break that has run keeps its guide, but loses the live sold/open status and buying prompts.
 def close(cfg, ran, facts):
@@ -473,6 +524,7 @@ def close(cfg, ran, facts):
 
 close(cc871, 'Sunday, November 22, 2026', ['4 boxes', '27 letter spots'])
 close(cc872, 'Sunday, November 22, 2026', ['5 boxes', '32 team spots', '$95 per spot, $23.75 filler'])
+close(cc875, 'Sunday, November 22, 2026', ['3 boxes', '13 letter spots', '$90 per spot, $22.50 filler'])
 
 if __name__ == '__main__':
     built = []
@@ -486,6 +538,7 @@ if __name__ == '__main__':
     n, u = team_break(gb1037, {'chrome': CH, 'midnight': MN}); built.append(write(gb1037, n, u))
     n, u = team_break(gb1038a, {'absolute': absolute_product(roster)}); built.append(write(gb1038a, n, u))
     n, u = team_break(gb1038b, {'chrome': CH, 'midnight': MN, 'inception': IN}); built.append(write(gb1038b, n, u))
+    n, u = letter_break(cc875, {'select': lib_letter_product('2026-panini-select-nascar'), 'immaculate': lib_letter_product('2026-panini-immaculate-collection-nascar')}, None, alt=False); built.append(write(cc875, n, u))
     json.dump([{k: b[k] for k in ('id', 'title', 'kicker', 'when', 'facts', 'ended') if k in b} for b in built], open(os.path.join(os.path.dirname(__file__), 'index.json'), 'w'))
     for b in built:
         if b['unmatched']: print(b['id'], 'UNMATCHED', b['unmatched'][:40])
