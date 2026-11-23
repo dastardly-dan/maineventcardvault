@@ -333,6 +333,9 @@ textarea.in { min-height: 90px; resize: vertical; font-size: 13px; line-height: 
 .heyopt { border-top: 1px dashed var(--line-2); margin-top: 14px; padding-top: 2px; }
 .spot.hey { border-color: #e2548c; box-shadow: 0 0 0 1px #e2548c inset; }
 .spot.hey .lb { color: #ff7eb0; }
+.helpq { display: inline-flex; align-items: center; justify-content: center; width: 17px; height: 17px; margin-left: 6px; border-radius: 50%; border: 1px solid var(--line-2); background: transparent; color: var(--ink-3); font: 700 11px/1 inherit; cursor: pointer; vertical-align: 1px; padding: 0; text-transform: none; letter-spacing: 0; }
+.helpq:hover, .helpq[aria-expanded="true"] { border-color: var(--gold); color: var(--gold-2); }
+.hint.help { background: var(--bg-2); border-left: 2px solid var(--gold); border-radius: 0 8px 8px 0; padding: 7px 10px; margin-top: 6px; }
 .spotfind { display: flex; align-items: center; gap: 10px; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 8px 12px; margin: 0 0 12px; }
 .spotfind svg { color: var(--ink-3); flex: none; }
 .spotfind input { flex: 1; min-width: 0; background: transparent; border: 0; outline: 0; color: var(--ink); font: inherit; font-size: 15px; padding: 4px 0; }
@@ -453,7 +456,7 @@ table.rows td small { color: var(--ink-3); }
             <div><label class="f" for="wi">Insert</label><input class="in" id="wi" type="number" step="0.5" min="0" value="0.5"></div>
             <div><label class="f" for="wm">Multi</label><input class="in" id="wm" type="number" step="0.5" min="0" value="0.5"></div>
           </div>
-          <div class="hint">Points per appearance, per box. A name in the base set and an auto set scores base plus auto.</div>
+          <div class="hint" data-for="wb">Points per appearance, per box. A name in the base set and an auto set scores base plus auto.</div>
           <label class="f" style="margin-top:12px">Player value</label>
           <div class="seg" id="depth"><button data-v="off">Off</button><button data-v="normal">Normal</button><button data-v="strong">Strong</button></div>
           <div class="hint">Uses two things from the official Topps lists: how many hit sets a player is in (stars and top rookies get far more), and how rare those sets are from the Topps pack odds (a 1 per case autograph counts several times a 1 per pack insert; for Panini, which doesn't publish odds, the print runs). Teams and letters with valuable players weigh, and cost, more.</div>
@@ -488,7 +491,7 @@ table.rows td small { color: var(--ink-3); }
             <div><label class="f" for="fee">Fees</label><div class="pct"><input class="in" id="fee" type="number" min="0" max="60" step="0.5"></div></div>
             <div><label class="f" for="profit">Profit</label><div class="pct"><input class="in" id="profit" type="number" min="0" step="1"></div></div>
           </div>
-          <div class="hint">Other costs: shipping, supplies, giveaways. Fees: your platform's selling and payment fees as a share of sales. Profit: what you want to make on top of your cost.</div>
+          <div class="hint" data-for="extra">Other costs: shipping, supplies, giveaways. Fees: your platform's selling and payment fees as a share of sales. Profit: what you want to make on top of your cost.</div>
           <div class="row2" style="margin-top:10px">
             <div><label class="f" for="floor">Lowest spot price</label><div class="money"><input class="in" id="floor" type="number" min="0" step="1" placeholder="none"></div></div>
             <div><label class="f" for="goal">Or set a sales goal</label><div class="money"><input class="in" id="goal" type="number" min="0" step="5" placeholder="optional"></div></div>
@@ -505,7 +508,7 @@ table.rows td small { color: var(--ink-3); }
         <div class="acts2"><button class="btn gold" id="copy">Copy spot list</button><button class="btn" id="csv">Download CSV</button><button class="btn" id="expand">Show every name</button><button class="btn" id="embedbtn">Embed in your store</button><a class="qlink" href="#/how/results">Reading the results</a></div>
         <div class="embed" id="embedbox" hidden>
           <div class="emhead"><h3>Embed in your store</h3><button class="x" id="emclose" type="button" aria-label="Close">&times;</button></div>
-          <p class="hint" style="margin-top:0">Two ways to put these spots on a product page. On Shopify, open the product's description, click the <b>&lt;&gt;</b> (Show HTML) button, paste, then save. The code is a snapshot: if you change the break, copy it again.</p>
+          <p class="hint" style="margin-top:0">Shopify: paste into the product description with the <b>&lt;&gt;</b> Show HTML button. Copy again after any change.</p>
           <div class="row2">
             <div><label class="f" for="emt">Title (optional)</label><input class="in" id="emt" type="text" placeholder="GB1033 Midnight Chrome PYT"></div>
             <div><label class="f">Show</label><div class="emopts"><label><input type="checkbox" id="emp" checked> Prices</label><label><input type="checkbox" id="emn" checked> Names in each spot</label><label><input type="checkbox" id="emd"> Dark</label></div></div>
@@ -513,14 +516,14 @@ table.rows td small { color: var(--ink-3); }
           <div class="emgrid">
             <div class="emcol">
               <h4>1. HTML table</h4>
-              <p class="hint">Spot and price, two to a row, like a pick-your-team listing. Plain HTML, so it works on any store, Shopify included. "Names in each spot" adds a list under the table.</p>
+              <p class="hint">Spot and price, two to a row. Works on any store.</p>
               <textarea class="in emcode" id="emtable" readonly></textarea>
               <button class="btn gold" id="emcopyt" type="button">Copy table HTML</button>
               <div class="empreview" id="emprev"></div>
             </div>
             <div class="emcol">
               <h4>2. iframe (searchable list)</h4>
-              <p class="hint">A live-looking spot list hosted on maineventcardvault.com, with a "Find a player" search for your buyers. Shopify allows iframes in descriptions; some other platforms strip them, so use the table there.</p>
+              <p class="hint">A searchable spot list hosted here. Works on Shopify; use the table if a store strips iframes.</p>
               <label class="f" for="emh">Height in pixels</label><input class="in" id="emh" type="number" min="200" max="3000" step="50" value="700" style="max-width:140px">
               <textarea class="in emcode" id="emif" readonly></textarea>
               <button class="btn gold" id="emcopyi" type="button">Copy iframe code</button>
@@ -554,7 +557,7 @@ table.rows td small { color: var(--ink-3); }
 
     <div class="gd" id="guides">
       <h3 class="big">Section by section</h3>
-      <p class="intro">Every setting in the builder, what it does and when to change it. The defaults work for most breaks, so start there and only touch what you need.</p>
+      <p class="intro">Every setting in the builder, what it does and when to change it. The defaults work for most breaks, so start there and only touch what you need. In the builder itself, tap the <b>?</b> next to any setting for a one-line reminder.</p>
       <div class="gnav">
         <a href="#/how/boxes"><b>1</b>Boxes in the break</a>
         <a href="#/how/spots"><b>2</b>Spots</a>
@@ -867,6 +870,7 @@ Bianca Belair | W | auto</pre>
             <li><b>Inserts are the chase</b> (case hits like Cosmic Dust or Kaboom): raise Insert to 1 or 2.</li>
             <li><b>Ignore something completely:</b> set its box to 0.</li>
             <li><b>A few names everyone asks about:</b> add 3 to 5 of them as stars, usually at 3 to 5.</li>
+            <li><b>Pick-your-team prices too flat:</b> Superstar boost to Max. Too steep: Normal.</li>
           </ul>
         </div>
 
@@ -1410,21 +1414,21 @@ Bianca Belair | W | auto</pre>
     }
     $("teamopts").hidden = !teams; $("letteropts").hidden = teams; $("p3").hidden = teams && S.nil !== "fill";
     $("barsTitle").textContent = teams ? "Weight by team" : "Weight by letter";
-    $("genderHint").textContent = list.length && !list.some(function (x) { return x.g === "F"; }) ? "None of the picked checklists mark women, so there are no Men / Women splits." : "Only checklists that mark women can split this way (WWE ones do).";
+    $("genderHint").textContent = list.length && !list.some(function (x) { return x.g === "F"; }) ? "None of these checklists mark women." : "";
     function empty(msg) { $("stats").innerHTML = ""; $("bars").innerHTML = ""; $("barl").innerHTML = ""; $("warn").innerHTML = ""; $("money").hidden = true; $("spots").innerHTML = '<div class="empty">' + msg + "</div>"; LAST = null; }
     if (!list.length) return empty("Pick at least one checklist, or paste some names, to build spots.");
     var bins, total, warn = "", tb = null;
     if (teams) {
       tb = teamBins(list, N, c.sports);
-      $("splitHint").textContent = tb.teamCount ? tb.teamCount + " teams in these boxes." + (tb.none ? " " + tb.none + " names have no team and are left out." : "") : "Letters works for any checklist. Teams works for checklists with team names (football, basketball, baseball, college).";
-      $("nilHint").textContent = (tb.nil ? tb.nil + " player" + (tb.nil === 1 ? " is" : "s are") + " shown only with a college team. Anyone who also has a pro team in your boxes goes to that team." : "No college-only players in these boxes. Anyone with a pro team goes to that team.") + (S.nil === "fill" ? " Split by letter: every college player whose " + (S.rule === "last" ? "last" : "first") + " name starts with the same letter goes to the same spot (change first or last name in section 3)." : "");
-      $("tgroupHint").textContent = !tb.divOK && S.tgroup === "div" ? "Divisions work when every box is the same league (NFL, NBA or MLB). Using best balance instead." : "Best balance mixes strong and weak teams so every spot is worth about the same. For one team per spot (pick your team), set spots to " + tb.eachN + (tb.eachN > tb.teamCount ? " (" + tb.teamCount + " teams plus the college spot)" : "") + ".";
+      $("splitHint").textContent = tb.teamCount ? tb.teamCount + " teams" + (tb.none ? " · " + tb.none + " names with no team left out" : "") : "Only college teams in these boxes.";
+      $("nilHint").textContent = tb.nil ? tb.nil + " college-only player" + (tb.nil === 1 ? "" : "s") + (S.nil === "fill" ? " · grouped by " + (S.rule === "last" ? "last" : "first") + " name" : "") : "No college-only players.";
+      $("tgroupHint").textContent = !tb.divOK && S.tgroup === "div" ? "Divisions need every box in one league (NFL, NBA or MLB). Using best balance." : tb.teamCount ? "One team per spot: set spots to " + tb.eachN + "." : "";
       if (!tb.teamCount && !tb.nil) return empty("None of the picked checklists have team names, so they can't split by team. Switch to Letters, or add a football, basketball or baseball checklist.");
       bins = tb.bins; total = tb.total;
       if (tb.mode === "each" && N > bins.length) warn = "You asked for " + N + " spots, but these boxes have " + bins.length + (tb.nil && S.nil === "own" ? " teams plus the college spot" : " teams") + ", so each team is its own spot.";
       if (tb.mode === "div") warn = "Split by division: " + bins.length + " spots. The spot count is ignored in this mode.";
     } else {
-      $("splitHint").textContent = "Letters works for any checklist. Teams works for checklists with team names (football, basketball, baseball, college).";
+      $("splitHint").textContent = "";
       var U = buildUnits(list, N); bins = solve(U, N);
       bins.forEach(function (b) { var l = binLabel(b); b.label = l.label; b.sub = l.sub; b.names = []; b.u.forEach(function (u) { b.names = b.names.concat(u.names); }); b.ord = b.u.length ? Math.min.apply(null, b.u.map(uorder)) : 1e9; });
       bins.sort(function (a, b) { return a.ord - b.ord; });
@@ -1598,6 +1602,21 @@ Bianca Belair | W | auto</pre>
   ["emp", "emn", "emd"].forEach(function (id) { $(id).addEventListener("change", drawEmbed); });
   $("emcopyt").onclick = function () { if ($("emtable").value) copyText($("emtable").value, "Table HTML copied"); };
   $("emcopyi").onclick = function () { if ($("emif").value) copyText($("emif").value, "iframe code copied"); };
+
+  // help text lives behind a small "?" by each setting; the full explanations are on the How it works tab
+  (function () {
+    var n = 0;
+    [].forEach.call(document.querySelectorAll('section[data-view="build"] .panel .hint:not([id])'), function (h) {
+      var lab = h.getAttribute("data-for") ? document.querySelector('label[for="' + h.getAttribute("data-for") + '"]') : null, el = lab ? null : h.previousElementSibling;
+      while (el && !lab) { if (el.matches && el.matches("label.f, h3")) lab = el; else if (el.querySelectorAll) { var ls = el.querySelectorAll("label.f"); lab = ls.length ? ls[ls.length - 1] : null; } el = lab ? null : el.previousElementSibling; }
+      if (!lab) return;
+      var id = "help" + (++n), b = document.createElement("button");
+      b.type = "button"; b.className = "helpq"; b.textContent = "?"; b.setAttribute("aria-expanded", "false"); b.setAttribute("aria-controls", id); b.title = "What's this?";
+      h.id = id; h.classList.add("help"); h.hidden = true;
+      b.onclick = function (e) { e.preventDefault(); e.stopPropagation(); h.hidden = !h.hidden; b.setAttribute("aria-expanded", String(!h.hidden)); };
+      var ql = lab.querySelector(".qlink"); ql ? lab.insertBefore(b, ql) : lab.appendChild(b);
+    });
+  })();
 
   function textOut() {
     if (!LAST) return "";
