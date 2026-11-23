@@ -1,0 +1,328 @@
+# name: 2026 Donruss Racing
+# sport: NASCAR
+# added: 2026-11-22
+# source:
+# note: Official Panini checklist (Donruss Donruss CSV)
+
+[base]
+AJ Allmendinger
+Alan Kulwicki
+Alex Bowman
+Andres Perez De Lara
+Anthony Alfredo
+Aric Almirola
+Austin Beers
+Austin Cindric
+Austin Dillon
+Austin Hill
+Blaine Perkins
+Bobby Labonte
+Brad Keselowski
+Brandon Jones
+Brenden "Butterbean" Queen
+Brent Crews
+Bubba Wallace
+Carl Edwards
+Carson Hocevar
+Carson Kvapil
+Chandler Smith
+Chase Briscoe
+Chase Elliott
+Chris Buescher
+Christian Eckes
+Christopher Bell
+Clint Bowyer
+Cole Custer
+Connor Hall
+Connor Zilisch
+Corey Day
+Corey Heim
+Dale Earnhardt Jr
+Dale Jarrett
+Danica Patrick
+Daniel Dye
+Daniel Hemric
+Daniel Suarez
+Darrell Waltrip
+Davey Allison
+Dawson Sutton
+Denny Hamlin
+Erik Jones
+Ernie Irvan
+Frankie Muniz
+Gio Ruggiero
+Harrison Burton
+Jake Garcia
+Jamie McMurray
+Jeb Burton
+Jeff Burton
+Jeff Gordon
+Jeremy Clements
+Jesse Love
+Jimmie Johnson
+Joey Logano
+John Hunter Nemechek
+John Paul Southern
+Josh Berry
+Josh Williams
+Justin Allgaier
+Justin Bonsignore
+Justin Haley
+Kaden Honeycutt
+Kasey Kahne
+Ken Schrader
+Kevin Harvick
+Kurt Busch
+Kyle Busch
+Kyle Larson
+Kyle Petty
+Landon Huffman
+Layne Riggs
+Luke Fenhaus
+Martin Truex Jr.
+Matt DiBenedetto
+Matt Kenseth
+Michael McDowell
+Nick Sanchez
+Noah Gragson
+Parker Retzlaff
+Rajah Caruth
+Richard Petty
+Ricky Stenhouse Jr.
+Riley Herbst
+Ross Chastain
+Rusty Wallace
+Ryan Blaney
+Ryan Newman
+Ryan Preece
+Ryan Truex
+Sally Mott
+Sam Mayer
+Sammy Smith
+Shane Van Gisbergen
+Sheldon Creed
+Spencer Boyd
+Takuma Koga
+Tanner Gray
+Taylor Gray
+Terry Labonte
+Todd Gilliland
+Toni Breidinger
+Ty Dillon
+Ty Gibbs
+Tyler Reddick
+William Byron
+William Sawalich
+Zachary Tinkle
+Zane Smith
+
+[auto]
+Alan Gustafson
+Alex Bowman
+Andres Perez De Lara
+Anthony Alfredo
+Aric Almirola
+Austin Beers
+Austin Cindric
+Austin Dillon
+Austin Hill
+Bayley Currey
+Ben Rhodes
+Blaine Perkins
+Blake Harris
+Bobby Labonte
+Brad Keselowski
+Brandon Jones
+Brenden "Butterbean" Queen
+Brennan Poole
+Brett Moffitt
+Carl Edwards
+Carson Hocevar
+Carson Kvapil
+Chad Knaus
+Chandler Smith
+Chase Briscoe
+Chase Elliott
+Chris Buescher
+Christian Eckes
+Cliff Daniels
+Clint Bowyer
+Cody Ware
+Cole Custer
+Connor Hall
+Connor Zilisch
+Corey Day
+Corey Heim
+Dale Earnhardt Jr
+Dale Jarrett
+Danica Patrick
+Daniel Dye
+Daniel Hemric
+Daniel Suarez
+David Ragan
+Dawson Sutton
+Eric Estepp
+Erik Jones
+Ernie Irvan
+Garrett Smithley
+Geoff Bodine
+Gio Ruggiero
+Hailie Deegan
+Harrison Burton
+Harry Gant
+Jack Wood
+Jake Garcia
+Jamie McMurray
+Jeb Burton
+Jeff Burton
+Jeff Gordon
+Jeffrey Earnhardt
+Jeremy Clements
+Jesse Love
+Jimmie Johnson
+Joey Gase
+Joey Logano
+John Hunter Nemechek
+John Paul Southern
+Josh Berry
+Josh Williams
+Justin Bonsignore
+Justin Haley
+Kaden Honeycutt
+Kasey Kahne
+Ken Schrader
+Kevin Harvick
+Kyle Busch
+Kyle Larson
+Kyle Petty
+Kyle Weatherman
+Landon Huffman
+Lawless Alan
+Layne Riggs
+Luke Fenhaus
+Matt DiBenedetto
+Matt Kenseth
+Matt Mills
+Michael McDowell
+Nick Sanchez
+Noah Gragson
+Parker Retzlaff
+Rajah Caruth
+Richard Petty
+Ricky Stenhouse Jr.
+Riley Herbst
+Ross Chastain
+Rusty Wallace
+Ryan Blaney
+Ryan Preece
+Ryan Truex
+Ryan Vargas
+Sally Mott
+Sam Mayer
+Sammy Smith
+Shane Van Gisbergen
+Sheldon Creed
+Spencer Boyd
+Takuma Koga
+Tanner Gray
+Taylor Gray
+Terry Labonte
+Thad Moffitt
+Todd Gilliland
+Tommy Joe Martins
+Toni Breidinger
+Ty Dillon
+Tyler Ankrum
+Tyler Reddick
+William Byron
+William Sawalich
+Zachary Tinkle
+Zane Smith
+
+[insert]
+AJ Allmendinger
+Alex Bowman
+Austin Dillon
+Brad Keselowski
+Brenden "Butterbean" Queen
+Brent Crews
+Bubba Wallace
+Carl Edwards
+Carson Hocevar
+Carson Kvapil
+Chad Knaus
+Chase Elliott
+Chris Buescher
+Christian Eckes
+Christopher Bell
+Clint Bowyer
+Cody Ware
+Connor Hall
+Connor Mosack
+Connor Zilisch
+Corey Day
+Corey Heim
+Dale Earnhardt Jr
+Dale Jarrett
+Danica Patrick
+Daniel Dye
+Daniel Hemric
+Daniel Suarez
+David Ragan
+Denny Hamlin
+Erik Jones
+Garrett Smithley
+Gio Ruggiero
+Haas Factory Team
+Hendrick Motorsports
+Jamie McMurray
+Jeff Gordon
+Jeremy Clements
+Jesse Love
+Jimmie Johnson
+Joe Gibbs Racing
+Joey Logano
+John Hunter Nemechek
+Josh Berry
+Josh Williams
+JR Motorsports
+Justin Allgaier
+Kaulig Racing
+Kevin Harvick
+Kurt Busch
+Kyle Busch
+Kyle Larson
+Landon Cassill
+Landon Huffman
+Layne Riggs
+Legacy Motor Club
+Martin Truex Jr.
+Matt DiBenedetto
+Matt Kenseth
+NASCAR Cup Series
+Noah Gragson
+Rajah Caruth
+Richard Childress Racing
+Richard Petty
+Ross Chastain
+Roush Fenway Keselowski
+Rusty Wallace
+Ryan Blaney
+Ryan Newman
+Ryan Preece
+Ryan Vargas
+Sam Mayer
+Sammy Smith
+Shane Van Gisbergen
+Sheldon Creed
+Taylor Gray
+Team Penske
+Team Trackhouse
+Todd Gilliland
+Tommy Joe Martins
+Toni Breidinger
+Ty Gibbs
+Tyler Ankrum
+Tyler Reddick
+William Byron
+William Sawalich

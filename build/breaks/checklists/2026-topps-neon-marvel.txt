@@ -1,8 +1,7 @@
 # name: 2026 Topps Neon Marvel
 # sport: Marvel
 # added: 2026-11-22
-# source: https://www.breakninja.com/entertainment/2026-Topps-Neon-Marvel-Card-Checklist.php
-# note: Breakninja.com checklist (no official list on the maker's checklist page yet); sketch cards left out
+# source: https://cdn.shopify.com/s/files/1/0662/9749/5709/files/CheckList_26MRVN_VERSION3.pdf
 
 [base]
 Abomination
@@ -68,7 +67,7 @@ Gladiator
 Green Goblin
 Groot
 Gwenpool
-Hallows Eve
+Hallows' Eve
 Havok
 Hawkeye
 Hela
@@ -206,39 +205,22 @@ X-23
 Yondu
 
 [auto]
-Anjali Kunapaneni as Jeanne Foucault
-Bella Rachlin Dark Phoenix
-Bella Rachlin Galactus
-Bella Rachlin Ghost Spider
-Bella Rachlin Human Torch
-Bella Rachlin Iron Man
-Bella Rachlin Mister Fantastic
-Bella Rachlin Spider-Man
-Bella Rachlin Storm
-Bella Rachlin Thanos
-Bella Rachlin Thor
-Charlie Cox as Daredevil
-Ettore Big E Ewen as Bulldozer
-Eugene Byrd as Lonnie Lincoln
-Grace Song as Nico Minoru
-Hudson Thames as Spider-Man
-Jake Green as Butane
-Jonathan Medina as Scorpion
-Kari Wahlgren as May Parker
-Leilani Barrett as Big Donovan
-Leirix Black Cat
-Leirix Carnage
-Leirix Emma Frost
-Leirix Venom
-Leirix Wolverine
-Mick Wingert as Iron Man
-Robin Atkin Downes as Doctor Strange
-Rose Besch Ghost-Spider
-Rose Besch Psylocke
-Rose Besch Rogue
-Rose Besch Scarlet Witch
-Rose Besch Silk
-Sarah Natochenny as Mila Masaryk
+Anjali Kunapaneni
+Bella Rachlin
+Charlie Cox
+Ettore "Big E" Ewen Bulldozer
+Eugene Byrd
+Grace Song
+Hudson Thames
+Jake Green
+Jonathan Medina
+Kari Wahlgren
+Leilani Barrett
+Leirix
+Mick Wingert
+Robin Atkin Downes
+Rose Besch
+Sarah Natochenny
 
 [insert]
 Alligator Loki
@@ -265,7 +247,6 @@ Clea
 Cosmo
 Cyclops
 Daredevil
-Dark Phoenix
 Devil Dinosaur
 Doctor Doom
 Doctor Strange
@@ -277,7 +258,7 @@ Gambit
 Ghost Rider
 Ghost-Spider
 Green Goblin
-Hallows Eve
+Hallows' Eve
 Harry Osborn
 Havok
 Hela
@@ -302,14 +283,11 @@ Mary Jane
 May Parker
 Mikhail Sytsevich
 Mila Masaryk
-Miles Morales
 Ms. Marvel
 Nico Minoru
 Norman Osborn
-Nova
 Omega Red
 Onslaught
-Phoenix
 Professor X
 Psylocke
 Red Goblin
@@ -319,7 +297,6 @@ Scorpion
 She-Hulk
 Silk
 Spider-Man
-Storm
 Super-Skrull
 Symbiotic Alien
 Terrax The Tamer
@@ -332,3 +309,23 @@ Venom
 Wiccan
 Wolverine
 X-23
+
+[multi]
+Venom / Carnage
+Miles Morales / Ghost-Spider
+Mary Jane / Black Cat
+Storm / Black Panther
+Wolverine / Hulk
+X-23 / Cyclops
+Daredevil / She-Hulk
+Iron Man / Captain America
+Nova / Thor
+Spider-Man / Black Widow
+Venom / Spider-Man
+Carnage / Spider-Man / Red Goblin
+Red Goblin / Green Goblin
+Black Cat / Mary Jane
+Phoenix / Dark Phoenix
+Carnage / Venom
+Wolverine / Spider-Man / Venom
+Miles Morales / Green Goblin

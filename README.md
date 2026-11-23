@@ -181,8 +181,8 @@ team spot, box by box. Linked from the storefront's Breaks menu; every page carr
 - **Breakninja lists (Nov 22, 2026):** when the maker hasn't posted a checklist, breakninja.com's card-by-card tables
   (name, number, set, print run, team) are scraped in the built-in browser, turned into a Panini-style CSV (multi-person
   sets regrouped, sketch cards dropped) and run through `panini_csv.py` and `depth.py --panini`, so print runs drive
-  Player value. Used for Select and Immaculate NASCAR, Joy of Basketball, Five Star Baseball,
-  Neon Marvel, Mint Marvel and Stadium Club Chrome UEFA. Each file's `# source:` line points at the Breakninja page.
+  Player value. Fallback only: as of Nov 22 night every product is back on an official list (Topps PDFs, Panini
+  CSVs, the Kakawow spreadsheet posted by GTS Distribution).
 - **Panini print runs:** Panini publishes no pack odds. `depth.py --panini` reads each CSV's SEQUENCE column:
   per root set, each player's most plentiful version (unnumbered = 1,000 copies), median across players,
   scored like odds (fewer copies = rarer). Mass products (Donruss) are mostly unnumbered so little changes;

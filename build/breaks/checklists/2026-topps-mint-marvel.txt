@@ -1,8 +1,7 @@
 # name: 2026 Topps Mint Marvel
 # sport: Marvel
 # added: 2026-11-22
-# source: https://www.breakninja.com/entertainment/2026-Topps-Mint-Marvel-Card-Checklist.php
-# note: Breakninja.com checklist (no official list on the maker's checklist page yet); sketch cards left out
+# source: https://cdn.shopify.com/s/files/1/0662/9749/5709/files/26MARM_Checklist.pdf
 
 [base]
 Adam Warlock
@@ -24,10 +23,9 @@ Blue Marvel
 Bullseye
 Cable
 Captain America
-Captain America Sam Wilson
+Captain America (Sam Wilson)
 Captain Marvel
 Carnage
-Cloak and Dagger
 Colossus
 Corruption
 Cyclops
@@ -95,6 +93,7 @@ Odin
 Phantom Rider
 Phoenix
 Professor X
+Punisher
 Red Hulk
 Rocket Raccoon
 Rogue
@@ -137,14 +136,14 @@ Adi Granov
 Andy Kubert
 Arthur Adams
 Bill Sienkiewicz
-Bradley Cooper as Rocket
+Bradley Cooper
 Christopher Yost
 Craig Kyle
 Donny Cates
 Frank Miller
 Greg Capullo
-Hailee Steinfeld as Kate Bishop
-Hugh Jackman as Wolverine
+Hailee Steinfeld
+Hugh Jackman
 Jason Aaron
 Jonathan Hickman
 Joshua Cassara
@@ -153,17 +152,17 @@ Marc Silvestri
 Mark Bagley
 Mark Brooks
 Mike Zeck
-Oscar Isaac as Moon Knight
+Oscar Isaac
 Paco Medina
 Rod Reis
 Ryan Ottley
 Ryan Stegman
-Samuel L. Jackson as Nick Fury
+Samuel L. Jackson Nick Fury
 Scott Williams
 Stan Lee
 Steve McNiven
 Tony Daniel
-Vincent DOnofrio as Mayor Wilson Fisk
+Vincent D'Onofrio Mayor Wilson Fisk
 Whilce Portacio
 Zeb Wells
 
@@ -185,7 +184,6 @@ Carnage
 Colossus
 Cyclops
 Daredevil
-Daredevil 1964 Number 16
 Doctor Doom
 Doctor Strange
 Domino
@@ -213,12 +211,6 @@ Magik
 Magneto
 Major League Venom
 Mania
-Marvel Team-Up 1972 Number 150
-Marvel Team-Up 1972 Number 27
-Marvel Team-Up 1972 Number 43
-Marvel Team-Up 1972 Number 53
-Marvel Team-Up 1972 Number 54
-Marvel Team-Up Annual 1976 Number 1
 Mary Jane
 Miles Morales
 Misery
@@ -232,7 +224,6 @@ Phoenix
 Polaris
 Professor X
 Psylocke
-Punisher
 Quicksilver
 Rachel Summers
 Red Goblin
@@ -250,19 +241,14 @@ Spider-Man
 Storm
 Symbiote Spider-Man 2099
 Thanos
-The Amazing Spider-Man 1963 Number 100
-The Amazing Spider-Man 1963 Number 101
-The Amazing Spider-Man 1963 Number 134
-The Amazing Spider-Man 1963 Number 16
-The Amazing Spider-Man 1963 Number 20
-The Amazing Spider-Man 1963 Number 345
-The Amazing Spider-Man 1963 Number 5
 The Thing
 Thor
 Toxin
-Uncanny X-Men 1963 Number 35
 Venom
 Venom 2099
 Widow
 Wolverine
 X-23
+
+[multi]
+Cloak / Dagger

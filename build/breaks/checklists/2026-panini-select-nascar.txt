@@ -1,8 +1,8 @@
-# name: 2026 Panini Select NASCAR
+# name: 2026 Panini Select Racing
 # sport: NASCAR
 # added: 2026-11-22
-# source: https://www.breakninja.com/racing/2026-Panini-Select-Nascar-Racing-Card-Checklist.php
-# note: Breakninja.com checklist (no official list on the maker's checklist page yet); sketch cards left out
+# source:
+# note: Official Panini checklist (Panini Select CSV)
 
 [base]
 Alex Bowman
@@ -18,7 +18,7 @@ Blaine Perkins
 Brad Keselowski
 Brandon Jones
 Brayton Laster
-Brenden Butterbean Queen
+Brenden "Butterbean" Queen
 Brennan Poole
 Brent Crews
 Bubba Wallace
@@ -118,7 +118,7 @@ Blaine Perkins
 Bobby Labonte
 Brad Keselowski
 Brayton Laster
-Brenden Butterbean Queen
+Brenden "Butterbean" Queen
 Brittney Zamora
 Carl Edwards
 Carson Hocevar
@@ -213,7 +213,7 @@ B.J. McLeod
 Bobby Labonte
 Brad Keselowski
 Brandon Jones
-Brenden Butterbean Queen
+Brenden "Butterbean" Queen
 Brent Crews
 Bubba Wallace
 Carl Edwards
@@ -282,13 +282,23 @@ William Byron
 William Sawalich
 
 [multi]
-Alan Gustafson / Chase Elliott
 Alex Bowman / Blake Harris
-Brent Crews / William Sawalich
+Alan Gustafson / Chase Elliott
 Cliff Daniels / Kyle Larson
-Connor Zilisch / Shane Van Gisbergen
+William Byron / Rudy Fugle
+Rajah Caruth / Justin Allgaier
 Dale Earnhardt Jr / Kelley Earnhardt Miller
-Justin Allgaier / Rajah Caruth
 Keelan Harvick / Kevin Harvick
 Kurt Busch / Kyle Busch
+Shane Van Gisbergen / Connor Zilisch
+William Sawalich / Brent Crews
+Blake Harris / Alex Bowman
+Chase Elliott / Alan Gustafson
+Kyle Larson / Cliff Daniels
 Rudy Fugle / William Byron
+Kevin Harvick / Keelan Harvick
+Kyle Busch / Kurt Busch
+Brent Crews / William Sawalich
+Justin Allgaier / Rajah Caruth
+Kelley Earnhardt Miller / Dale Earnhardt Jr
+Connor Zilisch / Shane Van Gisbergen

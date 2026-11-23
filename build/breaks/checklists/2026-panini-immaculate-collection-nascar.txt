@@ -1,8 +1,8 @@
-# name: 2026 Panini Immaculate Collection NASCAR
+# name: 2026 Panini Immaculate Collection Racing
 # sport: NASCAR
 # added: 2026-11-22
-# source: https://www.breakninja.com/racing/2026-Panini-Immaculate-Collection-Nascar-Racing-Card-Checklist.php
-# note: Breakninja.com checklist (no official list on the maker's checklist page yet); sketch cards left out
+# source:
+# note: Official Panini checklist (Panini Immaculate Collection CSV)
 
 [base]
 Alex Bowman
@@ -12,7 +12,7 @@ Austin Hill
 Bobby Labonte
 Brad Keselowski
 Brandon Jones
-Brenden Butterbean Queen
+Brenden "Butterbean" Queen
 Bubba Wallace
 Carl Edwards
 Carson Hocevar
@@ -104,7 +104,7 @@ Bobby Labonte
 Brad Keselowski
 Brandon Jones
 Brayton Laster
-Brenden Butterbean Queen
+Brenden "Butterbean" Queen
 Brennan Poole
 Brett Moffitt
 Brexton Busch
@@ -221,7 +221,6 @@ AJ Allmendinger
 Alex Bowman
 Alex Labbe
 Andres Perez De Lara
-Anthony Alfredo
 Aric Almirola
 Austin Cindric
 Austin Dillon
@@ -229,13 +228,12 @@ Austin Hill
 B.J. McLeod
 Bayley Currey
 Ben Rhodes
-Bobby Labonte
 Brad Keselowski
 Brad Smith
 Brandon Jones
 Brayton Laster
 Brendan Gaughan
-Brenden Butterbean Queen
+Brenden "Butterbean" Queen
 Brennan Poole
 Brett Moffitt
 Brittney Zamora
@@ -246,11 +244,9 @@ Carson Hocevar
 Carson Kvapil
 Chad Knaus
 Chandler Smith
-Chase Briscoe
 Chase Elliott
 Chris Buescher
 Christian Eckes
-Christopher Bell
 Cliff Daniels
 Cody Ware
 Colby Howard
@@ -258,7 +254,6 @@ Cole Custer
 Cole Whitt
 Connor Mosack
 Connor Zilisch
-Corey Day
 Corey Heim
 Corey LaJoie
 Dale Earnhardt Jr
@@ -289,7 +284,6 @@ Joey Logano
 John Hunter Nemechek
 Jordan Anderson
 Josh Berry
-Josh Bilicki
 Josh Williams
 Juan Pablo Montoya
 Justin Allgaier
@@ -312,7 +306,6 @@ Michael McDowell
 Myatt Snider
 Nick Sanchez
 Noah Gragson
-Parker Retzlaff
 Paul Menard
 Rajah Caruth
 Reed Sorenson
@@ -324,7 +317,6 @@ Ryan Newman
 Ryan Preece
 Ryan Reed
 Ryan Truex
-Sam Mayer
 Sammy Smith
 Shane Van Gisbergen
 Sheldon Creed
@@ -339,28 +331,136 @@ Ty Dillon
 Ty Gibbs
 Tyler Reddick
 William Byron
-William Sawalich
-Zane Smith
 
 [multi]
-AJ Allmendinger / Brenden Butterbean Queen / Ty Dillon
-Austin Cindric / Joey Logano / Ryan Blaney
-Austin Dillon / Austin Hill / Jesse Love
+Carson Kvapil / Sammy Smith
+Chase Elliott / Kyle Larson
+Ross Chastain / Daniel Suarez
+Sheldon Creed / Sam Mayer
+Darrell Waltrip / Harry Gant
+Nick Sanchez / Corey Heim
+Ricky Stenhouse Jr. / Kevin Harvick
+Taylor Gray / Tanner Gray
+Jeff Burton / Ward Burton
+Jesse Love / Austin Hill
+John Hunter Nemechek / Erik Jones
+Ty Dillon / Zane Smith
+Ty Majeski / Ben Rhodes
+Chandler Smith / Layne Riggs
+Kaden Honeycutt / Gio Ruggiero
+Sammy Smith / Carson Kvapil
+Kyle Larson / Chase Elliott
+Corey Heim / Nick Sanchez
+Austin Hill / Jesse Love
+Erik Jones / John Hunter Nemechek
+Layne Riggs / Chandler Smith
+Gio Ruggiero / Kaden Honeycutt
+Daniel Suarez / Ross Chastain
+Sam Mayer / Sheldon Creed
+Kevin Harvick / Ricky Stenhouse Jr.
+Tanner Gray / Taylor Gray
+Ward Burton / Jeff Burton
+Zane Smith / Ty Dillon
+Harry Gant / Darrell Waltrip
+Ben Rhodes / Ty Majeski
+AJ Allmendinger / Ty Dillon
+Chase Briscoe / Ty Gibbs
+Ryan Blaney / Joey Logano
+William Byron / Alex Bowman
+Brad Keselowski / Chris Buescher
+Connor Zilisch / Shane Van Gisbergen
+Zane Smith / Todd Gilliland
+Tyler Reddick / Bubba Wallace
+Garrett Smithley / Josh Bilicki
+Justin Allgaier / Sammy Smith
+Corey Day / Rajah Caruth
+Brandon Jones / William Sawalich
+Jeff Gordon / Jimmie Johnson
+Anthony Alfredo / Parker Retzlaff
+Bobby Labonte / Tony Stewart
+Kyle Busch / Austin Dillon
+Christopher Bell / Denny Hamlin
+Ty Gibbs / Chase Briscoe
+Joey Logano / Ryan Blaney
+Alex Bowman / William Byron
+Chris Buescher / Brad Keselowski
+Shane Van Gisbergen / Connor Zilisch
+Todd Gilliland / Zane Smith
+Josh Bilicki / Garrett Smithley
+Sammy Smith / Justin Allgaier
+Rajah Caruth / Corey Day
+Jimmie Johnson / Jeff Gordon
+Austin Dillon / Kyle Busch
+Ty Dillon / AJ Allmendinger
+Denny Hamlin / Christopher Bell
+Bubba Wallace / Tyler Reddick
+William Sawalich / Brandon Jones
+Parker Retzlaff / Anthony Alfredo
+Tony Stewart / Bobby Labonte
+Toni Breidinger / Danica Patrick / Hailie Deegan
+Austin Cindric / Ryan Blaney / Joey Logano
+Zane Smith / Noah Gragson / Todd Gilliland
+Shane Van Gisbergen / Ross Chastain / Connor Zilisch
 Brad Keselowski / Chris Buescher / Ryan Preece
-Brandon Jones / Brent Crews / Taylor Gray
-Bubba Wallace / Corey Heim / Tyler Reddick
-Carl Edwards / Mark Martin / Matt Kenseth
-Carson Hocevar / Daniel Suarez / Michael McDowell
-Carson Kvapil / Justin Allgaier / Sammy Smith
-Chandler Smith / Layne Riggs / Noah Gragson
-Chase Briscoe / Christopher Bell / Denny Hamlin
-Chase Elliott / Kyle Larson / William Byron
-Christian Eckes / Daniel Dye / Daniel Hemric
-Connor Zilisch / Ross Chastain / Shane Van Gisbergen
-Dale Earnhardt Jr / Jeff Gordon / Jimmie Johnson
-Danica Patrick / Hailie Deegan / Toni Breidinger
-Darrell Waltrip / Jeff Gordon / Richard Petty
-Erik Jones / Jimmie Johnson / John Hunter Nemechek
-Gio Ruggiero / Kaden Honeycutt / Tanner Gray
+Michael McDowell / Daniel Suarez / Carson Hocevar
 Harrison Burton / Jeff Burton / Ward Burton
-Noah Gragson / Todd Gilliland / Zane Smith
+Darrell Waltrip / Jeff Gordon / Richard Petty
+Jimmie Johnson / Jeff Gordon / Dale Earnhardt Jr
+Matt Kenseth / Mark Martin / Carl Edwards
+Hailie Deegan / Toni Breidinger / Danica Patrick
+Ryan Blaney / Joey Logano / Austin Cindric
+Connor Zilisch / Shane Van Gisbergen / Ross Chastain
+Chris Buescher / Brad Keselowski / Ryan Preece
+Richard Petty / Darrell Waltrip / Jeff Gordon
+Carl Edwards / Matt Kenseth / Mark Martin
+Toni Breidinger / Hailie Deegan / Danica Patrick
+Todd Gilliland / Zane Smith / Noah Gragson
+Ross Chastain / Connor Zilisch / Shane Van Gisbergen
+Ryan Preece / Chris Buescher / Brad Keselowski
+Carson Hocevar / Michael McDowell / Daniel Suarez
+Ward Burton / Harrison Burton / Jeff Burton
+Jeff Gordon / Richard Petty / Darrell Waltrip
+Dale Earnhardt Jr / Jimmie Johnson / Jeff Gordon
+Ward Burton / Jeff Burton / Harrison Burton
+Brad Keselowski / Ryan Preece / Chris Buescher
+Jeff Burton / Ward Burton / Harrison Burton
+Jeff Gordon / Dale Earnhardt Jr / Jimmie Johnson
+Joey Logano / Austin Cindric / Ryan Blaney
+Noah Gragson / Zane Smith / Todd Gilliland
+Kyle Larson / Chase Elliott / William Byron
+Tyler Reddick / Bubba Wallace / Corey Heim
+Chris Buescher / Ryan Preece / Brad Keselowski
+Joey Logano / Ryan Blaney / Austin Cindric
+Chandler Smith / Noah Gragson / Layne Riggs
+Sammy Smith / Carson Kvapil / Justin Allgaier
+Austin Hill / Austin Dillon / Jesse Love
+John Hunter Nemechek / Erik Jones / Jimmie Johnson
+Brenden "Butterbean" Queen / Ty Dillon / AJ Allmendinger
+Gio Ruggiero / Tanner Gray / Kaden Honeycutt
+Brent Crews / Taylor Gray / Brandon Jones
+Daniel Dye / Daniel Hemric / Christian Eckes
+Chase Elliott / William Byron / Kyle Larson
+Corey Heim / Tyler Reddick / Bubba Wallace
+Christopher Bell / Denny Hamlin / Chase Briscoe
+Ryan Preece / Brad Keselowski / Chris Buescher
+Carson Kvapil / Justin Allgaier / Sammy Smith
+Jesse Love / Austin Dillon / Austin Hill
+Erik Jones / John Hunter Nemechek / Jimmie Johnson
+Tanner Gray / Kaden Honeycutt / Gio Ruggiero
+William Byron / Kyle Larson / Chase Elliott
+Denny Hamlin / Chase Briscoe / Christopher Bell
+Justin Allgaier / Sammy Smith / Carson Kvapil
+Erik Jones / Jimmie Johnson / John Hunter Nemechek
+AJ Allmendinger / Ty Dillon / Brenden "Butterbean" Queen
+Daniel Hemric / Christian Eckes / Daniel Dye
+Ryan Blaney / Austin Cindric / Joey Logano
+Noah Gragson / Layne Riggs / Chandler Smith
+Austin Hill / Jesse Love / Austin Dillon
+Jimmie Johnson / John Hunter Nemechek / Erik Jones
+Brandon Jones / Taylor Gray / Brent Crews
+Christian Eckes / Daniel Dye / Daniel Hemric
+Layne Riggs / Chandler Smith / Noah Gragson
+Daniel Hemric / Daniel Dye / Christian Eckes
+Bubba Wallace / Corey Heim / Tyler Reddick
+AJ Allmendinger / Brenden "Butterbean" Queen / Ty Dillon
+Taylor Gray / Brandon Jones / Brent Crews

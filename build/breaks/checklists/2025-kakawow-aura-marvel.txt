@@ -1,0 +1,247 @@
+# name: 2025 Kakawow Aura Marvel
+# sport: Marvel
+# added: 2026-11-22
+# source: https://gogts.net/wp-content/uploads/2025/05/2025-KAKAWOW-AURA-Marvel-Trading-Cards-Checklist.xlsx
+# note: Official Kakawow checklist spreadsheet (posted by GTS Distribution); Script Art cards are facsimile signatures, counted as autographs
+
+[base]
+Aero
+Angel
+Ant-Man
+Bishop
+Black Bolt
+Black Cat
+Black Panther
+Black Widow
+Blade
+Bullseye
+Cable
+Captain America
+Captain Marvel
+Carnage
+Cyclops
+Daredevil
+Doctor Doom
+Doctor Octopus
+Doctor Strange
+Elektra
+Emma Frost
+Falcon
+Gamora
+Ghost Rider
+Ghost-Spider
+Groot
+Gwenpool
+Hawkeye
+Hela
+Howard The Duck
+Hulk
+Human Torch
+Invisible Woman
+Iron Fist
+Iron Man
+Jean Grey
+Kang
+Loki
+M.O.D.O.K.
+Magneto
+Malekith
+Medusa
+Miles Morales
+Mister Fantastic
+Moon Knight
+Morbius
+Ms. Marvel
+Ms.America
+Mysterio
+Mystique
+Namor
+Proxima Midnight
+Psylocke
+Quicksilver
+Red Hulk
+Rocket Raccoon
+Sabretooth
+Sandman
+Scarlet Witch
+Shang-Chi
+She-Hulk
+Shuri
+Silver Surfer
+Spider-Girl
+Spider-Ham
+Spider-Man
+Spider-Man 2099
+Spider-Woman
+Star-Lord
+Storm
+Thanos
+Thing
+Thor
+Ultron
+Valkyrie
+Venom
+Vision
+Viv Vision
+War Machine
+Wasp
+White Tiger
+Winter Soldier
+Wolverine
+
+[auto]
+Ant-Man
+Black Panther
+Black Widow
+Captain America
+Captain Marvel
+Cyclops
+Daredevil
+Deadpool
+Doctor Strange
+Hulk
+Iron Man
+Jean Grey
+Loki
+Quicksilver
+Scarlet Witch
+Spider-Man
+Storm
+Thanos
+Thor
+Tom Holland Autograph
+Wasp
+Wolverine
+
+[insert]
+Aero
+Angel
+Ant-Man
+Avengers Disassembled
+Bishop
+Black Bolt
+Black Cat
+BLACK PANTHER
+Black Panther
+Black Widow
+BLACK WIDOW
+Blade
+Bullseye
+Cable
+Captain America
+Captain Marvel
+Carnage
+Civil War
+CYCLOPS
+Cyclops
+Daredevil
+DAREDEVIL
+Daredevil: Born Again
+Dark Phoenix
+Deadpool
+Doctor Doom
+Doctor Doom's Triumph and Fall
+Doctor Octopus
+Doctor Strange
+DOCTOR STRANGE
+Elektra
+Emma Frost
+Falcon
+Fantastic Four
+Fear Itself
+Gamora
+Ghost Rider
+Ghost-Spider
+Groot
+Gwenpool
+Hawkeye
+Hela
+Howard The Duck
+HULK
+Hulk
+Human Torch
+HUMAN TORCH
+Infinity Gauntlet
+Invisible Woman
+Iron Fist
+Iron Man
+IRON MAN
+Jean Grey
+Kang
+Loki
+M.O.D.O.K.
+MAGNETO
+Magneto
+Malekith
+Medusa
+Miles Morales
+Mister Fantastic
+Mjolnir
+Moon Knight
+Morbius
+Ms. Marvel
+Ms. Marvel Returns
+Ms.America
+Mysterio
+Mystique
+Namor
+Proxima Midnight
+Psylocke
+Quicksilver
+Red Hulk
+Rocket Raccoon
+Sabretooth
+Sandman
+Scarlet Witch
+SCARLET WITCH
+Secret Invasion
+Secret Wars
+Shang-Chi
+She-Hulk
+Shuri
+SILVER SURFER
+Silver Surfer
+Spider-Girl
+Spider-Ham
+SPIDER-MAN
+Spider-Man
+Spider-Man 2099
+Spider-Woman
+Star-Lord
+Storm
+Thanos
+THANOS
+The Avengers assemble
+The Ballad of Beta Ray Bill
+The Clone Saga
+The Dark Phoenix Saga
+The Incredible Hulk: The Grey Hulk
+The rise and fall of the Phoenix Power
+The Thing
+Thing
+Thor
+THOR
+Ultron
+Valkyrie
+Venom
+VENOM
+VISION
+Vision
+Vision and the Scarlet Witch
+Viv Vision
+War Machine
+Wasp
+White Tiger
+Winter Soldier
+Wolverine
+WOLVERINE
+World War Hulk
+
+[multi]
+Iron Man / Captain America
+Spider-Man / Daredevil
+Scarlet Witch / Quicksilver
+Thor / Loki
+Iron Man / Captain America / Thor / Hulk
+Wolverine / Jean Grey / Storm / Cyclops
+Iron Man / Captain America / Thor / Hulk / Ant-Man / Wasp

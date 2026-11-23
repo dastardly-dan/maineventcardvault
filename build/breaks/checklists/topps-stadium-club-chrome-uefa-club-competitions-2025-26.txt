@@ -1,8 +1,7 @@
 # name: Topps Stadium Club Chrome UEFA Club Competitions 2025-26
 # sport: Soccer
 # added: 2026-11-22
-# source: https://www.breakninja.com/soccer/25-26-Topps-Stadium-Club-UEFA-Club-Competitions-Soccer-Card-Checklist.php
-# note: Breakninja.com checklist (no official list on the maker's checklist page yet); sketch cards left out
+# source: https://cdn.shopify.com/s/files/1/0739/2015/1805/files/Stadium_Club_Chrome_UCL_SUBJECT_TO_CHANGE_v2.pdf
 
 [base]
 Alan Shearer
@@ -10,26 +9,26 @@ Alexander Isak
 Antoine Griezmann
 Antoine Semenyo
 Antonio Vergara
-Arda Guler
+Arda Güler
 Bastian Schweinsteiger
-Bruno Guimaraes
+Bruno Guimarães
 Bukayo Saka
 Christian Kofane
 Cole Palmer
 Declan Rice
-Desire Doue
 Diego Maradona
 Dominic Solanke
 Dominik Szoboszlai
-Dro Fernandez
+Dro Fernández
+Désiré Doué
 Eberechi Eze
-Enzo Fernandez
+Enzo Fernández
 Erling Haaland
 Ernest Poku
-Estevao Willian
+Estêvão Willian
 Ethan Nwaneri
 Felix Nmecha
-Fermin Lopez
+Fermín López
 Fernando Torres
 Florian Wirtz
 Franco Mastantuono
@@ -40,28 +39,28 @@ Ibrahim Maza
 Ismael Saibari
 Jamal Musiala
 Jean-Pierre Papin
-Joao Neves
 Jobe Bellingham
 Johan Cruyff
+João Neves
 Jude Bellingham
-Julian Alvarez
-Junai Byfield
+Julián Alvarez
+Jun'ai Byfield
 Kenan Yildiz
 Kevin de Bruyne
 Khvicha Kvaratskhelia
-Kylian Mbappe
+Kylian Mbappé
 Lamine Yamal
-Lautaro Martinez
+Lautaro Martínez
 Lennart Karl
-Leroy Sane
+Leroy Sané
 Lionel Messi
-Luis Diaz
-Mahamadou Sangare
+Luis Díaz
+Mahamadou Sangaré
 Malik Tillman
 Marco Reus
 Marcus Rashford
 Marcus Thuram
-Martin Odegaard
+Martin Ødegaard
 Mathis Jangeal
 Mauro Icardi
 Max Dowman
@@ -73,14 +72,14 @@ Nick Woltemade
 Nico Schlotterbeck
 Noah Fernandez
 Nuno Mendes
-Ousmane Dembele
+Ousmane Dembélé
 Pedri
 Phil Foden
 Pierre-Emerick Aubameyang
 Pio Esposito
 Quentin Ndjantou
 Raphinha
-Rasmus Hojlund
+Rasmus Højlund
 Rayan Cherki
 Reggie Walsh
 Rio Ngumoha
@@ -97,7 +96,7 @@ Timothy Weah
 Tosin Adarabioyo
 Trent Alexander-Arnold
 Victor Osimhen
-Viktor Gyokeres
+Viktor Gyökeres
 Vini Jr.
 Virgil van Dijk
 Vitinha
@@ -111,17 +110,16 @@ Adriano
 Alan Shearer
 Alessandro Del Piero
 Andrea Pirlo
-Andres Iniesta
+Andrés Iniesta
 Andy Robertson
 Antoine Griezmann
 Antoine Semenyo
-Antonin Kinsky
+Antonín Kinský
 Axel Tape
 Bastian Schweinsteiger
 Ben White
-Bruno Guimaraes
+Bruno Guimarães
 Bukayo Saka
-Christian Kofane
 Clarence Seedorf
 Cole Palmer
 David Beckham
@@ -133,27 +131,26 @@ Didier Deschamps
 Diego Simeone
 Divine Mukasa
 Dominic Solanke
-Dro Fernandez
+Dro Fernández
 Eberechi Eze
 Edinson Cavani
-Enzo Fernandez
+Enzo Fernández
 Erling Haaland
 Esteban Cambiasso
-Estevao Willian
+Estêvão Willian
 Federico DiMarco
 Federico Valverde
 Fernando Torres
-Francisco Conceicao
-Franck Ribery
+Francisco Conceição
+Franck Ribéry
 Franco Mastantuono
-Frank Lampard
 Frank Rijkaard
 Gareth Bale
 George Weah
 Gianfranco Zola
 Giorgio Chiellini
 Giuliano Simeone
-Goncalo Ramos
+Gonçalo Ramos
 Harrison Murray-Campbell
 Harry Kane
 Heung-min Son
@@ -163,37 +160,34 @@ Ibrahim Maza
 Jacob Murphy
 Javier Zanetti
 Jayden Danns
-Jeremy Doku
 Jimmy Floyd Hasselbaink
-Joao Neves
 Jofre Torrents
+João Neves
 Jude Bellingham
-Julian Alvarez
-Kaka
+Julián Alvarez
+Jérémy Doku
 Kenan Yildiz
 Kevin de Bruyne
 Khvicha Kvaratskhelia
 Lamine Yamal
-Lautaro Martinez
+Lautaro Martínez
 Lennart Karl
 Leonardo Bonucci
-Leroy Sane
+Leroy Sané
 Lewis Miley
 Lionel Messi
-Lothar Matthaus
+Lothar Matthäus
 Lucas Beraldo
-Luis Diaz
+Luis Díaz
 Luis Enrique
-Luis Figo
-Luis Suarez
-Luka Modric
-Mahamadou Sangare
+Luis Suárez
+Luís Figo
+Mahamadou Sangaré
 Malik Tillman
 Marcel Desailly
 Marco Reus
-Marco van Basten
 Marcus Thuram
-Mateo Kovacic
+Mateo Kovačić
 Matheus Nunes
 Max Dowman
 Michael Laudrup
@@ -202,13 +196,13 @@ Mika Godts
 Miroslav Klose
 Mohamed Salah
 Mohammed Kudus
-Nathan Ake
+Nathan Aké
 Nick Woltemade
 Nico Schlotterbeck
 Nicolas Anelka
 Noah Fernandez
 Nuno Mendes
-Ousmane Dembele
+Ousmane Dembélé
 Ousmane Diallo
 Paolo Maldini
 Patrice Evra
@@ -222,74 +216,64 @@ Pep Guardiola
 Phil Foden
 Pierre-Emerick Aubameyang
 Randal Kolo Muani
-Rasmus Hojlund
-Raul
+Rasmus Højlund
 Rayan Cherki
+Raúl
 Reggie Walsh
 Reigan Heskey
 Rio Ngumoha
-Robert Lewandowski
 Ronald Koeman
 Ronaldinho
 Ronaldo
-Rudi Voller
+Rudi Völler
 Ruud Gullit
 Ryan Giggs
-Salih Ozcan
-Samuel Etoo
+Salih Özcan
+Samuel Eto'o
 Sandro Tonali
-Sergio Aguero
+Sergio Agüero
 Sergio Busquets
 Shumaira Mheuka
 Sol Campbell
 Steven Gerrard
 Thiago Pitarch
 Thierry Henry
-Thomas Muller
+Thomas Müller
 Tino Livramento
-Toni Fernandez
+Toni Fernández
 Toni Kroos
 Tosin Adarabioyo
-Trent Kone-Doherty
+Trent Koné-Doherty
 Vini Jr.
 Virgil van Dijk
 Vitinha
-Wayne Rooney
 Wesley Sneijder
 Wisdom Mike
-Xabi Alonso
-Zlatan Ibrahimovic
+Zlatan Ibrahimović
 
 [insert]
 Alessandro Bastoni
-Alessandro Del Piero
 Alexander Isak
 Alphonso Davies
-Andres Iniesta
 Antoine Griezmann
 Archie Gray
-Bruno Guimaraes
+Bruno Guimarães
 Bukayo Saka
 Christian Kofane
-Clarence Seedorf
 Cody Gakpo
 Cole Palmer
-David Beckham
 Declan Rice
-Desire Doue
-Didier Drogba
 Dominic Solanke
-Dro Fernandez
-Enzo Fernandez
+Dro Fernández
+Désiré Doué
+Enzo Fernández
 Erling Haaland
 Ernest Poku
-Estevao Willian
-Fermin Lopez
+Estêvão Willian
+Fermín López
 Filippo Inzaghi
 Florian Wirtz
-Franck Ribery
 Franco Mastantuono
-Frank Lampard
 Gareth Bale
 George Best
 George Weah
@@ -297,32 +281,29 @@ Harry Kane
 Heung-min Son
 Hugo Ekitike
 Ibrahim Maza
-Ivan Perisic
+Ivan Perišić
 Jamal Musiala
-Joao Neves
-Joao Pedro
 Jobe Bellingham
 Johan Cruyff
+João Neves
+João Pedro
 Jude Bellingham
-Julian Alvarez
-Kaka
+Julián Alvarez
 Karim Adeyemi
 Kenan Yildiz
 Kevin de Bruyne
 Khvicha Kvaratskhelia
-Kylian Mbappe
+Kylian Mbappé
 Lamine Yamal
-Lautaro Martinez
+Lautaro Martínez
 Lennart Karl
 Lionel Messi
-Luis Diaz
-Luis Figo
-Luka Modric
+Luis Díaz
 Marco Reus
 Marco van Basten
 Marcus Rashford
 Marquinhos
-Martin Odegaard
+Martin Ødegaard
 Mauro Icardi
 Max Dowman
 Michael Olise
@@ -336,58 +317,53 @@ Noah Fernandez
 Noni Madueke
 Nuno Mendes
 Omar Marmoush
-Ousmane Dembele
+Ousmane Dembélé
 Paul Scholes
 Pedri
 Phil Foden
 Pierre-Emerick Aubameyang
 Pio Esposito
-Puskas Arena
+Puskás Aréna
 Quentin Ndjantou
 Raphinha
-Rasmus Hojlund
+Rasmus Højlund
 Rayan Cherki
 Reggie Walsh
 Riccardo Calafiori
 Rio Ngumoha
 Rivaldo
-Robert Lewandowski
 Rodri
 Ronaldinho
 Ronaldo
-Samuel Etoo
 Scott McTominay
 Senny Mayulu
-Sergio Aguero
+Sergio Agüero
 Serhou Guirassy
 Steven Gerrard
 Thibaut Courtois
 Thierry Henry
-Thomas Muller
 Timothy Weah
-Toni Kroos
 Trent Alexander-Arnold
 Victor Osimhen
 Vini Jr.
 Virgil van Dijk
 Wayne Rooney
-Wesley Sneijder
 Weston McKennie
 Wisdom Mike
-Zlatan Ibrahimovic
+Zlatan Ibrahimović
 
 [multi]
-Alessandro Del Piero / Roberto Baggio
-Andres Iniesta / Xavi Hernandez
-Erling Haaland / Sergio Aguero
-Gareth Bale / Heung-min Son
-Harry Kane / Robert Lewandowski
-Kaka / Marco van Basten
-Khvicha Kvaratskhelia / Neymar Jr
-Lautaro Martinez / Ronaldo
-Lionel Messi / Ronaldinho
-Marco Reus / Robert Lewandowski
+Roberto Baggio / Alessandro Del Piero
+Xabi Alonso / Steven Gerrard
+Erling Haaland / Sergio Agüero
+Robert Lewandowski / Harry Kane
+Kaká / Marco van Basten
+Lautaro Martínez / Ronaldo
+Ronaldinho / Lionel Messi
 Neymar Jr / Ronaldinho
-Paul Scholes / Ryan Giggs
-Ronaldo / Vini Jr.
-Steven Gerrard / Xabi Alonso
+Robert Lewandowski / Marco Reus
+Gareth Bale / Heung-min Son
+Ryan Giggs / Paul Scholes
+Vini Jr. / Ronaldo
+Xavi Hernández / Andrés Iniesta
+Neymar Jr / Khvicha Kvaratskhelia

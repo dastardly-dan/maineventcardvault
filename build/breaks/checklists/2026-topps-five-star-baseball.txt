@@ -1,8 +1,7 @@
 # name: 2026 Topps Five Star Baseball
 # sport: MLB
 # added: 2026-11-22
-# source: https://www.breakninja.com/baseball/2026-Topps-Five-Star-Baseball-Checklist.php
-# note: Breakninja.com checklist (no official list on the maker's checklist page yet); sketch cards left out
+# source: https://cdn.shopify.com/s/files/1/0662/9749/5709/files/CheckList_26FSBB_VERSION1.pdf
 
 [base]
 Aaron Judge | Yankees
@@ -17,13 +16,11 @@ Bryce Eldridge | Giants
 Bryce Harper | Phillies
 Bubba Chandler | Pirates
 Byron Buxton | Twins
-Cal Ripken Jr. | Orioles
 Cam Schlittler | Yankees
 Carson Benge | Mets
 Carson Williams | Rays
 Chase Burns | Reds
 Chase DeLauter | Guardians
-Chipper Jones | Braves
 Chris Sale | Braves
 Christian Moore | Angels
 Christian Yelich | Brewers
@@ -39,12 +36,10 @@ Elly De La Cruz | Reds
 Fernando Tatis Jr. | Padres
 Francisco Lindor | Mets
 Freddie Freeman | Dodgers
-George Brett | Royals
 Gunnar Henderson | Orioles
 Hank Aaron | Braves
 Jac Caglianone | Royals
-Jackie Robinson
-Jackie Robinson | Ones
+Jackie Robinson | Dodgers
 Jackson Chourio | Brewers
 Jackson Merrill | Padres
 Jacob Misiorowski | Brewers
@@ -53,9 +48,9 @@ James Wood | Nationals
 JJ Wetherholt | Cardinals
 Jordan Walker | Cardinals
 Jose Altuve | Astros
-Jose Ramirez | Guardians
+José Ramírez | Guardians
 Juan Soto | Mets
-Julio Rodriguez | Mariners
+Julio Rodríguez | Mariners
 Junior Caminero | Rays
 Justin Crawford | Phillies
 Kazuma Okamoto | Blue Jays
@@ -77,15 +72,13 @@ Nick Kurtz | Athletics
 Noah Schultz | White Sox
 Nolan Arenado | Diamondbacks
 Nolan McLean | Mets
-Nolan Ryan | Rangers
 Owen Caissie | Marlins
 Paul Skenes | Pirates
 Pete Alonso | Orioles
 Pete Crow-Armstrong | Cubs
-Reggie Jackson | Athletics
 Roberto Clemente | Pirates
 Roman Anthony | Red Sox
-Ronald Acuna Jr. | Braves
+Ronald Acuña Jr. | Braves
 Ryne Sandberg | Cubs
 Sal Stewart | Reds
 Samuel Basallo | Orioles
@@ -105,8 +98,7 @@ Travis Bazzana | Guardians
 Trey Yesavage | Blue Jays
 Ty Cobb | Tigers
 Vladimir Guerrero Jr. | Blue Jays
-Walter Johnson
-Walter Johnson | Ones
+Walter Johnson | Senators
 Willie Mays | Giants
 Wyatt Langford | Rangers
 Yogi Berra | Yankees
@@ -115,55 +107,53 @@ Yoshinobu Yamamoto | Dodgers
 
 [auto]
 Aaron Judge | Yankees
-Adolis Garcia | Rangers
-Adrian Beltre | Rangers
-Adrian Gonzalez | Padres
+Adolis García | Rangers
+Adrian Beltré | Rangers
+Adrián González | Padres
 Al Kaline | Tigers
 Alan Trammell | Tigers
 Albert Pujols | Angels
 Albert Pujols | Cardinals
 Alex Freeland | Dodgers
 Alex Rodriguez | Mariners
-Andre Dawson
 Andre Dawson | Cubs
-Andre Dawson | Ones
+Andre Dawson | Expos
 Andrew McCutchen | Pirates
 Andrew Painter | Phillies
 Andruw Jones | Braves
 Andy Pettitte | Yankees
 Anthony Rizzo | Cubs
-Arnold Palmer | Ones
+Arnold Palmer
 Austin Riley | Braves
 Barry Bonds | Giants
 Barry Larkin | Reds
 Ben Rice | Yankees
 Bernie Williams | Yankees
-Bert Blyleven
-Bert Blyleven | Ones
+Bert Blyleven | Angels
 Bert Blyleven | Twins
 Bill Dickey | Yankees
 Billy Wagner | Astros
-Bob Feller | Guardians
+Bob Feller | Cleveland
 Bob Gibson | Cardinals
 Bobby Doerr | Red Sox
 Bobby Murcer | Yankees
-Bobby Thomson | Ones
+Bobby Thomson | Giants
 Bobby Witt Jr. | Royals
-Bowie Kuhn | Ones
+Bowie Kuhn
 Brady House | Nationals
 Bryce Eldridge | Giants
 Bryce Harper | Phillies
 Bubba Chandler | Pirates
-Bud Abbott | Ones
-Burleigh Grimes | Ones
+Bud Abbott
+Burleigh Grimes
 Byron Buxton | Twins
 C.J. Kayfus | Guardians
 Cade Horton | Cubs
 Cal Ripken Jr. | Orioles
 Cam Schlittler | Yankees
 Cam Smith | Astros
-Carlos Beltran | Mets
-Carlos Beltran | Yankees
+Carlos Beltrán | Mets
+Carlos Beltrán | Yankees
 Carlton Fisk | Red Sox
 Carson Benge | Mets
 Carson Williams | Rays
@@ -178,9 +168,8 @@ Chipper Jones | Braves
 Chris Sale | Braves
 Christian Moore | Angels
 Christian Yelich | Brewers
-CJ Kayfus | Guardians
 Clayton Kershaw | Dodgers
-Cliff Lee | Guardians
+Cliff Lee | Cleveland
 Colby Thomas | Athletics
 Cole Young | Mariners
 Colson Montgomery | White Sox
@@ -202,22 +191,20 @@ Dizzy Dean | Cardinals
 Don Larsen | Yankees
 Don Mattingly | Yankees
 Don Sutton | Dodgers
-Dontrelle Willis
-Dontrelle Willis | Ones
+Dontrelle Willis | Marlins
 Drake Baldwin | Braves
 Drew Gilbert | Giants
 Dustin Pedroia | Red Sox
 Dwight Gooden | Mets
 Dylan Beavers | Orioles
 Earl Weaver | Orioles
-Early Wynn | Guardians
+Early Wynn | Cleveland
 Eddie Murray | Orioles
 Edgar Martinez | Mariners
 Elly De La Cruz | Reds
 Ernie Banks | Cubs
 Evan Longoria | Diamondbacks
 Evan Longoria | Rays
-Felix Hernandez | Mariners
 Fergie Jenkins | Cubs
 Fernando Tatis Jr. | Padres
 Francisco Lindor | Mets
@@ -225,10 +212,10 @@ Frank Thomas | White Sox
 Fred McGriff | Blue Jays
 Fred McGriff | Rays
 Freddie Freeman | Dodgers
+Félix Hernández | Mariners
 Garrett Crochet | Red Sox
 Gary Carter | Mets
-Gary Sheffield
-Gary Sheffield | Ones
+Gary Sheffield | Marlins
 Gary Sheffield | Padres
 Gary Sheffield | Tigers
 George Brett | Royals
@@ -240,37 +227,36 @@ Hank Aaron | Braves
 Harmon Killebrew | Twins
 Harold Baines | White Sox
 Harry Ford | Nationals
-Heriberto Hernandez | Marlins
+Heriberto Hernández | Marlins
 Honus Wagner | Pirates
-Hoyt Wilhelm | Ones
+Hoyt Wilhelm | Giants
 Ichiro | Marlins
 Ichiro | Yankees
-Ivan Rodriguez
-Ivan Rodriguez | Ones
+Ivan Rodriguez | Marlins
 Ivan Rodriguez | Tigers
 Jac Caglianone | Royals
-Jackie Robinson | Ones
+Jackie Robinson | Dodgers
 Jackson Chourio | Brewers
 Jackson Holliday | Orioles
 Jacob Misiorowski | Brewers
 Jacob Wilson | Athletics
-James Monroe | Ones
+James Monroe
 James Wood | Nationals
-Jane Goodall | Ones
+Jane Goodall
 Jason Varitek | Red Sox
-Jasson Dominguez | Yankees
+Jasson Domínguez | Yankees
 Jazz Chisholm Jr. | Yankees
 Jeferson Quero | Brewers
 Jeff Bagwell | Astros
 Jhostynxon Garcia | Pirates
 Jim Palmer | Orioles
 Jim Rice | Red Sox
-Jim Thome | Guardians
+Jim Thome | Cleveland
 Jimmy Rollins | Phillies
 JJ Wetherholt | Cardinals
 Joe DiMaggio | Yankees
 Joey Votto | Reds
-John F. Kennedy | Ones
+John F. Kennedy
 John Smoltz | Braves
 Johnny Bench | Reds
 Johnny Damon | Royals
@@ -279,26 +265,27 @@ Johnny Pesky | Red Sox
 Jonah Tong | Mets
 Jordan Westburg | Orioles
 Jorge Posada | Yankees
-Jose Reyes | Mets
+José Reyes | Mets
 Juan Soto | Mets
-Julio Rodriguez | Mariners
+Julio Rodríguez | Mariners
 Jung Hoo Lee | Giants
 Junior Caminero | Rays
 Justin Crawford | Phillies
 Kazuma Okamoto | Blue Jays
-Kenny Lofton | Guardians
+Ken Griffey Jr. | Mariners
+Kenny Lofton | Cleveland
 Kevin McGonigle | Tigers
 Kirby Puckett | Twins
 Kirk Gibson | Dodgers
 Konnor Griffin | Pirates
 Kyle Schwarber | Phillies
 Kyle Tucker | Dodgers
-Larry Doby | Guardians
-Larry Walker
+Larry Doby | Cleveland
+Larry Walker | Expos
 Larry Walker | Rockies
-Lefty Grove | Ones
-Leo Durocher | Ones
-Lou Costello | Ones
+Lefty Grove | Athletics
+Leo Durocher | Giants
+Lou Costello
 Lou Piniella | Royals
 Luis Gonzalez | Diamondbacks
 Luke Keaschall | Twins
@@ -309,7 +296,7 @@ Masyn Winn | Cardinals
 Matt Olson | Braves
 Matt Shaw | Cubs
 Max Fried | Yankees
-Mel Ott | Ones
+Mel Ott | Giants
 Michael Harris II | Braves
 Michael Young | Rangers
 Mickey Mantle | Yankees
@@ -317,7 +304,7 @@ Miguel Cabrera | Tigers
 Mike Piazza | Mets
 Mike Schmidt | Phillies
 Mike Trout | Angels
-Milton Berle | Ones
+Milton Berle
 Mookie Betts | Dodgers
 Munetaka Murakami | White Sox
 Nick Kurtz | Athletics
@@ -332,7 +319,7 @@ Ozzie Smith | Cardinals
 Parker Messick | Guardians
 Paul Molitor | Blue Jays
 Paul Molitor | Brewers
-Paul ONeill | Yankees
+Paul O'Neill | Yankees
 Paul Skenes | Pirates
 Payton Tolle | Red Sox
 Pete Alonso | Orioles
@@ -344,22 +331,20 @@ Rafael Palmeiro | Rangers
 Randy Arozarena | Mariners
 Randy Johnson | Astros
 Randy Johnson | Diamondbacks
-Reggie Jackson
+Reggie Jackson | Angels
 Reggie Jackson | Athletics
-Reggie Jackson | Ones
 Reggie Jackson | Yankees
 Robin Roberts | Phillies
 Robin Yount | Brewers
-Rod Carew
-Rod Carew | Ones
+Rod Carew | Angels
 Rod Carew | Twins
 Roger Clemens | Astros
 Roger Clemens | Yankees
 Roger Maris | Yankees
 Roki Sasaki | Dodgers
 Roman Anthony | Red Sox
-Ronald Acuna Jr. | Braves
-Roy Campanella | Ones
+Ronald Acuña Jr. | Braves
+Roy Campanella | Dodgers
 Ryan Howard | Phillies
 Ryan Zimmerman | Nationals
 Sal Stewart | Reds
@@ -380,7 +365,7 @@ Tom Glavine | Braves
 Tom Glavine | Mets
 Tommy Lasorda | Dodgers
 Tony Oliva | Twins
-Tony Perez | Reds
+Tony Pérez | Reds
 Torii Hunter | Angels
 Torii Hunter | Twins
 Travis Bazzana | Guardians
@@ -389,18 +374,17 @@ Trevor Hoffman | Padres
 Trey Yesavage | Blue Jays
 Ty Cobb | Tigers
 Victor Martinez | Tigers
-Vladimir Guerrero
 Vladimir Guerrero Jr. | Blue Jays
 Vladimir Guerrero | Angels
-Vladimir Guerrero | Ones
+Vladimir Guerrero | Expos
 Wade Boggs | Rays
 Wade Boggs | Red Sox
 Wade Boggs | Yankees
-Warren Spahn | Ones
+Warren Spahn | Braves
 Whitey Ford | Yankees
 Will Clark | Giants
 Will Smith | Dodgers
-William McKinley | Ones
+William McKinley
 Willie Mays | Giants
 Willie Stargell | Pirates
 Wyatt Langford | Rangers
@@ -409,41 +393,41 @@ Yogi Berra | Yankees
 Yoshinobu Yamamoto | Dodgers
 
 [multi]
-Jacob Wilson | Athletics / Nick Kurtz | Athletics
-Mark McGwire | Athletics / Nick Kurtz | Athletics
-Mark McGwire | Athletics / Nick Kurtz | Athletics / Reggie Jackson | Athletics
-Chipper Jones | Braves / Ronald Acuna Jr. | Braves
-Chipper Jones | Braves / Greg Maddux | Braves / Ronald Acuna Jr. | Braves
+Ronald Acuña Jr. | Braves / Chipper Jones | Braves
+Nick Kurtz | Athletics / Mark McGwire | Athletics
 Cal Ripken Jr. | Orioles / Gunnar Henderson | Orioles
-David Ortiz | Red Sox / Nomar Garciaparra | Red Sox / Roman Anthony | Red Sox
-David Ortiz | Red Sox / Nomar Garciaparra | Red Sox
-Fred Lynn | Red Sox / Roman Anthony | Red Sox
-Roger Clemens | Red Sox / Paul Skenes | Pirates / Nolan Ryan
-Munetaka Murakami | White Sox / Kazuma Okamoto | Blue Jays
-Elly De La Cruz | Reds / Ken Griffey Jr. | Reds
-Kevin McGonigle | Tigers / Konnor Griffin | Pirates / JJ Wetherholt | Cardinals
-Bobby Witt Jr. | Royals / Jac Caglianone | Royals
-Bobby Witt Jr. | Royals / George Brett | Royals / Jac Caglianone | Royals
-Mike Trout | Angels / Reggie Jackson | Ones
-Mike Trout | Angels / Reggie Jackson
-Mike Trout | Angels / Nolan Ryan
-Freddie Freeman | Dodgers / Sandy Koufax | Dodgers / Yoshinobu Yamamoto | Dodgers
-Roki Sasaki | Dodgers / Yoshinobu Yamamoto | Dodgers
-Shohei Ohtani | Dodgers / Barry Bonds | Giants
-Shohei Ohtani | Dodgers / Sadaharu Oh
-Carlos Beltran | Mets / Francisco Lindor | Mets
-Darryl Strawberry | Mets / David Wright | Mets / Mike Piazza | Mets
-David Wright | Mets / Francisco Lindor | Mets
-Jonah Tong | Mets / Nolan McLean | Mets
-Juan Soto | Mets / Alex Rodriguez | Yankees / Albert Pujols | Cardinals
-CC Sabathia | Yankees / Max Fried | Yankees
-CC Sabathia | Yankees / Derek Jeter | Yankees / Hideki Matsui | Yankees
-Derek Jeter | Yankees / Mariano Rivera | Yankees
-Cal Raleigh | Mariners / Julio Rodriguez | Mariners
-Ichiro | Mariners / Julio Rodriguez | Mariners
-Albert Pujols | Cardinals / Mark McGwire | Cardinals
+Julio Rodríguez | Mariners / Cal Raleigh | Mariners
+Max Fried | Yankees / CC Sabathia | Yankees
 Masyn Winn | Cardinals / Ozzie Smith | Cardinals
-Vladimir Guerrero Jr. | Blue Jays / Vladimir Guerrero
-Brady House | Nationals / Harry Ford | Nationals
+Mike Trout | Angels / Reggie Jackson | Angels
 CJ Abrams | Nationals / James Wood | Nationals
-Larry Walker / Randy Johnson / Vladimir Guerrero
+Jac Caglianone | Royals / Bobby Witt Jr. | Royals
+David Wright | Mets / Francisco Lindor | Mets
+Francisco Lindor | Mets / Carlos Beltrán | Mets
+Harry Ford | Nationals / Brady House | Nationals
+Ken Griffey Jr. | Reds / Elly De La Cruz | Reds
+Vladimir Guerrero Jr. | Blue Jays / Vladimir Guerrero | Expos
+Ichiro | Mariners / Julio Rodríguez | Mariners
+Mariano Rivera | Yankees / Derek Jeter | Yankees
+Nick Kurtz | Athletics / Jacob Wilson | Athletics
+Fred Lynn | Red Sox / Roman Anthony | Red Sox
+Jonah Tong | Mets / Nolan McLean | Mets
+Kazuma Okamoto | Blue Jays / Munetaka Murakami | White Sox
+David Ortiz | Red Sox / Nomar Garciaparra | Red Sox
+Shohei Ohtani | Dodgers / Sadaharu Oh | Giants
+Albert Pujols | Cardinals / Mark McGwire | Cardinals
+Nolan Ryan | Angels / Mike Trout | Angels
+Bobby Witt Jr. | Royals / Jac Caglianone | Royals
+Yoshinobu Yamamoto | Dodgers / Roki Sasaki | Dodgers
+George Brett | Royals / Bobby Witt Jr. | Royals / Jac Caglianone | Royals
+Kevin McGonigle | Tigers / JJ Wetherholt | Cardinals / Konnor Griffin | Pirates
+Randy Johnson | Expos / Vladimir Guerrero | Expos / Larry Walker | Expos
+Chipper Jones | Braves / Ronald Acuña Jr. | Braves / Greg Maddux | Braves
+Nick Kurtz | Athletics / Reggie Jackson | Athletics / Mark McGwire | Athletics
+CC Sabathia | Yankees / Hideki Matsui | Yankees / Derek Jeter | Yankees
+Yoshinobu Yamamoto | Dodgers / Sandy Koufax | Dodgers / Freddie Freeman | Dodgers
+Nomar Garciaparra | Red Sox / David Ortiz | Red Sox / Roman Anthony | Red Sox
+Albert Pujols | Cardinals / Juan Soto | Mets / Alex Rodriguez | Yankees
+Roger Clemens | Red Sox / Nolan Ryan | Angels / Paul Skenes | Pirates
+Darryl Strawberry | Mets / Mike Piazza | Mets / David Wright | Mets
+Shohei Ohtani | Dodgers / Barry Bonds | Giants

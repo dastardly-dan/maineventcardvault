@@ -1,0 +1,313 @@
+# name: 2026 Panini Turn Four Racing
+# sport: NASCAR
+# added: 2026-11-22
+# source:
+# note: Official Panini checklist (Panini Turn Four CSV)
+
+[base]
+Alex Bowman
+Andres Perez De Lara
+Anthony Alfredo
+Aric Almirola
+Austin Cindric
+Austin Dillon
+Austin Hill
+Ben Rhodes
+Blaine Perkins
+Brad Keselowski
+Brandon Jones
+Brayton Laster
+Brenden "Butterbean" Queen
+Brennan Poole
+Brexton Busch
+Bubba Wallace
+Carl Edwards
+Carson Hocevar
+Carson Kvapil
+Chandler Smith
+Chase Briscoe
+Chase Elliott
+Chris Buescher
+Christian Eckes
+Christopher Bell
+Cody Ware
+Cole Custer
+Connor Hall
+Connor Mosack
+Connor Zilisch
+Corey Day
+Corey Heim
+Dale Earnhardt Jr
+Dale Jarrett
+Danica Patrick
+Daniel Dye
+Daniel Hemric
+Daniel Suarez
+Dawson Sutton
+Denny Hamlin
+Erik Jones
+Frankie Muniz
+Gio Ruggiero
+Hailie Deegan
+Jake Garcia
+Jeb Burton
+Jeff Gordon
+Jeremy Clements
+Jesse Love
+Jimmie Johnson
+Joey Logano
+John Hunter Nemechek
+John Paul Southern
+Josh Berry
+Josh Bilicki
+Justin Allgaier
+Justin Haley
+Kaden Honeycutt
+Keelan Harvick
+Kevin Harvick
+Kurt Busch
+Kyle Larson
+Landen Lewis
+Landon Huffman
+Lavar Scott
+Layne Riggs
+Logan Bearden
+Mark Martin
+Martin Truex Jr.
+Michael McDowell
+Nick Sanchez
+Noah Gragson
+Parker Retzlaff
+Rajah Caruth
+Richard Petty
+Ricky Stenhouse Jr.
+Riley Herbst
+Ross Chastain
+Rusty Wallace
+Ryan Blaney
+Ryan Ellis
+Ryan Preece
+Sally Mott
+Sam Mayer
+Sammy Smith
+Shane Van Gisbergen
+Sheldon Creed
+Tanner Gray
+Taylor Gray
+Taylor Reimer
+Todd Gilliland
+Toni Breidinger
+Ty Dillon
+Ty Gibbs
+Ty Majeski
+Tyler Ankrum
+Tyler Reddick
+William Byron
+William Sawalich
+Zane Smith
+
+[auto]
+Alan Gustafson
+Alex Bowman
+Anthony Alfredo
+Aric Almirola
+Austin Cindric
+Austin Dillon
+Austin Hill
+B.J. McLeod
+Bayley Currey
+Ben Rhodes
+Blake Harris
+Brad Keselowski
+Brandon Jones
+Brayton Laster
+Brenden "Butterbean" Queen
+Brennan Poole
+Brett Moffitt
+Carson Hocevar
+Carson Kvapil
+Chandler Smith
+Chase Briscoe
+Chase Elliott
+Chris Buescher
+Cliff Daniels
+Cody Ware
+Cole Custer
+Connor Hall
+Connor Zilisch
+Corey Day
+Dale Earnhardt Jr
+Danica Patrick
+Daniel Dye
+Daniel Hemric
+Daniel Suarez
+Darrell Waltrip
+David Ragan
+Dawson Sutton
+Denny Hamlin
+Erik Jones
+Frankie Muniz
+Garrett Smithley
+Hailie Deegan
+Harry Gant
+Jamie McMurray
+Jeb Burton
+Jeff Gordon
+Jeffrey Earnhardt
+Jeremy Clements
+Jesse Iwuji
+Jesse Love
+Joe Graf Jr.
+Joey Gase
+Joey Logano
+John Paul Southern
+Josh Berry
+Josh Bilicki
+Josh Williams
+Justin Allgaier
+Justin Haley
+Kasey Kahne
+Kaz Grala
+Kevin Harvick
+Kurt Busch
+Kyle Busch
+Kyle Larson
+Kyle Petty
+Kyle Weatherman
+Landen Lewis
+Landon Huffman
+Lavar Scott
+Layne Riggs
+Logan Bearden
+Mark Martin
+Martin Truex Jr.
+Matt DiBenedetto
+Matt Kenseth
+Matt Mills
+Michael McDowell
+Nick Sanchez
+Noah Gragson
+Rajah Caruth
+Riley Herbst
+Ross Chastain
+Rudy Fugle
+Ryan Blaney
+Ryan Preece
+Ryan Truex
+Ryan Vargas
+Sally Mott
+Sammy Smith
+Shane Van Gisbergen
+Sheldon Creed
+Spencer Boyd
+Tanner Gray
+Taylor Gray
+Taylor Reimer
+Terry Labonte
+Todd Gilliland
+Tommy Joe Martins
+Toni Breidinger
+Ty Dillon
+Ty Majeski
+Tyler Ankrum
+Tyler Reddick
+William Byron
+William Sawalich
+Zane Smith
+
+[insert]
+Alex Bowman
+Aric Almirola
+Austin Cindric
+Austin Dillon
+Austin Hill
+B.J. McLeod
+Bobby Labonte
+Brad Keselowski
+Brandon Jones
+Brennan Poole
+Bubba Wallace
+Carson Hocevar
+Carson Kvapil
+Chandler Smith
+Chase Briscoe
+Chase Elliott
+Chris Buescher
+Christian Eckes
+Christopher Bell
+Clint Bowyer
+Cody Ware
+Cole Custer
+Connor Mosack
+Connor Zilisch
+Corey Heim
+Dale Earnhardt Jr
+Dale Jarrett
+Danica Patrick
+Daniel Dye
+Daniel Hemric
+Daniel Suarez
+Davey Allison
+David Ragan
+Denny Hamlin
+Erik Jones
+Garrett Smithley
+Gio Ruggiero
+Harry Gant
+Jamie McMurray
+Jeff Burton
+Jeff Gordon
+Jeffrey Earnhardt
+Jeremy Clements
+Jesse Iwuji
+Jesse Love
+Jimmie Johnson
+Joey Logano
+John Hunter Nemechek
+Josh Berry
+Josh Williams
+Justin Allgaier
+Justin Haley
+Kasey Kahne
+Kaz Grala
+Kevin Harvick
+Kurt Busch
+Kyle Busch
+Kyle Larson
+Kyle Petty
+Kyle Weatherman
+Landon Cassill
+Lawless Alan
+Layne Riggs
+Martin Truex Jr.
+Matt DiBenedetto
+Matt Kenseth
+Matt Mills
+Michael McDowell
+Noah Gragson
+Richard Petty
+Ricky Stenhouse Jr.
+Ross Chastain
+Ryan Blaney
+Ryan Newman
+Ryan Preece
+Ryan Truex
+Ryan Vargas
+Sally Mott
+Sam Mayer
+Sammy Smith
+Shane Van Gisbergen
+Sheldon Creed
+Tanner Gray
+Taylor Gray
+Todd Gilliland
+Tommy Joe Martins
+Toni Breidinger
+Ty Dillon
+Ty Gibbs
+Ty Majeski
+Tyler Ankrum
+Tyler Reddick
+William Byron
+William Sawalich
+Zane Smith
