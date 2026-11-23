@@ -4,10 +4,12 @@
 // Cloudflare serves those directly without running this file: the storefront,
 // ratings.html, the Shoot tool, iron-ledger.html and so on. This code only runs
 // for requests that don't match a file, and the only thing it handles itself is
-// the Iron Ledger sync API at /api/ironledger. Anything else goes back to the
+// the Iron Ledger sync API at /api/ironledger and the live open/sold lookup for the
+// break guides at /api/break-status (breakstatus.js). Anything else goes back to the
 // asset handler, so 404s behave exactly as they did before.
 
 import { DurableObject } from "cloudflare:workers";
+import { breakStatus, STATUS_API } from "./breakstatus.js";
 
 const API = "/api/ironledger";
 const MAX_BODY = 1_000_000;          // a few years of workouts is well under this
@@ -15,8 +17,9 @@ const MAX_FAILS = 10;                // wrong passphrases allowed per window
 const FAIL_WINDOW_MS = 15 * 60 * 1000;
 
 export default {
-  async fetch(request, env) {
+  async fetch(request, env, ctx) {
     const { pathname } = new URL(request.url);
+    if (pathname === STATUS_API) return breakStatus(request, ctx);
     if (pathname === API || pathname.startsWith(API + "/")) {
       // One store for one person: every request goes to the same Durable Object,
       // which keeps reads and writes in order (no stale reads between devices).

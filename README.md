@@ -183,6 +183,18 @@ team spot, box by box. Linked from the storefront's Breaks menu; every page carr
   (`lib_team_product`), Absolute from the official Panini CSV (`absolute_2026.json`). Format "pyt" = pick your team with
   prices and open/sold. NIL letters go by first letter of the first name; college players already on an NFL roster in
   the Topps checklists go to that team (Acme's rule).
+- **Live open/sold status (Nov 23, 2026):** pick-your-team and pick-your-letter pages whose config has
+  `live=dict(shop=..., handle=...)` (gb1037 and jwj0246 so far) refresh themselves. On load and about once a minute
+  while the page is showing, the page asks `/api/break-status?shop=<shop>&handle=<product handle>`. The Worker
+  (`breakstatus.js`) reads the store's public `/products/<handle>.js` feed (Shopify), keeps the answer at the edge for 60
+  seconds, and returns every variant's title, price (cents) and `available`. The page matches variants to spots by
+  title (`nk()` in the template drops punctuation and parentheses, and adds "men" or "women" from the spot's gender, so
+  "T - Men (no the)" matches the T Men spot), updates open/sold and price, redraws, and shows a live count under the
+  header. If the Worker or the store can't be reached, or the feed doesn't match at least half the spots, the status saved
+  at build time stays on screen. Ended breaks never call it. To add a break: add `live=` to its config in `build.py`
+  (shop keys are in `SHOPS` in `breakstatus.js`: acme, jwj, colfax) and rebuild. Variant titles must match the spot
+  labels; check with the store's `.js` feed. The shell here can't reach the stores, so read the feed in a browser tab or
+  WebFetch.
 - **Breakninja lists (Nov 22, 2026):** when the maker hasn't posted a checklist, breakninja.com's card-by-card tables
   (name, number, set, print run, team) are scraped in the built-in browser, turned into a Panini-style CSV (multi-person
   sets regrouped, sketch cards dropped) and run through `panini_csv.py` and `depth.py --panini`, so print runs drive
@@ -208,8 +220,9 @@ team spot, box by box. Linked from the storefront's Breaks menu; every page carr
 - `worker.js` and `wrangler.jsonc` turned this from a static-only Worker into a Worker
   with static assets. Files are still served straight from the repo root without
   running any code; `worker.js` only runs for URLs that don't match a file, and the only
-  thing it handles is the Iron Ledger sync API at `/api/ironledger` (everything else
-  falls through to the normal asset 404). The log lives in one Durable Object,
+  things it handles are the Iron Ledger sync API at `/api/ironledger` and the live break
+  status lookup at `/api/break-status` (`breakstatus.js`, listed in `.assetsignore` so it isn't
+  served as a file); everything else falls through to the normal asset 404). The log lives in one Durable Object,
   `IronLedgerStore`, and is locked by a passphrase: the first device to connect sets it.
 - `wrangler.jsonc` keeps the settings Cloudflare used to generate on its own during each
   build (name `maineventcardvault`, observability on, assets directory `.`). Keep

@@ -308,6 +308,8 @@ table.rows td.n { white-space: nowrap; }
   document.getElementById("h1").textContent = D.title;
   document.getElementById("facts").innerHTML = '<li><b>' + esc(D.when) + "</b></li>" + D.facts.map(function (f) { return "<li>" + esc(f) + "</li>"; }).join("") + '<li><a href="' + D.url + '" target="_blank" rel="noopener">Break page</a></li>';
   document.getElementById("checked").textContent = D.checked;
+  var LIVE_SRC = LIVE && D.live ? D.live : null;
+  if (LIVE_SRC) { var lf = document.createElement("li"); lf.id = "livefact"; document.getElementById("facts").appendChild(lf); }
   if (ENDED) { var en = document.getElementById("ended"); en.textContent = ENDED; en.hidden = false; }
   var tabs = [["spots", "All spots"]];
   if (LIVE) tabs.push(["open", "Still open"]);
@@ -495,7 +497,48 @@ table.rows td.n { white-space: nowrap; }
     if (v !== "search") qEl.value = "";
   }
   window.addEventListener("hashchange", function () { route(); window.scrollTo(0, 0); });
-  drawStatic(); drawPick(); drawGrid(); drawMine(); route();
+  // Live status. Breaks with a D.live source ask the site's Worker for the store's current
+  // open/sold flags (and prices) on load and about once a minute while the page is showing.
+  // If anything fails, the status saved when the page was built stays on screen.
+  function nk(t) { return fold(String(t)).replace(/\(.*?\)/g, "").replace(/[^a-z0-9]/g, ""); }
+  function drawLiveFact() {
+    var el = document.getElementById("livefact"); if (!el) return;
+    var o = D.spots.filter(function (s) { return s.status === "open"; }).length;
+    el.innerHTML = "<b>" + o + " open, " + (D.spots.length - o) + " sold</b>";
+  }
+  function redraw() {
+    var ae = document.activeElement, keep = ae && ae.id === "aq" ? ae.selectionStart : -1;
+    drawLiveFact(); drawPick(); drawGrid(); drawMine(); route();
+    if (keep > -1) { var q = document.getElementById("aq"); if (q) { q.focus(); try { q.setSelectionRange(keep, keep); } catch (e) {} } }
+  }
+  function refreshLive() {
+    if (!LIVE_SRC || !window.fetch || document.hidden) return;
+    fetch("/api/break-status?shop=" + encodeURIComponent(LIVE_SRC.shop) + "&handle=" + encodeURIComponent(LIVE_SRC.handle), { cache: "no-store" })
+      .then(function (r) { if (!r.ok) throw new Error("status"); return r.json(); })
+      .then(function (d) {
+        var by = {}; (d.variants || []).forEach(function (v) { by[nk(v.title)] = v; });
+        var changed = false, seen = 0;
+        D.spots.forEach(function (s) {
+          var v = by[nk(s.label + (s.g === "M" ? " men" : s.g === "F" ? " women" : ""))];
+          if (!v) return;
+          seen++;
+          var st = v.available ? "open" : "sold", pr = Math.round(v.price / 100);
+          if (s.status !== st) { s.status = st; changed = true; }
+          if (pr > 0 && s.price !== pr) { s.price = pr; changed = true; }
+        });
+        if (seen < D.spots.length / 2) return; // the feed doesn't look like this break: keep the saved status
+        var at = new Date(d.checked);
+        document.getElementById("checked").textContent = "Open and sold spots come straight from the store and refresh about every minute. Last updated " + at.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" }) + ". Check the break page before you buy.";
+        if (changed) redraw();
+      })
+      .catch(function () {});
+  }
+  drawStatic(); drawLiveFact(); drawPick(); drawGrid(); drawMine(); route();
+  if (LIVE_SRC) {
+    refreshLive();
+    setInterval(refreshLive, 60000);
+    document.addEventListener("visibilitychange", function () { if (!document.hidden) refreshLive(); });
+  }
 })();
 </script>
 </body>
