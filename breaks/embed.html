@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Break spots</title>
+<style>
+:root { --bg: #ffffff; --panel: #f6f7f9; --line: #e3e6eb; --ink: #15181d; --ink2: #4a5260; --ink3: #7a8290; --acc: #b8862b; --acc2: #8a6418; --tag: #fff4dc; }
+.dark { --bg: #0d1b2e; --panel: #13243b; --line: #22395a; --ink: #eef2f7; --ink2: #b9c4d3; --ink3: #8495ad; --acc: #e3b448; --acc2: #f0c96a; --tag: #3a2f12; }
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+.wrap { padding: 14px; max-width: 900px; margin: 0 auto; }
+h1 { font-size: 19px; margin: 0 0 2px; }
+.sub { color: var(--ink3); font-size: 13px; margin: 0 0 12px; }
+.find { display: flex; align-items: center; gap: 8px; border: 1px solid var(--line); background: var(--panel); border-radius: 10px; padding: 0 10px; margin: 0 0 12px; }
+.find input { flex: 1; min-width: 0; border: 0; outline: 0; background: transparent; color: var(--ink); font: inherit; padding: 9px 0; }
+.find svg { color: var(--ink3); flex: none; }
+.cnt { color: var(--ink3); font-size: 12.5px; white-space: nowrap; }
+.list { display: grid; gap: 8px; }
+details { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; }
+details.hit { border-color: var(--acc); box-shadow: 0 0 0 1px var(--acc) inset; }
+summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 30px minmax(0, 1fr) auto; gap: 10px; align-items: center; padding: 10px 12px; }
+summary::-webkit-details-marker { display: none; }
+.no { color: var(--ink3); font-size: 12.5px; }
+.lb { font-weight: 700; font-size: 16px; }
+.lb small { display: block; font-weight: 400; font-size: 12px; color: var(--ink3); }
+.top { display: block; font-weight: 400; font-size: 12.5px; color: var(--ink2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pr { font-weight: 800; font-size: 16px; color: var(--acc2); text-align: right; white-space: nowrap; }
+.pr small { display: block; font-weight: 400; font-size: 11.5px; color: var(--ink3); }
+.names { padding: 0 12px 12px 52px; color: var(--ink2); font-size: 13.5px; }
+.names .a { font-size: 10px; font-weight: 700; color: var(--acc2); margin-left: 3px; }
+mark { background: var(--tag); color: var(--ink); border-radius: 3px; padding: 0 2px; }
+.foot { margin-top: 12px; font-size: 11.5px; color: var(--ink3); text-align: right; }
+.foot a { color: var(--ink3); }
+.err { padding: 20px; color: var(--ink2); }
+@media (max-width: 520px) { .names { padding-left: 12px; } summary { grid-template-columns: 24px minmax(0, 1fr) auto; } }
+</style>
+</head>
+<body>
+<div class="wrap" id="app"><div class="err">Loading the spot list...</div></div>
+<script>
+(function () {
+  function esc(t) { return String(t).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  function fold(t) { return String(t).normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase(); }
+  function b64(s) { s = s.replace(/-/g, "+").replace(/_/g, "/"); while (s.length % 4) s += "="; var b = atob(s), u = new Uint8Array(b.length); for (var i = 0; i < b.length; i++) u[i] = b.charCodeAt(i); return u; }
+  async function decode(h) {
+    var kind = h.charAt(0), bytes = b64(h.slice(1));
+    if (kind === "z") { var ds = new DecompressionStream("deflate-raw"); var s = new Blob([bytes]).stream().pipeThrough(ds); bytes = new Uint8Array(await new Response(s).arrayBuffer()); }
+    return JSON.parse(new TextDecoder().decode(bytes));
+  }
+  function money(v) { return "$" + Math.round(v).toLocaleString("en-US"); }
+  async function main() {
+    var app = document.getElementById("app"), h = location.hash.replace(/^#/, "");
+    if (!h) { app.innerHTML = '<div class="err">No break data in this link.</div>'; return; }
+    var D;
+    try { D = await decode(h); } catch (e) { app.innerHTML = '<div class="err">This spot list link is incomplete. Copy the embed code again from the Spot Builder.</div>'; return; }
+    if (D.d) document.documentElement.classList.add("dark");
+    document.title = D.t || "Break spots";
+    var spots = D.s.map(function (s, i) { return { i: i, label: s[0], sub: s[1], price: s[2], names: s[3] ? s[3].split("|").filter(Boolean).map(function (n) { return { n: n.replace(/^\*/, ""), a: n.charAt(0) === "*" }; }) : [] }; });
+    // names arrive biggest first: the first few are the preview, the full list reads A to Z
+    spots.forEach(function (s) { s.top = s.names.slice(0, 6).map(function (x) { return x.n; }); s.names.sort(function (x, y) { return fold(x.n.replace(/^"|^the /i, "")).localeCompare(fold(y.n.replace(/^"|^the /i, ""))); }); });
+    var hasNames = spots.some(function (s) { return s.names.length; });
+    app.innerHTML = (D.t ? "<h1>" + esc(D.t) + "</h1>" : "") +
+      '<p class="sub">' + spots.length + " spots" + (D.n ? " · " + esc(D.n) : "") + "</p>" +
+      (hasNames ? '<label class="find"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><input id="q" type="search" placeholder="Find a player or team" autocomplete="off"><span class="cnt" id="cnt"></span></label>' : "") +
+      '<div class="list" id="list"></div><div class="foot">Spots built with the <a href="https://maineventcardvault.com/breaks/builder" target="_blank" rel="noopener">Main Event Card Vault Spot Builder</a></div>';
+    var list = document.getElementById("list");
+    function hl(n, q) { if (!q) return esc(n); var f = fold(n), i = f.indexOf(q); return i < 0 ? esc(n) : esc(n.slice(0, i)) + "<mark>" + esc(n.slice(i, i + q.length)) + "</mark>" + esc(n.slice(i + q.length)); }
+    function draw(q) {
+      var shown = 0;
+      list.innerHTML = spots.map(function (s) {
+        var hits = q ? s.names.filter(function (x) { return fold(x.n).indexOf(q) > -1; }) : [];
+        var on = !q || hits.length || fold(s.label + " " + (s.sub || "")).indexOf(q) > -1;
+        if (!on) return "";
+        shown++;
+        var top = s.top.join(", ");
+        return '<details' + (q && hits.length ? " open" : "") + (q ? ' class="hit"' : "") + "><summary><span class=\"no\">" + (s.i + 1) + '</span><span class="lb">' + esc(s.label) + (s.sub ? "<small>" + esc(s.sub) + "</small>" : "") + (top && !q ? '<span class="top">' + esc(top) + "</span>" : "") + "</span>" +
+          '<span class="pr">' + (s.price != null ? money(s.price) : "") + (s.names.length ? "<small>" + s.names.length + " names</small>" : "") + "</span></summary>" +
+          (s.names.length ? '<div class="names">' + s.names.map(function (x) { return hl(x.n, q) + (x.a ? '<span class="a">AUTO</span>' : ""); }).join(", ") + "</div>" : "") + "</details>";
+      }).join("") || '<div class="err">No spot has that name.</div>';
+      var c = document.getElementById("cnt"); if (c) c.textContent = q ? (shown === 1 ? "1 spot" : shown + " spots") : "";
+    }
+    draw("");
+    var qi = document.getElementById("q");
+    if (qi) qi.addEventListener("input", function () { draw(fold(qi.value.trim())); });
+  }
+  main();
+})();
+</script>
+</body>
+</html>

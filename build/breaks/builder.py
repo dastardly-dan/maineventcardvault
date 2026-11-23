@@ -92,6 +92,9 @@ def main():
     tpl = open(os.path.join(HERE, 'builder_template.html'), encoding='utf-8').read()
     html = (tpl.replace('__CSS__', css).replace('__ICON__', icon)
                .replace('__DATA__', json.dumps(prods, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')))
+    # the store embed page (iframe target): reads the break from the URL hash, no data of its own
+    import shutil
+    shutil.copyfile(os.path.join(HERE, 'embed_template.html'), os.path.join(ROOT, 'breaks', 'embed.html'))
     out = os.path.join(ROOT, 'breaks', 'builder.html')
     open(out, 'w', encoding='utf-8').write(html)
     print('builder.html', len(html), 'bytes,', len(prods), 'checklists,', sum(len(p['rows']) for p in prods), 'names')

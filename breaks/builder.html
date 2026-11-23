@@ -317,6 +317,19 @@ textarea.in { min-height: 90px; resize: vertical; font-size: 13px; line-height: 
 .spot .all .a { color: var(--gold); font-size: 10.5px; font-weight: 700; margin-left: 3px; }
 @media (max-width: 640px) { .spot summary { grid-template-columns: 26px 1fr auto; } .spot summary .mid { grid-column: 1 / -1; } .spot .all { padding-left: 14px; } }
 .acts2 { display: flex; gap: 8px; flex-wrap: wrap; margin: 0 0 12px; }
+.embed { background: var(--panel); border: 1px solid var(--gold); border-radius: 12px; padding: 14px; margin: 0 0 12px; }
+.emhead { display: flex; justify-content: space-between; align-items: center; }
+.emhead h3 { margin: 0 0 6px; font-size: 15px; letter-spacing: .04em; text-transform: uppercase; color: var(--gold); }
+.emhead .x { background: none; border: 0; color: var(--ink-3); font-size: 20px; cursor: pointer; }
+.emopts { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 13.5px; color: var(--ink-2); padding-top: 6px; }
+.emopts label { display: inline-flex; gap: 6px; align-items: center; cursor: pointer; }
+.emgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 12px; }
+@media (max-width: 900px) { .emgrid { grid-template-columns: 1fr; } }
+.emcol h4 { margin: 0 0 2px; font-size: 14px; color: var(--gold-2); }
+.emcode { height: 110px; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 11.5px; margin: 8px 0; resize: vertical; }
+.empreview { margin-top: 10px; background: #fff; color: #15181d; border-radius: 8px; padding: 10px; max-height: 260px; overflow: auto; font-size: 13px; }
+.empreview table { width: 100%; border-collapse: collapse; }
+.empreview td { border: 1px solid #dde1e7; padding: 4px 8px; }
 .spotfind { display: flex; align-items: center; gap: 10px; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 8px 12px; margin: 0 0 12px; }
 .spotfind svg { color: var(--ink-3); flex: none; }
 .spotfind input { flex: 1; min-width: 0; background: transparent; border: 0; outline: 0; color: var(--ink); font: inherit; font-size: 15px; padding: 4px 0; }
@@ -470,7 +483,32 @@ table.rows td small { color: var(--ink-3); }
         <div class="money2" id="money" hidden></div>
         <div class="panel" style="margin-bottom:14px"><h3 style="margin-bottom:4px" id="barsTitle">Weight by letter</h3><div class="bars" id="bars"></div><div class="barl" id="barl"></div></div>
         <div id="warn"></div>
-        <div class="acts2"><button class="btn gold" id="copy">Copy spot list</button><button class="btn" id="csv">Download CSV</button><button class="btn" id="expand">Show every name</button><a class="qlink" href="#/how/results">Reading the results</a></div>
+        <div class="acts2"><button class="btn gold" id="copy">Copy spot list</button><button class="btn" id="csv">Download CSV</button><button class="btn" id="expand">Show every name</button><button class="btn" id="embedbtn">Embed in your store</button><a class="qlink" href="#/how/results">Reading the results</a></div>
+        <div class="embed" id="embedbox" hidden>
+          <div class="emhead"><h3>Embed in your store</h3><button class="x" id="emclose" type="button" aria-label="Close">&times;</button></div>
+          <p class="hint" style="margin-top:0">Two ways to put these spots on a product page. On Shopify, open the product's description, click the <b>&lt;&gt;</b> (Show HTML) button, paste, then save. The code is a snapshot: if you change the break, copy it again.</p>
+          <div class="row2">
+            <div><label class="f" for="emt">Title (optional)</label><input class="in" id="emt" type="text" placeholder="GB1033 Midnight Chrome PYT"></div>
+            <div><label class="f">Show</label><div class="emopts"><label><input type="checkbox" id="emp" checked> Prices</label><label><input type="checkbox" id="emn" checked> Names in each spot</label><label><input type="checkbox" id="emd"> Dark</label></div></div>
+          </div>
+          <div class="emgrid">
+            <div class="emcol">
+              <h4>1. HTML table</h4>
+              <p class="hint">Spot and price, two to a row, like a pick-your-team listing. Plain HTML, so it works on any store, Shopify included. "Names in each spot" adds a list under the table.</p>
+              <textarea class="in emcode" id="emtable" readonly></textarea>
+              <button class="btn gold" id="emcopyt" type="button">Copy table HTML</button>
+              <div class="empreview" id="emprev"></div>
+            </div>
+            <div class="emcol">
+              <h4>2. iframe (searchable list)</h4>
+              <p class="hint">A live-looking spot list hosted on maineventcardvault.com, with a "Find a player" search for your buyers. Shopify allows iframes in descriptions; some other platforms strip them, so use the table there.</p>
+              <label class="f" for="emh">Height in pixels</label><input class="in" id="emh" type="number" min="200" max="3000" step="50" value="700" style="max-width:140px">
+              <textarea class="in emcode" id="emif" readonly></textarea>
+              <button class="btn gold" id="emcopyi" type="button">Copy iframe code</button>
+              <a class="qlink" id="emopen" href="#" target="_blank" rel="noopener" style="margin-left:10px">Open the hosted list</a>
+            </div>
+          </div>
+        </div>
         <div class="spotfind"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><input id="sf" type="search" placeholder="Find a spot: type a name, team or letter" autocomplete="off" aria-label="Find the spot a name or team is in"><span class="n" id="sfn"></span><button class="x" id="sfx" type="button" aria-label="Clear" hidden>&times;</button></div>
         <div class="spotlist" id="spots"></div>
       </div>
@@ -708,7 +746,7 @@ Bianca Belair | W | auto</pre>
             <h5>Find a spot</h5>
             <p>The search box above the spot list narrows it to the spot holding a name or team and highlights the name. Type one or two letters ("s" or "sm") to find the spot covering them. The search at the top of the page works from any tab and links straight to the spot.</p>
             <h5>Sharing it</h5>
-            <p><b>Copy spot list</b> copies a plain text list for your stream notes or listing. <b>Download CSV</b> gives you a spreadsheet. <b>Show every name</b> opens every spot at once. Your settings are saved in this browser, so the build is still there next time.</p>
+            <p><b>Copy spot list</b> copies a plain text list for your stream notes or listing. <b>Download CSV</b> gives you a spreadsheet. <b>Show every name</b> opens every spot at once. <b>Embed in your store</b> gives you two codes for a product page: a plain HTML table of spots and prices (works anywhere), and an iframe of a searchable spot list hosted here, so buyers can type a player and see his spot. On Shopify, paste either one into the description using the &lt;&gt; Show HTML button. The codes are a snapshot, so copy them again after changing the break. Your settings are saved in this browser, so the build is still there next time.</p>
           </div>
         </div>
         <a class="gback" href="#/build/at/results">Back to the results in the builder</a>
@@ -1410,6 +1448,7 @@ Bianca Belair | W | auto</pre>
     [].forEach.call(document.querySelectorAll("#spots [data-reset]"), function (el) { el.addEventListener("click", function (e) { e.preventDefault(); delete S.setp[el.getAttribute("data-reset")]; go(); }); });
     if ($("resetp")) $("resetp").onclick = function () { S.setp = {}; go(); };
     applyFind(false);
+    if (typeof drawEmbed === "function") drawEmbed();
     if (location.hash.indexOf("#/search/") === 0) drawSearch(decodeURIComponent(location.hash.slice(9)));
   }
 
@@ -1461,6 +1500,61 @@ Bianca Belair | W | auto</pre>
   $("sf").addEventListener("input", function () { clearTimeout(sfT); sfT = setTimeout(function () { applyFind(true); }, 150); });
   $("sf").addEventListener("keydown", function (e) { if (e.key === "Enter") applyFind(true); if (e.key === "Escape") { this.value = ""; applyFind(false); } });
   $("sfx").onclick = function () { $("sf").value = ""; applyFind(false); $("sf").focus(); };
+
+  // ---------- store embed ----------
+  var EMB = location.origin && /^https?:/.test(location.origin) ? location.origin + "/breaks/embed" : "https://maineventcardvault.com/breaks/embed";
+  function money2(v) { return "$" + (Math.round(v * 100) / 100).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }); }
+  function embedData() {
+    var showP = $("emp").checked && LAST.goal, showN = $("emn").checked;
+    var boxes = entries().map(function (e) { return e.q + " x " + e.p.name + (typeName(e) ? " " + typeName(e) : ""); }).join(", ");
+    return { t: $("emt").value.trim(), n: boxes, d: $("emd").checked ? 1 : 0, s: LAST.bins.map(function (b) {
+      var sub = b.sub && !/^starred$/.test(b.sub) ? b.sub.replace(/ · starred$/, "") : "";
+      return [b.label, sub, showP ? b.price : null, showN ? b.names.slice().sort(function (x, y) { return y.w - x.w; }).map(function (x) { return (x.a ? "*" : "") + x.n.replace(/\|/g, "/"); }).join("|") : ""];
+    }) };
+  }
+  function tableHtml(D) {
+    var cells = D.s.map(function (s) { return [esc(s[0]) + (s[1] ? " <small>(" + esc(s[1]) + ")</small>" : ""), s[2] != null ? money2(s[2]) : ""]; });
+    var rows = [];
+    for (var i = 0; i < cells.length; i += 2) {
+      var a = cells[i], b = cells[i + 1] || ["", ""];
+      rows.push("<tr><td><strong>" + a[0] + "</strong></td>" + (D.s[0][2] != null ? "<td>" + a[1] + "</td>" : "") + "<td><strong>" + b[0] + "</strong></td>" + (D.s[0][2] != null ? "<td>" + b[1] + "</td>" : "") + "</tr>");
+    }
+    var h = (D.t ? "<h3>" + esc(D.t) + "</h3>\n" : "") + '<table style="width:100%;border-collapse:collapse">\n<tbody>\n' + rows.join("\n") + "\n</tbody>\n</table>";
+    if (D.s.some(function (s) { return s[3]; })) {
+      h += "\n<h4>Who's in each spot</h4>\n" + D.s.map(function (s) { return "<p><strong>" + esc(s[0]) + (s[1] ? " (" + esc(s[1]) + ")" : "") + ":</strong> " + s[3].split("|").map(function (n) { return n.replace(/^\*/, ""); }).sort(function (x, y) { return fold(x.replace(/^"|^the /i, "")).localeCompare(fold(y.replace(/^"|^the /i, ""))); }).map(esc).join(", ") + "</p>"; }).join("\n");
+    }
+    return h;
+  }
+  async function packData(D) {
+    var bytes = new TextEncoder().encode(JSON.stringify(D)), kind = "j";
+    try { if (window.CompressionStream) { var cs = new Blob([bytes]).stream().pipeThrough(new CompressionStream("deflate-raw")); bytes = new Uint8Array(await new Response(cs).arrayBuffer()); kind = "z"; } } catch (e) {}
+    var s = "", c = 0x8000; for (var i = 0; i < bytes.length; i += c) s += String.fromCharCode.apply(null, bytes.subarray(i, i + c));
+    return kind + btoa(s).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+  }
+  var emT;
+  function drawEmbed() {
+    if ($("embedbox").hidden) return;
+    if (!LAST) { $("emtable").value = ""; $("emif").value = ""; $("emprev").innerHTML = '<div class="noboxes">Build some spots first.</div>'; return; }
+    var D = embedData(), tb = tableHtml(D);
+    $("emtable").value = tb; $("emprev").innerHTML = tb;
+    clearTimeout(emT); emT = setTimeout(function () {
+      packData(D).then(function (h) {
+        var url = EMB + "#" + h, ht = Math.max(200, Math.min(3000, parseInt($("emh").value, 10) || 700));
+        $("emif").value = '<iframe src="' + url + '" width="100%" height="' + ht + '" style="border:0;width:100%;max-width:100%" loading="lazy" title="' + esc(D.t || "Break spots") + '"></iframe>';
+        $("emopen").href = url;
+      });
+    }, 50);
+  }
+  function copyText(txt, msg) {
+    function fb() { var ta = document.createElement("textarea"); ta.value = txt; document.body.appendChild(ta); ta.select(); try { document.execCommand("copy"); toast(msg); } catch (e) { toast("Copy failed"); } ta.remove(); }
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(function () { toast(msg); }, fb); else fb();
+  }
+  $("embedbtn").onclick = function () { $("embedbox").hidden = !$("embedbox").hidden; drawEmbed(); if (!$("embedbox").hidden) $("embedbox").scrollIntoView({ block: "nearest" }); };
+  $("emclose").onclick = function () { $("embedbox").hidden = true; };
+  ["emt", "emh"].forEach(function (id) { $(id).addEventListener("input", drawEmbed); });
+  ["emp", "emn", "emd"].forEach(function (id) { $(id).addEventListener("change", drawEmbed); });
+  $("emcopyt").onclick = function () { if ($("emtable").value) copyText($("emtable").value, "Table HTML copied"); };
+  $("emcopyi").onclick = function () { if ($("emif").value) copyText($("emif").value, "iframe code copied"); };
 
   function textOut() {
     if (!LAST) return "";

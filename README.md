@@ -172,6 +172,10 @@ team spot, box by box. Linked from the storefront's Breaks menu; every page carr
   and shrunk to one line per set / name / card type) or an .xlsx; `build/breaks/leaf_convert.py` writes the
   library files into "Leaf ..." sport groups (Leaf is unlicensed, no team names) and adds print-run rarity to
   depth.json the same way as Panini. 2026 Leaf Metal Women of Sport is marked all women.
+- **Store embed:** "Embed in your store" in the results gives a plain HTML table (spot, price, two per row, optional
+  names list) and an iframe pointing at `/breaks/embed#<data>`. `breaks/embed.html` (copied from
+  `build/breaks/embed_template.html` by builder.py) decodes the break from the hash (JSON, deflate-raw, base64url;
+  prefix z, or j for uncompressed) and shows a searchable spot list, light or dark. Nothing is stored on the server.
 - **Find a spot:** search box above the spot list filters to the spots holding a name or team (one or two
   letters match by letter range); the header search results link to `#/build/find/<name>`.
 - **Panini print runs:** Panini publishes no pack odds. `depth.py --panini` reads each CSV's SEQUENCE column:
