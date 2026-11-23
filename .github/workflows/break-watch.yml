@@ -1,0 +1,42 @@
+# Checks Acme Packs, JWJ, Colfax and Run Good Life for new or removed products every 15 minutes
+# and commits what it finds to build/breaks/watch/ (only when something changed).
+# A scheduled Claude task reads build/breaks/watch/queue.json and builds the break pages.
+name: Break watcher
+
+on:
+  schedule:
+    - cron: "7,22,37,52 * * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/break-watch.yml
+      - build/breaks/watch.py
+
+permissions:
+  contents: write
+
+concurrency:
+  group: break-watch
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check the stores
+        run: python build/breaks/watch.py
+      - name: Commit anything new
+        run: |
+          if [ -n "$(git status --porcelain build/breaks/watch)" ]; then
+            git config user.name "Break watcher"
+            git config user.email "actions@users.noreply.github.com"
+            git add build/breaks/watch
+            git commit -m "Break watcher: store products changed"
+            for i in 1 2 3; do git pull --rebase origin main && git push origin HEAD:main && break; sleep 5; done
+          fi
