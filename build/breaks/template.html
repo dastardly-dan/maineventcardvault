@@ -50,6 +50,11 @@ nav.tabs a:hover { color: var(--ink); border-color: var(--line-2); }
 nav.tabs a.on { background: var(--gold); color: var(--on-gold); font-weight: 600; }
 
 .hero { padding-top: 34px; padding-bottom: 10px; }
+.hero.hasimg { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 380px); gap: 28px; align-items: start; }
+.heroimg { display: block; border-radius: 12px; overflow: hidden; border: 1px solid var(--line); line-height: 0; }
+.heroimg img { width: 100%; height: auto; display: block; }
+@media (max-width: 760px) { .hero.hasimg { grid-template-columns: 1fr; gap: 14px; } .hero.hasimg .heroimg { grid-row: 1; max-width: 460px; } }
+body.compact .heroimg { display: none; }
 body.compact .lede { display: none; }
 @media (max-width: 560px) { body.compact .hero { padding-top: 18px; } body.compact h1 { font-size: 26px; } }
 .kicker { color: var(--gold); font-size: 12px; letter-spacing: .22em; text-transform: uppercase; font-weight: 600; }
@@ -208,13 +213,16 @@ __THEME__
   </div>
 </header>
 
-<div class="wrap hero">
+<div class="wrap hero" id="hero">
+  <div class="herotext">
   <div class="kicker" id="kicker"></div>
   <h1 class="display" id="h1"></h1>
   <ul class="facts" id="facts"></ul>
   <p class="ended" id="ended" hidden></p>
   <p class="lede" id="checked"></p>
   <div class="mine" id="mine"></div>
+  </div>
+  <a class="heroimg" id="heroimg" target="_blank" rel="noopener" hidden><img alt=""></a>
 </div>
 
 <main class="wrap">
@@ -294,6 +302,11 @@ __THEME__
   // header bits
   document.getElementById("kicker").textContent = D.kicker;
   document.getElementById("h1").textContent = D.title;
+  if (D.image) {  // the breaker's own title card for this break, links to their product page
+    var hi = document.getElementById("heroimg");
+    hi.href = D.url; hi.querySelector("img").src = D.image; hi.querySelector("img").alt = D.title + " title card";
+    hi.hidden = false; document.getElementById("hero").classList.add("hasimg");
+  }
   document.getElementById("facts").innerHTML = '<li><b>' + esc(D.when) + "</b></li>" + D.facts.map(function (f) { return "<li>" + esc(f) + "</li>"; }).join("") + '<li><a href="' + D.url + '" target="_blank" rel="noopener">Break page</a></li>';
   document.getElementById("checked").textContent = D.checked;
   var LIVE_SRC = LIVE && D.live ? D.live : null;

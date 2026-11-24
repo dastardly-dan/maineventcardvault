@@ -35,8 +35,8 @@ html = f'''<!DOCTYPE html>
 .grid {{ grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }}
 .bar .bmenu {{ margin-left: auto; }}
 .grid.past .tile {{ opacity: .72; }}
-.tile .thumb {{ margin: -4px -4px 12px; border-radius: 10px; overflow: hidden; background: #050b14; aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; }}
-.tile .thumb img {{ width: 100%; height: 100%; object-fit: contain; display: block; }}
+.tile .thumb {{ margin: -4px -4px 12px; border-radius: 10px; overflow: hidden; line-height: 0; }}
+.tile .thumb img {{ width: 100%; height: auto; display: block; }}
 /*BMENU-CSS*//*/BMENU-CSS*/
 </style></head><body>
 <header class="site"><div class="wrap"><div class="bar"><a class="brand" href="/"><img src="{icon}" alt=""><div><b class="display">Main Event Card Vault</b><span>Break guides</span></div></a><!--BMENU--><!--/BMENU--></div></div></header>

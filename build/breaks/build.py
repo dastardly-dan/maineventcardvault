@@ -164,8 +164,18 @@ def theme_css(key):
     t = THEMES.get(key)
     return LIGHT_CSS % t if t else ''
 
+# Each breaker's title card image, saved by the watcher (watch/images.json), keyed by store and product handle.
+SHOP_OF = {'acmepackscards.com': 'acme', 'jwjcollectorbreaks.com': 'jwj', 'colfaxcc.com': 'colfax', 'rungoodlife.com': 'rgl'}
+_ip = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'watch', 'images.json')
+IMAGES = json.load(open(_ip)) if os.path.exists(_ip) else {}
+def image_of(url, width=800):
+    m = re.match(r'https?://(?:www\.)?([^/]+)/products/([^/?#]+)', url or '')
+    src = IMAGES.get(SHOP_OF.get(m.group(1), ''), {}).get(m.group(2), '') if m else ''
+    return (src + ('&' if '?' in src else '?') + 'width=%d' % width) if src else ''
+
 def write(cfg, names, unmatched):
     data = dict(cfg)
+    if image_of(cfg.get('url')): data['image'] = image_of(cfg['url'])
     if cfg.get('ended'): data['spots'] = [{k: v for k, v in s.items() if k != 'status'} for s in cfg['spots']]
     data['names'] = names
     data['unmatched'] = unmatched
