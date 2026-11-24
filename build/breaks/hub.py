@@ -62,18 +62,14 @@ def code_and_name(title):
     return (m.group(1), m.group(2)) if m else ('', title)
 
 def menu_html(current=None):
-    links = []
-    for i in items:
-        if is_past(i) and i['id'] != current: continue  # only current breaks in the menu
-        code, name = code_and_name(i['title'])
-        parts = i['kicker'].split(' · ')
-        host = parts[0].replace(' Collectibles', '').replace(' Collector Breaks', '')
-        meta = ' · '.join([host] + parts[1:] + [('ran ' if i.get('ended') else '') + short_date(i['when'])])
-        cls = ' class="on"' if i['id'] == current else (' class="past"' if is_past(i) else '')
-        links.append(f'<a href="/breaks/{i["id"]}"{cls}><b>{esc(code)}</b>{esc(name)}<span>{esc(meta)}</span></a>')
-    links.append('<a class="all" href="/breaks/builder"' + (' style="background:rgba(230,190,85,.1)"' if current == 'builder' else '') + '>Spot builder<span>Turn checklists into balanced letter spots</span></a>')
-    links.append('<a class="all" href="/breaks/" style="border-top:0;margin-top:0;padding-top:9px">All break guides</a>')
-    links.append('<a class="all" href="/breaks/release-notes" style="border-top:0;margin-top:0;padding-top:4px' + (';background:rgba(230,190,85,.1)' if current == 'notes' else '') + '">Release notes<span>What changed, and when</span></a>')
+    # Daniel wants the menu short: no list of individual breaks, just these three links.
+    on = ';background:rgba(230,190,85,.1)'
+    first = 'border-top:0;margin-top:0;padding-top:9px'
+    links = [
+        f'<a class="all" href="/breaks/" style="{first}{on if current == "hub" else ""}">All break guides<span>Every break with a guide right now</span></a>',
+        f'<a class="all" href="/breaks/builder" style="{first}{on if current == "builder" else ""}">Spot builder<span>Turn checklists into balanced spots</span></a>',
+        f'<a class="all" href="/" style="{first}">Main Event Card Vault<span>Shop all my cards</span></a>',
+    ]
     return '<!--BMENU--><details class="bmenu"><summary>Breaks</summary><div class="bmenu-list">' + ''.join(links) + '</div></details>' + MENU_JS + '<!--/BMENU-->'
 
 def fill(path, current=None):
@@ -120,7 +116,7 @@ fill(os.path.join(ROOT, 'breaks', 'release-notes.html'), 'notes')
 
 for i in items:
     fill(os.path.join(ROOT, 'breaks', i['id'] + '.html'), i['id'])
-fill(os.path.join(ROOT, 'breaks', 'index.html'))
+fill(os.path.join(ROOT, 'breaks', 'index.html'), 'hub')
 if os.path.exists(os.path.join(ROOT, 'breaks', 'builder.html')): fill(os.path.join(ROOT, 'breaks', 'builder.html'), 'builder')
 fill(os.path.join(ROOT, 'build', 'template.html'))
 print('menu written to', len(items) + 2, 'files')
