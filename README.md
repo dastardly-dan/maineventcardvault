@@ -208,6 +208,9 @@ team spot, box by box. Linked from the storefront's Breaks menu; every page carr
      `live=dict(shop=..., handle=...)` for pyl and pyt. Use the breaker's house rules from the listing text and keep the
      breaker's own wording for dates. The id prefix picks the breaker's colors (gb, jwj, cc, rgl; ids like gb1040, jwj0249, cc876, rgl6128). Multi-sport breaks: CC874
      is the model.
+  3b. Random breaks whose spot groupings aren't posted (Run Good Life sets team pairings and letter groups live): don't
+     skip them. Build one spot per team or letter and say how many spots the breaker sells, like rgl6131, rgl6132
+     (college cards in one "College (NIL) cards" spot) and rgl6133 (spots made from the letters that have names).
   4. Checklists come only from `build/breaks/checklists/`. If a box isn't in the library, try the official list through
      WebFetch (Topps, Panini, checklistinsider); if a full official list can't be had, don't guess: skip that page and
      say what's needed in the message (the shell can't reach cdn.shopify.com, so Daniel may have to paste a link).
