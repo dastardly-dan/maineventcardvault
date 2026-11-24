@@ -9,11 +9,11 @@ so read it as a guide. Updated whenever a product is added.
 - Hours (ET): 09:00 1, 12:00 4, 13:00 5, 14:00 1, 17:00 1, 20:00 1
 - Latest: Tue Mar 24 12:22 PM AP B/W Trucker Cap; Tue Mar 31 02:10 PM AP Classic Trucker Cap; Thu Nov 12 09:47 AM Expedited Shipping; Mon Nov 23 01:00 PM GB1037 - Midnight Chrome PYT! - Pick Your Team; Mon Nov 23 01:00 PM GB1038 - 25% CHANCE FILLER - Full Case Absolute Fo; Mon Nov 23 01:00 PM GB1038 - Full Case Absolute Football!  - Random Te; Mon Nov 23 01:00 PM GB1039 - 25% CHANCE FILLER - Midnight Chrome Incep; Mon Nov 23 01:00 PM GB1039 - Midnight Chrome Inception!  - Random Team
 
-## jwj (6 products)
+## jwj (7 products)
 
-- Days: Tue 1, Fri 5
-- Hours (ET): 08:00 1, 14:00 3, 16:00 2
-- Latest: Tue May 20 08:06 AM 🎉 Giveaway Winner 🎉; Fri Nov 13 04:31 PM JWJ #0244 - Balling on a budget with Flagship NBA; Fri Nov 13 04:31 PM JWJ #0244 - Balling on a budget with Flagship NBA ; Fri Nov 20 02:20 PM JWJ #0246 -  Cosmic Exalted Logo Club PYL; Fri Nov 20 02:33 PM JWJ #0248 - Chromed Up Galaxy; Fri Nov 20 02:33 PM JWJ #0248 - Chromed Up Galaxy - 25% Filler
+- Days: Mon 1, Tue 1, Fri 5
+- Hours (ET): 08:00 1, 14:00 3, 16:00 2, 21:00 1
+- Latest: Tue May 20 08:06 AM 🎉 Giveaway Winner 🎉; Fri Nov 13 04:31 PM JWJ #0244 - Balling on a budget with Flagship NBA; Fri Nov 13 04:31 PM JWJ #0244 - Balling on a budget with Flagship NBA ; Fri Nov 20 02:20 PM JWJ #0246 -  Cosmic Exalted Logo Club PYL; Fri Nov 20 02:33 PM JWJ #0248 - Chromed Up Galaxy; Fri Nov 20 02:33 PM JWJ #0248 - Chromed Up Galaxy - 25% Filler; Mon Nov 23 09:33 PM JWJ #0247 - Exalted Universe Club
 
 ## colfax (10 products)
 
