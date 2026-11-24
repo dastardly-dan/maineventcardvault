@@ -211,6 +211,10 @@ team spot, box by box. Linked from the storefront's Breaks menu; every page carr
   3b. Random breaks whose spot groupings aren't posted (Run Good Life sets team pairings and letter groups live): don't
      skip them. Build one spot per team or letter and say how many spots the breaker sells, like rgl6131, rgl6132
      (college cards in one "College (NIL) cards" spot) and rgl6133 (spots made from the letters that have names).
+  3c. Multi-sport boxes in a one-sport break (like the 2026 National Convention box in a WWE break): list only the
+     featured sport's cards (Daniel, Nov 24). `nscc_product('WWE')` filters by `nscc_sports.json` (every name tagged
+     WWE, NBA, NFL, MLB, Soccer, Star Wars or College from the official checklist's set names and teams); say so in
+     the page notes.
   4. Checklists come only from `build/breaks/checklists/`. If a box isn't in the library, try the official list through
      WebFetch (Topps, Panini, checklistinsider); if a full official list can't be had, don't guess: skip that page and
      say what's needed in the message (the shell can't reach cdn.shopify.com, so Daniel may have to paste a link).
