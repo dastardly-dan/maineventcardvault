@@ -800,6 +800,41 @@ rgl6133 = dict(
              ['Panini Immaculate Collection Racing checklist (official Panini CSV)', SRC_PANINI]],
 )
 
+# GB1040 (Daniel, Nov 24): built from Acme's title card before the listing was posted. When the listing shows up in the
+# watcher queue, update url, when, facts and checked here instead of building a second page; the image fills in once url
+# is the product link.
+ACME_BREAKS = 'https://acmepackscards.com/collections/group-breaks'
+def _src(pid, label):
+    u = next((l.split('source:', 1)[1].strip() for l in open(os.path.join(LIB, pid + '.txt'), encoding='utf-8') if l.startswith('# source:')), '')
+    return [label + ' checklist (official Topps)', u]
+GB1040_LIB = dict(chrome='2026-topps-chrome-football', ufc='2026-topps-midnight-ufc', pristine='2025-26-topps-pristine-basketball',
+                  platinum='2025-topps-chrome-platinum-baseball', sc='2026-topps-stadium-club-wwe')
+gb1040 = dict(
+    id='gb1040', title='GB1040 Multi Product Madness', kicker='Acme Packs · Random letter · Multi-sport · Letter spots are a guess',
+    url=ACME_BREAKS,
+    when='Date and time to come. Acme hasn\'t posted this break on its site yet.',
+    facts=['5 boxes', '21 letter spots (groupings are a guess)', '$135 per spot', 'Letters randomized live'],
+    format='random', checked='Built on November 24, 2026 from Acme\'s title card, before the listing went up. The letter spots shown are our guess; the real groupings, date and sold status will be added once Acme posts it.',
+    boxes=[dict(k='chrome', short='Chrome Football', c='#e2545e', full='2026 Topps Chrome Football Hobby', kind='NFL veterans and rookies, autographs, inserts',
+                types='Chrome base with refractor parallels, inserts, and rookie and veteran autographs.'),
+           dict(k='ufc', short='Midnight UFC', c='#8a6be0', full='2026 Topps Midnight UFC', kind='UFC fighters, autographs, inserts',
+                types='Base with numbered parallels, inserts, and fighter autographs.'),
+           dict(k='pristine', short='Pristine Basketball', c='#5aa9ff', full='2025-26 Topps Pristine Basketball', kind='NBA players and rookies, autographs, relics',
+                types='Encased cards: base, autographs, relics and inserts.'),
+           dict(k='platinum', short='Chrome Platinum', c='#4c9a2a', full='2025 Topps Chrome Platinum Baseball', kind='MLB players in the classic 1998 design, autographs, inserts',
+                types='Chrome base with parallels, inserts and autographs.'),
+           dict(k='sc', short='Stadium Club WWE', c='#f2c14e', full='2026 Topps Stadium Club WWE Hobby', kind='WWE Superstars and Legends, 2 autographs per box, inserts',
+                types='Photo-driven base, inserts and autographs.')],
+    spots=[],  # filled in below from the letters that have names
+    rules=[['How the 21 spots work', ['Acme sells 21 spots and randomizes the letters live. The title card doesn\'t show how the 26 letters are grouped into 21 spots, so some letters will share a spot.', '']],
+           ['First letter of the first name', ['Acme\'s rules send letter cards to the first letter of the first name of the player or character: Josh Allen is J, Shai Gilgeous-Alexander is S.', 'That holds across all five boxes, so one letter covers football, UFC, basketball, baseball and WWE names.']],
+           ['Cards with more than one name', ['Each person on a dual or multi-player card is listed under their own letter here. Acme randomizes cards like that between the spots involved.', 'Anything the rules don\'t cover is up to the breaker.']]],
+    notes=['The title card shows Chrome Platinum Baseball without a clear year; this guide uses the 2025 checklist, the one in the library. If Acme lists a different year, the page will be updated.',
+           'Box counts aren\'t on the title card; the guide assumes one of each.'],
+    sources=[['Acme Packs group breaks', ACME_BREAKS], ACME_TERMS, _src(GB1040_LIB['chrome'], 'Topps Chrome Football'), _src(GB1040_LIB['ufc'], 'Topps Midnight UFC'),
+             _src(GB1040_LIB['pristine'], 'Topps Pristine Basketball'), _src(GB1040_LIB['platinum'], 'Topps Chrome Platinum Baseball'), _src(GB1040_LIB['sc'], 'Topps Stadium Club WWE')],
+)
+
 if __name__ == '__main__':
     built = []
     n, u = letter_break(cc871, WWE_PRODUCTS, wwe_gender); built.append(write(cc871, n, u))
@@ -824,6 +859,19 @@ if __name__ == '__main__':
     have = sorted({letters(n)[0] for p_ in nas.values() for n in entries_from_product(p_) if letters(n)[0]})
     rgl6133['spots'] = [cc_spot(L, L) for L in have]
     n, u = letter_break(rgl6133, nas, None, alt=False); built.append(write(rgl6133, n, u))
+    g40 = {k: (gpk_fold(lib_letter_product(v)) if k == 'sc' else lib_letter_product(v)) for k, v in GB1040_LIB.items()}
+    have = sorted({letters(n)[0] for p_ in g40.values() for n in entries_from_product(p_) if letters(n)[0].isalpha()})
+    # Acme hasn't posted the letter groups: guess them by joining the two lightest spots (by names) until 21 are left.
+    cnt = {L: sum(1 for p_ in g40.values() for n in entries_from_product(p_) if letters(n)[0] == L) for L in have}
+    groups = [[L] for L in have]
+    while len(groups) > 21:
+        groups.sort(key=lambda g: (sum(cnt[x] for x in g), g))
+        groups[:2] = [sorted(groups[0] + groups[1])]
+    groups.sort()
+    gb1040['spots'] = [cc_spot(' / '.join(g), ''.join(g)) for g in groups]
+    gb1040['rules'][0][1][1] = 'Our guess for now: ' + ', '.join(' / '.join(g) for g in groups if len(g) > 1) + ' share a spot, and every other letter stands alone. We joined the letters with the fewest names until 21 spots were left. Acme may group them differently.'
+    print('gb1040 guess', [(' / '.join(g), sum(cnt[x] for x in g)) for g in groups])
+    n, u = letter_break(gb1040, g40, None, alt=False); built.append(write(gb1040, n, u))
     json.dump([{k: b[k] for k in ('id', 'title', 'kicker', 'when', 'facts', 'ended', 'url') if k in b} for b in built], open(os.path.join(os.path.dirname(__file__), 'index.json'), 'w'))
     for b in built:
         if b['unmatched']: print(b['id'], 'UNMATCHED', b['unmatched'][:40])

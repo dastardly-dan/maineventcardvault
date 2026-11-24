@@ -211,6 +211,9 @@ team spot, box by box. Linked from the storefront's Breaks menu; every page carr
   3b. Random breaks whose spot groupings aren't posted (Run Good Life sets team pairings and letter groups live): don't
      skip them. Build one spot per team or letter and say how many spots the breaker sells, like rgl6131, rgl6132
      (college cards in one "College (NIL) cards" spot) and rgl6133 (spots made from the letters that have names).
+  3d. Early pages (Daniel, Nov 24): gb1040 was built from Acme's title card before the listing was posted, with guessed
+      letter spots (lightest letters joined until 21 spots were left). When the real listing appears, update gb1040 in
+      `build.py` (url, when, facts, checked, real spot groups, and drop the "guess" wording); don't build a second page.
   3c. Multi-sport boxes in a one-sport break (like the 2026 National Convention box in a WWE break): list only the
      featured sport's cards (Daniel, Nov 24). `nscc_product('WWE')` filters by `nscc_sports.json` (every name tagged
      WWE, NBA, NFL, MLB, Soccer, Star Wars or College from the official checklist's set names and teams); say so in
