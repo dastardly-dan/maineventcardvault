@@ -190,12 +190,14 @@ team spot, box by box. Linked from the storefront's Breaks menu; every page carr
   dates), `seen.json` (handles already known), `posts.json` and `stats.md` (when each breaker publishes). A scheduled
   Claude task ("Break page builder") works the queue; its runbook is the next item.
 - **Break page builder runbook (for the scheduled task):**
-  1. `git pull --rebase`. Read `build/breaks/watch/queue.json`. If it's empty and no listed break is past its date, stop
-     with no changes and no message.
+  1. `git pull --rebase`. Read `build/breaks/watch/queue.json`. If it's empty and no listed break is more than 10 hours past
+     its scheduled start, stop with no changes and no message.
   2. For each `added` item, decide whether it's a group break (break number like GB1039, JWJ #0248, CC875, RGL #6124, or
      the listing describes a group break). Skip merch, fees, giveaway winners and mystery packs. A "25% chance filler"
      listing isn't its own page: note it on the main break's page. If the break number or handle already has a page
      (search `build.py` and `breaks/cc874.html`), update what changed (title or renumbering, date, price) instead.
+     Old listings (Daniel, Nov 23, 2026): if an added break's scheduled start is already more than 10 hours past when the run
+     sees it, don't build a page; just remove it from the queue and mention it in the message.
   3. New break: add a config to `build/breaks/build.py` modeled on the closest existing one (gb1037 pick your team,
      jwj0246 pick your letter, gb1038b random team with combos, gb1038a NIL letters, cc872 random team, jwj0247 random
      letter). Spots come from the variant titles; prices from the variants; `format` pyl / pyt / team / random; add
@@ -205,7 +207,7 @@ team spot, box by box. Linked from the storefront's Breaks menu; every page carr
   4. Checklists come only from `build/breaks/checklists/`. If a box isn't in the library, try the official list through
      WebFetch (Topps, Panini, checklistinsider); if a full official list can't be had, don't guess: skip that page and
      say what's needed in the message (the shell can't reach cdn.shopify.com, so Daniel may have to paste a link).
-  5. `removed` items, or a break whose date is more than a day past: close it with `close(cfg, ran, facts)` (cc874 by
+  5. `removed` items, or a break more than 10 hours past its scheduled start (Daniel, Nov 23, 2026): close it with `close(cfg, ran, facts)` (cc874 by
      hand, `ended='yes'` in hub.py). Never delete a page.
   6. Run `python3 build/breaks/build.py`, `builder.py` if checklists changed, `hub.py`, then `python3 build/build_site.py`
      so the storefront's Breaks menu matches. Add new break ids to `order` in hub.py.
