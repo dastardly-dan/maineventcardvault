@@ -527,6 +527,9 @@ close(cc872, 'Sunday, November 22, 2026', ['5 boxes', '32 team spots', '$95 per 
 close(cc875, 'Sunday, November 22, 2026', ['3 boxes', '13 letter spots', '$90 per spot, $22.50 filler'])
 close(jwj0246, 'Monday, November 23, 2026', ['6 boxes', '27 letter spots'])
 close(jwj0247, 'Monday, November 23, 2026', ['2 boxes', '18 letter spots', '$66 per spot'])
+close(jwj0244, 'the week of November 23, 2026', ['3 boxes', '26 team spots'])
+jwj0244.update(ended='This break ran the week of November 23, 2026. Spots are closed, but the guide stays up so you can look back at who was in each spot.',
+               when='Ran the week of November 23, 2026')
 
 if __name__ == '__main__':
     built = []
