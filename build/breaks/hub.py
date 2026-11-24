@@ -77,7 +77,29 @@ def fill(path, current=None):
     s = open(path).read()
     s = re.sub(r'<!--BMENU-->.*?<!--/BMENU-->', lambda m: menu_html(current), s, count=1, flags=re.S)
     s = re.sub(r'/\*BMENU-CSS\*/.*?/\*/BMENU-CSS\*/', lambda m: '/*BMENU-CSS*/' + MENU_CSS + '/*/BMENU-CSS*/', s, count=1, flags=re.S)
+    s = footer_link(s, current)
     open(path, 'w').write(s)
+
+# A Release notes link at the bottom of every page that has the Breaks menu (Daniel, Nov 24).
+RN_LINK = '<!--RNLINK--><a href="/breaks/release-notes">Release notes</a><!--/RNLINK-->'
+def footer_link(s, current):
+    if current == 'notes':
+        return s
+    if '<!--RNLINK-->' in s:
+        link = RN_LINK if '<div class="socials">' in s else RN_LINK.replace('<a ', '· <a ', 1)
+        return re.sub(r'<!--RNLINK-->.*?<!--/RNLINK-->', lambda m: link, s, count=1, flags=re.S)
+    f = s.rfind('<footer')
+    if f < 0:
+        return s
+    end = s.index('</footer>', f)
+    if 'href="/breaks/release-notes"' in s[f:end]:
+        return s
+    sock = s.find('<div class="socials">', f, end)
+    if sock > -1:  # storefront footer: add it to the row of links
+        close = s.index('</div>', sock)
+        return s[:close] + '  ' + RN_LINK + '\n    ' + s[close:]
+    close = s.rfind('</div>', f, end)  # break pages: end of the footer line
+    return s[:close] + ' ' + RN_LINK.replace('<a ', '· <a ', 1) + s[close:]
 
 # ---------------- Release notes: breaks/release-notes.html from release_notes.json ----------------
 RN = json.load(open(os.path.join(HERE, 'release_notes.json')))['releases']
