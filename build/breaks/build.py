@@ -862,15 +862,24 @@ if __name__ == '__main__':
     n, u = letter_break(rgl6133, nas, None, alt=False); built.append(write(rgl6133, n, u))
     g40 = {k: (gpk_fold(lib_letter_product(v)) if k == 'sc' else lib_letter_product(v)) for k, v in GB1040_LIB.items()}
     have = sorted({letters(n)[0] for p_ in g40.values() for n in entries_from_product(p_) if letters(n)[0].isalpha()})
-    # Acme hasn't posted the letter groups: guess them by joining the two lightest spots (by names) until 21 are left.
-    cnt = {L: sum(1 for p_ in g40.values() for n in entries_from_product(p_) if letters(n)[0] == L) for L in have}
-    groups = [[L] for L in have]
+    # Acme hasn't posted the letter groups: guess them. J is by far the heaviest letter, so it's split in two on the second
+    # letter (Daniel, Nov 24); then the two lightest spots are joined until 21 are left.
+    allnames = [n for p_ in g40.values() for n in entries_from_product(p_)]
+    cnt = {L: sum(1 for n in allnames if letters(n)[0] == L) for L in have}
+    j2 = sorted(first_two(n.replace('"', '')) for n in allnames if letters(n)[0] == 'J')
+    cut = min(range(1, len(j2)), key=lambda i: (j2[i - 1] == j2[i], abs(2 * i - len(j2))))  # most even split between two different prefixes
+    jlo, jhi = (j2[0], j2[cut - 1]), (j2[cut], j2[-1])
+    jlab = lambda r: (r[0] + '-' + r[1]) if r[0] != r[1] else r[0]
+    cnt[jlab(jlo)], cnt[jlab(jhi)] = cut, len(j2) - cut
+    groups = [[L] for L in have if L != 'J'] + [[jlab(jlo)], [jlab(jhi)]]
     while len(groups) > 21:
         groups.sort(key=lambda g: (sum(cnt[x] for x in g), g))
         groups[:2] = [sorted(groups[0] + groups[1])]
     groups.sort()
-    gb1040['spots'] = [cc_spot(' / '.join(g), ''.join(g)) for g in groups]
-    gb1040['rules'][0][1][1] = 'Our guess for now: ' + ', '.join(' / '.join(g) for g in groups if len(g) > 1) + ' share a spot, and every other letter stands alone. We joined the letters with the fewest names until 21 spots were left. Acme may group them differently.'
+    jr = {jlab(jlo): ('J', jlo[1]), jlab(jhi): (jhi[0], 'JZ')}
+    gb1040['spots'] = [cc_spot(' / '.join(g), ''.join(x for x in g if x not in jr), pre=[jr[x] for x in g if x in jr]) for g in groups]
+    gb1040['rules'][0][1][1] = ('Our guess for now: J has far more names than any other letter, so we split it in two on the second letter (' + jlab(jlo) + ' and ' + jlab(jhi) + '). '
+        + ', '.join(' / '.join(g) for g in groups if len(g) > 1) + ' share a spot, and every other letter stands alone. We joined the letters with the fewest names until 21 spots were left. Acme may group them differently.')
     print('gb1040 guess', [(' / '.join(g), sum(cnt[x] for x in g)) for g in groups])
     n, u = letter_break(gb1040, g40, None, alt=False); built.append(write(gb1040, n, u))
     json.dump([{k: b[k] for k in ('id', 'title', 'kicker', 'when', 'facts', 'ended', 'url', 'image') if k in b} for b in built], open(os.path.join(os.path.dirname(__file__), 'index.json'), 'w'))
