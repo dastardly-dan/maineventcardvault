@@ -12,7 +12,20 @@ items.sort(key=lambda x: (is_past(x), order.index(x['id'])))
 def esc(s): return s.replace('&','&amp;').replace('<','&lt;')
 EDGE = {'gb': '#4c9a2a', 'jwj': '#c2452c', 'cc': '#8a3fd6', 'rgl': '#3b7be0'}  # breaker colors: Acme green, JWJ rust, Colfax purple
 def edge(i): return next((c for k, c in EDGE.items() if i['id'].startswith(k)), 'var(--line)')
-def card(i): return f'''<a class="tile" href="/breaks/{i['id']}" style="border-left:4px solid {edge(i)}"><div class="kicker" style="font-size:11px">{esc(i['kicker'])}</div><div class="lab display" style="font-size:26px;margin-top:6px">{esc(i['title'])}</div><div class="cnt" style="margin-top:8px">{esc(i['when'])}</div><div class="peek">{esc(' · '.join(i['facts']))}</div></a>'''
+# Each breaker's own title card image for the break (Daniel, Nov 24), from the watcher's images.json, keyed by store and
+# product handle. Shopify serves a smaller copy with &width=.
+SHOP_OF = {'acmepackscards.com': 'acme', 'jwjcollectorbreaks.com': 'jwj', 'colfaxcc.com': 'colfax', 'rungoodlife.com': 'rgl'}
+_ip = os.path.join(HERE, 'watch', 'images.json')
+IMAGES = json.load(open(_ip)) if os.path.exists(_ip) else {}
+def image_of(i):
+    m = re.match(r'https?://(?:www\.)?([^/]+)/products/([^/?#]+)', i.get('url', ''))
+    if not m: return ''
+    src = IMAGES.get(SHOP_OF.get(m.group(1), ''), {}).get(m.group(2), '')
+    return (src + ('&' if '?' in src else '?') + 'width=640') if src else ''
+def thumb(i):
+    src = image_of(i)
+    return f'<div class="thumb"><img src="{esc(src)}" alt="{esc(i["title"])} title card" loading="lazy"></div>' if src else ''
+def card(i): return f'''<a class="tile" href="/breaks/{i['id']}" style="border-left:4px solid {edge(i)}">{thumb(i)}<div class="kicker" style="font-size:11px">{esc(i['kicker'])}</div><div class="lab display" style="font-size:26px;margin-top:6px">{esc(i['title'])}</div><div class="cnt" style="margin-top:8px">{esc(i['when'])}</div><div class="peek">{esc(' · '.join(i['facts']))}</div></a>'''
 up = ''.join(card(i) for i in items if not is_past(i)); past = ''.join(card(i) for i in items if is_past(i))
 cards = up or '<p class="sub">No breaks on the schedule right now.</p>'  # past breaks stay online but aren't listed
 html = f'''<!DOCTYPE html>
@@ -22,6 +35,8 @@ html = f'''<!DOCTYPE html>
 .grid {{ grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }}
 .bar .bmenu {{ margin-left: auto; }}
 .grid.past .tile {{ opacity: .72; }}
+.tile .thumb {{ margin: -4px -4px 12px; border-radius: 10px; overflow: hidden; background: #050b14; aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; }}
+.tile .thumb img {{ width: 100%; height: 100%; object-fit: contain; display: block; }}
 /*BMENU-CSS*//*/BMENU-CSS*/
 </style></head><body>
 <header class="site"><div class="wrap"><div class="bar"><a class="brand" href="/"><img src="{icon}" alt=""><div><b class="display">Main Event Card Vault</b><span>Break guides</span></div></a><!--BMENU--><!--/BMENU--></div></div></header>

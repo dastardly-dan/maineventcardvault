@@ -187,7 +187,7 @@ team spot, box by box. Linked from the storefront's Breaks menu; every page carr
   every 15 minutes on GitHub (free, the repo is public). It reads the public Shopify product lists of Acme Packs (acme),
   JWJ (jwj), Colfax (colfax) and Run Good Life (rgl), plus their breaks collections, and commits to `build/breaks/watch/`
   only when a product is added or removed: `queue.json` (new or removed products with listing text, price options and
-  dates), `seen.json` (handles already known), `posts.json` and `stats.md` (when each breaker publishes). A scheduled
+  dates), `images.json` (each product's title card image, shown on the Break guides cards by hub.py), `seen.json` (handles already known), `posts.json` and `stats.md` (when each breaker publishes). A scheduled
   Claude task ("Break page builder") works the queue; its runbook is the next item.
 - **Breaks menu (Nov 24, 2026):** Daniel wants it short: All break guides, Spot builder, Main Event Card Vault (the shop at /) and Iron Ledger (/iron-ledger.html, his workout program). Individual breaks are listed only on the Break guides page; don't add them back to the menu. hub.py also puts a Release notes link at the bottom of every page it fills (footer_link, <!--RNLINK--> marker). Iron Ledger (iron-ledger.html) is a packed single-file app, so hub.py's fill_bundled() writes the menu as a slim bar (#mecv-bar) into its JSON template; if Iron Ledger is re-exported, rerun hub.py to put the bar back.
 - **Break page builder runbook (for the scheduled task):**

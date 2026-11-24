@@ -814,6 +814,6 @@ if __name__ == '__main__':
     have = sorted({letters(n)[0] for p_ in nas.values() for n in entries_from_product(p_) if letters(n)[0]})
     rgl6133['spots'] = [cc_spot(L, L) for L in have]
     n, u = letter_break(rgl6133, nas, None, alt=False); built.append(write(rgl6133, n, u))
-    json.dump([{k: b[k] for k in ('id', 'title', 'kicker', 'when', 'facts', 'ended') if k in b} for b in built], open(os.path.join(os.path.dirname(__file__), 'index.json'), 'w'))
+    json.dump([{k: b[k] for k in ('id', 'title', 'kicker', 'when', 'facts', 'ended', 'url') if k in b} for b in built], open(os.path.join(os.path.dirname(__file__), 'index.json'), 'w'))
     for b in built:
         if b['unmatched']: print(b['id'], 'UNMATCHED', b['unmatched'][:40])
