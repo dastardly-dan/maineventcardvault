@@ -29,6 +29,11 @@
           "Improved",
           "Site",
           "Iron Ledger, the workout program, now has the same Breaks menu at the top as the rest of the site, so it's one tap back to the shop, the break guides or the Spot Builder."
+        ],
+        [
+          "Improved",
+          "Break guides",
+          "Live sold tracking now reads spot names that include a price or a note, like \"Arizona Cardinals $295\" or \"A (Women) - $130\", the way Run Good Life lists them. Run Good Life pages get their own header color."
         ]
       ]
     },

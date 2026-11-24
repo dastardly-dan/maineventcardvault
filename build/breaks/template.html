@@ -488,7 +488,9 @@ __THEME__
   // Live status. Breaks with a D.live source ask the site's Worker for the store's current
   // open/sold flags (and prices) on load and about once a minute while the page is showing.
   // If anything fails, the status saved when the page was built stays on screen.
-  function nk(t) { return fold(String(t)).replace(/\(.*?\)/g, "").replace(/[^a-z0-9]/g, ""); }
+  // Store spot names vary: "T - Men (no the)", "A (Women) - $130", "Arizona Cardinals $295". Drop prices and
+  // notes in parentheses, but keep (Men) / (Women), so they line up with our spot labels.
+  function nk(t) { return fold(String(t)).replace(/\$\s*[\d,.]+/g, "").replace(/\(\s*((?:wo)?men)\s*\)/g, " $1 ").replace(/\(.*?\)/g, "").replace(/[^a-z0-9]/g, ""); }
   function drawLiveFact() {
     var el = document.getElementById("livefact"); if (!el) return;
     var o = D.spots.filter(function (s) { return s.status === "open"; }).length;
@@ -507,7 +509,8 @@ __THEME__
         var by = {}; (d.variants || []).forEach(function (v) { by[nk(v.title)] = v; });
         var changed = false, seen = 0;
         D.spots.forEach(function (s) {
-          var v = by[nk(s.label + (s.g === "M" ? " men" : s.g === "F" ? " women" : ""))];
+          var k = nk(s.label + (s.g === "M" ? " men" : s.g === "F" ? " women" : "")), v = by[k];
+          if (!v && k.length > 3) { var hit = Object.keys(by).filter(function (x) { return x.slice(-k.length) === k; }); if (hit.length === 1) v = by[hit[0]]; } // "arizonacardinals" for the Cardinals spot
           if (!v) return;
           seen++;
           var st = v.available ? "open" : "sold", pr = Math.round(v.price / 100);

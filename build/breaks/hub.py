@@ -10,7 +10,7 @@ order = ['cc871', 'cc872', 'cc874', 'cc875', 'jwj0246', 'jwj0247', 'jwj0244', 'g
 def is_past(i): return bool(i.get('ended')) or 'has passed' in i['when']
 items.sort(key=lambda x: (is_past(x), order.index(x['id'])))
 def esc(s): return s.replace('&','&amp;').replace('<','&lt;')
-EDGE = {'gb': '#4c9a2a', 'jwj': '#c2452c', 'cc': '#8a3fd6'}  # breaker colors: Acme green, JWJ rust, Colfax purple
+EDGE = {'gb': '#4c9a2a', 'jwj': '#c2452c', 'cc': '#8a3fd6', 'rgl': '#3b7be0'}  # breaker colors: Acme green, JWJ rust, Colfax purple
 def edge(i): return next((c for k, c in EDGE.items() if i['id'].startswith(k)), 'var(--line)')
 def card(i): return f'''<a class="tile" href="/breaks/{i['id']}" style="border-left:4px solid {edge(i)}"><div class="kicker" style="font-size:11px">{esc(i['kicker'])}</div><div class="lab display" style="font-size:26px;margin-top:6px">{esc(i['title'])}</div><div class="cnt" style="margin-top:8px">{esc(i['when'])}</div><div class="peek">{esc(' · '.join(i['facts']))}</div></a>'''
 up = ''.join(card(i) for i in items if not is_past(i)); past = ''.join(card(i) for i in items if is_past(i))
@@ -58,7 +58,7 @@ def short_date(w):
     return (m.group(1)[:3] + ' ' + m.group(2)) if m else ''
 
 def code_and_name(title):
-    m = re.match(r'(CC\d+|JWJ #\d+|GB\d+)\s*[:\-]?\s*(.*)', title)
+    m = re.match(r'(CC\d+|JWJ #\d+|GB\d+|RGL #\d+)\s*[:\-]?\s*(.*)', title)
     return (m.group(1), m.group(2)) if m else ('', title)
 
 def menu_html(current=None):

@@ -123,6 +123,8 @@ THEMES = {
                  brandline='linear-gradient(90deg,#f2c14a,#f7d77f 50%,#f2c14a)'),
     'jwj': dict(hdr='#2e1d12', accent='#a63a1f', accentrgb='166,58,31', link='#8f3119', hon='#f0dcc0', honink='#2e1d12', tint='#f8efe4',
                 brandline='linear-gradient(90deg,#ab2d1a,#f0dcc0 50%,#ab2d1a)'),
+    'rgl': dict(hdr='#1d1f23', accent='#1f5fbf', accentrgb='31,95,191', link='#1a4fa0', hon='#ffffff', honink='#1d1f23', tint='#eef2f8',
+                brandline='linear-gradient(90deg,#1f5fbf,#ffffff 50%,#1f5fbf)'),  # neutral until RGL's own colors are confirmed
     'colfax': dict(hdr='#000000', accent='#6420a0', accentrgb='100,32,160', link='#571c8c', hon='#c8102e', honink='#ffffff', tint='#f2ecfa',
                    brandline='linear-gradient(90deg,#6420a0,#c8102e)'),
 }
@@ -157,7 +159,7 @@ mark { background: #fff1a8; }
 .dots i { box-shadow: inset 0 0 0 1px rgba(0,0,0,.14); }
 .tile.sold { opacity: .6; }
 """
-def breaker_of(cid): return 'acme' if cid.startswith('gb') else 'jwj' if cid.startswith('jwj') else 'colfax' if cid.startswith('cc') else ''
+def breaker_of(cid): return 'acme' if cid.startswith('gb') else 'jwj' if cid.startswith('jwj') else 'colfax' if cid.startswith('cc') else 'rgl' if cid.startswith('rgl') else ''
 def theme_css(key):
     t = THEMES.get(key)
     return LIGHT_CSS % t if t else ''

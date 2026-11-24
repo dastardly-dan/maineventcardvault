@@ -191,7 +191,10 @@ team spot, box by box. Linked from the storefront's Breaks menu; every page carr
   Claude task ("Break page builder") works the queue; its runbook is the next item.
 - **Breaks menu (Nov 24, 2026):** Daniel wants it short: All break guides, Spot builder, Main Event Card Vault (the shop at /) and Iron Ledger (/iron-ledger.html, his workout program). Individual breaks are listed only on the Break guides page; don't add them back to the menu. hub.py also puts a Release notes link at the bottom of every page it fills (footer_link, <!--RNLINK--> marker). Iron Ledger (iron-ledger.html) is a packed single-file app, so hub.py's fill_bundled() writes the menu as a slim bar (#mecv-bar) into its JSON template; if Iron Ledger is re-exported, rerun hub.py to put the bar back.
 - **Break page builder runbook (for the scheduled task):**
-  1. `git pull --rebase`. Read `build/breaks/watch/queue.json`. If it's empty and no listed break is more than 10 hours past
+  1. Start a fresh store check first, because GitHub often skips the timed runs: `gh api -X POST
+     repos/dastardly-dan/maineventcardvault/actions/workflows/break-watch.yml/dispatches -f ref=main`, then wait (poll
+     `git fetch` for up to 3 minutes) for the "Break watcher" commit if anything changed. Then `git pull --rebase` and
+     read `build/breaks/watch/queue.json`. If it's empty and no listed break is more than 10 hours past
      its scheduled start, stop with no changes and no message.
   2. For each `added` item, decide whether it's a group break (break number like GB1039, JWJ #0248, CC875, RGL #6124, or
      the listing describes a group break). Skip merch, fees, giveaway winners and mystery packs. A "25% chance filler"
@@ -203,7 +206,7 @@ team spot, box by box. Linked from the storefront's Breaks menu; every page carr
      jwj0246 pick your letter, gb1038b random team with combos, gb1038a NIL letters, cc872 random team, jwj0247 random
      letter). Spots come from the variant titles; prices from the variants; `format` pyl / pyt / team / random; add
      `live=dict(shop=..., handle=...)` for pyl and pyt. Use the breaker's house rules from the listing text and keep the
-     breaker's own wording for dates. The id prefix picks the breaker's colors (gb, jwj, cc). Multi-sport breaks: CC874
+     breaker's own wording for dates. The id prefix picks the breaker's colors (gb, jwj, cc, rgl; ids like gb1040, jwj0249, cc876, rgl6128). Multi-sport breaks: CC874
      is the model.
   4. Checklists come only from `build/breaks/checklists/`. If a box isn't in the library, try the official list through
      WebFetch (Topps, Panini, checklistinsider); if a full official list can't be had, don't guess: skip that page and
