@@ -189,6 +189,7 @@ team spot, box by box. Linked from the storefront's Breaks menu; every page carr
   only when a product is added or removed: `queue.json` (new or removed products with listing text, price options and
   dates), `seen.json` (handles already known), `posts.json` and `stats.md` (when each breaker publishes). A scheduled
   Claude task ("Break page builder") works the queue; its runbook is the next item.
+- **Breaks menu (Nov 24, 2026):** Daniel wants it short: All break guides, Spot builder and Main Event Card Vault (the shop at /). Individual breaks are listed only on the Break guides page; don't add them back to the menu.
 - **Break page builder runbook (for the scheduled task):**
   1. `git pull --rebase`. Read `build/breaks/watch/queue.json`. If it's empty and no listed break is more than 10 hours past
      its scheduled start, stop with no changes and no message.
