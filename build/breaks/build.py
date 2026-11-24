@@ -438,11 +438,11 @@ gb1037 = dict(
     url=acme_url('gb1036-midnight-chrome-pyt-2-pick-your-team'),
     when='Tuesday, November 24, 2026, 5:00 pm Central (6:00 pm Eastern). If it doesn\'t fill, it rolls to the next break night.',
     facts=['4 boxes', '32 team spots', '$55 to $350 per team', 'Sold out'],
-    format='pyt', checked='Sold out as of November 24, 2026, around 6:10 pm Eastern. The last 9 teams sold as 18 50/50 spots. The link says gb1036, but the listing is titled GB1037.',
+    format='pyt', checked='Sold out as of November 24, 2026, around 6:10 pm Eastern. The link says gb1036, but the listing is titled GB1037.',
     boxes=[BOX_CHROME_J, BOX_MIDNIGHT],
-    spots=[dict(team_spot(t.lower(), t, [t]), price=p, status='sold') for t, p, a in gb1037_prices],  # all sold Nov 24 (Daniel); live status off so the store can't show the 50/50 teams as open
+    spots=[dict(team_spot(t.lower(), t, [t]), price=p, status='sold') for t, p, a in gb1037_prices],  # all sold Nov 24 (Daniel); live status off so the store can't show leftover teams as open
     rules=ACME_RULES,
-    notes=['All 32 teams are sold. The last 9 (Buccaneers, Cardinals, Chargers, Colts, Jaguars, Panthers, Ravens, Saints and Titans) went as 18 50/50 spots at about $55.56 each, so those teams are split between two buyers.', 'Cards are listed with the team the official checklist gives them.'],
+    notes=['Cards are listed with the team the official checklist gives them.'],
     sources=[['GB1037 break page (Acme Packs)', acme_url('gb1036-midnight-chrome-pyt-2-pick-your-team')], ACME_TERMS, SRC_CHROME, SRC_MIDNIGHT],
 )
 gb1038a_spots = [('49ers', ['49ers'], None), ('Bears + Eagles', ['Bears', 'Eagles'], None), ('Bengals', ['Bengals'], None), ('Bills', ['Bills'], None),
