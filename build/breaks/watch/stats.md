@@ -21,9 +21,9 @@ so read it as a guide. Updated whenever a product is added.
 - Hours (ET): 00:00 3, 02:00 1, 04:00 4, 16:00 1, 18:00 1
 - Latest: Sat Aug 08 12:33 AM Colfax Autographed Cards; Sat Aug 08 12:33 AM Colfax Logo Repeat Tumbler; Sun Aug 16 04:28 PM Colfax Logo Tumbler; Sat Nov 21 04:30 AM CC871 - Club & Chrome PYL (Pick Your Letter); Sat Nov 21 04:30 AM CC872 - Chrome, Absolute, & Midnight (Random Team); Sat Nov 21 04:30 AM CC874 - Monster Multi (Random Letter); Sat Nov 21 04:30 AM CC873 - Marvel Rivals PYC (Pick Your Character); Sun Nov 22 06:57 PM CC875 - Immaculate NASCAR (Random Letter)
 
-## rgl (16 products)
+## rgl (22 products)
 
-- Days: Mon 1, Tue 8, Fri 3, Sat 2, Sun 2
-- Hours (ET): 00:00 1, 01:00 1, 02:00 1, 04:00 1, 14:00 1, 18:00 2, 20:00 8, 21:00 1
-- Latest: Tue Aug 04 08:33 PM JML Logo Triblend T-Shirt; Tue Aug 04 08:33 PM SHIPPING INSURANCE; Tue Aug 04 08:33 PM NAME CHANGE REQUEST - Custom Username; Tue Aug 11 06:47 PM Stream Giveaway Winner; Tue Aug 11 06:47 PM Misc. Payment to RGL; Sun Aug 16 08:41 PM RGL #5720 - RGL's Summerslam 2026 Mystery Packs (C; Sun Aug 16 08:41 PM RGL #5300 - RGL's Wrestlemania 42 Mystery Packs (C; Mon Aug 17 12:00 AM Merch Giveaway Winner
+- Days: Mon 1, Tue 14, Fri 3, Sat 2, Sun 2
+- Hours (ET): 00:00 1, 01:00 1, 02:00 1, 04:00 1, 13:00 6, 14:00 1, 18:00 2, 20:00 8, 21:00 1
+- Latest: Sun Aug 16 08:41 PM RGL #5300 - RGL's Wrestlemania 42 Mystery Packs (C; Mon Aug 17 12:00 AM Merch Giveaway Winner; Tue Nov 24 01:00 PM RGL #6128 - Chrome in the Club PYL (Pick Your Lett; Tue Nov 24 01:00 PM RGL #6131 - Joy of Five Star (Random Team) (11/25/; Tue Nov 24 01:00 PM RGL #6130 - Chrome & Midnight PYT (11/25/26) (Raid; Tue Nov 24 01:00 PM RGL #6129 - Gilded Collection PYT (Dodgers Random); Tue Nov 24 01:00 PM RGL #6133 - Immaculate NASCAR (Random Letter) (11/; Tue Nov 24 01:00 PM RGL #6132 - Absolute Finish the Case (Random Team)
 
