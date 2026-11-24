@@ -1,0 +1,408 @@
+# name: 2025 Topps Finest WWE
+# sport: WWE
+# added: 2026-11-24
+# source: https://cdn.shopify.com/s/files/1/0662/9749/5709/files/2025_Topps_Finest_WWE_-_Checklist.pdf
+
+[base]
+1-2-3 Kid
+Adam Pearce
+Adriana Rizzo | W
+AJ Styles
+Akira Tozawa
+Alba Fyre | W
+Aleister Black
+Alex Shelley
+Alexa Bliss | W
+Andrade
+Andre Chase
+Angel
+Angelo Dawkins
+Apollo Crews
+Arianna Grace | W
+Ashante Adonis
+Asuka | W
+Austin Theory
+Ava | W
+Axiom
+B-Fab | W
+Bam Bam Bigelow
+Batista
+Bayley | W
+Becky Lynch | W
+Berto
+Bianca Belair | W
+Big Boss Man
+Big E
+Billy Gunn
+Boogeyman
+Booker T
+Bradshaw
+Bray Wyatt
+Bret "Hit Man" Hart
+Brian Pillman
+Brinley Reece | W
+British Bulldog
+Bron Breakker
+Bronco Nima
+Bronson Reed
+Brooks Jensen
+Brutus Creed
+Cactus Jack
+Candice LeRae | W
+Carlee Bright | W
+Carmelo Hayes
+Chad Gable
+Channing "Stacks" Lorenzo
+Charlie Dempsey
+Charlotte Flair | W
+Chelsea Green | W
+Chris Sabin
+Chyna | W
+CM Punk
+"Cowboy" Bob Orton
+Cruz Del Toro
+Damian Priest
+Damon Kemp
+Dante Chen
+Dexter Lumis
+Diesel
+Dion Lennox
+Dominik Mysterio
+Dragon Lee
+Drew McIntyre
+Dude Love
+Dusty Rhodes
+Eddie Guerrero
+Edris Enofé
+El Grande Americano
+Elton Prince
+Eric Bischoff
+Erick Rowan
+Erik
+Ethan Page
+Faarooq
+Fallon Henley | W
+Fatu
+Finn Bálor
+Giulia | W
+Godfather
+Grayson Waller
+Gunther
+Hank Walker
+Hulk Hogan
+Ilja Dragunov
+Ivar
+Ivy Nile | W
+Iyo Sky | W
+Izzi Dame | W
+Jacob Fatu
+Jacy Jayne | W
+Jade Cargill | W
+Jaida Parker | W
+Jazmyn Nyx | W
+JC Mateo
+JD McDonagh
+Je'Von Evans
+Jey Uso
+Jim "The Anvil" Neidhart
+Jimmy Uso
+Joaquin Wilde
+Joe Gacy
+John "Bradshaw" Layfield
+John Cena
+Johnny Gargano
+Jordynne Grace | W
+Josh Briggs
+Julius Creed
+Kairi Sane | W
+Kamala
+Kane
+Karmen Petrovic | W
+Karrion Kross
+Kelani Jordan | W
+Ken Shamrock
+Kendal Grey | W
+Kevin Nash
+Kevin Owens
+Kiana James | W
+Kit Wilson
+Kofi Kingston
+Kurt Angle
+LA Knight
+Lana
+Lash Legend | W
+Lexis King
+Lita | W
+Liv Morgan | W
+Lola Vice | W
+Luca Crusifino
+Lucien Price
+Ludwig Kaiser
+Lyra Valkyria | W
+Malik Blade
+Mankind
+Maryse | W
+Maxxine Dupri | W
+Michelle McCool | W
+Michin | W
+"Million Dollar Man" Ted DiBiase
+Montez Ford
+Myles Borne
+Naomi | W
+Natalya | W
+Nathan Frazer
+Nia Jax | W
+Nick Aldis
+Nikki Bella | W
+Nikki Cross | W
+Nikkita Lyons | W
+Nikolai Volkoff
+Noam Dar
+Oba Femi
+Omos
+Otis
+Paul Bearer
+Penta
+Pete Dunne
+Piper Niven | W
+Randy Orton
+Raquel Rodriguez | W
+Razor Ramon
+Rey Fenix
+Rey Mysterio
+Rhea Ripley | W
+Ricky Saints
+Ridge Holland
+Rikishi
+Road Dogg
+Rob Van Dam
+Rocky Johnson
+Roman Reigns
+Ron Killings
+"Rowdy" Roddy Piper
+Roxanne Perez | W
+Rusev
+Sami Zayn
+Santos Escobar
+Scarlett | W
+Scott Hall
+Seth Rollins
+Shawn Michaels
+Shawn Spears
+Shayna Baszler | W
+Sheamus
+Shinsuke Nakamura
+Sid Justice
+Sid Vicious
+Sol Ruca | W
+Solo Sikoa
+Stacy Keibler | W
+Stephanie Vaquer | W
+Stevie Turner | W
+"Stone Cold" Steve Austin
+Sycho Sid
+Syxx
+Tama Tonga
+Tank Ledger
+Tatum Paxley | W
+Tavion Heights
+"The American Nightmare" Cody Rhodes
+The Iron Sheik
+The Miz
+The Rock
+The Shockmaster
+The Sultan
+Thea Hail | W
+Tiffany Stratton | W
+Tommaso Ciampa
+Tonga Loa
+Tony D'Angelo
+Torrie Wilson | W
+Trick Williams
+Triple H
+Trish Stratus | W
+Tugboat
+Tyler Bate
+Typhoon
+Tyriek Igwe
+Tyson Dupont
+Umaga
+Uncle Howdy
+Undertaker
+Wendy Choo | W
+Wes Lee
+Wren Sinclair | W
+X-Pac
+Xavier Woods
+Yokozuna
+Zaria | W
+Zelina Vega | W
+Zoey Stark | W
+
+[auto]
+Alexa Bliss | W
+Andrade
+Angelo Dawkins
+Austin Theory
+Axiom
+Bayley | W
+Becky Lynch | W
+Bianca Belair | W
+Bret "Hit Man" Hart
+Bronson Reed
+Chad Gable
+Charlotte Flair | W
+Chelsea Green | W
+CM Punk
+Diesel
+Dominik Mysterio
+Finn Bálor
+Grayson Waller
+Gunther
+Hulk Hogan
+Iyo Sky | W
+Jacob Fatu
+Jaida Parker | W
+Jazmyn Nyx | W
+Je'Von Evans
+Jimmy Uso
+John Cena
+Johnny Gargano
+Kane
+Kelani Jordan | W
+Kurt Angle
+Lash Legend | W
+Lex Luger
+Ludwig Kaiser
+Mick Foley
+Montez Ford
+Nathan Frazer
+Nia Jax | W
+Nikkita Lyons | W
+Oba Femi
+Pete Dunne
+Randy Orton
+Raquel Rodriguez | W
+Rey Mysterio
+Rhea Ripley | W
+Roman Reigns
+Roxanne Perez | W
+Sami Zayn
+Seth Rollins
+Shawn Michaels
+Sol Ruca | W
+Solo Sikoa
+Stacy Keibler | W
+Stephanie McMahon | W
+"Stone Cold" Steve Austin
+Tama Tonga
+"The American Nightmare" Cody Rhodes
+The Miz
+The Rock
+Tiffany Stratton | W
+Tommaso Ciampa
+Tonga Loa
+Tony D'Angelo
+Trick Williams
+Triple H
+Undertaker
+X-Pac
+Xavier Woods
+
+[insert]
+AJ Styles
+Alexa Bliss | W
+Asuka | W
+Austin Theory
+Batista
+Bayley | W
+Becky Lynch | W
+Bianca Belair | W
+Big Boss Man
+Booker T
+Bradshaw
+Braun Strowman
+Bray Wyatt
+Bret "Hit Man" Hart
+Bron Breakker
+Bronson Reed
+Cactus Jack
+Carlito
+Carmelo Hayes
+Charlotte Flair | W
+Chyna | W
+CM Punk
+Damian Priest
+Diamond Dallas Page
+Diesel
+Drew McIntyre
+Dude Love
+Eddie Guerrero
+El Grande Americano
+Farooq
+Finn Bálor
+Grayson Waller
+Great Khali
+Gunther
+Hulk Hogan
+Ilja Dragunov
+Iyo Sky | W
+Jacob Fatu
+Jade Cargill | W
+Jake "The Snake" Roberts
+Jesse Ventura
+Jey Uso
+Jimmy Uso
+John Cena
+Kane
+Kevin Owens
+Kofi Kingston
+Kurt Angle
+LA Knight
+Lex Luger
+Lita | W
+Liv Morgan | W
+Lyra Valkyria | W
+Mankind
+"Milliion Dollar Man" Ted DiBiase
+Montez Ford
+Nia Jax | W
+Nikkita Lyons | W
+Otis
+Papa Shango
+Paul Bearer
+Randy Orton
+Rey Mysterio
+Rhea Ripley | W
+Rikishi
+Rob Van Dam
+Roman Reigns
+Sami Zayn
+Seth Rollins
+Shawn Michaels
+Sheamus
+Shinsuke Nakamura
+Sol Ruca | W
+Solo Sikoa
+Stacy Keibler | W
+"Stone Cold" Steve Austin
+Sycho Sid
+"The American Nightmare" Cody Rhodes
+The Boogeyman
+The Hurricane
+The Miz
+The Rock
+Tiffany Stratton | W
+Torrie Wilson | W
+Triple H
+Trish Stratus | W
+Ultimate Warrior
+Uncle Howdy
+Undertaker
+Vader
+Wyatt Sicks
+X-Pac
+Yokozuna
+
+[multi]
+Triple H / Randy Orton

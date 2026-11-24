@@ -637,7 +637,7 @@ def gpk_fold(prod):
     for sec in ('insert', 'base', 'auto'):
         out[sec] = ';'.join(GPK.get(n.strip().lower(), n) for n in split(prod.get(sec, '')))
     return out
-RGL_WOMEN = lib_women('2026-topps-stadium-club-wwe', '2026-topps-chrome-wwe')
+RGL_WOMEN = lib_women('2026-topps-stadium-club-wwe', '2026-topps-chrome-wwe', '2025-topps-finest-wwe')
 # The National Convention box is multi-sport and has no | W marks: its women (actresses and Star Wars characters; the wrestlers are
 # already marked in the WWE lists) go to the Women spots.
 RGL_WOMEN |= {'Ahsoka Tano', 'Billie Lourd', 'Daisy Ridley', 'Emilia Clarke', 'Genevieve O\'Reilly', 'IYO SKY', 'Katee Sackhoff', 'Keri Russell', 'Laura Dern',
@@ -662,26 +662,28 @@ rgl6128 = dict(
     id='rgl6128', title='RGL #6128 Chrome in the Club PYL', kicker='Run Good Life · Pick your letter · WWE',
     url=rgl_url(RGL6128_H),
     when='Wednesday, November 25, 2026, around 2:00 pm Pacific (5:00 pm Eastern) on the Rungoodlife YouTube channel. Start times are estimates.',
-    facts=['6 boxes (5 listed in this guide)', '27 letter spots', '$40 to $235 per spot'],
+    facts=['6 boxes', '27 letter spots', '$40 to $235 per spot'],
     live=dict(shop='rgl', handle=RGL6128_H),
     format='pyl', checked='Availability checked against Run Good Life\'s store data on November 24, 2026, around 1:10 pm Eastern: 19 of 27 spots open.',
     boxes=[dict(WWE_BOX['sc'], full='2026 Topps Stadium Club WWE Hobby (2 boxes)'),
            dict(WWE_BOX['chrome'], full='2026 Topps Chrome WWE (1 Hobby, 1 Breaker\'s Delight)', types='Base and Refractor parallels, inserts like Signalz, Gamut and Helix, Garbage Pail Kids cards, autographs.'),
            dict(k='nscc', short='National Convention', c='#3ccf9a', full='2026 Topps National Sports Collectors Convention', kind='Multi-sport: WWE, football, basketball, baseball, soccer and Star Wars',
-                types='Base, autographs and inserts across Topps brands. About 30 wrestlers; the rest are other sports and Star Wars cast and characters.')],
+                types='Base, autographs and inserts across Topps brands. About 30 wrestlers; the rest are other sports and Star Wars cast and characters.'),
+           dict(k='finest', short='Finest', c='#e2545e', full='2025 Topps Finest WWE Hobby', kind='300-card base (Common, Uncommon and Rare), autographs, inserts',
+                types='Finest base and Refractor parallels, inserts like Finishers, Intimidators and Dark Energy, and autographs like Finest Autographs and Masters Autographs.')],
     spots=rgl6128_spots,
     rules=[['First letter of the first name on the card', ['RGL\'s listing says first name. A leading "The" doesn\'t count for the T Men spot ("no THE"), so The Rock is R and The Miz is M.', 'Men and Women spots split by who\'s on the card.']],
            WWE_RULES[1],
            ['Garbage Pail Kids cards go to the wrestler', ['RGL\'s rule: every Garbage Pail Kids card from 2026 Topps Chrome WWE goes to the wrestler\'s spot, not the name on the card. "Potty Mouth Punk" goes to A & C Men (CM Punk), not P-Q. This guide already files all 25 that way.']],
            RGL_MULTI],
-    notes=['Not in this guide yet: the 2025 Topps Finest WWE box. A complete official checklist for it wasn\'t available when this page was built, so names that only come from that box are missing.',
-           'The National Convention box has football, basketball, baseball, soccer and Star Wars cards too. This guide files them by the first letter of the first name like everyone else, with actresses and female characters in the Women spots. Ask RGL if you\'re not sure how they handle non-WWE cards.',
+    notes=['The National Convention box has football, basketball, baseball, soccer and Star Wars cards too. This guide files them by the first letter of the first name like everyone else, with actresses and female characters in the Women spots. Ask RGL if you\'re not sure how they handle non-WWE cards.',
            'Breaker\'s Delight is a Topps Chrome WWE box, so it uses the same checklist as the Hobby box.',
            'Lists come from the official Topps checklists.'],
     sources=[['RGL #6128 break page (Run Good Life)', rgl_url(RGL6128_H)],
              ['Stadium Club WWE checklist (official Topps)', 'https://cdn.shopify.com/s/files/1/0662/9749/5709/files/2026_Topps_Stadium_Club_WWE_-_Checklist.pdf?v=1791221305'],
              ['Chrome WWE checklist (official Topps)', TOPPS_PDF + 'FINAL_CheckList_26CWWE_ChromeWWE.pdf'],
              ['National Sports Collectors Convention checklist (official Topps)', TOPPS_PDF + '2026_National_Sports_Collectors_Convention_26NSCC_-_Checklist_1.pdf'],
+             ['Finest WWE checklist (official Topps)', 'https://cdn.shopify.com/s/files/1/0662/9749/5709/files/2025_Topps_Finest_WWE_-_Checklist.pdf?v=1758820316'],
              ['Chrome WWE Garbage Pail Kids list', 'https://www.tradercracks.com/2026-topps-chrome-wwe-garbage-pail-kids-checklist-guide']],
 )
 
@@ -799,7 +801,7 @@ if __name__ == '__main__':
     n, u = team_break(rgl6130, {'chrome': CH, 'midnight': MN}); built.append(write(rgl6130, n, u))
     n, u = team_break(rgl6129, {k: lib_mlb_product(v) for k, v in (('chrome', '2026-topps-chrome-baseball'), ('update', '2026-topps-update-series-baseball'),
         ('gilded', '2026-topps-gilded-collection-baseball'), ('museum', '2026-topps-museum-collection-baseball'), ('finest', '2026-topps-finest-baseball'))}); built.append(write(rgl6129, n, u))
-    n, u = letter_break(rgl6128, {'sc': gpk_fold(lib_letter_product('2026-topps-stadium-club-wwe')), 'chrome': gpk_fold(lib_letter_product('2026-topps-chrome-wwe')), 'nscc': nscc_product()}, rgl_wwe_gender); built.append(write(rgl6128, n, u))
+    n, u = letter_break(rgl6128, {'sc': gpk_fold(lib_letter_product('2026-topps-stadium-club-wwe')), 'chrome': gpk_fold(lib_letter_product('2026-topps-chrome-wwe')), 'nscc': nscc_product(), 'finest': lib_letter_product('2025-topps-finest-wwe')}, rgl_wwe_gender); built.append(write(rgl6128, n, u))
     n, u = team_break(rgl6131, {'sc': lib_nba_product('2025-26-topps-stadium-club-basketball'), 'five': lib_nba_product('2025-26-topps-five-star-basketball'),
         'joy': lib_nba_product('2025-26-topps-x-bob-ross-the-joy-of-basketball'), 'flag': lib_nba_product('2026-27-topps-flagship-basketball')}); built.append(write(rgl6131, n, u))
     n, u = team_break(rgl6132, {'chrome': CH, 'absolute': absolute_product(roster)}); built.append(write(rgl6132, n, u))
