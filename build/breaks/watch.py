@@ -8,6 +8,7 @@ Reads each breaker's public Shopify product list and keeps three files in build/
   posts.json  when each product was published and when the watcher first saw it, used to learn
               when each breaker usually posts new breaks
   stats.md    weekday and hour (Eastern) each breaker publishes, from posts.json
+  images.json each product's title card image, shown on the Break guides page
 
 Files are only rewritten when something changed, so the job only commits when a product is added
 or removed. Open/sold counts are not stored here; the site reads those live through the Worker.
@@ -113,6 +114,7 @@ def main():
     queue = load('queue.json', [])
     posts = load('posts.json', [])
     first_run = not seen
+    images = load('images.json', {})  # {shop: {handle: title card image}} for the Break guides page
     known_posts = {(p['shop'], p['handle']) for p in posts}
     changed = False
     errors = []
@@ -123,6 +125,12 @@ def main():
             errors.append(f'{shop}: {e}')
             continue
         handles = [p['handle'] for p in items]
+        imgs = {}
+        for p in items:
+            src = (p.get('images') or [{}])[0].get('src', '')
+            if src:
+                imgs[p['handle']] = ('https:' + src) if src.startswith('//') else src
+        images[shop] = dict(sorted({**images.get(shop, {}), **imgs}.items()))
         before = set(seen.get(shop, []))
         for p in items:
             key = (shop, p['handle'])
@@ -144,6 +152,7 @@ def main():
                 queue.append(dict(event='removed', shop=shop, first_seen=now, handle=h, url=f'{origin}/products/{h}'))
         if sorted(handles) != sorted(before):
             seen[shop] = sorted(handles)
+    changed |= save('images.json', images)
     changed |= save('seen.json', seen)
     changed |= save('queue.json', queue)
     changed |= save('posts.json', posts)
