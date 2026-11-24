@@ -518,6 +518,162 @@ cc875 = dict(
              ['Panini Immaculate Collection Racing checklist (official Panini CSV)', SRC_PANINI]],
 )
 
+# ---------------- Run Good Life breaks (Nov 24, 2026) ----------------
+def rgl_url(h): return 'https://rungoodlife.com/products/' + h
+RGL_MULTI = ['Multi-player cards', ['RGL\'s listing: all dual, triple, quad and multi-way cards are randomized among the spots on the card, unless everyone who owns a piece of it makes a deal.']]
+RGL_TEAM_RULE = ['Cards go to the team on the card', ['This guide files each card under the team the official checklist gives it. Retired players count for the team on their card; old franchises are filed with today\'s team here (for example Expos to Nationals).', 'RGL\'s Group Break Rules page has the full house rules, so check there if a card could go either way.']]
+
+def lib_women(*pids):
+    """names marked | W anywhere in these library checklists"""
+    out = set()
+    for pid in pids:
+        for line in open(os.path.join(LIB, pid + '.txt'), encoding='utf-8'):
+            for part in line.strip().split(' / '):
+                if part.endswith(' | W'): out.add(part[:-4].strip())
+    return out
+
+def team_spots_from_variants(variants, fold_to, random_team=None):
+    """PYT spots from the store's variant titles ('Arizona Cardinals\t$295'): label is the full team name, so live status lines up."""
+    spots = []
+    for full, price, avail in variants:
+        if random_team and full == random_team:
+            spots.append(dict(team_spot(re.sub(r'[^a-z0-9]', '', full.lower()), full + ' (random to all)', [fold_to(full)]), status='sold')); continue
+        spots.append(dict(team_spot(re.sub(r'[^a-z0-9]', '', full.lower()), full, [fold_to(full)]), price=price, status='open' if avail else 'sold'))
+    return spots
+
+# RGL #6130 Chrome & Midnight PYT (Raiders random to all)
+rgl6130_v = [('Arizona Cardinals', 295, 1), ('Atlanta Falcons', 70, 1), ('Baltimore Ravens', 105, 1), ('Buffalo Bills', 235, 1), ('Carolina Panthers', 90, 1),
+             ('Chicago Bears', 215, 1), ('Cincinnati Bengals', 145, 0), ('Cleveland Browns', 170, 0), ('Dallas Cowboys', 140, 1), ('Denver Broncos', 110, 0),
+             ('Detroit Lions', 110, 1), ('Green Bay Packers', 65, 0), ('Houston Texans', 45, 0), ('Indianapolis Colts', 70, 1), ('Jacksonville Jaguars', 85, 1),
+             ('Kansas City Chiefs', 375, 1), ('Las Vegas Raiders', 0, 0), ('Los Angeles Chargers', 80, 1), ('Los Angeles Rams', 255, 1), ('Miami Dolphins', 65, 1),
+             ('Minnesota Vikings', 85, 1), ('New England Patriots', 360, 1), ('New Orleans Saints', 145, 1), ('New York Giants', 175, 1), ('New York Jets', 105, 1),
+             ('Philadelphia Eagles', 130, 1), ('Pittsburgh Steelers', 100, 1), ('San Francisco 49ers', 170, 0), ('Seattle Seahawks', 195, 1),
+             ('Tampa Bay Buccaneers', 160, 1), ('Tennessee Titans', 155, 1), ('Washington Commanders', 95, 0)]
+RGL6130_H = 'rgl-6130-chrome-midnight-pyt-11-25-26-raiders-random'
+rgl6130 = dict(
+    id='rgl6130', title='RGL #6130 Chrome & Midnight PYT', kicker='Run Good Life · Pick your team · NFL',
+    url=rgl_url(RGL6130_H),
+    when='Wednesday, November 25, 2026, around 3:45 pm Pacific (6:45 pm Eastern) on the Rungoodlife YouTube channel. Start times are estimates.',
+    facts=['5 boxes', '32 team spots', '$45 to $375 per team', 'Raiders randomized to all'],
+    live=dict(shop='rgl', handle=RGL6130_H),
+    format='pyt', checked='Availability checked against Run Good Life\'s store data on November 24, 2026, around 1:10 pm Eastern: 24 of 31 teams open.',
+    boxes=[dict(BOX_CHROME_H, short='Topps Chrome', full='2026 Topps Chrome Football (2 Hobby, 1 Jumbo)', types='Base and Refractors, rookie cards, autographs including legends, inserts. The Jumbo box carries more autographs.'),
+           BOX_MIDNIGHT],
+    spots=team_spots_from_variants(rgl6130_v, lambda f: f.split(' ')[-1], 'Las Vegas Raiders'),
+    rules=[['Raiders are randomized to all spots', ['Before the break, RGL gives the Raiders to one buyer by random draw. You get one entry (a "duck") for every $50 your team cost, so the Chiefs and Patriots get 7 entries and the cheapest teams get 1.']],
+           RGL_TEAM_RULE,
+           ['College (NIL) cards', ['NIL stands for name, image and likeness: college players who aren\'t in the NFL yet. RGL randomizes all of those cards to all spots at the end of the break.', 'College players already in the NFL go to their NFL team, as the checklist lists them.']],
+           RGL_MULTI],
+    notes=['Cards are listed with the team the official checklist gives them.', 'The Raiders spot isn\'t for sale; its cards go to the winner of the Raiders draw.'],
+    sources=[['RGL #6130 break page (Run Good Life)', rgl_url(RGL6130_H)], SRC_CHROME, SRC_MIDNIGHT],
+)
+
+# RGL #6129 Gilded Collection PYT (Dodgers random to all)
+rgl6129_v = [('Arizona Diamondbacks', 55, 1), ('Atlanta Braves', 165, 0), ('Baltimore Orioles', 155, 1), ('Boston Red Sox', 225, 1), ('Chicago Cubs', 130, 0),
+             ('Chicago White Sox', 250, 1), ('Cincinnati Reds', 165, 1), ('Cleveland Guardians', 145, 1), ('Colorado Rockies', 40, 1), ('Detroit Tigers', 185, 1),
+             ('Houston Astros', 100, 1), ('Kansas City Royals', 235, 1), ('Los Angeles Angels', 115, 1), ('Los Angeles Dodgers', 0, 0), ('Miami Marlins', 60, 1),
+             ('Milwaukee Brewers', 245, 1), ('Minnesota Twins', 60, 1), ('New York Mets', 170, 0), ('New York Yankees', 375, 1), ("Oakland A's", 105, 1),
+             ('Philadelphia Phillies', 130, 1), ('Pittsburgh Pirates', 240, 1), ('San Diego Padres', 75, 1), ('San Francisco Giants', 165, 1),
+             ('Seattle Mariners', 165, 1), ('St. Louis Cardinals', 190, 1), ('Tampa Bay Rays', 75, 1), ('Texas Rangers', 60, 1), ('Toronto Blue Jays', 135, 1),
+             ('Washington Nationals', 85, 1)]
+MLB_FOLD = {'Expos': 'Nationals', 'Cleveland': 'Guardians', 'Senators': 'Twins', 'Indians': 'Guardians'}
+def mlb_team(full):
+    if full == "Oakland A's": return 'Athletics'
+    for two in ('Red Sox', 'White Sox', 'Blue Jays'):
+        if full.endswith(two): return two
+    return full.split(' ')[-1]
+def lib_mlb_product(pid):
+    p = lib_team_product(pid)
+    for b in ('base', 'other'):
+        for old, new in MLB_FOLD.items():
+            if old in p[b]:
+                for n in p[b].pop(old):
+                    if n not in p[b].setdefault(new, []): p[b][new].append(n)
+    return p
+RGL6129_H = 'rgl-6129-gilded-collection-pyt-dodgers-random-11-25-26'
+TOPPS_PDF = 'https://cdn.shopify.com/s/files/1/0662/9749/5709/files/'
+rgl6129 = dict(
+    id='rgl6129', title='RGL #6129 Gilded Collection PYT', kicker='Run Good Life · Pick your team · MLB',
+    url=rgl_url(RGL6129_H),
+    when='Wednesday, November 25, 2026, around 3:00 pm Pacific (6:00 pm Eastern) on the Rungoodlife YouTube channel. Start times are estimates.',
+    facts=['6 boxes', '30 team spots', '$40 to $375 per team', 'Dodgers randomized to all'],
+    live=dict(shop='rgl', handle=RGL6129_H),
+    format='pyt', checked='Availability checked against Run Good Life\'s store data on November 24, 2026, around 1:10 pm Eastern: 26 of 29 teams open. The listing says 29 spots in one place and 30 in another; the 30th is the Dodgers, who go by random draw.',
+    boxes=[dict(k='chrome', short='Topps Chrome', c='#5aa9ff', full='2026 Topps Chrome Baseball Hobby', kind='Base with rookies and legends, Refractors, autographs, inserts',
+                types='Chrome base and Refractor parallels, rookie cards, autographs, inserts.'),
+           dict(k='update', short='Update', c='#3ccf9a', full='2026 Topps Update Series Baseball Hobby', kind='Traded players, rookies and All-Star cards, autographs, inserts',
+                types='Base with traded players and rookies, All-Star Game cards, inserts, autographs and relics.'),
+           dict(k='gilded', short='Gilded', c='#f2c14e', full='2026 Topps Gilded Collection Baseball', kind='Gold-styled base, autographs in every box',
+                types='High-end gold-styled cards, on-card and Chrome autographs, multi-player autographs.'),
+           dict(k='museum', short='Museum', c='#c86bff', full='2026 Topps Museum Collection Baseball', kind='Numbered base, autographs and memorabilia',
+                types='Numbered base, autographs, relic and patch cards, multi-player relics.'),
+           dict(k='finest', short='Finest', c='#e2545e', full='2026 Topps Finest Baseball (2 Mega boxes)', kind='Base with Refractors, autographs, inserts',
+                types='Finest base and Refractors, rookie cards, autographs, inserts. This guide uses the Finest checklist for the Mega boxes.')],
+    spots=team_spots_from_variants(rgl6129_v, mlb_team, 'Los Angeles Dodgers'),
+    rules=[['Dodgers are randomized to all spots', ['At the start of the break, RGL gives the Dodgers to one buyer by random draw. You get one entry (a "duck") for every $50 your team cost, so the Yankees get 7 entries and the cheapest teams get 1.']],
+           RGL_TEAM_RULE, RGL_MULTI],
+    notes=['Cards are listed with the team the official checklist gives them. Expos cards are filed with the Nationals, old Cleveland cards with the Guardians and Washington Senators cards (Walter Johnson) with the Twins.',
+           'The Dodgers spot isn\'t for sale; its cards go to the winner of the Dodgers draw.',
+           'Cards of people with no team on the checklist (celebrities, broadcasters, Sadaharu Oh) aren\'t listed. Ask RGL where those go.'],
+    sources=[['RGL #6129 break page (Run Good Life)', rgl_url(RGL6129_H)],
+             ['Topps Chrome Baseball checklist (official Topps)', TOPPS_PDF + '2026_Topps_Chrome_Baseball_Checklist_Final_7.22.pdf'],
+             ['Topps Update Series Baseball checklist (official Topps)', TOPPS_PDF + '2026_Topps_Update_Series_Baseball_Checklist_10-12.pdf'],
+             ['Topps Gilded Collection Baseball checklist (official Topps)', 'https://assets.contentstack.io/v3/assets/bltc7206971cb4b2bfc/blt65da9011233df00c/6afb19a4506dd7334571b8bb/2026_Topps_Gilded_Collection_Baseball_Checklist.pdf'],
+             ['Topps Museum Collection Baseball checklist (official Topps)', TOPPS_PDF + '2026_Topps_Museum_Baseball_Checklist.pdf'],
+             ['Topps Finest Baseball checklist (official Topps)', TOPPS_PDF + '2026_Finest_Baseball_FDI_Checklist.pdf']],
+)
+
+# RGL #6128 Chrome in the Club PYL (WWE, first name)
+# Garbage Pail Kids cards in 2026 Topps Chrome WWE (25 cards, tradercracks.com GPK checklist): RGL sends them to the wrestler's spot.
+GPK = {'unstitched bliss': 'Alexa Bliss', 'braid-est bianca': 'Bianca Belair', 'bad girl bayley': 'Bayley', 'chelsea shhhush!': 'Chelsea Green',
+       'potty mouth punk': 'CM Punk', 'cody bomb': '"The American Nightmare" Cody Rhodes', 'dirty dominik': 'Dominik Mysterio', 'drafty drew': 'Drew McIntyre',
+       'damaged damian': 'Damian Priest', 'soaring sky': 'Iyo Sky', 'john see? nah!': 'John Cena', 'feral fatu': 'Jacob Fatu', 'jey yeesh!': 'Jey Uso',
+       'boogie knight': 'LA Knight', 'liv it up': 'Liv Morgan', 'ladybird lyra': 'Lyra Valkyria', 'disarm her becky': 'Becky Lynch', 'pop-out penta': 'Penta',
+       'ripped rhea': 'Rhea Ripley', 'reptilian randy': 'Randy Orton', 'popped roxanne': 'Roxanne Perez', 'roman empire': 'Roman Reigns',
+       'supersized seth': 'Seth Rollins', 'finally! the rock (has come back to gpk!)': 'The Rock', 'finally! the rock (has come back to gpk)': 'The Rock',
+       'tiffany time': 'Tiffany Stratton'}
+def gpk_fold(prod):
+    out = dict(prod)
+    for sec in ('insert', 'base', 'auto'):
+        out[sec] = ';'.join(GPK.get(n.strip().lower(), n) for n in split(prod.get(sec, '')))
+    return out
+RGL_WOMEN = lib_women('2026-topps-stadium-club-wwe', '2026-topps-chrome-wwe')
+def rgl_wwe_gender(n):
+    return 'F' if (n in RGL_WOMEN or key_of(n) in RGL_WOMEN or wwe_gender(n) == 'F') else 'M'
+R = lambda *a: wwe_spot(*a)
+rgl6128_spots = [
+    R('a-w', 'A', 'A', 'F', 130, False), R('ac-m', 'A & C', 'AC', 'M', 170, True), R('b-m', 'B', 'B', 'M', 100, True), R('b-w', 'B', 'B', 'F', 120, True),
+    R('c-w', 'C', 'C', 'F', 80, True), R('d', 'D', 'D', None, 115, False), R('ef', 'E / F', 'EF', None, 80, True), R('g', 'G', 'G', None, 115, True),
+    R('h', 'H', 'H', None, 40, False), R('i', 'I', 'I', None, 65, True), R('j-m', 'J', 'J', 'M', 215, True), R('j-w', 'J', 'J', 'F', 65, False),
+    R('k-m', 'K', 'K', 'M', 80, True), R('k-w', 'K', 'K', 'F', 130, True), R('l', 'L', 'L', None, 180, False), R('m', 'M', 'M', None, 50, True),
+    R('n', 'N', 'N', None, 40, True), R('o', 'O', 'O', None, 70, True), R('pq', 'P-Q', 'PQ', None, 55, True), R('r-m', 'R', 'R', 'M', 235, True),
+    R('r-w', 'R', 'R', 'F', 145, False), R('s-m', 'S', 'S', 'M', 135, False), R('s-w', 'S', 'S', 'F', 185, False), R('t-m', 'T', 'T', 'M', 80, True),
+    R('t-w', 'T', 'T', 'F', 160, True), R('uvw', 'U-V-W', 'UVW', None, 100, True), R('xyz', 'X-Y-Z-123', 'XYZ#', None, 50, True),
+]
+RGL6128_H = 'rgl-6128-chrome-in-the-club-pyl-pick-your-letter-first-name-11-25-26'
+rgl6128 = dict(
+    id='rgl6128', title='RGL #6128 Chrome in the Club PYL', kicker='Run Good Life · Pick your letter · WWE',
+    url=rgl_url(RGL6128_H),
+    when='Wednesday, November 25, 2026, around 2:00 pm Pacific (5:00 pm Eastern) on the Rungoodlife YouTube channel. Start times are estimates.',
+    facts=['6 boxes (4 listed in this guide)', '27 letter spots', '$40 to $235 per spot'],
+    live=dict(shop='rgl', handle=RGL6128_H),
+    format='pyl', checked='Availability checked against Run Good Life\'s store data on November 24, 2026, around 1:10 pm Eastern: 19 of 27 spots open.',
+    boxes=[dict(WWE_BOX['sc'], full='2026 Topps Stadium Club WWE Hobby (2 boxes)'),
+           dict(WWE_BOX['chrome'], full='2026 Topps Chrome WWE (1 Hobby, 1 Breaker\'s Delight)', types='Base and Refractor parallels, inserts like Signalz, Gamut and Helix, Garbage Pail Kids cards, autographs.')],
+    spots=rgl6128_spots,
+    rules=[['First letter of the first name on the card', ['RGL\'s listing says first name. A leading "The" doesn\'t count for the T Men spot ("no THE"), so The Rock is R and The Miz is M.', 'Men and Women spots split by who\'s on the card.']],
+           WWE_RULES[1],
+           ['Garbage Pail Kids cards go to the wrestler', ['RGL\'s rule: every Garbage Pail Kids card from 2026 Topps Chrome WWE goes to the wrestler\'s spot, not the name on the card. "Potty Mouth Punk" goes to A & C Men (CM Punk), not P-Q. This guide already files all 25 that way.']],
+           RGL_MULTI],
+    notes=['Not in this guide yet: the 2025 Topps Finest WWE box and the 2026 Topps National Convention box. A complete official checklist for those wasn\'t available when this page was built, so names that only come from those two boxes are missing.',
+           'Breaker\'s Delight is a Topps Chrome WWE box, so it uses the same checklist as the Hobby box.',
+           'Lists come from the official Topps checklists.'],
+    sources=[['RGL #6128 break page (Run Good Life)', rgl_url(RGL6128_H)],
+             ['Stadium Club WWE checklist (official Topps)', 'https://cdn.shopify.com/s/files/1/0662/9749/5709/files/2026_Topps_Stadium_Club_WWE_-_Checklist.pdf?v=1791221305'],
+             ['Chrome WWE checklist (official Topps)', TOPPS_PDF + 'FINAL_CheckList_26CWWE_ChromeWWE.pdf'],
+             ['Chrome WWE Garbage Pail Kids list', 'https://www.tradercracks.com/2026-topps-chrome-wwe-garbage-pail-kids-checklist-guide']],
+)
+
 # ---------------- finished breaks ----------------
 # A break that has run keeps its guide, but loses the live sold/open status and buying prompts.
 def close(cfg, ran, facts):
@@ -546,6 +702,10 @@ if __name__ == '__main__':
     n, u = team_break(gb1038a, {'absolute': absolute_product(roster)}); built.append(write(gb1038a, n, u))
     n, u = team_break(gb1038b, {'chrome': CH, 'midnight': MN, 'inception': IN}); built.append(write(gb1038b, n, u))
     n, u = letter_break(cc875, {'select': lib_letter_product('2026-panini-select-nascar'), 'immaculate': lib_letter_product('2026-panini-immaculate-collection-nascar')}, None, alt=False); built.append(write(cc875, n, u))
+    n, u = team_break(rgl6130, {'chrome': CH, 'midnight': MN}); built.append(write(rgl6130, n, u))
+    n, u = team_break(rgl6129, {k: lib_mlb_product(v) for k, v in (('chrome', '2026-topps-chrome-baseball'), ('update', '2026-topps-update-series-baseball'),
+        ('gilded', '2026-topps-gilded-collection-baseball'), ('museum', '2026-topps-museum-collection-baseball'), ('finest', '2026-topps-finest-baseball'))}); built.append(write(rgl6129, n, u))
+    n, u = letter_break(rgl6128, {'sc': gpk_fold(lib_letter_product('2026-topps-stadium-club-wwe')), 'chrome': gpk_fold(lib_letter_product('2026-topps-chrome-wwe'))}, rgl_wwe_gender); built.append(write(rgl6128, n, u))
     json.dump([{k: b[k] for k in ('id', 'title', 'kicker', 'when', 'facts', 'ended') if k in b} for b in built], open(os.path.join(os.path.dirname(__file__), 'index.json'), 'w'))
     for b in built:
         if b['unmatched']: print(b['id'], 'UNMATCHED', b['unmatched'][:40])
