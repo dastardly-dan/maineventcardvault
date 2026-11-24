@@ -1,0 +1,351 @@
+# name: 2025 Panini National Treasures Racing
+# sport: NASCAR
+# added: 2026-11-24
+# source:
+# note: Official Panini checklist (Panini National Treasures CSV)
+
+[base]
+AJ Allmendinger
+Alex Bowman
+Austin Beers
+Austin Cindric
+Austin Dillon
+Brad Keselowski
+Brenden "Butterbean" Queen
+Brent Crews
+Bubba Wallace
+Carl Edwards
+Carson Hocevar
+Carson Kvapil
+Chase Briscoe
+Chase Elliott
+Christopher Bell
+Connor Zilisch
+Corey Day
+Corey Heim
+Dale Earnhardt Jr
+Dale Jarrett
+Daniel Suarez
+Denny Hamlin
+Erik Jones
+Frankie Muniz
+Gio Ruggiero
+Jamie McMurray
+Jeff Gordon
+Jesse Love
+Jimmie Johnson
+Joey Logano
+Josh Berry
+Justin Allgaier
+Justin Haley
+Kaden Honeycutt
+Kasey Kahne
+Kevin Harvick
+Kyle Busch
+Kyle Larson
+Layne Riggs
+Luke Fenhaus
+Matt DiBenedetto
+Matt Kenseth
+Noah Gragson
+Rajah Caruth
+Richard Petty
+Ricky Stenhouse Jr
+Riley Herbst
+Ross Chastain
+Ryan Blaney
+Shane Van Gisbergen
+Toni Breidinger
+Ty Gibbs
+Tyler Reddick
+William Byron
+William Sawalich
+
+[auto]
+Alex Bowman
+Andres Perez De Lara
+Anthony Alfredo
+Aric Almirola
+Austin Beers
+Austin Cindric
+Austin Dillon
+Austin Hill
+Bayley Currey
+Ben Rhodes
+Benny Parsons
+Bill France Jr.
+Brad Keselowski
+Brandon Jones
+Brenden "Butterbean" Queen
+Brennan Poole
+Brent Crews
+Brittney Zamora
+Buddy Baker
+Cale Yarborough
+Carl Edwards
+Carson Hocevar
+Carson Kvapil
+Chandler Smith
+Chase Briscoe
+Chase Elliott
+Chris Buescher
+Christian Eckes
+Christian Rose
+Clint Bowyer
+Cody Ware
+Cole Custer
+Connor Mosack
+Connor Zilisch
+Corey Day
+Corey Heim
+Corey LaJoie
+Dale Earnhardt Jr
+Dale Jarrett
+Danica Patrick
+Daniel Dye
+Daniel Hemric
+Daniel Suarez
+Darrell Waltrip
+David Pearson
+Denny Hamlin
+Erik Jones
+Ernie Irvan
+Fred Lorenzen
+Garrett Smithley
+Geoff Bodine
+Gio Ruggiero
+Hailie Deegan
+Harrison Burton
+Harry Gant
+Herb Thomas
+Jamie McMurray
+Jeb Burton
+Jeff Burton
+Jeff Gordon
+Jeffrey Earnhardt
+Jeremy Clements
+Jerry Cook
+Jesse Iwuji
+Jesse Love
+Joe Nemechek
+Joey Gase
+Joey Logano
+John Hunter Nemechek
+Josh Berry
+Josh Williams
+Justin Allgaier
+Justin Bonsignore
+Justin Haley
+Kaden Honeycutt
+Kasey Kahne
+Kaz Grala
+Kevin Harvick
+Kurt Busch
+Kyle Busch
+Kyle Larson
+Kyle Weatherman
+Landon Cassill
+Layne Riggs
+Luke Fenhaus
+Matt DiBenedetto
+Matt Mills
+Michael McDowell
+Michael Waltrip
+Nick Sanchez
+Noah Gragson
+Parker Chase
+Rajah Caruth
+Red Farmer
+Rex White
+Richard Petty
+Ricky Stenhouse Jr
+Riley Herbst
+Ross Chastain
+Rusty Wallace
+Ryan Blaney
+Ryan Newman
+Ryan Preece
+Ryan Truex
+Sam Mayer
+Sammy Smith
+Shane Van Gisbergen
+Sheldon Creed
+Tanner Gray
+Taylor Gray
+Thad Moffitt
+Todd Gilliland
+Toni Breidinger
+William Byron
+William Sawalich
+Zane Smith
+
+[insert]
+AJ Allmendinger
+Alan Kulwicki
+Alex Bowman
+Anthony Alfredo
+Aric Almirola
+Austin Beers
+Austin Cindric
+Austin Dillon
+Austin Hill
+Bobby Labonte
+Brad Keselowski
+Brandon Jones
+Brenden "Butterbean" Queen
+Brennan Poole
+Brent Crews
+Bubba Wallace
+Carl Edwards
+Carson Hocevar
+Carson Kvapil
+Chandler Smith
+Chase Briscoe
+Chase Elliott
+Chris Buescher
+Christian Eckes
+Christopher Bell
+Clint Bowyer
+Cody Ware
+Cole Custer
+Connor Mosack
+Connor Zilisch
+Corey Day
+Corey Heim
+Corey LaJoie
+Dale Earnhardt Jr
+Dale Jarrett
+Danica Patrick
+Daniel Dye
+Daniel Hemric
+Daniel Suarez
+Darrell Waltrip
+Davey Allison
+David Ragan
+Denny Hamlin
+Erik Jones
+Ernie Irvan
+Frankie Muniz
+Garrett Smithley
+Gio Ruggiero
+Hailie Deegan
+Jamie McMurray
+Jeb Burton
+Jeff Burton
+Jeff Gordon
+Jeremy Clements
+Jesse Love
+Jimmie Johnson
+Joe Graf Jr.
+Joey Gase
+Joey Logano
+John Hunter Nemechek
+Josh Berry
+Josh Bilicki
+Josh Williams
+Justin Allgaier
+Justin Haley
+Kaden Honeycutt
+Kasey Kahne
+Kaz Grala
+Kevin Harvick
+Kurt Busch
+Kyle Busch
+Kyle Larson
+Kyle Weatherman
+Landon Cassill
+Layne Riggs
+Mark Martin
+Matt DiBenedetto
+Matt Kenseth
+Michael McDowell
+Michael Waltrip
+Noah Gragson
+Parker Chase
+Richard Childress
+Richard Petty
+Ricky Stenhouse Jr
+Riley Herbst
+Ross Chastain
+Ryan Blaney
+Ryan Newman
+Ryan Preece
+Ryan Truex
+Ryan Vargas
+Sam Mayer
+Sammy Smith
+Shane Van Gisbergen
+Sheldon Creed
+Spencer Boyd
+Tanner Gray
+Taylor Gray
+Todd Gilliland
+Tommy Joe Martins
+Toni Breidinger
+Ty Gibbs
+Tyler Reddick
+William Byron
+William Sawalich
+
+[multi]
+Connor Zilisch / Shane Van Gisbergen
+Ryan Preece / Chris Buescher
+Cliff Daniels / Kyle Larson
+Rudy Fugle / William Byron
+Blake Harris / Alex Bowman
+Alan Gustafson / Chase Elliott
+William Sawalich / Brent Crews
+Sheldon Creed / Sam Mayer
+Ryan Blaney / Joey Logano
+Ross Chastain / Daniel Suarez
+Connor Mosack / Daniel Hemric
+Christian Eckes / Daniel Dye
+Michael McDowell / Carson Hocevar
+Kasey Kahne / Mark Martin
+Chandler Smith / Layne Riggs
+Carl Edwards / Jeff Burton
+Kelley Earnhardt Miller / Dale Earnhardt Jr
+Jeff Gordon / Jimmie Johnson
+Ty Dillon / Austin Dillon
+Chris Buescher / Ryan Preece
+Alex Bowman / Blake Harris
+Chase Elliott / Alan Gustafson
+Brent Crews / William Sawalich
+Daniel Suarez / Ross Chastain
+Daniel Hemric / Connor Mosack
+Daniel Dye / Christian Eckes
+Layne Riggs / Chandler Smith
+Austin Dillon / Ty Dillon
+Shane Van Gisbergen / Connor Zilisch
+William Byron / Rudy Fugle
+Sam Mayer / Sheldon Creed
+Joey Logano / Ryan Blaney
+Carson Hocevar / Michael McDowell
+Mark Martin / Kasey Kahne
+Jeff Burton / Carl Edwards
+Kyle Larson / Cliff Daniels
+Jimmie Johnson / Jeff Gordon
+Dale Earnhardt Jr / Kelley Earnhardt Miller
+Connor Zilisch / Carson Kvapil
+Ty Dillon / AJ Allmendinger
+Noah Gragson / Todd Gilliland
+Jesse Love / Austin Hill
+Ryan Preece / Brad Keselowski
+Tyler Reddick / Bubba Wallace
+Erik Jones / John Hunter Nemechek
+Justin Allgaier / Sammy Smith
+Chase Elliott / Jimmie Johnson
+Josh Williams / Christian Eckes
+Kevin Harvick / Jeff Burton
+Kyle Busch / Austin Dillon
+Dale Earnhardt Jr / Dale Jarrett
+Carson Kvapil / Connor Zilisch
+Austin Hill / Jesse Love
+John Hunter Nemechek / Erik Jones
+Sammy Smith / Justin Allgaier
+Jimmie Johnson / Chase Elliott
+Brandon Jones / William Sawalich
+Bubba Wallace / Tyler Reddick
+Matt Kenseth / Carl Edwards
+Austin Dillon / Kyle Busch
+Dale Jarrett / Dale Earnhardt Jr

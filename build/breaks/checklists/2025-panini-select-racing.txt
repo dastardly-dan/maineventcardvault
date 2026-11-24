@@ -1,0 +1,277 @@
+# name: 2025 Panini Select Racing
+# sport: NASCAR
+# added: 2026-11-24
+# source:
+# note: Official Panini checklist (Panini Select CSV)
+
+[base]
+AJ Allmendinger
+Alan Kulwicki
+Alex Bowman
+Andres Perez De Lara
+Anthony Alfredo
+Aric Almirola
+Austin Beers
+Austin Dillon
+Austin Hill
+Ben Rhodes
+Bill Elliott
+Bobby Labonte
+Brad Keselowski
+Brandon Jones
+Brenden "Butterbean" Queen
+Brent Crews
+Bubba Wallace
+Carl Edwards
+Carson Hocevar
+Carson Kvapil
+Chandler Smith
+Chase Briscoe
+Chase Elliott
+Chris Buescher
+Christian Eckes
+Christian Rose
+Christopher Bell
+Clint Bowyer
+Cole Custer
+Connor Mosack
+Connor Zilisch
+Conor Daly
+Corey Day
+Corey Heim
+Dale Earnhardt Jr
+Dale Jarrett
+Danica Patrick
+Daniel Dye
+Daniel Hemric
+Daniel Suarez
+Darrell Waltrip
+David Ragan
+Denny Hamlin
+Ernie Irvan
+Frankie Muniz
+Greg Biffle
+Jake Garcia
+Jamie McMurray
+Jeb Burton
+Jeff Gordon
+Jeremy Clements
+Jesse Love
+Jimmie Johnson
+Joey Logano
+John Hunter Nemechek
+Josh Berry
+Justin Allgaier
+Justin Bonsignore
+Justin Haley
+Kaden Honeycutt
+Kasey Kahne
+Kaz Grala
+Ken Schrader
+Kevin Harvick
+Kurt Busch
+Kyle Busch
+Kyle Larson
+Kyle Petty
+Lawless Alan
+Layne Riggs
+Luke Fenhaus
+Mark Martin
+Matt DiBenedetto
+Matt Kenseth
+Matt Mills
+Michael McDowell
+Nick Sanchez
+Noah Gragson
+Rajah Caruth
+Richard Petty
+Ricky Stenhouse Jr
+Riley Herbst
+Ross Chastain
+Ryan Blaney
+Ryan Preece
+Sam Mayer
+Sammy Smith
+Shane Van Gisbergen
+Sheldon Creed
+Spencer Boyd
+Tanner Gray
+Terry Labonte
+Todd Gilliland
+Toni Breidinger
+Ty Dillon
+Ty Gibbs
+Tyler Ankrum
+Tyler Reddick
+William Byron
+Zane Smith
+
+[auto]
+Aric Almirola
+Austin Cindric
+Austin Dillon
+Bayley Currey
+Ben Rhodes
+Blake Harris
+Bobby Labonte
+Brad Keselowski
+Brennan Poole
+Brittney Zamora
+Carl Edwards
+Chandler Smith
+Chase Briscoe
+Chase Elliott
+Chris Buescher
+Cliff Daniels
+Cole Custer
+Conor Daly
+Corey Day
+Corey Heim
+Dale Earnhardt Jr
+Danica Patrick
+Daniel Dye
+Darrell Waltrip
+David Starr
+Derek Kraus
+Derrike Cope
+Geoff Bodine
+Greg Biffle
+Harrison Burton
+Jack Roush
+Jack Wood
+Jade Buford
+Jamie McMurray
+Jeff Burton
+Jesse Love
+Joe Nemechek
+Joey Gase
+Joey Logano
+Josh Williams
+Justin Bonsignore
+Kaz Grala
+Kelley Earnhardt Miller
+Ken Schrader
+Kenny Wallace
+Kevin Harvick
+Kurt Busch
+Kyle Busch
+Landon Cassill
+Mark Martin
+Michael McDowell
+Michael Waltrip
+Mike Helton
+Mike Skinner
+Nick Sanchez
+Noah Gragson
+Parker Chase
+Parker Retzlaff
+Rajah Caruth
+Richard Petty
+Riley Herbst
+Ross Chastain
+Rudy Fugle
+Ryan Blaney
+Ryan Newman
+Ryan Preece
+Santino Ferrucci
+Spencer Boyd
+Taylor Gray
+Thad Moffitt
+Toni Breidinger
+William Sawalich
+
+[insert]
+AJ Allmendinger
+Alex Bowman
+Austin Cindric
+Austin Dillon
+Austin Hill
+Bayley Currey
+Bobby Labonte
+Brad Keselowski
+Brandon Jones
+Brenden "Butterbean" Queen
+Bubba Wallace
+Carl Edwards
+Carson Hocevar
+Carson Kvapil
+Chandler Smith
+Chase Briscoe
+Chase Elliott
+Chris Buescher
+Christopher Bell
+Clint Bowyer
+Cole Custer
+Connor Zilisch
+Corey Heim
+Dale Earnhardt Jr
+Danica Patrick
+Daniel Suarez
+David Ragan
+Denny Hamlin
+Ernie Irvan
+Frankie Muniz
+Hailie Deegan
+Harrison Burton
+Jake Garcia
+Jeb Burton
+Jeff Gordon
+Jeffrey Earnhardt
+Jeremy Clements
+Jesse Love
+Jimmie Johnson
+Joe Nemechek
+Joey Logano
+Josh Berry
+Josh Williams
+Justin Allgaier
+Justin Haley
+Kevin Harvick
+Kyle Busch
+Kyle Larson
+Layne Riggs
+Mark Martin
+Matt Kenseth
+Matt Mills
+Michael McDowell
+Noah Gragson
+Parker Chase
+Richard Childress
+Richard Petty
+Riley Herbst
+Ross Chastain
+Ryan Blaney
+Ryan Preece
+Ryan Vargas
+Sam Mayer
+Shane Van Gisbergen
+Sheldon Creed
+Toni Breidinger
+Ty Dillon
+Ty Gibbs
+Tyler Reddick
+William Byron
+William Sawalich
+Zane Smith
+
+[multi]
+Connor Zilisch / Carson Kvapil
+Jimmie Johnson / Jeff Gordon
+Kyle Larson / Chase Elliott
+Christopher Bell / Ty Gibbs
+Joey Logano / Ryan Blaney
+Bubba Wallace / Tyler Reddick
+Daniel Suarez / Ross Chastain
+Austin Dillon / Kyle Busch
+Carson Hocevar / Justin Haley
+Richard Petty / Kyle Petty
+Carson Kvapil / Connor Zilisch
+Chase Elliott / Kyle Larson
+Ryan Blaney / Joey Logano
+Kyle Busch / Austin Dillon
+Kyle Petty / Richard Petty
+Jeff Gordon / Jimmie Johnson
+Tyler Reddick / Bubba Wallace
+Ross Chastain / Daniel Suarez
+Justin Haley / Carson Hocevar
+Ty Gibbs / Christopher Bell

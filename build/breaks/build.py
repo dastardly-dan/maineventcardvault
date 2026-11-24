@@ -768,16 +768,18 @@ rgl6133 = dict(
     facts=['4 boxes', '9 spots', '$138 per spot, fillers $34.50', 'Letters randomized live'],
     format='random', checked='When checked on November 24, 2026, around 2:00 pm Eastern, none of the 9 spots had sold yet.',
     boxes=[dict(cc875['boxes'][0], full='2026 Panini Select Racing Hobby (1 box)'),
+           dict(k='prizm', short='Prizm', c='#f2c14e', full='2025 Panini Prizm Racing Hobby (1 box)', kind='About 100 drivers in the base set, autographs, inserts',
+                types='Base with Prizm parallels, inserts, and driver autographs.'),
            dict(cc875['boxes'][1], full='2026 Panini Immaculate Collection Racing (2 boxes)')],
     spots=[],  # filled in below from the letters that have names
     rules=[['How RGL groups the letters', ['RGL sells 9 spots, and how the letters are grouped into them is set live on stream; the listing doesn\'t post it.', 'This guide lists every letter on its own, so once you know your letters, look each one up here.']],
            ['First letter of the printed name', ['Letters here go by the first letter of the name on the card, which for drivers is the first name (Chase Elliott is C). RGL\'s listing doesn\'t say first or last name, so check with RGL.']],
            ['Multi-driver cards', ['Each person on a dual or multi-driver card is listed under their own letter.', RGL_MULTI[1][0]]]],
-    notes=['Not included yet: the 2025 Panini Prizm Racing box. Its checklist isn\'t in the library, so its drivers aren\'t listed here. Most will match names already on this page.',
-           'The listing says "2026 Select Hobby" and "2025 Prizm Hobby"; in a NASCAR break these are Panini Select Racing and Prizm Racing.',
+    notes=['The listing says "2026 Select Hobby" and "2025 Prizm Hobby"; in a NASCAR break these are Panini Select Racing and Prizm Racing.',
            'Filler entries are sold too ($34.50 each); see RGL\'s listing for how fillers work.'],
     sources=[['RGL #6133 break page (Run Good Life)', rgl_url(RGL6133_H)],
              ['Panini Select Racing checklist (official Panini CSV)', SRC_PANINI],
+             ['Panini Prizm Racing checklist (official Panini CSV)', SRC_PANINI],
              ['Panini Immaculate Collection Racing checklist (official Panini CSV)', SRC_PANINI]],
 )
 
@@ -801,7 +803,7 @@ if __name__ == '__main__':
     n, u = team_break(rgl6131, {'sc': lib_nba_product('2025-26-topps-stadium-club-basketball'), 'five': lib_nba_product('2025-26-topps-five-star-basketball'),
         'joy': lib_nba_product('2025-26-topps-x-bob-ross-the-joy-of-basketball'), 'flag': lib_nba_product('2026-27-topps-flagship-basketball')}); built.append(write(rgl6131, n, u))
     n, u = team_break(rgl6132, {'chrome': CH, 'absolute': absolute_product(roster)}); built.append(write(rgl6132, n, u))
-    nas = {'select': lib_letter_product('2026-panini-select-nascar'), 'immaculate': lib_letter_product('2026-panini-immaculate-collection-nascar')}
+    nas = {'select': lib_letter_product('2026-panini-select-nascar'), 'prizm': lib_letter_product('2025-panini-prizm-racing'), 'immaculate': lib_letter_product('2026-panini-immaculate-collection-nascar')}
     have = sorted({letters(n)[0] for p_ in nas.values() for n in entries_from_product(p_) if letters(n)[0]})
     rgl6133['spots'] = [cc_spot(L, L) for L in have]
     n, u = letter_break(rgl6133, nas, None, alt=False); built.append(write(rgl6133, n, u))
