@@ -2,6 +2,17 @@
   "_how": "Newest first. Add a new release at the top of 'releases', or add items to today's. tag: New, Improved or Fixed. area: Break guides, Spot Builder or Site. Then run python3 build/breaks/hub.py, which writes breaks/release-notes.html.",
   "releases": [
     {
+      "date": "November 24, 2026",
+      "title": "JWJ break night wrap-up",
+      "items": [
+        [
+          "Improved",
+          "Break guides",
+          "JWJ #0246 Cosmic Exalted Logo Club and JWJ #0248 Chromed Up Galaxy ran on Monday, November 23, so their pages are now closed. The guides stay up for looking back at who was in each spot."
+        ]
+      ]
+    },
+    {
       "date": "November 23, 2026",
       "title": "Live sold tracking, breaker colors and giveaway teams",
       "items": [

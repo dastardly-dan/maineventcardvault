@@ -525,6 +525,8 @@ def close(cfg, ran, facts):
 close(cc871, 'Sunday, November 22, 2026', ['4 boxes', '27 letter spots'])
 close(cc872, 'Sunday, November 22, 2026', ['5 boxes', '32 team spots', '$95 per spot, $23.75 filler'])
 close(cc875, 'Sunday, November 22, 2026', ['3 boxes', '13 letter spots', '$90 per spot, $22.50 filler'])
+close(jwj0246, 'Monday, November 23, 2026', ['6 boxes', '27 letter spots'])
+close(jwj0247, 'Monday, November 23, 2026', ['2 boxes', '18 letter spots', '$66 per spot'])
 
 if __name__ == '__main__':
     built = []
