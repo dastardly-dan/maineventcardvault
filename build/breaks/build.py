@@ -175,7 +175,7 @@ def image_of(url, width=800):
 
 def write(cfg, names, unmatched):
     data = dict(cfg)
-    if image_of(cfg.get('url')): data['image'] = image_of(cfg['url'])
+    if not data.get('image') and image_of(cfg.get('url')): data['image'] = image_of(cfg['url'])  # a config's own image wins
     if cfg.get('ended'): data['spots'] = [{k: v for k, v in s.items() if k != 'status'} for s in cfg['spots']]
     data['names'] = names
     data['unmatched'] = unmatched
@@ -812,6 +812,7 @@ GB1040_LIB = dict(chrome='2026-topps-chrome-football', ufc='2026-topps-midnight-
 gb1040 = dict(
     id='gb1040', title='GB1040 Multi Product Madness', kicker='Acme Packs · Random letter · Multi-sport · Letter spots are a guess',
     url=ACME_BREAKS,
+    image='/breaks/img/gb1040.jpg',  # Daniel's screenshot of Acme's title card; remove once the listing's own image is in images.json
     when='Date and time to come. Acme hasn\'t posted this break on its site yet.',
     facts=['5 boxes', '21 letter spots (groupings are a guess)', '$135 per spot', 'Letters randomized live'],
     format='random', checked='Built on November 24, 2026 from Acme\'s title card, before the listing went up. The letter spots shown are our guess; the real groupings, date and sold status will be added once Acme posts it.',
@@ -872,6 +873,6 @@ if __name__ == '__main__':
     gb1040['rules'][0][1][1] = 'Our guess for now: ' + ', '.join(' / '.join(g) for g in groups if len(g) > 1) + ' share a spot, and every other letter stands alone. We joined the letters with the fewest names until 21 spots were left. Acme may group them differently.'
     print('gb1040 guess', [(' / '.join(g), sum(cnt[x] for x in g)) for g in groups])
     n, u = letter_break(gb1040, g40, None, alt=False); built.append(write(gb1040, n, u))
-    json.dump([{k: b[k] for k in ('id', 'title', 'kicker', 'when', 'facts', 'ended', 'url') if k in b} for b in built], open(os.path.join(os.path.dirname(__file__), 'index.json'), 'w'))
+    json.dump([{k: b[k] for k in ('id', 'title', 'kicker', 'when', 'facts', 'ended', 'url', 'image') if k in b} for b in built], open(os.path.join(os.path.dirname(__file__), 'index.json'), 'w'))
     for b in built:
         if b['unmatched']: print(b['id'], 'UNMATCHED', b['unmatched'][:40])

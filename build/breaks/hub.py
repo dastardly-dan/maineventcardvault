@@ -18,6 +18,7 @@ SHOP_OF = {'acmepackscards.com': 'acme', 'jwjcollectorbreaks.com': 'jwj', 'colfa
 _ip = os.path.join(HERE, 'watch', 'images.json')
 IMAGES = json.load(open(_ip)) if os.path.exists(_ip) else {}
 def image_of(i):
+    if i.get('image'): return i['image']
     m = re.match(r'https?://(?:www\.)?([^/]+)/products/([^/?#]+)', i.get('url', ''))
     if not m: return ''
     src = IMAGES.get(SHOP_OF.get(m.group(1), ''), {}).get(m.group(2), '')
