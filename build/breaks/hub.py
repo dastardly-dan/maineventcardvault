@@ -62,13 +62,14 @@ def code_and_name(title):
     return (m.group(1), m.group(2)) if m else ('', title)
 
 def menu_html(current=None):
-    # Daniel wants the menu short: no list of individual breaks, just these three links.
+    # Daniel wants the menu short: no list of individual breaks, just these four links.
     on = ';background:rgba(230,190,85,.1)'
     first = 'border-top:0;margin-top:0;padding-top:9px'
     links = [
         f'<a class="all" href="/breaks/" style="{first}{on if current == "hub" else ""}">All break guides<span>Every break with a guide right now</span></a>',
         f'<a class="all" href="/breaks/builder" style="{first}{on if current == "builder" else ""}">Spot builder<span>Turn checklists into balanced spots</span></a>',
         f'<a class="all" href="/" style="{first}">Main Event Card Vault<span>Shop all my cards</span></a>',
+        f'<a class="all" href="/iron-ledger.html" style="{first}">Iron Ledger<span>My workout program</span></a>',
     ]
     return '<!--BMENU--><details class="bmenu"><summary>Breaks</summary><div class="bmenu-list">' + ''.join(links) + '</div></details>' + MENU_JS + '<!--/BMENU-->'
 
