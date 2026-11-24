@@ -69,7 +69,7 @@ def menu_html(current=None):
         f'<a class="all" href="/breaks/" style="{first}{on if current == "hub" else ""}">All break guides<span>Every break with a guide right now</span></a>',
         f'<a class="all" href="/breaks/builder" style="{first}{on if current == "builder" else ""}">Spot builder<span>Turn checklists into balanced spots</span></a>',
         f'<a class="all" href="/" style="{first}">Main Event Card Vault<span>Shop all my cards</span></a>',
-        f'<a class="all" href="/iron-ledger.html" style="{first}">Iron Ledger<span>My workout program</span></a>',
+        f'<a class="all" href="/iron-ledger.html" style="{first}{on if current == "ironledger" else ""}">Iron Ledger<span>My workout program</span></a>',
     ]
     return '<!--BMENU--><details class="bmenu"><summary>Breaks</summary><div class="bmenu-list">' + ''.join(links) + '</div></details>' + MENU_JS + '<!--/BMENU-->'
 
@@ -79,6 +79,32 @@ def fill(path, current=None):
     s = re.sub(r'/\*BMENU-CSS\*/.*?/\*/BMENU-CSS\*/', lambda m: '/*BMENU-CSS*/' + MENU_CSS + '/*/BMENU-CSS*/', s, count=1, flags=re.S)
     s = footer_link(s, current)
     open(path, 'w').write(s)
+
+# Iron Ledger is a packed single-file app: its real page lives in a JSON string in
+# <script type="__bundler/template">, which replaces the document when it loads. The Breaks menu goes
+# into that template as a slim bar above the app (Daniel, Nov 24). No script, the <details> menu works
+# on its own. "</" and "<!--" are escaped when the template is written back so the outer script tag holds.
+BAR_CSS = """#mecv-bar { --line: #1f3550; --line-2: #2d4766; --panel: #10243d; --bg-2: #0d1f38; --ink: #e9eef5; --ink-3: #8397ae;
+  --gold: #e6be55; --gold-2: #f1d07a; position: relative; z-index: 50; background: #081524; border-bottom: 1px solid #1f3550;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+#mecv-bar .mb-wrap { max-width: 912px; margin: 0 auto; padding: 10px 16px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+#mecv-bar .mb-brand { color: #e9eef5; text-decoration: none; font-weight: 700; font-size: 14px; letter-spacing: .04em; text-transform: uppercase; }
+#mecv-bar .mb-brand span { color: #e6be55; }
+@media (max-width: 760px) { #mecv-bar .bmenu-list { top: 58px; } }
+"""
+def fill_bundled(path, current):
+    s = open(path).read()
+    tag = '<script type="__bundler/template">'
+    a = s.index(tag) + len(tag); b = s.index('</script>', a)
+    t = json.loads(s[a:b].strip())
+    t = re.sub(r'<!--MECVBAR-->.*?<!--/MECVBAR-->', '', t, flags=re.S)
+    menu = menu_html(current).replace('<!--BMENU-->', '').replace('<!--/BMENU-->', '').replace(MENU_JS, '')
+    bar = ('<!--MECVBAR--><div id="mecv-bar"><style>' + MENU_CSS + '\n' + BAR_CSS + '</style><div class="mb-wrap">'
+           '<a class="mb-brand" href="/">Main Event <span>Card Vault</span></a>' + menu + '</div></div><!--/MECVBAR-->')
+    i = t.index('<body>') + len('<body>')
+    t = t[:i] + bar + t[i:]
+    enc = json.dumps(t, ensure_ascii=False).replace('</', '<\\u002F').replace('<!--', '<\\u0021--')
+    open(path, 'w').write(s[:a] + '\n' + enc + '\n  ' + s[b:])
 
 # A Release notes link at the bottom of every page that has the Breaks menu (Daniel, Nov 24).
 RN_LINK = '<!--RNLINK--><a href="/breaks/release-notes">Release notes</a><!--/RNLINK-->'
@@ -141,5 +167,6 @@ for i in items:
     fill(os.path.join(ROOT, 'breaks', i['id'] + '.html'), i['id'])
 fill(os.path.join(ROOT, 'breaks', 'index.html'), 'hub')
 if os.path.exists(os.path.join(ROOT, 'breaks', 'builder.html')): fill(os.path.join(ROOT, 'breaks', 'builder.html'), 'builder')
+if os.path.exists(os.path.join(ROOT, 'iron-ledger.html')): fill_bundled(os.path.join(ROOT, 'iron-ledger.html'), 'ironledger')
 fill(os.path.join(ROOT, 'build', 'template.html'))
 print('menu written to', len(items) + 2, 'files')
