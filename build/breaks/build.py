@@ -700,6 +700,87 @@ close(jwj0244, 'the week of November 23, 2026', ['3 boxes', '26 team spots'])
 jwj0244.update(ended='This break ran the week of November 23, 2026. Spots are closed, but the guide stays up so you can look back at who was in each spot.',
                when='Ran the week of November 23, 2026')
 
+
+# ---------------- RGL #6131 to #6133 (Nov 24, 2026; built by hand after the page builder left them for missing spot lists) ----------------
+# RGL doesn't post how its random breaks are grouped: teams are paired and letters grouped live on stream. So these
+# pages list every team (or letter) on its own, and say how many spots RGL sells.
+NBA_TEAMS = ['76ers', 'Bucks', 'Bulls', 'Cavaliers', 'Celtics', 'Clippers', 'Grizzlies', 'Hawks', 'Heat', 'Hornets', 'Jazz', 'Kings', 'Knicks', 'Lakers',
+             'Magic', 'Mavericks', 'Nets', 'Nuggets', 'Pacers', 'Pelicans', 'Pistons', 'Raptors', 'Rockets', 'Spurs', 'Suns', 'Thunder', 'Timberwolves',
+             'Trail Blazers', 'Warriors', 'Wizards']
+NBA_FOLD = {'Trailblazers': 'Trail Blazers', 'Supersonics': 'Thunder', 'SuperSonics': 'Thunder', 'Bobcats': 'Hornets', 'New Jersey Nets': 'Nets', 'Bullets': 'Wizards'}
+def lib_nba_product(pid):
+    p = lib_team_product(pid)
+    for b in ('base', 'other'):
+        for old, new in NBA_FOLD.items():
+            if old in p[b]:
+                for n in p[b].pop(old):
+                    if n not in p[b].setdefault(new, []): p[b][new].append(n)
+    return p
+def tid(l): return re.sub(r'[^a-z0-9]', '', l.lower())
+RGL_LIVE_GROUPS = ['How RGL groups the spots', ['RGL sells fewer spots than there are teams, so some teams are paired up, and the pairings are set live on stream; they aren\'t posted on the listing.', 'This guide lists every team on its own, so once you know your team (or teams), look each one up here.']]
+
+RGL6131_H = 'rgl-6131-joy-of-basketball-random-team-11-25-26'
+rgl6131 = dict(
+    id='rgl6131', title='RGL #6131 Joy of Five Star (Random Team)', kicker='Run Good Life · Random team · NBA',
+    url=rgl_url(RGL6131_H),
+    when='Wednesday, November 25, 2026, around 4:45 pm Pacific (7:45 pm Eastern) on the Rungoodlife YouTube channel. Start times are estimates.',
+    facts=['5 boxes', '21 spots for 30 teams', '$290 per spot, fillers $29', 'Teams randomized live'],
+    format='team', checked='When checked on November 24, 2026, around 2:00 pm Eastern, 6 of 21 spots were filled.',
+    boxes=[dict(k='sc', short='Stadium Club', c='#5aa9ff', full='2025-26 Topps Stadium Club Basketball Hobby (2 boxes)', kind='Photo-driven base set, autographs and inserts',
+                types='Base with photo variations, inserts, and autographs including rookies and legends.'),
+           dict(k='five', short='Five Star', c='#e2545e', full='2025-26 Topps Five Star Basketball', kind='High-end, mostly autographs and patch cards',
+                types='Numbered autographs, autographed patches and memorabilia of stars, rookies and legends.'),
+           dict(k='joy', short='Joy of Basketball', c='#3ccf9a', full='2025-26 Topps x Bob Ross The Joy of Basketball', kind='Bob Ross themed base set, inserts and autographs',
+                types='Painted-style base cards, themed inserts like Budding Talents and Over the Mountains, and autographs.'),
+           dict(k='flag', short='Flagship', c='#f2c14e', full='2026-27 Topps Flagship Basketball Hobby', kind='300-card base, autographs',
+                types='300-card base with rookies and legends, variations, inserts, autographs and relics.')],
+    spots=[team_spot(tid(t), t, [t]) for t in NBA_TEAMS],
+    rules=[RGL_LIVE_GROUPS, RGL_TEAM_RULE, RGL_MULTI],
+    notes=['The title says "Joy of Five Star": the break has both 2025-26 Five Star and the Bob Ross Joy of Basketball box.',
+           'Seattle SuperSonics legends are filed with the Thunder here, since that\'s the same franchise today. Ask RGL if it matters to you.',
+           'Filler entries are sold too ($29 each, 60 of them); see RGL\'s listing for how fillers work.'],
+    sources=[['RGL #6131 break page (Run Good Life)', rgl_url(RGL6131_H)],
+             ['Topps Stadium Club Basketball, Five Star Basketball, Joy of Basketball and Flagship Basketball checklists (official Topps)', 'https://www.topps.com/pages/checklists']],
+)
+
+RGL6132_H = 'rgl-6132-absolute-finish-the-case-random-team-11-25-26'
+rgl6132 = dict(
+    id='rgl6132', title='RGL #6132 Absolute Finish the Case (Random Team)', kicker='Run Good Life · Random team · NFL',
+    url=rgl_url(RGL6132_H),
+    when='Wednesday, November 25, 2026, around 5:30 pm Pacific (8:30 pm Eastern) on the Rungoodlife YouTube channel. Start times are estimates.',
+    facts=['7 boxes', '24 spots for 32 teams', '$132 per spot, fillers $33', 'Teams randomized live'],
+    format='team', checked='When checked on November 24, 2026, around 2:00 pm Eastern, none of the 24 spots had sold yet.',
+    boxes=[dict(BOX_CHROME_J, full='2026 Topps Chrome Football Jumbo (1 box)'),
+           dict(BOX_ABSOLUTE, full='2026 Panini Absolute Football Hobby (6 boxes, finishing a case)')],
+    spots=[team_spot(tid(t), t, [t]) for t, _ in cc872_teams] + [team_spot('college', 'College (NIL) cards', [], nil='ABCDEFGHIJKLMNOPQRSTUVWXYZ')],
+    rules=[RGL_LIVE_GROUPS, RGL_TEAM_RULE,
+           ['College (NIL) cards', ['NIL stands for name, image and likeness: college players who aren\'t in the NFL yet. In its NFL team breaks RGL randomizes those cards to all spots at the end of the break, so they\'re listed together here.', 'College players already on an NFL roster in the Topps checklists are filed with their NFL team.']],
+           RGL_MULTI],
+    notes=['"Finish the Case" means these 6 Absolute boxes complete a case RGL started in an earlier break.', 'Filler entries are sold too ($33 each); see RGL\'s listing for how fillers work.'],
+    sources=[['RGL #6132 break page (Run Good Life)', rgl_url(RGL6132_H)], SRC_CHROME, SRC_ABSOLUTE],
+)
+
+RGL6133_H = 'rgl-6133-immaculate-nascar-random-letter-11-25-26'
+rgl6133 = dict(
+    id='rgl6133', title='RGL #6133 Immaculate NASCAR (Random Letter)', kicker='Run Good Life · Random letter · NASCAR',
+    url=rgl_url(RGL6133_H),
+    when='Wednesday, November 25, 2026, around 6:30 pm Pacific (9:30 pm Eastern) on the Rungoodlife YouTube channel. Start times are estimates.',
+    facts=['4 boxes', '9 spots', '$138 per spot, fillers $34.50', 'Letters randomized live'],
+    format='random', checked='When checked on November 24, 2026, around 2:00 pm Eastern, none of the 9 spots had sold yet.',
+    boxes=[dict(cc875['boxes'][0], full='2026 Panini Select Racing Hobby (1 box)'),
+           dict(cc875['boxes'][1], full='2026 Panini Immaculate Collection Racing (2 boxes)')],
+    spots=[],  # filled in below from the letters that have names
+    rules=[['How RGL groups the letters', ['RGL sells 9 spots, and how the letters are grouped into them is set live on stream; the listing doesn\'t post it.', 'This guide lists every letter on its own, so once you know your letters, look each one up here.']],
+           ['First letter of the printed name', ['Letters here go by the first letter of the name on the card, which for drivers is the first name (Chase Elliott is C). RGL\'s listing doesn\'t say first or last name, so check with RGL.']],
+           ['Multi-driver cards', ['Each person on a dual or multi-driver card is listed under their own letter.', RGL_MULTI[1][0]]]],
+    notes=['Not included yet: the 2025 Panini Prizm Racing box. Its checklist isn\'t in the library, so its drivers aren\'t listed here. Most will match names already on this page.',
+           'The listing says "2026 Select Hobby" and "2025 Prizm Hobby"; in a NASCAR break these are Panini Select Racing and Prizm Racing.',
+           'Filler entries are sold too ($34.50 each); see RGL\'s listing for how fillers work.'],
+    sources=[['RGL #6133 break page (Run Good Life)', rgl_url(RGL6133_H)],
+             ['Panini Select Racing checklist (official Panini CSV)', SRC_PANINI],
+             ['Panini Immaculate Collection Racing checklist (official Panini CSV)', SRC_PANINI]],
+)
+
 if __name__ == '__main__':
     built = []
     n, u = letter_break(cc871, WWE_PRODUCTS, wwe_gender); built.append(write(cc871, n, u))
@@ -717,6 +798,13 @@ if __name__ == '__main__':
     n, u = team_break(rgl6129, {k: lib_mlb_product(v) for k, v in (('chrome', '2026-topps-chrome-baseball'), ('update', '2026-topps-update-series-baseball'),
         ('gilded', '2026-topps-gilded-collection-baseball'), ('museum', '2026-topps-museum-collection-baseball'), ('finest', '2026-topps-finest-baseball'))}); built.append(write(rgl6129, n, u))
     n, u = letter_break(rgl6128, {'sc': gpk_fold(lib_letter_product('2026-topps-stadium-club-wwe')), 'chrome': gpk_fold(lib_letter_product('2026-topps-chrome-wwe')), 'nscc': nscc_product()}, rgl_wwe_gender); built.append(write(rgl6128, n, u))
+    n, u = team_break(rgl6131, {'sc': lib_nba_product('2025-26-topps-stadium-club-basketball'), 'five': lib_nba_product('2025-26-topps-five-star-basketball'),
+        'joy': lib_nba_product('2025-26-topps-x-bob-ross-the-joy-of-basketball'), 'flag': lib_nba_product('2026-27-topps-flagship-basketball')}); built.append(write(rgl6131, n, u))
+    n, u = team_break(rgl6132, {'chrome': CH, 'absolute': absolute_product(roster)}); built.append(write(rgl6132, n, u))
+    nas = {'select': lib_letter_product('2026-panini-select-nascar'), 'immaculate': lib_letter_product('2026-panini-immaculate-collection-nascar')}
+    have = sorted({letters(n)[0] for p_ in nas.values() for n in entries_from_product(p_) if letters(n)[0]})
+    rgl6133['spots'] = [cc_spot(L, L) for L in have]
+    n, u = letter_break(rgl6133, nas, None, alt=False); built.append(write(rgl6133, n, u))
     json.dump([{k: b[k] for k in ('id', 'title', 'kicker', 'when', 'facts', 'ended') if k in b} for b in built], open(os.path.join(os.path.dirname(__file__), 'index.json'), 'w'))
     for b in built:
         if b['unmatched']: print(b['id'], 'UNMATCHED', b['unmatched'][:40])
