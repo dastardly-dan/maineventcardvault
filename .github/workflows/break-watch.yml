@@ -31,12 +31,16 @@ jobs:
           python-version: "3.12"
       - name: Check the stores
         run: python build/breaks/watch.py
+      - name: Rebuild the break pages (picks up new title card images and links, like GB1040's)
+        run: |
+          python build/breaks/build.py > /dev/null
+          python build/breaks/hub.py > /dev/null
       - name: Commit anything new
         run: |
-          if [ -n "$(git status --porcelain build/breaks/watch)" ]; then
+          if [ -n "$(git status --porcelain build/breaks breaks)" ]; then
             git config user.name "Break watcher"
             git config user.email "actions@users.noreply.github.com"
-            git add build/breaks/watch
+            git add build/breaks breaks
             git commit -m "Break watcher: store products changed"
             for i in 1 2 3; do git pull --rebase origin main && git push origin HEAD:main && break; sleep 5; done
           fi

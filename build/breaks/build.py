@@ -807,12 +807,14 @@ ACME_BREAKS = 'https://acmepackscards.com/collections/group-breaks'
 def _src(pid, label):
     u = next((l.split('source:', 1)[1].strip() for l in open(os.path.join(LIB, pid + '.txt'), encoding='utf-8') if l.startswith('# source:')), '')
     return [label + ' checklist (official Topps)', u]
+# Finds the real listing by name, whatever number Acme puts in the link; the watcher workflow rebuilds the pages after each check.
+GB1040_H = next((h for h in sorted(IMAGES.get('acme', {})) if 'multi-product-madness' in h and 'filler' not in h), None)
 GB1040_LIB = dict(chrome='2026-topps-chrome-football', ufc='2026-topps-midnight-ufc', pristine='2025-26-topps-pristine-basketball',
                   platinum='2025-topps-chrome-platinum-baseball', sc='2026-topps-stadium-club-wwe')
 gb1040 = dict(
     id='gb1040', title='GB1040 Multi Product Madness', kicker='Acme Packs · Random letter · Multi-sport · Letter spots are a guess',
-    url=acme_url('gb1040-multi-product-madness-random-letters'),  # best guess from Acme's naming (Daniel, Nov 24); not posted yet, fix when the listing appears
-    image='/breaks/img/gb1040.jpg',  # Daniel's screenshot of Acme's title card; remove once the listing's own image is in images.json
+    url=acme_url(GB1040_H or 'gb1040-multi-product-madness-random-letters'),  # the real listing once the watcher sees it, else our best guess (Daniel, Nov 24)
+    image='' if GB1040_H else '/breaks/img/gb1040.jpg',  # Daniel's screenshot until Acme's own title card is in images.json  # Daniel's screenshot of Acme's title card; remove once the listing's own image is in images.json
     when='Date and time to come. Acme hasn\'t posted this break on its site yet.',
     facts=['5 boxes', '21 letter spots (groupings are a guess)', '$135 per spot', 'Letters randomized live'],
     format='random', checked='Built on November 24, 2026 from Acme\'s title card, before the listing went up. The letter spots shown are our guess; the real groupings, date and sold status will be added once Acme posts it.',
