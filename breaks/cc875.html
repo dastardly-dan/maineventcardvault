@@ -112,6 +112,8 @@ h2 { font-size: 30px; margin: 0 0 6px; }
 .pills { display: flex; flex-wrap: wrap; gap: 6px; }
 .pill { font-size: 13.5px; padding: 4px 10px; border-radius: 999px; background: var(--bg-2); border: 1px solid var(--line); }
 .pill small { color: var(--ink-3); }
+.pxkey { font-weight: 700; color: var(--ink-2); font-size: 12px; }
+.pill .px { margin-left: 6px; font-weight: 700; color: var(--ink-2); font-variant-numeric: tabular-nums; }
 .pill.hit { border-color: var(--gold); color: var(--gold-2); }
 .none { color: var(--ink-3); font-size: 13.5px; font-style: italic; }
 
@@ -323,6 +325,7 @@ mark { background: #fff1a8; }
       if (f.indexOf("A") > -1) seen[TEAM && !e[2] ? "hit" : "auto"] = 1;
       if (f.indexOf("I") > -1 && !e[2] && f.indexOf("A") < 0) seen.insert = 1;
       ["M", "N", "K", "?"].forEach(function (c) { if (f.indexOf(c) > -1) seen[c] = 1; });
+      if (e[3]) seen.$ = 1;
     }); });
     var items = [
       ["hit", "", "hit", "not in the base set; only on hit cards like autographs, relics, inserts or numbered parallels"],
@@ -331,9 +334,10 @@ mark { background: #fff1a8; }
       ["M", "m", "multi", "on a multi-person card"],
       ["N", "n", "NIL", "college (NIL) card"],
       ["K", "k", "Kaboom", "has a Kaboom insert in this spot"],
-      ["?", "q", "?", "only if the breaker goes by real name"]];
+      ["?", "q", "?", "only if the breaker goes by real name"],
+      ["$", "px", "$12", "typical eBay Buy It Now asking price for this player's single cards from this box" + (D.priced ? ", checked " + new Date(D.priced + "T12:00:00").toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" }) : "") + ". An asking price, not a sale; parallels and hits can sell for much more"]];
     var h = items.filter(function (x) { return seen[x[0]]; }).map(function (x) {
-      return '<span><span class="tag' + (x[1] ? " " + x[1] : "") + '" style="margin:0">' + x[2] + "</span> " + x[3] + "</span>"; }).join("");
+      return '<span><span class="' + (x[0] === "$" ? "pxkey" : "tag" + (x[1] ? " " + x[1] : "")) + '" style="margin:0">' + x[2] + "</span> " + x[3] + "</span>"; }).join("");
     return h ? '<div class="legend">' + h + "</div>" : "";
   }
   function tags(e) {
@@ -347,10 +351,11 @@ mark { background: #fff1a8; }
     if (f.indexOf("?") > -1) h += '<span class="tag q">? by real name</span>';
     return h;
   }
+  function usd(v) { return "$" + (v < 10 ? v.toFixed(2).replace(/\.00$/, "") : Math.round(v).toLocaleString("en-US")); }
   function pill(e, q) {
     var nm = esc(e[0]);
     if (q) { var f = fold(e[0]), j = f.indexOf(q); if (j > -1) nm = esc(e[0].slice(0, j)) + "<mark>" + esc(e[0].slice(j, j + q.length)) + "</mark>" + esc(e[0].slice(j + q.length)); }
-    return '<span class="pill">' + nm + tags(e) + "</span>";
+    return '<span class="pill">' + nm + tags(e) + (e[3] ? '<small class="px">' + usd(e[3]) + "</small>" : "") + "</span>";
   }
   // my spots: any number of them, saved in this browser (an older single pick carries over)
   var store = {

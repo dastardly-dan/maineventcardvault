@@ -200,8 +200,36 @@ def mark_kabooms(cfg, names):
     return ['Kabooms in this break', ['Kaboom is Panini\'s rare comic-style insert. ' + str(n) + ' players have one in the Absolute checklist; each is tagged KABOOM in the spot their Kaboom card goes to. Panini doesn\'t say how many are in a case, so a full case may have none or a few.']
             + [lab[sid] + ': ' + ', '.join(sorted(set(by_spot[sid]), key=lambda x: fold(x).lower())) for sid in order]]
 
+# eBay asking prices (Daniel, Nov 24), filled in by prices.py from eBay's Browse API. Each name in a break that
+# hasn't run gets a target "<product> <player>"; a typical price shows next to the name once prices.py has one.
+_pp = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'watch', 'prices.json')
+PRICES = json.load(open(_pp, encoding='utf-8')) if os.path.exists(_pp) else {}
+PRICE_TARGETS = {}
+def box_query(b):
+    q = re.sub(r'\(.*?\)', '', b['full'])
+    q = re.sub(r'\b(Hobby|Jumbo|Mega|Blaster|Value|Boxes|Box|Case|Breaker\'s Delight)\b', '', q)
+    return ' '.join(q.split())
+def add_prices(cfg, names):
+    """adds the typical eBay asking price as e[3] and returns the newest price date used"""
+    newest = ''
+    for b in cfg['boxes']:
+        bq = box_query(b)
+        for boxes in names.values():
+            for e in boxes.get(b['k'], []):
+                player = key_of(e[0]).strip()
+                if not player: continue
+                q = bq + ' ' + player
+                PRICE_TARGETS[q] = {'q': q, 'player': player}
+                pr = PRICES.get(q)
+                if pr and pr[0]:
+                    del e[3:]; e.append(pr[0]); newest = max(newest, pr[3])
+    return newest
+
 def write(cfg, names, unmatched):
     data = dict(cfg)
+    if not cfg.get('ended'):
+        d = add_prices(cfg, names)
+        if d: data['priced'] = d
     kr = mark_kabooms(cfg, names)
     if kr: data['rules'] = list(cfg.get('rules', [])) + [kr]
     if not data.get('image') and image_of(cfg.get('url')): data['image'] = image_of(cfg['url'])  # a config's own image wins
@@ -902,6 +930,7 @@ if __name__ == '__main__':
         cc_spot('K', 'K'), cc_spot('L', 'L'), cc_spot('M', 'M'), cc_spot('N / O', 'NO'), cc_spot('P / U', 'PU'), cc_spot('R', 'R'),
         cc_spot('SA-SH', pre=[('SA', 'SH')]), cc_spot('SI-SZ', pre=[('SI', 'SZ')]), cc_spot('T', 'T'), cc_spot('V / Q / W', 'VQW'), cc_spot('X / Y / Z', 'XYZ')]
     n, u = letter_break(gb1040, g40, None, alt=False); built.append(write(gb1040, n, u))
+    json.dump(sorted(PRICE_TARGETS.values(), key=lambda t: t['q']), open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'watch', 'price_targets.json'), 'w'), indent=0, ensure_ascii=False)
     json.dump([{k: b[k] for k in ('id', 'title', 'kicker', 'when', 'facts', 'ended', 'url', 'image') if k in b} for b in built], open(os.path.join(os.path.dirname(__file__), 'index.json'), 'w'))
     for b in built:
         if b['unmatched']: print(b['id'], 'UNMATCHED', b['unmatched'][:40])

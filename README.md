@@ -218,6 +218,11 @@ team spot, box by box. Linked from the storefront's Breaks menu; every page carr
       official Panini CSVs (Absolute Football, Donruss Elite Baseball so far); add new Panini products there and map the
       box key in `KABOOM_BOX`. `mark_kabooms` tags each name KABOOM only in the spot its Kaboom card goes to and adds a
       "Kabooms in this break" list to the rules.
+  3g. eBay prices (Daniel, Nov 24): `build/breaks/prices.py` (workflow `break-prices.yml`, daily and on demand) looks up
+      eBay Buy It Now asking prices through the Browse API for every "<product> <player>" in `watch/price_targets.json`
+      (written by build.py for breaks that haven't run) and saves the median of raw single-card listings to
+      `watch/prices.json`. Pages show it next to each name, labeled as an asking price with the date. Needs repository
+      secrets EBAY_CLIENT_ID and EBAY_CLIENT_SECRET. Market Movers is off limits: its terms ban scraping and reposting.
   3d. Early pages (Daniel, Nov 24): a break can be built from a title card before the listing is posted (gb1040 was).
       When the listing shows up, update that config (url, when, facts, real spots) instead of building a second page.
       Acme sometimes reuses an old link: GB1040 lives at gb1040-dual-year-football-finale-random-team.

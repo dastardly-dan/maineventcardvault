@@ -1,0 +1,47 @@
+# Once a day, looks up eBay Buy It Now asking prices for the names in the breaks that haven't run yet
+# (build/breaks/prices.py, eBay Browse API) and rebuilds the break pages so the prices show next to each name.
+# Needs two repository secrets from a free eBay developer account (production keyset):
+#   EBAY_CLIENT_ID      the App ID (Client ID)
+#   EBAY_CLIENT_SECRET  the Cert ID (Client Secret)
+# Without them the job skips quietly.
+name: Break prices
+
+on:
+  schedule:
+    - cron: "23 10 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: break-prices
+  cancel-in-progress: false
+
+jobs:
+  prices:
+    runs-on: ubuntu-latest
+    timeout-minutes: 80
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Look up eBay asking prices
+        env:
+          EBAY_CLIENT_ID: ${{ secrets.EBAY_CLIENT_ID }}
+          EBAY_CLIENT_SECRET: ${{ secrets.EBAY_CLIENT_SECRET }}
+        run: python build/breaks/prices.py
+      - name: Rebuild the break pages
+        run: |
+          python build/breaks/build.py > /dev/null
+          python build/breaks/hub.py > /dev/null
+      - name: Commit
+        run: |
+          if [ -n "$(git status --porcelain build/breaks breaks)" ]; then
+            git config user.name "Break prices"
+            git config user.email "actions@users.noreply.github.com"
+            git add build/breaks breaks
+            git commit -m "Break prices: eBay asking prices updated"
+            for i in 1 2 3; do git pull --rebase origin main && git push origin HEAD:main && break; sleep 5; done
+          fi
