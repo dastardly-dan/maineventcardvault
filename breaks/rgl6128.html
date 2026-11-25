@@ -342,7 +342,7 @@ mark { background: #fff1a8; }
       var f = e[1];
       if (f.indexOf("A") > -1) seen[TEAM && !e[2] ? "hit" : "auto"] = 1;
       if (f.indexOf("I") > -1 && !e[2] && f.indexOf("A") < 0) seen.insert = 1;
-      ["M", "N", "K", "?"].forEach(function (c) { if (f.indexOf(c) > -1) seen[c] = 1; });
+      ["M", "N", "K"].forEach(function (c) { if (f.indexOf(c) > -1) seen[c] = 1; });
       if (e[3]) seen.$ = 1;
     }); });
     var items = [
@@ -352,7 +352,6 @@ mark { background: #fff1a8; }
       ["M", "m", "multi", "on a multi-person card"],
       ["N", "n", "NIL", "college (NIL) card"],
       ["K", "k", "Kaboom", "has a Kaboom insert in this spot"],
-      ["?", "q", "?", "only if the breaker goes by real name"],
       ["$", "px", "$12", "typical eBay Buy It Now asking price for this player's single cards from this box" + (D.priced ? ", checked " + new Date(D.priced + "T12:00:00").toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" }) : "") + ". An asking price, not a sale; parallels and hits can sell for much more"]];
     var h = items.filter(function (x) { return seen[x[0]]; }).map(function (x) {
       return '<span><span class="' + (x[0] === "$" ? "pxkey" : "tag" + (x[1] ? " " + x[1] : "")) + '" style="margin:0">' + x[2] + "</span> " + x[3] + "</span>"; }).join("");
@@ -366,7 +365,6 @@ mark { background: #fff1a8; }
     if (f.indexOf("M") > -1) h += '<span class="tag m">multi</span>';
     if (f.indexOf("N") > -1) h += '<span class="tag n">NIL</span>';
     if (f.indexOf("K") > -1) h += '<span class="tag k">Kaboom</span>';
-    if (f.indexOf("?") > -1) h += '<span class="tag q">? by real name</span>';
     return h;
   }
   function usd(v) { return "$" + (v < 10 ? v.toFixed(2).replace(/\.00$/, "") : Math.round(v).toLocaleString("en-US")); }
