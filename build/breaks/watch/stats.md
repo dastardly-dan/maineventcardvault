@@ -21,9 +21,9 @@ so read it as a guide. Updated whenever a product is added.
 - Hours (ET): 00:00 3, 02:00 1, 04:00 4, 16:00 1, 18:00 1
 - Latest: Sat Aug 08 12:33 AM Colfax Autographed Cards; Sat Aug 08 12:33 AM Colfax Logo Repeat Tumbler; Sun Aug 16 04:28 PM Colfax Logo Tumbler; Sat Nov 21 04:30 AM CC871 - Club & Chrome PYL (Pick Your Letter); Sat Nov 21 04:30 AM CC872 - Chrome, Absolute, & Midnight (Random Team); Sat Nov 21 04:30 AM CC874 - Monster Multi (Random Letter); Sat Nov 21 04:30 AM CC873 - Marvel Rivals PYC (Pick Your Character); Sun Nov 22 06:57 PM CC875 - Immaculate NASCAR (Random Letter)
 
-## rgl (26 products)
+## rgl (29 products)
 
-- Days: Mon 1, Tue 14, Wed 4, Fri 3, Sat 2, Sun 2
-- Hours (ET): 00:00 1, 01:00 1, 02:00 1, 04:00 1, 13:00 6, 14:00 1, 16:00 3, 17:00 1, 18:00 2, 20:00 8, 21:00 1
-- Latest: Tue Nov 24 01:00 PM RGL #6130 - Chrome & Midnight PYT (11/25/26) (Raid; Tue Nov 24 01:00 PM RGL #6129 - Gilded Collection PYT (Dodgers Random); Tue Nov 24 01:00 PM RGL #6133 - Immaculate NASCAR (Random Letter) (11/; Tue Nov 24 01:00 PM RGL #6132 - Absolute Finish the Case (Random Team); Wed Nov 25 04:38 PM RGL #6134 - Gilded Collection PYT #2 (Dodgers Rand; Wed Nov 25 04:38 PM RGL #6136 - Pass the Turkey NFL (Random Team) (11/; Wed Nov 25 04:38 PM RGL #6135 - Oops All Animation (Random Letter) (11; Wed Nov 25 05:30 PM RGL #6137 - Pro Debut Half Case (Random Letter) (1
+- Days: Mon 1, Tue 14, Wed 7, Fri 3, Sat 2, Sun 2
+- Hours (ET): 00:00 1, 01:00 1, 02:00 1, 04:00 1, 13:00 6, 14:00 1, 16:00 3, 17:00 1, 18:00 5, 20:00 8, 21:00 1
+- Latest: Tue Nov 24 01:00 PM RGL #6132 - Absolute Finish the Case (Random Team); Wed Nov 25 04:38 PM RGL #6134 - Gilded Collection PYT #2 (Dodgers Rand; Wed Nov 25 04:38 PM RGL #6136 - Pass the Turkey NFL (Random Team) (11/; Wed Nov 25 04:38 PM RGL #6135 - Oops All Animation (Random Letter) (11; Wed Nov 25 05:30 PM RGL #6137 - Pro Debut Half Case (Random Letter) (1; Wed Nov 25 06:12 PM RGL #612XWWE2 - Chrome in the Club PYL #2 (Pick Yo; Wed Nov 25 06:12 PM RGL #6139 - Joy of Five Star #2 (Random Team) (11/; Wed Nov 25 06:12 PM RGL #6138 - Gilded & Cosmic (Random Team) (11/25/2
 
