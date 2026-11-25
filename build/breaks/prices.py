@@ -13,7 +13,7 @@ Each run refreshes the targets with no price yet first, then the oldest, up to M
 break fills in over a day or two and the run stays well inside eBay's daily call limit. Without keys it does
 nothing and exits cleanly.
 """
-import base64, datetime, json, os, re, statistics, sys, time, unicodedata, urllib.parse, urllib.request
+import base64, datetime, json, os, re, statistics, sys, time, unicodedata, urllib.error, urllib.parse, urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 WATCH = os.path.join(HERE, 'watch')
@@ -33,7 +33,10 @@ def token(cid, secret):
         data=urllib.parse.urlencode({'grant_type': 'client_credentials', 'scope': 'https://api.ebay.com/oauth/api_scope'}).encode(),
         headers={'Authorization': 'Basic ' + base64.b64encode((cid + ':' + secret).encode()).decode(),
                  'Content-Type': 'application/x-www-form-urlencoded'})
-    return json.load(urllib.request.urlopen(req, timeout=30))['access_token']
+    try:
+        return json.load(urllib.request.urlopen(req, timeout=30))['access_token']
+    except urllib.error.HTTPError as e:   # show eBay's reason (never the keys) so a bad keyset is easy to spot
+        print('eBay sign-in refused (%s): %s' % (e.code, e.read().decode('utf-8', 'replace')[:300])); raise SystemExit(1)
 
 
 def search(tok, q):
@@ -57,7 +60,8 @@ def summarize(items, player):
 
 
 def main():
-    cid, secret = os.environ.get('EBAY_CLIENT_ID'), os.environ.get('EBAY_CLIENT_SECRET')
+    cid, secret = (os.environ.get('EBAY_CLIENT_ID') or '').strip(), (os.environ.get('EBAY_CLIENT_SECRET') or '').strip()
+    print('Client ID looks like', ('a Sandbox' if '-SBX-' in cid else 'a Production' if '-PRD-' in cid else 'an unknown'), 'key;', len(cid), 'characters')
     if not (cid and secret):
         print('No eBay keys (EBAY_CLIENT_ID, EBAY_CLIENT_SECRET); skipping prices.'); return
     targets = json.load(open(os.path.join(WATCH, 'price_targets.json')))
