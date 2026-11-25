@@ -1,1 +1,22 @@
-[]
+[
+ {
+  "event": "added",
+  "shop": "acme",
+  "first_seen": "2026-11-25T00:05:45+00:00",
+  "handle": "gb1037-50-chance-filler-pyt-evolved-team-pool",
+  "title": "GB1037- 50% CHANCE FILLER - PYT EVOLVED TEAM POOL",
+  "url": "https://acmepackscards.com/products/gb1037-50-chance-filler-pyt-evolved-team-pool",
+  "published_at": "2026-11-24T17:11:57-06:00",
+  "created_at": "2026-11-24T16:46:23-06:00",
+  "type": "",
+  "tags": [],
+  "variants": [
+   {
+    "title": "Default Title",
+    "price": "55.55",
+    "available": false
+   }
+  ],
+  "text": "THIS IS A 50% CHANCE FILLER FOR THE GROUP BREAK LISTED IN THE TITLE. 50% of the participants will receive a spot in this break and 50% will NOT receive a spot in this break.\nThis is an Evolved Team Filler for PYT GB1018. Meaning all remaining teams not purchased will be added to a team pool and cost averaged. The amount of spots will then be doubled to equal that of a 50% Chance Filler. The list will be randomized using Random.org and the top half (#) of participants will receive teams in this break in the order of the available teams.\ntable\n {mso-displayed-decimal-separator:\"\\.\";\n mso-displayed-thousand-separator:\"\\,\";}\ntr\n {mso-height-source:auto;}\ncol\n {mso-width-source:auto;}\ntd\n {padding-top:1px;\n padding-right:1px;\n padding-left:1px;\n mso-ignore:padding;\n color:black;\n font-size:11.0pt;\n font-weight:400;\n font-style:normal;\n text-decoration:none;\n font-family:Calibri, sans-serif;\n mso-font-charset:0;\n text-align:general;\n vertical-align:bottom;\n border:none;\n white-space:nowrap;\n mso-rotate:0;}\n.xl27\n {font-size:13.0pt;\n font-weight:700;\n font-family:Arial;\n mso-generic-font-family:auto;\n mso-font-charset:0;\n border:.5pt solid black;}\n.xl34\n {font-size:14.0pt;\n font-weight:700;\n border:.5pt solid black;}\nBy purchasing a filler you acknowledge there is a chance you may not get into the break.\n-------------------------------------------------------------------------------------------------\nBuccaneers\nCardinals\nChargers\nColts\nJaguars\nPanthers\nRavens\nSaints\nTitans"
+ }
+]
