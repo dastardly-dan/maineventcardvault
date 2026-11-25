@@ -218,6 +218,9 @@ team spot, box by box. Linked from the storefront's Breaks menu; every page carr
       format against the listing, fix the config, and remove `DRAFT_NOTE` from its `checked` and `notes`. Preview drafts
       with `RGL_DRAFT_PREVIEW=/tmp/x python3 build/breaks/build.py` (then run it again without the variable). #6135, #6136,
       #6137, #6141 and #6142 weren't prepped; build those from the listing as usual.
+      Format rule (Daniel, Nov 25, 2026): whenever a page is built before the format is known (letters or teams, pick or
+      random), say so plainly on the page, give the best guess and why, and mark the kicker "(best guess)". Once the
+      listing states the format, set it and remove the guess wording.
   3e. The watcher workflow now rebuilds the break pages and the Break guides page after every check, so new title card
       images show up without a builder run. A page picks up its breaker's title card from `images.json`
       as long as its `url` is the product link.

@@ -909,7 +909,7 @@ gb1040 = dict(
 SEEN = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'watch', 'seen.json'), encoding='utf-8'))
 def rgl_posted(num):
     return next((h for h in SEEN.get('rgl', []) if h.startswith('rgl-%d-' % num)), None)
-DRAFT_NOTE = ('This guide was set up from the break title before Run Good Life posted the listing, so the box list is our best guess. '
+DRAFT_NOTE = ('This guide was set up from the break title before Run Good Life posted the listing, so the box list and format are our best guess. '
               'Check the listing for the exact boxes and spots.')
 def rgl_draft(cfg, num, pick=False):
     """True once RGL has posted the listing; fills in its link and live tracking."""
@@ -993,56 +993,56 @@ rgl6136 = dict(
 )
 
 rgl6138 = dict(
-    id='rgl6138', title='RGL #6138 Gilded & Cosmic MLB', kicker='Run Good Life · Team break · MLB',
+    id='rgl6138', title='RGL #6138 Gilded & Cosmic MLB', kicker='Run Good Life · Team break (best guess) · MLB',
     when=_when(WED, '10:30 pm', '1:30 am Thursday'),
     facts=['Gilded Collection and Cosmic Chrome (best guess)', '30 teams'],
-    format='team', checked=DRAFT_NOTE,
+    format='team', checked=DRAFT_NOTE + ' ' + "RGL hasn't said yet whether this break goes by letters or by teams. Our best guess is a team break, because RGL runs its baseball breaks by team, including both Gilded Collection breaks tonight. This guide is set up that way until the listing says otherwise.",
     boxes=[dict(rgl6129['boxes'][2]),
            dict(k='cosmic', short='Cosmic Chrome', c='#8a6be0', full='2026 Topps Cosmic Chrome Baseball', kind='Space-themed Chrome base, autographs, inserts',
                 types='Cosmic-themed Chrome base and Refractor parallels, inserts, and autographs.')],
     spots=list(MLB_RANDOM_SPOTS),
     rules=[RGL_LIVE_GROUPS, RGL_TEAM_RULE, RGL_MULTI],
-    notes=[DRAFT_NOTE, 'This guide lists every team on its own. If RGL sells it as pick your team, the spots will match these team names.'],
+    notes=[DRAFT_NOTE, "RGL hasn't said yet whether this break goes by letters or by teams. Our best guess is a team break, because RGL runs its baseball breaks by team, including both Gilded Collection breaks tonight. This guide is set up that way until the listing says otherwise.", 'This guide lists every team on its own. If RGL sells it as pick your team, the spots will match these team names.'],
     sources=[rgl6129['sources'][3], _src('2026-topps-cosmic-chrome-baseball', 'Topps Cosmic Chrome Baseball')],
 )
 
 rgl6139 = dict(
-    id='rgl6139', title='RGL #6139 Joy of Five Star #2 (Random Team)', kicker='Run Good Life · Random team · NBA',
+    id='rgl6139', title='RGL #6139 Joy of Five Star #2', kicker='Run Good Life · Random team (best guess) · NBA',
     when=_when(WED, '11:15 pm', '2:15 am Thursday'),
     facts=['Same boxes as #6131 (best guess)', '30 teams', 'Teams randomized live'],
-    format='team', checked=DRAFT_NOTE,
+    format='team', checked=DRAFT_NOTE + ' ' + "RGL hasn't said yet whether this break goes by letters or by teams. Our best guess is random team, because the first Joy of Five Star break tonight (#6131) is random team. This guide is set up that way until the listing says otherwise.",
     boxes=[dict(b) for b in rgl6131['boxes']],
     spots=[team_spot(tid(t), t, [t]) for t in NBA_TEAMS],
     rules=[RGL_LIVE_GROUPS, RGL_TEAM_RULE, RGL_MULTI],
-    notes=[DRAFT_NOTE, 'The first Joy of Five Star (#6131) had 2 Stadium Club boxes, Five Star, the Bob Ross Joy of Basketball box and Flagship, so this guide uses those.',
+    notes=[DRAFT_NOTE, "RGL hasn't said yet whether this break goes by letters or by teams. Our best guess is random team, because the first Joy of Five Star break tonight (#6131) is random team. This guide is set up that way until the listing says otherwise.", 'The first Joy of Five Star (#6131) had 2 Stadium Club boxes, Five Star, the Bob Ross Joy of Basketball box and Flagship, so this guide uses those.',
            'Seattle SuperSonics legends are filed with the Thunder here, since that\'s the same franchise today.'],
     sources=list(rgl6131['sources'][1:]),
 )
 
 rgl6140 = dict(
-    id='rgl6140', title='RGL #6140 Half Case Delight NFL', kicker='Run Good Life · Team break · NFL',
+    id='rgl6140', title='RGL #6140 Half Case Delight NFL', kicker='Run Good Life · Team break (best guess) · NFL',
     when=_when(THU, '12:00 am', '3:00 am'),
     facts=['Topps Chrome Football Breaker\'s Delight (best guess)', '32 teams plus college (NIL) cards'],
-    format='team', checked=DRAFT_NOTE,
+    format='team', checked=DRAFT_NOTE + ' ' + "RGL hasn't said yet whether this break goes by letters or by teams. Our best guess is a random team break, because RGL's other football breaks tonight (#6132 and #6136) are random team. This guide is set up that way until the listing says otherwise.",
     boxes=[dict(BOX_CHROME_H, short='Chrome Delight', full='2026 Topps Chrome Football Breaker\'s Delight (half case)',
                 types='Chrome base and Refractors, rookie cards, autographs, inserts.')],
     spots=[team_spot(tid(t), t, [t]) for t, _ in cc872_teams] + [team_spot('college', 'College (NIL) cards', [], nil='ABCDEFGHIJKLMNOPQRSTUVWXYZ')],
     rules=[RGL_LIVE_GROUPS, RGL_TEAM_RULE,
            ['College (NIL) cards', ['NIL stands for name, image and likeness: college players who aren\'t in the NFL yet. In its NFL team breaks RGL randomizes those cards to all spots at the end of the break, so they\'re listed together here.']],
            RGL_MULTI],
-    notes=[DRAFT_NOTE, '"Delight" most likely means Topps Chrome Football Breaker\'s Delight boxes, which use the same checklist as the Hobby box.'],
+    notes=[DRAFT_NOTE, "RGL hasn't said yet whether this break goes by letters or by teams. Our best guess is a random team break, because RGL's other football breaks tonight (#6132 and #6136) are random team. This guide is set up that way until the listing says otherwise.", '"Delight" most likely means Topps Chrome Football Breaker\'s Delight boxes, which use the same checklist as the Hobby box.'],
     sources=[SRC_CHROME],
 )
 
 rgl6143 = dict(
-    id='rgl6143', title='RGL #6143 Five Star Finish the Case', kicker='Run Good Life · Team break · NBA',
+    id='rgl6143', title='RGL #6143 Five Star Finish the Case', kicker='Run Good Life · Random team (best guess) · NBA',
     when=_when(THU, '2:00 am', '5:00 am'),
     facts=['2025-26 Topps Five Star Basketball (best guess)', '30 teams'],
-    format='team', checked=DRAFT_NOTE,
+    format='team', checked=DRAFT_NOTE + ' ' + "RGL hasn't said yet whether this break goes by letters or by teams. Our best guess is random team, because the Joy of Five Star breaks that started this case are random team. This guide is set up that way until the listing says otherwise.",
     boxes=[dict(rgl6131['boxes'][1], full='2025-26 Topps Five Star Basketball (finishing a case)')],
     spots=[team_spot(tid(t), t, [t]) for t in NBA_TEAMS],
     rules=[RGL_LIVE_GROUPS, RGL_TEAM_RULE, RGL_MULTI],
-    notes=[DRAFT_NOTE, '"Finish the Case" most likely means the rest of the Five Star Basketball case RGL opened in tonight\'s Joy of Five Star breaks.'],
+    notes=[DRAFT_NOTE, "RGL hasn't said yet whether this break goes by letters or by teams. Our best guess is random team, because the Joy of Five Star breaks that started this case are random team. This guide is set up that way until the listing says otherwise.", '"Finish the Case" most likely means the rest of the Five Star Basketball case RGL opened in tonight\'s Joy of Five Star breaks.'],
     sources=[SRC_TOPPS_LIST],
 )
 
