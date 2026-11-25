@@ -119,6 +119,12 @@ h2 { font-size: 30px; margin: 0 0 6px; }
 .pill.g.on .tag, .pill.g.on .px { color: var(--on-gold); }
 .pill.g.on .ck { border-color: var(--on-gold); background: var(--on-gold); -webkit-mask: none; position: relative; }
 .pill.g.on .ck::after { content: ""; position: absolute; left: 4px; top: 1px; width: 4px; height: 8px; border: solid var(--gold); border-width: 0 2px 2px 0; transform: rotate(45deg); }
+.cpills { display: flex; flex-wrap: wrap; gap: 5px; }
+.cpills .pill { font-size: 12.5px; padding: 2px 9px; }
+.dots i.g { cursor: pointer; width: 15px; height: 15px; border-radius: 4px; border: 2px solid var(--c); background: transparent !important; display: inline-block; position: relative; }
+.dots i.g.on { background: var(--c) !important; }
+.dots i.g.on::after { content: ""; position: absolute; left: 3px; top: 0; width: 4px; height: 8px; border: solid #fff; border-width: 0 2px 2px 0; transform: rotate(45deg); }
+.pulls:empty { display: none; }
 .pulls { margin-top: 22px; background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px 18px; }
 .pulls h3 { margin: 0 0 4px; font-size: 24px; }
 .plist { white-space: pre-wrap; font: 14px/1.5 inherit; font-family: inherit; background: var(--bg-2); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; margin: 10px 0; }
@@ -243,9 +249,9 @@ __THEME__
 <main class="wrap">
   <section data-view="spots"><h2 class="display" id="spotsHead">All spots</h2><p class="sub" id="spotsSub"></p><div class="chips" id="spotFilter"></div><div class="boxpick"><span class="bplab">Show a box</span><div class="chips" id="pickchips"></div></div><div class="avail" id="avail" hidden></div><div class="grid" id="spotgrid"></div></section>
   <section data-view="open" hidden><h2 class="display">What's still open</h2><p class="sub">Open spots, cheapest first, with how many names each one covers. "Autos" counts names that appear in an autograph set.</p><div id="openTable"></div></section>
-  <section data-view="names" hidden><h2 class="display">Every name, A to Z</h2><p class="sub" id="namesSub"></p><div id="namesTools"></div><div class="jump" id="jump"></div><div id="nameIndex"></div></section>
+  <section data-view="names" hidden><h2 class="display">Every name, A to Z</h2><p class="sub" id="namesSub"></p><div id="namesTools"></div><div class="jump" id="jump"></div><div class="pulls"></div><div id="nameIndex"></div></section>
   <section data-view="spot" hidden><div id="spot"></div></section>
-  <section data-view="boxes" hidden><h2 class="display">One box at a time</h2><p class="sub">Pick a box to see its names lined up across every spot.</p><div class="chips" id="boxchips"></div><div id="boxtable"></div></section>
+  <section data-view="boxes" hidden><h2 class="display">One box at a time</h2><p class="sub">Pick a box to see its names lined up across every spot.</p><div class="chips" id="boxchips"></div><div id="boxtable"></div><div class="pulls"></div></section>
   <section data-view="search" hidden><h2 class="display" id="srchead">Search</h2><p class="sub" id="srcsub"></p><div class="results" id="results"></div></section>
   <section data-view="rules" hidden>
     <h2 class="display">How cards get assigned</h2><p class="sub">The break page's own terms come first. Where it says nothing, these are the usual conventions; ask the breaker on anything borderline.</p>
@@ -442,7 +448,7 @@ __THEME__
     var map = {};
     D.spots.forEach(function (s) { D.boxes.forEach(function (b) { list(s, b.k).forEach(function (e) {
       var r = map[e[0]] || (map[e[0]] = { n: e[0], spots: {}, boxes: {}, f: "" });
-      r.spots[s.id] = (r.spots[s.id] || "") + e[1]; r.boxes[b.k] = 1; if (e[1].indexOf("A") > -1) r.f += "A";
+      r.spots[s.id] = (r.spots[s.id] || "") + e[1]; if (e[1].indexOf("?") < 0 || !r.boxes[b.k]) r.boxes[b.k] = gkey(s, b, e); if (e[1].indexOf("A") > -1) r.f += "A";
     }); }); });
     IDX = Object.keys(map).map(function (k) { return map[k]; }).sort(function (a, b) { return fold(a.n.replace(/^["']|^the /i, "")).localeCompare(fold(b.n.replace(/^["']|^the /i, ""))); });
   }
@@ -462,9 +468,12 @@ __THEME__
     var L = Object.keys(groups).sort();
     document.getElementById("jump").innerHTML = L.map(function (l) { return '<a href="javascript:void 0" data-j="' + l + '">' + l + "</a>"; }).join("");
     [].forEach.call(document.querySelectorAll("#jump a"), function (a) { a.onclick = function () { var t = document.getElementById("L-" + a.getAttribute("data-j")); if (t) window.scrollTo(0, t.getBoundingClientRect().top + window.scrollY - 130); }; });
+    document.getElementById("namesSub").textContent += " Tap a colored box square to check that card off.";
+    setTimeout(drawPulls, 0);
     document.getElementById("nameIndex").innerHTML = L.map(function (l) {
       return '<h3 class="lt display" id="L-' + l + '">' + l + '</h3><div class="idx">' + groups[l].map(function (r) {
-        return '<div class="ix"><span class="nm">' + esc(r.n) + (r.f ? '<span class="tag">auto</span>' : "") + '</span><span class="dots">' + D.boxes.map(function (b) { return r.boxes[b.k] ? '<i style="background:' + b.c + '" title="' + esc(b.short) + '"></i>' : ""; }).join("") + '</span><span class="sp">' +
+        return '<div class="ix"><span class="nm">' + esc(r.n) + (r.f ? '<span class="tag">auto</span>' : "") + '</span><span class="dots">' + D.boxes.map(function (b) { var k = r.boxes[b.k]; if (!k) return ""; var on = got.has(k);
+          return '<i class="g bx' + (on ? " on" : "") + '" role="button" tabindex="0" aria-pressed="' + on + '" style="--c:' + b.c + '" title="' + esc(b.short) + ': tap to check off" data-g="' + esc(k).replace(/"/g, "&quot;") + '"></i>'; }).join("") + '</span><span class="sp">' +
           Object.keys(r.spots).sort(function (a, b) { return SP[a].i - SP[b].i; }).map(function (id) { var s = SP[id]; return '<a class="' + (s.status || "") + '" href="' + href(id) + '" title="' + esc(full(s)) + '">' + esc(s.label) + (sub(s) ? " " + sub(s).charAt(0) : "") + (r.spots[id].indexOf("?") > -1 ? "?" : "") + "</a>"; }).join("") + "</span></div>";
       }).join("") + "</div>";
     }).join("");
@@ -485,12 +494,8 @@ __THEME__
           (a.length ? '<div class="pills">' + a.map(function (e) { return gpill(e, s, b); }).join("") + "</div>" : '<div class="none">' + (b.k === "absolute" ? "Checklist not released yet" : "None listed for this spot") + "</div>") + "</div>";
       }).join("") + "</div>";
     document.getElementById("pin").onclick = function () { store.toggle(s.id); redrawMine(); };
-    var pl = document.createElement("div"); pl.className = "pulls"; pl.id = "pulls"; document.getElementById("spot").appendChild(pl);
-    [].forEach.call(document.querySelectorAll("#spot .pill.g"), function (el) {
-      el.onkeydown = function (ev) { if (ev.key === "Enter" || ev.key === " ") { ev.preventDefault(); el.onclick(); } };
-      el.onclick = function () { got.toggle(el.getAttribute("data-g")); el.classList.toggle("on"); el.setAttribute("aria-pressed", el.classList.contains("on")); drawPulls(); };
-    });
-    document.getElementById("topulls").onclick = function () { document.getElementById("pulls").scrollIntoView({ behavior: "smooth", block: "start" }); };
+    var pl = document.createElement("div"); pl.className = "pulls"; document.getElementById("spot").appendChild(pl);
+    document.getElementById("topulls").onclick = function () { pl.scrollIntoView({ behavior: "smooth", block: "start" }); };
     drawPulls();
   }
 
@@ -518,33 +523,46 @@ __THEME__
       lines.push(""); });
     return lines;
   }
-  function drawPulls() {
-    var el = document.getElementById("pulls"); if (!el) return;
-    var tp = document.getElementById("topulls"); if (tp) tp.textContent = "My pulls (" + got.all().length + ")";
-    var lines = pullsText(), n = got.all().length, mail = ""; try { mail = localStorage.getItem(MAILKEY) || ""; } catch (e) {}
-    el.innerHTML = '<h3 class="display">My pulls</h3><p class="sub">Tap any name above when you pull that card to check it off. Your list is saved in this browser and covers every spot in this break.</p>' +
-      (n ? '<pre class="plist">' + esc(lines.join("\n").trim()) + "</pre>" +
-        '<div class="pacts"><input type="email" id="pmail" placeholder="Your email address" value="' + esc(mail) + '" autocomplete="email">' +
-        '<button class="btn gold" id="pmailbtn">Email me my pulls</button><button class="btn" id="pcopy">Copy list</button><button class="btn" id="pclear">Clear all</button></div>' +
-        '<p class="sub" style="margin-top:6px">Email opens your mail app with your list filled in; just hit send.</p>'
-        : '<p class="sub"><b>Nothing checked yet.</b></p>');
-    if (!n) return;
-    var body = function () { return "My pulls from " + D.title + "\n" + D.kicker + "\n" + D.when + "\n\n" + lines.join("\n").trim() + "\n\n" + n + (n === 1 ? " card" : " cards") + " checked.\nBreak guide: " + location.href.split("#")[0]; };
-    document.getElementById("pmailbtn").onclick = function () {
-      var to = document.getElementById("pmail").value.trim(); try { to ? localStorage.setItem(MAILKEY, to) : localStorage.removeItem(MAILKEY); } catch (e) {}
-      location.href = "mailto:" + encodeURIComponent(to).replace(/%40/g, "@") + "?subject=" + encodeURIComponent("My pulls: " + D.title) + "&body=" + encodeURIComponent(body());
-    };
-    document.getElementById("pcopy").onclick = function () {
-      var b = this, t = body();
-      (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject()).then(function () { b.textContent = "Copied"; }, function () { b.textContent = "Copy failed"; });
-      setTimeout(function () { b.textContent = "Copy list"; }, 1800);
-    };
-    var armed = false;
-    document.getElementById("pclear").onclick = function () {
-      if (!armed) { armed = true; this.textContent = "Tap again to clear"; return; }
-      got.clear(); [].forEach.call(document.querySelectorAll("#spot .pill.g.on"), function (p) { p.classList.remove("on"); p.setAttribute("aria-pressed", "false"); }); drawPulls();
-    };
+  function syncG(k) {  // every checkbox for this card on the page follows its saved state
+    var on = got.has(k);
+    [].forEach.call(document.querySelectorAll(".g[data-g]"), function (el) { if (el.getAttribute("data-g") === k) { el.classList.toggle("on", on); el.setAttribute("aria-pressed", on); } });
   }
+  function hitG(ev) {
+    var el = ev.target.closest && ev.target.closest(".g[data-g]"); if (!el) return;
+    if (ev.type === "keydown") { if (ev.key !== "Enter" && ev.key !== " ") return; ev.preventDefault(); }
+    var k = el.getAttribute("data-g"); got.toggle(k); syncG(k); drawPulls();
+  }
+  document.addEventListener("click", hitG); document.addEventListener("keydown", hitG);
+  function drawPulls() {
+    var lines = pullsText(), n = got.all().length, mail = ""; try { mail = localStorage.getItem(MAILKEY) || ""; } catch (e) {}
+    var tp = document.getElementById("topulls"); if (tp) tp.textContent = "My pulls (" + n + ")";
+    var body = function () { return "My pulls from " + D.title + "\n" + D.kicker + "\n" + D.when + "\n\n" + lines.join("\n").trim() + "\n\n" + n + (n === 1 ? " card" : " cards") + " checked.\nBreak guide: " + location.href.split("#")[0]; };
+    [].forEach.call(document.querySelectorAll(".pulls"), function (el) {
+      var sec = el.closest("section"); if (sec && sec.hidden) { el.innerHTML = ""; return; }   // only the panel in the view that's showing
+      el.innerHTML = '<h3 class="display">My pulls</h3><p class="sub">Tap any name when you pull that card to check it off. Your list is saved in this browser and covers every spot in this break.</p>' +
+        (n ? '<pre class="plist">' + esc(lines.join("\n").trim()) + "</pre>" +
+          '<div class="pacts"><input type="email" class="pmail" placeholder="Your email address" value="' + esc(mail) + '" autocomplete="email">' +
+          '<button class="btn gold pmailbtn">Email me my pulls</button><button class="btn pcopy">Copy list</button><button class="btn pclear">Clear all</button></div>' +
+          '<p class="sub" style="margin-top:6px">Email opens your mail app with your list filled in; just hit send.</p>'
+          : '<p class="sub"><b>Nothing checked yet.</b></p>');
+      if (!n) return;
+      el.querySelector(".pmailbtn").onclick = function () {
+        var to = el.querySelector(".pmail").value.trim(); try { to ? localStorage.setItem(MAILKEY, to) : localStorage.removeItem(MAILKEY); } catch (e) {}
+        location.href = "mailto:" + encodeURIComponent(to).replace(/%40/g, "@") + "?subject=" + encodeURIComponent("My pulls: " + D.title) + "&body=" + encodeURIComponent(body());
+      };
+      el.querySelector(".pcopy").onclick = function () {
+        var b = this, t = body();
+        (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject()).then(function () { b.textContent = "Copied"; }, function () { b.textContent = "Copy failed"; });
+        setTimeout(function () { b.textContent = "Copy list"; }, 1800);
+      };
+      var armed = false;
+      el.querySelector(".pclear").onclick = function () {
+        if (!armed) { armed = true; this.textContent = "Tap again to clear"; return; }
+        got.clear(); [].forEach.call(document.querySelectorAll(".g[data-g].on"), function (p) { p.classList.remove("on"); p.setAttribute("aria-pressed", "false"); }); drawPulls();
+      };
+    });
+  }
+
 
   var curBox = D.boxes[0].k;
   function drawBoxes() {
@@ -553,8 +571,9 @@ __THEME__
     var b = BOX[curBox];
     document.getElementById("boxtable").innerHTML = '<p class="sub" style="margin-top:-6px">' + esc(b.full) + ": " + esc(b.kind) + '.</p><table class="rows"><tbody>' + D.spots.map(function (s) {
       var a = list(s, curBox);
-      return '<tr><th><a class="display" href="' + href(s.id) + '" style="font-size:' + (s.label.length > 8 ? 15 : 22) + 'px">' + esc(s.label) + "</a>" + (sub(s) ? '<div><span class="badge sub">' + sub(s) + "</span></div>" : "") + "</th><td>" + (a.length ? a.map(function (e) { return esc(e[0]) + (e[1].indexOf("?") > -1 ? " (?)" : ""); }).join(", ") : '<span class="none">None listed</span>') + "</td></tr>";
+      return '<tr><th><a class="display" href="' + href(s.id) + '" style="font-size:' + (s.label.length > 8 ? 15 : 22) + 'px">' + esc(s.label) + "</a>" + (sub(s) ? '<div><span class="badge sub">' + sub(s) + "</span></div>" : "") + "</th><td>" + (a.length ? '<div class="cpills">' + a.map(function (e) { return gpill(e, s, b); }).join("") + "</div>" : '<span class="none">None listed</span>') + "</td></tr>";
     }).join("") + "</tbody></table>";
+    drawPulls();
   }
 
   function drawSearch(raw) {
