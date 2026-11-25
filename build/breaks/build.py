@@ -1046,29 +1046,37 @@ rgl6143 = dict(
     sources=[SRC_TOPPS_LIST],
 )
 
-# RGL #6135 Oops All Animation (Random Letter), posted Nov 25. Only 3 of its 7 boxes have checklists in the library.
+# RGL #6135 Oops All Animation (Random Letter), posted Nov 25. 5 of its 7 boxes have checklists (X-Men '97 and Pixar Gold added Nov 25 from Daniel's links).
 RGL6135_H = 'rgl-6135-oops-all-animation-random-letter-11-25-26'
-RGL6135_LIB = dict(neon='2026-topps-neon-marvel', mintm='2026-topps-mint-marvel', mintd='2026-topps-mint-disney')
+RGL6135_LIB = dict(neon='2026-topps-neon-marvel', mintm='2026-topps-mint-marvel', mintd='2026-topps-mint-disney', xmen='2025-topps-finest-x-men-97', pixar='2025-topps-pixar-gold')
 rgl6135 = dict(
     id='rgl6135', title='RGL #6135 Oops All Animation (Random Letter)', kicker='Run Good Life · Random letter · Marvel, DC and Disney',
     url=rgl_url(RGL6135_H),
     when=_when(WED, '8:00 pm', '11:00 pm'),
-    facts=['7 boxes (3 listed here)', '15 spots', '$156 per spot, fillers $39', 'Letters randomized live'],
+    facts=['7 boxes (5 listed here)', '15 spots', '$156 per spot, fillers $39', 'Letters randomized live'],
     format='random', checked='Spots were still for sale when checked on November 25, 2026, around 4:50 pm Eastern.',
     boxes=[dict(k='neon', short='Marvel Neon', c='#c86bff', full='2026 Topps Marvel Neon Hobby', kind='Marvel characters, neon-style parallels, inserts',
                 types='Base with neon parallels, inserts, and autographs.'),
            dict(k='mintm', short='Marvel Mint', c='#e2545e', full='2026 Topps Marvel Mint', kind='Marvel characters, Chrome cards and an encased hit',
                 types='Chrome base and parallels, inserts, encased hits and autographs.'),
            dict(k='mintd', short='Disney Mint', c='#5aa9ff', full='2026 Topps Disney Mint', kind='Disney characters, Chrome cards and an encased hit',
-                types='Chrome base and parallels, inserts, encased hits and autographs.')],
+                types='Chrome base and parallels, inserts, encased hits and autographs.'),
+           dict(k='xmen', short='Finest X-Men \'97', c='#f2c14e', full='2025 Topps Finest X-Men \'97 Hobby', kind='X-Men \'97 cartoon characters, Refractors, voice actor autographs',
+                types='Common, Uncommon and Rare base with Refractor parallels, inserts like Previously On X-Men and Children of the Atom, and voice actor autographs.'),
+           dict(k='pixar', short='Pixar Gold', c='#3ccf9a', full='Topps Pixar Gold', kind='Pixar characters, Chrome cards and an encased hit',
+                types='Gilded Pixar base with gold parallels, inserts like Pixar Perfection and Animated Aura, and voice actor autographs (single and dual).')],
     spots=[],  # filled in below from the letters that have names
     rules=[['How RGL groups the letters', ['RGL sells 15 spots, and how the letters are grouped into them is set live on stream; the listing doesn\'t post it.', 'This guide lists every letter on its own, so once you know your letters, look each one up here.']],
            ['First letter of the name on the card', ['Letters here go by the first letter of the character\'s name as printed (Spider-Man is S, Captain America is C). RGL\'s listing doesn\'t say how it handles characters, so check with RGL.']],
            ['Cards with more than one character', ['Each character on a dual or multi-character card is listed under their own letter.', RGL_MULTI[1][0]]]],
-    notes=['Four boxes aren\'t in this guide yet because we don\'t have their checklists: 2025 Kakawow DC Aura, 2026 Card Fun Disney Chronoz, 2025 Topps Finest X-Men \'97 and Topps Pixar Gold. Check those cards with RGL.',
+    notes=['Two boxes aren\'t in this guide yet because we don\'t have their checklists: 2025 Kakawow DC Aura and 2026 Card Fun Disney Chronoz. Check those cards with RGL.',
+           'The listing says 2026 Topps Pixar Gold; the set Topps sells is 2025 Pixar Gold (released January 2026), so this guide uses that checklist.',
+           'Voice actor autographs: Pixar Gold cards name the character, so they\'re listed under the character. X-Men \'97 autographs are listed under the actor\'s name (the checklist doesn\'t name the character). Ask RGL which letter they count under.',
+           'Scene cards that name no single character (X-Men \'97 Greatest Hits, Pixar Gold Golden Moments and Wall Art) aren\'t listed.',
            'Filler entries are sold too ($39 each); see RGL\'s listing for how fillers work.'],
     sources=[['RGL #6135 break page (Run Good Life)', rgl_url(RGL6135_H)], _src(RGL6135_LIB['neon'], 'Topps Neon Marvel'),
-             _src(RGL6135_LIB['mintm'], 'Topps Mint Marvel'), _src(RGL6135_LIB['mintd'], 'Topps Mint Disney')],
+             _src(RGL6135_LIB['mintm'], 'Topps Mint Marvel'), _src(RGL6135_LIB['mintd'], 'Topps Mint Disney'),
+             _src(RGL6135_LIB['xmen'], 'Topps Finest X-Men \'97'), _src(RGL6135_LIB['pixar'], 'Topps Pixar Gold')],
 )
 
 if __name__ == '__main__':
@@ -1116,7 +1124,7 @@ if __name__ == '__main__':
         'bowman': nfl_split(lib_team_product('2026-bowman-football-sapphire-edition'), roster), 'inception': IN}); built.append(write(rgl6136, n, u))
     p35 = {k: lib_letter_product(v) for k, v in RGL6135_LIB.items()}
     have = sorted({letters(n)[0] for p_ in p35.values() for n in entries_from_product(p_) if letters(n)[0].isalpha()})
-    rgl6135['spots'] = [cc_spot(L, L) for L in have]
+    rgl6135['spots'] = [cc_spot(L, L) for L in have] + [cc_spot('# (numbers)', '#')]
     n, u = letter_break(rgl6135, p35, None, alt=False); built.append(write(rgl6135, n, u))
     for cfg, num, pick, prods in [
             (rgl6138, 6138, False, lambda: {'gilded': lib_mlb_product('2026-topps-gilded-collection-baseball'), 'cosmic': lib_mlb_product('2026-topps-cosmic-chrome-baseball')}),

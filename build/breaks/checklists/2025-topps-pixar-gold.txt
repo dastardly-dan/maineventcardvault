@@ -1,0 +1,325 @@
+# name: 2025 Topps Pixar Gold
+# sport: Disney
+# added: 2026-11-25
+# source: https://cdn.shopify.com/s/files/1/0662/9749/5709/files/2025_Pixar_Gold_Checklist.pdf?v=1767739852
+# notes: Names are characters; the movie title on each checklist line is dropped. Autographs (voice actors) and dual autographs are listed under the characters printed on the card. Golden Moments and Wall Art (scenes and movie posters) name no single character and aren't listed.
+
+[base]
+Woody
+Buzz Lightyear
+Andy
+Mr. Potato Head
+Slinky Dog
+Hamm
+Rex
+Bo Peep
+Sarge
+Alien
+Sid
+Flik
+Princess Atta
+Hopper
+Heimlich
+P.T. Flea
+Zurg
+Jessie
+Bullseye
+Sulley
+Mike Wazowski
+Boo
+Randall Boggs
+Roz
+Marlin
+Dory
+Nemo
+Crush
+Mr. Incredible
+Elastigirl
+Frozone
+Violet Parr
+Dash Parr
+Jack-Jack Parr
+Edna Mode
+Lightning McQueen
+Tow Mater
+Sally
+Doc Hudson
+Remy
+Linguini
+Chef Gusteau
+Emile
+Anton Ego
+WALL-E
+EVE
+M-O
+Carl Fredricksen
+Russell
+Dug
+Kevin
+Lotso
+Finn McMissile
+Merida
+Abigail Hardscrabble
+Joy
+Sadness
+Fear
+Anger
+Disgust
+Bing Bong
+Arlo
+Spot
+Hank
+Destiny
+Bailey
+Cruz Ramirez
+Jackson Storm
+Miguel
+Héctor
+Ernesto de la Cruz
+Mamá Imelda
+Dante
+Screenslaver
+Forky
+Gabby Gabby
+Ian Lightfoot
+Barley Lightfoot
+Joe Gardner
+22
+Moonwind
+Terry
+The Counselors
+Luca Paguro
+Alberto Scorfano
+Giulia Marcovaldo
+Ercole Visconti
+Mei Lee
+Ming Lee
+4*Town
+Izzy Hawthorne
+Ember Lumen
+Wade Ripple
+Anxiety
+Envy
+Ennui
+Embarrassment
+Bloofy
+Pouchy
+
+[insert]
+Jessie
+Randall Boggs
+Marlin
+Mr. Incredible
+Tow Mater
+Linguini
+EVE
+Dug
+Miguel
+Mei Lee
+Flik
+Princess Atta
+Heimlich
+Merida
+Héctor
+Ernesto de la Cruz
+Ember Lumen
+Wade Ripple
+Hank
+Destiny
+Dory
+Nemo
+Joy
+Sadness
+Fear
+Anger
+Disgust
+Anxiety
+Luca Paguro
+Alberto Scorfano
+Sulley
+Mike Wazowski
+Boo
+Ian Lightfoot
+Barley Lightfoot
+Remy
+Joe Gardner
+22
+Elastigirl
+Frozone
+Violet Parr
+Dash Parr
+Jack-Jack Parr
+Edna Mode
+Woody
+Buzz Lightyear
+Zurg
+Lotso
+Forky
+Carl Fredricksen
+Russell
+WALL-E
+Lightning McQueen
+Riley
+Kevin
+Bing Bong
+Izzy Hawthorne
+P.T. Flea
+Squirt
+Pixar Lamp
+Pixar Ball
+André and Wally B
+RC
+Red
+Tinny
+Dot
+Al McWhiggin
+Stinky Pete
+Wheezy
+Mrs. Potato Head
+Buster
+Geri
+The Birds
+The Large Bird
+Henry J. Waternoose III
+Celia
+Yeti
+CDA
+Snowman
+Nigel
+Mr. Ray
+Bruce
+Darla
+Gill
+THE Lamb
+THE Jackalope
+Syndrome
+The Underminer
+Kari
+Bass
+Treble
+Mack
+The King
+Chick Hicks
+Sheriff
+Luigi
+Guido
+Ramone
+Flo
+Sarge
+Fillmore
+Stu
+Colette
+Chef Skinner
+Captain B. McCrea
+AUTO
+Gus
+Peck
+Ellie
+Charles Muntz
+Alpha, Beta, & Gamma
+Day
+Night
+Holley Shiftwell
+Francesco Bernoulli
+Miles Axlerod
+Bambino
+The Witch
+Queen Elinor
+King Fergus
+Blue Umbrella
+Uku
+Lele
+Jangles the Clown
+Fritz
+Durga
+Vishnu
+Hanuman
+Piper
+Lou
+Mamá Coco
+Abuelita
+Pepita
+Dumpling
+Ducky
+Bunny
+Benson
+Duke Caboom
+Laurel Lightfoot
+Dorothea Williams
+Massimo Marcovaldo
+Miriam Mendelsohn
+Priya Mangal
+Abby Park
+Alisha Hawthorne
+Sox
+Zyclops
+Gale Cumulus
+Bernie Lumen
+Cinder Lumen
+Clod
+Fern Grouchwood
+Nostalgia
+Deep Dark Secret
+Lance Slashblade
+
+[auto]
+Woody
+Buzz Lightyear
+Sulley
+Mike Wazowski
+P.T. Flea
+Tow Mater
+Remy
+Marlin
+Nemo
+Princess Atta
+Dash Parr
+Sally
+Merida
+Sadness
+Anger
+Fear
+Disgust
+Bing Bong
+Miguel
+Ernesto de la Cruz
+Mamá Imelda
+Flik
+Jessie
+Frozone
+Izzy Hawthorne
+Arlo
+Chef Gusteau
+Jack-Jack Parr
+WALL-E
+Boo
+The Underminer
+Yeti
+Riley
+Forky
+Abuelita
+Kari
+Dot
+Andy
+Ember Lumen
+Hamm
+
+[multi]
+Woody / Buzz Lightyear
+Sulley / Mike Wazowski
+Marlin / Dory
+Mr. Incredible / Elastigirl
+Lightning McQueen / Tow Mater
+Remy / Emile
+WALL-E / EVE
+Russell / Dug
+Joy / Sadness
+Héctor / Miguel
+Sulley / Boo
+Marlin / Nemo
+Miguel / Ernesto de la Cruz
+Jack-Jack Parr / Kari
+Remy / Chef Gusteau
+Ember Lumen / Wade Ripple
+Flik / Princess Atta
+Flik / Dot

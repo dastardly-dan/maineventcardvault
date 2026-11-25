@@ -1,0 +1,131 @@
+# name: 2025 Topps Finest X-Men '97
+# sport: Marvel
+# added: 2026-11-25
+# source: https://cdn.shopify.com/s/files/1/0662/9749/5709/files/MRV2509FinalX-Menchecklist_2b1ebc93-2bdf-46a1-9408-93d2b31bdae9.pdf?v=1787937946
+# notes: Greatest Hits (scene titles) and Da Nanana Naaaa cards name no character and aren't listed. Voice Actor Autographs are listed by the actor's name. Remember It's "The Beast" and "The Sentinels" are filed as Beast and Sentinel.
+
+[base]
+Professor X
+Jean Grey
+Marrow
+Jubilee
+Beast
+Titan
+Banshee
+Aurora
+Northstar
+Darkstar
+Gladiator
+Exodus
+Araki
+Manta
+Strong Guy
+Morph
+Puck
+Mary Jane Watson
+Peter Parker
+Cipher
+Callisto
+Tommy
+Flash Thompson
+Roberto Da Costa
+Leech
+Glob Herman
+Trish Tilby
+Dazzler
+Sunder
+Boom Boom
+Val Cooper
+Gambit
+Sebastian Shaw
+Princess-Majestrix Lilandra Neramani
+Mojo
+Mother Askani
+Vulcan
+President Kelly
+Rogue
+Wolverine
+Cyclops
+Moira MacTaggert
+Master Mold
+Carl Denti
+Sentinel
+Henry Gyrich
+Blob
+Sauron
+Adversary
+Bastion
+Black Panther
+Spider-Man
+Daredevil
+Bishop
+Captain America
+Psylocke
+Iron Man
+Cloak
+Dagger
+Archangel
+Spiral
+Magneto
+Abscissa
+Forge
+Emma Frost
+Ronan The Accuser
+Deathbird
+Goblin Queen
+Crimson Dynamo
+X-Cutioner
+Silver Samurai
+Starbolt
+Nightcrawler
+Cable
+Sunspot
+Storm
+Dark Phoenix
+Apocalypse
+Mister Sinister
+Bastion Nimrod
+
+[insert]
+Cyclops
+Jean Grey
+Storm
+Bishop
+Sunspot
+Jubilee
+Morph
+Wolverine
+Beast
+Mister Sinister
+Magneto
+Gambit
+Rogue
+Cable
+Mojo
+Bastion
+X-Cutioner
+Goblin Queen
+Forge
+Nightcrawler
+Professor X
+Sentinel
+Callisto
+Emma Frost
+Sebastian Shaw
+Leech
+Glob Herman
+Abscissa
+Bastion Nimrod
+
+[auto]
+George Buza
+Chris Britton
+Cal Dodd
+Eric Bauza
+Gui Agustini
+Isaac Robinson-Smith
+Lawrence Bayne
+Lenore Zann
+Matthew Waterson
+Ray Chase
+Ross Marquand
