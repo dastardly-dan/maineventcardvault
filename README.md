@@ -214,6 +214,10 @@ team spot, box by box. Linked from the storefront's Breaks menu; every page carr
   3e. The watcher workflow now rebuilds the break pages and the Break guides page after every check, so new title card
       images show up without a builder run. A page picks up its breaker's title card from `images.json`
       as long as its `url` is the product link.
+  3f. Panini breaks: tag the Kabooms (Daniel, Nov 24). `kabooms.json` holds every Kaboom subject and card team from the
+      official Panini CSVs (Absolute Football, Donruss Elite Baseball so far); add new Panini products there and map the
+      box key in `KABOOM_BOX`. `mark_kabooms` tags each name KABOOM only in the spot its Kaboom card goes to and adds a
+      "Kabooms in this break" list to the rules.
   3d. Early pages (Daniel, Nov 24): a break can be built from a title card before the listing is posted (gb1040 was).
       When the listing shows up, update that config (url, when, facts, real spots) instead of building a second page.
       Acme sometimes reuses an old link: GB1040 lives at gb1040-dual-year-football-finale-random-team.

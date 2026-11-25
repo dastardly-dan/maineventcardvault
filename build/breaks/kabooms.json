@@ -1,0 +1,657 @@
+{
+ "2026-panini-absolute-football": {
+  "Adrian Peterson": {
+   "teams": [
+    "Minnesota Vikings"
+   ],
+   "sets": [
+    "Kaboom - Horizontal",
+    "Kaboom - Horizontal Black",
+    "Kaboom - Horizontal Gold"
+   ]
+  },
+  "Antonio Brown": {
+   "teams": [
+    "Pittsburgh Steelers"
+   ],
+   "sets": [
+    "Kaboom - Horizontal",
+    "Kaboom - Horizontal Black",
+    "Kaboom - Horizontal Gold"
+   ]
+  },
+  "Barry Sanders": {
+   "teams": [
+    "Detroit Lions"
+   ],
+   "sets": [
+    "Kaboom - Vertical",
+    "Kaboom - Vertical Gold",
+    "Kaboom - Vertical Green",
+    "Kaboom - Vertical Purple"
+   ]
+  },
+  "Bryce Underwood": {
+   "teams": [
+    "Michigan Wolverines"
+   ],
+   "sets": [
+    "Kaboom - Horizontal",
+    "Kaboom - Horizontal Black",
+    "Kaboom - Horizontal Gold"
+   ]
+  },
+  "CJ Carr": {
+   "teams": [
+    "Notre Dame Fighting Irish"
+   ],
+   "sets": [
+    "Kaboom - Horizontal",
+    "Kaboom - Horizontal Black",
+    "Kaboom - Horizontal Gold",
+    "Kaboom - Vertical",
+    "Kaboom - Vertical Gold",
+    "Kaboom - Vertical Green",
+    "Kaboom - Vertical Purple"
+   ]
+  },
+  "Calvin Johnson": {
+   "teams": [
+    "Detroit Lions"
+   ],
+   "sets": [
+    "Kaboom - Horizontal",
+    "Kaboom - Horizontal Black",
+    "Kaboom - Horizontal Gold"
+   ]
+  },
+  "Cam Coleman": {
+   "teams": [
+    "Texas Longhorns"
+   ],
+   "sets": [
+    "Kaboom - Horizontal",
+    "Kaboom - Horizontal Black",
+    "Kaboom - Horizontal Gold",
+    "Kaboom - Vertical",
+    "Kaboom - Vertical Gold",
+    "Kaboom - Vertical Green",
+    "Kaboom - Vertical Purple"
+   ]
+  },
+  "Chris Henry Jr.": {
+   "teams": [
+    "Ohio State Buckeyes"
+   ],
+   "sets": [
+    "Kaboom - Horizontal",
+    "Kaboom - Horizontal Black",
+    "Kaboom - Horizontal Gold"
+   ]
+  },
+  "Dakorien Moore": {
+   "teams": [
+    "Oregon Ducks"
+   ],
+   "sets": [
+    "Kaboom - Horizontal",
+    "Kaboom - Horizontal Black",
+    "Kaboom - Horizontal Gold"
+   ]
+  },
+  "Dan Marino": {
+   "teams": [
+    "Miami Dolphins"
+   ],
+   "sets": [
+    "Kaboom - Horizontal",
+    "Kaboom - Horizontal Black",
+    "Kaboom - Horizontal Gold"
+   ]
+  },
+  "Dante Moore": {
+   "teams": [
+    "Oregon Ducks"
+   ],
+   "sets": [
+    "Kaboom - Horizontal",
+    "Kaboom - Horizontal Black",
+    "Kaboom - Horizontal Gold",
+    "Kaboom - Vertical",
+    "Kaboom - Vertical Gold",
+    "Kaboom - Vertical Green",
+    "Kaboom - Vertical Purple"
+   ]
+  },
+  "Darian Mensah": {
+   "teams": [
+    "Miami Hurricanes"
+   ],
+   "sets": [
+    "Kaboom - Vertical",
+    "Kaboom - Vertical Gold",
+    "Kaboom - Vertical Green",
+    "Kaboom - Vertical Purple"
+   ]
+  },
+  "Deion Sanders": {
+   "teams": [
+    "Atlanta Falcons"
+   ],
+   "sets": [
+    "Kaboom - Vertical",
+    "Kaboom - Vertical Gold",
+    "Kaboom - Vertical Green",
+    "Kaboom - Vertical Purple"
+   ]
+  },
+  "Desmond Howard": {
+   "teams": [
+    "Michigan Wolverines"
+   ],
+   "sets": [
+    "Kaboom - Horizontal",
+    "Kaboom - Horizontal Black",
+    "Kaboom - Horizontal Gold"
+   ]
+  },
+  "Drew Brees": {
+   "teams": [
+    "New Orleans Saints"
+   ],
+   "sets": [
+    "Kaboom - Vertical",
+    "Kaboom - Vertical Gold",
+    "Kaboom - Vertical Green",
+    "Kaboom - Vertical Purple"
+   ]
+  },
+  "Drew Mestemaker": {
+   "teams": [
+    "Oklahoma State Cowboys"
+   ],
+   "sets": [
+    "Kaboom - Vertical",
+    "Kaboom - Vertical Gold",
+    "Kaboom - Vertical Green",
+    "Kaboom - Vertical Purple"
+   ]
+  },
+  "Gunner Stockton": {
+   "teams": [
+    "Georgia Bulldogs"
+   ],
+   "sets": [
+    "Kaboom - Vertical",
+    "Kaboom - Vertical Gold",
+    "Kaboom - Vertical Green",
+    "Kaboom - Vertical Purple"
+   ]
+  },
+  "Jayden Maiava": {
+   "teams": [
+    "USC Trojans"
+   ],
+   "sets": [
+    "Kaboom - Horizontal",
+    "Kaboom - Horizontal Black",
+    "Kaboom - Horizontal Gold",
+    "Kaboom - Vertical",
+    "Kaboom - Vertical Gold",
+    "Kaboom - Vertical Green",
+    "Kaboom - Vertical Purple"
+   ]
+  },
+  "Jim Kelly": {
+   "teams": [
+    "Buffalo Bills"
+   ],
+   "sets": [
+    "Kaboom - Horizontal",
+    "Kaboom - Horizontal Black",
+    "Kaboom - Horizontal Gold"
+   ]
+  },
+  "John Mateer": {
+   "teams": [
+    "Oklahoma Sooners"
+   ],
+   "sets": [
+    "Kaboom - Horizontal",
+    "Kaboom - Horizontal Black",
+    "Kaboom - Horizontal Gold"
+   ]
+  },
+  "Johnny Manziel": {
+   "teams": [
+    "Texas A&M Aggies"
+   ],
+   "sets": [
+    "Kaboom - Horizontal",
+    "Kaboom - Horizontal Black",
+    "Kaboom - Horizontal Gold"
+   ]
+  },
+  "Josh Hoover": {
+   "teams": [
+    "Indiana Hoosiers"
+   ],
+   "sets": [
+    "Kaboom - Horizontal",
+    "Kaboom - Horizontal Black",
+    "Kaboom - Horizontal Gold"
+   ]
+  },
+  "Julian Sayin": {
+   "teams": [
+    "Ohio State Buckeyes"
+   ],
+   "sets": [
+    "Kaboom - Horizontal",
+    "Kaboom - Horizontal Black",
+    "Kaboom - Horizontal Gold",
+    "Kaboom - Vertical",
+    "Kaboom - Vertical Gold",
+    "Kaboom - Vertical Green",
+    "Kaboom - Vertical Purple"
+   ]
+  },
+  "Keelon Russell": {
+   "teams": [
+    "Alabama Crimson Tide"
+   ],
+   "sets": [
+    "Kaboom - Horizontal",
+    "Kaboom - Horizontal Black",
+    "Kaboom - Horizontal Gold",
+    "Kaboom - Vertical",
+    "Kaboom - Vertical Gold",
+    "Kaboom - Vertical Green",
+    "Kaboom - Vertical Purple"
+   ]
+  },
+  "Kewan Lacy": {
+   "teams": [
+    "Ole Miss Rebels"
+   ],
+   "sets": [
+    "Kaboom - Horizontal",
+    "Kaboom - Horizontal Black",
+    "Kaboom - Horizontal Gold"
+   ]
+  },
+  "LaNorris Sellers": {
+   "teams": [
+    "South Carolina Gamecocks"
+   ],
+   "sets": [
+    "Kaboom - Horizontal",
+    "Kaboom - Horizontal Black",
+    "Kaboom - Horizontal Gold"
+   ]
+  },
+  "Larry Fitzgerald": {
+   "teams": [
+    "Arizona Cardinals"
+   ],
+   "sets": [
+    "Kaboom - Vertical",
+    "Kaboom - Vertical Gold",
+    "Kaboom - Vertical Green",
+    "Kaboom - Vertical Purple"
+   ]
+  },
+  "Luke Kuechly": {
+   "teams": [
+    "Carolina Panthers"
+   ],
+   "sets": [
+    "Kaboom - Horizontal",
+    "Kaboom - Horizontal Black",
+    "Kaboom - Horizontal Gold"
+   ]
+  },
+  "Marcel Reed": {
+   "teams": [
+    "Texas A&M Aggies"
+   ],
+   "sets": [
+    "Kaboom - Vertical",
+    "Kaboom - Vertical Gold",
+    "Kaboom - Vertical Green",
+    "Kaboom - Vertical Purple"
+   ]
+  },
+  "Mark Fletcher Jr.": {
+   "teams": [
+    "Miami Hurricanes"
+   ],
+   "sets": [
+    "Kaboom - Horizontal",
+    "Kaboom - Horizontal Black",
+    "Kaboom - Horizontal Gold"
+   ]
+  },
+  "Michael Vick": {
+   "teams": [
+    "Atlanta Falcons"
+   ],
+   "sets": [
+    "Kaboom - Horizontal",
+    "Kaboom - Horizontal Black",
+    "Kaboom - Horizontal Gold"
+   ]
+  },
+  "Nate Frazier": {
+   "teams": [
+    "Georgia Bulldogs"
+   ],
+   "sets": [
+    "Kaboom - Horizontal",
+    "Kaboom - Horizontal Black",
+    "Kaboom - Horizontal Gold"
+   ]
+  },
+  "Peyton Manning": {
+   "teams": [
+    "Denver Broncos"
+   ],
+   "sets": [
+    "Kaboom - Vertical",
+    "Kaboom - Vertical Gold",
+    "Kaboom - Vertical Green",
+    "Kaboom - Vertical Purple"
+   ]
+  },
+  "Ricky Williams": {
+   "teams": [
+    "Texas Longhorns"
+   ],
+   "sets": [
+    "Kaboom - Horizontal",
+    "Kaboom - Horizontal Black",
+    "Kaboom - Horizontal Gold"
+   ]
+  },
+  "Rob Gronkowski": {
+   "teams": [
+    "New England Patriots"
+   ],
+   "sets": [
+    "Kaboom - Vertical",
+    "Kaboom - Vertical Gold",
+    "Kaboom - Vertical Green",
+    "Kaboom - Vertical Purple"
+   ]
+  },
+  "Sam Leavitt": {
+   "teams": [
+    "LSU Tigers"
+   ],
+   "sets": [
+    "Kaboom - Vertical",
+    "Kaboom - Vertical Gold",
+    "Kaboom - Vertical Green",
+    "Kaboom - Vertical Purple"
+   ]
+  },
+  "Steve Young": {
+   "teams": [
+    "San Francisco 49ers"
+   ],
+   "sets": [
+    "Kaboom - Horizontal",
+    "Kaboom - Horizontal Black",
+    "Kaboom - Horizontal Gold"
+   ]
+  },
+  "Terrell Davis": {
+   "teams": [
+    "Denver Broncos"
+   ],
+   "sets": [
+    "Kaboom - Horizontal",
+    "Kaboom - Horizontal Black",
+    "Kaboom - Horizontal Gold"
+   ]
+  },
+  "Tim Tebow": {
+   "teams": [
+    "Florida Gators"
+   ],
+   "sets": [
+    "Kaboom - Horizontal",
+    "Kaboom - Horizontal Black",
+    "Kaboom - Horizontal Gold"
+   ]
+  },
+  "Tony Dorsett": {
+   "teams": [
+    "Dallas Cowboys"
+   ],
+   "sets": [
+    "Kaboom - Horizontal",
+    "Kaboom - Horizontal Black",
+    "Kaboom - Horizontal Gold"
+   ]
+  },
+  "Trinidad Chambliss": {
+   "teams": [
+    "Ole Miss Rebels"
+   ],
+   "sets": [
+    "Kaboom - Vertical",
+    "Kaboom - Vertical Gold",
+    "Kaboom - Vertical Green",
+    "Kaboom - Vertical Purple"
+   ]
+  },
+  "Walter Payton": {
+   "teams": [
+    "Chicago Bears"
+   ],
+   "sets": [
+    "Kaboom - Vertical",
+    "Kaboom - Vertical Gold",
+    "Kaboom - Vertical Green",
+    "Kaboom - Vertical Purple"
+   ]
+  }
+ },
+ "2026-donruss-elite-baseball": {
+  "Aaron Judge": {
+   "teams": [
+    "New York Yankees"
+   ],
+   "sets": [
+    "Kaboom!",
+    "Kaboom! Gold",
+    "Kaboom! Green",
+    "Kaboom! Horizontal",
+    "Kaboom! Horizontal Gold",
+    "Kaboom! Horizontal Green"
+   ]
+  },
+  "Bobby Witt Jr.": {
+   "teams": [
+    "Kansas City Royals"
+   ],
+   "sets": [
+    "Kaboom!",
+    "Kaboom! Gold",
+    "Kaboom! Green",
+    "Kaboom! Horizontal",
+    "Kaboom! Horizontal Gold",
+    "Kaboom! Horizontal Green"
+   ]
+  },
+  "Cade Horton": {
+   "teams": [
+    "Chicago Cubs"
+   ],
+   "sets": [
+    "Kaboom!",
+    "Kaboom! Gold",
+    "Kaboom! Green"
+   ]
+  },
+  "Deion Sanders": {
+   "teams": [
+    "Cincinnati Reds"
+   ],
+   "sets": [
+    "Kaboom!",
+    "Kaboom! Gold",
+    "Kaboom! Green"
+   ]
+  },
+  "Eli Willits": {
+   "teams": [
+    "Washington Nationals"
+   ],
+   "sets": [
+    "Kaboom!",
+    "Kaboom! Gold",
+    "Kaboom! Green",
+    "Kaboom! Horizontal",
+    "Kaboom! Horizontal Gold",
+    "Kaboom! Horizontal Green"
+   ]
+  },
+  "Ethan Holliday": {
+   "teams": [
+    "Colorado Rockies"
+   ],
+   "sets": [
+    "Kaboom!",
+    "Kaboom! Gold",
+    "Kaboom! Green"
+   ]
+  },
+  "Jesus Made": {
+   "teams": [
+    "Milwaukee Brewers"
+   ],
+   "sets": [
+    "Kaboom! Horizontal",
+    "Kaboom! Horizontal Gold",
+    "Kaboom! Horizontal Green"
+   ]
+  },
+  "Jonah Tong": {
+   "teams": [
+    "New York Mets"
+   ],
+   "sets": [
+    "Kaboom! Horizontal",
+    "Kaboom! Horizontal Gold",
+    "Kaboom! Horizontal Green"
+   ]
+  },
+  "Ken Griffey Jr.": {
+   "teams": [
+    "Seattle Mariners"
+   ],
+   "sets": [
+    "Kaboom!",
+    "Kaboom! Gold",
+    "Kaboom! Green"
+   ]
+  },
+  "Kevin McGonigle": {
+   "teams": [
+    "Detroit Tigers"
+   ],
+   "sets": [
+    "Kaboom!",
+    "Kaboom! Gold",
+    "Kaboom! Green",
+    "Kaboom! Horizontal",
+    "Kaboom! Horizontal Gold",
+    "Kaboom! Horizontal Green"
+   ]
+  },
+  "Konnor Griffin": {
+   "teams": [
+    "Pittsburgh Pirates"
+   ],
+   "sets": [
+    "Kaboom!",
+    "Kaboom! Gold",
+    "Kaboom! Green",
+    "Kaboom! Horizontal",
+    "Kaboom! Horizontal Gold",
+    "Kaboom! Horizontal Green"
+   ]
+  },
+  "Nick Kurtz": {
+   "teams": [
+    "Oakland A's"
+   ],
+   "sets": [
+    "Kaboom!",
+    "Kaboom! Gold",
+    "Kaboom! Green",
+    "Kaboom! Horizontal",
+    "Kaboom! Horizontal Gold",
+    "Kaboom! Horizontal Green"
+   ]
+  },
+  "Nolan Ryan": {
+   "teams": [
+    "Texas Rangers"
+   ],
+   "sets": [
+    "Kaboom!",
+    "Kaboom! Gold",
+    "Kaboom! Green"
+   ]
+  },
+  "Paul Skenes": {
+   "teams": [
+    "Pittsburgh Pirates"
+   ],
+   "sets": [
+    "Kaboom!",
+    "Kaboom! Gold",
+    "Kaboom! Green",
+    "Kaboom! Horizontal",
+    "Kaboom! Horizontal Gold",
+    "Kaboom! Horizontal Green"
+   ]
+  },
+  "Roman Anthony": {
+   "teams": [
+    "Boston Red Sox"
+   ],
+   "sets": [
+    "Kaboom!",
+    "Kaboom! Gold",
+    "Kaboom! Green",
+    "Kaboom! Horizontal",
+    "Kaboom! Horizontal Gold",
+    "Kaboom! Horizontal Green"
+   ]
+  },
+  "Travis Bazzana": {
+   "teams": [
+    "Cleveland Guardians"
+   ],
+   "sets": [
+    "Kaboom!",
+    "Kaboom! Gold",
+    "Kaboom! Green"
+   ]
+  },
+  "Trey Yesavage": {
+   "teams": [
+    "Toronto Blue Jays"
+   ],
+   "sets": [
+    "Kaboom!",
+    "Kaboom! Gold",
+    "Kaboom! Green"
+   ]
+  }
+ }
+}

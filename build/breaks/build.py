@@ -173,8 +173,37 @@ def image_of(url, width=800):
     src = IMAGES.get(SHOP_OF.get(m.group(1), ''), {}).get(m.group(2), '') if m else ''
     return (src + ('&' if '?' in src else '?') + 'width=%d' % width) if src else ''
 
+# Kaboom inserts (Daniel, Nov 24: "for the Panini breaks, make sure you list which cards are Kabooms"), from the official
+# Panini CSVs' card set names, saved in kabooms.json. Box key -> checklist id.
+KABOOMS = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'kabooms.json'), encoding='utf-8'))
+KABOOM_BOX = {'absolute': '2026-panini-absolute-football'}
+def mark_kabooms(cfg, names):
+    """Adds K to each Kaboom name's flags and returns rule lines listing the Kabooms by spot."""
+    lab = {s['id']: s['label'] for s in cfg['spots']}
+    by_spot = {}
+    spot = {s['id']: s for s in cfg['spots']}
+    for b in cfg['boxes']:
+        kd = KABOOMS.get(KABOOM_BOX.get(b['k'], ''), {})
+        if not kd: continue
+        # the team each Kaboom card goes to, resolved the way absolute_product sorts every card (None = NIL)
+        home = {key_of(n): [nfl_team(t) or ABS_ROSTER.get(key_of(n)) for t in v['teams']] for n, v in kd.items()}
+        for sid, boxes in names.items():
+            for e in boxes.get(b['k'], []):
+                h = home.get(key_of(e[0]))
+                if h is None: continue
+                if ('N' in e[1] and None in h) or any(t in spot[sid].get('teams', []) for t in h if t):
+                    if 'K' not in e[1]: e[1] += 'K'
+                    by_spot.setdefault(sid, []).append(e[0].strip())
+    if not by_spot: return None
+    order = [s['id'] for s in cfg['spots'] if s['id'] in by_spot]
+    n = len({x for v in by_spot.values() for x in v})
+    return ['Kabooms in this break', ['Kaboom is Panini\'s rare comic-style insert. ' + str(n) + ' players have one in the Absolute checklist; each is tagged KABOOM in the spot their Kaboom card goes to. Panini doesn\'t say how many are in a case, so a full case may have none or a few.']
+            + [lab[sid] + ': ' + ', '.join(sorted(set(by_spot[sid]), key=lambda x: fold(x).lower())) for sid in order]]
+
 def write(cfg, names, unmatched):
     data = dict(cfg)
+    kr = mark_kabooms(cfg, names)
+    if kr: data['rules'] = list(cfg.get('rules', [])) + [kr]
     if not data.get('image') and image_of(cfg.get('url')): data['image'] = image_of(cfg['url'])  # a config's own image wins
     if cfg.get('ended'): data['spots'] = [{k: v for k, v in s.items() if k != 'status'} for s in cfg['spots']]
     data['names'] = names
@@ -392,9 +421,11 @@ def nfl_team(full):
         if full.endswith(' ' + nick) and full[:-len(nick) - 1] in NFL_CITIES:
             return TEAM_FOLD.get(nick, nick)
     return None
+ABS_ROSTER = {}  # name key -> NFL team from the Topps checklists, set by absolute_product (used for Kabooms)
 def absolute_product(roster):
     """2026 Panini Absolute from the official CSV (absolute_2026.json). NFL players go to their team. A college player who is
     already on an NFL roster in the Topps checklists goes to that team (Acme's rule); everyone else is NIL, by first letter."""
+    ABS_ROSTER.update(roster)
     out = dict(base={}, other={}, nil={})
     rows = json.load(open(os.path.join(os.path.dirname(__file__), 'absolute_2026.json'), encoding='utf-8'))
     for athletes, teams, f in rows:

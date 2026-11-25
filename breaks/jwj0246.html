@@ -177,6 +177,7 @@ footer a { color: var(--ink-2); }
 .tile .row { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px; align-items: center; }
 .badge { line-height: 1.5; white-space: nowrap; }
 .tag { font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; margin-left: 5px; color: var(--gold); }
+.tag.k { color: #fff; background: #d6336c; border-radius: 4px; padding: 1px 5px; }
 .tag.m { color: #9ab8ff; }
 .tag.n { background: rgba(90,169,255,.16); color: #8cc4ff; border-color: rgba(90,169,255,.4); } .tag.q { color: #f08a92; } .tag.i { color: #7fe0a6; }
 .jump { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 14px; }
@@ -321,6 +322,7 @@ mark { background: #fff1a8; }
     if (f.indexOf("I") > -1 && !e[2] && f.indexOf("A") < 0) h += '<span class="tag i">insert</span>';
     if (f.indexOf("M") > -1) h += '<span class="tag m">multi</span>';
     if (f.indexOf("N") > -1) h += '<span class="tag n">NIL</span>';
+    if (f.indexOf("K") > -1) h += '<span class="tag k">Kaboom</span>';
     if (f.indexOf("?") > -1) h += '<span class="tag q">? by real name</span>';
     return h;
   }
