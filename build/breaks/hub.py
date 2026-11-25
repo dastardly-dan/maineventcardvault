@@ -6,7 +6,7 @@ tpl = open(os.path.join(HERE,'template.html')).read()
 icon = re.search(r'<link rel="icon" href="([^"]+)"', open(os.path.join(ROOT,'breaks','cc871.html')).read()).group(1)
 items = json.load(open(os.path.join(HERE,'index.json')))
 items.append(dict(id='cc874', title='CC874 Monster Multi: Random Letter', kicker='Colfax Collectibles · Random letter · Multi-sport', when='Ran Sunday, November 22, 2026', facts=['7 boxes', '21 letter spots'], ended='yes'))
-order = ['cc871', 'cc872', 'cc874', 'cc875', 'jwj0246', 'jwj0247', 'jwj0244', 'gb1037', 'gb1038b', 'gb1038a', 'gb1040', 'rgl6128', 'rgl6129', 'rgl6130', 'rgl6131', 'rgl6132', 'rgl6133']
+order = ['cc871', 'cc872', 'cc874', 'cc875', 'jwj0246', 'jwj0247', 'jwj0244', 'gb1037', 'gb1038b', 'gb1038a', 'gb1040', 'rgl6128', 'rgl6129', 'rgl6130', 'rgl6131', 'rgl6132', 'rgl6133', 'rgl6134', 'rgl6138', 'rgl6139', 'rgl6140', 'rgl6143']
 def is_past(i): return bool(i.get('ended')) or 'has passed' in i['when']
 items.sort(key=lambda x: (is_past(x), order.index(x['id'])))
 def esc(s): return s.replace('&','&amp;').replace('<','&lt;')

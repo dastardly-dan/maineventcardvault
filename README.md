@@ -211,6 +211,13 @@ team spot, box by box. Linked from the storefront's Breaks menu; every page carr
   3b. Random breaks whose spot groupings aren't posted (Run Good Life sets team pairings and letter groups live): don't
      skip them. Build one spot per team or letter and say how many spots the breaker sells, like rgl6131, rgl6132
      (college cards in one "College (NIL) cards" spot) and rgl6133 (spots made from the letters that have names).
+  3i. Drafts made ahead of a listing (Daniel, Nov 25, 2026): `rgl6134`, `rgl6138`, `rgl6139`, `rgl6140` and `rgl6143` are
+      in `build.py` as drafts from break titles only. Each stays off the site until the watcher sees an RGL handle starting
+      `rgl-<number>-`; then the page goes live by itself with that link (and live tracking for #6134). When one of those
+      shows up in the queue, don't build a second page: check the draft's boxes, spot count, prices, randomized team and
+      format against the listing, fix the config, and remove `DRAFT_NOTE` from its `checked` and `notes`. Preview drafts
+      with `RGL_DRAFT_PREVIEW=/tmp/x python3 build/breaks/build.py` (then run it again without the variable). #6135, #6136,
+      #6137, #6141 and #6142 weren't prepped; build those from the listing as usual.
   3e. The watcher workflow now rebuilds the break pages and the Break guides page after every check, so new title card
       images show up without a builder run. A page picks up its breaker's title card from `images.json`
       as long as its `url` is the product link.
