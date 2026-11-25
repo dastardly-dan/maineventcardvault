@@ -212,11 +212,11 @@ team spot, box by box. Linked from the storefront's Breaks menu; every page carr
      skip them. Build one spot per team or letter and say how many spots the breaker sells, like rgl6131, rgl6132
      (college cards in one "College (NIL) cards" spot) and rgl6133 (spots made from the letters that have names).
   3e. The watcher workflow now rebuilds the break pages and the Break guides page after every check, so new title card
-      images show up without a builder run. gb1040 finds its real listing by name (`GB1040_H`, any handle with
-      "multi-product-madness") and switches its link and image on its own.
-  3d. Early pages (Daniel, Nov 24): gb1040 was built from Acme's title card before the listing was posted, with guessed
-      letter spots (lightest letters joined until 21 spots were left). When the real listing appears, update gb1040 in
-      `build.py` (url, when, facts, checked, real spot groups, and drop the "guess" wording); don't build a second page.
+      images show up without a builder run. A page picks up its breaker's title card from `images.json`
+      as long as its `url` is the product link.
+  3d. Early pages (Daniel, Nov 24): a break can be built from a title card before the listing is posted (gb1040 was).
+      When the listing shows up, update that config (url, when, facts, real spots) instead of building a second page.
+      Acme sometimes reuses an old link: GB1040 lives at gb1040-dual-year-football-finale-random-team.
   3c. Multi-sport boxes in a one-sport break (like the 2026 National Convention box in a WWE break): list only the
      featured sport's cards (Daniel, Nov 24). `nscc_product('WWE')` filters by `nscc_sports.json` (every name tagged
      WWE, NBA, NFL, MLB, Soccer, Star Wars or College from the official checklist's set names and teams); say so in

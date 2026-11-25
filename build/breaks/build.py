@@ -808,16 +808,15 @@ def _src(pid, label):
     u = next((l.split('source:', 1)[1].strip() for l in open(os.path.join(LIB, pid + '.txt'), encoding='utf-8') if l.startswith('# source:')), '')
     return [label + ' checklist (official Topps)', u]
 # Finds the real listing by name, whatever number Acme puts in the link; the watcher workflow rebuilds the pages after each check.
-GB1040_H = next((h for h in sorted(IMAGES.get('acme', {})) if 'multi-product-madness' in h and 'filler' not in h), None)
+GB1040_H = 'gb1040-dual-year-football-finale-random-team'  # posted Nov 24, 6:22 pm Central; Acme reused an old link
 GB1040_LIB = dict(chrome='2026-topps-chrome-football', ufc='2026-topps-midnight-ufc', pristine='2025-26-topps-pristine-basketball',
                   platinum='2025-topps-chrome-platinum-baseball', sc='2026-topps-stadium-club-wwe')
 gb1040 = dict(
-    id='gb1040', title='GB1040 Multi Product Madness', kicker='Acme Packs · Random letter · Multi-sport · Letter spots are a guess',
-    url=acme_url(GB1040_H or 'gb1040-multi-product-madness-random-letters'),  # the real listing once the watcher sees it, else our best guess (Daniel, Nov 24)
-    image='' if GB1040_H else '/breaks/img/gb1040.jpg',  # Daniel's screenshot until Acme's own title card is in images.json  # Daniel's screenshot of Acme's title card; remove once the listing's own image is in images.json
-    when='Date and time to come. Acme hasn\'t posted this break on its site yet.',
-    facts=['5 boxes', '21 letter spots (groupings are a guess)', '$135 per spot', 'Letters randomized live'],
-    format='random', checked='Built on November 24, 2026 from Acme\'s title card, before the listing went up. The letter spots shown are our guess; the real groupings, date and sold status will be added once Acme posts it.',
+    id='gb1040', title='GB1040 Multi Product Madness', kicker='Acme Packs · Random letter · NFL, UFC, NBA, MLB and WWE',
+    url=acme_url(GB1040_H),  # Daniel's screenshot of Acme's title card; remove once the listing's own image is in images.json
+    when='Tuesday, November 24, 2026, 8:00 pm Central (9:00 pm Eastern). If it doesn\'t fill, it rolls to the next break night.',
+    facts=['5 boxes', '21 letter spots', '$135 per spot, $33.75 for a 25% filler', 'Letters randomized live'],
+    format='random', checked='Letter spots are the ones on Acme\'s listing, posted November 24, 2026.',
     boxes=[dict(k='chrome', short='Chrome Football', c='#e2545e', full='2026 Topps Chrome Football Hobby', kind='NFL veterans and rookies, autographs, inserts',
                 types='Chrome base with refractor parallels, inserts, and rookie and veteran autographs.'),
            dict(k='ufc', short='Midnight UFC', c='#8a6be0', full='2026 Topps Midnight UFC', kind='UFC fighters, autographs, inserts',
@@ -829,12 +828,13 @@ gb1040 = dict(
            dict(k='sc', short='Stadium Club WWE', c='#f2c14e', full='2026 Topps Stadium Club WWE Hobby', kind='WWE Superstars and Legends, 2 autographs per box, inserts',
                 types='Photo-driven base, inserts and autographs.')],
     spots=[],  # filled in below from the letters that have names
-    rules=[['How the 21 spots work', ['Acme sells 21 spots and randomizes the letters live. The title card doesn\'t show how the 26 letters are grouped into 21 spots, so some letters will share a spot.', '']],
-           ['First letter of the first name', ['Acme\'s rules send letter cards to the first letter of the first name of the player or character: Josh Allen is J, Shai Gilgeous-Alexander is S.', 'That holds across all five boxes, so one letter covers football, UFC, basketball, baseball and WWE names.']],
+    rules=[['How the 21 spots work', ['Acme sells 21 spots and randomizes them live. Most letters have their own spot; the light ones share (E / F, H / I, N / O, P / U, V / Q / W, X / Y / Z).',
+                                      'C, J and S are split on the second letter: CA-CH and CI-CZ, JA-JE and JF-JZ, SA-SH and SI-SZ. Cooper Flagg is CO, so CI-CZ; Josh Allen is JO, so JF-JZ.']],
+           ['First letter of the name on the card', ['Acme\'s rules go by the first letter of the first name: Josh Allen is J, Shai Gilgeous-Alexander is S.', 'Ring names count as printed. Acme\'s list puts American Nightmare Cody Rhodes under A, Stone Cold under S, and The Rock under R (a leading "The" doesn\'t count).']],
            ['Cards with more than one name', ['Each person on a dual or multi-player card is listed under their own letter here. Acme randomizes cards like that between the spots involved.', 'Anything the rules don\'t cover is up to the breaker.']]],
-    notes=['The title card shows Chrome Platinum Baseball without a clear year; this guide uses the 2025 checklist, the one in the library. If Acme lists a different year, the page will be updated.',
-           'Box counts aren\'t on the title card; the guide assumes one of each.'],
-    sources=[['Acme Packs group breaks', ACME_BREAKS], ACME_TERMS, _src(GB1040_LIB['chrome'], 'Topps Chrome Football'), _src(GB1040_LIB['ufc'], 'Topps Midnight UFC'),
+    notes=['One box of each product. Filler entries are sold too ($33.75 for a 25% chance at a spot); see Acme\'s filler listing for how they work.',
+           'The link says "dual-year-football-finale" because Acme reused an older listing; the break is GB1040 Multi Product Madness.'],
+    sources=[['GB1040 break page (Acme Packs)', acme_url(GB1040_H)], ACME_TERMS, _src(GB1040_LIB['chrome'], 'Topps Chrome Football'), _src(GB1040_LIB['ufc'], 'Topps Midnight UFC'),
              _src(GB1040_LIB['pristine'], 'Topps Pristine Basketball'), _src(GB1040_LIB['platinum'], 'Topps Chrome Platinum Baseball'), _src(GB1040_LIB['sc'], 'Topps Stadium Club WWE')],
 )
 
@@ -864,25 +864,11 @@ if __name__ == '__main__':
     n, u = letter_break(rgl6133, nas, None, alt=False); built.append(write(rgl6133, n, u))
     g40 = {k: (gpk_fold(lib_letter_product(v)) if k == 'sc' else lib_letter_product(v)) for k, v in GB1040_LIB.items()}
     have = sorted({letters(n)[0] for p_ in g40.values() for n in entries_from_product(p_) if letters(n)[0].isalpha()})
-    # Acme hasn't posted the letter groups: guess them. J is by far the heaviest letter, so it's split in two on the second
-    # letter (Daniel, Nov 24); then the two lightest spots are joined until 21 are left.
-    allnames = [n for p_ in g40.values() for n in entries_from_product(p_)]
-    cnt = {L: sum(1 for n in allnames if letters(n)[0] == L) for L in have}
-    j2 = sorted(first_two(n.replace('"', '')) for n in allnames if letters(n)[0] == 'J')
-    cut = min(range(1, len(j2)), key=lambda i: (j2[i - 1] == j2[i], abs(2 * i - len(j2))))  # most even split between two different prefixes
-    jlo, jhi = (j2[0], j2[cut - 1]), (j2[cut], j2[-1])
-    jlab = lambda r: (r[0] + '-' + r[1]) if r[0] != r[1] else r[0]
-    cnt[jlab(jlo)], cnt[jlab(jhi)] = cut, len(j2) - cut
-    groups = [[L] for L in have if L != 'J'] + [[jlab(jlo)], [jlab(jhi)]]
-    while len(groups) > 21:
-        groups.sort(key=lambda g: (sum(cnt[x] for x in g), g))
-        groups[:2] = [sorted(groups[0] + groups[1])]
-    groups.sort()
-    jr = {jlab(jlo): ('J', jlo[1]), jlab(jhi): (jhi[0], 'JZ')}
-    gb1040['spots'] = [cc_spot(' / '.join(g), ''.join(x for x in g if x not in jr), pre=[jr[x] for x in g if x in jr]) for g in groups]
-    gb1040['rules'][0][1][1] = ('Our guess for now: J has far more names than any other letter, so we split it in two on the second letter (' + jlab(jlo) + ' and ' + jlab(jhi) + '). '
-        + ', '.join(' / '.join(g) for g in groups if len(g) > 1) + ' share a spot, and every other letter stands alone. We joined the letters with the fewest names until 21 spots were left. Acme may group them differently.')
-    print('gb1040 guess', [(' / '.join(g), sum(cnt[x] for x in g)) for g in groups])
+    # Acme's posted letter spots (listing, Nov 24)
+    gb1040['spots'] = [cc_spot('A', 'A'), cc_spot('B', 'B'), cc_spot('CA-CH', pre=[('CA', 'CH')]), cc_spot('CI-CZ', pre=[('CI', 'CZ')]), cc_spot('D', 'D'),
+        cc_spot('E / F', 'EF'), cc_spot('G', 'G'), cc_spot('H / I', 'HI'), cc_spot('JA-JE', pre=[('JA', 'JE')]), cc_spot('JF-JZ', pre=[('JF', 'JZ')]),
+        cc_spot('K', 'K'), cc_spot('L', 'L'), cc_spot('M', 'M'), cc_spot('N / O', 'NO'), cc_spot('P / U', 'PU'), cc_spot('R', 'R'),
+        cc_spot('SA-SH', pre=[('SA', 'SH')]), cc_spot('SI-SZ', pre=[('SI', 'SZ')]), cc_spot('T', 'T'), cc_spot('V / Q / W', 'VQW'), cc_spot('X / Y / Z', 'XYZ')]
     n, u = letter_break(gb1040, g40, None, alt=False); built.append(write(gb1040, n, u))
     json.dump([{k: b[k] for k in ('id', 'title', 'kicker', 'when', 'facts', 'ended', 'url', 'image') if k in b} for b in built], open(os.path.join(os.path.dirname(__file__), 'index.json'), 'w'))
     for b in built:
