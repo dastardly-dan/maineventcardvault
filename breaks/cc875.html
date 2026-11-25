@@ -55,6 +55,12 @@ nav.tabs a.on { background: var(--gold); color: var(--on-gold); font-weight: 600
 .heroimg img { width: 100%; height: auto; display: block; }
 @media (max-width: 760px) { .hero.hasimg { grid-template-columns: 1fr; gap: 14px; } .hero.hasimg .heroimg { grid-row: 1; max-width: 460px; } }
 body.compact .heroimg { display: none; }
+.hero.hasvid { grid-template-columns: minmax(0, 1fr) minmax(0, 520px); }
+.herovid .frame { position: relative; aspect-ratio: 16 / 9; border-radius: 12px; overflow: hidden; border: 1px solid var(--line); background: #000; }
+.herovid iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.herovid .vlab { font-size: 13px; margin-top: 6px; opacity: .8; }
+@media (max-width: 760px) { .hero.hasvid { grid-template-columns: 1fr; gap: 14px; } .hero.hasvid .herovid { grid-row: 1; } }
+body.compact .herovid { display: none; }
 body.compact .lede { display: none; }
 @media (max-width: 560px) { body.compact .hero { padding-top: 18px; } body.compact h1 { font-size: 26px; } }
 .kicker { color: var(--gold); font-size: 12px; letter-spacing: .22em; text-transform: uppercase; font-weight: 600; }
@@ -289,6 +295,7 @@ mark { background: #fff1a8; }
   <div class="mine" id="mine"></div>
   </div>
   <a class="heroimg" id="heroimg" target="_blank" rel="noopener" hidden><img alt=""></a>
+  <div class="herovid" id="herovid" hidden><div class="frame"></div><div class="vlab"></div></div>
 </div>
 
 <main class="wrap">
@@ -391,7 +398,12 @@ mark { background: #fff1a8; }
   // header bits
   document.getElementById("kicker").textContent = D.kicker;
   document.getElementById("h1").textContent = D.title;
-  if (D.image) {  // the breaker's own title card for this break, links to their product page
+  if (D.video) {  // the breaker's YouTube stream for this break night; replaces the title card
+    var hv = document.getElementById("herovid"), vu = "https://www.youtube.com/watch?v=" + D.video;
+    hv.querySelector(".frame").innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + D.video + '" title="' + esc(D.videoTitle || "Break stream") + '" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
+    hv.querySelector(".vlab").innerHTML = (D.ended ? "Replay of the stream. " : "Live stream for this break night. ") + '<a href="' + vu + '" target="_blank" rel="noopener">Watch on YouTube</a>';
+    hv.hidden = false; document.getElementById("hero").classList.add("hasimg", "hasvid");
+  } else if (D.image) {  // the breaker's own title card for this break, links to their product page
     var hi = document.getElementById("heroimg");
     hi.href = D.url; hi.querySelector("img").src = D.image; hi.querySelector("img").alt = D.title + " title card";
     hi.hidden = false; document.getElementById("hero").classList.add("hasimg"); hi.querySelector("img").onerror = function () { hi.hidden = true; document.getElementById("hero").classList.remove("hasimg"); };

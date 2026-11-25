@@ -221,6 +221,9 @@ team spot, box by box. Linked from the storefront's Breaks menu; every page carr
       Format rule (Daniel, Nov 25, 2026): whenever a page is built before the format is known (letters or teams, pick or
       random), say so plainly on the page, give the best guess and why, and mark the kicker "(best guess)". Once the
       listing states the format, set it and remove the guess wording.
+  3j. Streams (Daniel, Nov 25, 2026): when Daniel sends a breaker's YouTube link, add it to `STREAMS` in `build.py`
+      with the page ids for that break night. Those pages show the YouTube player instead of the title card; the same
+      link becomes the replay after the stream. Pages without a stream keep the title card.
   3e. The watcher workflow now rebuilds the break pages and the Break guides page after every check, so new title card
       images show up without a builder run. A page picks up its breaker's title card from `images.json`
       as long as its `url` is the product link.

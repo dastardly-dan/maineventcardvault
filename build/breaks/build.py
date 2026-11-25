@@ -225,6 +225,14 @@ def add_prices(cfg, names):
                     del e[3:]; e.append(pr[0]); newest = max(newest, pr[3])
     return newest
 
+# Breaker streams (Daniel, Nov 25, 2026): the page shows the YouTube player in place of the title card.
+# One stream covers a whole break night, so each video lists the pages it covers. After the stream ends the same link is the replay.
+STREAMS = {
+    'Ck782vibiC0': dict(title='RGL Pre-Thanksgiving Marathon Stream (RGL #6128 to #6143)',
+                        pages=['rgl6128', 'rgl612xwwe2'] + ['rgl%d' % n for n in range(6129, 6144)]),
+}
+VIDEO_OF = {pid: (vid, v['title']) for vid, v in STREAMS.items() for pid in v['pages']}
+
 def write(cfg, names, unmatched):
     data = dict(cfg)
     if not cfg.get('ended'):
@@ -233,6 +241,7 @@ def write(cfg, names, unmatched):
     kr = mark_kabooms(cfg, names)
     if kr: data['rules'] = list(cfg.get('rules', [])) + [kr]
     if not data.get('image') and image_of(cfg.get('url')): data['image'] = image_of(cfg['url'])  # a config's own image wins
+    if cfg['id'] in VIDEO_OF: data['video'], data['videoTitle'] = VIDEO_OF[cfg['id']]
     if cfg.get('ended'): data['spots'] = [{k: v for k, v in s.items() if k != 'status'} for s in cfg['spots']]
     data['names'] = names
     data['unmatched'] = unmatched
