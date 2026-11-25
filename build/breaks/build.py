@@ -775,6 +775,9 @@ close(jwj0244, 'the week of November 23, 2026', ['3 boxes', '26 team spots'])
 close(gb1037, 'Tuesday, November 24, 2026', ['4 boxes', '32 team spots', '$55 to $350 per team'])
 close(gb1038a, 'Tuesday, November 24, 2026', ['12 boxes (full case)', '28 team spots', '$135 per spot'])
 close(gb1038b, 'Tuesday, November 24, 2026', ['5 boxes', '28 team spots (24 teams, 4 combos)', '$132 per spot'])
+close(rgl6128, 'Wednesday, November 25, 2026', ['6 boxes', '27 letter spots', '$40 to $235 per spot'])
+close(rgl6129, 'Wednesday, November 25, 2026', ['6 boxes', '30 team spots', '$40 to $375 per team', 'Dodgers randomized to all'])
+close(rgl6130, 'Wednesday, November 25, 2026', ['5 boxes', '32 team spots', '$45 to $375 per team', 'Raiders randomized to all'])
 jwj0244.update(ended='This break ran the week of November 23, 2026. Spots are closed, but the guide stays up so you can look back at who was in each spot.',
                when='Ran the week of November 23, 2026')
 
