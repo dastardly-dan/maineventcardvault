@@ -3,11 +3,11 @@
 Built by watch.py from published dates (Eastern time). Merch and fee listings are counted too,
 so read it as a guide. Updated whenever a product is added.
 
-## acme (14 products)
+## acme (16 products)
 
-- Days: Mon 5, Tue 6, Wed 2, Thu 1
-- Hours (ET): 09:00 1, 12:00 4, 13:00 5, 14:00 1, 17:00 1, 18:00 1, 20:00 1
-- Latest: Tue Mar 31 02:10 PM AP Classic Trucker Cap; Thu Nov 12 09:47 AM Expedited Shipping; Mon Nov 23 01:00 PM GB1037 - Midnight Chrome PYT! - Pick Your Team; Mon Nov 23 01:00 PM GB1038 - 25% CHANCE FILLER - Full Case Absolute Fo; Mon Nov 23 01:00 PM GB1038 - Full Case Absolute Football!  - Random Te; Mon Nov 23 01:00 PM GB1039 - 25% CHANCE FILLER - Midnight Chrome Incep; Mon Nov 23 01:00 PM GB1039 - Midnight Chrome Inception!  - Random Team; Tue Nov 24 06:11 PM GB1037- 50% CHANCE FILLER - PYT EVOLVED TEAM POOL
+- Days: Mon 5, Tue 8, Wed 2, Thu 1
+- Hours (ET): 09:00 1, 12:00 4, 13:00 5, 14:00 1, 17:00 1, 18:00 1, 19:00 2, 20:00 1
+- Latest: Mon Nov 23 01:00 PM GB1037 - Midnight Chrome PYT! - Pick Your Team; Mon Nov 23 01:00 PM GB1038 - 25% CHANCE FILLER - Full Case Absolute Fo; Mon Nov 23 01:00 PM GB1038 - Full Case Absolute Football!  - Random Te; Mon Nov 23 01:00 PM GB1039 - 25% CHANCE FILLER - Midnight Chrome Incep; Mon Nov 23 01:00 PM GB1039 - Midnight Chrome Inception!  - Random Team; Tue Nov 24 06:11 PM GB1037- 50% CHANCE FILLER - PYT EVOLVED TEAM POOL; Tue Nov 24 07:22 PM GB1040 - 25% CHANCE FILLER - Multi Product Madness; Tue Nov 24 07:22 PM GB1040 - Multi Product Madness!  - Random Team
 
 ## jwj (7 products)
 
