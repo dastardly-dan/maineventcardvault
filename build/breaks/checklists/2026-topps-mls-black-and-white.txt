@@ -1,0 +1,205 @@
+# name: 2026 Topps MLS Black and White
+# sport: Soccer
+# added: 2026-11-24
+# source: https://cdn.shopify.com/s/files/1/0662/9749/5709/files/2026_Topps_MLS_Black_and_White_-_Checklist_1.pdf
+
+[base]
+Adri Mehmeti | New York Red Bulls
+Aiden Hezarkhani | Real Salt Lake
+Anders Dreyer | San Diego FC
+Andrea Pirlo | New York City FC
+Antoine Griezmann | Orlando City SC
+Brandon Vázquez | Austin FC
+Brian McBride | Columbus Crew
+Bryan Zamblé | San Diego FC
+Carles Gil | New England Revolution
+Cavan Sullivan | Philadelphia Union
+Chris Armas | Chicago Fire FC
+Clint Dempsey | Seattle Sounders FC
+Cooper Sanchez | Atlanta United
+Cristian Roldan | Seattle Sounders FC
+Daniel Edelman | St. Louis CITY SC
+David Beckham | LA Galaxy
+Dejan Joveljić | Sporting Kansas City
+Denis Bouanga | LAFC
+Didier Drogba | CF Montréal
+Diego Luna | Real Salt Lake
+Diego Rossi | Columbus Crew
+Dor Turgeman | New England Revolution
+Emil Forsberg | New York Red Bulls
+Ender Echenique | FC Cincinnati
+Eric Izoita | Portland Timbers
+Evander | FC Cincinnati
+Facundo Torres | Austin FC
+Germán Berterame | Inter Miami CF
+Hany Mukhtar | Nashville SC
+Hennadii Synchuk | CF Montréal
+Hugo Cuypers | Chicago Fire FC
+Hugo Sánchez | FC Dallas
+Ian James | Sporting Kansas City
+Jack McGlynn | Houston Dynamo
+James Rodríguez | Minnesota United
+Jonathan Osorio | Toronto FC
+Josh Sargent | Toronto FC
+Jude Terry | LAFC
+Julian Hall | New York Red Bulls
+Justin Ellis | Orlando City SC
+Kaká | Orlando City SC
+Kelvin Yeboah | Minnesota United
+Kevin Kelsy | Portland Timbers
+Lionel Messi | Inter Miami CF
+Lothar Matthäus | New York Red Bulls
+Louis Munteanu | D.C. United
+Lucas Herrington | Colorado Rapids
+Luis Suárez | Inter Miami CF
+Malik Jakupovic | Philadelphia Union
+Marcel Hartel | St. Louis CITY SC
+Marcelo Balboa | Colorado Rapids
+Marco Reus | LA Galaxy
+Martín Ojeda | Orlando City SC
+Mateo Silvetti | Inter Miami CF
+Matt Freese | New York City FC
+Matt Turner | New England Revolution
+Matthew Arana | Houston Dynamo
+Maxi Moralez | New York City FC
+Mbekezeli Mbokazi | Chicago Fire FC
+Miguel Almirón | Atlanta United
+Niko Tsakiris | San Jose Earthquakes
+Petar Musa | FC Dallas
+Rafael Márquez | New York Red Bulls
+Rafael Navarro | Colorado Rapids
+Robert Lewandowski | Chicago Fire FC
+Rodrigo De Paul | Inter Miami CF
+Rubén Ramos Jr. | LA Galaxy
+Samuel Sarver | FC Dallas
+Sebastian Berhalter | Vancouver Whitecaps FC
+Sergi Solans | Real Salt Lake
+Son Heung-Min | LAFC
+Tai Baribo | D.C. United
+Thierry Henry | New York Red Bulls
+Thomas Müller | Vancouver Whitecaps FC
+Tim Ream | Charlotte FC
+Timo Werner | San Jose Earthquakes
+Warren Madrigal | Nashville SC
+Wayne Rooney | D.C. United
+Wilfried Zaha | Charlotte FC
+Zlatan Ibrahimović | LA Galaxy
+
+[auto]
+Adri Mehmeti | New York Red Bulls
+Anders Dreyer | San Diego FC
+Andrea Pirlo | New York City FC
+Anibal Godoy | San Diego FC
+Antoine Griezmann | Orlando City SC
+Brandon Vázquez | Austin FC
+Brian McBride | Columbus Crew
+Bryan Zamblé | San Diego FC
+Carles Gil | New England Revolution
+Cavan Sullivan | Philadelphia Union
+Chris Armas | Chicago Fire FC
+Clint Dempsey | Seattle Sounders FC
+Cooper Sanchez | Atlanta United
+Cristian Roldan | Seattle Sounders FC
+David Beckham | LA Galaxy
+Dejan Joveljić | Sporting Kansas City
+Denis Bouanga | LAFC
+Didier Drogba | CF Montréal
+Diego Luna | Real Salt Lake
+Diego Rossi | Columbus Crew
+Dor Turgeman | New England Revolution
+Emil Forsberg | New York Red Bulls
+Evander | FC Cincinnati
+Facundo Torres | Austin FC
+Finn Surman | Portland Timbers
+Hany Mukhtar | Nashville SC
+Hennadii Synchuk | CF Montréal
+Hugo Cuypers | Chicago Fire FC
+Héctor Herrera | Houston Dynamo
+Jack McGlynn | Houston Dynamo
+James Rodríguez | Minnesota United
+Jayden Nelson | Austin FC
+Jonathan Osorio | Toronto FC
+Josh Sargent | Toronto FC
+Jude Terry | LAFC
+Julian Hall | New York Red Bulls
+Kaká | Orlando City SC
+Kelvin Yeboah | Minnesota United
+Lionel Messi | Inter Miami CF
+Lothar Matthäus | New York Red Bulls
+Lucas Herrington | Colorado Rapids
+Luis Suárez | Inter Miami CF
+Marcel Hartel | St. Louis CITY SC
+Marcelo Balboa | Colorado Rapids
+Marco Reus | LA Galaxy
+Martín Ojeda | Orlando City SC
+Mateo Silvetti | Inter Miami CF
+Matt Turner | New England Revolution
+Maxi Moralez | New York City FC
+Miguel Almirón | Atlanta United
+Niko Tsakiris | San Jose Earthquakes
+Petar Musa | FC Dallas
+Rafael Márquez | New York Red Bulls
+Rafael Navarro | Colorado Rapids
+Rubén Ramos Jr. | LA Galaxy
+Samuel Sarver | FC Dallas
+Sebastian Berhalter | Vancouver Whitecaps FC
+Son Heung-Min | LAFC
+Tai Baribo | D.C. United
+Thierry Henry | New York Red Bulls
+Thomas Müller | Vancouver Whitecaps FC
+Tim Ream | Charlotte FC
+Timo Werner | San Jose Earthquakes
+Walker Zimmerman | Toronto FC
+Wayne Rooney | D.C. United
+Wilfried Zaha | Charlotte FC
+Zlatan Ibrahimović | LA Galaxy
+
+[insert]
+Adri Mehmeti | New York Red Bulls
+Aiden Hezarkhani | Real Salt Lake
+Anders Dreyer | San Diego FC
+Anibal Godoy | San Diego FC
+Antoine Griezmann | Orlando City SC
+Bryan Zamblé | San Diego FC
+Cavan Sullivan | Philadelphia Union
+Clint Dempsey | Seattle Sounders FC
+Cooper Sanchez | Atlanta United
+Danley Jean Jacques | Philadelphia Union
+David Beckham | LA Galaxy
+Diego Luna | Real Salt Lake
+Dor Turgeman | New England Revolution
+Emil Forsberg | New York Red Bulls
+Eric Maxim Choupo-Moting | New York Red Bulls
+Evander | FC Cincinnati
+Facundo Torres | Austin FC
+Finn Surman | Portland Timbers
+Hennadii Synchuk | CF Montréal
+Héctor Herrera | Houston Dynamo
+Ian James | Sporting Kansas City
+James Rodríguez | Minnesota United
+Jayden Nelson | Austin FC
+Jonathan Osorio | Toronto FC
+Jude Terry | LAFC
+Justin Ellis | Orlando City SC
+Kaká | Orlando City SC
+Lionel Messi | Inter Miami CF
+Lucas Herrington | Colorado Rapids
+Malik Jakupovic | Philadelphia Union
+Marco Reus | LA Galaxy
+Mateo Silvetti | Inter Miami CF
+Max Arfsten | Columbus Crew
+Maya Yoshida | LA Galaxy
+Mbekezeli Mbokazi | Chicago Fire FC
+Petar Musa | FC Dallas
+Rodrigo De Paul | Inter Miami CF
+Samuel Sarver | FC Dallas
+Sebastian Berhalter | Vancouver Whitecaps FC
+Son Heung-Min | LAFC
+Steven Moreira | Columbus Crew
+Thierry Henry | New York Red Bulls
+Thomas Müller | Vancouver Whitecaps FC
+Tim Ream | Charlotte FC
+Timo Werner | San Jose Earthquakes
+Walker Zimmerman | Toronto FC
+Warren Madrigal | Nashville SC
+Zlatan Ibrahimović | LA Galaxy
