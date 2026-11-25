@@ -270,6 +270,27 @@ __THEME__
     if (s.status) h += '<span class="badge ' + s.status + '">' + s.status + "</span>";
     return h;
   }
+  // The key above each spot's card lists: only the tags this spot actually uses (Daniel, Nov 24: explain HIT, add Kaboom).
+  function legend(s) {
+    var seen = {};
+    D.boxes.forEach(function (b) { list(s, b.k).forEach(function (e) {
+      var f = e[1];
+      if (f.indexOf("A") > -1) seen[TEAM && !e[2] ? "hit" : "auto"] = 1;
+      if (f.indexOf("I") > -1 && !e[2] && f.indexOf("A") < 0) seen.insert = 1;
+      ["M", "N", "K", "?"].forEach(function (c) { if (f.indexOf(c) > -1) seen[c] = 1; });
+    }); });
+    var items = [
+      ["hit", "", "hit", "not in the base set; only on hit cards like autographs, relics, inserts or numbered parallels"],
+      ["auto", "", "auto", "in an autograph set"],
+      ["insert", "i", "insert", "insert only"],
+      ["M", "m", "multi", "on a multi-person card"],
+      ["N", "n", "NIL", "college (NIL) card"],
+      ["K", "k", "Kaboom", "has a Kaboom insert in this spot"],
+      ["?", "q", "?", "only if the breaker goes by real name"]];
+    var h = items.filter(function (x) { return seen[x[0]]; }).map(function (x) {
+      return '<span><span class="tag' + (x[1] ? " " + x[1] : "") + '" style="margin:0">' + x[2] + "</span> " + x[3] + "</span>"; }).join("");
+    return h ? '<div class="legend">' + h + "</div>" : "";
+  }
   function tags(e) {
     var f = e[1], h = "";
     if (f.indexOf("A") > -1 && !e[2]) h += '<span class="tag">' + (TEAM ? "hit" : "auto") + "</span>";
@@ -439,7 +460,7 @@ __THEME__
     document.getElementById("spot").innerHTML =
       '<div class="spothead"><div class="big display"' + big + ">" + esc(s.label) + '</div><div class="meta"><div class="row" style="display:flex;gap:6px;margin-bottom:6px;align-items:center">' + badges(s) + "</div><b>" + count(s) + " names</b> across " + boxesWith(s) + " of " + D.boxes.length + " boxes" + (s.nil ? "<br>Plus college (NIL) cards starting with " + esc(s.nil) : "") + "</div>" +
       '<div class="acts"><a class="btn" href="' + href(prev.id) + '">&lsaquo; ' + esc(full(prev)) + '</a><a class="btn" href="' + href(next.id) + '">' + esc(full(next)) + ' &rsaquo;</a><button class="btn' + (mine ? "" : " gold") + '" id="pin">' + (mine ? "Remove from my spots" : "Add to my spots") + "</button></div></div>" +
-      '<div class="legend"><span><span class="tag" style="margin:0">auto</span> in an autograph set</span><span><span class="tag i" style="margin:0">insert</span> insert only</span><span><span class="tag m" style="margin:0">multi</span> on a multi-person card</span><span><span class="tag q" style="margin:0">?</span> only if the breaker goes by real name</span></div>' +
+      legend(s) +
       '<div class="boxes">' + D.boxes.map(function (b) {
         var a = list(s, b.k);
         return '<div class="box" style="--c:' + b.c + '"><h3>' + esc(b.full) + '</h3><div class="kind">' + esc(b.kind) + (a.length ? " · " + a.length : "") + "</div>" +
