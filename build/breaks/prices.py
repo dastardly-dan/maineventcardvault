@@ -18,6 +18,7 @@ import base64, datetime, json, os, re, statistics, sys, time, unicodedata, urlli
 HERE = os.path.dirname(os.path.abspath(__file__))
 WATCH = os.path.join(HERE, 'watch')
 MAX_CALLS = int(os.environ.get('PRICE_MAX_CALLS', '4500'))
+TIME_BUDGET = int(os.environ.get('PRICE_TIME_BUDGET', str(60 * 60)))   # seconds; stop well before the job limit and keep what we have
 KEEP_DAYS = 3                      # a price newer than this isn't looked up again
 CATEGORY = '261328'                # eBay: Sports Trading Cards > Trading Card Singles
 SKIP = re.compile(r'\b(lots?|you pick|pick your|choose|complete set|team set|base set|psa|bgs|sgc|cgc|graded|slab(bed)?|'
@@ -75,7 +76,15 @@ def main():
     print(len(targets), 'targets,', len(todo), 'to look up')
     tok = token(cid, secret)
     done = 0
+    started = time.time()
+    keep = {t['q'] for t in targets}
+    def save():
+        out = {q: v for q, v in sorted(prices.items()) if q in keep}   # drop players from breaks that are over
+        json.dump(out, open(path, 'w'), indent=0, ensure_ascii=False)
+        return out
     for t in todo:
+        if time.time() - started > TIME_BUDGET:
+            print('Time budget used; the rest will be looked up on the next run.'); break
         try:
             s = summarize(search(tok, t['q']), t['player'])
         except urllib.error.HTTPError as e:
@@ -86,10 +95,9 @@ def main():
             print('skip', t['q'], e); continue
         prices[t['q']] = (s or [None, None, 0]) + [today.isoformat()]
         done += 1
+        if done % 200 == 0: save(); print('...', done, 'looked up so far')
         time.sleep(0.15)
-    keep = {t['q'] for t in targets}
-    prices = {q: v for q, v in sorted(prices.items()) if q in keep}   # drop players from breaks that are over
-    json.dump(prices, open(path, 'w'), indent=0, ensure_ascii=False)
+    prices = save()
     print('looked up', done, '; prices on file', sum(1 for v in prices.values() if v[0] is not None))
 
 
