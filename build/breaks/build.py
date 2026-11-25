@@ -926,17 +926,70 @@ def _when(day, pt, et):
 WED, THU = 'Wednesday, November 25, 2026', 'Thursday, November 26, 2026'
 MLB_RANDOM_SPOTS = [team_spot(tid(mlb_team(f)), mlb_team(f), [mlb_team(f)]) for f in MLB_FULL]
 
+RGL6134_H = 'rgl-6134-gilded-collection-pyt-2-dodgers-random-11-25-26'  # posted Nov 25, 4:38 pm Eastern
+rgl6134_v = [['Arizona Diamondbacks', 55, 0], ['Atlanta Braves', 165, 1], ['Baltimore Orioles', 155, 1], ['Boston Red Sox', 225, 1], ['Chicago Cubs', 130, 1], ['Chicago White Sox', 250, 1], ['Cincinnati Reds', 165, 1], ['Cleveland Guardians', 145, 1], ['Colorado Rockies', 40, 1], ['Detroit Tigers', 185, 1], ['Houston Astros', 100, 1], ['Kansas City Royals', 235, 0], ['Los Angeles Angels', 115, 1], ['Los Angeles Dodgers', 0, 0], ['Miami Marlins', 60, 1], ['Milwaukee Brewers', 245, 1], ['Minnesota Twins', 60, 1], ['New York Mets', 170, 1], ['New York Yankees', 375, 1], ["Oakland A's", 105, 1], ['Philadelphia Phillies', 130, 1], ['Pittsburgh Pirates', 240, 1], ['San Diego Padres', 75, 1], ['San Francisco Giants', 165, 1], ['Seattle Mariners', 165, 1], ['St. Louis Cardinals', 190, 1], ['Tampa Bay Rays', 75, 1], ['Texas Rangers', 60, 1], ['Toronto Blue Jays', 135, 1], ['Washington Nationals', 85, 1]]
 rgl6134 = dict(
     id='rgl6134', title='RGL #6134 Gilded Collection PYT #2', kicker='Run Good Life · Pick your team · MLB',
+    url=rgl_url(RGL6134_H),
     when=_when(WED, '7:15 pm', '10:15 pm'),
-    facts=['Same boxes as #6129 (best guess)', '30 team spots'],
-    format='pyt', checked=DRAFT_NOTE,
+    facts=['6 boxes', '29 team spots', '$40 to $375 per team', 'Dodgers randomized to all'],
+    live=dict(shop='rgl', handle=RGL6134_H),
+    format='pyt', checked='Availability checked against Run Good Life\'s store data on November 25, 2026, around 4:50 pm Eastern: 27 of 29 teams open.',
     boxes=[dict(b) for b in rgl6129['boxes']],
-    spots=[dict(team_spot(tid(f), f, [mlb_team(f)]), status='open') for f in MLB_FULL],  # live tracking takes over once posted
-    rules=[RGL_TEAM_RULE, RGL_MULTI],
-    notes=[DRAFT_NOTE, 'The first Gilded Collection PYT tonight (#6129) had Chrome, Update, Gilded, Museum and two Finest Mega boxes, so this guide uses those.',
-           'Cards are listed with the team the official checklist gives them. Expos cards are filed with the Nationals, old Cleveland cards with the Guardians and Washington Senators cards with the Twins.'],
-    sources=list(rgl6129['sources'][1:]),
+    spots=team_spots_from_variants(rgl6134_v, mlb_team, 'Los Angeles Dodgers'),
+    rules=[['Dodgers are randomized to all spots', ['At the start of the break, RGL gives the Dodgers to one buyer by random draw. You get one entry (a "duck") for every $50 your team cost, so the Yankees get 7 entries and the cheapest teams get 1.']],
+           RGL_TEAM_RULE, RGL_MULTI],
+    notes=['Same boxes as the first Gilded Collection PYT tonight (#6129): Chrome, Update, Gilded, Museum and two Finest Mega boxes.',
+           'Cards are listed with the team the official checklist gives them. Expos cards are filed with the Nationals, old Cleveland cards with the Guardians and Washington Senators cards with the Twins.',
+           'The Dodgers spot isn\'t for sale; its cards go to the winner of the Dodgers draw.'],
+    sources=[['RGL #6134 break page (Run Good Life)', rgl_url(RGL6134_H)]] + list(rgl6129['sources'][1:]),
+)
+
+# RGL #6136 Pass the Turkey NFL (Random Team), posted Nov 25. Two of its seven boxes (2025 Panini Prizm International and
+# 2025 Panini Revolution Premium) have no checklist in the library yet, so the page lists the other five and says so.
+RGL6136_H = 'rgl-6136-pass-the-turkey-nfl-random-team-11-25-26'
+NFL_NICKS = {t for t, _ in cc872_teams}
+def nfl_split(p, roster):
+    """A football checklist with NFL and college teams: NFL players by team nickname; college players on an NFL roster in
+    the Topps checklists go to that team, everyone else is NIL."""
+    out = dict(base={}, other={}, nil={})
+    for b in ('base', 'other'):
+        for team, ns in p[b].items():
+            t = team if team in NFL_NICKS else nfl_team(team)
+            for n in ns:
+                tt = t or roster.get(key_of(n))
+                if tt:
+                    if n not in out[b].setdefault(tt, []): out[b][tt].append(n)
+                else:
+                    out['nil'].setdefault(n, set()).add('B' if b == 'base' else 'A')
+    return out
+rgl6136 = dict(
+    id='rgl6136', title='RGL #6136 Pass the Turkey NFL (Random Team)', kicker='Run Good Life · Random team · NFL',
+    url=rgl_url(RGL6136_H),
+    when=_when(WED, '8:45 pm', '11:45 pm'),
+    facts=['7 boxes', '24 spots for 32 teams', '$194 per spot, fillers $48.50', 'Teams randomized live', '$1,000 turkey prize'],
+    format='team', checked='Spots were still for sale when checked on November 25, 2026, around 4:50 pm Eastern.',
+    boxes=[dict(BOX_CHROME_H, full='2026 Topps Chrome Football Hobby (1 box)'),
+           dict(k='donruss', short='Donruss', c='#f2c14e', full='2026 Panini Donruss Football Hobby', kind='Base with Rated Rookies, autographs, inserts',
+                types='Base with Rated Rookies, parallels, inserts, and autographs, plus college (NIL) players.'),
+           dict(k='obsidian', short='Obsidian', c='#8a6be0', full='2026 Panini Obsidian Football (First Off The Line)', kind='Dark-themed base, autographs and patches',
+                types='Numbered base with Electric Etch parallels, autographs and patch cards, plus college (NIL) players.'),
+           dict(k='bowman', short='Bowman Sapphire', c='#5aa9ff', full='2026 Bowman Football Sapphire Edition', kind='Mostly college (NIL) players, plus NFL rookies',
+                types='Sapphire parallels of the Bowman base, prospects and rookies, inserts and autographs.'),
+           dict(BOX_INCEPTION, full='2026 Topps Inception Football Hobby (1 box)')],
+    spots=[team_spot(tid(t), t, [t]) for t, _ in cc872_teams] + [team_spot('college', 'College (NIL) cards', [], nil='ABCDEFGHIJKLMNOPQRSTUVWXYZ')],
+    rules=[RGL_LIVE_GROUPS,
+           ['Pass the Turkey', ['At the start of the break, one team gets the "turkey" and a target number from 1 to 32.',
+                                'A team takes the turkey when it pulls a serial-numbered card whose number (the left side, like the 26 in 26/99) starts or ends with either digit of the target. The target then becomes that card\'s number. For example, with a target of 6, cards numbered 6, 63 or 26 take it.',
+                                'Whoever holds the turkey at the end of the break gets $1,000 in RGL store credit.']],
+           RGL_TEAM_RULE,
+           ['College (NIL) cards', ['NIL stands for name, image and likeness: college players who aren\'t in the NFL yet. In its NFL team breaks RGL randomizes those cards to all spots at the end of the break, so they\'re listed together here.', 'College players already in the NFL go to their NFL team.']],
+           RGL_MULTI],
+    notes=['Two boxes aren\'t in this guide yet: 2025 Panini Prizm International and 2025 Panini Revolution Premium. We don\'t have their official checklists, so check those cards with RGL.',
+           'Filler entries are sold too ($48.50 each); see RGL\'s listing for how fillers work.'],
+    sources=[['RGL #6136 break page (Run Good Life)', rgl_url(RGL6136_H)], SRC_CHROME,
+             ['Panini Donruss Football checklist (official Panini CSV)', SRC_PANINI], ['Panini Obsidian Football checklist (official Panini CSV)', SRC_PANINI],
+             _src('2026-bowman-football-sapphire-edition', 'Bowman Football Sapphire Edition'), SRC_INCEPTION],
 )
 
 rgl6138 = dict(
@@ -993,6 +1046,31 @@ rgl6143 = dict(
     sources=[SRC_TOPPS_LIST],
 )
 
+# RGL #6135 Oops All Animation (Random Letter), posted Nov 25. Only 3 of its 7 boxes have checklists in the library.
+RGL6135_H = 'rgl-6135-oops-all-animation-random-letter-11-25-26'
+RGL6135_LIB = dict(neon='2026-topps-neon-marvel', mintm='2026-topps-mint-marvel', mintd='2026-topps-mint-disney')
+rgl6135 = dict(
+    id='rgl6135', title='RGL #6135 Oops All Animation (Random Letter)', kicker='Run Good Life · Random letter · Marvel, DC and Disney',
+    url=rgl_url(RGL6135_H),
+    when=_when(WED, '8:00 pm', '11:00 pm'),
+    facts=['7 boxes (3 listed here)', '15 spots', '$156 per spot, fillers $39', 'Letters randomized live'],
+    format='random', checked='Spots were still for sale when checked on November 25, 2026, around 4:50 pm Eastern.',
+    boxes=[dict(k='neon', short='Marvel Neon', c='#c86bff', full='2026 Topps Marvel Neon Hobby', kind='Marvel characters, neon-style parallels, inserts',
+                types='Base with neon parallels, inserts, and autographs.'),
+           dict(k='mintm', short='Marvel Mint', c='#e2545e', full='2026 Topps Marvel Mint', kind='Marvel characters, Chrome cards and an encased hit',
+                types='Chrome base and parallels, inserts, encased hits and autographs.'),
+           dict(k='mintd', short='Disney Mint', c='#5aa9ff', full='2026 Topps Disney Mint', kind='Disney characters, Chrome cards and an encased hit',
+                types='Chrome base and parallels, inserts, encased hits and autographs.')],
+    spots=[],  # filled in below from the letters that have names
+    rules=[['How RGL groups the letters', ['RGL sells 15 spots, and how the letters are grouped into them is set live on stream; the listing doesn\'t post it.', 'This guide lists every letter on its own, so once you know your letters, look each one up here.']],
+           ['First letter of the name on the card', ['Letters here go by the first letter of the character\'s name as printed (Spider-Man is S, Captain America is C). RGL\'s listing doesn\'t say how it handles characters, so check with RGL.']],
+           ['Cards with more than one character', ['Each character on a dual or multi-character card is listed under their own letter.', RGL_MULTI[1][0]]]],
+    notes=['Four boxes aren\'t in this guide yet because we don\'t have their checklists: 2025 Kakawow DC Aura, 2026 Card Fun Disney Chronoz, 2025 Topps Finest X-Men \'97 and Topps Pixar Gold. Check those cards with RGL.',
+           'Filler entries are sold too ($39 each); see RGL\'s listing for how fillers work.'],
+    sources=[['RGL #6135 break page (Run Good Life)', rgl_url(RGL6135_H)], _src(RGL6135_LIB['neon'], 'Topps Neon Marvel'),
+             _src(RGL6135_LIB['mintm'], 'Topps Mint Marvel'), _src(RGL6135_LIB['mintd'], 'Topps Mint Disney')],
+)
+
 if __name__ == '__main__':
     built = []
     n, u = letter_break(cc871, WWE_PRODUCTS, wwe_gender); built.append(write(cc871, n, u))
@@ -1032,8 +1110,15 @@ if __name__ == '__main__':
         ('gilded', '2026-topps-gilded-collection-baseball'), ('museum', '2026-topps-museum-collection-baseball'), ('finest', '2026-topps-finest-baseball'))}
     NBA6131 = lambda: {'sc': lib_nba_product('2025-26-topps-stadium-club-basketball'), 'five': lib_nba_product('2025-26-topps-five-star-basketball'),
         'joy': lib_nba_product('2025-26-topps-x-bob-ross-the-joy-of-basketball'), 'flag': lib_nba_product('2026-27-topps-flagship-basketball')}
+    n, u = team_break(rgl6134, MLB6129()); built.append(write(rgl6134, n, u))
+    n, u = team_break(rgl6136, {'chrome': CH, 'donruss': nfl_split(lib_team_product('2026-donruss-football'), roster),
+        'obsidian': nfl_split(lib_team_product('2026-panini-obsidian-football'), roster),
+        'bowman': nfl_split(lib_team_product('2026-bowman-football-sapphire-edition'), roster), 'inception': IN}); built.append(write(rgl6136, n, u))
+    p35 = {k: lib_letter_product(v) for k, v in RGL6135_LIB.items()}
+    have = sorted({letters(n)[0] for p_ in p35.values() for n in entries_from_product(p_) if letters(n)[0].isalpha()})
+    rgl6135['spots'] = [cc_spot(L, L) for L in have]
+    n, u = letter_break(rgl6135, p35, None, alt=False); built.append(write(rgl6135, n, u))
     for cfg, num, pick, prods in [
-            (rgl6134, 6134, True, MLB6129),
             (rgl6138, 6138, False, lambda: {'gilded': lib_mlb_product('2026-topps-gilded-collection-baseball'), 'cosmic': lib_mlb_product('2026-topps-cosmic-chrome-baseball')}),
             (rgl6139, 6139, False, NBA6131),
             (rgl6140, 6140, False, lambda: {'chrome': CH}),
