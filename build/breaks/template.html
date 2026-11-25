@@ -351,7 +351,7 @@ __THEME__
   if (D.image) {  // the breaker's own title card for this break, links to their product page
     var hi = document.getElementById("heroimg");
     hi.href = D.url; hi.querySelector("img").src = D.image; hi.querySelector("img").alt = D.title + " title card";
-    hi.hidden = false; document.getElementById("hero").classList.add("hasimg");
+    hi.hidden = false; document.getElementById("hero").classList.add("hasimg"); hi.querySelector("img").onerror = function () { hi.hidden = true; document.getElementById("hero").classList.remove("hasimg"); };
   }
   document.getElementById("facts").innerHTML = '<li><b>' + esc(D.when) + "</b></li>" + D.facts.map(function (f) { return "<li>" + esc(f) + "</li>"; }).join("") + '<li><a href="' + D.url + '" target="_blank" rel="noopener">Break page</a></li>';
   document.getElementById("checked").textContent = D.checked;

@@ -25,7 +25,7 @@ def image_of(i):
     return (src + ('&' if '?' in src else '?') + 'width=640') if src else ''
 def thumb(i):
     src = image_of(i)
-    return f'<div class="thumb"><img src="{esc(src)}" alt="{esc(i["title"])} title card" loading="lazy"></div>' if src else ''
+    return f'<div class="thumb"><img src="{esc(src)}" alt="{esc(i["title"])} title card" loading="lazy" onerror="this.parentNode.remove()"></div>' if src else ''
 def card(i): return f'''<a class="tile" href="/breaks/{i['id']}" style="border-left:4px solid {edge(i)}">{thumb(i)}<div class="kicker" style="font-size:11px">{esc(i['kicker'])}</div><div class="lab display" style="font-size:26px;margin-top:6px">{esc(i['title'])}</div><div class="cnt" style="margin-top:8px">{esc(i['when'])}</div><div class="peek">{esc(' · '.join(i['facts']))}</div></a>'''
 up = ''.join(card(i) for i in items if not is_past(i)); past = ''.join(card(i) for i in items if is_past(i))
 cards = up or '<p class="sub">No breaks on the schedule right now.</p>'  # past breaks stay online but aren't listed
@@ -44,7 +44,8 @@ html = f'''<!DOCTYPE html>
 <div class="wrap hero"><div class="kicker">Spot guides</div><h1 class="display">Break guides</h1>
 <p class="lede">Who you could pull in each spot, box by box, built from the published checklists. Pick-your-letter breaks show which spots are still open and what they cost.</p></div>
 <main class="wrap"><a class="tile" href="/breaks/builder" style="display:block;margin-bottom:18px;border-color:var(--gold)"><div class="kicker" style="font-size:11px">Breaker tool</div><div class="lab display" style="font-size:26px;margin-top:6px">Spot builder</div><div class="peek" style="margin-top:6px">Pick checklists, set a spot count, and get the most evenly balanced letter spots, with optional pricing.</div></a><div class="grid">{cards}</div></main>
-<footer><div class="wrap">Main Event Card Vault. Reference only; confirm checklists and house rules with the breaker. <a href="/breaks/release-notes">Release notes</a></div></footer>
+<p class="sub" style="margin-top:22px">Looking for a break that already ran? Its guide is still up on <a href="/breaks/past">Past breaks</a>.</p>
+<footer><div class="wrap">Main Event Card Vault. Reference only; confirm checklists and house rules with the breaker. <a href="/breaks/release-notes">Release notes</a> · <a href="/breaks/past">Past breaks</a></div></footer>
 </body></html>'''
 open(os.path.join(ROOT,'breaks','index.html'),'w').write(html)
 print(len(html))
@@ -123,12 +124,12 @@ def fill_bundled(path, current):
     open(path, 'w').write(s[:a] + '\n' + enc + '\n  ' + s[b:])
 
 # A Release notes link at the bottom of every page that has the Breaks menu (Daniel, Nov 24).
-RN_LINK = '<!--RNLINK--><a href="/breaks/release-notes">Release notes</a><!--/RNLINK-->'
+RN_LINK = '<!--RNLINK--><a href="/breaks/release-notes">Release notes</a> · <a href="/breaks/past">Past breaks</a><!--/RNLINK-->'  # Past breaks: Daniel, Nov 24
 def footer_link(s, current):
     if current == 'notes':
         return s
     if '<!--RNLINK-->' in s:
-        link = RN_LINK if '<div class="socials">' in s else RN_LINK.replace('<a ', '· <a ', 1)
+        link = RN_LINK.replace(' · ', '\n    ') if '<div class="socials">' in s else RN_LINK.replace('<a ', '· <a ', 1)
         return re.sub(r'<!--RNLINK-->.*?<!--/RNLINK-->', lambda m: link, s, count=1, flags=re.S)
     f = s.rfind('<footer')
     if f < 0:
@@ -139,7 +140,7 @@ def footer_link(s, current):
     sock = s.find('<div class="socials">', f, end)
     if sock > -1:  # storefront footer: add it to the row of links
         close = s.index('</div>', sock)
-        return s[:close] + '  ' + RN_LINK + '\n    ' + s[close:]
+        return s[:close] + '  ' + RN_LINK.replace(' · ', '\n    ') + '\n    ' + s[close:]
     close = s.rfind('</div>', f, end)  # break pages: end of the footer line
     return s[:close] + ' ' + RN_LINK.replace('<a ', '· <a ', 1) + s[close:]
 
@@ -173,11 +174,75 @@ rn = f'''<!DOCTYPE html>
 <p class="lede">Changes to the break guides, the Spot Builder and the site, newest first.</p></div>
 <main class="wrap"><div class="rfilter" id="rf"><button class="on" data-a="">Everything</button><button data-a="Break guides">Break guides</button><button data-a="Spot Builder">Spot Builder</button><button data-a="Site">Site</button></div>
 {rn_body}</main>
-<footer><div class="wrap">Main Event Card Vault. <a href="/breaks/">All break guides</a></div></footer>
+<footer><div class="wrap">Main Event Card Vault. <a href="/breaks/">All break guides</a> · <a href="/breaks/past">Past breaks</a></div></footer>
 <script>(function(){{var bs=document.querySelectorAll("#rf button");bs.forEach(function(b){{b.onclick=function(){{var a=b.getAttribute("data-a");bs.forEach(function(x){{x.classList.toggle("on",x===b);}});document.querySelectorAll(".rel").forEach(function(r){{var n=0;r.querySelectorAll("li").forEach(function(li){{var ok=!a||li.querySelector(".rarea").textContent===a;li.hidden=!ok;if(ok)n++;}});r.hidden=!n;}});}};}});}})();</script>
 </body></html>'''
 open(os.path.join(ROOT, 'breaks', 'release-notes.html'), 'w').write(rn)
 fill(os.path.join(ROOT, 'breaks', 'release-notes.html'), 'notes')
+
+# ---------------- Past breaks: breaks/past.html (Daniel, Nov 24) ----------------
+# Breaks that have run come off the Break guides list, but their pages stay up; this page lists them, newest first.
+import datetime
+MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+def ran_on(i):
+    m = re.search(r'(' + '|'.join(MONTHS) + r') (\d{1,2}), (\d{4})', i['when'])
+    return datetime.date(int(m.group(3)), MONTHS.index(m.group(1)) + 1, int(m.group(2))) if m else datetime.date(2000, 1, 1)
+BREAKER = {'gb': 'Acme Packs', 'jwj': 'JWJ Collector Breaks', 'cc': 'Colfax Collectibles', 'rgl': 'Run Good Life'}
+def breaker_name(i): return next((v for k, v in BREAKER.items() if i['id'].startswith(k)), 'Other')
+past_items = sorted((i for i in items if is_past(i)), key=lambda x: (ran_on(x), order.index(x['id'])), reverse=True)
+def past_card(i):
+    d = ran_on(i); q = ' '.join([i['title'], i['kicker'], i['when'], ' '.join(i['facts'])]).lower()
+    attrs = f'data-b="{esc(breaker_name(i))}" data-m="{d:%Y-%m}" data-q="{esc(q).replace(chr(34), "")}"'
+    return card(i).replace('<a class="tile"', '<a class="tile" ' + attrs, 1)
+past_cards = ''.join(past_card(i) for i in past_items) or '<p class="sub">No past breaks yet.</p>'
+_bk = [b for b in BREAKER.values() if any(breaker_name(i) == b for i in past_items)]
+_mo = sorted({ran_on(i).strftime('%Y-%m') for i in past_items}, reverse=True)
+past_tools = ('<div class="ptools"><input type="search" id="pq" placeholder="Search past breaks: product, breaker or break number" autocomplete="off">'
+    + '<select id="pm" aria-label="Month"><option value="">All months</option>'
+    + ''.join(f'<option value="{m}">{MONTHS[int(m[5:]) - 1]} {m[:4]}</option>' for m in _mo) + '</select></div>'
+    + '<div class="chips" id="pb"><button class="chip on" data-b="">All breakers</button>'
+    + ''.join(f'<button class="chip" data-b="{esc(b)}">{esc(b)}</button>' for b in _bk) + '</div>'
+    + '<p class="sub" id="pcount"></p>') if past_items else ''
+pb = f'''<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex">
+<title>Past Breaks | Main Event Card Vault</title><meta name="theme-color" content="#081524"><link rel="icon" href="{icon}">
+<style>{css}
+.grid {{ grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }}
+.bar .bmenu {{ margin-left: auto; }}
+.tile .thumb {{ margin: -4px -4px 12px; border-radius: 10px; overflow: hidden; line-height: 0; }}
+.tile .thumb img {{ width: 100%; height: auto; display: block; }}
+.ptools {{ display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 10px; }}
+.ptools input {{ flex: 1 1 280px; min-width: 0; padding: 10px 14px; border-radius: 999px; border: 1px solid var(--line-2); background: var(--panel); color: var(--ink); font: inherit; }}
+.ptools select {{ padding: 10px 14px; border-radius: 999px; border: 1px solid var(--line-2); background: var(--panel); color: var(--ink); font: inherit; }}
+#pb {{ margin: 0 0 6px; }}
+#pb .chip {{ cursor: pointer; font: inherit; font-size: 13.5px; padding: 7px 13px; border-radius: 999px; background: var(--bg-2); color: var(--ink-2); border: 1px solid var(--line-2); }}
+#pb .chip.on {{ background: var(--gold); color: #1a1405; border-color: var(--gold); font-weight: 600; }}
+/*BMENU-CSS*//*/BMENU-CSS*/
+</style></head><body>
+<header class="site"><div class="wrap"><div class="bar"><a class="brand" href="/"><img src="{icon}" alt=""><div><b class="display">Main Event Card Vault</b><span>Past breaks</span></div></a><!--BMENU--><!--/BMENU--></div></div></header>
+<div class="wrap hero"><div class="kicker">Archive</div><h1 class="display">Past breaks</h1>
+<p class="lede">Breaks that have already run, newest first. Each guide is still up, so you can look back at who was in every spot and check off what you pulled.</p></div>
+<main class="wrap">{past_tools}<div class="grid" id="pgrid">{past_cards}</div><p class="sub" id="pnone" hidden>No past breaks match. Try another search or clear the filters.</p></main>
+<footer><div class="wrap">Main Event Card Vault. <a href="/breaks/">All break guides</a> · <a href="/breaks/release-notes">Release notes</a></div></footer>
+<script>(function () {{
+  var q = document.getElementById("pq"); if (!q) return;
+  var m = document.getElementById("pm"), bs = document.querySelectorAll("#pb .chip"), ts = document.querySelectorAll("#pgrid .tile"), b = "";
+  function go() {{
+    var w = q.value.trim().toLowerCase().split(/\\s+/).filter(Boolean), n = 0;
+    ts.forEach(function (t) {{
+      var ok = (!b || t.getAttribute("data-b") === b) && (!m.value || t.getAttribute("data-m") === m.value) && w.every(function (x) {{ return t.getAttribute("data-q").indexOf(x) > -1; }});
+      t.hidden = !ok; if (ok) n++;
+    }});
+    document.getElementById("pcount").textContent = n === ts.length ? ts.length + " past breaks" : "Showing " + n + " of " + ts.length + " past breaks";
+    document.getElementById("pnone").hidden = n > 0;
+  }}
+  q.oninput = go; m.onchange = go;
+  bs.forEach(function (x) {{ x.onclick = function () {{ b = x.getAttribute("data-b"); bs.forEach(function (y) {{ y.classList.toggle("on", y === x); }}); go(); }}; }});
+  go();
+}})();</script>
+</body></html>'''
+open(os.path.join(ROOT, 'breaks', 'past.html'), 'w').write(pb)
+fill(os.path.join(ROOT, 'breaks', 'past.html'), 'past')
 
 for i in items:
     fill(os.path.join(ROOT, 'breaks', i['id'] + '.html'), i['id'])

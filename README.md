@@ -223,6 +223,8 @@ team spot, box by box. Linked from the storefront's Breaks menu; every page carr
       (written by build.py for breaks that haven't run) and saves the median of raw single-card listings to
       `watch/prices.json`. Pages show it next to each name, labeled as an asking price with the date. Needs repository
       secrets EBAY_CLIENT_ID and EBAY_CLIENT_SECRET. Market Movers is off limits: its terms ban scraping and reposting.
+  3h. Past breaks (Daniel, Nov 24): closed breaks drop off the hub but are listed on `breaks/past.html` (hub.py), newest
+      first by the date in `when`, with search, breaker and month filters. The footer link sits next to Release notes.
   3d. Early pages (Daniel, Nov 24): a break can be built from a title card before the listing is posted (gb1040 was).
       When the listing shows up, update that config (url, when, facts, real spots) instead of building a second page.
       Acme sometimes reuses an old link: GB1040 lives at gb1040-dual-year-football-finale-random-team.
