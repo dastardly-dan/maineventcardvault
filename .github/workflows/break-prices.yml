@@ -43,5 +43,11 @@ jobs:
             git config user.email "actions@users.noreply.github.com"
             git add build/breaks breaks
             git commit -m "Break prices: eBay asking prices updated"
-            for i in 1 2 3; do git pull --rebase origin main && git push origin HEAD:main && break; sleep 5; done
+            ok=0
+            for i in 1 2 3 4; do
+              if git pull --rebase origin main && git push origin HEAD:main; then ok=1; break; fi
+              git rebase --abort 2>/dev/null || true
+              sleep 5
+            done
+            if [ "$ok" != 1 ]; then echo "Could not push the update"; exit 1; fi
           fi
