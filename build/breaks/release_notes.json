@@ -84,6 +84,16 @@
           "New",
           "Spot Builder",
           "Added 2026 Topps Royalty Collection WWE from the official Topps checklist: 100 base, 229 single-signer autographs across 30 autograph sets, 92 relic subjects and 70 dual, triple and four-person cards, with women flagged for Men and Women splits."
+        ],
+        [
+          "New",
+          "Spot Builder",
+          "Added 2026 Topps T205 Baseball from the official Topps checklist: 300 base, 113 on-card autographs, and the T80 Rookie, Cy Young, Backward Hat, City Connection and No Cap cards."
+        ],
+        [
+          "Fixed",
+          "Spot Builder",
+          "Baseball cards listed under \"A's\" now count for the Athletics, and old team names (Cleveland, Washington Senators, St. Louis Browns) go to the Guardians, Twins and Orioles instead of the college group."
         ]
       ]
     },

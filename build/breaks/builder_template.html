@@ -1031,7 +1031,7 @@ Bianca Belair | W | auto</pre>
     Object.keys(d).forEach(function (k) { d[k].split(" ").forEach(function (t) { m[t.replace(/_/g, " ")] = k; }); });
     return m;
   }
-  var LEGACY = { NFL: { "Oilers": "Titans", "Redskins": "Commanders" }, NBA: { "SuperSonics": "Thunder", "Supersonics": "Thunder", "Bullets": "Wizards", "Bobcats": "Hornets" }, MLB: { "Expos": "Nationals", "Indians": "Guardians" } };
+  var LEGACY = { NFL: { "Oilers": "Titans", "Redskins": "Commanders" }, NBA: { "SuperSonics": "Thunder", "Supersonics": "Thunder", "Bullets": "Wizards", "Bobcats": "Hornets" }, MLB: { "Expos": "Nationals", "Indians": "Guardians", "A's": "Athletics", "Cleveland": "Guardians", "Senators": "Twins", "Browns": "Orioles" } };
   var DMAP = {}; Object.keys(DIVS).forEach(function (s) { DMAP[s] = divOf(s); });
   var PRO = (function () { var m = {}; Object.keys(DIVS).forEach(function (s) { var d = divOf(s); Object.keys(d).forEach(function (k) { m[k] = 1; }); }); return m; })();
   function teamBins(list, N, sports) {
