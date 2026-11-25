@@ -112,6 +112,18 @@ h2 { font-size: 30px; margin: 0 0 6px; }
 .pills { display: flex; flex-wrap: wrap; gap: 6px; }
 .pill { font-size: 13.5px; padding: 4px 10px; border-radius: 999px; background: var(--bg-2); border: 1px solid var(--line); }
 .pill small { color: var(--ink-3); }
+.pill.g { cursor: pointer; user-select: none; display: inline-flex; align-items: center; }
+.pill.g:hover { border-color: var(--gold); }
+.pill.g .ck { width: 14px; height: 14px; border-radius: 4px; border: 1.5px solid var(--line-2); margin-right: 7px; flex: none; display: inline-block; }
+.pill.g.on { background: var(--gold); border-color: var(--gold); color: var(--on-gold); }
+.pill.g.on .tag, .pill.g.on .px { color: var(--on-gold); }
+.pill.g.on .ck { border-color: var(--on-gold); background: var(--on-gold); -webkit-mask: none; position: relative; }
+.pill.g.on .ck::after { content: ""; position: absolute; left: 4px; top: 1px; width: 4px; height: 8px; border: solid var(--gold); border-width: 0 2px 2px 0; transform: rotate(45deg); }
+.pulls { margin-top: 22px; background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px 18px; }
+.pulls h3 { margin: 0 0 4px; font-size: 24px; }
+.plist { white-space: pre-wrap; font: 14px/1.5 inherit; font-family: inherit; background: var(--bg-2); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; margin: 10px 0; }
+.pacts { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.pacts input { flex: 1 1 220px; min-width: 0; padding: 9px 12px; border-radius: 10px; border: 1px solid var(--line-2); background: var(--panel); color: var(--ink); font: inherit; }
 .pxkey { font-weight: 700; color: var(--ink-2); font-size: 12px; }
 .pill .px { margin-left: 6px; font-weight: 700; color: var(--ink-2); font-variant-numeric: tabular-nums; }
 .pill.hit { border-color: var(--gold); color: var(--gold-2); }
@@ -464,14 +476,74 @@ __THEME__
     var big = s.label.length > 8 ? ' style="font-size:clamp(40px,7vw,64px)"' : "";
     document.getElementById("spot").innerHTML =
       '<div class="spothead"><div class="big display"' + big + ">" + esc(s.label) + '</div><div class="meta"><div class="row" style="display:flex;gap:6px;margin-bottom:6px;align-items:center">' + badges(s) + "</div><b>" + count(s) + " names</b> across " + boxesWith(s) + " of " + D.boxes.length + " boxes" + (s.nil ? "<br>Plus college (NIL) cards starting with " + esc(s.nil) : "") + "</div>" +
-      '<div class="acts"><a class="btn" href="' + href(prev.id) + '">&lsaquo; ' + esc(full(prev)) + '</a><a class="btn" href="' + href(next.id) + '">' + esc(full(next)) + ' &rsaquo;</a><button class="btn' + (mine ? "" : " gold") + '" id="pin">' + (mine ? "Remove from my spots" : "Add to my spots") + "</button></div></div>" +
+      '<div class="acts"><a class="btn" href="' + href(prev.id) + '">&lsaquo; ' + esc(full(prev)) + '</a><a class="btn" href="' + href(next.id) + '">' + esc(full(next)) + ' &rsaquo;</a><button class="btn' + (mine ? "" : " gold") + '" id="pin">' + (mine ? "Remove from my spots" : "Add to my spots") + '</button><button class="btn" id="topulls">My pulls (' + got.all().length + ")</button></div></div>" +
+      '<p class="sub" style="margin:-4px 0 10px">Tap a name to check it off when you pull it.</p>' +
       legend(s) +
       '<div class="boxes">' + D.boxes.map(function (b) {
         var a = list(s, b.k);
         return '<div class="box" style="--c:' + b.c + '"><h3>' + esc(b.full) + '</h3><div class="kind">' + esc(b.kind) + (a.length ? " · " + a.length : "") + "</div>" +
-          (a.length ? '<div class="pills">' + a.map(function (e) { return pill(e); }).join("") + "</div>" : '<div class="none">' + (b.k === "absolute" ? "Checklist not released yet" : "None listed for this spot") + "</div>") + "</div>";
+          (a.length ? '<div class="pills">' + a.map(function (e) { return gpill(e, s, b); }).join("") + "</div>" : '<div class="none">' + (b.k === "absolute" ? "Checklist not released yet" : "None listed for this spot") + "</div>") + "</div>";
       }).join("") + "</div>";
     document.getElementById("pin").onclick = function () { store.toggle(s.id); redrawMine(); };
+    var pl = document.createElement("div"); pl.className = "pulls"; pl.id = "pulls"; document.getElementById("spot").appendChild(pl);
+    [].forEach.call(document.querySelectorAll("#spot .pill.g"), function (el) {
+      el.onkeydown = function (ev) { if (ev.key === "Enter" || ev.key === " ") { ev.preventDefault(); el.onclick(); } };
+      el.onclick = function () { got.toggle(el.getAttribute("data-g")); el.classList.toggle("on"); el.setAttribute("aria-pressed", el.classList.contains("on")); drawPulls(); };
+    });
+    document.getElementById("topulls").onclick = function () { document.getElementById("pulls").scrollIntoView({ behavior: "smooth", block: "start" }); };
+    drawPulls();
+  }
+
+  // Pull checklist (Daniel, Nov 24): tap a name on a spot's page to check it off when you pull that card. Saved in this
+  // browser; the "My pulls" panel lists everything checked across the break and can email it to yourself.
+  var GOTKEY = "mecv-" + D.id + "-got", MAILKEY = "mecv-email";
+  var got = {
+    all: function () { var v = null; try { v = JSON.parse(localStorage.getItem(GOTKEY) || "[]"); } catch (e) {} return Array.isArray(v) ? v : []; },
+    has: function (k) { return this.all().indexOf(k) > -1; },
+    toggle: function (k) { var a = this.all(), i = a.indexOf(k); if (i > -1) a.splice(i, 1); else a.push(k); try { a.length ? localStorage.setItem(GOTKEY, JSON.stringify(a)) : localStorage.removeItem(GOTKEY); } catch (e) {} },
+    clear: function () { try { localStorage.removeItem(GOTKEY); } catch (e) {} }
+  };
+  function gkey(s, b, e) { return s.id + "|" + b.k + "|" + e[0]; }
+  function gpill(e, s, b) {
+    var k = gkey(s, b, e), on = got.has(k);
+    return pill(e).replace('<span class="pill">', '<span class="pill g' + (on ? " on" : "") + '" role="button" tabindex="0" aria-pressed="' + on + '" title="Tap to check off" data-g="' + esc(k).replace(/"/g, "&quot;") + '"><span class="ck" aria-hidden="true"></span>');
+  }
+  function pullsText() {
+    var by = {};
+    got.all().forEach(function (k) { var p = k.split("|"), s = SP[p[0]], b = BOX[p[1]]; if (!s || !b) return; var g = (by[s.id] = by[s.id] || { s: s, b: {} }); (g.b[b.k] = g.b[b.k] || []).push(p.slice(2).join("|")); });
+    var lines = [];
+    D.spots.forEach(function (s) { var g = by[s.id]; if (!g) return;
+      lines.push(full(s).toUpperCase());
+      D.boxes.forEach(function (b) { var n = g.b[b.k]; if (!n) return; lines.push("  " + b.full); n.sort().forEach(function (x) { lines.push("    - " + x); }); });
+      lines.push(""); });
+    return lines;
+  }
+  function drawPulls() {
+    var el = document.getElementById("pulls"); if (!el) return;
+    var tp = document.getElementById("topulls"); if (tp) tp.textContent = "My pulls (" + got.all().length + ")";
+    var lines = pullsText(), n = got.all().length, mail = ""; try { mail = localStorage.getItem(MAILKEY) || ""; } catch (e) {}
+    el.innerHTML = '<h3 class="display">My pulls</h3><p class="sub">Tap any name above when you pull that card to check it off. Your list is saved in this browser and covers every spot in this break.</p>' +
+      (n ? '<pre class="plist">' + esc(lines.join("\n").trim()) + "</pre>" +
+        '<div class="pacts"><input type="email" id="pmail" placeholder="Your email address" value="' + esc(mail) + '" autocomplete="email">' +
+        '<button class="btn gold" id="pmailbtn">Email me my pulls</button><button class="btn" id="pcopy">Copy list</button><button class="btn" id="pclear">Clear all</button></div>' +
+        '<p class="sub" style="margin-top:6px">Email opens your mail app with your list filled in; just hit send.</p>'
+        : '<p class="sub"><b>Nothing checked yet.</b></p>');
+    if (!n) return;
+    var body = function () { return "My pulls from " + D.title + "\n" + D.kicker + "\n" + D.when + "\n\n" + lines.join("\n").trim() + "\n\n" + n + (n === 1 ? " card" : " cards") + " checked.\nBreak guide: " + location.href.split("#")[0]; };
+    document.getElementById("pmailbtn").onclick = function () {
+      var to = document.getElementById("pmail").value.trim(); try { to ? localStorage.setItem(MAILKEY, to) : localStorage.removeItem(MAILKEY); } catch (e) {}
+      location.href = "mailto:" + encodeURIComponent(to).replace(/%40/g, "@") + "?subject=" + encodeURIComponent("My pulls: " + D.title) + "&body=" + encodeURIComponent(body());
+    };
+    document.getElementById("pcopy").onclick = function () {
+      var b = this, t = body();
+      (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject()).then(function () { b.textContent = "Copied"; }, function () { b.textContent = "Copy failed"; });
+      setTimeout(function () { b.textContent = "Copy list"; }, 1800);
+    };
+    var armed = false;
+    document.getElementById("pclear").onclick = function () {
+      if (!armed) { armed = true; this.textContent = "Tap again to clear"; return; }
+      got.clear(); [].forEach.call(document.querySelectorAll("#spot .pill.g.on"), function (p) { p.classList.remove("on"); p.setAttribute("aria-pressed", "false"); }); drawPulls();
+    };
   }
 
   var curBox = D.boxes[0].k;
