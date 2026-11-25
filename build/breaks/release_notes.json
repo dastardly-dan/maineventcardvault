@@ -59,6 +59,11 @@
           "Improved",
           "Break guides",
           "The key above each spot's card list now explains every tag that spot uses, including HIT (only on hit cards like autographs, relics, inserts or numbered parallels), NIL and Kaboom."
+        ],
+        [
+          "Fixed",
+          "Spot builder",
+          "College players whose school shares an NFL nickname no longer land on that NFL team. Drew Mestemaker (Oklahoma State Cowboys) was showing up under the Dallas Cowboys; he and the other Oklahoma State, Boston College Eagles and Pittsburgh Panthers players now count as college (NIL) players in Panini Absolute, Obsidian and Donruss Football."
         ]
       ]
     },

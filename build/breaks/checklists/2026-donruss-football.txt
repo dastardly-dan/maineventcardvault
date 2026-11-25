@@ -8,7 +8,7 @@
 A.J. Green | Bengals
 Aaron Donald | Rams
 Adon Shuler | Fighting Irish
-Ahmad Hardy | Tigers
+Ahmad Hardy | Missouri Tigers
 Ahman Green | Packers
 Andre Johnson | Texans
 Anthony Colandrea | Cornhuskers
@@ -29,10 +29,10 @@ Brent Jones | 49ers
 Brett Favre | Packers
 Brian Mitchell | Eagles
 Brian Urlacher | Bears
-Bryant Wesco Jr. | Tigers
+Bryant Wesco Jr. | Clemson Tigers
 Bryce Underwood | Wolverines
 Ca'Lil Valentine | Fighting Illini
-Caleb Hawkins | Cowboys
+Caleb Hawkins | Oklahoma State Cowboys
 Calvin Johnson | Lions
 Cam Coleman | Longhorns
 Champ Bailey | Broncos
@@ -62,7 +62,7 @@ Donald Driver | Packers
 Donovan McNabb | Eagles
 Doug Flutie | Patriots
 Drew Brees | Saints
-Drew Mestemaker | Cowboys
+Drew Mestemaker | Oklahoma State Cowboys
 Dylan Lonergan | Scarlet Knights
 Dylan Raiola | Ducks
 Earl Thomas III | Seahawks
@@ -121,7 +121,7 @@ KJ Jackson | Razorbacks
 Kordell Stewart | Steelers
 Kurt Warner | Cardinals
 Lamar "Bo" Jackson | Buckeyes
-Lamar Brown | Tigers
+Lamar Brown | LSU Tigers
 LaNorris Sellers | Gamecocks
 Larry Fitzgerald | Cardinals
 LeRoy Butler | Packers
@@ -147,7 +147,7 @@ Michael Vick | Falcons
 Mike Alstott | Buccaneers
 Mike Rozier | Oilers
 Mike Singletary | Bears
-Naeem Burroughs | Tigers
+Naeem Burroughs | Clemson Tigers
 Nate Frazier | Bulldogs
 Natrone Means | Chargers
 Ndamukong Suh | Lions
@@ -158,7 +158,7 @@ Pat Tillman | Cardinals
 Paul Krause | Vikings
 Peyton Manning | Colts
 Phil McConkey | Giants
-Phillip Wright III | Tigers
+Phillip Wright III | LSU Tigers
 Randall Cobb | Packers
 Randy Moss | Vikings
 Randy White | Cowboys
@@ -172,7 +172,7 @@ Rob Gronkowski | Buccaneers
 Rocco Becht | Nittany Lions
 Ron Jaworski | Eagles
 Ryan Wingo | Longhorns
-Sam Leavitt | Tigers
+Sam Leavitt | LSU Tigers
 Sam Madison | Dolphins
 Shawne Merriman | Chargers
 Steve Young | 49ers
@@ -210,7 +210,7 @@ A.J. Green | Bengals
 Aaron Donald | Rams
 Adam Vinatieri | Patriots
 Adon Shuler | Fighting Irish
-Ahmad Hardy | Tigers
+Ahmad Hardy | Missouri Tigers
 Ahman Green | Packers
 Alessio Milivojevic | Spartans
 Andre Reed | Bills
@@ -240,10 +240,10 @@ Brett Favre | Packers
 Brian Mitchell | Eagles
 Brian Urlacher | Bears
 Bruce Smith | Bills
-Bryant Wesco Jr. | Tigers
+Bryant Wesco Jr. | Clemson Tigers
 Bryce Underwood | Wolverines
 Ca'Lil Valentine | Fighting Illini
-Caleb Hawkins | Cowboys
+Caleb Hawkins | Oklahoma State Cowboys
 Calvin Johnson | Lions
 Cam Coleman | Longhorns
 Chad Johnson | Bengals
@@ -291,7 +291,7 @@ Doug Flutie | Patriots
 Doug Pelfrey | Bengals
 Doug Williams | Buccaneers
 Drew Brees | Saints
-Drew Mestemaker | Cowboys
+Drew Mestemaker | Oklahoma State Cowboys
 Dylan Lonergan | Scarlet Knights
 Dylan Raiola | Ducks
 Earl Thomas III | Seahawks
@@ -307,7 +307,7 @@ Eric Dickerson | Rams
 Eric Metcalf | Browns
 Evan Stewart | Ducks
 Fred Taylor | Jaguars
-Gideon Davidson | Tigers
+Gideon Davidson | Clemson Tigers
 Gunner Stockton | Bulldogs
 Hakeem Nicks | Giants
 Harold Carmichael | Eagles
@@ -372,7 +372,7 @@ Koby Howard | Nittany Lions
 Kordell Stewart | Steelers
 Kurt Warner | Cardinals
 Lamar "Bo" Jackson | Buckeyes
-Lamar Brown | Tigers
+Lamar Brown | LSU Tigers
 LaNorris Sellers | Gamecocks
 Larry Fitzgerald | Cardinals
 Lenny Moore | Colts
@@ -381,7 +381,7 @@ Luke Kuechly | Panthers
 Luke Lindenmeyer | Cornhuskers
 Lynn Dickey | Packers
 Madden Williams | Aggies
-Malachi Thomas | Tigers
+Malachi Thomas | LSU Tigers
 Malcolm Smith | Seahawks
 Marcel Reed | Aggies
 Mario Craver | Aggies
@@ -406,7 +406,7 @@ Michael Vick | Falcons
 Mike Alstott | Buccaneers
 Mike Rozier | Oilers
 Mike Singletary | Bears
-Naeem Burroughs | Tigers
+Naeem Burroughs | Clemson Tigers
 Nate Frazier | Bulldogs
 Natrone Means | Chargers
 Ndamukong Suh | Lions
@@ -422,7 +422,7 @@ Paul Krause | Vikings
 Pete Johnson | Bengals
 Peyton Manning | Colts
 Phil McConkey | Giants
-Phillip Wright III | Tigers
+Phillip Wright III | LSU Tigers
 Plaxico Burress | Jets
 Raghib "Rocket" Ismail | Panthers
 Randall Cobb | Packers
@@ -448,7 +448,7 @@ Ron Jaworski | Eagles
 Roy Williams | Cowboys
 Ryan Leaf | Chargers
 Ryan Wingo | Longhorns
-Sam Leavitt | Tigers
+Sam Leavitt | LSU Tigers
 Sam Madison | Dolphins
 Sean McVay | Rams
 Shawne Merriman | Chargers
@@ -468,7 +468,7 @@ Terrell Suggs | Cardinals
 Terrell Suggs | Ravens
 Tiki Barber | Giants
 Tim Brown | Raiders
-TJ Moore | Tigers
+TJ Moore | Clemson Tigers
 Tony Casillas | Falcons
 Tony Dorsett | Cowboys
 Tony Hill | Cowboys
@@ -502,7 +502,7 @@ Zion Branch | Bulldogs
 A.J. Green | Bengals
 Aaron Donald | Rams
 Adam Vinatieri | Patriots
-Ahmad Hardy | Tigers
+Ahmad Hardy | Missouri Tigers
 Ahman Green | Packers
 Andre Johnson | Texans
 Andre Reed | Bills
@@ -528,7 +528,7 @@ Brent Jones | 49ers
 Brett Favre | Packers
 Brian Urlacher | Bears
 Bruce Smith | Bills
-Bryant Wesco Jr. | Tigers
+Bryant Wesco Jr. | Clemson Tigers
 Bryce Underwood | Wolverines
 Ca'Lil Valentine | Fighting Illini
 Calvin Johnson | Lions
@@ -570,7 +570,7 @@ Donald Driver | Packers
 Donovan McNabb | Eagles
 Doug Williams | Buccaneers
 Drew Brees | Saints
-Drew Mestemaker | Cowboys
+Drew Mestemaker | Oklahoma State Cowboys
 Drew Pearson | Cowboys
 Dylan Lonergan | Scarlet Knights
 Dylan Raiola | Ducks
@@ -589,7 +589,7 @@ Evan Stewart | Ducks
 Fran Tarkenton | Vikings
 Fred Biletnikoff | Raiders
 Fred Taylor | Jaguars
-Gideon Davidson | Tigers
+Gideon Davidson | Clemson Tigers
 Gunner Stockton | Bulldogs
 Hakeem Nicks | Giants
 Harold Carmichael | Eagles
@@ -649,7 +649,7 @@ KJ Jackson | Razorbacks
 Koby Howard | Nittany Lions
 Kurt Warner | Cardinals
 Lamar "Bo" Jackson | Buckeyes
-Lamar Brown | Tigers
+Lamar Brown | LSU Tigers
 LaNorris Sellers | Gamecocks
 Larry Fitzgerald | Cardinals
 Lawrence Taylor | Giants
@@ -682,7 +682,7 @@ Michael Vick | Falcons
 Mike Alstott | Buccaneers
 Mike Singletary | Bears
 Mike Vrabel | Patriots
-Naeem Burroughs | Tigers
+Naeem Burroughs | Clemson Tigers
 Nate Frazier | Bulldogs
 Natrone Means | Chargers
 Navorro Bowman | 49ers
@@ -700,7 +700,7 @@ Pete Johnson | Bengals
 Peyton Manning | Broncos
 Peyton Manning | Colts
 Phil McConkey | Giants
-Phillip Wright III | Tigers
+Phillip Wright III | LSU Tigers
 Plaxico Burress | Jets
 Raghib "Rocket" Ismail | Panthers
 Randall Cobb | Packers
@@ -725,7 +725,7 @@ Ronde Barber | Buccaneers
 Roy Williams | Cowboys
 Ryan Leaf | Chargers
 Ryan Wingo | Longhorns
-Sam Leavitt | Tigers
+Sam Leavitt | LSU Tigers
 Sam Madison | Dolphins
 Santa Claus | Team
 Shawne Merriman | Chargers
@@ -744,7 +744,7 @@ Terrell Suggs | Cardinals
 Terrell Suggs | Ravens
 Tiki Barber | Giants
 Tim Brown | Raiders
-TJ Moore | Tigers
+TJ Moore | Clemson Tigers
 Tony Casillas | Falcons
 Tony Dorsett | Cowboys
 Tony Richardson | Chiefs

@@ -20,10 +20,20 @@ TWO_WORD = ['Red Sox', 'White Sox', 'Blue Jays', 'Trail Blazers', 'Fighting Iris
             'Blue Hens', 'Fighting Illini', 'Golden Eagles', 'Red Wolves', 'Blue Raiders', 'Golden Knights']
 
 
+# College teams that share a pro nickname (Daniel, Nov 24: Drew Mestemaker of Oklahoma State landed on the Dallas Cowboys).
+# They keep the full school name so the Spot Builder treats them as college, not the pro team.
+COLLEGE_SAME_NICK = {'Oklahoma State Cowboys', 'Wyoming Cowboys', 'Boston College Eagles', 'Eastern Washington Eagles',
+                     'Eastern Michigan Eagles', 'Georgia Southern Eagles', 'Pittsburgh Panthers', 'Louisville Cardinals',
+                     'Ball State Cardinals', 'Baylor Bears', 'Colorado State Rams', 'Air Force Falcons', 'Idaho State Bengals',
+                     'Cal State Fullerton Titans', 'East Carolina Pirates', 'LSU Tigers', 'Auburn Tigers', 'Clemson Tigers',
+                     'Missouri Tigers', 'Memphis Tigers', 'Virginia Cavaliers', 'Montana Grizzlies', 'Toledo Rockets',
+                     'Buffalo Bulls', 'South Florida Bulls', 'Sacramento State Hornets', 'UT Arlington Mavericks',
+                     'Rice Owls', 'Kent State Golden Flashes', 'Texas Southern Tigers', 'Grambling State Tigers', 'Jackson State Tigers'}
+
 def nickname(team, full=False):
     team = team.strip()
     if not team or team in ('No Team',): return ''
-    if full: return team
+    if full or team in COLLEGE_SAME_NICK: return team
     for t in TWO_WORD:
         if team.endswith(' ' + t) or team == t: return t
     return team.split()[-1]

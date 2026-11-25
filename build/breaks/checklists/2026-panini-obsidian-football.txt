@@ -6,7 +6,7 @@
 
 [base]
 A.J. Green | Bengals
-Ahmad Hardy | Tigers
+Ahmad Hardy | Missouri Tigers
 Ahman Green | Packers
 Andrew Marsh | Wolverines
 Arian Foster | Texans
@@ -16,9 +16,9 @@ Barry Sanders | Lions
 Bear Bachmeier | Cougars
 Bo Jackson | Raiders
 Brandon Marshall | Bears
-Bryant Wesco Jr. | Tigers
+Bryant Wesco Jr. | Clemson Tigers
 Bryce Underwood | Wolverines
-Caleb Hawkins | Cowboys
+Caleb Hawkins | Oklahoma State Cowboys
 Calvin Johnson | Lions
 Cam Coleman | Longhorns
 Cameron Dickey | Red Raiders
@@ -37,7 +37,7 @@ Darrelle Revis | Jets
 Devin Hester | Bears
 Donovan McNabb | Eagles
 Drew Brees | Saints
-Drew Mestemaker | Cowboys
+Drew Mestemaker | Oklahoma State Cowboys
 Earl Campbell | Oilers
 Eddie George | Titans
 Edgerrin James | Colts
@@ -85,22 +85,22 @@ Nate Frazier | Bulldogs
 Pat Tillman | Cardinals
 Patrick Willis | 49ers
 Peyton Manning | Broncos
-Phillip Wright III | Tigers
+Phillip Wright III | LSU Tigers
 Randy Moss | Vikings
 Ray Lewis | Ravens
-Raycine Guillory Jr. | Tigers
+Raycine Guillory Jr. | LSU Tigers
 Reggie Wayne | Colts
 Rob Gronkowski | Patriots
 Rocco Becht | Nittany Lions
 Roddy White | Falcons
 Roger Staubach | Cowboys
 Ryan Wingo | Longhorns
-Sam Leavitt | Tigers
+Sam Leavitt | LSU Tigers
 Steve Smith Sr. | Panthers
 Terrell Davis | Broncos
 Terrell Owens | Eagles
 Thurman Thomas | Bills
-TJ Moore | Tigers
+TJ Moore | Clemson Tigers
 Trinidad Chambliss | Rebels
 Turbo Richard | Hoosiers
 Warren Moon | Seahawks
@@ -111,7 +111,7 @@ Aaron Donald | Rams
 Abu Sama III | Badgers
 Adam Thielen | Vikings
 Adrian Peterson | Vikings
-Ahmad Hardy | Tigers
+Ahmad Hardy | Missouri Tigers
 Alessio Milivojevic | Spartans
 Alex Perry | Fighting Illini
 Andre Johnson | Texans
@@ -123,7 +123,7 @@ Antonio Brown | Steelers
 Archie Griffin | Bengals
 Archie Manning | Saints
 Ashton Daniels | Seminoles
-Austin Simmons | Tigers
+Austin Simmons | Missouri Tigers
 Avery Johnson | Wildcats
 Barry Sanders | Lions
 Bear Bachmeier | Cougars
@@ -139,9 +139,9 @@ Brian Dawkins | Eagles
 Brian Sipe | Browns
 Brian Urlacher | Bears
 Bruce Smith | Bills
-Bryant Wesco Jr. | Tigers
+Bryant Wesco Jr. | Clemson Tigers
 Bryce Underwood | Wolverines
-Caleb Hawkins | Cowboys
+Caleb Hawkins | Oklahoma State Cowboys
 Caleb Komolafe | Wildcats
 Calvin Hill | Cowboys
 Calvin Johnson | Lions
@@ -154,7 +154,7 @@ Charles Woodson | Packers
 Chris Henry Jr. | Buckeyes
 CJ Carr | Fighting Irish
 CJ Sadler | Tar Heels
-Corey Dailey | Panthers
+Corey Dailey | Pittsburgh Panthers
 Cris Carter | Vikings
 Dakorien Moore | Ducks
 Dallas Wilson | Gators
@@ -175,7 +175,7 @@ Don Beebe | Bills
 Donovan McNabb | Eagles
 Doug Flutie | Bills
 Drew Brees | Saints
-Drew Mestemaker | Cowboys
+Drew Mestemaker | Oklahoma State Cowboys
 Duce Staley | Eagles
 Dylan Lonergan | Scarlet Knights
 Dylan Raiola | Ducks
@@ -212,13 +212,13 @@ Jaron Pula | Cougars
 Jaron-Keawe Sagapolutele | Golden Bears
 Javian Osborne | Fighting Irish
 Javin Gordon | Volunteers
-Jayce Brown | Tigers
+Jayce Brown | LSU Tigers
 Jayden "Duke" Scott | Wolfpack
 Jayden Denegal | Aztecs
 Jayden Maiava | Trojans
 Jayden Wade | School
 Jeff Blake | Bengals
-Jekail Middlebrook | Cavaliers
+Jekail Middlebrook | Virginia Cavaliers
 Jeremiah Hasley | Blue Devils
 Jermichael Finley | Packers
 Jerome Bettis Jr. | Fighting Irish
@@ -259,7 +259,7 @@ Lawrence Taylor | Giants
 Le'Veon Bell | Steelers
 LeRoy Butler | Packers
 Luke Kuechly | Panthers
-Malachi Thomas | Tigers
+Malachi Thomas | LSU Tigers
 Mario Craver | Aggies
 Mark Bavaro | Giants
 Mark Bowman | Trojans
@@ -285,13 +285,13 @@ Raleek Brown | Longhorns
 Randall Cunningham | Eagles
 Randy Moss | Patriots
 Ray Lewis | Ravens
-Raycine Guillory Jr. | Tigers
+Raycine Guillory Jr. | LSU Tigers
 Ricky Williams | Saints
 Rob Gronkowski | Patriots
 Rocco Becht | Nittany Lions
 Roddy White | Falcons
 Roger Staubach | Cowboys
-Sam Leavitt | Tigers
+Sam Leavitt | LSU Tigers
 Stephen Davis | Redskins
 Sterling Sharpe | Packers
 Steve DeBerg | Buccaneers
@@ -302,7 +302,7 @@ Tavien St. Clair | Buckeyes
 Ted Hendricks | Raiders
 Terrell Davis | Broncos
 Thurman Thomas | Bills
-TJ Moore | Tigers
+TJ Moore | Clemson Tigers
 Tony Gonzalez | Falcons
 Torry Holt | Rams
 Trae Taylor | Cornhuskers
@@ -321,7 +321,7 @@ Zach Thomas | Dolphins
 A.J. Green | Bengals
 Aaron Donald | Rams
 Adrian Peterson | Vikings
-Ahmad Hardy | Tigers
+Ahmad Hardy | Missouri Tigers
 Ahman Green | Packers
 Andrew Marsh | Wolverines
 Antonio Brown | Steelers
@@ -338,7 +338,7 @@ Brian Dawkins | Eagles
 Brian Urlacher | Bears
 Bryce Underwood | Wolverines
 Ca'Lil Valentine | Fighting Illini
-Caleb Hawkins | Cowboys
+Caleb Hawkins | Oklahoma State Cowboys
 Calvin Johnson | Lions
 Cam Coleman | Longhorns
 Cameron Dickey | Red Raiders
@@ -359,7 +359,7 @@ Deion Sanders | Falcons
 Dez Bryant | Cowboys
 Donte Lee Jr. | Red Raiders
 Drew Brees | Saints
-Drew Mestemaker | Cowboys
+Drew Mestemaker | Oklahoma State Cowboys
 Earl Campbell | Oilers
 Earl Thomas III | Seahawks
 Eli Manning | Giants
@@ -374,7 +374,7 @@ Jaden Craig | Horned Frogs
 Jake Delhomme | Panthers
 Jared Allen | Vikings
 Jaron-Keawe Sagapolutele | Golden Bears
-Jayce Brown | Tigers
+Jayce Brown | LSU Tigers
 Jayden Maiava | Trojans
 Jerome Bettis Jr. | Fighting Irish
 Jim Harbaugh | Chargers
@@ -409,11 +409,11 @@ Micah Alejado | Rainbow Warriors
 Milan Parris | Hurricanes
 Nate Frazier | Bulldogs
 Pat Tillman | Cardinals
-Peyton Lewis | Cavaliers
-Phillip Wright III | Tigers
+Peyton Lewis | Virginia Cavaliers
+Phillip Wright III | LSU Tigers
 Randy Moss | Patriots
 Ray Lewis | Ravens
-Raycine Guillory Jr. | Tigers
+Raycine Guillory Jr. | LSU Tigers
 Ricky Williams | Dolphins
 Rob Gronkowski | Patriots
 Rocco Becht | Nittany Lions
@@ -421,13 +421,13 @@ Roddy White | Falcons
 Roger Craig | 49ers
 Roger Staubach | Cowboys
 Ryan Wingo | Longhorns
-Sam Leavitt | Tigers
+Sam Leavitt | LSU Tigers
 Sean Taylor | Redskins
 Stephen Davis | Redskins
 Steve Young | 49ers
 Terrell Davis | Broncos
 Terrell Suggs | Ravens
-TJ Moore | Tigers
+TJ Moore | Clemson Tigers
 Tony Dorsett | Cowboys
 Tony Gonzalez | Chiefs
 Trae Taylor | Cornhuskers
