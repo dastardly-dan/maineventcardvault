@@ -1079,6 +1079,24 @@ rgl6135 = dict(
              _src(RGL6135_LIB['xmen'], 'Topps Finest X-Men \'97'), _src(RGL6135_LIB['pixar'], 'Topps Pixar Gold')],
 )
 
+# RGL #6137 Pro Debut Half Case (Random Letter), posted Nov 25.
+RGL6137_H = 'rgl-6137-pro-debut-half-case-random-letter-11-25-26'
+rgl6137 = dict(
+    id='rgl6137', title='RGL #6137 Pro Debut Half Case (Random Letter)', kicker='Run Good Life · Random letter · MLB prospects',
+    url=rgl_url(RGL6137_H),
+    when=_when(WED, '9:45 pm', '12:45 am Thursday'),
+    facts=['4 boxes (half case)', '10 spots', '$98 per spot, fillers $24.50', 'Letters randomized live'],
+    format='random', checked='Spots were still for sale when checked on November 25, 2026, around 5:35 pm Eastern.',
+    boxes=[dict(k='prodebut', short='Pro Debut', c='#3ccf9a', full='2026 Topps Pro Debut Baseball Hobby (4 boxes)', kind='Minor league prospects, autographs, inserts',
+                types='Base cards of minor league prospects in their pro debut uniforms, parallels, inserts, and autographs.')],
+    spots=[],  # filled in below from the letters that have names
+    rules=[['How RGL groups the letters', ['RGL sells 10 spots, and how the letters are grouped into them is set live on stream; the listing doesn\'t post it.', 'This guide lists every letter on its own, so once you know your letters, look each one up here.']],
+           ['First letter of the name on the card', ['Letters here go by the first letter of the first name on the card (Aidan Miller is A). RGL\'s listing doesn\'t say first or last name, so check with RGL.']],
+           ['Cards with more than one player', ['Each person on a dual or multi-player card is listed under their own letter.', RGL_MULTI[1][0]]]],
+    notes=['Filler entries are sold too ($24.50 each); see RGL\'s listing for how fillers work.'],
+    sources=[['RGL #6137 break page (Run Good Life)', rgl_url(RGL6137_H)], _src('2026-topps-pro-debut-baseball', 'Topps Pro Debut Baseball')],
+)
+
 if __name__ == '__main__':
     built = []
     n, u = letter_break(cc871, WWE_PRODUCTS, wwe_gender); built.append(write(cc871, n, u))
@@ -1126,6 +1144,10 @@ if __name__ == '__main__':
     have = sorted({letters(n)[0] for p_ in p35.values() for n in entries_from_product(p_) if letters(n)[0].isalpha()})
     rgl6135['spots'] = [cc_spot(L, L) for L in have] + [cc_spot('# (numbers)', '#')]
     n, u = letter_break(rgl6135, p35, None, alt=False); built.append(write(rgl6135, n, u))
+    p37 = {'prodebut': lib_letter_product('2026-topps-pro-debut-baseball')}
+    have = sorted({letters(n)[0] for p_ in p37.values() for n in entries_from_product(p_) if letters(n)[0].isalpha()})
+    rgl6137['spots'] = [cc_spot(L, L) for L in have]
+    n, u = letter_break(rgl6137, p37, None, alt=False); built.append(write(rgl6137, n, u))
     for cfg, num, pick, prods in [
             (rgl6138, 6138, False, lambda: {'gilded': lib_mlb_product('2026-topps-gilded-collection-baseball'), 'cosmic': lib_mlb_product('2026-topps-cosmic-chrome-baseball')}),
             (rgl6139, 6139, False, NBA6131),
