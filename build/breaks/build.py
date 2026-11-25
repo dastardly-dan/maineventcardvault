@@ -992,31 +992,41 @@ rgl6136 = dict(
              _src('2026-bowman-football-sapphire-edition', 'Bowman Football Sapphire Edition'), SRC_INCEPTION],
 )
 
+RGL6138_H = 'rgl-6138-gilded-cosmic-random-team-11-25-26'
 rgl6138 = dict(
-    id='rgl6138', title='RGL #6138 Gilded & Cosmic MLB', kicker='Run Good Life · Team break (best guess) · MLB',
+    id='rgl6138', title='RGL #6138 Gilded & Cosmic (Random Team)', kicker='Run Good Life · Random team · MLB',
+    url=rgl_url(RGL6138_H),
     when=_when(WED, '10:30 pm', '1:30 am Thursday'),
-    facts=['Gilded Collection and Cosmic Chrome (best guess)', '30 teams'],
-    format='team', checked=DRAFT_NOTE + ' ' + "RGL hasn't said yet whether this break goes by letters or by teams. Our best guess is a team break, because RGL runs its baseball breaks by team, including both Gilded Collection breaks tonight. This guide is set up that way until the listing says otherwise.",
-    boxes=[dict(rgl6129['boxes'][2]),
-           dict(k='cosmic', short='Cosmic Chrome', c='#8a6be0', full='2026 Topps Cosmic Chrome Baseball', kind='Space-themed Chrome base, autographs, inserts',
-                types='Cosmic-themed Chrome base and Refractor parallels, inserts, and autographs.')],
+    facts=['6 boxes (4 listed here)', '20 spots for 30 teams', '$176 per spot, fillers $44', 'Teams randomized live'],
+    format='team', checked='Spots were still for sale when checked on November 25, 2026, around 6:15 pm Eastern.',
+    boxes=[dict(rgl6129['boxes'][4], full='2026 Topps Finest Baseball (1 Mega box)'),
+           dict(rgl6129['boxes'][2]),
+           dict(k='cosmic', short='Cosmic Chrome', c='#8a6be0', full='2026 Topps Cosmic Chrome Baseball Hobby', kind='Space-themed Chrome base, autographs, inserts',
+                types='Cosmic-themed Chrome base and Refractor parallels, inserts, and autographs.'),
+           dict(rgl6129['boxes'][1])],
     spots=list(MLB_RANDOM_SPOTS),
     rules=[RGL_LIVE_GROUPS, RGL_TEAM_RULE, RGL_MULTI],
-    notes=[DRAFT_NOTE, "RGL hasn't said yet whether this break goes by letters or by teams. Our best guess is a team break, because RGL runs its baseball breaks by team, including both Gilded Collection breaks tonight. This guide is set up that way until the listing says otherwise.", 'This guide lists every team on its own. If RGL sells it as pick your team, the spots will match these team names.'],
-    sources=[rgl6129['sources'][3], _src('2026-topps-cosmic-chrome-baseball', 'Topps Cosmic Chrome Baseball')],
+    notes=['Two boxes aren\'t in this guide yet because we don\'t have their checklists: 2026 Topps Pristine and 2026 Topps Chrome Black. Check those cards with RGL.',
+           'Cards are listed with the team the official checklist gives them. Expos cards are filed with the Nationals, old Cleveland cards with the Guardians and Washington Senators cards with the Twins.',
+           'Filler entries are sold too ($44 each); see RGL\'s listing for how fillers work.'],
+    sources=[['RGL #6138 break page (Run Good Life)', rgl_url(RGL6138_H)], rgl6129['sources'][5], rgl6129['sources'][3],
+             _src('2026-topps-cosmic-chrome-baseball', 'Topps Cosmic Chrome Baseball'), rgl6129['sources'][2]],
 )
 
+RGL6139_H = 'rgl-6139-joy-of-five-star-2-random-team-11-25-26'
 rgl6139 = dict(
-    id='rgl6139', title='RGL #6139 Joy of Five Star #2', kicker='Run Good Life · Random team (best guess) · NBA',
+    id='rgl6139', title='RGL #6139 Joy of Five Star #2 (Random Team)', kicker='Run Good Life · Random team · NBA',
+    url=rgl_url(RGL6139_H),
     when=_when(WED, '11:15 pm', '2:15 am Thursday'),
-    facts=['Same boxes as #6131 (best guess)', '30 teams', 'Teams randomized live'],
-    format='team', checked=DRAFT_NOTE + ' ' + "RGL hasn't said yet whether this break goes by letters or by teams. Our best guess is random team, because the first Joy of Five Star break tonight (#6131) is random team. This guide is set up that way until the listing says otherwise.",
+    facts=['5 boxes', '21 spots for 30 teams', '$290 per spot, fillers $29', 'Teams randomized live'],
+    format='team', checked='Spots were still for sale when checked on November 25, 2026, around 6:15 pm Eastern.',
     boxes=[dict(b) for b in rgl6131['boxes']],
     spots=[team_spot(tid(t), t, [t]) for t in NBA_TEAMS],
     rules=[RGL_LIVE_GROUPS, RGL_TEAM_RULE, RGL_MULTI],
-    notes=[DRAFT_NOTE, "RGL hasn't said yet whether this break goes by letters or by teams. Our best guess is random team, because the first Joy of Five Star break tonight (#6131) is random team. This guide is set up that way until the listing says otherwise.", 'The first Joy of Five Star (#6131) had 2 Stadium Club boxes, Five Star, the Bob Ross Joy of Basketball box and Flagship, so this guide uses those.',
-           'Seattle SuperSonics legends are filed with the Thunder here, since that\'s the same franchise today.'],
-    sources=list(rgl6131['sources'][1:]),
+    notes=['Same boxes as the first Joy of Five Star tonight (#6131): 2 Stadium Club boxes, Five Star, the Bob Ross Joy of Basketball box and Flagship.',
+           'Seattle SuperSonics legends are filed with the Thunder here, since that\'s the same franchise today.',
+           'Filler entries are sold too ($29 each); see RGL\'s listing for how fillers work.'],
+    sources=[['RGL #6139 break page (Run Good Life)', rgl_url(RGL6139_H)]] + list(rgl6131['sources'][1:]),
 )
 
 rgl6140 = dict(
@@ -1097,6 +1107,27 @@ rgl6137 = dict(
     sources=[['RGL #6137 break page (Run Good Life)', rgl_url(RGL6137_H)], _src('2026-topps-pro-debut-baseball', 'Topps Pro Debut Baseball')],
 )
 
+# RGL "#612XWWE2" Chrome in the Club PYL #2, posted Nov 25 without a real break number or start time. Same letters and
+# prices as #6128; boxes are #6128's minus the Chrome Hobby box. If RGL renumbers it, update the id note and title here.
+RGL612XWWE2_H = 'rgl-612xwwe2-chrome-in-the-club-pyl-2-pick-your-letter-first-name-11-25-26'
+rgl612xwwe2_avail = [1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1]
+rgl612xwwe2 = dict(
+    id='rgl612xwwe2', title='RGL Chrome in the Club PYL #2', kicker='Run Good Life · Pick your letter · WWE',
+    url=rgl_url(RGL612XWWE2_H),
+    when='Wednesday, November 25, 2026, on the Rungoodlife YouTube channel. RGL hasn\'t posted a start time yet.',
+    facts=['5 boxes', '27 letter spots', '$40 to $235 per spot'],
+    live=dict(shop='rgl', handle=RGL612XWWE2_H),
+    format='pyl', checked='Availability checked against Run Good Life\'s store data on November 25, 2026, around 6:15 pm Eastern: 21 of 27 spots open.',
+    boxes=[dict(rgl6128['boxes'][0]),
+           dict(rgl6128['boxes'][1], full='2026 Topps Chrome WWE Breaker\'s Delight (1 box)'),
+           rgl6128['boxes'][2], rgl6128['boxes'][3]],
+    spots=[dict(sp, status='open' if a else 'sold') for sp, a in zip(rgl6128_spots, rgl612xwwe2_avail)],
+    rules=list(rgl6128['rules']),
+    notes=['RGL listed this one as "#612XWWE2" with no start time yet; it will most likely get a real break number later.',
+           'Same letters and prices as the first Chrome in the Club PYL tonight (#6128), with one Chrome box (Breaker\'s Delight) instead of two.'] + list(rgl6128['notes']),
+    sources=[['RGL Chrome in the Club PYL #2 break page (Run Good Life)', rgl_url(RGL612XWWE2_H)]] + list(rgl6128['sources'][1:]),
+)
+
 if __name__ == '__main__':
     built = []
     n, u = letter_break(cc871, WWE_PRODUCTS, wwe_gender); built.append(write(cc871, n, u))
@@ -1148,9 +1179,11 @@ if __name__ == '__main__':
     have = sorted({letters(n)[0] for p_ in p37.values() for n in entries_from_product(p_) if letters(n)[0].isalpha()})
     rgl6137['spots'] = [cc_spot(L, L) for L in have]
     n, u = letter_break(rgl6137, p37, None, alt=False); built.append(write(rgl6137, n, u))
+    n, u = team_break(rgl6138, {'finest': lib_mlb_product('2026-topps-finest-baseball'), 'gilded': lib_mlb_product('2026-topps-gilded-collection-baseball'),
+        'cosmic': lib_mlb_product('2026-topps-cosmic-chrome-baseball'), 'update': lib_mlb_product('2026-topps-update-series-baseball')}); built.append(write(rgl6138, n, u))
+    n, u = team_break(rgl6139, NBA6131()); built.append(write(rgl6139, n, u))
+    n, u = letter_break(rgl612xwwe2, {'sc': gpk_fold(lib_letter_product('2026-topps-stadium-club-wwe')), 'chrome': gpk_fold(lib_letter_product('2026-topps-chrome-wwe')), 'nscc': nscc_product('WWE'), 'finest': lib_letter_product('2025-topps-finest-wwe')}, rgl_wwe_gender); built.append(write(rgl612xwwe2, n, u))
     for cfg, num, pick, prods in [
-            (rgl6138, 6138, False, lambda: {'gilded': lib_mlb_product('2026-topps-gilded-collection-baseball'), 'cosmic': lib_mlb_product('2026-topps-cosmic-chrome-baseball')}),
-            (rgl6139, 6139, False, NBA6131),
             (rgl6140, 6140, False, lambda: {'chrome': CH}),
             (rgl6143, 6143, False, lambda: {'five': lib_nba_product('2025-26-topps-five-star-basketball')})]:
         posted = rgl_draft(cfg, num, pick)
