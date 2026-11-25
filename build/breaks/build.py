@@ -811,7 +811,7 @@ GB1040_LIB = dict(chrome='2026-topps-chrome-football', ufc='2026-topps-midnight-
                   platinum='2025-topps-chrome-platinum-baseball', sc='2026-topps-stadium-club-wwe')
 gb1040 = dict(
     id='gb1040', title='GB1040 Multi Product Madness', kicker='Acme Packs · Random letter · Multi-sport · Letter spots are a guess',
-    url=ACME_BREAKS,
+    url=acme_url('gb1040-multi-product-madness-random-letters'),  # best guess from Acme's naming (Daniel, Nov 24); not posted yet, fix when the listing appears
     image='/breaks/img/gb1040.jpg',  # Daniel's screenshot of Acme's title card; remove once the listing's own image is in images.json
     when='Date and time to come. Acme hasn\'t posted this break on its site yet.',
     facts=['5 boxes', '21 letter spots (groupings are a guess)', '$135 per spot', 'Letters randomized live'],
