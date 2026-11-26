@@ -232,6 +232,17 @@ STREAMS = {
                         pages=['rgl6128', 'rgl612xwwe2'] + ['rgl%d' % n for n in range(6129, 6144)]),
 }
 VIDEO_OF = {pid: (vid, v['title']) for vid, v in STREAMS.items() for pid in v['pages']}
+# The watcher also records each breaker's current stream (watch/streams.json). RGL's product links end with the break
+# date (11-25-26), so a page whose link has the stream's date (Pacific) gets that stream unless STREAMS already set one.
+_SP = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'watch', 'streams.json')
+AUTO_STREAM = {}
+if os.path.exists(_SP):
+    from datetime import datetime as _dt
+    from zoneinfo import ZoneInfo as _Z
+    for _shop, _st in json.load(open(_SP)).items():
+        _when = _st.get('started') or _st.get('first_start')
+        if _st.get('video') and _when:
+            AUTO_STREAM[_shop] = (_st['video'], _st.get('title') or 'Break stream', _dt.fromisoformat(_when).astimezone(_Z('America/Los_Angeles')).strftime('%m-%d-%y'))
 
 def write(cfg, names, unmatched):
     data = dict(cfg)
@@ -242,6 +253,8 @@ def write(cfg, names, unmatched):
     if kr: data['rules'] = list(cfg.get('rules', [])) + [kr]
     if not data.get('image') and image_of(cfg.get('url')): data['image'] = image_of(cfg['url'])  # a config's own image wins
     if cfg['id'] in VIDEO_OF: data['video'], data['videoTitle'] = VIDEO_OF[cfg['id']]
+    elif cfg['id'].startswith('rgl') and 'rgl' in AUTO_STREAM and AUTO_STREAM['rgl'][2] in (cfg.get('url') or ''):
+        data['video'], data['videoTitle'] = AUTO_STREAM['rgl'][:2]
     if cfg.get('ended'): data['spots'] = [{k: v for k, v in s.items() if k != 'status'} for s in cfg['spots']]
     data['names'] = names
     data['unmatched'] = unmatched

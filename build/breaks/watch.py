@@ -107,6 +107,62 @@ def stats(posts):
     return '\n'.join(lines) + '\n'
 
 
+# ---- Streams (Daniel, Nov 25, 2026): note when a breaker's YouTube stream goes live, so the page builder can run every
+# 5 minutes for the first 4 hours of the stream. streams.json: {shop: {video, title, live, started, first_start}}.
+STREAM_PAGES = {'rgl': 'https://www.youtube.com/@RunGoodLife/live'}
+PT = ZoneInfo('America/Los_Angeles')
+MONTHS = {m: i for i, m in enumerate(['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september',
+                                      'october', 'november', 'december'], 1)}
+START_RE = re.compile(r'(?:ESTIMATED START TIME:|hosted by\b.*?\bon)\s*\w+day,\s*([A-Za-z]+)\s+(\d{1,2})\w*,?\s*(?:(\d{4})\s*)?@\s*(\d{1,2})(?::(\d{2}))?\s*([AP]M)\s*PT', re.I | re.S)
+
+def listing_start(text, now):
+    """The listing's estimated start time (RGL writes 'ESTIMATED START TIME: Wednesday, November 25th @ 8:45 PM PT')."""
+    m = START_RE.search(text or '')
+    if not m or m.group(1).lower() not in MONTHS:
+        return None
+    mon, day, yr, hr, mi, ap = MONTHS[m.group(1).lower()], int(m.group(2)), int(m.group(3) or now.year), int(m.group(4)), int(m.group(5) or 0), m.group(6).upper()
+    hr = hr % 12 + (12 if ap == 'PM' else 0)
+    try:
+        return datetime(yr, mon, day, hr, mi, tzinfo=PT).astimezone(timezone.utc)
+    except ValueError:
+        return None
+
+def youtube_live(url):
+    """(video id, title, live now) for a channel's /live page, or None. Best effort: YouTube may change its page."""
+    req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130 Safari/537.36',
+                                               'Accept-Language': 'en-US,en;q=0.9', 'Cookie': 'CONSENT=YES+1'})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        html = r.read().decode('utf-8', 'replace')
+    m = re.search(r'<link rel="canonical" href="https://www\.youtube\.com/watch\?v=([\w-]{11})"', html)
+    if not m:
+        return None
+    t = re.search(r'<meta name="title" content="([^"]*)"', html)
+    live = '"isLiveNow":true' in html or ('"isLive":true' in html and '"isUpcoming":true' not in html)
+    return m.group(1), (t.group(1) if t else ''), live
+
+def check_streams(items_by_shop, now_dt):
+    streams = load('streams.json', {})
+    for shop, url in STREAM_PAGES.items():
+        st = dict(streams.get(shop, {}))
+        starts = [listing_start(plain(p.get('body_html', '')), now_dt) for p in items_by_shop.get(shop, [])]
+        starts = sorted(x for x in starts if x and x > now_dt - __import__('datetime').timedelta(hours=12))
+        if starts:
+            st['first_start'] = starts[0].isoformat(timespec='minutes')
+        try:
+            yl = youtube_live(url)
+        except Exception as e:
+            print('warning: stream check', shop, e, file=sys.stderr); yl = None
+        if yl:
+            vid, title, live = yl
+            if vid != st.get('video'):
+                st.update(video=vid, title=title, started='')
+            if live and not st.get('started'):
+                st['started'] = now_dt.isoformat(timespec='minutes')
+            st['live'] = live
+        streams[shop] = st
+    return save('streams.json', streams)
+
+
 def main():
     os.makedirs(OUT, exist_ok=True)
     now = datetime.now(timezone.utc).isoformat(timespec='seconds')
@@ -118,12 +174,14 @@ def main():
     known_posts = {(p['shop'], p['handle']) for p in posts}
     changed = False
     errors = []
+    by_shop = {}
     for shop, origin in SHOPS.items():
         try:
             items = products(shop, origin)
         except Exception as e:  # one store being down shouldn't stop the rest
             errors.append(f'{shop}: {e}')
             continue
+        by_shop[shop] = items
         handles = [p['handle'] for p in items]
         imgs = {}
         for p in items:
@@ -152,6 +210,7 @@ def main():
                 queue.append(dict(event='removed', shop=shop, first_seen=now, handle=h, url=f'{origin}/products/{h}'))
         if sorted(handles) != sorted(before):
             seen[shop] = sorted(handles)
+    changed |= check_streams(by_shop, datetime.now(timezone.utc))
     changed |= save('images.json', images)
     changed |= save('seen.json', seen)
     changed |= save('queue.json', queue)

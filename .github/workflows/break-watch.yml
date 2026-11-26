@@ -1,11 +1,11 @@
-# Checks Acme Packs, JWJ, Colfax and Run Good Life for new or removed products every 15 minutes
+# Checks Acme Packs, JWJ, Colfax and Run Good Life for new or removed products every 5 minutes, and whether RGL's YouTube stream is live,
 # and commits what it finds to build/breaks/watch/ (only when something changed).
 # A scheduled Claude task reads build/breaks/watch/queue.json and builds the break pages.
 name: Break watcher
 
 on:
   schedule:
-    - cron: "7,22,37,52 * * * *"
+    - cron: "*/5 * * * *"
   workflow_dispatch:
   push:
     branches: [main]
