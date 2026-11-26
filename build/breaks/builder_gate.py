@@ -2,7 +2,8 @@
 
 The page builder fires every 5 minutes. It works on every run during the first 4 hours of a breaker's stream, and
 otherwise once every 30 minutes. Acme posts new breaks Tuesdays and Thursdays at 1:00 pm Eastern, so it also works
-on every run from 1:03 to 1:45 pm Eastern on those days. The stream start is the moment the watcher saw the breaker's YouTube stream go live. The watcher starts looking
+on every run from 1:03 to 1:45 pm Eastern on those days. JWJ posts Fridays at 6 pm Eastern (6:03 to 6:45 pm the same way).
+Colfax posts Fridays (for Sunday) and Mondays (for Tuesday) at no set time, so the half-hourly checks cover it. The stream start is the moment the watcher saw the breaker's YouTube stream go live. The watcher starts looking
 2 hours before the first scheduled break; if it never finds the stream, the first scheduled break time stands in.
 
 Prints one line: "RUN stream ...", "RUN half-hourly" or "SKIP ...".
@@ -42,6 +43,8 @@ def main(now=None):
     et = now.astimezone(ZoneInfo('America/New_York'))
     if et.weekday() in (1, 3) and et.hour == 13 and 3 <= et.minute <= 45:
         return 'RUN Acme posting window (Tuesday and Thursday, 1 pm Eastern)'
+    if et.weekday() == 4 and et.hour == 18 and 3 <= et.minute <= 45:
+        return 'RUN JWJ posting window (Friday, 6 pm Eastern)'
     if now.minute % 30 < 5:
         return 'RUN half-hourly'
     return 'SKIP no stream in its first 4 hours; next half-hourly check at :00 or :30'

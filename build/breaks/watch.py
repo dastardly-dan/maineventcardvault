@@ -109,7 +109,39 @@ def stats(posts):
 
 # ---- Streams (Daniel, Nov 25, 2026): note when a breaker's YouTube stream goes live, so the page builder can run every
 # 5 minutes for the first 4 hours of the stream. streams.json: {shop: {video, title, live, started, first_start}}.
-STREAM_PAGES = {'rgl': 'https://www.youtube.com/@RunGoodLife/live'}
+STREAM_PAGES = {'rgl': 'https://www.youtube.com/@RunGoodLife/live', 'colfax': None, 'jwj': None}  # None: read the channel link off the store's homepage
+# Weekly stream times Daniel sent (Nov 25, 2026), used when the listings don't give a start time.
+# (weekday Monday=0, hour, minute, time zone)
+WEEKLY = {'colfax': [(6, 17, 0, 'America/Chicago'), (1, 18, 0, 'America/Chicago')],   # Sundays 5 pm and Tuesdays 6 pm Central
+          'jwj': [(0, 20, 0, 'America/New_York')]}                                  # Mondays 8 pm Eastern
+YT_LINK = re.compile(r'https?://(?:www\.)?youtube\.com/(@[\w.-]+|channel/[\w-]+|c/[\w-]+|user/[\w-]+)')
+
+def channel_live_url(shop, st):
+    """The breaker's YouTube /live page, found once on its store homepage and remembered in streams.json."""
+    if STREAM_PAGES.get(shop):
+        return STREAM_PAGES[shop]
+    if not st.get('channel'):
+        req = urllib.request.Request(SHOPS[shop], headers={'User-Agent': UA['User-Agent']})
+        with urllib.request.urlopen(req, timeout=30) as r:
+            m = YT_LINK.search(r.read().decode('utf-8', 'replace'))
+        if not m:
+            return None
+        st['channel'] = 'https://www.youtube.com/' + m.group(1)
+    return st['channel'].rstrip('/') + '/live'
+
+def weekly_start(shop, now_dt):
+    """The scheduled stream start closest to now (looking from 12 hours back to a day ahead), or None."""
+    best = None
+    for wd, h, mi, tz in WEEKLY.get(shop, []):
+        z = ZoneInfo(tz); local = now_dt.astimezone(z)
+        for back in range(-1, 2):
+            d = (local - __import__('datetime').timedelta(days=back)).date()
+            if d.weekday() != wd:
+                continue
+            t = datetime(d.year, d.month, d.day, h, mi, tzinfo=z).astimezone(timezone.utc)
+            if now_dt - __import__('datetime').timedelta(hours=12) <= t <= now_dt + __import__('datetime').timedelta(days=1):
+                best = t if best is None or t < best else best
+    return best
 PT = ZoneInfo('America/Los_Angeles')
 MONTHS = {m: i for i, m in enumerate(['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september',
                                       'october', 'november', 'december'], 1)}
@@ -142,19 +174,26 @@ def youtube_live(url):
 
 def check_streams(items_by_shop, now_dt):
     streams = load('streams.json', {})
-    for shop, url in STREAM_PAGES.items():
+    for shop in STREAM_PAGES:
         st = dict(streams.get(shop, {}))
         starts = [listing_start(plain(p.get('body_html', '')), now_dt) for p in items_by_shop.get(shop, [])]
         starts = sorted(x for x in starts if x and x > now_dt - __import__('datetime').timedelta(hours=12))
+        wk = weekly_start(shop, now_dt)
+        if wk:
+            starts = sorted(starts + [wk])
         if starts:
             st['first_start'] = starts[0].isoformat(timespec='minutes')
         # Look for the stream from 2 hours before the first scheduled break (Daniel, Nov 25), and keep checking while it's live.
         fs = datetime.fromisoformat(st['first_start']) if st.get('first_start') else None
         looking = st.get('live') or (fs is not None and fs - __import__('datetime').timedelta(hours=2) <= now_dt <= fs + __import__('datetime').timedelta(hours=10))
         yl = None
-        if looking:
+        try:
+            live_url = channel_live_url(shop, st)  # finds and remembers the channel even outside stream times
+        except Exception as e:
+            print('warning: channel link', shop, e, file=sys.stderr); live_url = None
+        if looking and live_url:
             try:
-                yl = youtube_live(url)
+                yl = youtube_live(live_url)
             except Exception as e:
                 print('warning: stream check', shop, e, file=sys.stderr)
         if not looking and st.get('live'):

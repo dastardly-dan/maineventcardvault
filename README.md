@@ -229,7 +229,10 @@ team spot, box by box. Linked from the storefront's Breaks menu; every page carr
       breaker's stream (the watcher starts looking for the YouTube stream 2 hours before the first scheduled break and
       records the moment it goes live in `watch/streams.json`; only if it never finds the stream does the first
       scheduled break time stand in), from 1:03 to 1:45 pm Eastern on Tuesdays and Thursdays (Acme posts at 1 pm Eastern), and
-      once every 30 minutes otherwise. On SKIP it ends with "No new breaks." and nothing else. The watcher runs every 5 minutes.
+      once every 30 minutes otherwise. Also from 6:03 to 6:45 pm Eastern on Fridays (JWJ posts at 6 pm Eastern). Weekly
+      stream times: Colfax Sundays 5 pm and Tuesdays 6 pm Central, JWJ Mondays 8 pm Eastern (`WEEKLY` in `watch.py`);
+      RGL's come from its listings. Colfax and JWJ channel links are read from their store homepages. Procedure for
+      each run: `build/breaks/page_builder.md`. On SKIP it ends with "No new breaks." and nothing else. The watcher runs every 5 minutes.
   3e. The watcher workflow now rebuilds the break pages and the Break guides page after every check, so new title card
       images show up without a builder run. A page picks up its breaker's title card from `images.json`
       as long as its `url` is the product link.
