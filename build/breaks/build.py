@@ -878,6 +878,7 @@ rgl6132 = dict(
     notes=['"Finish the Case" means these 6 Absolute boxes complete a case RGL started in an earlier break.', 'Filler entries are sold too ($33 each); see RGL\'s listing for how fillers work.'],
     sources=[['RGL #6132 break page (Run Good Life)', rgl_url(RGL6132_H)], SRC_CHROME, SRC_ABSOLUTE],
 )
+close(rgl6132, 'Wednesday, November 25, 2026', ['7 boxes', '24 spots for 32 teams', '$132 per spot'])  # stream showed #6133 running (Nov 25, 8:48 pm Eastern)
 
 RGL6133_H = 'rgl-6133-immaculate-nascar-random-letter-11-25-26'
 rgl6133 = dict(
@@ -891,8 +892,8 @@ rgl6133 = dict(
                 types='Base with Prizm parallels, inserts, and driver autographs.'),
            dict(cc875['boxes'][1], full='2026 Panini Immaculate Collection Racing (2 boxes)')],
     spots=[],  # filled in below from the letters that have names
-    rules=[['How RGL groups the letters', ['RGL sells 9 spots, and how the letters are grouped into them is set live on stream; the listing doesn\'t post it.', 'This guide lists every letter on its own, so once you know your letters, look each one up here.']],
-           ['First letter of the printed name', ['Letters here go by the first letter of the name on the card, which for drivers is the first name (Chase Elliott is C). RGL\'s listing doesn\'t say first or last name, so check with RGL.']],
+    rules=[['How the spots were set', ['RGL set the letter groups live on stream. This guide follows the board RGL showed: 13 groups, with C and J split on the second letter (CA-CH and CI-CY, JA-JE and JI-JY).']],
+           ['First letter of the first name', ['RGL\'s board says first name, so Chase Elliott is C (CA-CH) and Joey Logano is J (JI-JY).']],
            ['Multi-driver cards', ['Each person on a dual or multi-driver card is listed under their own letter.', RGL_MULTI[1][0]]]],
     notes=['The listing says "2026 Select Hobby" and "2025 Prizm Hobby"; in a NASCAR break these are Panini Select Racing and Prizm Racing.',
            'Filler entries are sold too ($34.50 each); see RGL\'s listing for how fillers work.'],
@@ -1274,7 +1275,10 @@ if __name__ == '__main__':
     n, u = team_break(rgl6132, {'chrome': CH, 'absolute': absolute_product(roster)}); built.append(write(rgl6132, n, u))
     nas = {'select': lib_letter_product('2026-panini-select-nascar'), 'prizm': lib_letter_product('2025-panini-prizm-racing'), 'immaculate': lib_letter_product('2026-panini-immaculate-collection-nascar')}
     have = sorted({letters(n)[0] for p_ in nas.values() for n in entries_from_product(p_) if letters(n)[0]})
-    rgl6133['spots'] = [cc_spot(L, L) for L in have]
+    # RGL's board on stream (Nov 25, 8:48 pm Eastern), first name; C and J split on the second letter
+    rgl6133['spots'] = [cc_spot('A & N', 'AN'), cc_spot('B', 'B'), cc_spot('CA-CH', pre=[('CA', 'CH')]), cc_spot('CI-CY', pre=[('CI', 'CY')]),
+        cc_spot('D', 'D'), cc_spot('E-F-G-H', 'EFGH'), cc_spot('JA-JE', pre=[('JA', 'JE')]), cc_spot('JI-JY', pre=[('JI', 'JY')]),
+        cc_spot('K', 'K'), cc_spot('L-M-W', 'LMW'), cc_spot('R', 'R'), cc_spot('S-P-V-Z', 'SPVZ'), cc_spot('T', 'T')]
     n, u = letter_break(rgl6133, nas, None, alt=False); built.append(write(rgl6133, n, u))
     g40 = {k: (gpk_fold(lib_letter_product(v)) if k == 'sc' else lib_letter_product(v)) for k, v in GB1040_LIB.items()}
     have = sorted({letters(n)[0] for p_ in g40.values() for n in entries_from_product(p_) if letters(n)[0].isalpha()})
