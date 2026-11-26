@@ -483,6 +483,10 @@ table.rows td small { color: var(--ink-3); }
           <label class="f" style="margin-top:12px">Superstar boost</label>
           <div class="seg" id="boost"><button data-v="off">Off</button><button data-v="normal">Normal</button><button data-v="strong">Strong</button><button data-v="max">Max</button></div>
           <div class="hint">How far the big names pull away from everyone else. Each player's points are raised to a power (so a star in many hit sets counts far more than a role player), and in team breaks a team counts its best players fully and gives a little less credit to each one after that, so a deep roster of role players doesn't add up to a star. Strong is the default; Off is the old straight sum.</div>
+          <label class="f" style="margin-top:12px">Market prices (eBay)</label>
+          <div class="seg" id="mkt"><button data-v="off">Off</button><button data-v="light">Light</button><button data-v="normal">Normal</button><button data-v="strong">Strong</button></div>
+          <div class="hint">Gives names that sell higher on eBay a bit more weight. It looks at the typical Buy It Now asking price for each player's cards from the same product. Names with no price, or a price at or below the typical, stay as they are. Asking prices, not sales, and prices fill in over a few days.</div>
+          <div class="hint" id="mktnote"></div>
           <div id="heyopt" class="heyopt" hidden>
             <label class="f" style="margin-top:12px">Paul Heyman spot</label>
             <div class="seg" id="heyman"><button data-v="off">Off</button><button data-v="own">Break him out</button></div>
@@ -727,6 +731,8 @@ Bianca Belair | W | auto</pre>
           <div>
             <h5>Superstar boost: Off, Normal, Strong, Max</h5>
             <p>Added after breakers said stars weren't pulling away enough in pick-your-team breaks. Each player's points are raised to a power against the typical player, so a star in many hit sets counts far more than a role player, and in team breaks a team counts its best player fully and each one after a little less. On 2026 Topps Chrome Baseball, 30 teams, the Dodgers go from 5x the cheapest team (Off) to about 9x (Strong), and the middle teams spread out instead of bunching. Strong is the default.</p>
+            <h5>Market prices (eBay): Off, Light, Normal, Strong</h5>
+            <p>Uses what each player's cards are listed for on eBay as a rough sign of who buyers want. Every day a job looks up the typical Buy It Now asking price for each player's single cards from the same product (not sales, and not graded cards). A name priced above the typical priced name in your boxes gets extra points; names with no price, or a price at or below the typical, are left alone, and nothing counts for more than 3 times its normal points. Light is a nudge, Strong leans hard on the market. It starts Off so your numbers don't change until you turn it on, and the line under the setting says how many names in your boxes have a price. Prices fill in over a few days and not every product has them yet.</p>
             <h5>Star names</h5>
             <p>One per line, "name | multiplier". The multiplier scales that name's points, so "John Cena | 5" makes him count five times as much. Leave the number off and it uses 3. A short name works if it's a whole word in the full name, so "Cena | 5" also catches John Cena. In team breaks, a team name works the same way: "Yankees | 2".</p>
             <p><b>Paul Heyman spot</b> (WWE breaks with Paul Heyman in them): for the breaks where Paul Heyman cards are sexy. "Break him out" gives him a spot of his own, and "How sexy is Paul Heyman?" sets its weight, from A little sexy (his normal points) up to Paul Heyman Guy approved (10x). The other spots share the rest, and your spot count stays the same.</p>
@@ -918,7 +924,7 @@ Bianca Belair | W | auto</pre>
   function fold(t) { return String(t).normalize("NFD").replace(/[̀-ͯ]/g, ""); }
 
   // ---------- settings ----------
-  var S = { init: false, tidy: "simple", qty: {}, n: 21, goal: "", group: "free", prefix: "on", gender: "auto", rule: "first", nick: "printed", wb: 1, wa: 2, wi: 0.5, wm: 0.5, stars: "", paste: "", split: "letters", tgroup: "free", nil: "own", depth: "normal", boost: "strong", heyman: "off", sexy: "3", cost: {}, extra: "", fee: 10, profit: 20, floor: "", setp: {}, excl: [] };
+  var S = { init: false, tidy: "simple", qty: {}, n: 21, goal: "", group: "free", prefix: "on", gender: "auto", rule: "first", nick: "printed", wb: 1, wa: 2, wi: 0.5, wm: 0.5, stars: "", paste: "", split: "letters", tgroup: "free", nil: "own", depth: "normal", boost: "strong", mkt: "off", heyman: "off", sexy: "3", cost: {}, extra: "", fee: 10, profit: 20, floor: "", setp: {}, excl: [] };
   try { var saved = JSON.parse(localStorage.getItem(SKEY) || "null"); if (saved) for (var k in saved) S[k] = saved[k]; } catch (e) {}
   if (!S.cost || typeof S.cost !== "object") S.cost = {};
   if (!Array.isArray(S.excl)) S.excl = [];
@@ -1059,7 +1065,7 @@ Bianca Belair | W | auto</pre>
       b.onclick = function () { S[id] = b.getAttribute("data-v"); seg(id); go(); };
     });
   }
-  ["group", "prefix", "gender", "rule", "nick", "tidy", "split", "tgroup", "nil", "depth", "boost", "heyman"].forEach(seg);
+  ["group", "prefix", "gender", "rule", "nick", "tidy", "split", "tgroup", "nil", "depth", "boost", "mkt", "heyman"].forEach(seg);
   $("sexy").value = String(S.sexy || "3"); $("sexy").addEventListener("change", function () { S.sexy = this.value; go(); });
   ["n", "goal", "wb", "wa", "wi", "wm", "extra", "fee", "profit", "floor"].forEach(function (id) { $(id).value = S[id]; $(id).addEventListener("input", function () { S[id] = $(id).value; go(); }); });
   ["stars", "paste"].forEach(function (id) { $(id).value = S[id]; $(id).addEventListener("input", function () { S[id] = $(id).value; go(); }); });
@@ -1104,23 +1110,29 @@ Bianca Belair | W | auto</pre>
   }
   // superstar boost: [power on each player's points, falloff for a team's 2nd, 3rd... best player]
   var BOOST = { off: [1, 1], normal: [1.5, 0.92], strong: [2, 0.85], max: [2.5, 0.8] };
+  // market prices: a name's eBay price over the typical priced name's price, raised to this power; only ever a boost, capped at 3x
+  var MKT = { off: 0, light: 0.25, normal: 0.5, strong: 0.8 };
+  function pkey(n) { return fold(n).toLowerCase().replace(/[^a-z]/g, ""); }
   function collect() {
     var wb = +S.wb || 0, wa = +S.wa || 0, wi = +S.wi || 0, wm = +S.wm || 0;
     var map = {}, boxes = 0;
     var dpow = S.depth === "strong" ? 0.8 : S.depth === "off" ? 0 : 0.5;
     function dm(n) { return dpow && n > 0 && n !== 1 ? Math.pow(n, dpow) : 1; }
     function tv(n) { return n < 0 ? 1 : n === 0 ? 0 : dpow ? Math.pow(n, dpow) : 1; }
+    var curPX = null, mdate = "";
     function add(name, flags, g, q, team, sport, dep, typed) {
       dep = dep || [1, 1, 1];
       var f = typed ? tv : dm, d = typed || dep;
       var w = (flags.indexOf("B") > -1 ? wb : 0) + (flags.indexOf("A") > -1 ? wa * f(d[0]) : 0) + (flags.indexOf("I") > -1 ? wi * f(d[1]) : 0) + (flags.indexOf("M") > -1 ? wm * f(d[2]) : 0);
       var r = map[name] || (map[name] = { n: name, w: 0, g: "", a: false, teams: {} });
       r.w += w * q; if (g) r.g = g; if (flags.indexOf("A") > -1) r.a = true;
+      if (curPX) { var pv = curPX[pkey(name)]; if (pv) { r.pxs = (r.pxs || 0) + pv * q; r.pxq = (r.pxq || 0) + q; } }
       if (team) String(team).split("/").forEach(function (t) { t = t.trim(); if (t) r.teams[t] = sport || 1; });
     }
     var sports = {};
     entries().forEach(function (e) {
       var p = e.p, q = e.q; boxes += q; sports[p.sport] = 1;
+      curPX = p.px || null; if (p.pxd && p.pxd > mdate) mdate = p.pxd;
       if (!p.types) { p.rows.forEach(function (r) { add(r[0], r[1], r[2], q, r[3], p.sport, r[4]); }); return; }
       // box types: each set counts by its odds in this box type next to the typical set of its kind; sets not in this box count 0
       var ti = e.t, M = boxMults(p, ti);
@@ -1131,6 +1143,7 @@ Bianca Belair | W | auto</pre>
         add(r[0], r[1], r[2], q, r[3], p.sport, null, [has[0] ? v[0] : -1, has[1] ? v[1] : -1, has[2] ? v[2] : -1]);
       });
     });
+    curPX = null;
     String(S.paste || "").split(/\n/).forEach(function (l) {
       var parts = l.split("|").map(function (x) { return x.trim(); }); if (!parts[0]) return;
       var g = "", f = "B";
@@ -1147,6 +1160,17 @@ Bianca Belair | W | auto</pre>
       var L = letters(r.n); r.L = L[0]; r.L2 = L[1];
       if (r.g !== "F") r.g = "M";
     });
+    // market prices (eBay): names that sell above the typical priced name get a boost; unpriced or cheaper names are left alone
+    var mk = MKT[S.mkt] || 0, priced = list.filter(function (r) { return r.pxq; }), note = $("mktnote");
+    if (mk && priced.length >= 8) {
+      var pv2 = priced.map(function (r) { return r.pxs / r.pxq; }).sort(function (a, b) { return a - b; }), pref = pv2[Math.floor(pv2.length / 2)] || 1;
+      priced.forEach(function (r) { var m = Math.min(3, Math.max(1, Math.pow(r.pxs / r.pxq / pref, mk))); r.w *= m; });
+    }
+    if (note) {
+      var when = mdate ? new Date(mdate + "T12:00:00").toLocaleDateString("en-US", { month: "long", day: "numeric" }) : "";
+      note.textContent = !priced.length ? "No eBay prices on file for these boxes yet." : priced.length < 8 ? "Only " + priced.length + " names in these boxes have an eBay price, which is too few to use." :
+        (mk ? "Using" : "Available:") + " eBay prices for " + priced.length + " of " + list.length + " names in these boxes" + (when ? " (checked " + when + ")" : "") + ".";
+    }
     // superstar boost: each player's points raised to a power, measured against the typical player, so a star pulls away from role players
     var sk = BOOST[S.boost] ? BOOST[S.boost][0] : 1;
     if (sk !== 1 && list.length) {

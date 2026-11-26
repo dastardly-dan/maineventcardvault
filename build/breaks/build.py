@@ -200,18 +200,16 @@ def mark_kabooms(cfg, names):
     return ['Kabooms in this break', ['Kaboom is Panini\'s rare comic-style insert. ' + str(n) + ' players have one in the Absolute checklist; each is tagged KABOOM in the spot their Kaboom card goes to. Panini doesn\'t say how many are in a case, so a full case may have none or a few.']
             + [lab[sid] + ': ' + ', '.join(sorted(set(by_spot[sid]), key=lambda x: fold(x).lower())) for sid in order]]
 
-# eBay asking prices (Daniel, Nov 24), filled in by prices.py from eBay's Browse API. Each name in a break that
-# hasn't run gets a target "<product> <player>"; a typical price shows next to the name once prices.py has one.
-_pp = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'watch', 'prices.json')
-PRICES = json.load(open(_pp, encoding='utf-8')) if os.path.exists(_pp) else {}
+# eBay asking prices (Daniel, Nov 24; changed Nov 25): prices.py looks up "<product> <player>" for every name in these
+# breaks and saves watch/prices.json. Break pages never show them (Daniel's call after a breaker's concern); the Spot
+# Builder (builder.py) reads them as an optional "Market prices" weighting instead. This only registers the targets.
 PRICE_TARGETS = {}
 def box_query(b):
     q = re.sub(r'\(.*?\)', '', b['full'])
     q = re.sub(r'\b(Hobby|Jumbo|Mega|Blaster|Value|Boxes|Box|Case|Breaker\'s Delight)\b', '', q)
     return ' '.join(q.split())
-def add_prices(cfg, names, show=True):
-    """registers each player for the daily eBay price job; when show, adds the typical asking price as e[3] and returns the newest price date used"""
-    newest = ''
+def add_prices(cfg, names):
+    """registers each player for the daily eBay price job (nothing is added to the page)"""
     for b in cfg['boxes']:
         bq = box_query(b)
         for boxes in names.values():
@@ -220,10 +218,6 @@ def add_prices(cfg, names, show=True):
                 if not player: continue
                 q = bq + ' ' + player
                 PRICE_TARGETS[q] = {'q': q, 'player': player}
-                pr = PRICES.get(q)
-                if show and pr and pr[0]:
-                    del e[3:]; e.append(pr[0]); newest = max(newest, pr[3])
-    return newest
 
 # Breaker streams (Daniel, Nov 25, 2026): the page shows the YouTube player in place of the title card.
 # One stream covers a whole break night, so each video lists the pages it covers. After the stream ends the same link is the replay.
@@ -258,10 +252,7 @@ def auto_stream(cfg):
 
 def write(cfg, names, unmatched):
     data = dict(cfg)
-    # eBay prices (Daniel, Nov 25): looked up for every break, but shown only after a break has run, so open breaks
-    # don't turn into "my spot was worth less than yours" comparisons
-    d = add_prices(cfg, names, show=bool(cfg.get('ended')))
-    if d and cfg.get('ended'): data['priced'] = d
+    add_prices(cfg, names)   # eBay prices feed the Spot Builder only; break pages never show them
     data['breakerName'] = cfg.get('kicker', '').split(' · ')[0]
     kr = mark_kabooms(cfg, names)
     if kr: data['rules'] = list(cfg.get('rules', [])) + [kr]

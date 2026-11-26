@@ -128,7 +128,12 @@
     [
      "Updated",
      "Break pages",
-     "eBay asking prices will show on a break's page only after the break has run."
+     "Break pages don't show eBay prices at all."
+    ],
+    [
+     "New",
+     "Spot builder",
+     "Market prices setting: names that sell higher on eBay get a bit more weight when the builder splits spots. It starts Off, and the builder never shows the prices themselves."
     ],
     [
      "Updated",

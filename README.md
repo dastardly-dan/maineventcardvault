@@ -216,8 +216,8 @@ team spot, box by box. Linked from the storefront's Breaks menu; every page carr
       posts them. If a listing leaves something out, say plainly that the breaker hasn't posted it and point to the
       breaker; letter pages may sort by first name but must say the listing doesn't say which the breaker uses.
       No drafts: the old draft machinery in build.py has an empty list. Every break page shows "A guide, not a
-      guarantee" (template.html). eBay asking prices are collected for all breaks but shown only after a break
-      has run (write() in build.py).
+      guarantee" (template.html). eBay asking prices are never shown on break pages (Daniel, Nov 25); they only
+      feed the Spot Builder's Market prices setting (3g).
   3l. Stream check (Daniel, Nov 25, 2026): two scheduled tasks on Daniel's computer (:15 and :45) run
       `build/breaks/stream_gate.py`. While a stream is live they open one of our break pages, play the embedded stream,
       read the break number on RGL's overlay and close earlier breaks; when the stream ends they close that night's
@@ -246,8 +246,15 @@ team spot, box by box. Linked from the storefront's Breaks menu; every page carr
   3g. eBay prices (Daniel, Nov 24): `build/breaks/prices.py` (workflow `break-prices.yml`, daily and on demand) looks up
       eBay Buy It Now asking prices through the Browse API for every "<product> <player>" in `watch/price_targets.json`
       (written by build.py for breaks that haven't run) and saves the median of raw single-card listings to
-      `watch/prices.json`. Pages show it next to each name, labeled as an asking price with the date. Needs repository
-      secrets EBAY_CLIENT_ID and EBAY_CLIENT_SECRET. Market Movers is off limits: its terms ban scraping and reposting.
+      `watch/prices.json`. Break pages do not show prices (changed Nov 25, 2026, after a breaker's concern). `builder.py`
+      reads prices.json and embeds a whole-dollar price per name (`px`, matched to a checklist by the product name with box
+      words removed, same as build.py's box_query) into builder.html; the Spot Builder's "Market prices" setting (Off by
+      default; Light, Normal, Strong) uses it only as a boost: a name priced above the typical priced name in the chosen boxes
+      gets (price / typical) ^ 0.25, 0.5 or 0.8 times its points, capped at 3x, and unpriced or cheaper names are left alone.
+      The builder shows how many names have a price but never the prices. A price is refreshed every 14 days (KEEP_DAYS).
+      Only products that appear in a built break page have targets so far, so other checklists have no prices yet.
+      Needs repository secrets EBAY_CLIENT_ID and EBAY_CLIENT_SECRET. Market Movers is off limits: its terms ban scraping
+      and reposting.
   3h. Past breaks (Daniel, Nov 24): closed breaks drop off the hub but are listed on `breaks/past.html` (hub.py), newest
       first by the date in `when`, with search, breaker and month filters. The footer link sits next to Release notes.
   3d. Early pages (Daniel, Nov 24): a break can be built from a title card before the listing is posted (gb1040 was).

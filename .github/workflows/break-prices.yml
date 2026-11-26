@@ -1,5 +1,6 @@
 # Once a day, looks up eBay Buy It Now asking prices for the names in the breaks that haven't run yet
-# (build/breaks/prices.py, eBay Browse API) and rebuilds the break pages so the prices show next to each name.
+# (build/breaks/prices.py, eBay Browse API) and rebuilds the Spot Builder, which uses them for its "Market prices"
+# setting. Break pages do not show prices.
 # Needs two repository secrets from a free eBay developer account (production keyset):
 #   EBAY_CLIENT_ID      the App ID (Client ID)
 #   EBAY_CLIENT_SECRET  the Cert ID (Client Secret)
@@ -32,9 +33,10 @@ jobs:
           EBAY_CLIENT_ID: ${{ secrets.EBAY_CLIENT_ID }}
           EBAY_CLIENT_SECRET: ${{ secrets.EBAY_CLIENT_SECRET }}
         run: python build/breaks/prices.py
-      - name: Rebuild the break pages
+      - name: Rebuild the break pages and the Spot Builder
         run: |
           python build/breaks/build.py > /dev/null
+          python build/breaks/builder.py > /dev/null
           python build/breaks/hub.py > /dev/null
       - name: Commit
         run: |

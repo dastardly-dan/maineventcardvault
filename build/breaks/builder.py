@@ -58,6 +58,15 @@ def parse(path):
     return dict(id=pid, name=meta.get('name', pid), sport=meta.get('sport', 'Other'), added=meta.get('added', ''),
                 source=meta.get('source', ''), note=meta.get('note', ''), gender=any(r[2] == 'F' for r in rows), rows=rows)
 
+def key_of(n):
+    return ' '.join(re.sub(r'"[^"]*"', '', n).split())
+
+def box_query(name):
+    """same product text the eBay price job searches for (build.py box_query)"""
+    q = re.sub(r'\(.*?\)', '', name)
+    q = re.sub(r"\b(Hobby|Jumbo|Mega|Blaster|Value|Boxes|Box|Case|Breaker's Delight)\b", '', q)
+    return ' '.join(q.split())
+
 def dkey(n):
     import unicodedata
     n = unicodedata.normalize('NFKD', n).encode('ascii', 'ignore').decode().lower()
@@ -85,6 +94,17 @@ def main():
             del r[4:]
             v = t['players'].get(dkey(r[0]))
             if v: r.append(v)
+    # eBay asking prices (watch/prices.json, from prices.py) as a rough star index for the "Market prices" setting.
+    # Only a whole-dollar price per name goes into the page, and the page never shows it: the builder just uses it as weight.
+    pp = os.environ.get('BUILDER_PRICES') or os.path.join(HERE, 'watch', 'prices.json')
+    PR = json.load(open(pp, encoding='utf-8')) if os.path.exists(pp) else {}
+    for p in prods:
+        bq, px, newest = box_query(p['name']), {}, ''
+        for r in p['rows']:
+            v = PR.get(bq + ' ' + key_of(r[0]))
+            if v and v[0]:
+                px[dkey(r[0])] = max(1, int(round(v[0]))); newest = max(newest, v[3])
+        if px: p['px'] = px; p['pxd'] = newest
     order = ['WWE', 'MLW', 'UFC', 'MMA', 'NFL', 'NBA', 'WNBA', 'NBL', 'EuroLeague', 'MLB', 'USA Baseball', 'Soccer', 'F1', 'NASCAR', 'Olympics', 'Marvel', 'Star Wars', 'Disney', 'Pokemon', 'Entertainment', 'Leaf Football', 'Leaf Baseball', 'Leaf Basketball', 'Leaf Hockey', 'Leaf Soccer', 'Leaf Tennis', 'Leaf Lacrosse', 'Leaf Wrestling & MMA', 'Leaf Multi-Sport', 'Leaf Pop Culture', 'Other']
     prods.sort(key=lambda p: (order.index(p['sport']) if p['sport'] in order else 99, p['name']))
     css = open(os.path.join(HERE, 'base.css')).read()
@@ -97,7 +117,7 @@ def main():
     shutil.copyfile(os.path.join(HERE, 'embed_template.html'), os.path.join(ROOT, 'breaks', 'embed.html'))
     out = os.path.join(ROOT, 'breaks', 'builder.html')
     open(out, 'w', encoding='utf-8').write(html)
-    print('builder.html', len(html), 'bytes,', len(prods), 'checklists,', sum(len(p['rows']) for p in prods), 'names')
+    print('builder.html', len(html), 'bytes,', len(prods), 'checklists,', sum(len(p['rows']) for p in prods), 'names,', sum(len(p.get('px', ())) for p in prods), 'with an eBay price')
 
 if __name__ == '__main__':
     main()

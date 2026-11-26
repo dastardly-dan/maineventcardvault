@@ -1,4 +1,5 @@
-"""eBay asking prices for the names in the current breaks (Daniel, Nov 24, 2026).
+"""eBay asking prices for the names in the breaks (Daniel, Nov 24, 2026). Since Nov 25 they feed the Spot Builder's
+"Market prices" setting (builder.py reads watch/prices.json); break pages never show them.
 
 Uses eBay's Browse API (free developer account, application token) to look at current Buy It Now listings for
 "<product> <player>" in Sports Trading Card Singles, and keeps a rough typical price per player per product:
@@ -19,7 +20,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 WATCH = os.path.join(HERE, 'watch')
 MAX_CALLS = int(os.environ.get('PRICE_MAX_CALLS', '4500'))
 TIME_BUDGET = int(os.environ.get('PRICE_TIME_BUDGET', str(60 * 60)))   # seconds; stop well before the job limit and keep what we have
-KEEP_DAYS = 3                      # a price newer than this isn't looked up again
+KEEP_DAYS = 14                     # a price newer than this isn't looked up again (the builder only needs a rough star index)
 CATEGORY = '261328'                # eBay: Sports Trading Cards > Trading Card Singles
 SKIP = re.compile(r'\b(lots?|you pick|pick your|choose|complete set|team set|base set|psa|bgs|sgc|cgc|graded|slab(bed)?|'
                   r'box|packs?|break|digital|reprint|custom|rp|u-?pick)\b', re.I)
