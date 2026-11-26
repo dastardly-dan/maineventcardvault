@@ -448,7 +448,7 @@ mark { background: #fff1a8; }
     hi.href = D.url; hi.querySelector("img").src = D.image; hi.querySelector("img").alt = D.title + " title card";
     hi.hidden = false; document.getElementById("hero").classList.add("hasimg"); hi.querySelector("img").onerror = function () { hi.hidden = true; document.getElementById("hero").classList.remove("hasimg"); };
   }
-  document.getElementById("facts").innerHTML = '<li><b>' + esc(D.when) + "</b></li>" + D.facts.map(function (f) { return "<li>" + esc(f) + "</li>"; }).join("") + '<li><a href="' + D.url + '" target="_blank" rel="noopener">Break page</a></li>';
+  document.getElementById("facts").innerHTML = '<li><b>' + esc(D.when) + "</b></li>" + D.facts.map(function (f) { return "<li>" + esc(f) + "</li>"; }).join("") + '<li><a href="' + D.url + '" target="_blank" rel="noopener">Break page</a></li><li><button class="btn gold" id="inbtn" type="button"></button></li><li class="sub" id="innote" hidden>You have saved spots or checked pulls here, so this break stays on your list. Clear them to take it off.</li>';
   document.getElementById("checked").textContent = D.checked;
   document.getElementById("guide").innerHTML = "<b>A guide, not a guarantee.</b> " + esc(D.breakerName || "The breaker") + "'s posted rules come first, and a name on a checklist isn't a chase: hits come down to pack odds and print runs.";
   var LIVE_SRC = LIVE && D.live ? D.live : null;
@@ -475,7 +475,22 @@ mark { background: #fff1a8; }
     if (om) om.onclick = function () { onlyMine = !onlyMine; drawMine(); drawGrid(); if (onlyMine) location.hash = "#/spots"; };
     document.getElementById("clearmine").onclick = function () { store.save([]); onlyMine = false; redrawMine(); };
   }
+  // "I'm in this break": a note kept in this browser (all breaks share one list, "mecv-in") so Break guides and Past breaks can
+  // flag the breaks you bought into, before you know which spot you got. Saving a spot or checking a pull marks it too.
+  var INKEY = "mecv-in";
+  function inAll() { var a = []; try { a = JSON.parse(localStorage.getItem(INKEY) || "[]"); } catch (e) {} return Array.isArray(a) ? a : []; }
+  function inHas() { return inAll().indexOf(D.id) > -1; }
+  function inSet(on) { var a = inAll(), i = a.indexOf(D.id); if (on && i < 0) a.push(D.id); else if (!on && i > -1) a.splice(i, 1); try { a.length ? localStorage.setItem(INKEY, JSON.stringify(a)) : localStorage.removeItem(INKEY); } catch (e) {} }
+  function inKept() { return store.all().length > 0 || got.all().length > 0; }
+  function drawIn() {
+    var btn = document.getElementById("inbtn"), note = document.getElementById("innote"); if (!btn) return;
+    var kept = inKept(), on = inHas() || kept;
+    btn.textContent = on ? "You're in this break" : "I'm in this break"; btn.classList.toggle("gold", !on); btn.setAttribute("aria-pressed", on ? "true" : "false");
+    if (!kept) note.hidden = true;
+    btn.onclick = function () { if (inKept()) { note.hidden = false; return; } inSet(!inHas()); drawIn(); };
+  }
   function redrawMine() {
+    drawIn();
     drawMine(); drawGrid(); if (pickBox) drawPick();
     var m = location.hash.match(/^#\/spot\/(.+)$/); if (m) drawSpot(decodeURIComponent(m[1]));
   }
@@ -686,7 +701,7 @@ mark { background: #fff1a8; }
     if (ev.target.closest && ev.target.closest("a.wk")) return;   // the Wikipedia link just opens; it doesn't check the name off
     var el = ev.target.closest && ev.target.closest(".g[data-g]"); if (!el) return;
     if (ev.type === "keydown") { if (ev.key !== "Enter" && ev.key !== " ") return; ev.preventDefault(); }
-    var k = el.getAttribute("data-g"); got.toggle(k); syncG(k); drawPulls();
+    var k = el.getAttribute("data-g"); got.toggle(k); syncG(k); drawPulls(); drawIn();
   }
   document.addEventListener("click", hitG); document.addEventListener("keydown", hitG);
   function drawPulls() {
@@ -812,7 +827,7 @@ mark { background: #fff1a8; }
       })
       .catch(function () {});
   }
-  drawStatic(); drawLiveFact(); drawPick(); drawGrid(); drawMine(); route();
+  drawStatic(); drawLiveFact(); drawPick(); drawGrid(); drawMine(); drawIn(); route();
   if (LIVE_SRC) {
     refreshLive();
     setInterval(refreshLive, 60000);

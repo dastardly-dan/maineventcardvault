@@ -10,6 +10,25 @@ order = ['cc871', 'cc872', 'cc873', 'cc874', 'cc875', 'jwj0246', 'jwj0247', 'jwj
 def is_past(i): return bool(i.get('ended')) or 'has passed' in i['when']
 items.sort(key=lambda x: (is_past(x), order.index(x['id'])))
 def esc(s): return s.replace('&','&amp;').replace('<','&lt;')
+
+# "I'm in this break" (Daniel, Nov 26): break pages keep a list of the breaks you bought into in this browser ("mecv-in"; saving a spot
+# or checking a pull counts too). The Break guides list and Past breaks flag those with a "You're in" badge, and Past breaks gets a My breaks filter.
+IN_CSS = '.inb { display: inline-block; margin-bottom: 8px; padding: 2px 10px; border-radius: 999px; background: var(--gold); color: #1a1405; font-size: 11px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; }\n'
+IN_SCRIPT = """<script>(function () {
+  var ts = document.querySelectorAll("a.tile[href^='/breaks/']"), s = {}, a = [], n = 0;
+  try { a = JSON.parse(localStorage.getItem("mecv-in") || "[]"); } catch (e) {}
+  (Array.isArray(a) ? a : []).forEach(function (x) { s[x] = 1; });
+  [].forEach.call(ts, function (t) {
+    var id = t.getAttribute("href").slice(8);
+    try { ["mine", "got"].forEach(function (k) { var v = localStorage.getItem("mecv-" + id + "-" + k); if (v && v !== "[]") s[id] = 1; }); } catch (e) {}
+    if (!s[id]) return;
+    n++; t.setAttribute("data-in", "1");
+    var k = t.querySelector(".kicker"); if (k) k.insertAdjacentHTML("beforebegin", '<div class="inb">You\\'re in</div>');
+  });
+  var pb = document.getElementById("pb");
+  if (pb && n) pb.insertAdjacentHTML("beforeend", '<button class="chip" data-b="__mine">My breaks (' + n + ')</button>');
+})();</script>
+"""
 EDGE = {'gb': '#4c9a2a', 'jwj': '#c2452c', 'cc': '#8a3fd6', 'rgl': '#3b7be0'}  # breaker colors: Acme green, JWJ rust, Colfax purple
 def edge(i): return next((c for k, c in EDGE.items() if i['id'].startswith(k)), 'var(--line)')
 # Each breaker's own title card image for the break (Daniel, Nov 24), from the watcher's images.json, keyed by store and
@@ -39,13 +58,14 @@ html = f'''<!DOCTYPE html>
 .tile .thumb {{ margin: -4px -4px 12px; border-radius: 10px; overflow: hidden; line-height: 0; }}
 .tile .thumb img {{ width: 100%; height: auto; display: block; }}
 /*BMENU-CSS*//*/BMENU-CSS*/
-</style></head><body>
+{IN_CSS}</style></head><body>
 <header class="site"><div class="wrap"><div class="bar"><a class="brand" href="/"><img src="{icon}" alt=""><div><b class="display">Main Event Card Vault</b><span>Break guides</span></div></a><!--BMENU--><!--/BMENU--></div></div></header>
 <div class="wrap hero"><div class="kicker">Spot guides</div><h1 class="display">Break guides</h1>
 <p class="lede">Who you could pull in each spot, box by box, built from the published checklists. Pick-your-letter breaks show which spots are still open and what they cost.</p></div>
 <main class="wrap"><a class="tile" href="/breaks/builder" style="display:block;margin-bottom:18px;border-color:var(--gold)"><div class="kicker" style="font-size:11px">Breaker tool</div><div class="lab display" style="font-size:26px;margin-top:6px">Spot builder</div><div class="peek" style="margin-top:6px">Pick checklists, set a spot count, and get the most evenly balanced letter spots, with optional pricing.</div></a><div class="grid">{cards}</div>{"" if not up else '<p class="sub" style="margin-top:22px">Looking for a break that already ran? Its guide is still up on <a href="/breaks/past">Past breaks</a>.</p>'}</main>
 <footer><div class="wrap">Main Event Card Vault. Reference only; confirm checklists and house rules with the breaker. <a href="/breaks/release-notes">Release notes</a> · <a href="/breaks/past">Past breaks</a></div></footer>
 </body></html>'''
+html = html.replace('</body>', IN_SCRIPT + '</body>')
 open(os.path.join(ROOT,'breaks','index.html'),'w').write(html)
 print(len(html))
 
@@ -217,19 +237,20 @@ pb = f'''<!DOCTYPE html>
 #pb .chip {{ cursor: pointer; font: inherit; font-size: 13.5px; padding: 7px 13px; border-radius: 999px; background: var(--bg-2); color: var(--ink-2); border: 1px solid var(--line-2); }}
 #pb .chip.on {{ background: var(--gold); color: #1a1405; border-color: var(--gold); font-weight: 600; }}
 /*BMENU-CSS*//*/BMENU-CSS*/
-</style></head><body>
+{IN_CSS}</style></head><body>
 <header class="site"><div class="wrap"><div class="bar"><a class="brand" href="/"><img src="{icon}" alt=""><div><b class="display">Main Event Card Vault</b><span>Past breaks</span></div></a><!--BMENU--><!--/BMENU--></div></div></header>
 <div class="wrap hero"><div class="kicker">Archive</div><h1 class="display">Past breaks</h1>
-<p class="lede">Breaks that have already run, newest first. Each guide is still up, so you can look back at who was in every spot and check off what you pulled.</p></div>
+<p class="lede">Breaks that have already run, newest first. Each guide is still up, so you can look back at who was in every spot and check off what you pulled.</p>
+<p class="lede" style="margin-top:8px">Bought into a break? Open its guide and tap <b>I'm in this break</b>, even if you don't know your spot yet. It gets a "You're in" badge here and under a <b>My breaks</b> filter. Saved only in this browser.</p></div>
 <main class="wrap">{past_tools}<div class="grid" id="pgrid">{past_cards}</div><p class="sub" id="pnone" hidden>No past breaks match. Try another search or clear the filters.</p></main>
 <footer><div class="wrap">Main Event Card Vault. <a href="/breaks/">All break guides</a> · <a href="/breaks/release-notes">Release notes</a></div></footer>
-<script>(function () {{
+{IN_SCRIPT}<script>(function () {{
   var q = document.getElementById("pq"); if (!q) return;
   var m = document.getElementById("pm"), bs = document.querySelectorAll("#pb .chip"), ts = document.querySelectorAll("#pgrid .tile"), b = "";
   function go() {{
     var w = q.value.trim().toLowerCase().split(/\\s+/).filter(Boolean), n = 0;
     ts.forEach(function (t) {{
-      var ok = (!b || t.getAttribute("data-b") === b) && (!m.value || t.getAttribute("data-m") === m.value) && w.every(function (x) {{ return t.getAttribute("data-q").indexOf(x) > -1; }});
+      var ok = (!b || (b === "__mine" ? t.getAttribute("data-in") === "1" : t.getAttribute("data-b") === b)) && (!m.value || t.getAttribute("data-m") === m.value) && w.every(function (x) {{ return t.getAttribute("data-q").indexOf(x) > -1; }});
       t.hidden = !ok; if (ok) n++;
     }});
     document.getElementById("pcount").textContent = n === ts.length ? ts.length + " past breaks" : "Showing " + n + " of " + ts.length + " past breaks";
