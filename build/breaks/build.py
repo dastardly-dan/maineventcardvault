@@ -1183,6 +1183,54 @@ rgl6137 = dict(
     sources=[['RGL #6137 break page (Run Good Life)', rgl_url(RGL6137_H)], _src('2026-topps-pro-debut-baseball', 'Topps Pro Debut Baseball')],
 )
 
+# RGL "#612xMarvel" Marvel Neon & Mint (Random Letter), posted Nov 25 with a placeholder break number. The listing's body text
+# still shows RGL #6123 and a November 21 start, so no current start time is posted. Boxes come from the listing's product list.
+RGL612XMARVEL_H = 'rgl-612xmarvel-marvel-neon-mint-random-letter-11-25-26'
+RGL612XMARVEL_LIB = dict(neon='2026-topps-neon-marvel', mintm='2026-topps-mint-marvel', aura='2025-kakawow-aura-marvel')
+rgl612xmarvel = dict(
+    id='rgl612xmarvel', title='RGL Marvel Neon & Mint (Random Letter)', kicker='Run Good Life · Random letter · Marvel',
+    url=rgl_url(RGL612XMARVEL_H),
+    when='Wednesday, November 25, 2026, on the Rungoodlife YouTube channel. RGL hasn\'t posted a current start time.',
+    facts=['4 boxes', '13 spots', '$122 per spot, fillers $30.50', 'Letters randomized live'],
+    format='random', checked='Spots were still for sale when checked on November 25, 2026, around 8:40 pm Eastern.',
+    boxes=[dict(k='neon', short='Marvel Neon', c='#c86bff', full='2026 Topps Marvel Neon Hobby (2 boxes)', kind='Marvel characters, neon-style parallels, inserts',
+                types='Base with neon parallels, inserts, and autographs.'),
+           dict(k='mintm', short='Marvel Mint', c='#e2545e', full='2026 Topps Marvel Mint (1 box)', kind='Marvel characters, Chrome cards and an encased hit',
+                types='Chrome base and parallels, inserts, encased hits and autographs.'),
+           dict(k='aura', short='Kakawow Aura', c='#f2c14e', full='2025 Kakawow Marvel Aura (1 box)', kind='Marvel characters, Aura parallels, Script Art cards',
+                types='Base characters with parallels, inserts, and Script Art cards (facsimile signatures, counted as autographs).')],
+    spots=[],  # filled in below from the letters that have names
+    rules=[['How RGL groups the letters', ['RGL sells 13 spots, and how the letters are grouped into them is set live on stream; the listing doesn\'t post it.', 'This guide lists every letter on its own, so once you know your letters, look each one up here.']],
+           ['First letter of the name on the card', ['Letters here go by the first letter of the character\'s name as printed (Spider-Man is S, Captain America is C). RGL\'s listing doesn\'t say how it handles characters, so check with RGL.']],
+           ['Cards with more than one character', ['Each character on a dual or multi-character card is listed under their own letter.', RGL_MULTI[1][0]]]],
+    notes=['RGL listed this one as "#612xMarvel" with no real break number. The text inside the listing still says RGL #6123 and a November 21 start, so it looks copied from an older break. The boxes here follow the listing\'s product list; check the number, date and boxes with RGL.',
+           'Filler entries are sold too ($30.50 each); see RGL\'s listing for how fillers work.'],
+    sources=[['RGL Marvel Neon & Mint break page (Run Good Life)', rgl_url(RGL612XMARVEL_H)], _src(RGL612XMARVEL_LIB['neon'], 'Topps Neon Marvel'),
+             _src(RGL612XMARVEL_LIB['mintm'], 'Topps Mint Marvel'), _src(RGL612XMARVEL_LIB['aura'], 'Kakawow Aura Marvel')],
+)
+
+# RGL #6142 UFC Royalty Mixer (Random Letter), posted Nov 25. Only the 2026 Topps Chrome UFC checklist is in the library; the
+# listing's other three boxes (Stadium Club, Finest, Royalty) have no checklist here yet.
+RGL6142_H = 'rgl-6141-royalty-half-case-2-random-letter-11-25-26'
+rgl6142 = dict(
+    id='rgl6142', title='RGL #6142 UFC Royalty Mixer (Random Letter)', kicker='Run Good Life · Random letter · UFC',
+    url=rgl_url(RGL6142_H),
+    when=_when(THU, '1:30 am', '4:30 am'),
+    facts=['4 boxes (1 listed here)', '15 spots', '$128 per spot, fillers $32', 'Letters randomized live'],
+    format='random', checked='Spots were still for sale when checked on November 25, 2026, around 8:40 pm Eastern.',
+    boxes=[dict(k='chrome', short='Chrome UFC', c='#e2545e', full='2026 Topps Chrome UFC Hobby (1 box)', kind='UFC fighters, Chrome base, Refractors, autographs',
+                types='Chrome base and parallels, inserts, and autographs.')],
+    spots=[],  # filled in below from the letters that have names
+    rules=[['How RGL groups the letters', ['RGL sells 15 spots, and how the letters are grouped into them is set live on stream; the listing doesn\'t post it.', 'This guide lists every letter on its own, so once you know your letters, look each one up here.']],
+           ['First letter of the name on the card', ['Letters here go by the first letter of the first name on the card (Alex Pereira is A). RGL\'s listing doesn\'t say first or last name, so this guide sorts by first name; check with RGL.']],
+           ['Cards with more than one fighter', ['Each person on a dual or multi-fighter card is listed under their own letter.', RGL_MULTI[1][0]]]],
+    notes=['Three of the four boxes are not in this guide yet because we don\'t have their checklists: Topps Stadium Club, Topps Finest and Topps Royalty. The listing doesn\'t name the sport for its boxes; the title says UFC. The listing says 2026 Topps Royalty, and the only Royalty UFC list we have is the 2025 one, so it isn\'t used here. Check those cards with RGL.',
+           'RGL\'s listing says Wednesday, November 25 at 1:30 am Pacific, which had already passed when it was posted; this guide treats it as the overnight slot after Wednesday\'s stream, early Thursday, like #6141. Check with RGL.',
+           'RGL reused the link from an earlier draft of this product, so the link says 6141.',
+           'Filler entries are sold too ($32 each); see RGL\'s listing for how fillers work.'],
+    sources=[['RGL #6142 break page (Run Good Life)', rgl_url(RGL6142_H)], _src('2026-topps-chrome-ufc', 'Topps Chrome UFC')],
+)
+
 # RGL "#612XWWE2" Chrome in the Club PYL #2, posted Nov 25 without a real break number or start time. Same letters and
 # prices as #6128; boxes are #6128's minus the Chrome Hobby box. If RGL renumbers it, update the id note and title here.
 RGL612XWWE2_H = 'rgl-612xwwe2-chrome-in-the-club-pyl-2-pick-your-letter-first-name-11-25-26'
@@ -1264,6 +1312,14 @@ if __name__ == '__main__':
     have = sorted({letters(n)[0] for p_ in p41.values() for n in entries_from_product(p_) if letters(n)[0].isalpha()})
     rgl6141['spots'] = [cc_spot(L, L) for L in have] + [cc_spot('# (numbers)', '#')]
     n, u = letter_break(rgl6141, p41, None, alt=False); built.append(write(rgl6141, n, u))
+    p612 = {k: lib_letter_product(v) for k, v in RGL612XMARVEL_LIB.items()}
+    have = sorted({letters(n)[0] for p_ in p612.values() for n in entries_from_product(p_) if letters(n)[0].isalpha()})
+    rgl612xmarvel['spots'] = [cc_spot(L, L) for L in have] + [cc_spot('# (numbers)', '#')]
+    n, u = letter_break(rgl612xmarvel, p612, None, alt=False); built.append(write(rgl612xmarvel, n, u))
+    p42 = {'chrome': lib_letter_product('2026-topps-chrome-ufc')}
+    have = sorted({letters(n)[0] for p_ in p42.values() for n in entries_from_product(p_) if letters(n)[0].isalpha()})
+    rgl6142['spots'] = [cc_spot(L, L) for L in have]
+    n, u = letter_break(rgl6142, p42, None, alt=False); built.append(write(rgl6142, n, u))
     for cfg, num, pick, prods in [
             ]:
         posted = rgl_draft(cfg, num, pick)

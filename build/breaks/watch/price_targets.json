@@ -1,5 +1,497 @@
 [
 {
+"q": "2025 Kakawow Marvel Aura Aero",
+"player": "Aero"
+},
+{
+"q": "2025 Kakawow Marvel Aura Angel",
+"player": "Angel"
+},
+{
+"q": "2025 Kakawow Marvel Aura Ant-Man",
+"player": "Ant-Man"
+},
+{
+"q": "2025 Kakawow Marvel Aura Avengers Disassembled",
+"player": "Avengers Disassembled"
+},
+{
+"q": "2025 Kakawow Marvel Aura BLACK PANTHER",
+"player": "BLACK PANTHER"
+},
+{
+"q": "2025 Kakawow Marvel Aura BLACK WIDOW",
+"player": "BLACK WIDOW"
+},
+{
+"q": "2025 Kakawow Marvel Aura Bishop",
+"player": "Bishop"
+},
+{
+"q": "2025 Kakawow Marvel Aura Black Bolt",
+"player": "Black Bolt"
+},
+{
+"q": "2025 Kakawow Marvel Aura Black Cat",
+"player": "Black Cat"
+},
+{
+"q": "2025 Kakawow Marvel Aura Black Panther",
+"player": "Black Panther"
+},
+{
+"q": "2025 Kakawow Marvel Aura Black Widow",
+"player": "Black Widow"
+},
+{
+"q": "2025 Kakawow Marvel Aura Blade",
+"player": "Blade"
+},
+{
+"q": "2025 Kakawow Marvel Aura Bullseye",
+"player": "Bullseye"
+},
+{
+"q": "2025 Kakawow Marvel Aura CYCLOPS",
+"player": "CYCLOPS"
+},
+{
+"q": "2025 Kakawow Marvel Aura Cable",
+"player": "Cable"
+},
+{
+"q": "2025 Kakawow Marvel Aura Captain America",
+"player": "Captain America"
+},
+{
+"q": "2025 Kakawow Marvel Aura Captain Marvel",
+"player": "Captain Marvel"
+},
+{
+"q": "2025 Kakawow Marvel Aura Carnage",
+"player": "Carnage"
+},
+{
+"q": "2025 Kakawow Marvel Aura Civil War",
+"player": "Civil War"
+},
+{
+"q": "2025 Kakawow Marvel Aura Cyclops",
+"player": "Cyclops"
+},
+{
+"q": "2025 Kakawow Marvel Aura DAREDEVIL",
+"player": "DAREDEVIL"
+},
+{
+"q": "2025 Kakawow Marvel Aura DOCTOR STRANGE",
+"player": "DOCTOR STRANGE"
+},
+{
+"q": "2025 Kakawow Marvel Aura Daredevil",
+"player": "Daredevil"
+},
+{
+"q": "2025 Kakawow Marvel Aura Daredevil: Born Again",
+"player": "Daredevil: Born Again"
+},
+{
+"q": "2025 Kakawow Marvel Aura Dark Phoenix",
+"player": "Dark Phoenix"
+},
+{
+"q": "2025 Kakawow Marvel Aura Deadpool",
+"player": "Deadpool"
+},
+{
+"q": "2025 Kakawow Marvel Aura Doctor Doom",
+"player": "Doctor Doom"
+},
+{
+"q": "2025 Kakawow Marvel Aura Doctor Doom's Triumph and Fall",
+"player": "Doctor Doom's Triumph and Fall"
+},
+{
+"q": "2025 Kakawow Marvel Aura Doctor Octopus",
+"player": "Doctor Octopus"
+},
+{
+"q": "2025 Kakawow Marvel Aura Doctor Strange",
+"player": "Doctor Strange"
+},
+{
+"q": "2025 Kakawow Marvel Aura Elektra",
+"player": "Elektra"
+},
+{
+"q": "2025 Kakawow Marvel Aura Emma Frost",
+"player": "Emma Frost"
+},
+{
+"q": "2025 Kakawow Marvel Aura Falcon",
+"player": "Falcon"
+},
+{
+"q": "2025 Kakawow Marvel Aura Fantastic Four",
+"player": "Fantastic Four"
+},
+{
+"q": "2025 Kakawow Marvel Aura Fear Itself",
+"player": "Fear Itself"
+},
+{
+"q": "2025 Kakawow Marvel Aura Gamora",
+"player": "Gamora"
+},
+{
+"q": "2025 Kakawow Marvel Aura Ghost Rider",
+"player": "Ghost Rider"
+},
+{
+"q": "2025 Kakawow Marvel Aura Ghost-Spider",
+"player": "Ghost-Spider"
+},
+{
+"q": "2025 Kakawow Marvel Aura Groot",
+"player": "Groot"
+},
+{
+"q": "2025 Kakawow Marvel Aura Gwenpool",
+"player": "Gwenpool"
+},
+{
+"q": "2025 Kakawow Marvel Aura HULK",
+"player": "HULK"
+},
+{
+"q": "2025 Kakawow Marvel Aura HUMAN TORCH",
+"player": "HUMAN TORCH"
+},
+{
+"q": "2025 Kakawow Marvel Aura Hawkeye",
+"player": "Hawkeye"
+},
+{
+"q": "2025 Kakawow Marvel Aura Hela",
+"player": "Hela"
+},
+{
+"q": "2025 Kakawow Marvel Aura Howard The Duck",
+"player": "Howard The Duck"
+},
+{
+"q": "2025 Kakawow Marvel Aura Hulk",
+"player": "Hulk"
+},
+{
+"q": "2025 Kakawow Marvel Aura Human Torch",
+"player": "Human Torch"
+},
+{
+"q": "2025 Kakawow Marvel Aura IRON MAN",
+"player": "IRON MAN"
+},
+{
+"q": "2025 Kakawow Marvel Aura Infinity Gauntlet",
+"player": "Infinity Gauntlet"
+},
+{
+"q": "2025 Kakawow Marvel Aura Invisible Woman",
+"player": "Invisible Woman"
+},
+{
+"q": "2025 Kakawow Marvel Aura Iron Fist",
+"player": "Iron Fist"
+},
+{
+"q": "2025 Kakawow Marvel Aura Iron Man",
+"player": "Iron Man"
+},
+{
+"q": "2025 Kakawow Marvel Aura Jean Grey",
+"player": "Jean Grey"
+},
+{
+"q": "2025 Kakawow Marvel Aura Kang",
+"player": "Kang"
+},
+{
+"q": "2025 Kakawow Marvel Aura Loki",
+"player": "Loki"
+},
+{
+"q": "2025 Kakawow Marvel Aura M.O.D.O.K.",
+"player": "M.O.D.O.K."
+},
+{
+"q": "2025 Kakawow Marvel Aura MAGNETO",
+"player": "MAGNETO"
+},
+{
+"q": "2025 Kakawow Marvel Aura Magneto",
+"player": "Magneto"
+},
+{
+"q": "2025 Kakawow Marvel Aura Malekith",
+"player": "Malekith"
+},
+{
+"q": "2025 Kakawow Marvel Aura Medusa",
+"player": "Medusa"
+},
+{
+"q": "2025 Kakawow Marvel Aura Miles Morales",
+"player": "Miles Morales"
+},
+{
+"q": "2025 Kakawow Marvel Aura Mister Fantastic",
+"player": "Mister Fantastic"
+},
+{
+"q": "2025 Kakawow Marvel Aura Mjolnir",
+"player": "Mjolnir"
+},
+{
+"q": "2025 Kakawow Marvel Aura Moon Knight",
+"player": "Moon Knight"
+},
+{
+"q": "2025 Kakawow Marvel Aura Morbius",
+"player": "Morbius"
+},
+{
+"q": "2025 Kakawow Marvel Aura Ms. Marvel",
+"player": "Ms. Marvel"
+},
+{
+"q": "2025 Kakawow Marvel Aura Ms. Marvel Returns",
+"player": "Ms. Marvel Returns"
+},
+{
+"q": "2025 Kakawow Marvel Aura Ms.America",
+"player": "Ms.America"
+},
+{
+"q": "2025 Kakawow Marvel Aura Mysterio",
+"player": "Mysterio"
+},
+{
+"q": "2025 Kakawow Marvel Aura Mystique",
+"player": "Mystique"
+},
+{
+"q": "2025 Kakawow Marvel Aura Namor",
+"player": "Namor"
+},
+{
+"q": "2025 Kakawow Marvel Aura Proxima Midnight",
+"player": "Proxima Midnight"
+},
+{
+"q": "2025 Kakawow Marvel Aura Psylocke",
+"player": "Psylocke"
+},
+{
+"q": "2025 Kakawow Marvel Aura Quicksilver",
+"player": "Quicksilver"
+},
+{
+"q": "2025 Kakawow Marvel Aura Red Hulk",
+"player": "Red Hulk"
+},
+{
+"q": "2025 Kakawow Marvel Aura Rocket Raccoon",
+"player": "Rocket Raccoon"
+},
+{
+"q": "2025 Kakawow Marvel Aura SCARLET WITCH",
+"player": "SCARLET WITCH"
+},
+{
+"q": "2025 Kakawow Marvel Aura SILVER SURFER",
+"player": "SILVER SURFER"
+},
+{
+"q": "2025 Kakawow Marvel Aura SPIDER-MAN",
+"player": "SPIDER-MAN"
+},
+{
+"q": "2025 Kakawow Marvel Aura Sabretooth",
+"player": "Sabretooth"
+},
+{
+"q": "2025 Kakawow Marvel Aura Sandman",
+"player": "Sandman"
+},
+{
+"q": "2025 Kakawow Marvel Aura Scarlet Witch",
+"player": "Scarlet Witch"
+},
+{
+"q": "2025 Kakawow Marvel Aura Secret Invasion",
+"player": "Secret Invasion"
+},
+{
+"q": "2025 Kakawow Marvel Aura Secret Wars",
+"player": "Secret Wars"
+},
+{
+"q": "2025 Kakawow Marvel Aura Shang-Chi",
+"player": "Shang-Chi"
+},
+{
+"q": "2025 Kakawow Marvel Aura She-Hulk",
+"player": "She-Hulk"
+},
+{
+"q": "2025 Kakawow Marvel Aura Shuri",
+"player": "Shuri"
+},
+{
+"q": "2025 Kakawow Marvel Aura Silver Surfer",
+"player": "Silver Surfer"
+},
+{
+"q": "2025 Kakawow Marvel Aura Spider-Girl",
+"player": "Spider-Girl"
+},
+{
+"q": "2025 Kakawow Marvel Aura Spider-Ham",
+"player": "Spider-Ham"
+},
+{
+"q": "2025 Kakawow Marvel Aura Spider-Man",
+"player": "Spider-Man"
+},
+{
+"q": "2025 Kakawow Marvel Aura Spider-Man 2099",
+"player": "Spider-Man 2099"
+},
+{
+"q": "2025 Kakawow Marvel Aura Spider-Woman",
+"player": "Spider-Woman"
+},
+{
+"q": "2025 Kakawow Marvel Aura Star-Lord",
+"player": "Star-Lord"
+},
+{
+"q": "2025 Kakawow Marvel Aura Storm",
+"player": "Storm"
+},
+{
+"q": "2025 Kakawow Marvel Aura THANOS",
+"player": "THANOS"
+},
+{
+"q": "2025 Kakawow Marvel Aura THOR",
+"player": "THOR"
+},
+{
+"q": "2025 Kakawow Marvel Aura Thanos",
+"player": "Thanos"
+},
+{
+"q": "2025 Kakawow Marvel Aura The Avengers assemble",
+"player": "The Avengers assemble"
+},
+{
+"q": "2025 Kakawow Marvel Aura The Ballad of Beta Ray Bill",
+"player": "The Ballad of Beta Ray Bill"
+},
+{
+"q": "2025 Kakawow Marvel Aura The Clone Saga",
+"player": "The Clone Saga"
+},
+{
+"q": "2025 Kakawow Marvel Aura The Dark Phoenix Saga",
+"player": "The Dark Phoenix Saga"
+},
+{
+"q": "2025 Kakawow Marvel Aura The Incredible Hulk: The Grey Hulk",
+"player": "The Incredible Hulk: The Grey Hulk"
+},
+{
+"q": "2025 Kakawow Marvel Aura The Thing",
+"player": "The Thing"
+},
+{
+"q": "2025 Kakawow Marvel Aura The rise and fall of the Phoenix Power",
+"player": "The rise and fall of the Phoenix Power"
+},
+{
+"q": "2025 Kakawow Marvel Aura Thing",
+"player": "Thing"
+},
+{
+"q": "2025 Kakawow Marvel Aura Thor",
+"player": "Thor"
+},
+{
+"q": "2025 Kakawow Marvel Aura Tom Holland Autograph",
+"player": "Tom Holland Autograph"
+},
+{
+"q": "2025 Kakawow Marvel Aura Ultron",
+"player": "Ultron"
+},
+{
+"q": "2025 Kakawow Marvel Aura VENOM",
+"player": "VENOM"
+},
+{
+"q": "2025 Kakawow Marvel Aura VISION",
+"player": "VISION"
+},
+{
+"q": "2025 Kakawow Marvel Aura Valkyrie",
+"player": "Valkyrie"
+},
+{
+"q": "2025 Kakawow Marvel Aura Venom",
+"player": "Venom"
+},
+{
+"q": "2025 Kakawow Marvel Aura Vision",
+"player": "Vision"
+},
+{
+"q": "2025 Kakawow Marvel Aura Vision and the Scarlet Witch",
+"player": "Vision and the Scarlet Witch"
+},
+{
+"q": "2025 Kakawow Marvel Aura Viv Vision",
+"player": "Viv Vision"
+},
+{
+"q": "2025 Kakawow Marvel Aura WOLVERINE",
+"player": "WOLVERINE"
+},
+{
+"q": "2025 Kakawow Marvel Aura War Machine",
+"player": "War Machine"
+},
+{
+"q": "2025 Kakawow Marvel Aura Wasp",
+"player": "Wasp"
+},
+{
+"q": "2025 Kakawow Marvel Aura White Tiger",
+"player": "White Tiger"
+},
+{
+"q": "2025 Kakawow Marvel Aura Winter Soldier",
+"player": "Winter Soldier"
+},
+{
+"q": "2025 Kakawow Marvel Aura Wolverine",
+"player": "Wolverine"
+},
+{
+"q": "2025 Kakawow Marvel Aura World War Hulk",
+"player": "World War Hulk"
+},
+{
 "q": "2025 Panini Prizm Racing AJ Allmendinger",
 "player": "AJ Allmendinger"
 },
@@ -23538,6 +24030,962 @@
 {
 "q": "2026 Topps Chrome Star Wars Zorii Bliss",
 "player": "Zorii Bliss"
+},
+{
+"q": "2026 Topps Chrome UFC Aaron Pico",
+"player": "Aaron Pico"
+},
+{
+"q": "2026 Topps Chrome UFC Ailin Perez",
+"player": "Ailin Perez"
+},
+{
+"q": "2026 Topps Chrome UFC Aleksandar Rakic",
+"player": "Aleksandar Rakic"
+},
+{
+"q": "2026 Topps Chrome UFC Aleksandre Topuria",
+"player": "Aleksandre Topuria"
+},
+{
+"q": "2026 Topps Chrome UFC Alex Pereira",
+"player": "Alex Pereira"
+},
+{
+"q": "2026 Topps Chrome UFC Alex Perez",
+"player": "Alex Perez"
+},
+{
+"q": "2026 Topps Chrome UFC Alexa Grasso",
+"player": "Alexa Grasso"
+},
+{
+"q": "2026 Topps Chrome UFC Alexander Volkanovski",
+"player": "Alexander Volkanovski"
+},
+{
+"q": "2026 Topps Chrome UFC Alexander Volkov",
+"player": "Alexander Volkov"
+},
+{
+"q": "2026 Topps Chrome UFC Alexandre Pantoja",
+"player": "Alexandre Pantoja"
+},
+{
+"q": "2026 Topps Chrome UFC Alexia Thainara",
+"player": "Alexia Thainara"
+},
+{
+"q": "2026 Topps Chrome UFC Aljamain Sterling",
+"player": "Aljamain Sterling"
+},
+{
+"q": "2026 Topps Chrome UFC Alvin Hines",
+"player": "Alvin Hines"
+},
+{
+"q": "2026 Topps Chrome UFC Amanda Lemos",
+"player": "Amanda Lemos"
+},
+{
+"q": "2026 Topps Chrome UFC Amanda Nunes",
+"player": "Amanda Nunes"
+},
+{
+"q": "2026 Topps Chrome UFC Amanda Ribas",
+"player": "Amanda Ribas"
+},
+{
+"q": "2026 Topps Chrome UFC Amir Albazi",
+"player": "Amir Albazi"
+},
+{
+"q": "2026 Topps Chrome UFC Anderson Silva",
+"player": "Anderson Silva"
+},
+{
+"q": "2026 Topps Chrome UFC Andre Lima",
+"player": "Andre Lima"
+},
+{
+"q": "2026 Topps Chrome UFC Andreas Gustafsson",
+"player": "Andreas Gustafsson"
+},
+{
+"q": "2026 Topps Chrome UFC Anthony Hernandez",
+"player": "Anthony Hernandez"
+},
+{
+"q": "2026 Topps Chrome UFC Arman Tsarukyan",
+"player": "Arman Tsarukyan"
+},
+{
+"q": "2026 Topps Chrome UFC Arnold Allen",
+"player": "Arnold Allen"
+},
+{
+"q": "2026 Topps Chrome UFC Assu Almabayev",
+"player": "Assu Almabayev"
+},
+{
+"q": "2026 Topps Chrome UFC Austin Vanderford",
+"player": "Austin Vanderford"
+},
+{
+"q": "2026 Topps Chrome UFC Azamat Murzakanov",
+"player": "Azamat Murzakanov"
+},
+{
+"q": "2026 Topps Chrome UFC BJ Penn",
+"player": "BJ Penn"
+},
+{
+"q": "2026 Topps Chrome UFC Belal Muhammad",
+"player": "Belal Muhammad"
+},
+{
+"q": "2026 Topps Chrome UFC Benoit Saint Denis",
+"player": "Benoit Saint Denis"
+},
+{
+"q": "2026 Topps Chrome UFC Bo Nickal",
+"player": "Bo Nickal"
+},
+{
+"q": "2026 Topps Chrome UFC Bogdan Guskov",
+"player": "Bogdan Guskov"
+},
+{
+"q": "2026 Topps Chrome UFC Brandon Moreno",
+"player": "Brandon Moreno"
+},
+{
+"q": "2026 Topps Chrome UFC Brandon Royval",
+"player": "Brandon Royval"
+},
+{
+"q": "2026 Topps Chrome UFC Brian Ortega",
+"player": "Brian Ortega"
+},
+{
+"q": "2026 Topps Chrome UFC Bruna Brasil",
+"player": "Bruna Brasil"
+},
+{
+"q": "2026 Topps Chrome UFC Caio Borralho",
+"player": "Caio Borralho"
+},
+{
+"q": "2026 Topps Chrome UFC Carlos Leal",
+"player": "Carlos Leal"
+},
+{
+"q": "2026 Topps Chrome UFC Carlos Prates",
+"player": "Carlos Prates"
+},
+{
+"q": "2026 Topps Chrome UFC Carlos Ulberg",
+"player": "Carlos Ulberg"
+},
+{
+"q": "2026 Topps Chrome UFC Casey O'Neill",
+"player": "Casey O'Neill"
+},
+{
+"q": "2026 Topps Chrome UFC Chael Sonnen",
+"player": "Chael Sonnen"
+},
+{
+"q": "2026 Topps Chrome UFC Chang Ho Lee",
+"player": "Chang Ho Lee"
+},
+{
+"q": "2026 Topps Chrome UFC Charles Jourdain",
+"player": "Charles Jourdain"
+},
+{
+"q": "2026 Topps Chrome UFC Charles Oliveira",
+"player": "Charles Oliveira"
+},
+{
+"q": "2026 Topps Chrome UFC Chase Hooper",
+"player": "Chase Hooper"
+},
+{
+"q": "2026 Topps Chrome UFC Chris Padilla",
+"player": "Chris Padilla"
+},
+{
+"q": "2026 Topps Chrome UFC Chuck Liddell",
+"player": "Chuck Liddell"
+},
+{
+"q": "2026 Topps Chrome UFC Ciryl Gane",
+"player": "Ciryl Gane"
+},
+{
+"q": "2026 Topps Chrome UFC Clayton Carpenter",
+"player": "Clayton Carpenter"
+},
+{
+"q": "2026 Topps Chrome UFC Cody Garbrandt",
+"player": "Cody Garbrandt"
+},
+{
+"q": "2026 Topps Chrome UFC Colby Covington",
+"player": "Colby Covington"
+},
+{
+"q": "2026 Topps Chrome UFC Conor McGregor",
+"player": "Conor McGregor"
+},
+{
+"q": "2026 Topps Chrome UFC Cory Sandhagen",
+"player": "Cory Sandhagen"
+},
+{
+"q": "2026 Topps Chrome UFC Curtis Blaydes",
+"player": "Curtis Blaydes"
+},
+{
+"q": "2026 Topps Chrome UFC Dan Ige",
+"player": "Dan Ige"
+},
+{
+"q": "2026 Topps Chrome UFC Dana White",
+"player": "Dana White"
+},
+{
+"q": "2026 Topps Chrome UFC Daniel Cormier",
+"player": "Daniel Cormier"
+},
+{
+"q": "2026 Topps Chrome UFC Daniel Hooker",
+"player": "Daniel Hooker"
+},
+{
+"q": "2026 Topps Chrome UFC Daniel Marcos",
+"player": "Daniel Marcos"
+},
+{
+"q": "2026 Topps Chrome UFC Daniel Santos",
+"player": "Daniel Santos"
+},
+{
+"q": "2026 Topps Chrome UFC Daniel Zellhuber",
+"player": "Daniel Zellhuber"
+},
+{
+"q": "2026 Topps Chrome UFC Danny Barlow",
+"player": "Danny Barlow"
+},
+{
+"q": "2026 Topps Chrome UFC David Onama",
+"player": "David Onama"
+},
+{
+"q": "2026 Topps Chrome UFC Deiveson Figueiredo",
+"player": "Deiveson Figueiredo"
+},
+{
+"q": "2026 Topps Chrome UFC Derrick Lewis",
+"player": "Derrick Lewis"
+},
+{
+"q": "2026 Topps Chrome UFC Diego Lopes",
+"player": "Diego Lopes"
+},
+{
+"q": "2026 Topps Chrome UFC Dione Barbosa",
+"player": "Dione Barbosa"
+},
+{
+"q": "2026 Topps Chrome UFC Dominick Reyes",
+"player": "Dominick Reyes"
+},
+{
+"q": "2026 Topps Chrome UFC Dricus Du Plessis",
+"player": "Dricus Du Plessis"
+},
+{
+"q": "2026 Topps Chrome UFC Dustin Poirier",
+"player": "Dustin Poirier"
+},
+{
+"q": "2026 Topps Chrome UFC Elijah Smith",
+"player": "Elijah Smith"
+},
+{
+"q": "2026 Topps Chrome UFC Erin Blanchfield",
+"player": "Erin Blanchfield"
+},
+{
+"q": "2026 Topps Chrome UFC Esteban Ribovics",
+"player": "Esteban Ribovics"
+},
+{
+"q": "2026 Topps Chrome UFC Fatima Kline",
+"player": "Fatima Kline"
+},
+{
+"q": "2026 Topps Chrome UFC Felipe Lima",
+"player": "Felipe Lima"
+},
+{
+"q": "2026 Topps Chrome UFC Francis Marshall",
+"player": "Francis Marshall"
+},
+{
+"q": "2026 Topps Chrome UFC Gabriel Bonfim",
+"player": "Gabriel Bonfim"
+},
+{
+"q": "2026 Topps Chrome UFC Gabriel Santos",
+"player": "Gabriel Santos"
+},
+{
+"q": "2026 Topps Chrome UFC Gautier Ateba",
+"player": "Gautier Ateba"
+},
+{
+"q": "2026 Topps Chrome UFC Geoff Neal",
+"player": "Geoff Neal"
+},
+{
+"q": "2026 Topps Chrome UFC Georges St-Pierre",
+"player": "Georges St-Pierre"
+},
+{
+"q": "2026 Topps Chrome UFC Gilbert Burns",
+"player": "Gilbert Burns"
+},
+{
+"q": "2026 Topps Chrome UFC Gillian Robertson",
+"player": "Gillian Robertson"
+},
+{
+"q": "2026 Topps Chrome UFC Gregory Rodrigues",
+"player": "Gregory Rodrigues"
+},
+{
+"q": "2026 Topps Chrome UFC Hyder Amil",
+"player": "Hyder Amil"
+},
+{
+"q": "2026 Topps Chrome UFC Hyunsung Park",
+"player": "Hyunsung Park"
+},
+{
+"q": "2026 Topps Chrome UFC Ian Machado Garry",
+"player": "Ian Machado Garry"
+},
+{
+"q": "2026 Topps Chrome UFC Iasmin Lucindo",
+"player": "Iasmin Lucindo"
+},
+{
+"q": "2026 Topps Chrome UFC Ibo Aslan",
+"player": "Ibo Aslan"
+},
+{
+"q": "2026 Topps Chrome UFC Ilia Topuria",
+"player": "Ilia Topuria"
+},
+{
+"q": "2026 Topps Chrome UFC Irene Aldana",
+"player": "Irene Aldana"
+},
+{
+"q": "2026 Topps Chrome UFC Islam Dulatov",
+"player": "Islam Dulatov"
+},
+{
+"q": "2026 Topps Chrome UFC Islam Makhachev",
+"player": "Islam Makhachev"
+},
+{
+"q": "2026 Topps Chrome UFC Israel Adesanya",
+"player": "Israel Adesanya"
+},
+{
+"q": "2026 Topps Chrome UFC JJ Aldrich",
+"player": "JJ Aldrich"
+},
+{
+"q": "2026 Topps Chrome UFC Jack Della Maddalena",
+"player": "Jack Della Maddalena"
+},
+{
+"q": "2026 Topps Chrome UFC Jackson McVey",
+"player": "Jackson McVey"
+},
+{
+"q": "2026 Topps Chrome UFC Jacqueline Cavalcanti",
+"player": "Jacqueline Cavalcanti"
+},
+{
+"q": "2026 Topps Chrome UFC Jailton Almeida",
+"player": "Jailton Almeida"
+},
+{
+"q": "2026 Topps Chrome UFC Jailton Malhadinho",
+"player": "Jailton Malhadinho"
+},
+{
+"q": "2026 Topps Chrome UFC Jamahal Hill",
+"player": "Jamahal Hill"
+},
+{
+"q": "2026 Topps Chrome UFC Jan Błachowicz",
+"player": "Jan Błachowicz"
+},
+{
+"q": "2026 Topps Chrome UFC Jaqueline Amorim",
+"player": "Jaqueline Amorim"
+},
+{
+"q": "2026 Topps Chrome UFC Jared Cannonier",
+"player": "Jared Cannonier"
+},
+{
+"q": "2026 Topps Chrome UFC Jasmine Jasudavicius",
+"player": "Jasmine Jasudavicius"
+},
+{
+"q": "2026 Topps Chrome UFC Jean Matsumoto",
+"player": "Jean Matsumoto"
+},
+{
+"q": "2026 Topps Chrome UFC Jean Silva",
+"player": "Jean Silva"
+},
+{
+"q": "2026 Topps Chrome UFC Jeong Yeong Lee",
+"player": "Jeong Yeong Lee"
+},
+{
+"q": "2026 Topps Chrome UFC Jessica Andrade",
+"player": "Jessica Andrade"
+},
+{
+"q": "2026 Topps Chrome UFC Jiri Prochazka",
+"player": "Jiri Prochazka"
+},
+{
+"q": "2026 Topps Chrome UFC Joanna Jędrzejczyk",
+"player": "Joanna Jędrzejczyk"
+},
+{
+"q": "2026 Topps Chrome UFC Joaquin Buckley",
+"player": "Joaquin Buckley"
+},
+{
+"q": "2026 Topps Chrome UFC Joe Pyfer",
+"player": "Joe Pyfer"
+},
+{
+"q": "2026 Topps Chrome UFC Johnny Walker",
+"player": "Johnny Walker"
+},
+{
+"q": "2026 Topps Chrome UFC Jon Jones",
+"player": "Jon Jones"
+},
+{
+"q": "2026 Topps Chrome UFC Joo Sang Yoo",
+"player": "Joo Sang Yoo"
+},
+{
+"q": "2026 Topps Chrome UFC Jose Mariscal",
+"player": "Jose Mariscal"
+},
+{
+"q": "2026 Topps Chrome UFC Josh Emmett",
+"player": "Josh Emmett"
+},
+{
+"q": "2026 Topps Chrome UFC Joshua Van",
+"player": "Joshua Van"
+},
+{
+"q": "2026 Topps Chrome UFC José Aldo",
+"player": "José Aldo"
+},
+{
+"q": "2026 Topps Chrome UFC Julianna Peña",
+"player": "Julianna Peña"
+},
+{
+"q": "2026 Topps Chrome UFC Justin Gaethje",
+"player": "Justin Gaethje"
+},
+{
+"q": "2026 Topps Chrome UFC Kai Asakura",
+"player": "Kai Asakura"
+},
+{
+"q": "2026 Topps Chrome UFC Kai Kara-France",
+"player": "Kai Kara-France"
+},
+{
+"q": "2026 Topps Chrome UFC Kamaru Usman",
+"player": "Kamaru Usman"
+},
+{
+"q": "2026 Topps Chrome UFC Karine Silva",
+"player": "Karine Silva"
+},
+{
+"q": "2026 Topps Chrome UFC Karol Rosa",
+"player": "Karol Rosa"
+},
+{
+"q": "2026 Topps Chrome UFC Kaue Fernandes",
+"player": "Kaue Fernandes"
+},
+{
+"q": "2026 Topps Chrome UFC Kayla Harrison",
+"player": "Kayla Harrison"
+},
+{
+"q": "2026 Topps Chrome UFC Ketlen Vieira",
+"player": "Ketlen Vieira"
+},
+{
+"q": "2026 Topps Chrome UFC Kevin Holland",
+"player": "Kevin Holland"
+},
+{
+"q": "2026 Topps Chrome UFC Khabib Nurmagomedov",
+"player": "Khabib Nurmagomedov"
+},
+{
+"q": "2026 Topps Chrome UFC Khalil Rountree Jr.",
+"player": "Khalil Rountree Jr."
+},
+{
+"q": "2026 Topps Chrome UFC Khamzat Chimaev",
+"player": "Khamzat Chimaev"
+},
+{
+"q": "2026 Topps Chrome UFC Kody Steele",
+"player": "Kody Steele"
+},
+{
+"q": "2026 Topps Chrome UFC Leon Edwards",
+"player": "Leon Edwards"
+},
+{
+"q": "2026 Topps Chrome UFC Lerone Murphy",
+"player": "Lerone Murphy"
+},
+{
+"q": "2026 Topps Chrome UFC Lone'er Kavanagh",
+"player": "Lone'er Kavanagh"
+},
+{
+"q": "2026 Topps Chrome UFC Luana Santos",
+"player": "Luana Santos"
+},
+{
+"q": "2026 Topps Chrome UFC Ludovit Klein",
+"player": "Ludovit Klein"
+},
+{
+"q": "2026 Topps Chrome UFC Mackenzie Dern",
+"player": "Mackenzie Dern"
+},
+{
+"q": "2026 Topps Chrome UFC Macy Chiasson",
+"player": "Macy Chiasson"
+},
+{
+"q": "2026 Topps Chrome UFC Magomed Ankalaev",
+"player": "Magomed Ankalaev"
+},
+{
+"q": "2026 Topps Chrome UFC Malcolm Wellmaker",
+"player": "Malcolm Wellmaker"
+},
+{
+"q": "2026 Topps Chrome UFC Manel Kape",
+"player": "Manel Kape"
+},
+{
+"q": "2026 Topps Chrome UFC Manon Fiorot",
+"player": "Manon Fiorot"
+},
+{
+"q": "2026 Topps Chrome UFC Mansur Abdul-Malik",
+"player": "Mansur Abdul-Malik"
+},
+{
+"q": "2026 Topps Chrome UFC MarQuel Mederos",
+"player": "MarQuel Mederos"
+},
+{
+"q": "2026 Topps Chrome UFC Marco Silva",
+"player": "Marco Silva"
+},
+{
+"q": "2026 Topps Chrome UFC Marcus Almeida",
+"player": "Marcus Almeida"
+},
+{
+"q": "2026 Topps Chrome UFC Marcus McGhee",
+"player": "Marcus McGhee"
+},
+{
+"q": "2026 Topps Chrome UFC Marina Rodriguez",
+"player": "Marina Rodriguez"
+},
+{
+"q": "2026 Topps Chrome UFC Mario Bautista",
+"player": "Mario Bautista"
+},
+{
+"q": "2026 Topps Chrome UFC Mario Pinto",
+"player": "Mario Pinto"
+},
+{
+"q": "2026 Topps Chrome UFC Mark Choinski",
+"player": "Mark Choinski"
+},
+{
+"q": "2026 Topps Chrome UFC Mark Kerr",
+"player": "Mark Kerr"
+},
+{
+"q": "2026 Topps Chrome UFC Marlon Vera",
+"player": "Marlon Vera"
+},
+{
+"q": "2026 Topps Chrome UFC Mauricio Santos",
+"player": "Mauricio Santos"
+},
+{
+"q": "2026 Topps Chrome UFC Max Holloway",
+"player": "Max Holloway"
+},
+{
+"q": "2026 Topps Chrome UFC Maycee Barber",
+"player": "Maycee Barber"
+},
+{
+"q": "2026 Topps Chrome UFC Mayra Bueno",
+"player": "Mayra Bueno"
+},
+{
+"q": "2026 Topps Chrome UFC Merab Dvalishvili",
+"player": "Merab Dvalishvili"
+},
+{
+"q": "2026 Topps Chrome UFC Michael Aswell",
+"player": "Michael Aswell"
+},
+{
+"q": "2026 Topps Chrome UFC Michael Chandler",
+"player": "Michael Chandler"
+},
+{
+"q": "2026 Topps Chrome UFC Michael Morales",
+"player": "Michael Morales"
+},
+{
+"q": "2026 Topps Chrome UFC Michael Page",
+"player": "Michael Page"
+},
+{
+"q": "2026 Topps Chrome UFC Michael Parkin",
+"player": "Michael Parkin"
+},
+{
+"q": "2026 Topps Chrome UFC Mingyang Zhang",
+"player": "Mingyang Zhang"
+},
+{
+"q": "2026 Topps Chrome UFC Miranda Maverick",
+"player": "Miranda Maverick"
+},
+{
+"q": "2026 Topps Chrome UFC Montel Jackson",
+"player": "Montel Jackson"
+},
+{
+"q": "2026 Topps Chrome UFC Movsar Evloev",
+"player": "Movsar Evloev"
+},
+{
+"q": "2026 Topps Chrome UFC Muhammadjon Naimov",
+"player": "Muhammadjon Naimov"
+},
+{
+"q": "2026 Topps Chrome UFC Nasrat Haqparast",
+"player": "Nasrat Haqparast"
+},
+{
+"q": "2026 Topps Chrome UFC Nassourdine Imavov",
+"player": "Nassourdine Imavov"
+},
+{
+"q": "2026 Topps Chrome UFC Natalia Cristina da Silva",
+"player": "Natalia Cristina da Silva"
+},
+{
+"q": "2026 Topps Chrome UFC Navajo Stirling",
+"player": "Navajo Stirling"
+},
+{
+"q": "2026 Topps Chrome UFC Nazim Sadykhov",
+"player": "Nazim Sadykhov"
+},
+{
+"q": "2026 Topps Chrome UFC Nora Cornolle",
+"player": "Nora Cornolle"
+},
+{
+"q": "2026 Topps Chrome UFC Norma Dumont",
+"player": "Norma Dumont"
+},
+{
+"q": "2026 Topps Chrome UFC Nursulton Ruziboev",
+"player": "Nursulton Ruziboev"
+},
+{
+"q": "2026 Topps Chrome UFC Oban Elliott",
+"player": "Oban Elliott"
+},
+{
+"q": "2026 Topps Chrome UFC Oumar Sy",
+"player": "Oumar Sy"
+},
+{
+"q": "2026 Topps Chrome UFC Paddy Pimblett",
+"player": "Paddy Pimblett"
+},
+{
+"q": "2026 Topps Chrome UFC Patricio Freire",
+"player": "Patricio Freire"
+},
+{
+"q": "2026 Topps Chrome UFC Patrick Mix",
+"player": "Patrick Mix"
+},
+{
+"q": "2026 Topps Chrome UFC Payton Talbott",
+"player": "Payton Talbott"
+},
+{
+"q": "2026 Topps Chrome UFC Petr Yan",
+"player": "Petr Yan"
+},
+{
+"q": "2026 Topps Chrome UFC Piera Rodriguez",
+"player": "Piera Rodriguez"
+},
+{
+"q": "2026 Topps Chrome UFC Quillan Salkilld",
+"player": "Quillan Salkilld"
+},
+{
+"q": "2026 Topps Chrome UFC Rafael Estevam",
+"player": "Rafael Estevam"
+},
+{
+"q": "2026 Topps Chrome UFC Ramazan Temirov",
+"player": "Ramazan Temirov"
+},
+{
+"q": "2026 Topps Chrome UFC Raquel Pennington",
+"player": "Raquel Pennington"
+},
+{
+"q": "2026 Topps Chrome UFC Raul Rosas",
+"player": "Raul Rosas"
+},
+{
+"q": "2026 Topps Chrome UFC Rei Tsuruya",
+"player": "Rei Tsuruya"
+},
+{
+"q": "2026 Topps Chrome UFC Reinier De Ridder",
+"player": "Reinier De Ridder"
+},
+{
+"q": "2026 Topps Chrome UFC Renato Moicano",
+"player": "Renato Moicano"
+},
+{
+"q": "2026 Topps Chrome UFC Rizvan Kuniev",
+"player": "Rizvan Kuniev"
+},
+{
+"q": "2026 Topps Chrome UFC Robert Whittaker",
+"player": "Robert Whittaker"
+},
+{
+"q": "2026 Topps Chrome UFC Roman Dolidze",
+"player": "Roman Dolidze"
+},
+{
+"q": "2026 Topps Chrome UFC Roman Kopylov",
+"player": "Roman Kopylov"
+},
+{
+"q": "2026 Topps Chrome UFC Rose Namajunas",
+"player": "Rose Namajunas"
+},
+{
+"q": "2026 Topps Chrome UFC Sean Brady",
+"player": "Sean Brady"
+},
+{
+"q": "2026 Topps Chrome UFC Sean O'Malley",
+"player": "Sean O'Malley"
+},
+{
+"q": "2026 Topps Chrome UFC Sean Strickland",
+"player": "Sean Strickland"
+},
+{
+"q": "2026 Topps Chrome UFC Seok Hyeon Ko",
+"player": "Seok Hyeon Ko"
+},
+{
+"q": "2026 Topps Chrome UFC Sergei Pavlovich",
+"player": "Sergei Pavlovich"
+},
+{
+"q": "2026 Topps Chrome UFC Shamil Gaziev",
+"player": "Shamil Gaziev"
+},
+{
+"q": "2026 Topps Chrome UFC Sharabutdin Magomedov",
+"player": "Sharabutdin Magomedov"
+},
+{
+"q": "2026 Topps Chrome UFC Shavkat Rakhmonov",
+"player": "Shavkat Rakhmonov"
+},
+{
+"q": "2026 Topps Chrome UFC Shi Ming",
+"player": "Shi Ming"
+},
+{
+"q": "2026 Topps Chrome UFC Stephen Erceg",
+"player": "Stephen Erceg"
+},
+{
+"q": "2026 Topps Chrome UFC Stephen Thompson",
+"player": "Stephen Thompson"
+},
+{
+"q": "2026 Topps Chrome UFC Stipe Miocic",
+"player": "Stipe Miocic"
+},
+{
+"q": "2026 Topps Chrome UFC Tabatha Ricci",
+"player": "Tabatha Ricci"
+},
+{
+"q": "2026 Topps Chrome UFC Tai Tuivasa",
+"player": "Tai Tuivasa"
+},
+{
+"q": "2026 Topps Chrome UFC Talita Alencar",
+"player": "Talita Alencar"
+},
+{
+"q": "2026 Topps Chrome UFC Tallison Teixeira",
+"player": "Tallison Teixeira"
+},
+{
+"q": "2026 Topps Chrome UFC Tatiana Suarez",
+"player": "Tatiana Suarez"
+},
+{
+"q": "2026 Topps Chrome UFC Tatsuro Taira",
+"player": "Tatsuro Taira"
+},
+{
+"q": "2026 Topps Chrome UFC Thiago Moises",
+"player": "Thiago Moises"
+},
+{
+"q": "2026 Topps Chrome UFC Tim Elliott",
+"player": "Tim Elliott"
+},
+{
+"q": "2026 Topps Chrome UFC Tofiq Musayev",
+"player": "Tofiq Musayev"
+},
+{
+"q": "2026 Topps Chrome UFC Tom Aspinall",
+"player": "Tom Aspinall"
+},
+{
+"q": "2026 Topps Chrome UFC Tom Nolan",
+"player": "Tom Nolan"
+},
+{
+"q": "2026 Topps Chrome UFC Torrez Finney",
+"player": "Torrez Finney"
+},
+{
+"q": "2026 Topps Chrome UFC Tracy Cortez",
+"player": "Tracy Cortez"
+},
+{
+"q": "2026 Topps Chrome UFC Trevor Peek",
+"player": "Trevor Peek"
+},
+{
+"q": "2026 Topps Chrome UFC Umar Nurmagomedov",
+"player": "Umar Nurmagomedov"
+},
+{
+"q": "2026 Topps Chrome UFC Valentina Shevchenko",
+"player": "Valentina Shevchenko"
+},
+{
+"q": "2026 Topps Chrome UFC Vinicius Oliveira",
+"player": "Vinicius Oliveira"
+},
+{
+"q": "2026 Topps Chrome UFC Virna Jandiroba",
+"player": "Virna Jandiroba"
+},
+{
+"q": "2026 Topps Chrome UFC Waldo Cortes",
+"player": "Waldo Cortes"
+},
+{
+"q": "2026 Topps Chrome UFC Wang Cong",
+"player": "Wang Cong"
+},
+{
+"q": "2026 Topps Chrome UFC Yadong Song",
+"player": "Yadong Song"
+},
+{
+"q": "2026 Topps Chrome UFC Yair Rodríguez",
+"player": "Yair Rodríguez"
+},
+{
+"q": "2026 Topps Chrome UFC Yan Xiaonan",
+"player": "Yan Xiaonan"
+},
+{
+"q": "2026 Topps Chrome UFC Youssef Zalal",
+"player": "Youssef Zalal"
+},
+{
+"q": "2026 Topps Chrome UFC Zhang Weili",
+"player": "Zhang Weili"
+},
+{
+"q": "2026 Topps Chrome UFC Zhu Rong",
+"player": "Zhu Rong"
 },
 {
 "q": "2026 Topps Chrome WWE AJ Lee",
