@@ -1407,6 +1407,7 @@ gb1042 = dict(
 GB1043_H = 'gb1043-multi-product-football-random-letters'
 gb1043 = dict(
     id='gb1043', title='GB1043 Multi Product Football', kicker='Acme Packs · Random letter · NFL and college',
+    wiki='American football',  # trial: a W link beside each name to its Wikipedia page
     url=acme_url(GB1043_H), when=ACME_FRI % ('7:00 pm', '8:00 pm'),
     facts=['4 boxes', '20 letter spots', '$115 per spot, $28.75 for a 25% filler', 'Letters randomized live'],
     format='random', checked=ACME_CHK,

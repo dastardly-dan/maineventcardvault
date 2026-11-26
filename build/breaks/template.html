@@ -151,6 +151,10 @@ h2 { font-size: 30px; margin: 0 0 6px; }
 .pill.g.on .ck { border-color: var(--on-gold); background: var(--on-gold); -webkit-mask: none; position: relative; }
 .pill.g.on .ck::after { content: ""; position: absolute; left: 4px; top: 1px; width: 4px; height: 8px; border: solid var(--gold); border-width: 0 2px 2px 0; transform: rotate(45deg); }
 .cpills { display: flex; flex-wrap: wrap; gap: 5px; }
+.wk { margin-left: 7px; font-size: 10.5px; font-weight: 700; line-height: 1; padding: 2px 4px; border: 1px solid var(--line-2); border-radius: 4px; color: var(--gold-2); text-decoration: none; flex: none; }
+.wk:hover { border-color: var(--gold); background: var(--tint); }
+.wk.s { opacity: .55; }
+.pill.g.on .wk { color: var(--on-gold); border-color: var(--on-gold); background: transparent; }
 .cpills .pill { font-size: 12.5px; padding: 2px 9px; }
 .dots i.g { cursor: pointer; width: 15px; height: 15px; border-radius: 4px; border: 2px solid var(--c); background: transparent !important; display: inline-block; position: relative; }
 .dots i.g.on { background: var(--c) !important; }
@@ -533,7 +537,7 @@ __THEME__
     document.getElementById("spot").innerHTML =
       '<div class="spothead"><div class="big display"' + big + ">" + esc(s.label) + '</div><div class="meta"><div class="row" style="display:flex;gap:6px;margin-bottom:6px;align-items:center">' + badges(s) + "</div><b>" + count(s) + " names</b> across " + boxesWith(s) + " of " + D.boxes.length + " boxes" + (s.nil ? "<br>Plus college (NIL) cards starting with " + esc(s.nil) : "") + "</div>" +
       '<div class="acts"><a class="btn" href="' + href(prev.id) + '">&lsaquo; ' + esc(full(prev)) + '</a><a class="btn" href="' + href(next.id) + '">' + esc(full(next)) + ' &rsaquo;</a><button class="btn' + (mine ? "" : " gold") + '" id="pin">' + (mine ? "Remove from my spots" : "Add to my spots") + '</button><button class="btn" id="topulls">My pulls (' + got.all().length + ")</button></div></div>" +
-      '<p class="sub" style="margin:-4px 0 10px">Tap a name to check it off when you pull it.</p>' +
+      '<p class="sub" style="margin:-4px 0 10px">Tap a name to check it off when you pull it.' + (D.wiki ? " The W next to a name opens that player's Wikipedia page. A faded W means we didn't find an exact page, so it opens a Wikipedia search instead." : "") + "</p>" +
       legend(s) +
       '<div class="boxes">' + D.boxes.map(function (b) {
         var a = list(s, b.k);
@@ -544,6 +548,7 @@ __THEME__
     var pl = document.createElement("div"); pl.className = "pulls"; document.getElementById("spot").appendChild(pl);
     document.getElementById("topulls").onclick = function () { pl.scrollIntoView({ behavior: "smooth", block: "start" }); };
     drawPulls();
+    if (D.wiki) wkRun(document.getElementById("spot"));
   }
 
   // Pull checklist (Daniel, Nov 24): tap a name on a spot's page to check it off when you pull that card. Saved in this
@@ -556,9 +561,60 @@ __THEME__
     clear: function () { try { localStorage.removeItem(GOTKEY); } catch (e) {} }
   };
   function gkey(s, b, e) { return s.id + "|" + b.k + "|" + e[0]; }
+  // Wikipedia links (trial on one page: set "wiki" in the page config to the sport, e.g. "American football").
+  // Every name gets a link right away that searches Wikipedia; the page then asks Wikipedia which names have an exact
+  // article about someone in that sport and swaps in the direct link. Results are remembered in this browser.
+  var WKKEY = "mecv-wiki", WK = {}; try { WK = JSON.parse(localStorage.getItem(WKKEY) || "{}") || {}; } catch (e) { WK = {}; }
+  function wkName(n) { return n.replace(/"[^"]*"\s*/g, "").replace(/\s+/g, " ").trim(); }
+  function wkSearch(n) { return "https://en.wikipedia.org/wiki/Special:Search?go=Go&search=" + encodeURIComponent(n + " " + D.wiki); }
+  function wkLink(name) {
+    var n = wkName(name);
+    return '<a class="wk s" href="' + esc(wkSearch(n)) + '" target="_blank" rel="noopener" title="Search Wikipedia for ' + esc(n) + '" aria-label="Search Wikipedia for ' + esc(n) + '" data-wn="' + esc(n) + '">W</a>';
+  }
+  function wkApply(root) {
+    [].forEach.call((root || document).querySelectorAll("a.wk[data-wn]"), function (a) {
+      var n = a.getAttribute("data-wn"), t = WK[n]; if (!t) return;
+      a.href = "https://en.wikipedia.org/wiki/" + encodeURIComponent(t.replace(/ /g, "_")); a.classList.remove("s");
+      a.title = "Wikipedia: " + t; a.setAttribute("aria-label", "Wikipedia page for " + t);
+    });
+  }
+  function wkLookup(titles, done) {   // titles -> { title: article title, or "" when there is no fitting article }
+    var url = "https://en.wikipedia.org/w/api.php?action=query&format=json&formatversion=2&redirects=1&origin=*&prop=pageprops&ppprop=disambiguation%7Cwikibase-shortdesc&titles=" + titles.map(encodeURIComponent).join("%7C");
+    fetch(url).then(function (r) { return r.json(); }).then(function (j) {
+      var q = j.query || {}, norm = {}, red = {}, ok = {}, hint = D.wiki.toLowerCase();
+      (q.normalized || []).forEach(function (x) { norm[x.from] = x.to; });
+      (q.redirects || []).forEach(function (x) { red[x.from] = x.to; });
+      (q.pages || []).forEach(function (p) {
+        var pp = p.pageprops || {};
+        if (p.missing || p.invalid || "disambiguation" in pp) return;
+        if ((pp["wikibase-shortdesc"] || "").toLowerCase().indexOf(hint) > -1) ok[p.title] = 1;   // right sport, so not a namesake
+      });
+      var out = {}; titles.forEach(function (t) { var x = norm[t] || t; x = red[x] || x; out[t] = ok[x] ? x : ""; });
+      done(out);
+    }).catch(function () { done(null); });
+  }
+  function wkRun(root) {
+    var want = {}; [].forEach.call((root || document).querySelectorAll("a.wk[data-wn]"), function (a) { var n = a.getAttribute("data-wn"); if (!(n in WK)) want[n] = 1; });
+    var names = Object.keys(want), BATCH = 50;
+    function next() {
+      if (!names.length) return;
+      var chunk = names.splice(0, BATCH);
+      wkLookup(chunk, function (r1) {
+        if (!r1) return next();
+        var again = chunk.filter(function (n) { return !r1[n]; });
+        chunk.forEach(function (n) { if (r1[n]) WK[n] = r1[n]; });
+        var finish = function () { again.forEach(function (n) { if (!(n in WK)) WK[n] = ""; }); try { localStorage.setItem(WKKEY, JSON.stringify(WK)); } catch (e) {} wkApply(root); next(); };
+        if (!again.length) return finish();
+        var alt = again.map(function (n) { return n + " (" + D.wiki + ")"; });
+        wkLookup(alt, function (r2) { if (r2) again.forEach(function (n, i) { if (r2[alt[i]]) WK[n] = r2[alt[i]]; }); finish(); });
+      });
+    }
+    wkApply(root); next();
+  }
   function gpill(e, s, b) {
     var k = gkey(s, b, e), on = got.has(k);
-    return pill(e).replace('<span class="pill">', '<span class="pill g' + (on ? " on" : "") + '" role="button" tabindex="0" aria-pressed="' + on + '" title="Tap to check off" data-g="' + esc(k).replace(/"/g, "&quot;") + '"><span class="ck" aria-hidden="true"></span>');
+    var pl = D.wiki ? pill(e).replace(/<\/span>$/, wkLink(e[0]) + "</span>") : pill(e);
+    return pl.replace('<span class="pill">', '<span class="pill g' + (on ? " on" : "") + '" role="button" tabindex="0" aria-pressed="' + on + '" title="Tap to check off" data-g="' + esc(k).replace(/"/g, "&quot;") + '"><span class="ck" aria-hidden="true"></span>');
   }
   function pullsText() {
     var by = {};
@@ -575,6 +631,7 @@ __THEME__
     [].forEach.call(document.querySelectorAll(".g[data-g]"), function (el) { if (el.getAttribute("data-g") === k) { el.classList.toggle("on", on); el.setAttribute("aria-pressed", on); } });
   }
   function hitG(ev) {
+    if (ev.target.closest && ev.target.closest("a.wk")) return;   // the Wikipedia link just opens; it doesn't check the name off
     var el = ev.target.closest && ev.target.closest(".g[data-g]"); if (!el) return;
     if (ev.type === "keydown") { if (ev.key !== "Enter" && ev.key !== " ") return; ev.preventDefault(); }
     var k = el.getAttribute("data-g"); got.toggle(k); syncG(k); drawPulls();

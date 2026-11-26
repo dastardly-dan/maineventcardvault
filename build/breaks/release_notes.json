@@ -11,6 +11,11 @@
      "Added guides for the five Acme breaks on Friday, November 27: GB1041 Midnight Chrome Inception (random team, 28 spots, $120), GB1042 Chrome At The Museum (random team, 27 spots, $105), GB1043 Multi Product Football (random letter, 20 spots, $115), GB1044 The Best of Bowman (random letter, 16 spots, $105) and GB1045 Leaf Optichrome Football Fire Sale (random letter, 12 spots, $175)."
     ],
     [
+     "New",
+     "Break guides",
+     "Trial on GB1043: a small W next to each name opens that player's Wikipedia page. If there's no exact page for the right sport, it opens a Wikipedia search instead. Tapping the name still checks it off."
+    ],
+    [
      "Improved",
      "Break guides",
      "Letter spots can now split on the third letter, which Acme uses for J in GB1043 and GB1044 (JA-JAR, JAS-JM and JN-JZ). Names land in the spot Acme's own top player lists show."
