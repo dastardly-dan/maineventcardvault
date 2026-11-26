@@ -148,10 +148,17 @@ def check_streams(items_by_shop, now_dt):
         starts = sorted(x for x in starts if x and x > now_dt - __import__('datetime').timedelta(hours=12))
         if starts:
             st['first_start'] = starts[0].isoformat(timespec='minutes')
-        try:
-            yl = youtube_live(url)
-        except Exception as e:
-            print('warning: stream check', shop, e, file=sys.stderr); yl = None
+        # Look for the stream from 2 hours before the first scheduled break (Daniel, Nov 25), and keep checking while it's live.
+        fs = datetime.fromisoformat(st['first_start']) if st.get('first_start') else None
+        looking = st.get('live') or (fs is not None and fs - __import__('datetime').timedelta(hours=2) <= now_dt <= fs + __import__('datetime').timedelta(hours=10))
+        yl = None
+        if looking:
+            try:
+                yl = youtube_live(url)
+            except Exception as e:
+                print('warning: stream check', shop, e, file=sys.stderr)
+        if not looking and st.get('live'):
+            st['live'] = False
         if yl:
             vid, title, live = yl
             if vid != st.get('video'):
