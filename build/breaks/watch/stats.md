@@ -3,11 +3,11 @@
 Built by watch.py from published dates (Eastern time). Merch and fee listings are counted too,
 so read it as a guide. Updated whenever a product is added.
 
-## acme (16 products)
+## acme (25 products)
 
-- Days: Mon 5, Tue 8, Wed 2, Thu 1
-- Hours (ET): 09:00 1, 12:00 4, 13:00 5, 14:00 1, 17:00 1, 18:00 1, 19:00 2, 20:00 1
-- Latest: Mon Nov 23 01:00 PM GB1037 - Midnight Chrome PYT! - Pick Your Team; Mon Nov 23 01:00 PM GB1038 - 25% CHANCE FILLER - Full Case Absolute Fo; Mon Nov 23 01:00 PM GB1038 - Full Case Absolute Football!  - Random Te; Mon Nov 23 01:00 PM GB1039 - 25% CHANCE FILLER - Midnight Chrome Incep; Mon Nov 23 01:00 PM GB1039 - Midnight Chrome Inception!  - Random Team; Tue Nov 24 06:11 PM GB1037- 50% CHANCE FILLER - PYT EVOLVED TEAM POOL; Tue Nov 24 07:22 PM GB1040 - 25% CHANCE FILLER - Multi Product Madness; Tue Nov 24 07:22 PM GB1040 - Multi Product Madness!  - Random Team
+- Days: Mon 5, Tue 8, Wed 2, Thu 10
+- Hours (ET): 09:00 1, 12:00 4, 13:00 14, 14:00 1, 17:00 1, 18:00 1, 19:00 2, 20:00 1
+- Latest: Thu Nov 26 01:00 PM GB1044 - 25% CHANCE FILLER - The Best of Bowman!; Thu Nov 26 01:00 PM GB1044 - The Best of Bowman! - Random Letters; Thu Nov 26 01:00 PM GB1043 - 25% CHANCE FILLER - Multi Product Footbal; Thu Nov 26 01:00 PM GB1043 - Multi Product Football! - Random Letters; Thu Nov 26 01:00 PM GB1042 - 25% CHANCE FILLER - Chrome At The Museum!; Thu Nov 26 01:00 PM GB1042 - Chrome At The Museum! - Random Teams; Thu Nov 26 01:00 PM GB1041 - 25% CHANCE FILLER - Midnight Chrome Incep; Thu Nov 26 01:00 PM GB1041 - Midnight Chrome Inception!  - Random Team
 
 ## jwj (7 products)
 
