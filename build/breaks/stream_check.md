@@ -12,8 +12,10 @@ pages for breaks that have already run; when the stream ends, close that night's
    - RUN live <stream> <url> <ids>: go on to step 3.
 3. Read the break number. Use the browser on Daniel's computer (Claude in Chrome if it's there, otherwise the built-in
    browser). Open <url> in a new tab (it's one of our own break pages; the stream is embedded there, which avoids
-   YouTube's robot check). Click the middle of the video player to play it, wait about 8 seconds, then take a zoomed
-   screenshot of the player. RGL's overlay shows the current break as "BREAK #6133" at the top left, a schedule list,
+   YouTube's robot check). Take a screenshot first and find the video player in it; the browser window size changes from
+   run to run, so never reuse click coordinates from an earlier run. Click the middle of the player to play it, wait about
+   8 seconds, then take a zoomed screenshot of the player (if the zoom shows the page text instead of the stream, the
+   click missed: look again and click the player). RGL's overlay shows the current break as "BREAK #6133" at the top left, a schedule list,
    and a board of spots. Then close the tab right away so nothing keeps playing.
    - Never click an "I'm not a robot" or any CAPTCHA check. If one appears, close the tab, make no changes, and end
      with one line saying the stream couldn't be read because of a robot check.
