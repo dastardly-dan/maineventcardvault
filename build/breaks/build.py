@@ -1088,6 +1088,7 @@ rgl6140 = dict(
            'Filler entries are sold too ($26 each); see RGL\'s listing for how fillers work.'],
     sources=[['RGL #6140 break page (Run Good Life)', rgl_url(RGL6140_H)], SRC_CHROME],
 )
+close(rgl6140, 'Thursday, November 26, 2026', ['5 boxes', '22 spots for 32 teams', '$260 per spot, fillers $26', 'Teams randomized live'])  # Daniel said the night was done (Nov 26, 8:18 am Eastern)
 
 # RGL #6141 Peak Degeneracy #6 (Random Letter), multi-sport, posted Nov 25. All 10 products listed (Obsidian Soccer, Select Basketball and Pokemon added from Daniel's files).
 RGL6141_H = 'rgl-6141-peak-degeneracy-6-random-letter-11-25-26'
@@ -1126,6 +1127,7 @@ rgl6141 = dict(
            ['Panini Obsidian Soccer and Select Basketball checklists (official Panini CSVs)', SRC_PANINI],
            ['Pokemon TCG 30th Celebration card list (official Pokemon PDF)', 'https://www.pokemon.com/us/pokemon-tcg']],
 )
+close(rgl6141, 'Thursday, November 26, 2026', ['11 boxes', '16 spots', '$188 per spot, fillers $47', 'Letters randomized live'])  # Daniel said the night was done (Nov 26, 8:18 am Eastern)
 
 # rgl6143 draft removed (Daniel, Nov 25): no guessed setups; the page builder builds #6143 from RGL's listing.
 
@@ -1207,6 +1209,7 @@ rgl612xmarvel = dict(
     sources=[['RGL Marvel Neon & Mint break page (Run Good Life)', rgl_url(RGL612XMARVEL_H)], _src(RGL612XMARVEL_LIB['neon'], 'Topps Neon Marvel'),
              _src(RGL612XMARVEL_LIB['mintm'], 'Topps Mint Marvel'), _src(RGL612XMARVEL_LIB['aura'], 'Kakawow Aura Marvel')],
 )
+close(rgl612xmarvel, 'Wednesday, November 25, 2026', ['4 boxes', '13 spots', '$122 per spot, fillers $30.50', 'Letters randomized live'])  # Daniel said the night was done (Nov 26, 8:18 am Eastern)
 
 # RGL #6142 UFC Royalty Mixer (Random Letter), posted Nov 25. Only the 2026 Topps Chrome UFC checklist is in the library; the
 # listing's other three boxes (Stadium Club, Finest, Royalty) have no checklist here yet.
@@ -1229,6 +1232,7 @@ rgl6142 = dict(
            'Filler entries are sold too ($32 each); see RGL\'s listing for how fillers work.'],
     sources=[['RGL #6142 break page (Run Good Life)', rgl_url(RGL6142_H)], _src('2026-topps-chrome-ufc', 'Topps Chrome UFC')],
 )
+close(rgl6142, 'Thursday, November 26, 2026', ['4 boxes (1 listed here)', '15 spots', '$128 per spot, fillers $32', 'Letters randomized live'])  # Daniel said the night was done (Nov 26, 8:18 am Eastern)
 
 # RGL "#612XWWE2" Chrome in the Club PYL #2, posted Nov 25 without a real break number or start time. Same letters and
 # prices as #6128; boxes are #6128's minus the Chrome Hobby box. If RGL renumbers it, update the id note and title here.
