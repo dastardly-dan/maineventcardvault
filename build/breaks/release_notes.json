@@ -6,6 +6,11 @@
    "title": "More Run Good Life break guides",
    "items": [
     [
+     "Fixed",
+     "Break guides",
+     "On a phone, the big header no longer follows you down the page on live break pages. With Live chat open, the stream stays pinned at the top and the chat sits at the bottom, so the page scrolls in the space between. Turn the phone sideways and the chat moves to a side panel."
+    ],
+    [
      "Updated",
      "Break guides",
      "RGL #6134 Gilded Collection PYT #2 has run. Its guide stays up under Past breaks, with the stream replay."

@@ -75,6 +75,16 @@ body.chatopen { padding-right: 360px; }  /* the page slides over so the chat pan
 .chatwin .chathead button { font: inherit; font-size: 18px; line-height: 1; background: none; border: 0; color: #fff; cursor: pointer; padding: 0 4px; }
 .chatwin iframe { position: static; flex: 1; width: 100%; height: auto; min-height: 0; border: 0; display: block; background: #0f0f0f; }
 @media (max-width: 900px) { .chatwin { top: auto; left: 12px; right: 12px; bottom: 12px; width: auto; height: 40vh; border-radius: 14px; overflow: hidden; border: 1px solid var(--line); box-shadow: 0 12px 36px rgba(0,0,0,.35); } body.chatopen { padding-right: 0; } }
+/* phones (Daniel, Nov 25, 2026): on stream pages the tall header scrolls away instead of sticking. With chat open (portrait), the stream
+   pins to the top and the chat sits at the bottom, so the page scrolls in the space between them instead of hiding under the chat. */
+@media (max-width: 900px) { body.hasstream header.site { position: static; } }
+@media (max-width: 900px) and (orientation: portrait) {
+  body.chatopen .herovid { position: fixed; top: 0; left: 0; right: 0; z-index: 55; padding: 8px 10px; background: var(--bg); box-shadow: 0 8px 18px rgba(0,0,0,.28); }
+  body.chatopen .herovid .vlab { display: none; }
+  body.chatopen { padding-top: calc((100vw - 20px) * .5625 + 16px); padding-bottom: calc(34vh + 24px); }
+  body.chatopen .chatwin { height: 34vh; }
+}
+@media (max-width: 900px) and (orientation: landscape) { .chatwin { top: 0; right: 0; bottom: 0; left: auto; width: 300px; height: auto; border-radius: 0; border-width: 0 0 0 1px; } body.chatopen { padding-right: 300px; } body.chatopen .hero.hasvid { grid-template-columns: 1fr; gap: 14px; } body.chatopen .hero.hasvid .herovid { grid-row: 1; } }  /* phone on its side: the chat is a side panel, like on a computer */
 body.compact .lede { display: none; }
 @media (max-width: 560px) { body.compact .hero { padding-top: 18px; } body.compact h1 { font-size: 26px; } }
 .kicker { color: var(--gold); font-size: 12px; letter-spacing: .22em; text-transform: uppercase; font-weight: 600; }
