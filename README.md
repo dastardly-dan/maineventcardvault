@@ -218,6 +218,10 @@ team spot, box by box. Linked from the storefront's Breaks menu; every page carr
       No drafts: the old draft machinery in build.py has an empty list. Every break page shows "A guide, not a
       guarantee" (template.html). eBay asking prices are collected for all breaks but shown only after a break
       has run (write() in build.py).
+  3l. Stream check (Daniel, Nov 25, 2026): two scheduled tasks on Daniel's computer (:15 and :45) run
+      `build/breaks/stream_gate.py`. While a stream is live they open one of our break pages, play the embedded stream,
+      read the break number on RGL's overlay and close earlier breaks; when the stream ends they close that night's
+      pages. Procedure: `build/breaks/stream_check.md`. Never click a robot check.
   3j. Streams (Daniel, Nov 25, 2026): when Daniel sends a breaker's YouTube link, add it to `STREAMS` in `build.py`
       with the page ids for that break night. Those pages show the YouTube player instead of the title card; the same
       link becomes the replay after the stream. Pages without a stream keep the title card.
