@@ -2,6 +2,17 @@
  "_how": "Newest first. Add a new release at the top of 'releases', or add items to today's. tag: New, Improved or Fixed. area: Break guides, Spot Builder or Site. Then run python3 build/breaks/hub.py, which writes breaks/release-notes.html.",
  "releases": [
   {
+   "date": "November 26, 2026",
+   "title": "Run Good Life break night wrap up",
+   "items": [
+    [
+     "Improved",
+     "Break guides",
+     "Run Good Life #6135 through #6139 and the WWE letter break have run. Their guides stay up under Past breaks."
+    ]
+   ]
+  },
+  {
    "date": "November 25, 2026",
    "title": "More Run Good Life break guides",
    "items": [

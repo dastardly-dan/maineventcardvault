@@ -1027,6 +1027,7 @@ rgl6136 = dict(
              ['Panini Donruss Football checklist (official Panini CSV)', SRC_PANINI], ['Panini Obsidian Football checklist (official Panini CSV)', SRC_PANINI],
              _src('2026-bowman-football-sapphire-edition', 'Bowman Football Sapphire Edition'), SRC_INCEPTION],
 )
+close(rgl6136, 'Wednesday, November 25, 2026', ['7 boxes', '24 spots for 32 teams', '$194 per spot, fillers $48.50', 'Teams randomized live', '$1,000 turkey prize'])  # stream showed #6140 running (Nov 26, 2:08 am Eastern)
 
 RGL6138_H = 'rgl-6138-gilded-cosmic-random-team-11-25-26'
 rgl6138 = dict(
@@ -1048,6 +1049,7 @@ rgl6138 = dict(
     sources=[['RGL #6138 break page (Run Good Life)', rgl_url(RGL6138_H)], rgl6129['sources'][5], rgl6129['sources'][3],
              _src('2026-topps-cosmic-chrome-baseball', 'Topps Cosmic Chrome Baseball'), rgl6129['sources'][2]],
 )
+close(rgl6138, 'Wednesday, November 25, 2026', ['6 boxes (4 listed here)', '20 spots for 30 teams', '$176 per spot, fillers $44', 'Teams randomized live'])  # stream showed #6140 running (Nov 26, 2:08 am Eastern)
 
 RGL6139_H = 'rgl-6139-joy-of-five-star-2-random-team-11-25-26'
 rgl6139 = dict(
@@ -1064,6 +1066,7 @@ rgl6139 = dict(
            'Filler entries are sold too ($29 each); see RGL\'s listing for how fillers work.'],
     sources=[['RGL #6139 break page (Run Good Life)', rgl_url(RGL6139_H)]] + list(rgl6131['sources'][1:]),
 )
+close(rgl6139, 'Wednesday, November 25, 2026', ['5 boxes', '21 spots for 30 teams', '$290 per spot, fillers $29', 'Teams randomized live'])  # stream showed #6140 running (Nov 26, 2:08 am Eastern)
 
 RGL6140_H = 'rgl-6140-half-case-delight-degen-random-team-11-25-26'
 rgl6140 = dict(
@@ -1158,6 +1161,7 @@ rgl6135 = dict(
              _src(RGL6135_LIB['mintm'], 'Topps Mint Marvel'), _src(RGL6135_LIB['mintd'], 'Topps Mint Disney'),
              _src(RGL6135_LIB['xmen'], 'Topps Finest X-Men \'97'), _src(RGL6135_LIB['pixar'], 'Topps Pixar Gold')],
 )
+close(rgl6135, 'Wednesday, November 25, 2026', ['7 boxes (5 listed here)', '15 spots', '$156 per spot, fillers $39', 'Letters randomized live'])  # stream showed #6140 running (Nov 26, 2:08 am Eastern)
 
 # RGL #6137 Pro Debut Half Case (Random Letter), posted Nov 25.
 RGL6137_H = 'rgl-6137-pro-debut-half-case-random-letter-11-25-26'
@@ -1176,6 +1180,7 @@ rgl6137 = dict(
     notes=['Filler entries are sold too ($24.50 each); see RGL\'s listing for how fillers work.'],
     sources=[['RGL #6137 break page (Run Good Life)', rgl_url(RGL6137_H)], _src('2026-topps-pro-debut-baseball', 'Topps Pro Debut Baseball')],
 )
+close(rgl6137, 'Wednesday, November 25, 2026', ['4 boxes (half case)', '10 spots', '$98 per spot, fillers $24.50', 'Letters randomized live'])  # stream showed #6140 running (Nov 26, 2:08 am Eastern)
 
 # RGL "#612xMarvel" Marvel Neon & Mint (Random Letter), posted Nov 25 with a placeholder break number. The listing's body text
 # still shows RGL #6123 and a November 21 start, so no current start time is posted. Boxes come from the listing's product list.
@@ -1245,6 +1250,7 @@ rgl612xwwe2 = dict(
            'Same letters and prices as the first Chrome in the Club PYL tonight (#6128), with one Chrome box (Breaker\'s Delight) instead of two.'] + list(rgl6128['notes']),
     sources=[['RGL Chrome in the Club PYL #2 break page (Run Good Life)', rgl_url(RGL612XWWE2_H)]] + list(rgl6128['sources'][1:]),
 )
+close(rgl612xwwe2, 'Wednesday, November 25, 2026', ['5 boxes', '27 letter spots', '$40 to $235 per spot'])  # Daniel said WWE was done (Nov 26, 2:08 am Eastern)
 
 if __name__ == '__main__':
     built = []
