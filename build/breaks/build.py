@@ -1336,6 +1336,6 @@ if __name__ == '__main__':
             write(cfg, n, u)
             OUT = OUT_LIVE
     json.dump(sorted(PRICE_TARGETS.values(), key=lambda t: t['q']), open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'watch', 'price_targets.json'), 'w'), indent=0, ensure_ascii=False)
-    json.dump([{k: b[k] for k in ('id', 'title', 'kicker', 'when', 'facts', 'ended', 'url', 'image') if k in b} for b in built], open(os.path.join(os.path.dirname(__file__), 'index.json'), 'w'))
+    json.dump([{k: b[k] for k in ('id', 'title', 'kicker', 'when', 'facts', 'ended', 'url', 'image', 'video') if k in b} for b in built], open(os.path.join(os.path.dirname(__file__), 'index.json'), 'w'))
     for b in built:
         if b['unmatched']: print(b['id'], 'UNMATCHED', b['unmatched'][:40])
