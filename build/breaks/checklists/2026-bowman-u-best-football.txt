@@ -1,7 +1,7 @@
 # name: 2026 Bowman U Best Football
 # sport: NFL
 # added: 2026-11-22
-# source: https://cdn.shopify.com/s/files/1/0662/9749/5709/files/2026_Bowman_U_Best_FB_Checklist.pdf
+# source: https://cdn.shopify.com/s/files/1/0662/9749/5709/files/2026_Bowman_U_Best_FB_Checklist_97ea930e-d127-4ae8-93f1-88dea14424d4.pdf?v=1793825028
 
 [base]
 Aaron Philo | Florida

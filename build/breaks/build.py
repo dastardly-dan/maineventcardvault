@@ -33,14 +33,15 @@ def first_char(s):
         if ch.isdigit(): return '#'
     return '?'
 
-def first_two(s):
-    """first two letters, for spots split on the second letter (CA-CH); a leading 'The' doesn't count"""
+def first_two(s, n=2):
+    """first two letters (or n), for spots split on the second letter (CA-CH) or the third (JA-JAR); a leading 'The' doesn't count"""
     s = fold(s).strip().lstrip('"\'(').strip()
     s = re.sub(r'^(the)\s+', '', s, flags=re.I).lstrip('"\'(')
-    return ''.join(ch for ch in s if ch.isalpha())[:2].upper()
+    return ''.join(ch for ch in s if ch.isalpha())[:n].upper()
 
-def in_spot(s, L, two):
-    return L in s['letters'] or any(lo <= two <= hi for lo, hi in s.get('pre', []))
+def in_spot(s, L, key):
+    """key is the name's first three letters; each bound is compared at its own length, so two-letter ranges behave as before"""
+    return L in s['letters'] or any(lo <= key[:len(lo)] and key[:len(hi)] <= hi for lo, hi in s.get('pre', []))
 
 def letters(name):
     """printed letter (nickname counts, a leading 'The' doesn't), and the letter by real name if different"""
@@ -73,7 +74,7 @@ def letter_break(cfg, products, gender_of=None, alt=True):
             p, a = letters(n)
             g = gender_of(n) if gender_of else None
             hit = False
-            for L, extra, two in ((p, '', first_two(n.replace('"', ''))), (a, '?', first_two(key_of(n)))):
+            for L, extra, two in ((p, '', first_two(n.replace('"', ''), 3)), (a, '?', first_two(key_of(n), 3))):
                 if not L or (extra and not alt): continue
                 for s in cfg['spots']:
                     if (in_spot(s, L, two) and (s.get('g') is None or s['g'] == g)) or L in s.get('anyg', ''):
@@ -689,7 +690,7 @@ rgl6129_v = [('Arizona Diamondbacks', 55, 1), ('Atlanta Braves', 165, 0), ('Balt
              ('Philadelphia Phillies', 130, 1), ('Pittsburgh Pirates', 240, 1), ('San Diego Padres', 75, 1), ('San Francisco Giants', 165, 1),
              ('Seattle Mariners', 165, 1), ('St. Louis Cardinals', 190, 1), ('Tampa Bay Rays', 75, 1), ('Texas Rangers', 60, 1), ('Toronto Blue Jays', 135, 1),
              ('Washington Nationals', 85, 1)]
-MLB_FOLD = {'Expos': 'Nationals', 'Cleveland': 'Guardians', 'Senators': 'Twins', 'Indians': 'Guardians'}
+MLB_FOLD = {'Expos': 'Nationals', 'Cleveland': 'Guardians', 'Senators': 'Twins', 'Indians': 'Guardians', "A's": 'Athletics', 'Browns': 'Orioles'}
 def mlb_team(full):
     if full == "Oakland A's": return 'Athletics'
     for two in ('Red Sox', 'White Sox', 'Blue Jays'):
@@ -1340,6 +1341,155 @@ cc873 = dict(
 )
 close(cc873, 'Sunday, November 22, 2026', ['5 boxes (half case)', '41 character spots', '$10 to $40 per spot'])
 
+# ---------------- Acme Packs breaks for Friday, November 27, 2026 (GB1041 to GB1045) ----------------
+ACME_FRI = 'Friday, November 27, 2026, %s Central (%s Eastern). If it doesn\'t fill, it rolls to the next break night.'
+ACME_CHK = 'When checked on November 26, 2026, around 1:40 pm Eastern, the break was listed and spots were for sale.'
+def _srcx(pid, label, by='official Topps'):
+    u = next((l.split('source:', 1)[1].strip() for l in open(os.path.join(LIB, pid + '.txt'), encoding='utf-8') if l.startswith('# source:')), '')
+    return [label + ' checklist (' + by + ')', u]
+ACME_FILLER = 'Filler entries are sold too (%s for a 25%% chance at a spot); see Acme\'s filler listing for how they work.'
+GB_LETTER_FIRST = ['First letter of the first name', ['Acme\'s listing: every card goes to the first letter of the first name of the athlete on the card. Arch Manning goes to the "A" spot.']]
+GB_LETTER_MULTI = ['Cards with more than one name', ['Each person on a dual or multi-player card is listed under their own letter here. Acme randomizes cards like that between the spots involved.', 'Anything the rules don\'t cover is up to the breaker.']]
+
+# GB1041: Midnight Chrome Inception (random team, NFL)
+GB1041_H = 'gb1041-midnight-chrome-inception-random-team'
+gb1041 = dict(
+    id='gb1041', title='GB1041 Midnight Chrome Inception', kicker='Acme Packs · Random team · NFL',
+    url=acme_url(GB1041_H), when=ACME_FRI % ('5:00 pm', '6:00 pm'),
+    facts=['5 boxes', '28 team spots (24 teams, 4 combos)', '$120 per spot, $30 for a 25% filler', 'Teams randomized live'],
+    format='team', checked=ACME_CHK,
+    boxes=[BOX_INCEPTION, BOX_MIDNIGHT, BOX_CHROME_H],
+    spots=[team_spot(re.sub(r'[^a-z0-9]', '', l.lower()), l, ts) for l, ts in gb1038b_spots],
+    rules=ACME_RULES,
+    notes=['Cards are listed with the team the official checklist gives them.', ACME_FILLER % '$30'],
+    sources=[['GB1041 break page (Acme Packs)', acme_url(GB1041_H)], ACME_TERMS, SRC_INCEPTION, SRC_MIDNIGHT, SRC_CHROME],
+)
+
+# GB1042: Chrome At The Museum (random team, MLB)
+GB1042_H = 'gb1042-chrome-at-the-museum-random-teams'
+gb1042_spots = [('Athletics', ['Athletics']), ('Atlanta Braves', ['Braves']), ('Arizona Diamondbacks / Tampa Bay Rays', ['Diamondbacks', 'Rays']),
+                ('Baltimore Orioles', ['Orioles']), ('Boston Red Sox', ['Red Sox']), ('Chicago Cubs', ['Cubs']), ('Chicago White Sox', ['White Sox']),
+                ('Cincinnati Reds', ['Reds']), ('Cleveland Guardians', ['Guardians']), ('Colorado Rockies', ['Rockies']), ('Detroit Tigers', ['Tigers']),
+                ('Houston Astros', ['Astros']), ('Kansas City Royals', ['Royals']), ('Los Angeles Angels', ['Angels']), ('Los Angeles Dodgers', ['Dodgers']),
+                ('Miami Marlins / Minnesota Twins', ['Marlins', 'Twins']), ('Milwaukee Brewers', ['Brewers']), ('New York Mets', ['Mets']),
+                ('New York Yankees', ['Yankees']), ('Philadelphia Phillies', ['Phillies']), ('Pittsburgh Pirates', ['Pirates']),
+                ('San Diego Padres / Texas Rangers', ['Padres', 'Rangers']), ('San Francisco Giants', ['Giants']), ('Seattle Mariners', ['Mariners']),
+                ('St. Louis Cardinals', ['Cardinals']), ('Toronto Blue Jays', ['Blue Jays']), ('Washington Nationals', ['Nationals'])]
+BOX_MUSEUM_B = dict(next(b for b in rgl6129['boxes'] if b['k'] == 'museum'), full='2026 Topps Museum Collection Baseball Hobby (2 boxes)')
+gb1042 = dict(
+    id='gb1042', title='GB1042 Chrome At The Museum', kicker='Acme Packs · Random team · MLB',
+    url=acme_url(GB1042_H), when=ACME_FRI % ('6:00 pm', '7:00 pm'),
+    facts=['6 boxes', '27 team spots (24 teams, 3 combos)', '$105 per spot, $26.25 for a 25% filler', 'Teams randomized live'],
+    format='team', checked=ACME_CHK,
+    boxes=[dict(k='logo', short='Chrome Logofractor', c='#5aa9ff', full='2026 Topps Chrome Baseball Logofractor Edition (2 boxes)', kind='300-card base, autographs, inserts',
+                types='Chrome base with Logofractor parallels, autographs and inserts.'),
+           dict(k='black', short='Chrome Black', c='#8a93a0', full='2026 Topps Chrome Black Baseball Hobby (1 box)', kind='200-card base, autographs, inserts',
+                types='Dark Chrome base, Chrome Black, Ivory, Paint It and Super Futures autographs, Pitch Black Pairings dual autographs, and Damascus, Depth of Darkness, Home Field and Nocturnal inserts.'),
+           dict(k='prizm', short='Prizm', c='#e2545e', full='2026 Panini Prizm Baseball Hobby (1 box)', kind='300-card base, autographs, inserts',
+                types='Base with Prizm parallels, autographs, inserts and multi-player cards.'),
+           BOX_MUSEUM_B],
+    spots=[team_spot(re.sub(r'[^a-z0-9]', '', l.lower()), l, ts) for l, ts in gb1042_spots],
+    rules=[['Cards go to the team on the card', ['Acme\'s rules: a card goes to the team listed on the front or back, not the jersey.', 'Retired players go to the team on their card; if that team moved, it goes to the team it became (the Montreal Expos to the Washington Nationals and the St. Louis Browns to the Baltimore Orioles, for example).']],
+           ACME_RULES[2]],
+    notes=['Cards are listed with the team the checklist gives them.',
+           'The Chrome Black checklist comes from Beckett (base set) and Checklist Center (autographs and inserts), because Topps\'s own PDF wasn\'t available. It lists names and teams only.',
+           'Six Prizm cards are for players with no MLB team on the checklist (Grady Emerson, Josh Gibson, Kelsie Whitmore, Mo\'ne Davis, NiJaree Canady and Roch Cholowsky). Acme\'s listing doesn\'t say where those go, so they aren\'t in any spot here.',
+           ACME_FILLER % '$26.25'],
+    sources=[['GB1042 break page (Acme Packs)', acme_url(GB1042_H)], ACME_TERMS,
+             _srcx('2026-topps-chrome-baseball-logofractor-edition', 'Topps Chrome Logofractor Baseball'),
+             ['Topps Chrome Black Baseball base set (Beckett)', 'https://www.beckett.com/news/2026-topps-chrome-black-baseball-cards/'],
+             ['Topps Chrome Black Baseball autographs and inserts (Checklist Center)', 'https://www.checklistcenter.com/2026-topps-chrome-black-baseball-card-checklist/'],
+             ['Panini Prizm Baseball checklist (official Panini CSV)', SRC_PANINI],
+             _srcx('2026-topps-museum-collection-baseball', 'Topps Museum Collection Baseball')],
+)
+
+# GB1043: Multi Product Football (random letter)
+GB1043_H = 'gb1043-multi-product-football-random-letters'
+gb1043 = dict(
+    id='gb1043', title='GB1043 Multi Product Football', kicker='Acme Packs · Random letter · NFL and college',
+    url=acme_url(GB1043_H), when=ACME_FRI % ('7:00 pm', '8:00 pm'),
+    facts=['4 boxes', '20 letter spots', '$115 per spot, $28.75 for a 25% filler', 'Letters randomized live'],
+    format='random', checked=ACME_CHK,
+    boxes=[dict(k='best', short='Bowman U Best', c='#3ccf9a', full='2026 Topps Bowman Best Football Hobby (1 box)', kind='Base, autographs, inserts',
+                types='Base, autographs, inserts and multi-player cards from the Bowman U Best checklist.'),
+           dict(BOX_CHROME_H, full='2026 Topps Chrome Football Hobby (1 box)'),
+           dict(k='obsidian', short='Obsidian', c='#8a6be0', full='2026 Panini Obsidian Football FOTL (1 box)', kind='Base, autographs, inserts',
+                types='Base, autographs, memorabilia, inserts and multi-player cards from the Obsidian checklist.'),
+           dict(k='bowman', short='Bowman Jumbo', c='#f2c14e', full='2026 Topps Bowman Football Jumbo (1 box)', kind='Base, autographs, inserts',
+                types='Base with parallels, autographs and inserts from the Bowman Football checklist.')],
+    spots=[cc_spot('A', 'A'), cc_spot('B', 'B'), cc_spot('CA-CG', pre=[('CA', 'CG')]), cc_spot('CH-CZ', pre=[('CH', 'CZ')]),
+           cc_spot('DA-DL', pre=[('DA', 'DL')]), cc_spot('DM-DZ', pre=[('DM', 'DZ')]), cc_spot('E', 'E'), cc_spot('F / G / H', 'FGH'),
+           cc_spot('JA-JAR', pre=[('JA', 'JAR')]), cc_spot('JAS-JM', pre=[('JAS', 'JM')]), cc_spot('JN-JZ', pre=[('JN', 'JZ')]),
+           cc_spot('K', 'K'), cc_spot('L', 'L'), cc_spot('M', 'M'), cc_spot('N / O', 'NO'), cc_spot('P / Q', 'PQ'), cc_spot('R', 'R'),
+           cc_spot('S', 'S'), cc_spot('T', 'T'), cc_spot('U / V / W / X / Y / Z / I', 'UVWXYZI')],
+    rules=[GB_LETTER_FIRST,
+           ['How the 20 spots work', ['C, D and J are split on the next letters: CA-CG and CH-CZ, DA-DL and DM-DZ, and J in three parts (JA-JAR, JAS-JM and JN-JZ).',
+                                      'Cam Coleman is CA, so CA-CG. CJ Carr is CJ, so CH-CZ. Jared Allen is JAR, so JA-JAR. Jayden Maiava is JAY, so JAS-JM. Josh Hoover is JO, so JN-JZ.',
+                                      'F, G and H share a spot, as do N and O, and P and Q. The last spot holds U, V, W, X, Y, Z and I.']],
+           GB_LETTER_MULTI],
+    notes=['The listing says "2026 Topps Bowman Best Football". Acme calls GB1044 "Bowman U Best", so this guide treats them as the same product and uses the Bowman U Best Football checklist.',
+           'FOTL stands for First Off The Line. This guide uses the standard Obsidian Football checklist, so any cards that are only in FOTL boxes may be missing. The Bowman Jumbo box uses the standard Bowman Football checklist the same way.',
+           ACME_FILLER % '$28.75'],
+    sources=[['GB1043 break page (Acme Packs)', acme_url(GB1043_H)], ACME_TERMS,
+             _srcx('2026-bowman-u-best-football', 'Bowman U Best Football'), SRC_CHROME,
+             ['Panini Obsidian Football checklist (official Panini CSV)', SRC_PANINI],
+             _srcx('2026-bowman-football', 'Bowman Football')],
+)
+
+# GB1044: The Best of Bowman (random letter)
+GB1044_H = 'gb1044-the-best-of-bowman-random-letters'
+gb1044 = dict(
+    id='gb1044', title='GB1044 The Best of Bowman', kicker='Acme Packs · Random letter · College football',
+    url=acme_url(GB1044_H), when=ACME_FRI % ('8:00 pm', '9:00 pm'),
+    facts=['4 boxes', '16 letter spots', '$105 per spot, $26.25 for a 25% filler', 'Letters randomized live'],
+    format='random', checked=ACME_CHK,
+    boxes=[dict(k='best', short='Bowman U Best', c='#3ccf9a', full='2026 Topps Bowman U Best Football Hobby (4 boxes)', kind='Base, autographs, inserts',
+                types='Base, autographs, inserts and multi-player cards from the Bowman U Best checklist.')],
+    spots=[cc_spot('A', 'A'), cc_spot('B (BA-BO)', pre=[('BA', 'BO')]), cc_spot('B (BR-BZ)', pre=[('BR', 'BZ')]),
+           cc_spot('C (CA-CE)', pre=[('CA', 'CE')]), cc_spot('C (CF-CZ)', pre=[('CF', 'CZ')]),
+           cc_spot('D (DA-DE)', pre=[('DA', 'DE')]), cc_spot('D (DF-DZ)', pre=[('DF', 'DZ')]),
+           cc_spot('E / F / G / H / I / P', 'EFGHIP'), cc_spot('J (JA-JAR)', pre=[('JA', 'JAR')]), cc_spot('J (JAS-JZ)', pre=[('JAS', 'JZ')]),
+           cc_spot('K', 'K'), cc_spot('L', 'L'), cc_spot('M', 'M'), cc_spot('N / O / V / W / Y / Z', 'NOVWYZ'), cc_spot('R / S', 'RS'), cc_spot('T', 'T')],
+    rules=[GB_LETTER_FIRST,
+           ['How the 16 spots work', ['B, C, D and J are split on the next letters: BA-BO and BR-BZ, CA-CE and CF-CZ, DA-DE and DF-DZ, and JA-JAR and JAS-JZ.',
+                                      'No spot lists Q, U or X, and no one in this checklist has a first name that starts with those letters.',
+                                      'Bo Jackson is BO, so BA-BO. Bryce Underwood is BR, so BR-BZ. Caden Durham is CA, so CA-CE. CJ Carr is CJ, so CF-CZ. Jared Curtis is JAR, so JA-JAR. Jayden Maiava is JAY, so JAS-JZ.']],
+           GB_LETTER_MULTI],
+    notes=['Acme calls this product "Bowman U Best" here and "Bowman Best" on GB1043. This guide uses the Bowman U Best Football checklist for both.',
+           'Topps notes on its own checklist that it reflects the planned product setup at production time, and that actual contents and odds may vary.',
+           ACME_FILLER % '$26.25'],
+    sources=[['GB1044 break page (Acme Packs)', acme_url(GB1044_H)], ACME_TERMS, _srcx('2026-bowman-u-best-football', 'Bowman U Best Football')],
+)
+
+# GB1045: Leaf Optichrome Football Fire Sale (random letter)
+GB1045_H = 'gb1045-leaf-optichrome-football-fire-sale-random-letters'
+gb1045 = dict(
+    id='gb1045', title='GB1045 Leaf Optichrome Football Fire Sale', kicker='Acme Packs · Random letter · Football',
+    url=acme_url(GB1045_H), when=ACME_FRI % ('9:00 pm', '10:00 pm'),
+    facts=['8 boxes', '12 letter spots (the listing says 16)', '$175 per spot', 'Letters randomized live'],
+    format='random', checked=ACME_CHK,
+    boxes=[dict(k='lf25', short='2025 Optichrome', c='#5aa9ff', full='2025 Leaf Optichrome Football Jumbo (4 boxes)', kind='Base, autographs, inserts, memorabilia',
+                types='Optichrome base, many autograph sets (including multi-signed cards and a basketball autograph set), inserts and Battle Worn memorabilia.'),
+           dict(k='lf26', short='2026 Optichrome', c='#e2545e', full='2026 Leaf Optichrome Football (1 Jumbo, 3 Hobby)', kind='Base, autographs, inserts',
+                types='Optichrome base, autographs, inserts and multi-player cards.')],
+    spots=[cc_spot('A', 'A'), cc_spot('B', 'B'), cc_spot('C', 'C'), cc_spot('D', 'D'), cc_spot('E / F / I', 'EFI'), cc_spot('G / H / O', 'GHO'),
+           cc_spot('J', 'J'), cc_spot('K / L', 'KL'), cc_spot('M', 'M'), cc_spot('N / P / Q', 'NPQ'), cc_spot('R / S', 'RS'),
+           cc_spot('T / U / V / W / X / Y / Z', 'TUVWXYZ')],
+    rules=[GB_LETTER_FIRST,
+           ['How the spots work', ['The spots are the 12 letter groups on Acme\'s listing. Together they cover every letter from A to Z.']],
+           GB_LETTER_MULTI],
+    notes=['Acme\'s listing says 16 spots, but the board on the listing shows 12 letter groups. This guide shows the 12 groups. Check Acme\'s listing for the final board.',
+           'Leaf cards don\'t carry team names, so there is no team view for this set.'],
+    sources=[['GB1045 break page (Acme Packs)', acme_url(GB1045_H)], ACME_TERMS,
+             ['2025 Leaf Optichrome Football checklist (Checklist Center)', 'https://www.checklistcenter.com/2025-leaf-optichrome-football-card-checklist/'],
+             ['2026 Leaf Optichrome Football checklist (Leaf Trading Cards)', 'https://www.leaftradingcards.com/products/2026-leaf-optichrome-football']],
+)
+
+ACME_CL_NOTE = ('Checklists show what the maker planned for a product when it was made. The boxes opened on the stream can differ, for example a '
+                'FOTL (First Off The Line), Jumbo or other version, or a late change by the maker, so a card that isn\'t listed here can still turn up. '
+                'It goes to whichever spot its name or team matches, under Acme\'s rules.')
+for _c in (gb1041, gb1042, gb1043, gb1044, gb1045): _c['notes'].append(ACME_CL_NOTE)
+
 if __name__ == '__main__':
     built = []
     n, u = letter_break(cc871, WWE_PRODUCTS, wwe_gender); built.append(write(cc871, n, u))
@@ -1378,6 +1528,13 @@ if __name__ == '__main__':
         cc_spot('SA-SH', pre=[('SA', 'SH')]), cc_spot('SI-SZ', pre=[('SI', 'SZ')]), cc_spot('T', 'T'), cc_spot('V / Q / W', 'VQW'), cc_spot('X / Y / Z', 'XYZ')]
     close(gb1040, 'Tuesday, November 24, 2026', ['5 boxes', '21 letter spots', '$135 per spot'])  # ran Nov 24 (Daniel)
     n, u = letter_break(gb1040, g40, None, alt=False); built.append(write(gb1040, n, u))
+    n, u = team_break(gb1041, {'chrome': CH, 'midnight': MN, 'inception': IN}); built.append(write(gb1041, n, u))
+    n, u = team_break(gb1042, {'logo': lib_mlb_product('2026-topps-chrome-baseball-logofractor-edition'), 'black': lib_mlb_product('2026-topps-chrome-black-baseball'),
+        'prizm': lib_mlb_product('2026-panini-prizm-baseball'), 'museum': lib_mlb_product('2026-topps-museum-collection-baseball')}); built.append(write(gb1042, n, u))
+    n, u = letter_break(gb1043, {'best': lib_letter_product('2026-bowman-u-best-football'), 'chrome': lib_letter_product('2026-topps-chrome-football'),
+        'obsidian': lib_letter_product('2026-panini-obsidian-football'), 'bowman': lib_letter_product('2026-bowman-football')}, None, alt=False); built.append(write(gb1043, n, u))
+    n, u = letter_break(gb1044, {'best': lib_letter_product('2026-bowman-u-best-football')}, None, alt=False); built.append(write(gb1044, n, u))
+    n, u = letter_break(gb1045, {'lf25': lib_letter_product('2025-leaf-optichrome-football'), 'lf26': lib_letter_product('2026-leaf-optichrome-football')}, None, alt=False); built.append(write(gb1045, n, u))
     # RGL drafts: built only once RGL posts the listing (RGL_DRAFT_PREVIEW=<folder> writes previews there instead)
     PREVIEW = os.environ.get('RGL_DRAFT_PREVIEW')
     MLB6129 = lambda: {k: lib_mlb_product(v) for k, v in (('chrome', '2026-topps-chrome-baseball'), ('update', '2026-topps-update-series-baseball'),

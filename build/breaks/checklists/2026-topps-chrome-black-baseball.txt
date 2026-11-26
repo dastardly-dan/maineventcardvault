@@ -1,0 +1,411 @@
+# name: 2026 Topps Chrome Black Baseball
+# sport: MLB
+# added: 2026-11-26
+# source: https://www.checklistcenter.com/2026-topps-chrome-black-baseball-card-checklist/
+# note: Base from Beckett, autographs and inserts from Checklist Center (Topps had not posted a PDF we could read). Names and teams only; parallels not listed.
+
+[base]
+Shohei Ohtani | Dodgers
+Mike Trout | Angels
+Ronald Acuña Jr. | Braves
+Mookie Betts | Dodgers
+Freddie Freeman | Dodgers
+Juan Soto | Mets
+Julio Rodríguez | Mariners
+Aaron Judge | Yankees
+José Ramírez | Guardians
+Yordan Alvarez | Astros
+Gunnar Henderson | Orioles
+Alex Bregman | Red Sox
+Jac Caglianone | Royals
+Brendan Donovan | Cardinals
+Matt Olson | Braves
+Kyle Tucker | Cubs
+Bubba Chandler | Pirates
+Pete Alonso | Orioles
+Francisco Lindor | Mets
+Teoscar Hernández | Dodgers
+Jacob Misiorowski | Brewers
+Shota Imanaga | Cubs
+Jhostynxon Garcia | Pirates
+Jose Altuve | Astros
+Nolan Arenado | Cardinals
+Payton Tolle | Red Sox
+Jakob Marsee | Marlins
+Alex Freeland | Dodgers
+Marcelo Mayer | Red Sox
+Sal Stewart | Reds
+Cade Horton | Cubs
+Chris Sale | Braves
+Jung Hoo Lee | Giants
+Jordan Beck | Rockies
+Paul Skenes | Pirates
+Jeremy Peña | Astros
+Kyle Stowers | Marlins
+Chase Burns | Reds
+Jazz Chisholm Jr. | Yankees
+Zach Neto | Angels
+Samuel Basallo | Orioles
+Christian Yelich | Brewers
+Jacob Melton | Astros
+C.J. Kayfus | Guardians
+Tarik Skubal | Tigers
+Nathan Church | Cardinals
+Cal Raleigh | Mariners
+Jonah Tong | Mets
+Yoshinobu Yamamoto | Dodgers
+Bryce Eldridge | Giants
+Owen Caissie | Cubs
+Parker Messick | Guardians
+Willson Contreras | Cardinals
+Matt Chapman | Giants
+Roki Sasaki | Dodgers
+Roman Anthony | Red Sox
+Agustín Ramírez | Marlins
+Carter Jensen | Royals
+Randy Arozarena | Mariners
+Colson Montgomery | White Sox
+Masyn Winn | Cardinals
+Andrew Abbott | Reds
+Andrew McCutchen | Pirates
+Xavier Edwards | Marlins
+Nolan McLean | Mets
+Dillon Dingler | Tigers
+Steven Kwan | Guardians
+Cole Young | Mariners
+Denzer Guzman | Angels
+Dylan Beavers | Orioles
+Salvador Perez | Royals
+Warming Bernabel | Rockies
+Bobby Witt Jr. | Royals
+Brandon Sproat | Mets
+Brice Matthews | Astros
+Chase Dollander | Rockies
+Christian Moore | Angels
+Ryan Ritter | Rockies
+Harry Ford | Nationals
+J.P. Crawford | Mariners
+Drake Baldwin | Braves
+Luis Robert Jr. | White Sox
+Javier Báez | Tigers
+Cody Bellinger | Yankees
+Kyle Teel | White Sox
+Matt Shaw | Cubs
+Pete Crow-Armstrong | Cubs
+Jackson Holliday | Orioles
+Spencer Torkelson | Tigers
+Riley Greene | Tigers
+Jackson Chourio | Brewers
+Troy Melton | Tigers
+Elly De La Cruz | Reds
+Kris Bryant | Rockies
+Edgar Quero | White Sox
+Alec Burleson | Cardinals
+Connelly Early | Red Sox
+Cam Schlittler | Yankees
+Jimmy Crooks | Cardinals
+Fernando Tatis Jr. | Padres
+Carson Williams | Rays
+Gabriel Moreno | Diamondbacks
+Anthony Volpe | Yankees
+Zack Wheeler | Phillies
+Bryce Harper | Phillies
+Will Banfield | Reds
+Jacob deGrom | Rangers
+Wyatt Langford | Rangers
+Byron Buxton | Twins
+Jasson Domínguez | Yankees
+Vladimir Guerrero Jr. | Blue Jays
+Carlos Correa | Astros
+Isaac Collins | Royals
+Luis Arraez | Padres
+Bryson Stott | Phillies
+Nick Kurtz | Athletics
+Seiya Suzuki | Cubs
+Ketel Marte | Diamondbacks
+Kodai Senga | Mets
+Xander Bogaerts | Padres
+Heriberto Hernández | Marlins
+Max Fried | Yankees
+Carson Whisenhunt | Giants
+Mason Miller | Padres
+George Springer | Blue Jays
+Corey Seager | Rangers
+Corbin Carroll | Diamondbacks
+Spencer Schwellenbach | Braves
+Brooks Lee | Twins
+Cody Freeman | Rangers
+Trey Yesavage | Blue Jays
+Kyle Karros | Rockies
+Colby Thomas | Athletics
+Garrett Crochet | Red Sox
+Coby Mayo | Orioles
+Giancarlo Stanton | Yankees
+Zach Cole | Astros
+Hyeseong Kim | Dodgers
+Trea Turner | Phillies
+Manny Machado | Padres
+Will Smith | Dodgers
+Ozzie Albies | Braves
+Shinnosuke Ogasawara | Nationals
+Adley Rutschman | Orioles
+Junior Caminero | Rays
+Otto Kemp | Phillies
+Andrés Giménez | Blue Jays
+Mick Abel | Twins
+Bo Bichette | Blue Jays
+Dalton Rushing | Dodgers
+Geraldo Perdomo | Diamondbacks
+Brent Rooker | Athletics
+Justin Verlander | Giants
+Freddy Peralta | Brewers
+Dylan Crews | Nationals
+James Wood | Nationals
+Tyler Soderstrom | Athletics
+Willy Adames | Giants
+Jackson Jobe | Tigers
+Brady House | Nationals
+Ezequiel Tovar | Rockies
+CJ Abrams | Nationals
+Adolis García | Phillies
+Zac Gallen | Diamondbacks
+Carlos Rodón | Yankees
+Logan Webb | Giants
+Kristian Campbell | Red Sox
+Brice Turang | Brewers
+Mason Barnett | Athletics
+Brandon Lowe | Rays
+MacKenzie Gore | Nationals
+Gerrit Cole | Yankees
+Jacob Wilson | Athletics
+Drew Gilbert | Giants
+Nico Hoerner | Cubs
+Chris Bassitt | Blue Jays
+Jackson Merrill | Padres
+Paul Goldschmidt | Yankees
+Rafael Devers | Giants
+Alec Bohm | Phillies
+William Contreras | Brewers
+Mickey Moniak | Rockies
+Royce Lewis | Twins
+Michael Harris II | Braves
+Jonathan Aranda | Rays
+Yanquiel Fernández | Rockies
+Maximo Acosta | Marlins
+Carlos Narváez | Red Sox
+Max Scherzer | Blue Jays
+Grant Taylor | White Sox
+Sal Frelick | Brewers
+Marcus Semien | Mets
+Cristopher Sánchez | Phillies
+Cam Smith | Astros
+Lawrence Butler | Athletics
+Luis Morales | Athletics
+Oneil Cruz | Pirates
+Jarren Duran | Red Sox
+Eugenio Suárez | Mariners
+Kyle Schwarber | Phillies
+[auto]
+Alex Freeland | Dodgers
+Andrés Giménez | Blue Jays
+Aaron Judge | Yankees
+Andrew McCutchen | Pirates
+Albert Pujols | Cardinals
+Agustín Ramírez | Marlins
+Barry Bonds | Pirates
+Byron Buxton | Twins
+Bubba Chandler | Pirates
+Bryce Eldridge | Giants
+Brady House | Nationals
+Brice Matthews | Astros
+Brent Rooker | Athletics
+Brice Turang | Brewers
+Bryan Woo | Mariners
+Barry Zito | Athletics
+CJ Abrams | Nationals
+Jac Caglianone | Royals
+Chase Burns | Reds
+Charlie Blackmon | Rockies
+Corbin Carroll | Diamondbacks
+Chase Dollander | Rockies
+Chase DeLauter | Guardians
+Cody Freeman | Rangers
+Cade Horton | Cubs
+C.J. Kayfus | Guardians
+Christian Moore | Angels
+Chase Meidroth | White Sox
+Colson Montgomery | White Sox
+Cal Raleigh | Mariners
+Colby Thomas | Athletics
+Carson Whisenhunt | Giants
+Cole Young | Mariners
+Christian Yelich | Brewers
+Drake Baldwin | Braves
+Dylan Beavers | Orioles
+Didier Fuentes | Braves
+Dwight Gooden | Mets
+Drew Gilbert | Giants
+Derek Jeter | Yankees
+Derrek Lee | Cubs
+Dalton Rushing | Dodgers
+Dave Winfield | Padres
+Elly De La Cruz | Reds
+Eddie Murray | Orioles
+Edgar Quero | White Sox
+Frank Thomas | White Sox
+Fernando Tatis Jr. | Padres
+Hyeseong Kim | Dodgers
+Hunter Pence | Giants
+Hanley Ramirez | Marlins
+Isaac Collins | Brewers
+Jonathan Aranda | Rays
+Johnny Bench | Reds
+Jose Canseco | Athletics
+Jazz Chisholm Jr. | Yankees
+Jasson Domínguez | Yankees
+Johnny Damon | Rays
+Jimmy Crooks | Cardinals
+Jack Leiter | Rangers
+Jacob Melton | Astros
+Jakob Marsee | Marlins
+Jacob Misiorowski | Brewers
+Julio Rodríguez | Mariners
+José Reyes | Mets
+Jimmy Rollins | Phillies
+Johan Santana | Mets
+Jonah Tong | Mets
+Jordan Westburg | Orioles
+Kristian Campbell | Red Sox
+Kyle Karros | Rockies
+Kazuma Okamoto | Blue Jays
+Kodai Senga | Mets
+Kerry Wood | Cubs
+Luis Arraez | Padres
+Luis Gonzalez | Diamondbacks
+Logan Webb | Giants
+Larry Walker | Rockies
+Michael Harris II | Braves
+Mark McGwire | Cardinals
+Mike Trout | Angels
+Munetaka Murakami | White Sox
+Nathan Church | Cardinals
+Nick Kurtz | Athletics
+Nolan McLean | Mets
+Owen Caissie | Cubs
+Orlando Hernandez | Yankees
+Otto Kemp | Phillies
+Paul O'Neill | Yankees
+Paul Skenes | Pirates
+Roman Anthony | Red Sox
+Ronald Acuña Jr. | Braves
+Randy Arozarena | Mariners
+Ryan Ritter | Rockies
+Roki Sasaki | Dodgers
+Samuel Basallo | Orioles
+Cam Schlittler | Yankees
+Sandy Koufax | Dodgers
+Shinnosuke Ogasawara | Nationals
+Sal Stewart | Reds
+Tatsuya Imai | Astros
+Troy Melton | Tigers
+Ted Simmons | Cardinals
+Trey Yesavage | Blue Jays
+Vladimir Guerrero Jr. | Blue Jays
+Vernon Wells | Blue Jays
+Wade Boggs | Red Sox
+Warming Bernabel | Rockies
+Will Clark | Giants
+Yanquiel Fernández | Rockies
+Zach Neto | Angels
+Barry Bonds | Giants
+Chipper Jones | Braves
+CC Sabathia | Yankees
+Dale Murphy | Braves
+Don Mattingly | Yankees
+David Ortiz | Red Sox
+George Brett | Royals
+Ichiro | Mariners
+Juan Soto | Mets
+Joey Votto | Reds
+Kyle Teel | White Sox
+Miguel Cabrera | Marlins
+Mike Schmidt | Phillies
+Nolan Ryan | Rangers
+Orel Hershiser | Dodgers
+Roger Clemens | Red Sox
+Randy Johnson | Mariners
+Reggie Jackson | Athletics
+Robin Yount | Brewers
+Steve Carlton | Phillies
+Shohei Ohtani | Dodgers
+Sammy Sosa | Cubs
+Yoshinobu Yamamoto | Dodgers
+Brooks Lee | Twins
+Chandler Simpson | Rays
+[insert]
+Shohei Ohtani | Dodgers
+Aaron Judge | Yankees
+Ronald Acuña Jr. | Braves
+Bobby Witt Jr. | Royals
+Juan Soto | Mets
+Cal Raleigh | Mariners
+Pete Crow-Armstrong | Cubs
+Paul Skenes | Pirates
+Nick Kurtz | Athletics
+Kyle Schwarber | Phillies
+Fernando Tatis Jr. | Padres
+Francisco Lindor | Mets
+Elly De La Cruz | Reds
+Bryce Harper | Phillies
+Vladimir Guerrero Jr. | Blue Jays
+Tarik Skubal | Tigers
+Jac Caglianone | Royals
+Roman Anthony | Red Sox
+Colson Montgomery | White Sox
+Kyle Teel | White Sox
+Jacob Misiorowski | Brewers
+Christian Moore | Angels
+Chase Burns | Reds
+Owen Caissie | Cubs
+Samuel Basallo | Orioles
+Bubba Chandler | Pirates
+Sal Stewart | Reds
+Harry Ford | Mariners
+Payton Tolle | Red Sox
+Carson Williams | Rays
+Bryce Eldridge | Giants
+Mike Trout | Angels
+Trey Yesavage | Blue Jays
+Honus Wagner | Pirates
+Ken Griffey Jr. | Mariners
+Alex Freeland | Dodgers
+Manny Machado | Padres
+Mookie Betts | Dodgers
+Freddie Freeman | Dodgers
+Yoshinobu Yamamoto | Dodgers
+Nolan Arenado | Cardinals
+Bo Bichette | Blue Jays
+Junior Caminero | Rays
+James Wood | Nationals
+Yordan Alvarez | Astros
+Julio Rodríguez | Mariners
+José Ramírez | Guardians
+Riley Greene | Tigers
+Jacob Wilson | Athletics
+Corbin Carroll | Diamondbacks
+Trea Turner | Phillies
+[multi]
+Kristian Campbell | Red Sox / Roman Anthony | Red Sox
+Chipper Jones | Braves / Ronald Acuña Jr. | Braves
+Wade Boggs | Red Sox / Roger Clemens | Red Sox
+Ken Griffey Jr. | Mariners / Randy Johnson | Mariners
+Ichiro | Yankees / Derek Jeter | Yankees
+Hyeseong Kim | Dodgers / Chan Ho Park | Dodgers
+Yoshinobu Yamamoto | Dodgers / Shohei Ohtani | Dodgers
+Mark McGwire | Cardinals / Albert Pujols | Cardinals
+Bubba Chandler | Pirates / Paul Skenes | Pirates
+Sammy Sosa | Cubs / Andre Dawson | Cubs
+Mike Trout | Angels / Reggie Jackson | Angels
+Frank Thomas | White Sox / Paul Konerko | White Sox
+Vladimir Guerrero | Expos / Larry Walker | Expos
+Jack Wilson | Pirates / Jacob Wilson | Athletics
