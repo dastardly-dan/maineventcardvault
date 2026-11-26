@@ -1131,8 +1131,8 @@ rgl6141 = dict(
     id='rgl6141', title='RGL #6141 Peak Degeneracy #6 (Random Letter)', kicker='Run Good Life · Random letter · Multi-sport',
     url=rgl_url(RGL6141_H),
     when=_when(THU, '12:45 am', '3:45 am'),
-    facts=['11 boxes', '16 spots', '$188 per spot, fillers $47', 'Letters randomized live'],
-    format='random', checked='Spots were still for sale when checked on November 25, 2026, around 7:45 pm Eastern.',
+    facts=['11 boxes', '21 letter groups', '$188 per spot, fillers $47', 'Letters randomized live'],
+    format='random', checked='Spots were still for sale when checked on November 25, 2026, around 7:45 pm Eastern. RGL then set 21 letter groups live on stream.',
     boxes=[dict(k='leaf', short='Leaf Originals', c='#3ccf9a', full='2026 Leaf Originals', kind='Multi-sport autographs', types='Autographs of athletes across sports.'),
            dict(k='donruss', short='Donruss NFL', c='#f2c14e', full='2026 Panini Donruss Football Hobby', kind='Base with Rated Rookies, autographs, inserts', types='Base with Rated Rookies, parallels, inserts and autographs.'),
            dict(k='finest', short='Finest MLB', c='#e2545e', full='2026 Topps Finest Baseball (1 Mega box)', kind='Base with Refractors, autographs, inserts', types='Finest base and Refractors, rookie cards, autographs, inserts.'),
@@ -1144,8 +1144,8 @@ rgl6141 = dict(
            dict(k='select', short='Select NBA', c='#e07a2e', full='2025-26 Panini Select Basketball Hobby (1 box)', kind='Concourse, Premier and Courtside tiers, autographs, inserts', types='Tiered base with Prizm parallels, inserts and autographs.'),
            dict(k='pokemon', short='Pokemon', c='#f5d000', full='2026 Pokemon TCG 30th Celebration Elite Trainer Box (1 box)', kind='Pokemon cards, plus a classic collection', types='Pokemon, trainer and item cards from the 30th Celebration set, and classic cards from past sets. Listed by the name on the card.')],
     spots=[],  # filled in below from the letters that have names
-    rules=[['How RGL groups the letters', ['RGL sells 16 spots, and how the letters are grouped into them is set live on stream; the listing doesn\'t post it.', 'This guide lists every letter on its own, so once you know your letters, look each one up here.']],
-           ['First letter of the name on the card', ['Letters here go by the first letter of the first name on the card (Josh Allen is J; for Marvel cards, the character\'s name as printed). RGL\'s listing doesn\'t say first or last name, so this guide sorts by first name; check with RGL.']],
+    rules=[['How the spots were set', ['RGL set the letter groups live on stream. This guide follows the board RGL showed: 21 groups, with C, J and S split on the second letter (CA-CH and CI-CZ, JA-JE and JF-JZ, SA-SH and SI-SZ) and several groups that bundle more than one letter (E / F, H / I, N / O, P / U, V / Q / W and X / Y / Z).', 'The listing said 16 spots, but the board has 21 groups.', 'The board has no group for numbers, and none of the names in these boxes start with one.']],
+           ['First letter of the first name', ['RGL\'s board says first name, so Josh Allen is J (JF-JZ) and Chase Elliott is C (CA-CH). For Marvel cards, it\'s the character\'s name as printed.', 'The board says T (No The), so a leading "The" doesn\'t count: The Thing is T and The Maker is M.']],
            ['Cards with more than one name', ['Each person on a dual or multi-person card is listed under their own letter.', RGL_MULTI[1][0]]]],
     notes=['Pokemon cards are listed by the name on the card (Pikachu is P, Alolan Exeggutor is A). Ask RGL how they letter Pokemon, trainer and item cards.',
            'RGL\'s listing says Wednesday at 12:45 am Pacific; that\'s the overnight slot after Wednesday\'s stream, early Thursday.',
@@ -1158,7 +1158,7 @@ rgl6141 = dict(
            ['Panini Obsidian Soccer and Select Basketball checklists (official Panini CSVs)', SRC_PANINI],
            ['Pokemon TCG 30th Celebration card list (official Pokemon PDF)', 'https://www.pokemon.com/us/pokemon-tcg']],
 )
-close(rgl6141, 'Thursday, November 26, 2026', ['11 boxes', '16 spots', '$188 per spot, fillers $47', 'Letters randomized live'])  # Daniel said the night was done (Nov 26, 8:18 am Eastern)
+close(rgl6141, 'Thursday, November 26, 2026', ['11 boxes', '21 letter groups', '$188 per spot, fillers $47', 'Letters randomized live'])  # Daniel said the night was done (Nov 26, 8:18 am Eastern)
 
 # rgl6143 draft removed (Daniel, Nov 25): no guessed setups; the page builder builds #6143 from RGL's listing.
 
@@ -1572,7 +1572,12 @@ if __name__ == '__main__':
     n, u = team_break(rgl6140, {'chrome': CH, 'chromeh': CH, 'delight': CH}); built.append(write(rgl6140, n, u))
     p41 = {k: lib_letter_product(v) for k, v in RGL6141_LIB.items()}
     have = sorted({letters(n)[0] for p_ in p41.values() for n in entries_from_product(p_) if letters(n)[0].isalpha()})
-    rgl6141['spots'] = [cc_spot(L, L) for L in have] + [cc_spot('# (numbers)', '#')]
+    # RGL's board on stream (Nov 26), first name; C, J and S split on the second letter, "T (No The)"
+    rgl6141['spots'] = [cc_spot('A', 'A'), cc_spot('B', 'B'), cc_spot('CA-CH', pre=[('CA', 'CH')]), cc_spot('CI-CZ', pre=[('CI', 'CZ')]), cc_spot('D', 'D'),
+        cc_spot('E / F', 'EF'), cc_spot('G', 'G'), cc_spot('H / I', 'HI'), cc_spot('JA-JE', pre=[('JA', 'JE')]), cc_spot('JF-JZ', pre=[('JF', 'JZ')]),
+        cc_spot('K', 'K'), cc_spot('L', 'L'), cc_spot('M', 'M'), cc_spot('N / O', 'NO'), cc_spot('P / U', 'PU'), cc_spot('R', 'R'),
+        cc_spot('SA-SH', pre=[('SA', 'SH')]), cc_spot('SI-SZ', pre=[('SI', 'SZ')]), cc_spot('T (No The)', 'T'), cc_spot('V / Q / W', 'VQW'), cc_spot('X / Y / Z', 'XYZ')]
+    assert len({sp['id'] for sp in rgl6141['spots']}) == 21
     n, u = letter_break(rgl6141, p41, None, alt=False); built.append(write(rgl6141, n, u))
     p612 = {k: lib_letter_product(v) for k, v in RGL612XMARVEL_LIB.items()}
     have = sorted({letters(n)[0] for p_ in p612.values() for n in entries_from_product(p_) if letters(n)[0].isalpha()})
