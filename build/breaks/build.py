@@ -1066,19 +1066,57 @@ rgl6139 = dict(
     sources=[['RGL #6139 break page (Run Good Life)', rgl_url(RGL6139_H)]] + list(rgl6131['sources'][1:]),
 )
 
+RGL6140_H = 'rgl-6140-half-case-delight-degen-random-team-11-25-26'
 rgl6140 = dict(
-    id='rgl6140', title='RGL #6140 Half Case Delight NFL', kicker='Run Good Life · Team break (best guess) · NFL',
+    id='rgl6140', title='RGL #6140 Half Case Delight Degen (Random Team)', kicker='Run Good Life · Random team · NFL',
+    url=rgl_url(RGL6140_H),
     when=_when(THU, '12:00 am', '3:00 am'),
-    facts=['Topps Chrome Football Breaker\'s Delight (best guess)', '32 teams plus college (NIL) cards'],
-    format='team', checked=DRAFT_NOTE + ' ' + "RGL hasn't said yet whether this break goes by letters or by teams. Our best guess is a random team break, because RGL's other football breaks tonight (#6132 and #6136) are random team. This guide is set up that way until the listing says otherwise.",
-    boxes=[dict(BOX_CHROME_H, short='Chrome Delight', full='2026 Topps Chrome Football Breaker\'s Delight (half case)',
+    facts=['5 boxes', '22 spots for 32 teams', '$260 per spot, fillers $26', 'Teams randomized live'],
+    format='team', checked='Spots were still for sale when checked on November 25, 2026, around 7:45 pm Eastern.',
+    boxes=[dict(BOX_CHROME_J, full='2026 Topps Chrome Football Jumbo (1 box)'),
+           dict(BOX_CHROME_H, k='chromeh', short='Chrome Hobby', c='#3ccf9a', full='2026 Topps Chrome Football Hobby (1 box)'),
+           dict(BOX_CHROME_H, k='delight', short='Chrome Delight', c='#f2c14e', full='2026 Topps Chrome Football Breaker\'s Delight (3 boxes)',
                 types='Chrome base and Refractors, rookie cards, autographs, inserts.')],
     spots=[team_spot(tid(t), t, [t]) for t, _ in cc872_teams] + [team_spot('college', 'College (NIL) cards', [], nil='ABCDEFGHIJKLMNOPQRSTUVWXYZ')],
     rules=[RGL_LIVE_GROUPS, RGL_TEAM_RULE,
            ['College (NIL) cards', ['NIL stands for name, image and likeness: college players who aren\'t in the NFL yet. In its NFL team breaks RGL randomizes those cards to all spots at the end of the break, so they\'re listed together here.']],
            RGL_MULTI],
-    notes=[DRAFT_NOTE, "RGL hasn't said yet whether this break goes by letters or by teams. Our best guess is a random team break, because RGL's other football breaks tonight (#6132 and #6136) are random team. This guide is set up that way until the listing says otherwise.", '"Delight" most likely means Topps Chrome Football Breaker\'s Delight boxes, which use the same checklist as the Hobby box.'],
-    sources=[SRC_CHROME],
+    notes=['All five boxes are 2026 Topps Chrome Football (Jumbo, Hobby and Breaker\'s Delight), so they share one checklist.',
+           'RGL\'s listing says Wednesday at 12 am Pacific; that\'s the overnight slot after Wednesday\'s stream, early Thursday.',
+           'Filler entries are sold too ($26 each); see RGL\'s listing for how fillers work.'],
+    sources=[['RGL #6140 break page (Run Good Life)', rgl_url(RGL6140_H)], SRC_CHROME],
+)
+
+# RGL #6141 Peak Degeneracy #6 (Random Letter), multi-sport, posted Nov 25. 7 of its 10 products have checklists.
+RGL6141_H = 'rgl-6141-peak-degeneracy-6-random-letter-11-25-26'
+RGL6141_LIB = dict(leaf='2026-leaf-originals-multi-sport', donruss='2026-donruss-football', finest='2026-topps-finest-baseball',
+                   inception='2026-topps-inception-football', samurai='2026-topps-chrome-baseball-team-samurai-japan-collection',
+                   sc='2025-26-topps-stadium-club-basketball', neon='2026-topps-neon-marvel')
+rgl6141 = dict(
+    id='rgl6141', title='RGL #6141 Peak Degeneracy #6 (Random Letter)', kicker='Run Good Life · Random letter · Multi-sport',
+    url=rgl_url(RGL6141_H),
+    when=_when(THU, '12:45 am', '3:45 am'),
+    facts=['11 boxes (8 listed here)', '16 spots', '$188 per spot, fillers $47', 'Letters randomized live'],
+    format='random', checked='Spots were still for sale when checked on November 25, 2026, around 7:45 pm Eastern.',
+    boxes=[dict(k='leaf', short='Leaf Originals', c='#3ccf9a', full='2026 Leaf Originals', kind='Multi-sport autographs', types='Autographs of athletes across sports.'),
+           dict(k='donruss', short='Donruss NFL', c='#f2c14e', full='2026 Panini Donruss Football Hobby', kind='Base with Rated Rookies, autographs, inserts', types='Base with Rated Rookies, parallels, inserts and autographs.'),
+           dict(k='finest', short='Finest MLB', c='#e2545e', full='2026 Topps Finest Baseball (1 Mega box)', kind='Base with Refractors, autographs, inserts', types='Finest base and Refractors, rookie cards, autographs, inserts.'),
+           dict(BOX_INCEPTION, full='2026 Topps Inception Football Hobby (1 box)'),
+           dict(k='samurai', short='Samurai Japan', c='#5aa9ff', full='2026 Topps Chrome Baseball Team Samurai Japan Collection (2 boxes)', kind='Japan national team players', types='Chrome cards of Team Samurai Japan players, parallels and autographs.'),
+           dict(k='sc', short='Stadium Club NBA', c='#c86bff', full='2025-26 Topps Stadium Club Basketball Hobby (1 box)', kind='Photo-driven base set, autographs and inserts', types='Base with photo variations, inserts, and autographs.'),
+           dict(k='neon', short='Marvel Neon', c='#8a6be0', full='2026 Topps Marvel Neon Hobby (1 box)', kind='Marvel characters, neon-style parallels, inserts', types='Base with neon parallels, inserts and autographs.')],
+    spots=[],  # filled in below from the letters that have names
+    rules=[['How RGL groups the letters', ['RGL sells 16 spots, and how the letters are grouped into them is set live on stream; the listing doesn\'t post it.', 'This guide lists every letter on its own, so once you know your letters, look each one up here.']],
+           ['First letter of the name on the card', ['Letters here go by the first letter of the first name on the card (Josh Allen is J; for Marvel cards, the character\'s name as printed). RGL\'s listing doesn\'t say first or last name, so this is our best guess; check with RGL.']],
+           ['Cards with more than one name', ['Each person on a dual or multi-person card is listed under their own letter.', RGL_MULTI[1][0]]]],
+    notes=['Three products aren\'t in this guide yet because we don\'t have their checklists: 2025-26 Panini Obsidian Soccer, 2025-26 Panini Select Basketball, and the 2026 Pokemon 30th Celebration Elite Trainer Box. Check those cards with RGL.',
+           'RGL\'s listing says Wednesday at 12:45 am Pacific; that\'s the overnight slot after Wednesday\'s stream, early Thursday.',
+           'Filler entries are sold too ($47 each); see RGL\'s listing for how fillers work.'],
+    sources=[['RGL #6141 break page (Run Good Life)', rgl_url(RGL6141_H)]] + [_src(v, n) for v, n in (
+        ('2026-leaf-originals-multi-sport', 'Leaf Originals'), ('2026-topps-finest-baseball', 'Topps Finest Baseball'),
+        ('2026-topps-chrome-baseball-team-samurai-japan-collection', 'Topps Chrome Team Samurai Japan'),
+        ('2025-26-topps-stadium-club-basketball', 'Topps Stadium Club Basketball'), ('2026-topps-neon-marvel', 'Topps Neon Marvel'))]
+        + [['Panini Donruss Football checklist (official Panini CSV)', SRC_PANINI], SRC_INCEPTION],
 )
 
 rgl6143 = dict(
@@ -1220,8 +1258,12 @@ if __name__ == '__main__':
         'cosmic': lib_mlb_product('2026-topps-cosmic-chrome-baseball'), 'update': lib_mlb_product('2026-topps-update-series-baseball')}); built.append(write(rgl6138, n, u))
     n, u = team_break(rgl6139, NBA6131()); built.append(write(rgl6139, n, u))
     n, u = letter_break(rgl612xwwe2, {'sc': gpk_fold(lib_letter_product('2026-topps-stadium-club-wwe')), 'chrome': gpk_fold(lib_letter_product('2026-topps-chrome-wwe')), 'nscc': nscc_product('WWE'), 'finest': lib_letter_product('2025-topps-finest-wwe')}, rgl_wwe_gender); built.append(write(rgl612xwwe2, n, u))
+    n, u = team_break(rgl6140, {'chrome': CH, 'chromeh': CH, 'delight': CH}); built.append(write(rgl6140, n, u))
+    p41 = {k: lib_letter_product(v) for k, v in RGL6141_LIB.items()}
+    have = sorted({letters(n)[0] for p_ in p41.values() for n in entries_from_product(p_) if letters(n)[0].isalpha()})
+    rgl6141['spots'] = [cc_spot(L, L) for L in have] + [cc_spot('# (numbers)', '#')]
+    n, u = letter_break(rgl6141, p41, None, alt=False); built.append(write(rgl6141, n, u))
     for cfg, num, pick, prods in [
-            (rgl6140, 6140, False, lambda: {'chrome': CH}),
             (rgl6143, 6143, False, lambda: {'five': lib_nba_product('2025-26-topps-five-star-basketball')})]:
         posted = rgl_draft(cfg, num, pick)
         if not posted and not PREVIEW:
