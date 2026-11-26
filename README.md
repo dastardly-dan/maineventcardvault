@@ -224,6 +224,11 @@ team spot, box by box. Linked from the storefront's Breaks menu; every page carr
   3j. Streams (Daniel, Nov 25, 2026): when Daniel sends a breaker's YouTube link, add it to `STREAMS` in `build.py`
       with the page ids for that break night. Those pages show the YouTube player instead of the title card; the same
       link becomes the replay after the stream. Pages without a stream keep the title card.
+  3k. Page builder timing (Daniel, Nov 25, 2026): the scheduled task fires every 5 minutes (at :03, :08, ...) on Sonnet and
+      first runs `python3 build/breaks/builder_gate.py`. It works only when that prints RUN: during the first 4 hours of a
+      breaker's stream (the watcher records the start in `watch/streams.json` from YouTube, or from the listings'
+      estimated start times), from 1:03 to 1:45 pm Eastern on Tuesdays and Thursdays (Acme posts at 1 pm Eastern), and
+      once every 30 minutes otherwise. On SKIP it ends with "No new breaks." and nothing else. The watcher runs every 5 minutes.
   3e. The watcher workflow now rebuilds the break pages and the Break guides page after every check, so new title card
       images show up without a builder run. A page picks up its breaker's title card from `images.json`
       as long as its `url` is the product link.
