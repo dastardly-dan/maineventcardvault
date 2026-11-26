@@ -181,6 +181,14 @@ def check_streams(items_by_shop, now_dt):
         wk = weekly_start(shop, now_dt)
         if wk:
             starts = sorted(starts + [wk])
+        # dated break nights from watch/schedule.json (RGL and its sister channel JML sell on the rgl store)
+        for n in load('schedule.json', {}).get('nights', []):
+            try:
+                t = datetime.fromisoformat(n['start']).astimezone(timezone.utc)
+            except (KeyError, ValueError):
+                continue
+            if n.get('store') == shop and now_dt - __import__('datetime').timedelta(hours=12) <= t <= now_dt + __import__('datetime').timedelta(days=1):
+                starts = sorted(starts + [t])
         if starts:
             st['first_start'] = starts[0].isoformat(timespec='minutes')
         # Look for the stream from 2 hours before the first scheduled break (Daniel, Nov 25), and keep checking while it's live.
