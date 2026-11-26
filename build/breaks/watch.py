@@ -109,7 +109,10 @@ def stats(posts):
 
 # ---- Streams (Daniel, Nov 25, 2026): note when a breaker's YouTube stream goes live, so the page builder can run every
 # 5 minutes for the first 4 hours of the stream. streams.json: {shop: {video, title, live, started, first_start}}.
-STREAM_PAGES = {'rgl': 'https://www.youtube.com/@RunGoodLife/live', 'colfax': None, 'jwj': None}  # None: read the channel link off the store's homepage
+# Each breaker's YouTube channel (Daniel, Nov 25, 2026). None: read the channel link off the store's homepage.
+STREAM_PAGES = {'rgl': 'https://www.youtube.com/@RunGoodLife/live', 'jml': 'https://www.youtube.com/@THEJMLEXPERIENCE/live',
+                'acme': 'https://www.youtube.com/@AcmePacks/live', 'jwj': 'https://www.youtube.com/@JWJBreaks/live', 'colfax': None}
+STREAM_STORE = {'jml': 'rgl'}  # JML Breaks sells on Run Good Life's store
 # Weekly stream times Daniel sent (Nov 25, 2026), used when the listings don't give a start time.
 # (weekday Monday=0, hour, minute, time zone)
 WEEKLY = {'colfax': [(6, 17, 0, 'America/Chicago'), (1, 18, 0, 'America/Chicago')],   # Sundays 5 pm and Tuesdays 6 pm Central
@@ -121,7 +124,7 @@ def channel_live_url(shop, st):
     if STREAM_PAGES.get(shop):
         return STREAM_PAGES[shop]
     if not st.get('channel'):
-        req = urllib.request.Request(SHOPS[shop], headers={'User-Agent': UA['User-Agent']})
+        req = urllib.request.Request(SHOPS[STREAM_STORE.get(shop, shop)], headers={'User-Agent': UA['User-Agent']})
         with urllib.request.urlopen(req, timeout=30) as r:
             m = YT_LINK.search(r.read().decode('utf-8', 'replace'))
         if not m:
@@ -176,7 +179,10 @@ def check_streams(items_by_shop, now_dt):
     streams = load('streams.json', {})
     for shop in STREAM_PAGES:
         st = dict(streams.get(shop, {}))
-        starts = [listing_start(plain(p.get('body_html', '')), now_dt) for p in items_by_shop.get(shop, [])]
+        # RGL's listings say which stream they're on only by title; JML breaks are titled JML
+        store_items = [p for p in items_by_shop.get(STREAM_STORE.get(shop, shop), [])
+                       if shop not in ('rgl', 'jml') or (('jml' in (p.get('title') or '').lower()) == (shop == 'jml'))]
+        starts = [listing_start(plain(p.get('body_html', '')), now_dt) for p in store_items]
         starts = sorted(x for x in starts if x and x > now_dt - __import__('datetime').timedelta(hours=12))
         wk = weekly_start(shop, now_dt)
         if wk:
@@ -187,7 +193,7 @@ def check_streams(items_by_shop, now_dt):
                 t = datetime.fromisoformat(n['start']).astimezone(timezone.utc)
             except (KeyError, ValueError):
                 continue
-            if n.get('store') == shop and now_dt - __import__('datetime').timedelta(hours=12) <= t <= now_dt + __import__('datetime').timedelta(days=1):
+            if (n.get('stream') or n.get('store')) == shop and now_dt - __import__('datetime').timedelta(hours=12) <= t <= now_dt + __import__('datetime').timedelta(days=1):
                 starts = sorted(starts + [t])
         if starts:
             st['first_start'] = starts[0].isoformat(timespec='minutes')

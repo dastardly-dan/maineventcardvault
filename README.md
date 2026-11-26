@@ -233,7 +233,7 @@ team spot, box by box. Linked from the storefront's Breaks menu; every page carr
       1:45 pm Eastern on Tuesdays, Thursdays and Fridays (the usual drop days). Dated break nights and their posting
       times (the day before) go in `build/breaks/watch/schedule.json`; add new ones when Daniel sends a schedule. Weekly
       stream times: Colfax Sundays 5 pm and Tuesdays 6 pm Central, JWJ Mondays 8 pm Eastern (`WEEKLY` in `watch.py`);
-      RGL's come from its listings. Colfax and JWJ channel links are read from their store homepages. Procedure for
+      RGL's come from its listings. Channels: RGL @RunGoodLife, JML @THEJMLEXPERIENCE, Acme @AcmePacks, JWJ @JWJBreaks (Daniel, Nov 25), Colfax read from its homepage (@ColfaxCC). Procedure for
       each run: `build/breaks/page_builder.md`. On SKIP it ends with "No new breaks." and nothing else. The watcher runs every 5 minutes.
   3e. The watcher workflow now rebuilds the break pages and the Break guides page after every check, so new title card
       images show up without a builder run. A page picks up its breaker's title card from `images.json`

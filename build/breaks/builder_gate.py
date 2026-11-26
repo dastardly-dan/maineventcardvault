@@ -55,7 +55,7 @@ def main(now=None):
             post = datetime(day_before.year, day_before.month, day_before.day, h, m, tzinfo=ZoneInfo('America/New_York'))
             if post + timedelta(minutes=3) <= now <= post + timedelta(minutes=45):
                 return 'RUN ' + n.get('breaker', '') + ' posting window (' + hm + ' Eastern the day before its ' + start.date().isoformat() + ' stream)'
-        seen = parse(streams.get(n.get('store'), {}).get('started'))
+        seen = parse(streams.get(n.get('stream') or n.get('store'), {}).get('started'))
         if start <= now <= start + FAST and not (seen and seen >= start - timedelta(hours=6)):
             return 'RUN ' + n.get('breaker', '') + ' scheduled stream (' + start.isoformat(timespec='minutes') + ')'
     # New breaks usually drop Tuesdays, Thursdays and Fridays (Daniel, Nov 25): Acme and RGL around 1 pm Eastern,

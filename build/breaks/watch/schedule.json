@@ -1,8 +1,33 @@
 {
- "_about": "Upcoming break nights Daniel sent (Nov 25, 2026). start is the stream start; post_et lists the Eastern times on the day before when the breaker usually posts that night's breaks. store is the Shopify store the breaks are sold on.",
+ "_about": "Upcoming break nights Daniel sent (Nov 25, 2026). start is the stream start; post_et lists the Eastern times on the day before when the breaker usually posts that night's breaks. store is the Shopify store the breaks are sold on. stream is the YouTube channel key in watch.py (rgl, jml, acme, jwj, colfax).",
  "nights": [
-  {"breaker": "RGL", "store": "rgl", "start": "2026-11-28T17:00:00-08:00", "post_et": ["13:00"]},
-  {"breaker": "RGL", "store": "rgl", "start": "2026-12-02T17:00:00-08:00", "post_et": ["13:00"]},
-  {"breaker": "JML Breaks", "store": "rgl", "start": "2026-12-03T17:00:00-08:00", "post_et": ["10:00", "13:00"]}
+  {
+   "breaker": "RGL",
+   "store": "rgl",
+   "start": "2026-11-28T17:00:00-08:00",
+   "post_et": [
+    "13:00"
+   ],
+   "stream": "rgl"
+  },
+  {
+   "breaker": "RGL",
+   "store": "rgl",
+   "start": "2026-12-02T17:00:00-08:00",
+   "post_et": [
+    "13:00"
+   ],
+   "stream": "rgl"
+  },
+  {
+   "breaker": "JML Breaks",
+   "store": "rgl",
+   "start": "2026-12-03T17:00:00-08:00",
+   "post_et": [
+    "10:00",
+    "13:00"
+   ],
+   "stream": "jml"
+  }
  ]
 }
