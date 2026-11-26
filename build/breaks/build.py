@@ -265,8 +265,20 @@ def auto_stream(cfg):
         return s[:2] if s[2] in (cfg.get('url') or '') else None
     return s[:2] if s[3] in (cfg.get('when') or '') else None
 
+# Wikipedia links beside names (Nov 26, 2026). Per page: [word Wikipedia's one-line description must contain, "(sport)" title suffix to try].
+# Entertainment pages (Star Wars, Marvel, Disney, Marvel Rivals) are left out: those names are characters, not people.
+_NFL, _MLB, _NBA = [['football', 'American football']], [['baseball', 'baseball']], [['basketball', 'basketball']]
+_WWE, _UFC, _NASCAR = [['wrestl', 'wrestler']], [['martial', 'fighter']], [['racing', 'racing driver']]
+WIKI_BY_ID = {}
+for _ids, _h in ((('cc872', 'gb1037', 'gb1038a', 'gb1038b', 'gb1041', 'gb1043', 'gb1044', 'rgl6130', 'rgl6132', 'rgl6136', 'rgl6140'), _NFL),
+                  (('gb1042', 'rgl6129', 'rgl6134', 'rgl6137', 'rgl6138'), _MLB), (('jwj0244', 'rgl6131', 'rgl6139'), _NBA),
+                  (('cc871', 'jwj0246', 'jwj0247u', 'rgl6128', 'rgl612xwwe2'), _WWE), (('rgl6142',), _UFC), (('cc875', 'rgl6133'), _NASCAR),
+                  (('gb1045',), _NFL + _NBA), (('gb1040',), _NFL + _UFC + _NBA + _MLB + _WWE), (('rgl6141',), _NFL + _MLB + _NBA)):
+    for _i in _ids: WIKI_BY_ID[_i] = _h
+
 def write(cfg, names, unmatched):
     data = dict(cfg)
+    if cfg['id'] in WIKI_BY_ID: data['wiki'] = WIKI_BY_ID[cfg['id']]
     add_prices(cfg, names)   # eBay prices feed the Spot Builder only; break pages never show them
     data['breakerName'] = cfg.get('kicker', '').split(' · ')[0]
     kr = mark_kabooms(cfg, names)
@@ -1407,7 +1419,6 @@ gb1042 = dict(
 GB1043_H = 'gb1043-multi-product-football-random-letters'
 gb1043 = dict(
     id='gb1043', title='GB1043 Multi Product Football', kicker='Acme Packs · Random letter · NFL and college',
-    wiki='American football',  # trial: a W link beside each name to its Wikipedia page
     url=acme_url(GB1043_H), when=ACME_FRI % ('7:00 pm', '8:00 pm'),
     facts=['4 boxes', '20 letter spots', '$115 per spot, $28.75 for a 25% filler', 'Letters randomized live'],
     format='random', checked=ACME_CHK,

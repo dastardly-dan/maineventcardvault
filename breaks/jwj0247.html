@@ -606,12 +606,12 @@ mark { background: #fff1a8; }
     clear: function () { try { localStorage.removeItem(GOTKEY); } catch (e) {} }
   };
   function gkey(s, b, e) { return s.id + "|" + b.k + "|" + e[0]; }
-  // Wikipedia links (trial on one page: set "wiki" in the page config to the sport, e.g. "American football").
+  // Wikipedia links on sports pages: D.wiki lists [word that must appear in Wikipedia's one-line description, title suffix to try], one per sport.
   // Every name gets a link right away that searches Wikipedia; the page then asks Wikipedia which names have an exact
   // article about someone in that sport and swaps in the direct link. Results are remembered in this browser.
-  var WKKEY = "mecv-wiki", WK = {}; try { WK = JSON.parse(localStorage.getItem(WKKEY) || "{}") || {}; } catch (e) { WK = {}; }
+  var WKKEY = "mecv-wiki-" + (D.wiki || []).map(function (h) { return h[0]; }).join(","), WK = {}; try { WK = JSON.parse(localStorage.getItem(WKKEY) || "{}") || {}; } catch (e) { WK = {}; }
   function wkName(n) { return n.replace(/"[^"]*"\s*/g, "").replace(/\s+/g, " ").trim(); }
-  function wkSearch(n) { return "https://en.wikipedia.org/wiki/Special:Search?go=Go&search=" + encodeURIComponent(n + " " + D.wiki); }
+  function wkSearch(n) { return "https://en.wikipedia.org/wiki/Special:Search?go=Go&search=" + encodeURIComponent(n + (D.wiki.length === 1 ? " " + D.wiki[0][1] : "")); }
   function wkLink(name) {
     var n = wkName(name);
     return '<a class="wk s" href="' + esc(wkSearch(n)) + '" target="_blank" rel="noopener" title="Search Wikipedia for ' + esc(n) + '" aria-label="Search Wikipedia for ' + esc(n) + '" data-wn="' + esc(n) + '">W</a>';
@@ -626,13 +626,14 @@ mark { background: #fff1a8; }
   function wkLookup(titles, done) {   // titles -> { title: article title, or "" when there is no fitting article }
     var url = "https://en.wikipedia.org/w/api.php?action=query&format=json&formatversion=2&redirects=1&origin=*&prop=pageprops&ppprop=disambiguation%7Cwikibase-shortdesc&titles=" + titles.map(encodeURIComponent).join("%7C");
     fetch(url).then(function (r) { return r.json(); }).then(function (j) {
-      var q = j.query || {}, norm = {}, red = {}, ok = {}, hint = D.wiki.toLowerCase();
+      var q = j.query || {}, norm = {}, red = {}, ok = {};
       (q.normalized || []).forEach(function (x) { norm[x.from] = x.to; });
       (q.redirects || []).forEach(function (x) { red[x.from] = x.to; });
       (q.pages || []).forEach(function (p) {
         var pp = p.pageprops || {};
         if (p.missing || p.invalid || "disambiguation" in pp) return;
-        if ((pp["wikibase-shortdesc"] || "").toLowerCase().indexOf(hint) > -1) ok[p.title] = 1;   // right sport, so not a namesake
+        var sd = (pp["wikibase-shortdesc"] || "").toLowerCase();
+        if (D.wiki.some(function (h) { return sd.indexOf(h[0]) > -1; })) ok[p.title] = 1;   // right sport, so not a namesake
       });
       var out = {}; titles.forEach(function (t) { var x = norm[t] || t; x = red[x] || x; out[t] = ok[x] ? x : ""; });
       done(out);
@@ -643,16 +644,22 @@ mark { background: #fff1a8; }
     var names = Object.keys(want), BATCH = 50;
     function next() {
       if (!names.length) return;
-      var chunk = names.splice(0, BATCH);
-      wkLookup(chunk, function (r1) {
-        if (!r1) return next();
-        var again = chunk.filter(function (n) { return !r1[n]; });
-        chunk.forEach(function (n) { if (r1[n]) WK[n] = r1[n]; });
-        var finish = function () { again.forEach(function (n) { if (!(n in WK)) WK[n] = ""; }); try { localStorage.setItem(WKKEY, JSON.stringify(WK)); } catch (e) {} wkApply(root); next(); };
-        if (!again.length) return finish();
-        var alt = again.map(function (n) { return n + " (" + D.wiki + ")"; });
-        wkLookup(alt, function (r2) { if (r2) again.forEach(function (n, i) { if (r2[alt[i]]) WK[n] = r2[alt[i]]; }); finish(); });
-      });
+      var left = names.splice(0, BATCH), all = left.slice(), hi = -1;
+      function finish(failed) {
+        if (!failed) left.forEach(function (n) { WK[n] = ""; });
+        try { localStorage.setItem(WKKEY, JSON.stringify(WK)); } catch (e) {}
+        wkApply(root); next();
+      }
+      function step() {   // the plain name first, then "Name (sport)" for each sport on the page
+        if (!left.length || hi >= D.wiki.length) return finish(false);
+        var sfx = hi < 0 ? "" : " (" + D.wiki[hi][1] + ")", titles = left.map(function (n) { return n + sfx; });
+        wkLookup(titles, function (r) {
+          if (!r) return finish(true);
+          left = left.filter(function (n, i) { if (r[titles[i]]) { WK[n] = r[titles[i]]; return false; } return true; });
+          hi++; step();
+        });
+      }
+      step();
     }
     wkApply(root); next();
   }
