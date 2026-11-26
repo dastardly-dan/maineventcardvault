@@ -979,6 +979,7 @@ rgl6134 = dict(
            'The Dodgers spot isn\'t for sale; its cards go to the winner of the Dodgers draw.'],
     sources=[['RGL #6134 break page (Run Good Life)', rgl_url(RGL6134_H)]] + list(rgl6129['sources'][1:]),
 )
+close(rgl6134, 'Wednesday, November 25, 2026', ['6 boxes', '29 team spots', '$40 to $375 per team', 'Dodgers randomized to all'])  # stream showed #6135 running (Nov 25, 10:17 pm Eastern)
 
 # RGL #6136 Pass the Turkey NFL (Random Team), posted Nov 25. Two of its seven boxes (2025 Panini Prizm International and
 # 2025 Panini Revolution Premium) have no checklist in the library yet, so the page lists the other five and says so.
