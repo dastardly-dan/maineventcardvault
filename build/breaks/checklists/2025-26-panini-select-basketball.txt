@@ -1,0 +1,372 @@
+# name: 2025-26 Panini Select Basketball
+# sport: NBA
+# added: 2026-11-25
+# source: Official Panini checklist CSV (Daniel sent, Nov 25, 2026)
+# note: Official Panini checklist (Panini Select (25-26) CSV)
+
+[base]
+Adou Thiero
+Alex Constanza
+Alex Karaban
+Alex Toohey
+Alijah Arenas
+Alijah Martin
+Allen Iverson
+Amari Williams
+Andrej Stojakovic
+Anfernee Hardaway
+Asa Newell
+Azzi Fudd
+Babatunde Oladotun
+Bobby Knight
+Bogoljub Markovic
+Brandon Roy
+Braylon Mullins
+Brooks Barnhizer
+Bryson Howard
+Cade Cunningham
+Caleb Holt
+Caleb Love
+Carter Bryant
+Cedric Coward
+Chaz Lanier
+Chris Webber
+Christian Collins
+Darius Acuff Jr.
+Dennis Rodman
+Derik Queen
+Derrick Rose
+Dick Vitale
+Dink Pate
+Dirk Nowitzki
+Dominique Wilkins
+Donnie Freeman
+Dwyane Wade
+Elliot Cadeau
+Flory Bidunga
+Gary Payton
+Geno Auriemma
+Giannis Antetokounmpo
+Hakeem Olajuwon
+Hansen Yang
+Hugo Gonzalez
+Hunter Sallis
+Isiah Thomas
+Ja Morant
+Jahmai Mashack
+Jamir Watkins
+Jason Crowe Jr.
+Jason Kidd
+Javon Small
+Jayden Quaintance
+Jeremiah Fears
+Jeremy Lin
+Jerry Easter II
+Jim Boeheim
+Joan Beringer
+John Calipari
+John Stockton
+Jordan Smith Jr.
+JT Toppin
+Julius Erving
+Kaden House
+Kalek House
+Kam Jones
+Karim Lopez
+Karl Malone
+Kevin Garnett
+Khaman Maluach
+Kingston Flemings
+Kobe Sanders
+Koby Brea
+Labaron Philon
+Lachlan Olbrich
+Larry Bird
+Lauren Betts
+Ludacris
+Magic Johnson
+Matt Able
+Maxime Raynaud
+Meleek Thomas
+Mercy Miller
+Micah Peavy
+Miikka Muurinen
+Neoklis Avdalas
+Nikolas Khamenia
+Nique Clifford
+Noa Essengue
+Noah Penda
+Olivia Miles
+Otega Oweh
+Patrick Ewing
+Patrick Ngongba II
+Percy Miller
+Rasheer Fleming
+Ray Allen
+Rocco Zikarsky
+Roy Williams
+Ryan Hampton
+Ryan Kalkbrenner
+Ryan Nembhard
+Saliou Niang
+Sarah Strong
+Shaquille O'Neal
+Sion James
+Spike Lee
+Taelon Peter
+Tahaad Pettiford
+Tajh Ariza
+Thomas Sorber
+Trae Young
+Tre Johnson III
+Tyran Stokes
+VJ Edgecombe
+Vlad Goldin
+Walter Clayton Jr.
+Will Richard
+Will Riley
+Xaivian Lee
+Yanic Konan Niederhauser
+Yaxel Lendeborg
+
+[auto]
+Adou Thiero
+Alex Constanza
+Alex Karaban
+Alex Toohey
+Alijah Arenas
+Alijah Martin
+Allen Iverson
+Amar'e Stoudemire
+Amari Williams
+Andrej Stojakovic
+Asa Newell
+Azzi Fudd
+Babatunde Oladotun
+Bogoljub Markovic
+Brandon Roy
+Brooks Barnhizer
+Bryson Howard
+Caleb Holt
+Caleb Love
+Carter Bryant
+Cedric Coward
+Chaz Lanier
+Chris Webber
+Darius Acuff Jr.
+Derik Queen
+DeVaughn Dorrough
+Dink Pate
+Dominique Wilkins
+Dwight Howard
+Elliot Cadeau
+Flory Bidunga
+George Gervin
+Giannis Antetokounmpo
+Hansen Yang
+Hugo Gonzalez
+Hunter Sallis
+Ian Jackson
+Isaiah Denis
+Ja Morant
+Jahmai Mashack
+Jalen Montonati
+Jamari Phillips
+Jamir Watkins
+Jason Crowe Jr.
+Javon Small
+Jayden Quaintance
+Jaylin Stewart
+Jeremiah Fears
+Jerry Easter II
+Joan Beringer
+Johnell Davis
+Jordan Smith Jr.
+JT Toppin
+Kaden House
+Kalek House
+Kam Jones
+Kameron Mercer
+Kanon Catchings
+Karim Lopez
+Khaman Maluach
+Kingston Flemings
+KJ Adams
+KJ Lewis
+Kobe Sanders
+Koby Brea
+L.J. Cryer
+Labaron Philon
+Lachlan Olbrich
+LaMarcus Aldridge
+Larry Bird
+Magic Johnson
+Matt Able
+Maxime Raynaud
+Meleek Thomas
+Mercy Miller
+Micah Peavy
+Miikka Muurinen
+Neoklis Avdalas
+Nique Clifford
+Noa Essengue
+Noah Penda
+Norchad Omier
+Olivia Miles
+Otega Oweh
+Patrick Ewing
+Patrick Ngongba II
+Peja Stojakovic
+Rasheer Fleming
+Richard Hamilton
+RJ Luis
+Rocco Zikarsky
+Rori Harmon
+Ryan Kalkbrenner
+Ryan Nembhard
+Saliou Niang
+Sarah Strong
+Shawn Kemp
+Sion James
+Spike Lee
+Steve Nash
+Taelon Peter
+Tajh Ariza
+Thomas Sorber
+Trae Young
+Tre Johnson III
+Tyran Stokes
+VJ Edgecombe
+Vlad Goldin
+Walter Clayton Jr.
+Will Richard
+Will Riley
+Winters Grady
+Xaivian Lee
+Yanic Konan Niederhauser
+Yaxel Lendeborg
+Zeke Mayo
+Zoom Diallo
+
+[insert]
+Adou Thiero
+Alex Karaban
+Alijah Arenas
+Alijah Martin
+Allen Iverson
+Andrej Stojakovic
+Anfernee Hardaway
+Asa Newell
+Azzi Fudd
+Babatunde Oladotun
+Bennett Stirtz
+Braylon Mullins
+Brooks Barnhizer
+Cade Cunningham
+Caleb Holt
+Caleb Love
+Cameron Carr
+Carmelo Anthony
+Carter Bryant
+Cedric Coward
+Chaz Lanier
+Chris Cenac Jr.
+Christian Collins
+Dailyn Swain
+Darius Acuff Jr.
+Derik Queen
+Derrick Rose
+Dirk Nowitzki
+Dominique Wilkins
+Dwight Howard
+Dwyane Wade
+Ebuka Okorie
+Elliot Cadeau
+Flory Bidunga
+Giannis Antetokounmpo
+Hakeem Olajuwon
+Hansen Yang
+Hugo Gonzalez
+Ja Morant
+Jamari Phillips
+Jason Kidd
+Jayden Quaintance
+Jeremiah Fears
+Jerry Easter II
+Joan Beringer
+Jordan Smith Jr.
+JT Toppin
+Julius Erving
+Kam Jones
+Kanon Catchings
+Karim Lopez
+Kevin Garnett
+Khaman Maluach
+Kingston Flemings
+Koby Brea
+Labaron Philon
+Larry Bird
+Lauren Betts
+Ludacris
+Magic Johnson
+Matt Able
+Maxime Raynaud
+Meleek Thomas
+Mercy Miller
+Micah Peavy
+Miikka Muurinen
+Neoklis Avdalas
+Nikolas Khamenia
+Nique Clifford
+Noa Essengue
+Noah Penda
+Olivia Miles
+Otega Oweh
+Patrick Ewing
+Paul Pierce
+Percy Miller
+Rasheer Fleming
+Ryan Kalkbrenner
+Ryan Nembhard
+Sarah Strong
+Shaquille O'Neal
+Sion James
+Spike Lee
+Tahaad Pettiford
+Thomas Sorber
+Trae Young
+Tre Johnson III
+Tyran Stokes
+VJ Edgecombe
+Walter Clayton Jr.
+Will Riley
+Xaivian Lee
+Yanic Konan Niederhauser
+Yaxel Lendeborg
+
+[multi]
+VJ Edgecombe / Tre Johnson III
+Cedric Coward / Ja Morant
+VJ Edgecombe / Jeremiah Fears
+Cedric Coward / VJ Edgecombe
+Tre Johnson III / Jeremiah Fears
+Jeremiah Fears / Derik Queen
+Jeremiah Fears / VJ Edgecombe / Tre Johnson III / Cedric Coward
+Tre Johnson III / VJ Edgecombe / Jeremiah Fears
+Hakeem Olajuwon / Clyde Drexler
+Julius Erving / VJ Edgecombe
+Derik Queen / Jeremiah Fears
+Giannis Antetokounmpo / Cade Cunningham
+Carter Bryant / Tre Johnson III
+Ja Morant / Cedric Coward
+Alijah Arenas / Gilbert Arenas
+Patrick Ewing / Spike Lee
+Ludacris / Percy Miller
+Clyde Drexler / Hakeem Olajuwon
+VJ Edgecombe / Julius Erving
+Cade Cunningham / Giannis Antetokounmpo
+Tre Johnson III / Carter Bryant
+Spike Lee / Patrick Ewing
+Percy Miller / Ludacris
+Jeremiah Fears / VJ Edgecombe
+Gilbert Arenas / Alijah Arenas

@@ -1,0 +1,136 @@
+# name: 2026 Pokemon TCG 30th Celebration
+# sport: Pokemon
+# added: 2026-11-25
+# source: Pokemon TCG 30th Celebration card list (official PDF Daniel sent)
+# notes: Names as printed on the card list. The classic collection cards (marked C) are listed as inserts. Trainer and item cards (Poke Pad, Switch, Ultra Ball) are listed by their printed names.
+
+[base]
+Exeggcute
+Pikachu
+Galarian Meowth
+Mewtwo ex
+Alolan Exeggutor
+Jirachi ex
+Mew ex
+Volbeat
+Pikachu ex
+Dialga
+Sylveon ex
+Illumise
+Ferrothorn
+Gengar ex
+Tropius
+Zapdos
+Solgaleo
+Cherubi
+Zekrom
+Zacian
+Salamence ex
+Cherrim
+Zeraora
+Zamazenta
+Vivillon
+Toxel
+Gholdengo
+Vulpix
+Toxtricity
+Ninetales
+Jangmo-o
+Moltres
+Morpeko
+Hakamo-o
+Ho-Oh
+Miraidon
+Kommo-o
+Victini
+Mewtwo
+Meowth
+Reshiram
+Kangaskhan
+Fuecoco ex
+Mew
+Ditto
+Slowpoke
+Eevee
+Lapras
+Marill
+Articuno
+Azumarill
+Kyogre
+Espeon
+Snorlax
+Palkia
+Espeon ex
+Igglybuff
+Greninja ex
+Lugia
+Wishiwashi
+Unown
+Hisuian Zorua
+Drifloon
+Hisuian Zoroark
+Cresselia
+Minior
+Chandelure
+Maushold
+Xerneas
+Poké Pad
+Comfey
+Switch
+Cosmog
+Ultra Ball
+Cosmoem
+Lunala
+Gimmighoul
+Groudon
+Lucario
+Seismitoad
+Lycanroc
+Koraidon
+Nidoran♀
+Nidorina
+Alolan Meowth
+Scraggy
+Umbreon
+Basic       Energy
+Umbreon ex
+Murkrow
+Zorua
+Zoroark
+Deino
+Zweilous
+Hydreigon
+Yveltal
+
+[insert]
+Pikachu
+Charizard
+Misty
+Erika's Jigglypuff
+Sneasel
+Shining Celebi
+Lugia
+Delcatty
+Dark Tyranitar
+Scizor ex
+Metagross δ
+Palkia LV.X
+Uxie
+Crobat
+Gengar
+N
+Rayquaza-EX
+Genesect-EX
+M Gardevoir-EX
+Greninja BREAK
+Solgaleo-GX
+Buzzwole-GX
+Zacian V
+Raikou
+Mew VMAX
+Arceus VSTAR
+Magikarp
+
+[multi]
+Darkrai / Cresselia
+Pikachu / Zekrom

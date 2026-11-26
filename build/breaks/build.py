@@ -1089,16 +1089,17 @@ rgl6140 = dict(
     sources=[['RGL #6140 break page (Run Good Life)', rgl_url(RGL6140_H)], SRC_CHROME],
 )
 
-# RGL #6141 Peak Degeneracy #6 (Random Letter), multi-sport, posted Nov 25. 7 of its 10 products have checklists.
+# RGL #6141 Peak Degeneracy #6 (Random Letter), multi-sport, posted Nov 25. All 10 products listed (Obsidian Soccer, Select Basketball and Pokemon added from Daniel's files).
 RGL6141_H = 'rgl-6141-peak-degeneracy-6-random-letter-11-25-26'
 RGL6141_LIB = dict(leaf='2026-leaf-originals-multi-sport', donruss='2026-donruss-football', finest='2026-topps-finest-baseball',
                    inception='2026-topps-inception-football', samurai='2026-topps-chrome-baseball-team-samurai-japan-collection',
-                   sc='2025-26-topps-stadium-club-basketball', neon='2026-topps-neon-marvel')
+                   sc='2025-26-topps-stadium-club-basketball', neon='2026-topps-neon-marvel', obsidian='2025-26-panini-obsidian-soccer',
+                   select='2025-26-panini-select-basketball', pokemon='2026-pokemon-30th-celebration')
 rgl6141 = dict(
     id='rgl6141', title='RGL #6141 Peak Degeneracy #6 (Random Letter)', kicker='Run Good Life · Random letter · Multi-sport',
     url=rgl_url(RGL6141_H),
     when=_when(THU, '12:45 am', '3:45 am'),
-    facts=['11 boxes (8 listed here)', '16 spots', '$188 per spot, fillers $47', 'Letters randomized live'],
+    facts=['11 boxes', '16 spots', '$188 per spot, fillers $47', 'Letters randomized live'],
     format='random', checked='Spots were still for sale when checked on November 25, 2026, around 7:45 pm Eastern.',
     boxes=[dict(k='leaf', short='Leaf Originals', c='#3ccf9a', full='2026 Leaf Originals', kind='Multi-sport autographs', types='Autographs of athletes across sports.'),
            dict(k='donruss', short='Donruss NFL', c='#f2c14e', full='2026 Panini Donruss Football Hobby', kind='Base with Rated Rookies, autographs, inserts', types='Base with Rated Rookies, parallels, inserts and autographs.'),
@@ -1106,19 +1107,24 @@ rgl6141 = dict(
            dict(BOX_INCEPTION, full='2026 Topps Inception Football Hobby (1 box)'),
            dict(k='samurai', short='Samurai Japan', c='#5aa9ff', full='2026 Topps Chrome Baseball Team Samurai Japan Collection (2 boxes)', kind='Japan national team players', types='Chrome cards of Team Samurai Japan players, parallels and autographs.'),
            dict(k='sc', short='Stadium Club NBA', c='#c86bff', full='2025-26 Topps Stadium Club Basketball Hobby (1 box)', kind='Photo-driven base set, autographs and inserts', types='Base with photo variations, inserts, and autographs.'),
-           dict(k='neon', short='Marvel Neon', c='#8a6be0', full='2026 Topps Marvel Neon Hobby (1 box)', kind='Marvel characters, neon-style parallels, inserts', types='Base with neon parallels, inserts and autographs.')],
+           dict(k='neon', short='Marvel Neon', c='#8a6be0', full='2026 Topps Marvel Neon Hobby (1 box)', kind='Marvel characters, neon-style parallels, inserts', types='Base with neon parallels, inserts and autographs.'),
+           dict(k='obsidian', short='Obsidian Soccer', c='#7a8494', full='2025-26 Panini Obsidian Soccer (1 box)', kind='Soccer players, autographs and memorabilia', types='Numbered base with Electric Etch parallels, autographs and patch cards.'),
+           dict(k='select', short='Select NBA', c='#e07a2e', full='2025-26 Panini Select Basketball Hobby (1 box)', kind='Concourse, Premier and Courtside tiers, autographs, inserts', types='Tiered base with Prizm parallels, inserts and autographs.'),
+           dict(k='pokemon', short='Pokemon', c='#f5d000', full='2026 Pokemon TCG 30th Celebration Elite Trainer Box (1 box)', kind='Pokemon cards, plus a classic collection', types='Pokemon, trainer and item cards from the 30th Celebration set, and classic cards from past sets. Listed by the name on the card.')],
     spots=[],  # filled in below from the letters that have names
     rules=[['How RGL groups the letters', ['RGL sells 16 spots, and how the letters are grouped into them is set live on stream; the listing doesn\'t post it.', 'This guide lists every letter on its own, so once you know your letters, look each one up here.']],
            ['First letter of the name on the card', ['Letters here go by the first letter of the first name on the card (Josh Allen is J; for Marvel cards, the character\'s name as printed). RGL\'s listing doesn\'t say first or last name, so this is our best guess; check with RGL.']],
            ['Cards with more than one name', ['Each person on a dual or multi-person card is listed under their own letter.', RGL_MULTI[1][0]]]],
-    notes=['Three products aren\'t in this guide yet because we don\'t have their checklists: 2025-26 Panini Obsidian Soccer, 2025-26 Panini Select Basketball, and the 2026 Pokemon 30th Celebration Elite Trainer Box. Check those cards with RGL.',
+    notes=['Pokemon cards are listed by the name on the card (Pikachu is P, Alolan Exeggutor is A). Ask RGL how they letter Pokemon, trainer and item cards.',
            'RGL\'s listing says Wednesday at 12:45 am Pacific; that\'s the overnight slot after Wednesday\'s stream, early Thursday.',
            'Filler entries are sold too ($47 each); see RGL\'s listing for how fillers work.'],
     sources=[['RGL #6141 break page (Run Good Life)', rgl_url(RGL6141_H)]] + [_src(v, n) for v, n in (
         ('2026-leaf-originals-multi-sport', 'Leaf Originals'), ('2026-topps-finest-baseball', 'Topps Finest Baseball'),
         ('2026-topps-chrome-baseball-team-samurai-japan-collection', 'Topps Chrome Team Samurai Japan'),
         ('2025-26-topps-stadium-club-basketball', 'Topps Stadium Club Basketball'), ('2026-topps-neon-marvel', 'Topps Neon Marvel'))]
-        + [['Panini Donruss Football checklist (official Panini CSV)', SRC_PANINI], SRC_INCEPTION],
+        + [['Panini Donruss Football checklist (official Panini CSV)', SRC_PANINI], SRC_INCEPTION,
+           ['Panini Obsidian Soccer and Select Basketball checklists (official Panini CSVs)', SRC_PANINI],
+           ['Pokemon TCG 30th Celebration card list (official Pokemon PDF)', 'https://www.pokemon.com/us/pokemon-tcg']],
 )
 
 rgl6143 = dict(
