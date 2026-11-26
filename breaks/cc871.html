@@ -55,7 +55,7 @@ nav.tabs a.on { background: var(--gold); color: var(--on-gold); font-weight: 600
 .heroimg img { width: 100%; height: auto; display: block; }
 @media (max-width: 760px) { .hero.hasimg { grid-template-columns: 1fr; gap: 14px; } .hero.hasimg .heroimg { grid-row: 1; max-width: 460px; } }
 body.compact .heroimg { display: none; }
-.hero.hasvid { grid-template-columns: minmax(0, 1fr) minmax(0, 520px); }
+.hero.hasvid { grid-template-columns: minmax(0, 1fr) minmax(0, 440px); }
 .herovid .frame { position: relative; aspect-ratio: 16 / 9; border-radius: 12px; overflow: hidden; border: 1px solid var(--line); background: #000; }
 .herovid iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 .herovid .vlab { font-size: 13px; margin-top: 6px; opacity: .8; }
@@ -63,9 +63,12 @@ body.compact .heroimg { display: none; }
 body.compact .herovid { display: none; }
 .herovid .chatbar { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-top: 8px; font-size: 13px; }
 .herovid .chatbtn { white-space: nowrap; flex: none; font: inherit; font-size: 13px; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--line); background: transparent; color: inherit; cursor: pointer; }
-.herovid .chat { margin-top: 8px; height: 420px; border-radius: 12px; overflow: hidden; border: 1px solid var(--line); background: #fff; }
-.herovid .chat iframe { width: 100%; height: 100%; border: 0; display: block; }
-@media (max-width: 760px) { .herovid .chat { height: 360px; } }
+.chatwin { position: fixed; right: 16px; bottom: 16px; z-index: 60; width: min(360px, calc(100vw - 24px)); height: min(500px, 62vh); display: flex; flex-direction: column; border-radius: 14px; overflow: hidden; border: 1px solid var(--line); background: #fff; box-shadow: 0 12px 36px rgba(0,0,0,.35); }
+.chatwin[hidden] { display: none; }
+.chatwin .chathead { display: flex; justify-content: space-between; align-items: center; padding: 8px 12px; font-size: 13px; font-weight: 600; background: #111; color: #fff; }
+.chatwin .chathead button { font: inherit; font-size: 18px; line-height: 1; background: none; border: 0; color: #fff; cursor: pointer; padding: 0 4px; }
+.chatwin iframe { flex: 1; width: 100%; border: 0; display: block; }
+@media (max-width: 760px) { .chatwin { right: 12px; bottom: 12px; height: 40vh; } }
 body.compact .lede { display: none; }
 @media (max-width: 560px) { body.compact .hero { padding-top: 18px; } body.compact h1 { font-size: 26px; } }
 .kicker { color: var(--gold); font-size: 12px; letter-spacing: .22em; text-transform: uppercase; font-weight: 600; }
@@ -408,23 +411,22 @@ mark { background: #fff1a8; }
     hv.querySelector(".frame").innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + D.video + '" title="' + esc(D.videoTitle || "Break stream") + '" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
     hv.querySelector(".vlab").innerHTML = (D.ended ? "Replay of the stream. " : "Live stream for this break night. ") + '<a href="' + vu + '" target="_blank" rel="noopener">Watch on YouTube</a>';
     hv.hidden = false; document.getElementById("hero").classList.add("hasimg", "hasvid");
-    if (!D.ended) {  // live chat beside the stream; YouTube only shows chat while the stream is live or scheduled
+    if (!D.ended) {  // live chat in a small floating window, so it doesn't push the spots down (Daniel, Nov 25)
       var host = location.hostname || "maineventcardvault.com";
       var bar = document.createElement("div"); bar.className = "chatbar";
-      bar.innerHTML = '<span>Chat along with the stream. Sign in to YouTube to post.</span><button class="chatbtn" type="button" aria-expanded="false">Show live chat</button>';
-      var box = document.createElement("div"); box.className = "chat"; box.hidden = true;
-      hv.appendChild(bar); hv.appendChild(box);
+      bar.innerHTML = '<span>Chat along with the stream. Sign in to YouTube to post.</span><button class="chatbtn" type="button" aria-expanded="false">Open live chat</button>';
+      hv.appendChild(bar);
+      var win = document.createElement("div"); win.className = "chatwin"; win.hidden = true;
+      win.innerHTML = '<div class="chathead"><span>Live chat</span><button type="button" aria-label="Close live chat">&times;</button></div>';
+      document.body.appendChild(win);
       var btn = bar.querySelector("button");
       var setChat = function (open) {
-        if (open && !box.firstChild) box.innerHTML = '<iframe src="https://www.youtube.com/live_chat?v=' + D.video + '&embed_domain=' + encodeURIComponent(host) + '" title="Live chat" loading="lazy"></iframe>';
-        box.hidden = !open; btn.textContent = open ? "Hide live chat" : "Show live chat"; btn.setAttribute("aria-expanded", open ? "true" : "false");
-        try { localStorage.setItem("mecv-chat", open ? "1" : "0"); } catch (e) {}
+        if (open && !win.querySelector("iframe")) win.insertAdjacentHTML("beforeend", '<iframe src="https://www.youtube.com/live_chat?v=' + D.video + '&embed_domain=' + encodeURIComponent(host) + '" title="Live chat"></iframe>');
+        win.hidden = !open; btn.textContent = open ? "Close live chat" : "Open live chat"; btn.setAttribute("aria-expanded", open ? "true" : "false");
       };
-      btn.onclick = function () { setChat(box.hidden); };
-      var pref = null; try { pref = localStorage.getItem("mecv-chat"); } catch (e) {}
-      setChat(pref ? pref === "1" : window.innerWidth > 760);  // open on computers, closed on phones, until the visitor picks
-    }
-  } else if (D.image) {  // the breaker's own title card for this break, links to their product page
+      btn.onclick = function () { setChat(win.hidden); };
+      win.querySelector(".chathead button").onclick = function () { setChat(false); };
+    }  } else if (D.image) {  // the breaker's own title card for this break, links to their product page
     var hi = document.getElementById("heroimg");
     hi.href = D.url; hi.querySelector("img").src = D.image; hi.querySelector("img").alt = D.title + " title card";
     hi.hidden = false; document.getElementById("hero").classList.add("hasimg"); hi.querySelector("img").onerror = function () { hi.hidden = true; document.getElementById("hero").classList.remove("hasimg"); };
