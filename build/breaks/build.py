@@ -209,8 +209,8 @@ def box_query(b):
     q = re.sub(r'\(.*?\)', '', b['full'])
     q = re.sub(r'\b(Hobby|Jumbo|Mega|Blaster|Value|Boxes|Box|Case|Breaker\'s Delight)\b', '', q)
     return ' '.join(q.split())
-def add_prices(cfg, names):
-    """adds the typical eBay asking price as e[3] and returns the newest price date used"""
+def add_prices(cfg, names, show=True):
+    """registers each player for the daily eBay price job; when show, adds the typical asking price as e[3] and returns the newest price date used"""
     newest = ''
     for b in cfg['boxes']:
         bq = box_query(b)
@@ -221,7 +221,7 @@ def add_prices(cfg, names):
                 q = bq + ' ' + player
                 PRICE_TARGETS[q] = {'q': q, 'player': player}
                 pr = PRICES.get(q)
-                if pr and pr[0]:
+                if show and pr and pr[0]:
                     del e[3:]; e.append(pr[0]); newest = max(newest, pr[3])
     return newest
 
@@ -258,9 +258,11 @@ def auto_stream(cfg):
 
 def write(cfg, names, unmatched):
     data = dict(cfg)
-    if not cfg.get('ended'):
-        d = add_prices(cfg, names)
-        if d: data['priced'] = d
+    # eBay prices (Daniel, Nov 25): looked up for every break, but shown only after a break has run, so open breaks
+    # don't turn into "my spot was worth less than yours" comparisons
+    d = add_prices(cfg, names, show=bool(cfg.get('ended')))
+    if d and cfg.get('ended'): data['priced'] = d
+    data['breakerName'] = cfg.get('kicker', '').split(' · ')[0]
     kr = mark_kabooms(cfg, names)
     if kr: data['rules'] = list(cfg.get('rules', [])) + [kr]
     if not data.get('image') and image_of(cfg.get('url')): data['image'] = image_of(cfg['url'])  # a config's own image wins
@@ -939,7 +941,8 @@ gb1040 = dict(
 )
 
 # ---------------- RGL #6134 to #6143 drafts (Daniel, Nov 25, 2026) ----------------
-# Set up from Daniel's list of tonight's break titles before RGL posted the listings. A draft stays off the site until
+# No more drafts (Daniel, Nov 25, 2026): pages are built only from posted listings, with no guessed setups. The draft
+# machinery below is kept but its list is empty. Set up from Daniel's list of tonight's break titles before RGL posted the listings. A draft stays off the site until
 # the watcher sees an RGL product whose link starts with rgl-<number>-; then the page goes live with that link (and live
 # sold tracking for pick-your-team breaks). The box lists are guesses from the titles: when the listing shows up in the
 # queue, check boxes, spot count, prices and randomized teams against it and drop DRAFT_NOTE from the page.
@@ -1113,7 +1116,7 @@ rgl6141 = dict(
            dict(k='pokemon', short='Pokemon', c='#f5d000', full='2026 Pokemon TCG 30th Celebration Elite Trainer Box (1 box)', kind='Pokemon cards, plus a classic collection', types='Pokemon, trainer and item cards from the 30th Celebration set, and classic cards from past sets. Listed by the name on the card.')],
     spots=[],  # filled in below from the letters that have names
     rules=[['How RGL groups the letters', ['RGL sells 16 spots, and how the letters are grouped into them is set live on stream; the listing doesn\'t post it.', 'This guide lists every letter on its own, so once you know your letters, look each one up here.']],
-           ['First letter of the name on the card', ['Letters here go by the first letter of the first name on the card (Josh Allen is J; for Marvel cards, the character\'s name as printed). RGL\'s listing doesn\'t say first or last name, so this is our best guess; check with RGL.']],
+           ['First letter of the name on the card', ['Letters here go by the first letter of the first name on the card (Josh Allen is J; for Marvel cards, the character\'s name as printed). RGL\'s listing doesn\'t say first or last name, so this guide sorts by first name; check with RGL.']],
            ['Cards with more than one name', ['Each person on a dual or multi-person card is listed under their own letter.', RGL_MULTI[1][0]]]],
     notes=['Pokemon cards are listed by the name on the card (Pikachu is P, Alolan Exeggutor is A). Ask RGL how they letter Pokemon, trainer and item cards.',
            'RGL\'s listing says Wednesday at 12:45 am Pacific; that\'s the overnight slot after Wednesday\'s stream, early Thursday.',
@@ -1127,17 +1130,7 @@ rgl6141 = dict(
            ['Pokemon TCG 30th Celebration card list (official Pokemon PDF)', 'https://www.pokemon.com/us/pokemon-tcg']],
 )
 
-rgl6143 = dict(
-    id='rgl6143', title='RGL #6143 Five Star Finish the Case', kicker='Run Good Life · Random team (best guess) · NBA',
-    when=_when(THU, '2:00 am', '5:00 am'),
-    facts=['2025-26 Topps Five Star Basketball (best guess)', '30 teams'],
-    format='team', checked=DRAFT_NOTE + ' ' + "RGL hasn't said yet whether this break goes by letters or by teams. Our best guess is random team, because the Joy of Five Star breaks that started this case are random team. This guide is set up that way until the listing says otherwise.",
-    boxes=[dict(rgl6131['boxes'][1], full='2025-26 Topps Five Star Basketball (finishing a case)')],
-    spots=[team_spot(tid(t), t, [t]) for t in NBA_TEAMS],
-    rules=[RGL_LIVE_GROUPS, RGL_TEAM_RULE, RGL_MULTI],
-    notes=[DRAFT_NOTE, "RGL hasn't said yet whether this break goes by letters or by teams. Our best guess is random team, because the Joy of Five Star breaks that started this case are random team. This guide is set up that way until the listing says otherwise.", '"Finish the Case" most likely means the rest of the Five Star Basketball case RGL opened in tonight\'s Joy of Five Star breaks.'],
-    sources=[SRC_TOPPS_LIST],
-)
+# rgl6143 draft removed (Daniel, Nov 25): no guessed setups; the page builder builds #6143 from RGL's listing.
 
 # RGL #6135 Oops All Animation (Random Letter), posted Nov 25. 5 of its 7 boxes have checklists (X-Men '97 and Pixar Gold added Nov 25 from Daniel's links).
 RGL6135_H = 'rgl-6135-oops-all-animation-random-letter-11-25-26'
@@ -1272,7 +1265,7 @@ if __name__ == '__main__':
     rgl6141['spots'] = [cc_spot(L, L) for L in have] + [cc_spot('# (numbers)', '#')]
     n, u = letter_break(rgl6141, p41, None, alt=False); built.append(write(rgl6141, n, u))
     for cfg, num, pick, prods in [
-            (rgl6143, 6143, False, lambda: {'five': lib_nba_product('2025-26-topps-five-star-basketball')})]:
+            ]:
         posted = rgl_draft(cfg, num, pick)
         if not posted and not PREVIEW:
             print(cfg['id'], 'draft: waiting for RGL to post the listing'); continue

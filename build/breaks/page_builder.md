@@ -25,16 +25,16 @@ Work the queue as the runbook says:
 - Decide which added products are real group breaks. Skip merch, fees, giveaway winners and mystery packs. A "Filler" or
   "25% chance filler" option belongs on its main break's page, not its own page.
 - Another copy may have built the page minutes ago: git pull --rebase right before editing, and search
-  build/breaks/build.py for a config with that break number. If one exists, update it instead. Drafts made ahead of
-  time (DRAFT_NOTE) get updated from the listing, never duplicated: fix boxes, spots, prices, format and randomized
-  teams, and remove the draft and best-guess wording.
+  build/breaks/build.py for a config with that break number. If one exists, update it instead.
 - Build a page for each new break from the checklist library in build/breaks/checklists/, modeled on the closest
   existing config in build/breaks/build.py (rgl6134 pick your team, rgl6128 pick your letter, rgl6136 random team,
   rgl6137 random letter, gb1040 multi-sport letters). Page ids use the breaker prefix and number: gb1040, jwj0249,
   cc876, rgl6128. Turn on live sold tracking (live=dict(shop=..., handle=...)) for pick-your-letter and pick-your-team
   breaks; shop keys are acme, jwj, colfax, rgl. Note giveaway or randomized teams (for example "Dodgers random to all").
-- If you can't tell whether a break goes by letters or teams, or first or last name, say so plainly on the page with
-  your best guess and why, and add "(best guess)" to the kicker.
+- No guessed setups (Daniel, Nov 25, 2026): build only from what the listing says. Never guess letter groupings, team
+  pairings, the format, or first-or-last-name rules. If the listing leaves something out, say plainly that the
+  breaker hasn't posted it and to check with them. Letter pages may sort by first name, but must say the listing
+  doesn't say which the breaker uses. Never build a page before the listing is posted.
 - Never guess at a checklist: if a box isn't in the library and you can't get the official list through WebFetch, build
   the page from the boxes you do have and say on the page which boxes are missing. Tell Daniel which checklist links
   are needed.

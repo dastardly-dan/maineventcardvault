@@ -211,16 +211,13 @@ team spot, box by box. Linked from the storefront's Breaks menu; every page carr
   3b. Random breaks whose spot groupings aren't posted (Run Good Life sets team pairings and letter groups live): don't
      skip them. Build one spot per team or letter and say how many spots the breaker sells, like rgl6131, rgl6132
      (college cards in one "College (NIL) cards" spot) and rgl6133 (spots made from the letters that have names).
-  3i. Drafts made ahead of a listing (Daniel, Nov 25, 2026): `rgl6134`, `rgl6138`, `rgl6139`, `rgl6140` and `rgl6143` are
-      in `build.py` as drafts from break titles only. Each stays off the site until the watcher sees an RGL handle starting
-      `rgl-<number>-`; then the page goes live by itself with that link (and live tracking for #6134). When one of those
-      shows up in the queue, don't build a second page: check the draft's boxes, spot count, prices, randomized team and
-      format against the listing, fix the config, and remove `DRAFT_NOTE` from its `checked` and `notes`. Preview drafts
-      with `RGL_DRAFT_PREVIEW=/tmp/x python3 build/breaks/build.py` (then run it again without the variable). #6135, #6136,
-      #6137, #6141 and #6142 weren't prepped; build those from the listing as usual.
-      Format rule (Daniel, Nov 25, 2026): whenever a page is built before the format is known (letters or teams, pick or
-      random), say so plainly on the page, give the best guess and why, and mark the kicker "(best guess)". Once the
-      listing states the format, set it and remove the guess wording.
+  3i. No guessed setups (Daniel, Nov 25, 2026, after a breaker raised concerns): build pages only from posted listings.
+      Never post letter groupings, team pairings, formats, first-or-last-name rules or box lists before the breaker
+      posts them. If a listing leaves something out, say plainly that the breaker hasn't posted it and point to the
+      breaker; letter pages may sort by first name but must say the listing doesn't say which the breaker uses.
+      No drafts: the old draft machinery in build.py has an empty list. Every break page shows "A guide, not a
+      guarantee" (template.html). eBay asking prices are collected for all breaks but shown only after a break
+      has run (write() in build.py).
   3j. Streams (Daniel, Nov 25, 2026): when Daniel sends a breaker's YouTube link, add it to `STREAMS` in `build.py`
       with the page ids for that break night. Those pages show the YouTube player instead of the title card; the same
       link becomes the replay after the stream. Pages without a stream keep the title card.

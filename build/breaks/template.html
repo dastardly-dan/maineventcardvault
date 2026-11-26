@@ -61,6 +61,7 @@ body.compact .heroimg { display: none; }
 .herovid .frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 .herovid .vlab { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: 8px; font-size: 13px; }
 .herovid .vlab .vsrc { opacity: .8; }
+.guide { font-size: 14px; line-height: 1.45; margin: 10px 0 4px; padding: 9px 12px; border-left: 3px solid var(--gold); background: rgba(var(--gold-rgb), .09); border-radius: 0 8px 8px 0; max-width: 62ch; }
 .herovid .vlab .vsrc b { color: #e5484d; font-weight: 700; margin-right: 6px; }
 @media (max-width: 760px) { .hero.hasvid { grid-template-columns: 1fr; gap: 14px; } .hero.hasvid .herovid { grid-row: 1; } }
 /* the stream and chat stay up on every view, so people can watch, chat and check off pulls at once (Daniel, Nov 25) */
@@ -261,6 +262,7 @@ __THEME__
   <ul class="facts" id="facts"></ul>
   <p class="ended" id="ended" hidden></p>
   <p class="lede" id="checked"></p>
+  <p class="guide" id="guide"></p>
   <div class="mine" id="mine"></div>
   </div>
   <a class="heroimg" id="heroimg" target="_blank" rel="noopener" hidden><img alt=""></a>
@@ -394,6 +396,7 @@ __THEME__
   }
   document.getElementById("facts").innerHTML = '<li><b>' + esc(D.when) + "</b></li>" + D.facts.map(function (f) { return "<li>" + esc(f) + "</li>"; }).join("") + '<li><a href="' + D.url + '" target="_blank" rel="noopener">Break page</a></li>';
   document.getElementById("checked").textContent = D.checked;
+  document.getElementById("guide").innerHTML = "<b>A guide, not a guarantee.</b> " + esc(D.breakerName || "The breaker") + "'s posted rules come first, and a name on a checklist isn't a chase: hits come down to pack odds and print runs.";
   var LIVE_SRC = LIVE && D.live ? D.live : null;
   if (LIVE_SRC) { var lf = document.createElement("li"); lf.id = "livefact"; document.getElementById("facts").appendChild(lf); }
   if (ENDED) { var en = document.getElementById("ended"); en.textContent = ENDED; en.hidden = false; }
