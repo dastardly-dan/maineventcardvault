@@ -37,3 +37,7 @@ pages for breaks that have already run; when the stream ends, close that night's
    or "Break #N running; nothing to close."
 
 Writing rules for any page text: US dates, no em dashes, en dashes or arrows, plain wording. Never print secrets.
+
+Break videos (Daniel, Nov 26, 2026): Run Good Life posts one video per break on its second channel, youtube.com/@rungoodbreaks, a few hours
+after the stream. When a page's break video is up, add it to build/breaks/break_videos.json (page id, video id, title) and rebuild; that page then
+shows its own video instead of the night's marathon stream. Pages not listed there keep the stream.

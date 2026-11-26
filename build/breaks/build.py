@@ -226,6 +226,10 @@ STREAMS = {
                         pages=['rgl6128', 'rgl612xwwe2'] + ['rgl%d' % n for n in range(6129, 6144)]),
 }
 VIDEO_OF = {pid: (vid, v['title']) for vid, v in STREAMS.items() for pid in v['pages']}
+# Run Good Life also posts one video per break on its second channel, @rungoodbreaks (Daniel, Nov 26, 2026). A page listed in
+# break_videos.json shows its own break video instead of the night's marathon stream; pages not listed keep the stream.
+_BV = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'break_videos.json')
+BREAK_VIDEOS = {k: v for k, v in json.load(open(_BV)).items() if not k.startswith('_')} if os.path.exists(_BV) else {}
 # The watcher also records each breaker's current stream (watch/streams.json). A page gets the stream from the same
 # breaker on the same night, unless STREAMS already set one: RGL by the date in its product link (11-25-26, Pacific),
 # and the others by the date in the page's "when" line. RGL pages titled JML use the JML Breaks stream.
@@ -257,7 +261,9 @@ def write(cfg, names, unmatched):
     kr = mark_kabooms(cfg, names)
     if kr: data['rules'] = list(cfg.get('rules', [])) + [kr]
     if not data.get('image') and image_of(cfg.get('url')): data['image'] = image_of(cfg['url'])  # a config's own image wins
-    if cfg['id'] in VIDEO_OF: data['video'], data['videoTitle'] = VIDEO_OF[cfg['id']]
+    if cfg['id'] in BREAK_VIDEOS:
+        data['video'], data['videoTitle'], data['videoKind'] = BREAK_VIDEOS[cfg['id']]['video'], BREAK_VIDEOS[cfg['id']]['title'], 'break'
+    elif cfg['id'] in VIDEO_OF: data['video'], data['videoTitle'] = VIDEO_OF[cfg['id']]
     elif auto_stream(cfg):
         data['video'], data['videoTitle'] = auto_stream(cfg)
     if cfg.get('ended'): data['spots'] = [{k: v for k, v in s.items() if k != 'status'} for s in cfg['spots']]
