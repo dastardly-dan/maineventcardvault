@@ -857,6 +857,7 @@ rgl6131 = dict(
     sources=[['RGL #6131 break page (Run Good Life)', rgl_url(RGL6131_H)],
              ['Topps Stadium Club Basketball, Five Star Basketball, Joy of Basketball and Flagship Basketball checklists (official Topps)', 'https://www.topps.com/pages/checklists']],
 )
+close(rgl6131, 'Wednesday, November 25, 2026', ['5 boxes', '21 spots for 30 teams', '$290 per spot'])
 
 RGL6132_H = 'rgl-6132-absolute-finish-the-case-random-team-11-25-26'
 rgl6132 = dict(
