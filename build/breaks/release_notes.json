@@ -66,6 +66,11 @@
      "Live chat from the breaker's YouTube stream: tap Open live chat under the video on open breaks and it pops up in a small window in the corner, so the spots stay in view. Sign in to YouTube to post."
     ],
     [
+     "Updated",
+     "Break pages",
+     "Cleaner stream layout: one slim row under the video, live chat opens as a side panel that moves the page over instead of covering it, and the video and chat stay up while you check off pulls on a spot."
+    ],
+    [
      "Fixed",
      "Break pages",
      "The \"? by real name\" tag is gone from the spot lists; it cluttered the cards."
