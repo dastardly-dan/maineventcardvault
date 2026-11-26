@@ -375,9 +375,9 @@ __THEME__
   document.getElementById("kicker").textContent = D.kicker;
   document.getElementById("h1").textContent = D.title;
   if (D.video) {  // the breaker's YouTube stream for this break night; replaces the title card
-    var hv = document.getElementById("herovid"), vu = "https://www.youtube.com/watch?v=" + D.video;
-    hv.querySelector(".frame").innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + D.video + '" title="' + esc(D.videoTitle || "Break stream") + '" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
-    hv.querySelector(".vlab").innerHTML = '<span class="vsrc">' + (D.ended ? (D.videoKind === "break" ? "This break's video" : "Replay") : "<b>&#9679; Live</b>Break night stream") + ' &middot; <a href="' + vu + '" target="_blank" rel="noopener">Watch on YouTube</a></span>';
+    var hv = document.getElementById("herovid"), vs = D.videoStart > 0 ? Math.floor(D.videoStart) : 0, vu = "https://www.youtube.com/watch?v=" + D.video + (vs ? "&t=" + vs + "s" : "");  // vs: the second this break starts in a longer stream
+    hv.querySelector(".frame").innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + D.video + (vs ? "?start=" + vs : "") + '" title="' + esc(D.videoTitle || "Break stream") + '" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
+    hv.querySelector(".vlab").innerHTML = '<span class="vsrc">' + (D.ended ? (D.videoKind === "break" ? "This break's video" : vs ? "Stream replay, starts at this break" : "Replay") : "<b>&#9679; Live</b>Break night stream") + ' &middot; <a href="' + vu + '" target="_blank" rel="noopener">Watch on YouTube</a></span>';
     hv.hidden = false; document.getElementById("hero").classList.add("hasimg", "hasvid"); document.body.classList.add("hasstream");
     if (!D.ended) {  // live chat: a side panel on computers (the page slides over), a small window on phones (Daniel, Nov 25)
       var host = location.hostname || "maineventcardvault.com";

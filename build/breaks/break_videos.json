@@ -1,20 +1,71 @@
 {
- "_how": "Run Good Life posts one video per break on its second YouTube channel, youtube.com/@rungoodbreaks (Daniel, Nov 26, 2026). Add a page id with its video id and the video's title. A page listed here shows its own break video in place of the night's marathon stream. Pages not listed keep the stream. Then run python3 build/breaks/build.py.",
- "rgl6128": {"video": "Rrot9-5rtik", "title": "RGL #6128 - Chrome in the Club WWE PYL - 11/25/26"},
- "rgl612xwwe2": {"video": "89pGDXmVHbg", "title": "RGL #612WWE - Chrome in the Club PYL - 11/25/26"},
- "rgl6129": {"video": "IlpKk8BILQs", "title": "RGL #6129 - Gilded Collection MLB PYT - 11/25/26"},
- "rgl6130": {"video": "gqfmj95Bd48", "title": "RGL #6130 - Chrome & Midnight NFL PYT - 11/25/26"},
- "rgl6131": {"video": "LEVMlDEi0kk", "title": "RGL #6131 - Joy of Five Star NBA #1 - 11/25/26"},
- "rgl6132": {"video": "eTMy45nE8tw", "title": "RGL #6132 - Absolute FB Finish the Case - 11/25/26"},
- "rgl6133": {"video": "Oc16Y36dchA", "title": "RGL #6133 - Immaculate NASCAR Mixer - 11/25/26"},
- "rgl6134": {"video": "uFIWhQC-Ot4", "title": "RGL #6134 - Gilded Collection MLB PYT #2 - 11/25/26"},
- "rgl6135": {"video": "Kq6t_0eq4iM", "title": "RGL #6135 - Oops All Animation - 11/25/26"},
- "rgl6136": {"video": "LGE_bp2Gs_w", "title": "RGL #6136 - Pass the Turkey NFL - 11/25/26"},
- "rgl6137": {"video": "zm1UUf5eYTk", "title": "RGL #6137 - 4 Box Pro Debut - 11/25/26"},
- "rgl6138": {"video": "eEyPwLmln2A", "title": "RGL #6138 - Gilded & Cosmic MLB - 11/25/26"},
- "rgl6139": {"video": "fU5MeOhtS2M", "title": "RGL #6139 - Joy of Five Star #2 - 11/25/26"},
- "rgl6140": {"video": "d8yZnzoJsqI", "title": "RGL #6140 - Half Case Delight NFL - 11/25/26"},
- "rgl6141": {"video": "geiFKRFp_q0", "title": "RGL #6141 - Peak Degeneracy #6 - 11/25/26"},
- "rgl612xmarvel": {"video": "lw-5tOF3SRw", "title": "RGL Marvel Neon & Mint - 11/25/26"},
- "rgl6142": {"video": "Kt9TM8zcOCs", "title": "RGL #6142 - UFC Royalty Mixer - 11/25/26"}
+ "_how": "Run Good Life posts one video per break on its second YouTube channel, youtube.com/@rungoodbreaks (Daniel, Nov 26, 2026). Add a page id with its video id and the video title. A page listed here shows that video in place of the night marathon stream; pages not listed keep the stream. For a breaker who streams a whole night in one video, add \"kind\": \"stream\" and \"start\": \"1:23:45\" (the time the break begins; hours:minutes:seconds, minutes:seconds, or seconds). The page then opens the stream at that moment and its Watch on YouTube link jumps to the same spot. Then run python3 build/breaks/build.py.",
+ "rgl6128": {
+  "video": "Rrot9-5rtik",
+  "title": "RGL #6128 - Chrome in the Club WWE PYL - 11/25/26"
+ },
+ "rgl612xwwe2": {
+  "video": "89pGDXmVHbg",
+  "title": "RGL #612WWE - Chrome in the Club PYL - 11/25/26"
+ },
+ "rgl6129": {
+  "video": "IlpKk8BILQs",
+  "title": "RGL #6129 - Gilded Collection MLB PYT - 11/25/26"
+ },
+ "rgl6130": {
+  "video": "gqfmj95Bd48",
+  "title": "RGL #6130 - Chrome & Midnight NFL PYT - 11/25/26"
+ },
+ "rgl6131": {
+  "video": "LEVMlDEi0kk",
+  "title": "RGL #6131 - Joy of Five Star NBA #1 - 11/25/26"
+ },
+ "rgl6132": {
+  "video": "eTMy45nE8tw",
+  "title": "RGL #6132 - Absolute FB Finish the Case - 11/25/26"
+ },
+ "rgl6133": {
+  "video": "Oc16Y36dchA",
+  "title": "RGL #6133 - Immaculate NASCAR Mixer - 11/25/26"
+ },
+ "rgl6134": {
+  "video": "uFIWhQC-Ot4",
+  "title": "RGL #6134 - Gilded Collection MLB PYT #2 - 11/25/26"
+ },
+ "rgl6135": {
+  "video": "Kq6t_0eq4iM",
+  "title": "RGL #6135 - Oops All Animation - 11/25/26"
+ },
+ "rgl6136": {
+  "video": "LGE_bp2Gs_w",
+  "title": "RGL #6136 - Pass the Turkey NFL - 11/25/26"
+ },
+ "rgl6137": {
+  "video": "zm1UUf5eYTk",
+  "title": "RGL #6137 - 4 Box Pro Debut - 11/25/26"
+ },
+ "rgl6138": {
+  "video": "eEyPwLmln2A",
+  "title": "RGL #6138 - Gilded & Cosmic MLB - 11/25/26"
+ },
+ "rgl6139": {
+  "video": "fU5MeOhtS2M",
+  "title": "RGL #6139 - Joy of Five Star #2 - 11/25/26"
+ },
+ "rgl6140": {
+  "video": "d8yZnzoJsqI",
+  "title": "RGL #6140 - Half Case Delight NFL - 11/25/26"
+ },
+ "rgl6141": {
+  "video": "geiFKRFp_q0",
+  "title": "RGL #6141 - Peak Degeneracy #6 - 11/25/26"
+ },
+ "rgl612xmarvel": {
+  "video": "lw-5tOF3SRw",
+  "title": "RGL Marvel Neon & Mint - 11/25/26"
+ },
+ "rgl6142": {
+  "video": "Kt9TM8zcOCs",
+  "title": "RGL #6142 - UFC Royalty Mixer - 11/25/26"
+ }
 }

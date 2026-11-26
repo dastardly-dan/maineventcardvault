@@ -230,6 +230,16 @@ VIDEO_OF = {pid: (vid, v['title']) for vid, v in STREAMS.items() for pid in v['p
 # break_videos.json shows its own break video instead of the night's marathon stream; pages not listed keep the stream.
 _BV = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'break_videos.json')
 BREAK_VIDEOS = {k: v for k, v in json.load(open(_BV)).items() if not k.startswith('_')} if os.path.exists(_BV) else {}
+def video_secs(t):
+    """a start time as seconds: 4521, '1:15:21', '75:21', or '1h15m21s'"""
+    if t in (None, ''): return 0
+    if isinstance(t, (int, float)): return int(t)
+    t = str(t).strip().lower()
+    m = re.fullmatch(r'(?:(\d+)h)?(?:(\d+)m)?(?:(\d+)s)?', t)
+    if m and any(m.groups()): return int(m.group(1) or 0) * 3600 + int(m.group(2) or 0) * 60 + int(m.group(3) or 0)
+    secs = 0
+    for part in t.split(':'): secs = secs * 60 + int(part)
+    return secs
 # The watcher also records each breaker's current stream (watch/streams.json). A page gets the stream from the same
 # breaker on the same night, unless STREAMS already set one: RGL by the date in its product link (11-25-26, Pacific),
 # and the others by the date in the page's "when" line. RGL pages titled JML use the JML Breaks stream.
@@ -262,7 +272,9 @@ def write(cfg, names, unmatched):
     if kr: data['rules'] = list(cfg.get('rules', [])) + [kr]
     if not data.get('image') and image_of(cfg.get('url')): data['image'] = image_of(cfg['url'])  # a config's own image wins
     if cfg['id'] in BREAK_VIDEOS:
-        data['video'], data['videoTitle'], data['videoKind'] = BREAK_VIDEOS[cfg['id']]['video'], BREAK_VIDEOS[cfg['id']]['title'], 'break'
+        _bv = BREAK_VIDEOS[cfg['id']]
+        data['video'], data['videoTitle'], data['videoKind'] = _bv['video'], _bv.get('title') or 'Break stream', _bv.get('kind', 'break')
+        if _bv.get('start') not in (None, ''): data['videoStart'] = video_secs(_bv['start'])   # kind 'stream': one long stream, opened at this break
     elif cfg['id'] in VIDEO_OF: data['video'], data['videoTitle'] = VIDEO_OF[cfg['id']]
     elif auto_stream(cfg):
         data['video'], data['videoTitle'] = auto_stream(cfg)
