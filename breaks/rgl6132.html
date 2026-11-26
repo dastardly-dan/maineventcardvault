@@ -454,7 +454,7 @@ mark { background: #fff1a8; }
   if (LIVE) tabs.push(["open", "Still open"]);
   tabs.push(["names", "By name"], ["boxes", "By box"], ["rules", "Rules and sources"]);
   document.getElementById("tabs").innerHTML = tabs.map(function (t) { return '<a href="#/' + t[0] + '" data-v="' + t[0] + '">' + t[1] + "</a>"; }).join("");
-  document.getElementById("spotsHead").textContent = TEAM ? "Every team spot" : "Every letter spot";
+  document.getElementById("spotsHead").textContent = TEAM ? "Every " + (D.unit || "team") + " spot" : "Every letter spot";
   document.getElementById("spotsSub").textContent = ENDED ? "This break has already run. Tap a spot to see who was in it from each box." : (PYL ? (TEAM ? "Pick-your-team: green teams can still be bought, red ones are sold. " : "Pick-your-letter: green spots can still be bought, red ones are sold. ") : TEAM ? "Teams are randomized live, so any spot could be yours. " : "Letters are randomized live, so any spot could be yours. ") + "Tap a spot to see who you could pull from each box.";
 
   function drawMine() {

@@ -1310,12 +1310,43 @@ jwj0247u = dict(
 )
 close(jwj0247u, 'Monday, November 23, 2026', ['5 boxes', '20 letter spots', '$85 per spot', 'Letters randomized live'])
 
+# ---------------- CC873 Marvel Rivals PYC (pick your character; ran Nov 22, built later at Daniel's request, Nov 26) ----------------
+# No published checklist for 2026 Card.Fun Marvel Rivals Eternal Glory was found (checked Nov 26), so the box has no names yet.
+# Spots and prices are the 41 variants on Colfax's listing.
+CC873_V = [('Adam Warlock', 10), ('Black Panther', 20), ('Black Widow', 20), ('Blade', 20), ('Captain America', 30), ('Cloak & Dagger', 15), ('Doctor Strange', 20),
+           ('Emma Frost', 25), ('Groot', 20), ('Hawkeye', 10), ('Hela', 10), ('Hulk', 30), ('Human Torch', 20), ('Invisible Woman', 20), ('Iron Fist', 10),
+           ('Iron Man', 30), ('Jeff the Land Shark', 30), ('Loki', 20), ('Luna Snow', 25), ('Magik', 25), ('Magneto', 20), ('Mantis', 15), ('Mister Fantastic', 15),
+           ('Moon Knight', 20), ('Namor', 10), ('Peni Parker', 10), ('Phoenix', 20), ('Psylocke', 25), ('Rocket Raccoon', 20), ('Scarlet Witch', 25),
+           ('Spider-Man', 40), ('Squirrel Girl', 25), ('Star-Lord', 20), ('Storm', 20), ('The Punisher', 20), ('The Thing', 10), ('Thor', 30), ('Ultron', 20),
+           ('Venom', 40), ('Winter Soldier', 15), ('Wolverine', 40)]
+cc873 = dict(
+    id='cc873', title='CC873 Marvel Rivals PYC (Pick Your Character)', unit='character', kicker='Colfax Collectibles \u00b7 Pick your character \u00b7 Marvel Rivals',
+    url='https://colfaxcc.com/products/cc873-marvel-rivals-pyc-pick-your-character',
+    when='Sunday, November 22, 2026, 5:00 pm Central (6:00 pm Eastern)',
+    facts=['5 boxes (half case)', '41 character spots', '$10 to $40 per spot'],
+    format='pyt', checked='',
+    boxes=[dict(k='rivals', short='Eternal Glory', c='#e2545e', full='2026 Card.Fun Marvel Rivals Eternal Glory Hobby (5 boxes, half case)',
+                kind='Marvel Rivals game cards, 10 packs per box, 5 cards per pack. Checklist not found.',
+                types='Series like Hero Debut, Team Up, Art Gallery, Hero Positioning and X Evolution, plus Glory MVP and Perfection MVP one-of-ones and Hero Signature autographs. Retailers describe 17 themed series and over 1,800 cards, and say a box has 2 to 4 limited-edition cards on average.')],
+    spots=team_spots_from_variants([(n, pr, 0) for n, pr in CC873_V], lambda x: x),
+    rules=[['One spot per character', ['Each spot is a single Marvel Rivals character, and you can buy as many spots as you like while they last.', 'Prices run from $10 to $40 by character: Spider-Man, Venom and Wolverine are $40, and the least expensive characters are $10.']],
+           ['Cards with two characters', ['Team Up cards show more than one character. Colfax\'s listing doesn\'t say how those are split, so ask Colfax.', 'Colfax\'s general rules for cards with more than one team are on its rules page.']]],
+    notes=['No checklist for this set was found, so this guide shows the spots and prices but not the individual cards in each one.',
+           'The listing says "2025 Marvel Rivals Eternal Glory Hobby". Retailers sell it as the 2026 Card.Fun Marvel Rivals Eternal Glory Hobby, released in April 2026, so this guide treats them as the same product.'],
+    sources=[['CC873 break page (Colfax Collectibles)', 'https://colfaxcc.com/products/cc873-marvel-rivals-pyc-pick-your-character'],
+             ['Colfax group break rules', 'https://colfaxcc.com/pages/rules'],
+             ['Eternal Glory hobby box description (DA Card World)', 'https://www.dacardworld.com/entertainment/marvel-rivals-eternal-glory-hobby-box-card-fun-2026'],
+             ['Eternal Glory series and variants (Cardbot)', 'https://cardbot.com.au/products/2026-marvel-rivals-eternal-glory-hobby-box']],
+)
+close(cc873, 'Sunday, November 22, 2026', ['5 boxes (half case)', '41 character spots', '$10 to $40 per spot'])
+
 if __name__ == '__main__':
     built = []
     n, u = letter_break(cc871, WWE_PRODUCTS, wwe_gender); built.append(write(cc871, n, u))
     n, u = letter_break(jwj0246, WWE_PRODUCTS, wwe_gender); built.append(write(jwj0246, n, u))
     n, u = letter_break(jwj0247, {'swc': TD.SW_CHROME, 'swg': TD.SW_GALAXY}, None, alt=False); built.append(write(jwj0247, n, u))
     n, u = letter_break(jwj0247u, {'sc': W.SC, 'universe': lib_letter_product('2026-topps-universe-wwe'), 'exalted': W.EXALTED}, jwj_wwe_gender); built.append(write(jwj0247u, n, u))
+    n, u = team_break(cc873, {'rivals': dict(base={}, other={})}); built.append(write(cc873, n, u))
     n, u = team_break(cc872, {'chrome': TD.NFL_CHROME, 'midnight': TD.NFL_MIDNIGHT, 'absolute': dict(base={}, other={})}); built.append(write(cc872, n, u))
     n, u = team_break(jwj0244, {'flag': TD.NBA_FLAGSHIP}); built.append(write(jwj0244, n, u))
     CH, MN, IN = lib_team_product('2026-topps-chrome-football'), lib_team_product('2026-topps-midnight-football'), lib_team_product('2026-topps-inception-football')
