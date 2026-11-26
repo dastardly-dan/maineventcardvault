@@ -76,7 +76,7 @@ def letter_break(cfg, products, gender_of=None, alt=True):
             for L, extra, two in ((p, '', first_two(n.replace('"', ''))), (a, '?', first_two(key_of(n)))):
                 if not L or (extra and not alt): continue
                 for s in cfg['spots']:
-                    if in_spot(s, L, two) and (s.get('g') is None or s['g'] == g):
+                    if (in_spot(s, L, two) and (s.get('g') is None or s['g'] == g)) or L in s.get('anyg', ''):
                         f = ''.join(sorted(flags - {'B'})) + extra
                         if 'B' not in flags and not flags & {'A', 'I', 'M'}: f += ''
                         names[s['id']].setdefault(box['k'], []).append([n, f, 'B' in flags])
@@ -1274,11 +1274,48 @@ rgl612xwwe2 = dict(
 )
 close(rgl612xwwe2, 'Wednesday, November 25, 2026', ['5 boxes', '27 letter spots', '$40 to $235 per spot'])  # Daniel said WWE was done (Nov 26, 2:08 am Eastern)
 
+# ---------------- JWJ #0247 Exalted Universe Club (random letters; ran Nov 23, built later at Daniel's request, Nov 26) ----------------
+def rl_spot(id, label, letters_, g=None, anyg=''):
+    return dict(id=id, label=label, letters=list(letters_), g=g, anyg=anyg, price=None, status=None)
+jwj0247u_spots = [
+    rl_spot('a-m', 'A', 'A', 'M'), rl_spot('a-w', 'A', 'A', 'F'), rl_spot('b-m', 'B', 'B', 'M'), rl_spot('b-w', 'B', 'B', 'F'),
+    rl_spot('c', 'C', 'C'), rl_spot('def', 'D / E / F', 'DEF'), rl_spot('ghi', 'G / H / I', 'GHI'), rl_spot('j-m', 'J', 'J', 'M'),
+    rl_spot('j-w', 'J / W', 'J', 'F', anyg='W'), rl_spot('k', 'K', 'K'), rl_spot('l', 'L', 'L'), rl_spot('mn', 'M / N', 'MN'),
+    rl_spot('opq', 'O / P / Q', 'OPQ'), rl_spot('r-m', 'R', 'R', 'M'), rl_spot('r-w', 'R / Z', 'R', 'F', anyg='Z'),
+    rl_spot('s-m', 'S', 'S', 'M'), rl_spot('s-w', 'S', 'S', 'F'), rl_spot('t-m', 'T', 'T', 'M'), rl_spot('t-w', 'T', 'T', 'F'),
+    rl_spot('uvxy', 'U / V / X / Y / 1', 'UVXY#'),
+]
+JWJ_WOMEN = RGL_WOMEN | lib_women('2026-topps-universe-wwe', '2025-topps-exalted-wwe')
+def jwj_wwe_gender(n):
+    return 'F' if (n in JWJ_WOMEN or key_of(n) in JWJ_WOMEN or wwe_gender(n) == 'F') else 'M'
+jwj0247u = dict(
+    id='jwj0247u', title='JWJ #0247 Exalted Universe Club', kicker='JWJ Collector Breaks \u00b7 Random letter \u00b7 WWE',
+    url='https://jwjcollectorbreaks.com/products/jwj-0247-exalted-universe-club',
+    when='Monday, November 23, 2026 on the JWJ Breaks YouTube channel',
+    facts=['5 boxes', '20 letter spots', '$85 per spot', 'Letters randomized live'],
+    format='random', checked='',
+    boxes=[dict(WWE_BOX['sc'], full='2026 Topps Stadium Club WWE Hobby (2 boxes)'),
+           dict(k='universe', short='Universe', c='#5ad1c8', full='2026 Topps Universe WWE Hobby (2 boxes)', kind='base set, autographs, inserts',
+                types='Base cards, autographs and inserts, taken from the official Topps checklist. The checklist file here lists names only, so card types aren\'t broken out.'),
+           WWE_BOX['exalted']],
+    spots=jwj0247u_spots, rules=WWE_RULES,
+    notes=['JWJ\'s listing was posted late and sold out quickly, so this guide was built after the break ran. There is no sold or open status on the spots.',
+           'The listing says "J - Women / W" and "R - Women / Z". This guide assumes every W and every Z name (men and women) goes to those spots, since no other spot has a W or a Z.',
+           'U, V, X, Y and anyone whose name starts with a number share the last spot.',
+           'The listing says "2025 Topps Exalted WWE". That is the Exalted WWE set Topps released in April 2026, so that checklist is used here.'],
+    sources=[['JWJ #0247 break page', 'https://jwjcollectorbreaks.com/products/jwj-0247-exalted-universe-club'],
+             ['Stadium Club WWE checklist (official Topps)', 'https://cdn.shopify.com/s/files/1/0662/9749/5709/files/2026_Topps_Stadium_Club_WWE_-_Checklist.pdf?v=1791221305'],
+             ['Universe WWE checklist (official Topps)', 'https://cdn.shopify.com/s/files/1/0662/9749/5709/files/26UWWE_-_2026_Topps_Universe_WWE_Checklist_1_.xls_-_Compatibility_Mode.pdf?v=1792698807'],
+             ['Exalted WWE checklist (official Topps)', 'https://cdn.shopify.com/s/files/1/0662/9749/5709/files/FINAL_CHECKLIST_2025EXALTEDWWE.pdf?v=1774986961']],
+)
+close(jwj0247u, 'Monday, November 23, 2026', ['5 boxes', '20 letter spots', '$85 per spot', 'Letters randomized live'])
+
 if __name__ == '__main__':
     built = []
     n, u = letter_break(cc871, WWE_PRODUCTS, wwe_gender); built.append(write(cc871, n, u))
     n, u = letter_break(jwj0246, WWE_PRODUCTS, wwe_gender); built.append(write(jwj0246, n, u))
     n, u = letter_break(jwj0247, {'swc': TD.SW_CHROME, 'swg': TD.SW_GALAXY}, None, alt=False); built.append(write(jwj0247, n, u))
+    n, u = letter_break(jwj0247u, {'sc': W.SC, 'universe': lib_letter_product('2026-topps-universe-wwe'), 'exalted': W.EXALTED}, jwj_wwe_gender); built.append(write(jwj0247u, n, u))
     n, u = team_break(cc872, {'chrome': TD.NFL_CHROME, 'midnight': TD.NFL_MIDNIGHT, 'absolute': dict(base={}, other={})}); built.append(write(cc872, n, u))
     n, u = team_break(jwj0244, {'flag': TD.NBA_FLAGSHIP}); built.append(write(jwj0244, n, u))
     CH, MN, IN = lib_team_product('2026-topps-chrome-football'), lib_team_product('2026-topps-midnight-football'), lib_team_product('2026-topps-inception-football')
