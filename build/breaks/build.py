@@ -902,6 +902,7 @@ rgl6133 = dict(
              ['Panini Prizm Racing checklist (official Panini CSV)', SRC_PANINI],
              ['Panini Immaculate Collection Racing checklist (official Panini CSV)', SRC_PANINI]],
 )
+close(rgl6133, 'Wednesday, November 25, 2026', ['4 boxes', '13 letter groups', '$138 per spot, fillers $34.50'])  # stream showed #6134 running (Nov 25, 9:08 pm Eastern)
 
 # GB1040 (Daniel, Nov 24): built from Acme's title card before the listing was posted. When the listing shows up in the
 # watcher queue, update url, when, facts and checked here instead of building a second page; the image fills in once url
