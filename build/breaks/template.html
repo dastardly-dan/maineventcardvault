@@ -56,6 +56,7 @@ nav.tabs a.on { background: var(--gold); color: var(--on-gold); font-weight: 600
 @media (max-width: 760px) { .hero.hasimg { grid-template-columns: 1fr; gap: 14px; } .hero.hasimg .heroimg { grid-row: 1; max-width: 460px; } }
 body.compact .heroimg { display: none; }
 .hero.hasvid { grid-template-columns: minmax(0, 1fr) minmax(0, 580px); gap: 32px; }
+@media (min-width: 1400px) { body.hasstream { --maxw: 1640px; } .hero.hasvid { grid-template-columns: minmax(0, 1fr) minmax(0, min(46vw, 880px)); } }  /* wide screens: the page widens so the stream can be bigger */
 .herovid .frame { position: relative; aspect-ratio: 16 / 9; border-radius: 12px; overflow: hidden; border: 1px solid var(--line); background: #000; }
 .herovid .frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 .herovid .vlab { font-size: 13px; margin-top: 6px; opacity: .8; }
@@ -365,7 +366,7 @@ __THEME__
     var hv = document.getElementById("herovid"), vu = "https://www.youtube.com/watch?v=" + D.video;
     hv.querySelector(".frame").innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + D.video + '" title="' + esc(D.videoTitle || "Break stream") + '" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
     hv.querySelector(".vlab").innerHTML = (D.ended ? "Replay of the stream. " : "Live stream for this break night. ") + '<a href="' + vu + '" target="_blank" rel="noopener">Watch on YouTube</a>';
-    hv.hidden = false; document.getElementById("hero").classList.add("hasimg", "hasvid");
+    hv.hidden = false; document.getElementById("hero").classList.add("hasimg", "hasvid"); document.body.classList.add("hasstream");
     if (!D.ended) {  // live chat in a small floating window, so it doesn't push the spots down (Daniel, Nov 25)
       var host = location.hostname || "maineventcardvault.com";
       var bar = document.createElement("div"); bar.className = "chatbar";
