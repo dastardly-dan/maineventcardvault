@@ -33,23 +33,25 @@ jobs:
           EBAY_CLIENT_ID: ${{ secrets.EBAY_CLIENT_ID }}
           EBAY_CLIENT_SECRET: ${{ secrets.EBAY_CLIENT_SECRET }}
         run: python build/breaks/prices.py
-      - name: Rebuild the break pages and the Spot Builder
+      # Save the new prices, then rebuild the pages on top of the latest main and push. The lookup takes up to an
+      # hour, and other commits (page updates) often land meanwhile; rebuilding on top of them instead of rebasing the
+      # generated pages means a conflict can't throw the prices away (it did on Nov 27, 2026).
+      - name: Rebuild on the latest main and push
         run: |
-          python build/breaks/build.py > /dev/null
-          python build/breaks/builder.py > /dev/null
-          python build/breaks/hub.py > /dev/null
-      - name: Commit
-        run: |
-          if [ -n "$(git status --porcelain build/breaks breaks owner)" ]; then
-            git config user.name "Break prices"
-            git config user.email "actions@users.noreply.github.com"
+          cp build/breaks/watch/prices.json "$RUNNER_TEMP/prices.json"
+          git config user.name "Break prices"
+          git config user.email "actions@users.noreply.github.com"
+          ok=0
+          for i in 1 2 3 4 5; do
+            git fetch -q origin main && git reset -q --hard origin/main
+            cp "$RUNNER_TEMP/prices.json" build/breaks/watch/prices.json
+            python build/breaks/build.py > /dev/null
+            python build/breaks/builder.py > /dev/null
+            python build/breaks/hub.py > /dev/null
+            if [ -z "$(git status --porcelain build/breaks breaks owner)" ]; then ok=1; break; fi
             git add build/breaks breaks owner
-            git commit -m "Break prices: eBay asking prices updated"
-            ok=0
-            for i in 1 2 3 4; do
-              if git pull --rebase origin main && git push origin HEAD:main; then ok=1; break; fi
-              git rebase --abort 2>/dev/null || true
-              sleep 5
-            done
-            if [ "$ok" != 1 ]; then echo "Could not push the update"; exit 1; fi
-          fi
+            git commit -q -m "Break prices: eBay asking prices updated"
+            if git push origin HEAD:main; then ok=1; break; fi
+            sleep 10
+          done
+          if [ "$ok" != 1 ]; then echo "Could not push the update"; exit 1; fi
