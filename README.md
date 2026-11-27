@@ -211,6 +211,11 @@ team spot, box by box. Linked from the storefront's Breaks menu; every page carr
   3b. Random breaks whose spot groupings aren't posted (Run Good Life sets team pairings and letter groups live): don't
      skip them. Build one spot per team or letter and say how many spots the breaker sells, like rgl6131, rgl6132
      (college cards in one "College (NIL) cards" spot) and rgl6133 (spots made from the letters that have names).
+  3b2. Straight A to Z until the setup is known (Daniel, Nov 27, 2026): for a random-letter break whose real setup isn't known
+     (Run Good Life sets letter groups live; Colfax tags that disagree with the listing's spot list), build one spot per
+     letter A to Z plus a number spot with `cc_az()` in build.py, and say plainly on the page what the listing says (and
+     the groups it lists, so they aren't lost). When the breaker confirms the setup or shows the board, update the spots
+     to match, like rgl6141.
   3i. No guessed setups (Daniel, Nov 25, 2026, after a breaker raised concerns): build pages only from posted listings.
       Never post letter groupings, team pairings, formats, first-or-last-name rules or box lists before the breaker
       posts them. If a listing leaves something out, say plainly that the breaker hasn't posted it and point to the
@@ -225,6 +230,10 @@ team spot, box by box. Linked from the storefront's Breaks menu; every page carr
   3j. Streams (Daniel, Nov 25, 2026): when Daniel sends a breaker's YouTube link, add it to `STREAMS` in `build.py`
       with the page ids for that break night. Those pages show the YouTube player instead of the title card; the same
       link becomes the replay after the stream. Pages without a stream keep the title card.
+  3n. Friday checks (Daniel, Nov 27, 2026): two scheduled tasks, "Friday check: all breakers" at 1:00 pm Eastern and
+      "Friday check: JWJ" at 6:00 pm Eastern (CRON_TZ America/New_York, so they stay at 1 and 6 pm through daylight saving).
+      They don't run the builder gate. Each starts a fresh store check, works the queue by `build/breaks/page_builder.md`
+      and tells Daniel what's new, or that nothing is up. The Break guides page says so (hub.py intro).
   3k. Page builder timing (Daniel, Nov 25, 2026): the scheduled task fires every 5 minutes (at :03, :08, ...) on Sonnet and
       first runs `python3 build/breaks/builder_gate.py`. It works only when that prints RUN: during the first 4 hours of a
       breaker's stream (the watcher starts looking for the YouTube stream 2 hours before the first scheduled break and

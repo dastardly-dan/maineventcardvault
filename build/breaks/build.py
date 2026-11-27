@@ -1518,6 +1518,9 @@ CC_FILLER = 'Filler entries are sold too (%s for a 25%% chance at a spot); see C
 CC_MULTI = cc872['rules'][2]
 CC_TEAM_RULE = ['Cards go to the team on the card', ['Colfax\'s rules: a card goes to the team listed on the front or back, not the jersey.',
                 'Retired players go to the team listed on their card. This guide files old franchises with today\'s team (Expos to the Nationals, old Cleveland to the Guardians, Washington Senators to the Twins and Browns to the Orioles).']]
+def cc_az():
+    """Straight A to Z, one spot per letter, plus a number spot. Used while a random-letter break's real setup isn't known (Daniel, Nov 27, 2026)."""
+    return [cc_spot('T (No The)', 'T') if c == 'T' else cc_spot(c, c) for c in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'] + [cc_spot('# (numbers)', '#')]
 CC_LETTER_THE = 'A leading "The" doesn\'t count (Colfax\'s listing says "T (No The)"), so The Thing is T and The Maker is M.'
 
 # CC876 Cosmic & Museum X (Random Team)
@@ -1562,17 +1565,16 @@ BOX_FINEST_FF = dict(k='finestff', short='Finest Fantastic Four', c='#e2545e', f
 cc879 = dict(
     id='cc879', title='CC879 Finest Neon Mint (Random Letter)', kicker='Colfax Collectibles · Random letter · Marvel',
     url=colfax_url(CC879_H), when=CC_SUN,
-    facts=['4 boxes', '18 letter spots', '$105 per spot, $26.25 filler', 'Letters randomized live'],
-    format='random', checked=CC_CHK % (14, 16, 18),
+    facts=['4 boxes', 'Letters A to Z for now', '$105 per spot, $26.25 filler', 'Letters randomized live'],
+    format='random', checked=CC_CHK % (14, 16, 18) + ' Until Colfax confirms the setup, this guide shows each letter on its own, A to Z.',
     boxes=[dict(BOX_NEON, full='2026 Topps Marvel Neon Hobby (2 boxes)'), BOX_FINEST_FF, BOX_MINT_M],
-    spots=[cc_spot('A', 'A'), cc_spot('B', 'B'), cc_spot('C', 'C'), cc_spot('D', 'D'), cc_spot('E / F / U', 'EFU'), cc_spot('G', 'G'), cc_spot('H', 'H'),
-           cc_spot('I', 'I'), cc_spot('J / N', 'JN'), cc_spot('K / L', 'KL'), cc_spot('M', 'M'), cc_spot('O / Q / Y', 'OQY'), cc_spot('P / X / Z', 'PXZ'),
-           cc_spot('R', 'R'), cc_spot('S', 'S'), cc_spot('T (No The)', 'T'), cc_spot('V', 'V'), cc_spot('W', 'W'), cc_spot('# (numbers)', '#')],
-    rules=[['How the 18 spots work', ['Colfax\'s listing sets 18 letter spots. Several share a spot: E, F and U; J and N; K and L; O, Q and Y; P, X and Z. Letters are randomized live on stream.']],
+    spots=cc_az(),
+    rules=[['How the spots work', ['Colfax\'s listing text lists 18 spots, but its tags say 14 break spots and 16 filler spots, so the real setup isn\'t clear. Until Colfax confirms it, this guide shows each letter on its own, A to Z. Letters are randomized live on stream.',
+                                    'The listing text groups them like this: A, B, C, D, E / F / U, G, H, I, J / N, K / L, M, O / Q / Y, P / X / Z, R, S, T (No The), V and W. This guide will switch to the real groups once they\'re confirmed.']],
            ['First letter of the name on the card', ['The spot goes by the first letter of the name printed on the card: Spider-Man is S, Captain America is C. For a person, that\'s the first name.', CC_LETTER_THE,
                                                      'Colfax\'s listing doesn\'t say how it handles characters, so check with Colfax.']],
            ['Cards with more than one character', ['Each character on a dual or multi-character card is listed under their own letter.', CC_MULTI[1][0]]]],
-    notes=['The Finest Fantastic Four decade cards (1960s, 1970s and so on) start with a number, and Colfax\'s listing has no spot for them. They show under a number spot here; ask Colfax who gets them.',
+    notes=['The Finest Fantastic Four decade cards (1960s, 1970s and so on) start with a number, and the listing has no letter for them. They show under a number spot here; ask Colfax who gets them.',
            'Lists come from the official Topps checklists.', CC_FILLER % '$26.25'],
     sources=[['CC879 break page (Colfax Collectibles)', colfax_url(CC879_H)], _src('2026-topps-neon-marvel', 'Topps Marvel Neon'),
              _src('2026-topps-finest-fantastic-four', 'Topps Finest Fantastic Four'), _src('2026-topps-mint-marvel', 'Topps Marvel Mint')],
@@ -1583,24 +1585,22 @@ CC877_H = 'cc877-amys-birthday-break-random-letter'
 cc877 = dict(
     id='cc877', title="CC877 Amy's Birthday Break (Random Letter)", kicker='Colfax Collectibles · Random letter · Multi-theme',
     url=colfax_url(CC877_H), when=CC_SUN,
-    facts=['6 boxes (4 listed here)', '20 letter spots', '$105 per spot, $26.25 filler', 'Letters randomized live'],
-    format='random', checked=CC_CHK % (15, 20, 20),
+    facts=['6 boxes (4 listed here)', 'Letters A to Z for now', '$105 per spot, $26.25 filler', 'Letters randomized live'],
+    format='random', checked=CC_CHK % (15, 20, 20) + ' Until Colfax confirms the setup, this guide shows each letter on its own, A to Z.',
     boxes=[dict(BOX_FINEST_FF), 
            dict(k='pop', short='Leaf Pop Century', c='#f2c14e', full='2026 Leaf Pop Century (1 box)', kind='Autographs and multi-signature cards',
                 types='Autographs and multi-signature cards from the Leaf Pop Century checklist.'),
            dict(BOX_NEON),
            dict(k='deadpool', short='Chrome Deadpool', c='#e2545e', full='2025 Topps Chrome Deadpool Hobby (1 box)', kind='Base, autographs, inserts, multi-character cards',
                 types='Chrome base and Refractor parallels, autographs, inserts and multi-character cards from the Deadpool checklist.')],
-    spots=[cc_spot('A', 'A'), cc_spot('B', 'B'), cc_spot('C', 'C'), cc_spot('D', 'D'), cc_spot('E', 'E'), cc_spot('F / Z', 'FZ'), cc_spot('G', 'G'), cc_spot('H / Y', 'HY'),
-           cc_spot('I', 'I'), cc_spot('J', 'J'), cc_spot('K', 'K'), cc_spot('L / O', 'LO'), cc_spot('M', 'M'), cc_spot('N', 'N'), cc_spot('P', 'P'), cc_spot('Q / R / X', 'QRX'),
-           cc_spot('SA-SH', pre=[('SA', 'SH')]), cc_spot('SI-SY', pre=[('SI', 'SY')]), cc_spot('T (No The)', 'T'), cc_spot('U / V / W', 'UVW'), cc_spot('# (numbers)', '#')],
-    rules=[['How the 20 spots work', ['Colfax\'s listing sets 20 letter spots. S is split on the second letter (SA-SH and SI-SY), and a few spots share letters: F and Z, H and Y, L and O, and Q, R and X. Letters are randomized live on stream.']],
+    spots=cc_az(),
+    rules=[['How the spots work', ['Colfax\'s listing text lists 20 spots, but its tags say 15 break spots and 20 filler spots, so the real setup isn\'t clear. Until Colfax confirms it, this guide shows each letter on its own, A to Z. Letters are randomized live on stream.',
+                                    'The listing text groups them like this: A, B, C, D, E, F / Z, G, H / Y, I, J, K, L / O, M, N, P, Q / R / X, S split as SA-SH and SI-SY, T (No The), and U / V / W. This guide will switch to the real groups once they\'re confirmed.']],
            ['First letter of the name on the card', ['The spot goes by the first letter of the name printed on the card. For a person, that\'s the first name; for a character, the name as printed.', CC_LETTER_THE,
                                                      'Colfax\'s listing doesn\'t say whether it means first or last name for people, so check with Colfax.']],
            ['Cards with more than one name', ['Each person or character on a dual or multi-person card is listed under their own letter.', CC_MULTI[1][0]]]],
     notes=['Two boxes aren\'t in this guide yet because we don\'t have their checklists: 2025 Kakawow DC Aura and 2026 Card Fun Disney Chronoz. Check those cards with Colfax.',
-           'The Finest Fantastic Four decade cards (1960s, 1970s and so on) and 42 Dugg start with a number, and Colfax\'s listing has no spot for them. They show under a number spot here; ask Colfax who gets them.',
-           'No spot lists the letters after SY (like SZ), so a name starting SZ would have no spot; ask Colfax.',
+           'The Finest Fantastic Four decade cards (1960s, 1970s and so on) and 42 Dugg start with a number, and the listing has no letter for them. They show under a number spot here; ask Colfax who gets them.',
            'Lists come from the official Topps checklists and the Leaf checklist.', CC_FILLER % '$26.25'],
     sources=[['CC877 break page (Colfax Collectibles)', colfax_url(CC877_H)], _src('2026-topps-finest-fantastic-four', 'Topps Finest Fantastic Four'),
              _src('2026-topps-neon-marvel', 'Topps Marvel Neon'), _src('2025-topps-chrome-deadpool', 'Topps Chrome Deadpool'),

@@ -35,6 +35,13 @@ Work the queue as the runbook says:
   pairings, the format, or first-or-last-name rules. If the listing leaves something out, say plainly that the
   breaker hasn't posted it and to check with them. Letter pages may sort by first name, but must say the listing
   doesn't say which the breaker uses. Never build a page before the listing is posted.
+- Straight A to Z until the setup is known (Daniel, Nov 27, 2026): for a random-letter break whose real setup isn't
+  known (RGL sets letter groups live; Colfax tags that disagree with the listing's spot list), use `cc_az()` in
+  build.py: one spot per letter plus a number spot. Say what the listing says and list its groups on the page. Update
+  the spots when the breaker confirms the setup or shows the board.
+- Friday checks (Daniel, Nov 27, 2026): scheduled tasks run this file at 1:00 pm Eastern on Fridays (all four breakers)
+  and 6:00 pm Eastern on Fridays (JWJ), without the gate. If the queue is empty, say plainly that no new breaks are up
+  and which expected breaks aren't posted yet.
 - Never guess at a checklist: if a box isn't in the library and you can't get the official list through WebFetch, build
   the page from the boxes you do have and say on the page which boxes are missing. Tell Daniel which checklist links
   are needed.
