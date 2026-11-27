@@ -1,0 +1,45 @@
+# Pulls and stores the transcript of a breaker's YouTube stream or break video (build/breaks/transcripts.py).
+# Start it from the Actions tab ("Stream transcript", Run workflow) and paste one or more YouTube links, or ask
+# Claude to start it. Transcripts are saved in build/breaks/transcripts/, which isn't served on the site.
+name: Stream transcript
+
+on:
+  workflow_dispatch:
+    inputs:
+      urls:
+        description: "YouTube link(s), separated by spaces"
+        required: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: stream-transcript
+  cancel-in-progress: false
+
+jobs:
+  transcript:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install yt-dlp
+        run: pip install --quiet --upgrade yt-dlp
+      - name: Pull the transcript
+        env:
+          URLS: ${{ github.event.inputs.urls }}
+        run: python build/breaks/transcripts.py "$URLS"
+      - name: Rebuild the owner dashboard
+        run: python build/breaks/owner.py > /dev/null
+      - name: Commit
+        run: |
+          if [ -n "$(git status --porcelain build/breaks/transcripts owner)" ]; then
+            git config user.name "Stream transcript"
+            git config user.email "actions@users.noreply.github.com"
+            git add build/breaks/transcripts owner
+            git commit -m "Stream transcript: saved"
+            for i in 1 2 3; do git pull --rebase && git push && break; sleep 5; done
+          fi
