@@ -1,0 +1,1238 @@
+# name: 2026 Panini Prizm World Cup Soccer
+# sport: Soccer
+# added: 2026-11-27
+# source: Official Panini CSV sent by Daniel, November 27, 2026
+# note: Official Panini checklist (Panini Prizm World Cup (25-26) CSV)
+
+[base]
+Aaron Hickey | Scotland
+Aaron Wan-Bissaka | DR Congo
+Abbosbek Fayzullaev | Uzbekistan
+Abdallah Nasib | Jordan
+Abde Ezzalzouli | Morocco
+Abdukodir Khusanov | Uzbekistan
+Abdulaziz Hatem | Qatar
+Abdullah Al-Khaibari | Saudi Arabia
+Achraf Hakimi | Morocco
+Adalberto Carrasquilla | Panama
+Adam Karabec | Czechia
+Adrien Rabiot | France
+Ahmed Alaaeldin | Qatar
+Ahmed Hasan | Iraq
+Aiden O’Neill | Australia
+Akram Hassan Afif | Qatar
+Alan Shearer | England
+Alessandro Circati | Australia
+Alex Baena | Spain
+Alex Freeman | United States
+Alexander Isak | Sweden
+Alexander Sorloth | Norway
+Alexis Mac Allister | Argentina
+Ali Alipour | IR Iran
+Ali Jasim | Iraq
+Ali Majrashi | Saudi Arabia
+Ali Olwan | Jordan
+Alireza Beiranvand | IR Iran
+Alisson Becker | Brazil
+Alphonso Davies | Canada
+Amad Diallo | Ivory Coast
+Amadou Onana | Belgium
+Amar Dedic | Bosnia-Herzegovina
+Amer Jamous | Jordan
+Amine Gouiri | Algeria
+Amir Al-Ammari | Iraq
+Amirhossein Hosseinzadeh | IR Iran
+Andreas Schjelderup | Norway
+Andrej Kramaric | Croatia
+Andres Andrade | Panama
+Andres Iniesta | Spain
+Andy Robertson | Scotland
+Anibal Godoy | Panama
+Anthony Elanga | Sweden
+Anthony rdon | England
+Antoine Semenyo | Ghana
+Antonee Robinson | United States
+Antonio Nusa | Norway
+Antonio Rudiger | Germany
+Antonio Sanabria | Paraguay
+Antonio Silva | Portugal
+Arda Guler | Turkey
+Armando Gonzalez | Mexico
+Aubrey Modiba | South Africa
+Aurelien Tchouameni | France
+Axel Tuanzebe | DR Congo
+Aymen Hussein | Iraq
+Ayoub El Kaabi | Morocco
+Ayumu Seko | Japan
+Azzedine Ounahi | Morocco
+Bazoumana Toure | Ivory Coast
+Ben Gannon-Doak | Scotland
+Benjamin Tahirovic | Bosnia-Herzegovina
+Bernardo Silva | Portugal
+Bilal El Khannouss | Morocco
+Bradley Barcola | France
+Brahim Diaz | Morocco
+Breel Embolo | Switzerland
+Bruno Fernandes | Portugal
+Bruno Guimaraes | Brazil
+Bukayo Saka | England
+Caleb Yirenkyi | Ghana
+Callum McCowatt | New Zealand
+Camilo Vargas | Colombia
+Can Uzun | Turkey
+Carlens Arcus | Haiti
+Cedric Bakambu | DR Congo
+Chancel Mbemba | DR Congo
+Charles De Ketelaere | Belgium
+Che Adams | Scotland
+Chemsdine Talbi | Morocco
+Chris Wood | New Zealand
+Christ Inao Oulai | Ivory Coast
+Christian Pulisic | United States
+Christoph Baumgartner | Austria
+Christopher Bonsu Baah | Ghana
+Christopher Nkunku | France
+Cody Gakpo | Netherlands
+Cole Palmer | England
+Cristian Romero | Argentina
+Cristiano Ronaldo | Portugal
+Cyle Larin | Canada
+Dailon Livramento | Cape Verde
+Daizen Maeda | Japan
+Damian Bobadilla | Paraguay
+Damion Downs | United States
+Dan Ndoye | Switzerland
+Dani Olmo | Spain
+Daniel Munoz | Colombia
+Daniel Svensson | Sweden
+Danley Jean Jacques | Haiti
+Darwin Nunez | Uruguay
+David Alaba | Austria
+David Raum | Germany
+David Raya | Spain
+Davinson Sanchez | Colombia
+Dayot Upamecano | France
+Dean Henderson | England
+Dean Huijsen | Spain
+Declan Rice | England
+Desire Doue | France
+Diego Gomez | Paraguay
+Diego Leon | Paraguay
+Diego Luna | United States
+Diego Maradona | Argentina
+Diogo Costa | Portugal
+Diogo Dalot | Portugal
+Dominik Livakovic | Croatia
+Donyell Malen | Netherlands
+Duckens Nazon | Haiti
+Eberechi Eze | England
+Edin Dzeko | Bosnia-Herzegovina
+Edmilson Junior | Qatar
+Edson Alvarez | Mexico
+Eduardo Camavinga | France
+El Hadji Malick Diouf | Senegal
+Eldor Shomurodov | Uzbekistan
+Elias Achouri | Tunisia
+Eliesse Ben Seghir | Morocco
+Elliot Anderson | England
+Ellyes Skhiri | Tunisia
+Eloy Room | Curacao
+Emiliano Martinez | Argentina
+Emmanuel Emegha | Netherlands
+Endrick | Brazil
+Enner Valencia | Ecuador
+Enzo Fernandez | Argentina
+Erik Lira | Mexico
+Erling Haaland | Norway
+Ermedin Demirovic | Bosnia-Herzegovina
+Esmir Bajraktarevic | Bosnia-Herzegovina
+Estevao | Brazil
+Evann Guessand | Ivory Coast
+Ezri Konsa | England
+Fabian Rieder | Switzerland
+Fabian Ruiz | Spain
+Facundo Pellistri | Uruguay
+Fares Chaibi | Algeria
+Federico Valverde | Uruguay
+Ferdi Kadioglu | Turkey
+Ferjani Sassi | Tunisia
+Fermin Lopez | Spain
+Ferran Torres | Spain
+Finn Surman | New Zealand
+Florian Wirtz | Germany
+Folarin Balogun | United States
+Francisco Conceicao | Portugal
+Francisco Trincao | Portugal
+Franck Kessie | Ivory Coast
+Franco Mastantuono | Argentina
+Franjo Ivanovic | Croatia
+Frantzdy Pierrot | Haiti
+Franz Beckenbauer | Germany
+Frenkie de Jong | Netherlands
+Gabriel Jesus | Brazil
+Gabriel Martinelli | Brazil
+Gabriel | Brazil
+Gianluca Prestianni | Argentina
+Gilberto Mora | Mexico
+Giorgian de Arrascaeta | Uruguay
+Giuliano Simeone | Argentina
+Goncalo Inacio | Portugal
+Goncalo Ramos | Portugal
+Granit Xhaka | Switzerland
+Gregor Kobel | Switzerland
+Habib Diarra | Senegal
+Hakan Calhanoglu | Turkey
+Hannibal Mejbri | Tunisia
+Harry Kane | England
+Hassan Al-Tambakti | Saudi Arabia
+Hazem Mastouri | Tunisia
+Hee-chan Hwang | Korea Republic
+Heung-Min Son | Korea Republic
+Hicham Boudaoui | Algeria
+Hiroki Sekine | Japan
+Homam Ahmed | Qatar
+Hugo Ekitike | France
+Hugo Larsson | Sweden
+Hyeon-gyu Oh | Korea Republic
+Ibrahim Adel | Egypt
+Ibrahim Bayesh | Iraq
+Ibrahim Maza | Algeria
+Ibrahim Mbaye | Senegal
+Idrissa Gueye | Senegal
+Iliman Ndiaye | Senegal
+In-Beom Hwang | Korea Republic
+Inaki Williams | Ghana
+Ismael Bennacer | Algeria
+Ismael Diaz | Panama
+Ismael Gharbi | Tunisia
+Ismael Kone | Canada
+Ismael Saibari | Morocco
+Ivan Perisic | Croatia
+Jackson Irvine | Australia
+Jalal Hassan | Iraq
+Jamal Musiala | Germany
+James Rodriguez | Colombia
+Jamie Leweling | Germany
+Jean-Ricner Bellegarde | Haiti
+Jearl Margaritha | Curacao
+Jefferson Lerma | Colombia
+Jens Castrop | Korea Republic
+Jeremy Antonisse | Curacao
+Jeremy Doku | Belgium
+Jesus Rodriguez | Spain
+Jhon Arias | Colombia
+Jhon Lucumi | Colombia
+Joao Cancelo | Portugal
+Joao Felix | Portugal
+Joao Neves | Portugal
+Joaquin Panichelli | Argentina
+Joaquin Seys | Belgium
+Joe Bell | New Zealand
+Joel Ordonez | Ecuador
+Johan Manzambi | Switzerland
+Johan Mojica | Colombia
+Johan Vasquez | Mexico
+John McGinn | Scotland
+John Stones | England
+Johny Placide | Haiti
+Jonas Adjetey | Ghana
+Jonathan Burkardt | Germany
+Jonathan David | Canada
+Jordan Ayew | Ghana
+Jordan Bos | Australia
+Jordan Pickford | England
+Jorthy Mokio | Belgium
+Jose Fajardo | Panama
+Jose Luis Rodriguez | Panama
+Jose Manuel Lopez | Argentina
+Joshua Kimmich | Germany
+Josip Stanisic | Croatia
+Josko Gvardiol | Croatia
+Jude Bellingham | England
+Jules Kounde | France
+Julian Alvarez | Argentina
+Julian Ryerson | Norway
+Julio Enciso | Paraguay
+Juninho Bacuna | Curacao
+Jurgen Locadia | Curacao
+Jurrien Timber | Netherlands
+Kai Havertz | Germany
+Kaishu Sano | Japan
+Kamaldeen Sulemana | Ghana
+Kang-in Lee | Korea Republic
+Kaoru Mitoma | Japan
+Karim Adeyemi | Germany
+Kenan Yildiz | Turkey
+Kendry Paez | Ecuador
+Kerem Akturkoglu | Turkey
+Kerim Alajbegovic | Bosnia-Herzegovina
+Kevin De Bruyne | Belgium
+Kevin Pina | Cape Verde
+Khozhiakbar Alizhonov | Uzbekistan
+Khozhimat Erkinov | Uzbekistan
+Khuliso Mudau | South Africa
+Khusniddin Alikulov | Uzbekistan
+Kieran Tierney | Scotland
+Ko Itakura | Japan
+Konrad Laimer | Austria
+Kylian Mbappe | France
+Ladislav Krejci (D) | Czechia
+Lamine Yamal | Spain
+Lautaro Martinez | Argentina
+Leandro Bacuna | Curacao
+Leandro Paredes | Argentina
+Leandro Trossard | Belgium
+Lennart Karl | Germany
+Lennon Miller | Scotland
+Leon Goretzka | Germany
+Leopold Querfeld | Austria
+Leroy Sane | Germany
+Lewis Ferguson | Scotland
+Liberato Cacace | New Zealand
+Lionel Messi | Argentina
+Livano Comenencia | Curacao
+Lois Openda | Belgium
+Louicius Deedson | Haiti
+Lucas Bergvall | Sweden
+Lucas Mendes | Qatar
+Luciano Rodriguez | Uruguay
+Luciano Valente | Netherlands
+Luis Diaz | Colombia
+Luis Figo | Portugal
+Luis Malagon | Mexico
+Luis Suarez (COL) | Colombia
+Luka Modric | Croatia
+Luka Vuskovic | Croatia
+Lyle Foster | South Africa
+Maghnes Akliouche | France
+Mahmoud Al-Mardi | Jordan
+Malick Fofana | Belgium
+Malick Thiaw | Germany
+Malik Tillman | United States
+Malo Gusto | France
+Mamadou Sarr | Senegal
+Manuel Akanji | Switzerland
+Manuel Ugarte | Uruguay
+Marc Cucurella | Spain
+Marc Guehi | England
+Marc-Andre ter Stegen | Germany
+Marcel Ruiz | Mexico
+Marcel Sabitzer | Austria
+Marcus Rashford | England
+Marcus Thuram | France
+Marko Arnautovic | Austria
+Marko Stamenic | New Zealand
+Marquinhos (D) | Brazil
+Martin Baturina | Croatia
+Martin Odegaard | Norway
+Martin Zubimendi | Spain
+Marwan Attia | Egypt
+Matej Kovar | Czechia
+Matej Sin | Czechia
+Mathew Ryan | Australia
+Matt Freese | United States
+Matthew Garbett | New Zealand
+Max Arfsten | United States
+Maximilian Mittelstadt | Germany
+Maximiliano Araujo | Uruguay
+Mehdi Ghayedi | IR Iran
+Mehdi Taremi | IR Iran
+Memphis Depay | Netherlands
+Meshaal Barsham | Qatar
+Michael Murillo | Panama
+Michael Olise | France
+Micky van de Ven | Netherlands
+Miguel Almiron | Paraguay
+Mike Maignan | France
+Mikel Merino | Spain
+Mikel Oyarzabal | Spain
+Min-Hyuk Yang | Korea Republic
+Min-jae Kim | Korea Republic
+Mohamed Amoura | Algeria
+Mohamed El Shenawy | Egypt
+Mohamed Hany | Egypt
+Mohamed Kanno | Saudi Arabia
+Mohamed Salah | Egypt
+Mohamed Toure | Australia
+Mohammad Mohebi | IR Iran
+Mohammed Kudus | Ghana
+Mohanad Ali | Iraq
+Mohannad Abu Taha | Jordan
+Moises Caicedo | Ecuador
+Montassar Talbi | Tunisia
+Morgan Rogers | England
+Mousa Al-Tamari | Jordan
+Musab Al-Juwayr | Saudi Arabia
+Nahuel Molina | Argentina
+Nawaf Boushal | Saudi Arabia
+Neil El Aynaoui | Morocco
+Nestory Irankunda | Australia
+Ngal'ayel Mukau | DR Congo
+Nick Woltemade | Germany
+Nico Elvedi | Switzerland
+Nico Gonzalez | Argentina
+Nico O'Reilly | England
+Nico Paz | Argentina
+Nico Schlotterbeck | Germany
+Nico Williams | Spain
+Nicolas Jackson | Senegal
+Nicolas Otamendi | Argentina
+Nicolas Tagliafico | Argentina
+Niko Sigur | Canada
+Nikola Vasilj | Bosnia-Herzegovina
+Nikolaus Wurmbrand | Austria
+Nilson Angulo | Ecuador
+Nizar Al-Rashdan | Jordan
+Noah Sadiki | DR Congo
+Noni Madueke | England
+Noussair Mazraoui | Morocco
+Nuno Mendes | Portugal
+Obed Vargas | Mexico
+Oliver Baumann | Germany
+Omar Alderete | Paraguay
+Omar Marmoush | Egypt
+Orkun Kokcu | Turkey
+Orlando Mosquera | Panama
+Oscar Bobb | Norway
+Oston Urunov | Uzbekistan
+Oswin Appollis | South Africa
+Otabek Shukurov | Uzbekistan
+Ousmane Dembele | France
+Pablo Barrios | Spain
+Patrick Yazbek | Australia
+Patrik Schick | Czechia
+Pau Cubarsi | Spain
+Pavel Sulc | Czechia
+Pedri | Spain
+Pedro Neto | Portugal
+Pele | Brazil
+Pervis Estupinan | Ecuador
+Petar Sucic | Croatia
+Phil Foden | England
+Philipp Lienhart | Austria
+Piero Hincapie | Ecuador
+Promise David | Canada
+Rafael Leao | Portugal
+Ramon Sosa | Paraguay
+Raphinha | Brazil
+Raul Jimenez | Mexico
+Rayan Ait-Nouri | Algeria
+Rayan Cherki | France
+Reece James | England
+Relebohile Mofokeng | South Africa
+Remo Freuler | Switzerland
+Renato Veiga | Portugal
+Richard Rios | Colombia
+Riyad Mahrez | Algeria
+Rodrigo Aguirre | Uruguay
+Rodrigo Bentancur | Uruguay
+Rodrigo de Paul | Argentina
+Rodrygo | Brazil
+Ronald Araujo | Uruguay
+Ronwen Williams | South Africa
+Roony Bardghji | Sweden
+Ruben Dias | Portugal
+Ruben Neves | Portugal
+Ruben Providence | Haiti
+Ruben Vargas | Switzerland
+Ryan Christie | Scotland
+Ryan Gravenberch | Netherlands
+Ryan Mendes | Cape Verde
+Sadio Mane | Senegal
+Saeid Ezatolahi (do not use) | IR Iran
+Saeid Ezatolahi | IR Iran
+Said El Mala | Germany
+Salem Al-Dawsari | Saudi Arabia
+Saman Ghoddos | IR Iran
+Samu Aghehowa | Spain
+Sander Berge | Norway
+Santiago Gimenez | Mexico
+Sarpreet Singh | New Zealand
+Saud Abdulhamid | Saudi Arabia
+Scott McTominay | Scotland
+Sebastian Tounekti | Tunisia
+Senne Lammens | Belgium
+Serge Gnabry | Germany
+Shuto Machino | Japan
+Siyabonga Ngezana | South Africa
+Steven Moreira | Cape Verde
+Sverre Nypan | Norway
+Tahith Chong | Curacao
+Tajon Buchanan | Canada
+Tani Oluwaseyi | Canada
+Tarek Salman | Qatar
+Tarik Muharemovic | Bosnia-Herzegovina
+Teboho Mokoena | South Africa
+Telmo Arcanjo | Cape Verde
+Thelo Aasgaard | Norway
+Theo Bongonda | DR Congo
+Theo Hernandez | France
+Thiago Almada | Argentina
+Thibaut Courtois | Belgium
+Tijjani Reijnders | Netherlands
+Timothy Weah | United States
+Tomas Soucek | Czechia
+Trent Alexander-Arnold | England
+Trezeguet | Egypt
+Tsuyoshi Watanabe | Japan
+Tyler Adams | United States
+Unai Simon | Spain
+Viktor Gyokeres | Sweden
+Vini Jr. | Brazil
+Virgil van Dijk | Netherlands
+Vitinha | Portugal
+Vladimir Coufal | Czechia
+Vozinha | Cape Verde
+Warren Zaire-Emery | France
+Weston McKennie | United States
+Wilfried Singo | Ivory Coast
+William Saliba | France
+Willian Pacho | Ecuador
+Willy Semedo | Cape Verde
+Xavi Simons | Netherlands
+Yahia Fofana | Ivory Coast
+Yan Diomande | Ivory Coast
+Yannick Semedo | Cape Verde
+Yaser Asprilla | Colombia
+Yasin Ayari | Sweden
+Yassine Bounou | Morocco
+Yazan Mousa | Jordan
+Yeremy Pino | Spain
+Yoane Wissa | DR Congo
+Youri Tielemans | Belgium
+Yuito Suzuki | Japan
+Yusuf Akcicek | Turkey
+Zidane Iqbal | Iraq
+Zinedine Zidane | France
+Zion Suzuki | Japan
+Zizo | Egypt
+
+[auto]
+Abde Ezzalzouli | Morocco
+Abdukodir Khusanov | Uzbekistan
+Abedi Pele | Ghana
+Alex Freeman | United States
+Alexi Lalas | United States
+Andre Ayew | Ghana
+Andrej Kramaric | Croatia
+Andres Iniesta | Spain
+Antonee Robinson | United States
+Arda Guler | Turkey
+Aurelien Tchouameni | France
+Bacary Sagna | France
+Benni McCarthy | South Africa
+Bernardo Silva | Portugal
+Bernd Schneider | Germany
+Bodo Illgner | Germany
+Borna Sosa | Croatia
+Bradley Barcola | France
+Brenden Aaronson | United States
+Bruno Guimaraes | Brazil
+Carlos Salcido | Mexico
+Cesar Montes | Mexico
+Christian Pulisic | United States
+Clint Dempsey | United States
+Cobi Jones | United States
+Cole Palmer | England
+Craig Burley | Scotland
+Curtis Jones | England
+Damion Downs | United States
+David Villa | Spain
+Dayot Upamecano | France
+Denis Zakaria | Switzerland
+Deniz Undav | Germany
+Dennis Bergkamp | Netherlands
+Dida | Brazil
+Diego Godin | Uruguay
+Diego Lugano | Uruguay
+Dominik Livakovic | Croatia
+Eduardo Camavinga | France
+Eldor Shomurodov | Uzbekistan
+Emilio Butragueno | Spain
+Emmanuel Petit | France
+Enner Valencia | Ecuador
+Enzo Francescoli | Uruguay
+Estevao | Brazil
+Fabien Barthez | France
+Fabio Cannavaro | Uzbekistan
+Faustino Asprilla | Colombia
+Federico Valverde | Uruguay
+Fermin Lopez | Spain
+Fernando Hierro | Spain
+Fernando Torres | Spain
+Formose Mendy | Senegal
+Franck Ribery | France
+Freddie Ljungberg | Sweden
+Gabriel Batistuta | Argentina
+Gary McAllister | Scotland
+Gavi | Spain
+Gerard Pique | Spain
+Giovane Elber | Brazil
+Giuliano Simeone | Argentina
+Gokhan Inler | Switzerland
+Goncalo Ramos | Portugal
+Gonzalo Montiel | Argentina
+Guillermo Ochoa | Mexico
+Heung-Min Son | Korea Republic
+Hugo Perez | United States
+Hugo Sanchez | Mexico
+Ivan Cordoba | Colombia
+James Rodriguez | Colombia
+Javier Aguirre | Mexico
+Jean-Pierre Papin | France
+Jefferson Lerma | Colombia
+Jeremie Boga | Ivory Coast
+Jeremie Frimpong | Netherlands
+Jesus Gallardo | Mexico
+Jesus Rodriguez | Spain
+Jhoanner Chavez | Ecuador
+Joan Capdevila | Spain
+Joao Pedro | Brazil
+Jordan Ayew | Ghana
+Josh Sargent | United States
+Joshua Kimmich | Germany
+Josip Sutalo | Croatia
+Josko Gvardiol | Croatia
+Juan Cuadrado | Colombia
+Julian Alvarez | Argentina
+Kai Havertz | Germany
+Kang-in Lee | Korea Republic
+Karl-Heinz Rummenigge | Germany
+Karlheinz Forster | Germany
+Kevin-Prince Boateng | Ghana
+Kleberson | Brazil
+Kristoffer Ajer | Norway
+Kyle Walker | England
+Kyogo Furuhashi | Japan
+Lamine Camara | Senegal
+Lamine Yamal | Spain
+Lennart Karl | Germany
+Leo Ostigard | Norway
+Lionel Messi | Argentina
+Ludovic Giuly | France
+Luis Malagon | Mexico
+Luka Sucic | Croatia
+Malo Gusto | France
+Manuel Akanji | Switzerland
+Manuel Neuer | Germany
+Marc Wilmots | Belgium
+Marc-Andre ter Stegen | Germany
+Marcelo Balboa | United States
+Mario Pasalic | Croatia
+Mario Yepes | Colombia
+Mark McKenzie | United States
+Marko Arnautovic | Austria
+Martin Baturina | Croatia
+Martin Odegaard | Norway
+Martin Palermo | Argentina
+Martin Zubimendi | Spain
+Matias Vecino | Uruguay
+Matt Turner | United States
+Matthias Sammer | Germany
+Mehmet Scholl | Germany
+Mesut Ozil | Germany
+Michel Platini | France
+Mike Sorber | United States
+Mikel Merino | Spain
+Mikel Oyarzabal | Spain
+Min-Hyuk Yang | Korea Republic
+Miroslav Klose | Germany
+Mohammed Salisu | Ghana
+Myung-Bo Hong | Korea Republic
+Neymar Jr | Brazil
+Niclas Fullkrug | Germany
+Oliver Kahn | Germany
+Oliver Neuville | Germany
+Ollie Watkins | England
+Patrick Kluivert | Netherlands
+Patrick Vieira | France
+Paul Caligiuri | United States
+Pavel Nedved | Czechia
+Pedro Neto | Portugal
+Pedro Porro | Spain
+Pele | Brazil
+Pepe | Portugal
+Phil Foden | England
+Pierre Littbarski | Germany
+Rafael Leao | Portugal
+Ramy Bensebaini | Algeria
+Raphinha | Brazil
+Raul Jimenez | Mexico
+Rene Higuita | Colombia
+Ricardo Carvalho | Portugal
+Robert Pires | France
+Roberto Alvarado | Mexico
+Roberto Ayala | Argentina
+Rodrigo Huescas | Mexico
+Romario | Brazil
+Ronald Koeman | Netherlands
+Ronaldo | Brazil
+Rudi Voller | Germany
+Ruud Gullit | Netherlands
+Ryan Babel | Netherlands
+Samu Aghehowa | Spain
+Sardar Azmoun | IR Iran
+Scott McKenna | Scotland
+Sem Steijn | Netherlands
+Sergino Dest | United States
+Sergio Busquets | Spain
+Shinji Ono | Japan
+Sonny Anderson | Brazil
+Tab Ramos | United States
+Takumi Minamino | Japan
+Tecatito Corona | Mexico
+Terry Butcher | England
+Theo Hernandez | France
+Thiago Almada | Argentina
+Thiago Silva | Brazil
+Thibaut Courtois | Belgium
+Thomas Dooley | United States
+Thomas Muller | Germany
+Thomas Ravelli | Sweden
+Timothy Weah | United States
+Tom Bischof | Germany
+Tomas Brolin | Sweden
+Tommy Conway | Scotland
+Toni Schumacher | Germany
+Tony Meola | United States
+Vini Jr. | Brazil
+Vitor Baia | Portugal
+Walter Samuel | Argentina
+Warren Zaire-Emery | France
+Wayne Rooney | England
+Weston McKennie | United States
+Yann-Aurel Bisseck | Germany
+Yasin Ayari | Sweden
+Yeremy Pino | Spain
+Youri Djorkaeff | France
+Ze Roberto | Brazil
+Zico | Brazil
+Zinedine Zidane | France
+Zlatan Ibrahimovic | Sweden
+
+[insert]
+Abdukodir Khusanov | Uzbekistan
+Achraf Hakimi | Morocco
+Adrien Rabiot | France
+Akram Hassan Afif | Qatar
+Alan Shearer | England
+Aleksandar Pavlovic | Germany
+Alexi Lalas | United States
+Alexis Mac Allister | Argentina
+Algeria | Algeria
+Alisson Becker | Brazil
+Alphonso Davies | Canada
+Alvaro Recoba | Uruguay
+Amad Diallo | Ivory Coast
+Amadou Onana | Belgium
+Amine Gouiri | Algeria
+Andre | Brazil
+Andres Guardado | Mexico
+Andres Iniesta | Spain
+Angel Di Maria | Argentina
+Antoine Semenyo | Ghana
+Antonio Nusa | Norway
+Antonio Rudiger | Germany
+Argentina | Team Logo
+Assan Ouedraogo | Germany
+Atlanta
+Australia | Team Logo
+Austria | Team Logo
+Ayase Ueda | Japan
+Bazoumana Toure | Ivory Coast
+Bebeto | Brazil
+Belgium | Team Logo
+Bernardo Silva | Portugal
+Bosnia-Herzegovina | Bosnia-Herzegovina
+Boston
+Bradley Barcola | France
+Brazil | Team Logo
+Bruno Fernandes | Portugal
+Bukayo Saka | England
+Cafu | Brazil
+Canada | Canada
+Cape Verde | Cape Verde
+Careca | Brazil
+Carlos Tevez | Argentina
+Che Adams | Scotland
+Chris Richards | United States
+Chris Wood | New Zealand
+Christian Pulisic | United States
+Christoph Baumgartner | Austria
+Christopher Nkunku | France
+Claude Makelele | France
+Claudio Caniggia | Argentina
+Claudio Suarez | Mexico
+Clint Dempsey | United States
+Cody Gakpo | Netherlands
+Cole Palmer | England
+Colombia | Team Logo
+Cristian Romero | Argentina
+Cristiano Ronaldo | Portugal
+Croatia | Team Logo
+Curacao | Curacao
+Czechia | Czechia
+Daichi Kamada | Japan
+Dallas
+Dani Olmo | Spain
+Daniel Passarella | Argentina
+Darwin Nunez | Uruguay
+David Luiz | Brazil
+David Silva | Spain
+David Trezeguet | France
+David Villa | Spain
+Dayot Upamecano | France
+Dean Huijsen | Spain
+Declan Rice | England
+Deniz Undav | Germany
+Dennis Bergkamp | Netherlands
+Desire Doue | France
+Didier Drogba | Ivory Coast
+Diego Forlan | Uruguay
+Diego Gomez | Paraguay
+Diego Luna | United States
+Diego Maradona | Argentina
+Douglas Luiz | Brazil
+DR Congo | DR Congo
+Eberechi Eze | England
+Ecuador | Ecuador
+Eder Militao | Brazil
+Edinson Cavani | Uruguay
+Edson Alvarez | Mexico
+Edwin van der Sar | Netherlands
+Egypt | Team Logo
+Elliot Anderson | England
+Ellyes Skhiri | Tunisia
+Emiliano Martinez | Argentina
+Emmanuel Emegha | Netherlands
+Endrick | Brazil
+England | Team Logo
+Enzo Fernandez | Argentina
+Eric Cantona | France
+Erling Haaland | Norway
+Estevao | Brazil
+Fabian Ruiz | Spain
+Falcao | Brazil
+Federico Valverde | Uruguay
+Fernando Torres | Spain
+Ferran Torres | Spain
+FIFA
+FIFA World Cup 2026
+Florian Wirtz | Germany
+Folarin Balogun | United States
+France | Team Logo
+Francisco Conceicao | Portugal
+Franco Mastantuono | Argentina
+Frank Lampard | England
+Franz Beckenbauer | Germany
+Frenkie de Jong | Netherlands
+Gabriel Batistuta | Argentina
+Gabriel Martinelli | Brazil
+Gabriel | Brazil
+Germany | Team Logo
+Ghana | Ghana
+Gilberto Mora | Mexico
+Goncalo Ramos | Portugal
+Granit Xhaka | Switzerland
+Guadalajara
+Haiti | Haiti
+Harry Kane | England
+Heung-Min Son | Korea Republic
+Houston
+Hugo Ekitike | France
+Ibrahim Maza | Algeria
+Ibrahim Mbaye | Senegal
+Inaki Williams | Ghana
+IR Iran | Team Logo
+Iraq | Iraq
+Ivory Coast | Ivory Coast
+Jamal Musiala | Germany
+James Rodriguez | Colombia
+Jamiro Monteiro | Cape Verde
+Japan | Team Logo
+Javier Zanetti | Argentina
+Jean-Ricner Bellegarde | Haiti
+Jeremy Doku | Belgium
+Jerome Boateng | Germany
+Jesus Rodriguez | Spain
+Jhon Arias | Colombia
+Joao Neves | Portugal
+Johnny Cardoso | United States
+Jonathan Burkardt | Germany
+Jonathan Tah | Germany
+Jordan Pickford | England
+Jordan | Jordan
+Jorge Campos | Mexico
+Jorthy Mokio | Belgium
+Joshua Kimmich | Germany
+Josko Gvardiol | Croatia
+Jude Bellingham | England
+Jules Kounde | France
+Julian Alvarez | Argentina
+Julian de Guzman | Canada
+Junya Ito | Japan
+Jurrien Timber | Netherlands
+Kai Havertz | Germany
+Kaka | Brazil
+Kalidou Koulibaly | Senegal
+Kansas City
+Kaoru Mitoma | Japan
+Karim Adeyemi | Germany
+Kevin De Bruyne | Belgium
+Kevin Schade | Germany
+Korea Republic | Team Logo
+Kylian Mbappe | France
+Ladislav Krejci | Czechia
+Lamine Yamal | Spain
+Landon Donovan | United States
+Laurent Blanc | France
+Lautaro Martinez | Argentina
+Leandro Trossard | Belgium
+Lennart Karl | Germany
+Leroy Sane | Germany
+Lionel Messi | Argentina
+Lionel Scaloni | Argentina
+Los Angeles
+Lothar Matthaus | Germany
+Luc de Fougerolles | Canada
+Luis Chavez | Mexico
+Luis Diaz | Colombia
+Luis Figo | Portugal
+Luis Hernandez | Mexico
+Luis Suarez | Uruguay
+Luka Modric | Croatia
+Luka Vuskovic | Croatia
+Lyle Foster | South Africa
+Maghnes Akliouche | France
+Malick Fofana | Belgium
+Malik Tillman | United States
+Malo Gusto | France
+Manuel Neuer | Germany
+Marcel Desailly | France
+Marco Van Basten | Netherlands
+Marcus Rashford | England
+Marcus Thuram | France
+Marquinhos (D) | Brazil
+Martin Odegaard | Norway
+Mathew Ryan | Australia
+Mauricio Pochettino | United States
+Maximiliano Araujo | Uruguay
+Mehdi Taremi | IR Iran
+Memphis Depay | Netherlands
+Mexico City
+Mexico | Team Logo
+Miami
+Michael Ballack | Germany
+Michael Murillo | Panama
+Michael Olise | France
+Michel Platini | France
+Mike Maignan | France
+Mikel Oyarzabal | Spain
+Miroslav Klose | Germany
+Mohamed Salah | Egypt
+Moises Caicedo | Ecuador
+Monterrey
+Morgan Rogers | England
+Morocco | Team Logo
+Mousa Al-Tamari | Jordan
+Myles Lewis-Skelly | England
+Nani | Portugal
+Nathaniel Brown | Germany
+Netherlands | Team Logo
+New York New Jersey
+New Zealand | New Zealand
+Neymar Jr | Brazil
+Nick Woltemade | Germany
+Nico Paz | Argentina
+Nico Schlotterbeck | Germany
+Nico Williams | Spain
+Noni Madueke | England
+Norway | Norway
+Nuno Mendes | Portugal
+Oliver Baumann | Germany
+Oliver Bierhoff | Germany
+Oliver Kahn | Germany
+Olivier Giroud | France
+Ollie Watkins | England
+Omar Marmoush | Egypt
+Oscar Ruggeri | Argentina
+Ousmane Dembele | France
+Panama | Team Logo
+Pape Matar Sarr | Senegal
+Paraguay | Paraguay
+Pau Cubarsi | Spain
+Paul Scholes | England
+Paulo Dybala | Argentina
+Pedri | Spain
+Pedro Neto | Portugal
+Pele | Brazil
+Peter Shilton | England
+Phil Foden | England
+Philadelphia
+Philipp Lahm | Germany
+Portugal | Team Logo
+Qatar | Qatar
+Radamel Falcao | Colombia
+Rafael Leao | Portugal
+Raphinha | Brazil
+Raul Jimenez | Mexico
+Rayan Cherki | France
+Reece James | England
+Ricardo Pepi | United States
+Ricardo Quaresma | Portugal
+Ritsu Doan | Japan
+Rivaldo | Brazil
+Riyad Mahrez | Algeria
+Robin van Persie | Netherlands
+Romario | Brazil
+Ronaldo | Brazil
+Rudi Voller | Germany
+Ryan Gravenberch | Netherlands
+Salem Al-Dawsari | Saudi Arabia
+San Francisco Bay Area
+Santi Cazorla | Spain
+Saudi Arabia | Team Logo
+Scotland | Scotland
+Scott McTominay | Scotland
+Seattle
+Senegal | Team Logo
+Serge Gnabry | Germany
+Sergio Aguero | Argentina
+South Africa | South Africa
+Spain | Team Logo
+Stefan Effenberg | Germany
+Stephen Eustaquio | Canada
+Steven Gerrard | England
+Sverre Nypan | Norway
+Sweden | Team Logo
+Switzerland | Team Logo
+Tahith Chong | Curacao
+Tajon Buchanan | Canada
+Takefusa Kubo | Japan
+Teun Koopmeiners | Netherlands
+Theo Hernandez | France
+Thiago Almada | Argentina
+Thibaut Courtois | Belgium
+Thierry Henry | France
+Thomas Muller | Germany
+Tim Howard | United States
+Toronto
+Tunisia | Team Logo
+Turkey | Team Logo
+Ubaldo Fillol | Argentina
+United States | United States
+Uruguay | Team Logo
+Uzbekistan | Uzbekistan
+Vancouver
+Vini Jr. | Brazil
+Virgil van Dijk | Netherlands
+Vitinha | Portugal
+Vitor Roque | Brazil
+Waldemar Anton | Germany
+Warren Zaire-Emery | France
+Wataru Endo | Japan
+Wayne Rooney | England
+Wesley (D) | Brazil
+Wesley Sneijder | Netherlands
+Weston McKennie | United States
+William Saliba | France
+Willy Sagnol | France
+Wolfgang Overath | Germany
+Xabi Alonso | Spain
+Xavi Hernandez | Spain
+Yan Diomande | Ivory Coast
+Yazan Mousa | Jordan
+Youssef En-Nesyri | Morocco
+Zinedine Zidane | France
+Zlatan Ibrahimovic | Sweden
+
+[multi]
+Desire Doue | France / Ousmane Dembele | France
+Angel Di Maria | Argentina / Lionel Messi | Argentina
+Kevin De Bruyne | Belgium / Thibaut Courtois | Belgium
+Landon Donovan | United States / Tim Howard | United States
+Lamine Yamal | Spain / Pau Cubarsi | Spain
+Leroy Sane | Germany / Serge Gnabry | Germany
+Estevao | Brazil / Vini Jr. | Brazil
+Edinson Cavani | Uruguay / Luis Suarez | Uruguay
+Harry Kane | England / Wayne Rooney | England
+Ivan Perisic | Croatia / Luka Modric | Croatia
+Arda Guler | Turkey / Kenan Yildiz | Turkey
+Erling Haaland | Norway / Martin Odegaard | Norway
+Bruno Fernandes | Portugal / Cristiano Ronaldo | Portugal
+Manuel Neuer | Germany / Thomas Muller | Germany
+David Raum | Germany / Ridle Baku | Germany
+Andy Robertson | Scotland / Kieran Tierney | Scotland
+Gabriel | Brazil / Gabriel Martinelli | Brazil
+Adrien Rabiot | France / Mike Maignan | France
+Brenden Aaronson | United States / Paxten Aaronson | United States
+Rayan Ait-Nouri | Algeria / Riyad Mahrez | Algeria
+Julian Alvarez | Argentina / Thiago Almada | Argentina
+Josko Gvardiol | Croatia / Luka Vuskovic | Croatia
+Nico Williams | Spain / Unai Simon | Spain
+Jun-Ho Bae | Korea Republic / Min-Hyuk Yang | Korea Republic
+Felix Nmecha | Germany / Nico Schlotterbeck | Germany
+David Alaba | Austria / Konrad Laimer | Austria
+Connor Metcalfe | Australia / Jackson Irvine | Australia
+Ricardo Pepi | United States / Sergino Dest | United States
+Estevao | Brazil / Joao Pedro | Brazil
+Aurelien Tchouameni | France / Eduardo Camavinga | France
+Joao Neves | Portugal / Vitinha | Portugal
+Breel Embolo | Switzerland / Granit Xhaka | Switzerland
+Moises Caicedo | Ecuador / Piero Hincapie | Ecuador
+Alexander Nubel | Germany / Maximilian Mittelstadt | Germany
+Josh Sargent | United States / Patrick Agyemang | United States
+Billy Gilmour | Scotland / Scott McKenna | Scotland
+Lautaro Martinez | Argentina / Nico Paz | Argentina
+Daniel Munoz | Colombia / Jefferson Lerma | Colombia
+Jurrien Timber | Netherlands / Quinten Timber | Netherlands
+Riyad Mahrez | Algeria / Rayan Ait-Nouri | Algeria
+Unai Simon | Spain / Nico Williams | Spain
+Nico Schlotterbeck | Germany / Felix Nmecha | Germany
+Jackson Irvine | Australia / Connor Metcalfe | Australia
+Vitinha | Portugal / Joao Neves | Portugal
+Granit Xhaka | Switzerland / Breel Embolo | Switzerland
+Scott McKenna | Scotland / Billy Gilmour | Scotland
+Jefferson Lerma | Colombia / Daniel Munoz | Colombia
+Falcao | Brazil / Zico | Brazil
+Ayase Ueda | Japan / Takumi Minamino | Japan
+Heung-Min Son | Korea Republic / Min-Hyuk Yang | Korea Republic
+Bebeto | Brazil / Romario | Brazil
+Bukayo Saka | England / Declan Rice | England
+Clint Dempsey | United States / Landon Donovan | United States
+Daniel Passarella | Argentina / Ubaldo Fillol | Argentina
+Luka Modric | Croatia / Martin Baturina | Croatia
+Lothar Matthaus | Germany / Rudi Voller | Germany
+Michel Platini | France / Zinedine Zidane | France
+Claude Makelele | France / Emmanuel Petit | France
+Goncalo Ramos | Portugal / Joao Felix | Portugal
+Lionel Messi | Argentina / Sergio Aguero | Argentina
+Stephane Guivarc’h | France / Youri Djorkaeff | France
+Abdukodir Khusanov | Uzbekistan / Eldor Shomurodov | Uzbekistan
+Paul Ince | England / Paul Scholes | England
+Alphonso Davies | Canada / Julian de Guzman | Canada
+Cole Palmer | England / Phil Foden | England
+Julian Alvarez | Argentina / Lautaro Martinez | Argentina
+Daniel Passarella | Argentina / Diego Maradona | Argentina
+Michael Ballack | Germany / Oliver Kahn | Germany
+Dirk Kuyt | Netherlands / Wesley Sneijder | Netherlands
+Faustino Asprilla | Colombia / Rene Higuita | Colombia
+Martin Zubimendi | Spain / Mikel Merino | Spain
+Antoine Semenyo | Ghana / Inaki Williams | Ghana
+Rodrygo | Brazil / Vini Jr. | Brazil
+Che Adams | Scotland / John McGinn | Scotland
+Denis Zakaria | Switzerland / Manuel Akanji | Switzerland
+Miroslav Klose | Germany / Thomas Muller | Germany
+Endrick | Brazil / Pele | Brazil
+Mehdi Taremi | IR Iran / Sardar Azmoun | IR Iran
+Federico Valverde | Uruguay / Ronald Araujo | Uruguay
+Harry Kewell | Australia / Mark Viduka | Australia
+Bruno Guimaraes | Brazil / Raphinha | Brazil
+Zico | Brazil / Falcao | Brazil
+Takumi Minamino | Japan / Ayase Ueda | Japan
+Romario | Brazil / Bebeto | Brazil
+Landon Donovan | United States / Clint Dempsey | United States
+Ubaldo Fillol | Argentina / Daniel Passarella | Argentina
+Rudi Voller | Germany / Lothar Matthaus | Germany
+Emmanuel Petit | France / Claude Makelele | France
+Youri Djorkaeff | France / Stephane Guivarc’h | France
+Eldor Shomurodov | Uzbekistan / Abdukodir Khusanov | Uzbekistan
+Paul Scholes | England / Paul Ince | England
+Julian de Guzman | Canada / Alphonso Davies | Canada
+Phil Foden | England / Cole Palmer | England
+Lautaro Martinez | Argentina / Julian Alvarez | Argentina
+Diego Maradona | Argentina / Daniel Passarella | Argentina
+Wesley Sneijder | Netherlands / Dirk Kuyt | Netherlands
+Rene Higuita | Colombia / Faustino Asprilla | Colombia
+Mikel Merino | Spain / Martin Zubimendi | Spain
+Inaki Williams | Ghana / Antoine Semenyo | Ghana
+Vini Jr. | Brazil / Rodrygo | Brazil
+Pele | Brazil / Endrick | Brazil
+Eden Hazard | Belgium / Kevin De Bruyne | Belgium
+Mark Viduka | Australia / Harry Kewell | Australia
+Raphinha | Brazil / Bruno Guimaraes | Brazil
+Brahim Diaz | Morocco / Abde Ezzalzouli | Morocco
+Alain Giresse | France / Jean Tigana | France / Luis Fernandez | France / Michel Platini | France
+Andres Iniesta | Spain / David Villa | Spain / Gerard Pique | Spain / Sergio Busquets | Spain
+Fabien Barthez | France / Laurent Blanc | France / Lilian Thuram | France / Marcel Desailly | France
+Claude Makelele | France / Patrick Vieira | France / Thierry Henry | France / Zinedine Zidane | France
+Cafu | Brazil / Rivaldo | Brazil / Roberto Carlos | Brazil / Ronaldo | Brazil
+Brad Friedel | United States / Matt Turner | United States / Tim Howard | United States / Tony Meola | United States
+Andres Guardado | Mexico / Claudio Suarez | Mexico / Guillermo Ochoa | Mexico / Rafael Marquez | Mexico
+Manuel Neuer | Germany / Mesut Ozil | Germany / Philipp Lahm | Germany / Thomas Muller | Germany
+Alvaro Recoba | Uruguay / Diego Forlan | Uruguay / Edinson Cavani | Uruguay / Luis Suarez | Uruguay
+Endrick | Brazil / Neymar Jr | Brazil / Pele | Brazil / Vini Jr. | Brazil
+Dennis Bergkamp | Netherlands / Edwin van der Sar | Netherlands / Jaap Stam | Netherlands / Patrick Kluivert | Netherlands
+Karl-Heinz Riedle | Germany / Lukas Podolski | Germany / Miroslav Klose | Germany / Rudi Voller | Germany
+Kristian Thorstvedt | Norway / Kristoffer Ajer | Norway / Leo Ostigard | Norway / Oscar Bobb | Norway
+Amadou Onana | Belgium / Charles De Ketelaere | Belgium / Dodi Lukebakio | Belgium / Jeremy Doku | Belgium
+Alan Shearer | England / Gary Lineker | England / Harry Kane | England / Wayne Rooney | England
+Antonee Robinson | United States / Brenden Aaronson | United States / Christian Pulisic | United States / Josh Sargent | United States
+Frank Rijkaard | Netherlands / Marco Van Basten | Netherlands / Ronald Koeman | Netherlands / Ruud Gullit | Netherlands
+Diogo Dalot | Portugal / Joao Cancelo | Portugal / Joao Palhinha | Portugal / Ruben Neves | Portugal
+Jerome Boateng | Germany / Lukas Podolski | Germany / Sami Khedira | Germany / Toni Kroos | Germany
+Michel Platini | France / Alain Giresse | France / Jean Tigana | France / Luis Fernandez | France
+David Villa | Spain / Andres Iniesta | Spain / Gerard Pique | Spain / Sergio Busquets | Spain
+Lilian Thuram | France / Fabien Barthez | France / Laurent Blanc | France / Marcel Desailly | France
+Thierry Henry | France / Claude Makelele | France / Patrick Vieira | France / Zinedine Zidane | France
+Ronaldo | Brazil / Cafu | Brazil / Rivaldo | Brazil / Roberto Carlos | Brazil
+Tony Meola | United States / Brad Friedel | United States / Matt Turner | United States / Tim Howard | United States
+Thomas Muller | Germany / Manuel Neuer | Germany / Mesut Ozil | Germany / Philipp Lahm | Germany
+Pele | Brazil / Endrick | Brazil / Neymar Jr | Brazil / Vini Jr. | Brazil
+Oscar Bobb | Norway / Kristian Thorstvedt | Norway / Kristoffer Ajer | Norway / Leo Ostigard | Norway
+Jeremy Doku | Belgium / Amadou Onana | Belgium / Charles De Ketelaere | Belgium / Dodi Lukebakio | Belgium
+Harry Kane | England / Alan Shearer | England / Gary Lineker | England / Wayne Rooney | England
+Christian Pulisic | United States / Antonee Robinson | United States / Brenden Aaronson | United States / Josh Sargent | United States
+Marco Van Basten | Netherlands / Frank Rijkaard | Netherlands / Ronald Koeman | Netherlands / Ruud Gullit | Netherlands
+Ruben Neves | Portugal / Diogo Dalot | Portugal / Joao Cancelo | Portugal / Joao Palhinha | Portugal
+Lukas Podolski | Germany / Jerome Boateng | Germany / Sami Khedira | Germany / Toni Kroos | Germany
+Ashley Cole | England / Steven Gerrard | England / Wayne Rooney | England
+Franz Beckenbauer | Germany / Paul Breitner | Germany / Sepp Maier | Germany
+Abedi Pele | Ghana / Andre Ayew | Ghana / Jordan Ayew | Ghana
+Guillermo Ochoa | Mexico / Jorge Campos | Mexico / Luis Malagon | Mexico
+Alex Remiro | Spain / David Raya | Spain / Unai Simon | Spain
+Franz Beckenbauer | Germany / Lothar Matthaus | Germany / Philipp Lahm | Germany
+Gio Reyna | United States / Johnny Cardoso | United States / Malik Tillman | United States
+Adam Wharton | England / Elliot Anderson | England / Tino Livramento | England
+Luis Figo | Portugal / Nani | Portugal / Ricardo Quaresma | Portugal
+Manuel Amoros | France / Marius Tresor | France / Maxime Bossis | France
+Rivaldo | Brazil / Romario | Brazil / Ronaldo | Brazil
+Timothy Weah | United States / Tyler Adams | United States / Weston McKennie | United States
+David Luiz | Brazil / Marquinhos (D) | Brazil / Thiago Silva | Brazil
+David Ospina | Colombia / James Rodriguez | Colombia / Juan Cuadrado | Colombia
+Ivan Perisic | Croatia / Josko Gvardiol | Croatia / Mario Pasalic | Croatia
+Bernardo Silva | Portugal / Rafael Leao | Portugal / Vitinha | Portugal
+David Trezeguet | France / Eric Cantona | France / Jean-Pierre Papin | France
+Patrick Vieira | France / Robert Pires | France / Thierry Henry | France
+Andreas Kopke | Germany / Manuel Neuer | Germany / Oliver Kahn | Germany
+Alex Baena | Spain / Mikel Oyarzabal | Spain / Yeremy Pino | Spain
+Fernando Couto | Portugal / Pepe | Portugal / Ricardo Carvalho | Portugal
+Assane Diao | Senegal / Lamine Camara | Senegal / Pape Matar Sarr | Senegal
+Claudio Lopez | Argentina / Diego Simeone | Argentina / Kily Gonzalez | Argentina
+Bart Verbruggen | Netherlands / Nathan Ake | Netherlands / Teun Koopmeiners | Netherlands
+Clarence Seedorf | Netherlands / Edgar Davids | Netherlands / Frank Rijkaard | Netherlands
+Esteban Cambiasso | Argentina / Javier Mascherano | Argentina / Maxi Rodriguez | Argentina
+Facundo Pellistri | Uruguay / Nahitan Nandez | Uruguay / Rodrigo Bentancur | Uruguay
+Wayne Rooney | England / Ashley Cole | England / Steven Gerrard | England
+Jorge Campos | Mexico / Guillermo Ochoa | Mexico / Luis Malagon | Mexico
+Unai Simon | Spain / Alex Remiro | Spain / David Raya | Spain
+Malik Tillman | United States / Gio Reyna | United States / Johnny Cardoso | United States
+Elliot Anderson | England / Adam Wharton | England / Tino Livramento | England
+Marius Tresor | France / Manuel Amoros | France / Maxime Bossis | France
+Romario | Brazil / Rivaldo | Brazil / Ronaldo | Brazil
+Tyler Adams | United States / Timothy Weah | United States / Weston McKennie | United States
+Thiago Silva | Brazil / David Luiz | Brazil / Marquinhos (D) | Brazil
+James Rodriguez | Colombia / David Ospina | Colombia / Juan Cuadrado | Colombia
+Peter Shilton | England / Joe Hart | England / Jordan Pickford | England
+Jean-Pierre Papin | France / David Trezeguet | France / Eric Cantona | France
+Thierry Henry | France / Patrick Vieira | France / Robert Pires | France
+Mikel Oyarzabal | Spain / Alex Baena | Spain / Yeremy Pino | Spain
+Lamine Yamal | Spain / Alvaro Morata | Spain / Nico Williams | Spain
+Pepe | Portugal / Fernando Couto | Portugal / Ricardo Carvalho | Portugal
+Pape Matar Sarr | Senegal / Assane Diao | Senegal / Lamine Camara | Senegal
+Diego Simeone | Argentina / Claudio Lopez | Argentina / Kily Gonzalez | Argentina
+Teun Koopmeiners | Netherlands / Bart Verbruggen | Netherlands / Nathan Ake | Netherlands
+Frank Rijkaard | Netherlands / Clarence Seedorf | Netherlands / Edgar Davids | Netherlands
+Nahitan Nandez | Uruguay / Facundo Pellistri | Uruguay / Rodrigo Bentancur | Uruguay
+Kenny Dalglish | Scotland / Gordon Strachan | Scotland / Graeme Souness | Scotland
+Gordon Strachan | Scotland / Graeme Souness | Scotland / Kenny Dalglish | Scotland

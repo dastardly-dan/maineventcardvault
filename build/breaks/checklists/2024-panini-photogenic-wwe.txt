@@ -1,0 +1,374 @@
+# name: 2024 Panini PhotoGenic WWE
+# sport: WWE
+# added: 2026-11-27
+# source: Official Panini CSV sent by Daniel, November 27, 2026
+# note: Official Panini checklist (Panini PhotoGenic CSV)
+
+[base]
+Adriana Rizzo | W
+AJ Styles
+Alba Fyre | W
+Alexa Bliss | W
+Alundra Blayze | W
+Andrade
+Andre Chase
+Arianna Grace | W
+Asuka | W
+Austin Theory
+Ava | W
+Baron Corbin
+Batista
+Bayley | W
+Becky Lynch | W
+Beth Phoenix | W
+Bianca Belair | W
+Big Boss Man
+Big E
+Blair Davenport | W
+Bobby Lashley
+Booker T
+Braun Strowman
+Bray Wyatt
+Bret "Hit Man" Hart
+Brinley Reece | W
+British Bulldog
+Bron Breakker
+Bronco Nima
+Bronson Reed
+Brother Love
+Bruno Sammartino
+Brutus "The Barber" Beefcake
+Brutus Creed
+Bubba Ray Dudley
+Cactus Jack
+Candice LeRae | W
+Carlito
+Carmella | W
+Carmelo Hayes
+Chad Gable
+Chelsea Green | W
+Chyna | W
+CM Punk
+Cora Jade | W
+"Cowboy" Bob Orton
+D-Von Dudley
+Dakota Kai | W
+Damian Priest
+Dani Palmer | W
+Diamond Dallas Page
+DIESEL
+Dijak
+"Dirty" Dominik Mysterio
+Dragon Lee
+Drew McIntyre
+Dude Love
+Earthquake
+Eddie Guerrero
+Eddy Thorpe
+Elektra Lopez | W
+Elton Prince
+Eve Torres | W
+Faarooq
+Finn Balor
+Fit Finlay
+Gigi Dolin | W
+Grayson Waller
+Gunther
+"Hollywood" Hulk Hogan
+Hulk Hogan
+Ilja Dragunov
+Indi Hartwell | W
+Iron Sheik
+IRS
+IYO SKY | W
+Izzi Dame | W
+Jacy Jayne | W
+Jade Cargill | W
+Jaida Parker | W
+Jakara Jackson | W
+Jake Roberts
+JBL
+JD McDonagh
+Jey Uso
+Jim "The Anvil" Neidhart
+Jimmy Uso
+Joe Gacy
+John Cena
+Johnny Gargano
+Kairi Sane | W
+Karl Anderson
+Karmen Petrovic | W
+Karrion Kross
+Katana Chance | W
+Kayden Carter | W
+Kelani Jordan | W
+Ken Shamrock
+Kevin Nash
+Kevin Owens
+Kiana James | W
+Kit Wilson
+Kofi Kingston
+Kurt Angle
+LA Knight
+Lash Legend | W
+Lex Luger
+Lexis King
+Lita | W
+Liv Morgan | W
+Lucien Price
+Ludwig Kaiser
+Luke Gallows
+Lyra Valkyria | W
+Mankind
+Maxxine Dupri | W
+Michael Hayes
+Michelle McCool | W
+Michin | W
+Mick Foley
+"Million Dollar Man" Ted DiBiase
+Miss Elizabeth | W
+Molly Holly | W
+"Mr. Perfect" Curt Hennig
+MVP
+Myles Borne
+Naomi | W
+Natalya | W
+Nikki Cross | W
+Nikkita Lyons | W
+Oba Femi
+Odyssey Jones
+Otis
+Paul Bearer
+Pete Dunne
+Piper Niven | W
+R-Truth
+Randy Orton
+"Ravishing" Rick Rude
+Razor Ramon
+Rey Mysterio
+Rezar
+Rhea Ripley | W
+Ricky "The Dragon" Steamboat
+Ricochet
+Ridge Holland
+Rikishi
+Riley Osborne
+Rob Van Dam
+Roman Reigns
+Ron Simmons
+"Rowdy" Roddy Piper
+Roxanne Perez | W
+Sami Zayn
+Scarlett | W
+Scott Steiner
+Seth "Freakin" Rollins
+Shawn Michaels
+Shayna Baszler | W
+Sheamus
+Sherri Martel | W
+Shotzi | W
+Sid Vicious
+Sol Ruca | W
+Solo Sikoa
+Stacy Keibler | W
+"Stone Cold" Steve Austin
+Sycho Sid
+Tama Tonga
+Tank Ledger
+Tatum Paxley | W
+Tegan Nox | W
+"The American Nightmare" Cody Rhodes
+The Boogeyman
+The Godfather
+The Great Khali
+The Honky Tonk Man
+The Hurricane
+The Miz
+The Rock
+The Sandman
+Tiffany Stratton | W
+Tommaso Ciampa
+Tonga Loa
+Torrie Wilson | W
+Trick Williams
+Triple H
+Trish Stratus | W
+Tyler Bate
+Ultimate Warrior
+Umaga
+Undertaker
+Vader
+Wade Barrett
+Wes Lee
+Wren Sinclair | W
+X-Pac
+Xavier Woods
+Yokozuna
+Zelina Vega | W
+
+[auto]
+AJ Styles
+Alexa Bliss | W
+Asuka | W
+Austin Theory
+Batista
+Bayley | W
+Becky Lynch | W
+Bianca Belair | W
+Booker T
+Braun Strowman
+Bret "Hit Man" Hart
+Bron Breakker
+Carlito
+Carmelo Hayes
+Charlotte Flair | W
+CM Punk
+Cora Jade | W
+Damian Priest
+Diamond Dallas Page
+"Dirty" Dominik Mysterio
+Dragon Lee
+Drew McIntyre
+Finn Balor
+Gigi Dolin | W
+Grayson Waller
+Gunther
+Hulk Hogan
+Iron Sheik
+IYO SKY | W
+Jade Cargill | W
+Jey Uso
+Jimmy Uso
+John "Bradshaw" Layfield
+John Cena
+Kairi Sane | W
+Kane
+Karrion Kross
+Kevin Nash
+Kevin Owens
+Kofi Kingston
+Kurt Angle
+LA Knight
+Lexis King
+Lita | W
+Liv Morgan | W
+Lola Vice | W
+Mankind
+Maryse | W
+Maxxine Dupri | W
+Michelle McCool | W
+"Million Dollar Man" Ted DiBiase
+Nia Jax | W
+Nikkita Lyons | W
+Oba Femi
+Rey Mysterio
+Rhea Ripley | W
+Rikishi
+Rob Van Dam
+Roman Reigns
+Roxanne Perez | W
+Sami Zayn
+Scarlett | W
+Scott Steiner
+Seth "Freakin" Rollins
+Shawn Michaels
+Shinsuke Nakamura
+Shotzi | W
+Sol Ruca | W
+Solo Sikoa
+Stacy Keibler | W
+"Stone Cold" Steve Austin
+"The American Nightmare" Cody Rhodes
+The Boogeyman
+The Godfather
+The Miz
+The Sandman
+Tiffany Stratton | W
+Torrie Wilson | W
+Trick Williams
+Trish Stratus | W
+Undertaker
+William Regal
+X-Pac
+
+[insert]
+1-2-3 Kid
+AJ Styles
+Alexa Bliss | W
+Alundra Blayze | W
+Asuka | W
+Bayley | W
+Becky Lynch | W
+Booker T
+Bret "Hit Man" Hart
+Bubba Ray Dudley
+Charlotte Flair | W
+CM Punk
+D-Von Dudley
+Damian Priest
+Dragon Lee
+Drew McIntyre
+Dusty Rhodes
+Eddie Guerrero
+Hulk Hogan
+IYO SKY | W
+John Cena
+Kairi Sane | W
+Kevin Nash
+Kevin Owens
+Kofi Kingston
+LA Knight
+Lita | W
+Liv Morgan | W
+Mick Foley
+Nikkita Lyons | W
+Paul Bearer
+Paul Heyman
+Randy Orton
+Razor Ramon
+Rey Mysterio
+Rhea Ripley | W
+Ricochet
+Rob Van Dam
+Roman Reigns
+"Rowdy" Roddy Piper
+Roxanne Perez | W
+Sami Zayn
+Seth "Freakin" Rollins
+Shawn Michaels
+Shinsuke Nakamura
+Sol Ruca | W
+Stacy Keibler | W
+"Stone Cold" Steve Austin
+"The American Nightmare" Cody Rhodes
+"The Demon" Finn Balor
+"The Fiend" Bray Wyatt
+The Hurricane
+The Miz
+The Rock
+Triple H
+Trish Stratus | W
+Undertaker
+Xavier Woods
+
+[multi]
+AJ Styles / "The American Nightmare" Cody Rhodes
+Jade Cargill | W / Bianca Belair | W
+CM Punk / Drew McIntyre
+"Dirty" Dominik Mysterio / Becky Lynch | W
+Michelle McCool | W / Undertaker
+The Honky Tonk Man / Ricky "The Dragon" Steamboat
+Akam / Rezar
+William Regal / Fit Finlay
+Booker T / The Boogeyman
+Shinsuke Nakamura / Sami Zayn
+Drew McIntyre / CM Punk
+Undertaker / Michelle McCool | W
+Ricky "The Dragon" Steamboat / The Honky Tonk Man
+Rezar / Akam
+Fit Finlay / William Regal
+Becky Lynch | W / "Dirty" Dominik Mysterio
+The Boogeyman / Booker T
+Sami Zayn / Shinsuke Nakamura
+Bray Wyatt / "The Fiend" Bray Wyatt
+"The Fiend" Bray Wyatt / Bray Wyatt

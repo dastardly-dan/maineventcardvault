@@ -280,7 +280,7 @@ WIKI_BY_ID = {}
 for _ids, _h in ((('cc872', 'gb1037', 'gb1038a', 'gb1038b', 'gb1041', 'gb1043', 'gb1044', 'rgl6130', 'rgl6132', 'rgl6136', 'rgl6140', 'rgl6145'), _NFL),
                   (('gb1042', 'rgl6129', 'rgl6134', 'rgl6137', 'rgl6138', 'rgl6146', 'cc876'), _MLB), (('jwj0244', 'rgl6131', 'rgl6139', 'rgl6147'), _NBA),
                   (('cc871', 'cc878', 'rgl6144', 'jwj0246', 'jwj0247u', 'rgl6128', 'rgl612xwwe2'), _WWE), (('rgl6142',), _UFC), (('cc875', 'rgl6133'), _NASCAR),
-                  (('gb1045',), _NFL + _NBA), (('gb1040',), _NFL + _UFC + _NBA + _MLB + _WWE), (('rgl6141',), _NFL + _MLB + _NBA)):
+                  (('gb1045',), _NFL + _NBA), (('rgl6148',), [['footballer', 'footballer']]), (('gb1040',), _NFL + _UFC + _NBA + _MLB + _WWE), (('rgl6141',), _NFL + _MLB + _NBA)):
     for _i in _ids: WIKI_BY_ID[_i] = _h
 
 def write(cfg, names, unmatched):
@@ -1701,6 +1701,56 @@ rgl6147 = dict(
 )
 
 
+# RGL #6148 World Cup Treasures (Random Team), soccer by national team (Daniel sent the Prizm World Cup CSV; the other two
+# checklists were copied from Diamond Cards Online, Nov 27, 2026)
+RGL6148_H = 'rgl-6148-world-cup-treasures-random-team-11-28-26'
+def rgl6148_product(pid):
+    """a soccer checklist by national team; Prizm World Cup's team logo cards ("Argentina | Team Logo") go to that team"""
+    out = dict(base={}, other={})
+    sec = None
+    for line in open(os.path.join(LIB, pid + '.txt'), encoding='utf-8'):
+        line = line.strip()
+        if not line or line.startswith('#'): continue
+        if line.startswith('['): sec = line.strip('[]'); continue
+        for part in line.split(' / '):
+            if ' | ' not in part: continue
+            n, team = [x.strip() for x in part.rsplit(' | ', 1)]
+            if team == 'Team Logo': n, team = n + ' team logo', n
+            bucket = out['base'] if sec == 'base' else out['other']
+            if n not in bucket.setdefault(team, []): bucket[team].append(n)
+    return out
+WC_TEAMS = ['Algeria', 'Argentina', 'Australia', 'Austria', 'Belgium', 'Bosnia-Herzegovina', 'Brazil', 'Canada', 'Cape Verde', 'Colombia', 'Croatia',
+            'Curacao', 'Czechia', 'DR Congo', 'Ecuador', 'Egypt', 'England', 'France', 'Germany', 'Ghana', 'Haiti', 'IR Iran', 'Iraq', 'Ivory Coast', 'Japan',
+            'Jordan', 'Korea Republic', 'Mexico', 'Morocco', 'Netherlands', 'New Zealand', 'Norway', 'Panama', 'Paraguay', 'Portugal', 'Qatar',
+            'Saudi Arabia', 'Scotland', 'Senegal', 'South Africa', 'Spain', 'Sweden', 'Switzerland', 'Tunisia', 'Turkey', 'United States', 'Uruguay', 'Uzbekistan']
+RTWC_ONLY = ['Denmark', 'Italy', 'Nigeria', 'Poland', 'Serbia', 'Slovakia', 'Slovenia', 'Wales']   # in the Road to World Cup boxes, not in the 48-team field
+rgl6148 = dict(
+    id='rgl6148', title='RGL #6148 World Cup Treasures (Random Team)', kicker='Run Good Life · Random team · Soccer',
+    url=rgl_url(RGL6148_H), when=_when(SAT, '8:45 pm', '11:45 pm'),
+    facts=['4 boxes', '19 spots for 56 teams', '$186 per spot, fillers $18.60', 'Teams randomized live'],
+    format='team', checked='Spots were still for sale when checked on November 27, 2026, around 1:15 pm Eastern.',
+    boxes=[dict(k='pwc', short='Prizm World Cup', c='#2e86de', full='2026 Panini Prizm FIFA World Cup Hobby (1 box)', kind='500-card base, autographs, inserts, multi-player cards',
+                types='Base for all 48 World Cup teams with Prizm parallels, autographs, inserts and multi-player cards.'),
+           dict(k='nt', short='National Treasures', c='#b7950b', full='2025-26 Panini National Treasures Road to FIFA World Cup 2026 (1 box)', kind='150-card base, autographs, memorabilia',
+                types='Base numbered to 99 or less, autographs, memorabilia and autograph memorabilia cards, dual and triple booklets.'),
+           dict(k='sel', short='Select Road to World Cup', c='#c0392b', full='2025-26 Panini Select Road to FIFA World Cup 2026 Hobby (2 boxes)', kind='Tiered base, autographs, memorabilia, inserts',
+                types='Terrace, Mezzanine and Field Level base with parallels, autographs, memorabilia and inserts.')],
+    spots=[team_spot(tid(t), t, [t]) for t in sorted(WC_TEAMS + RTWC_ONLY)],
+    rules=[['How RGL groups the spots', ['RGL sells 19 spots, and these boxes have 56 national teams, so teams are grouped together, and the groups are set live on stream. They aren\'t posted on the listing.',
+                                         'This guide lists every team on its own, so once you know your teams, look each one up here.']],
+           ['Cards go to the national team on the card', ['This guide files each card under the national team the checklist gives it. Retired legends count for the team on their card.',
+                                                           'RGL\'s Group Break Rules page has the full house rules, so check there if a card could go either way.']],
+           RGL_MULTI],
+    notes=['Eight teams in the two Road to World Cup boxes aren\'t in the 48-team World Cup: Denmark, Italy, Nigeria, Poland, Serbia, Slovakia, Slovenia and Wales. The listing doesn\'t say how RGL handles them, so they\'re listed here as their own teams. Ask RGL where those cards go.',
+           'Prizm World Cup has a team logo card for each country; those are listed under that team.',
+           'The checklists call Wales "Cymru"; it\'s listed as Wales here.',
+           'The Prizm World Cup list comes from Panini\'s official checklist. The National Treasures and Select lists were copied from Diamond Cards Online\'s checklist pages, not Panini\'s own files, so a card or two could be off.',
+           'Filler entries are sold too ($18.60 each); see RGL\'s listing for how fillers work.'],
+    sources=[['RGL #6148 break page (Run Good Life)', rgl_url(RGL6148_H)], ['2026 Panini Prizm FIFA World Cup checklist (official Panini CSV)', SRC_PANINI],
+             ['2025-26 National Treasures Road to FIFA World Cup checklist (Diamond Cards Online)', 'https://www.diamondcardsonline.com/blog/2025-26-panini-national-treasures-road-to-fifa-world-cup-2026-soccer-cards-checklist/'],
+             ['2025-26 Select Road to FIFA World Cup checklist (Diamond Cards Online)', 'https://www.diamondcardsonline.com/blog/2025-26-panini-select-road-to-fifa-world-cup-2026-soccer-cards-checklist/']],
+)
+
 # RGL #6144 Survivor Series Multi-Year PYL-W (pick your wrestler or letter, first name)
 RGL6144_H = 'rgl-6144-survivor-series-multi-year-pyl-w-pick-your-wrestler-letter-first-name-11-28-26'
 # store variant title | price | open on Nov 27, 2026, 1:15 pm Eastern
@@ -1785,28 +1835,32 @@ assert len(rgl6144_spots) == 60 and len({s['id'] for s in rgl6144_spots}) == 60
 rgl6144 = dict(
     id='rgl6144', title='RGL #6144 Survivor Series Multi-Year PYL-W', kicker='Run Good Life · Pick your wrestler or letter · WWE',
     url=rgl_url(RGL6144_H), when=_when(SAT, '5:00 pm', '8:00 pm'),
-    facts=['11 boxes (5 listed here)', '60 spots: 40 wrestlers, 20 letter groups', '$20 to $240 per spot', 'First name, no "The"'],
+    facts=['11 boxes (9 listed here)', '60 spots: 40 wrestlers, 20 letter groups', '$20 to $240 per spot', 'First name, no "The"'],
     live=dict(shop='rgl', handle=RGL6144_H),
     format='pyl', checked='Availability checked against Run Good Life\'s store data on November 27, 2026, around 1:15 pm Eastern: %d of 60 spots open.' % sum(1 for s in rgl6144_spots if s['status'] == 'open'),
     boxes=[dict(next(b for b in rgl6128['boxes'] if b['k'] == 'finest'), full='2025 Topps Finest WWE Hobby (1 box)'),
            dict(WWE_BOX['exalted'], full='2025 Topps Exalted WWE (1 box)'),
            dict(WWE_BOX['sapphire'], full='2026 Topps Chrome WWE Sapphire (1 box)'),
            dict(WWE_BOX['sc'], full='2026 Topps Stadium Club WWE Hobby (1 box)'),
-           dict(WWE_BOX['chrome'], full='2026 Topps Chrome WWE Delight (1 box)', types='Base and Refractor parallels, inserts like Signalz, Gamut and Helix, Garbage Pail Kids cards, autographs.')],
+           dict(WWE_BOX['chrome'], full='2026 Topps Chrome WWE Delight (1 box)', types='Base and Refractor parallels, inserts like Signalz, Gamut and Helix, Garbage Pail Kids cards, autographs.'),
+           dict(k='select22', short='Select 2022', c='#c0392b', full='2022 Panini Select WWE Hobby (1 box)', kind='Tiered base, autographs, memorabilia, inserts', types='Concourse, Premier and Ringside base with Prizm parallels, autographs, memorabilia and inserts.'),
+           dict(k='prizm23', short='Prizm 2023', c='#8e44ad', full='2023 Panini Prizm WWE Hobby and Lucky Envelope (2 boxes)', kind='Base, autographs, inserts, multi-wrestler cards', types='Base with Prizm parallels (Lucky Envelope boxes have their own Prizm parallels), autographs, inserts and dual cards. Both boxes use the same checklist.'),
+           dict(k='photo24', short='PhotoGenic 2024', c='#16a085', full='2024 Panini PhotoGenic WWE Hobby (1 box)', kind='Base, autographs, inserts, multi-wrestler cards', types='Base with parallels, autographs, inserts and multi-wrestler cards.')],
     spots=rgl6144_spots,
     rules=[['Pick a wrestler or a letter', ['RGL sells 40 popular wrestlers on their own and 20 "all others" letter spots for everyone else. Buy a wrestler and you get only that wrestler\'s cards. Buy a letter and you get every card for that first letter except the wrestlers sold on their own.',
                                           'It goes by first name, and a leading "The" doesn\'t count, so The Miz is M. The Rock is sold on his own.']],
            WWE_RULES[1],
            ['Garbage Pail Kids cards go to the wrestler', ['RGL\'s rule: every Garbage Pail Kids card from 2026 Topps Chrome WWE goes to the wrestler\'s spot, not the name on the card. "Potty Mouth Punk" goes to CM Punk, who has his own spot. This guide files all of them that way.']],
            RGL_MULTI],
-    notes=['Six of the eleven boxes aren\'t in this guide yet because we don\'t have their checklists: 2021 Topps Finest, 2022 Select Hobby, 2023 Prizm Hobby, 2023 Prizm Lucky Envelope, 2024 Photogenic Hobby and 2024 Select Hobby, as the listing names them. Check those cards with RGL.',
+    notes=['Two of the eleven boxes aren\'t in this guide yet because we don\'t have their checklists: 2021 Topps Finest and 2024 Select Hobby. Check those cards with RGL.',
+           'Panini\'s checklists put some nicknames in front of the name, like "The American Nightmare" Cody Rhodes. Those cards show under the first-name letter with a question mark, and under the nickname\'s letter too, so check with RGL which one counts.',
            'Alternate names go with the spot: Mankind, Cactus Jack and Dude Love count as Mick Foley (the spot says "all"), Hollywood Hogan counts as Hulk Hogan, The Fiend is in the Bray Wyatt spot, and the Uso spot has both Jey and Jimmy. Ask RGL if you need a ruling.',
            'The listing\'s Garbage Pail Kids example says "C-Men", which looks copied from an earlier break. CM Punk has his own spot here.',
            'The listing doesn\'t say where a name that starts with a number goes. This guide puts 1-2-3 Kid in X / Y / Z, the way RGL\'s Chrome in the Club break (#6128) lists numbers with those letters.',
            'RGL says every spot is entered in a $600 store credit giveaway, drawn among everyone in all of its #6000 breaks after all six have run.',
            'Chrome Delight is a Topps Chrome WWE box, so it uses the same checklist as the Hobby box.',
-           'Lists come from the official Topps checklists.'],
-    sources=[['RGL #6144 break page (Run Good Life)', rgl_url(RGL6144_H)], rgl6128['sources'][1], rgl6128['sources'][2], rgl6128['sources'][4], rgl6128['sources'][5],
+           'Lists come from the official Topps and Panini checklists.'],
+    sources=[['RGL #6144 break page (Run Good Life)', rgl_url(RGL6144_H)], ['Panini Select 2022, Prizm 2023 and PhotoGenic 2024 WWE checklists (official Panini CSVs)', SRC_PANINI], rgl6128['sources'][1], rgl6128['sources'][2], rgl6128['sources'][4], rgl6128['sources'][5],
              _src('2026-topps-chrome-wwe-sapphire', 'Topps Chrome WWE Sapphire'), _src('2025-topps-exalted-wwe', 'Topps Exalted WWE')],
 )
 
@@ -1870,7 +1924,10 @@ if __name__ == '__main__':
     n, u = team_break(rgl6147, {'sc': lib_nba_product('2025-26-topps-stadium-club-basketball'), 'joy': lib_nba_product('2025-26-topps-x-bob-ross-the-joy-of-basketball'),
         'flag': lib_nba_product('2026-27-topps-flagship-basketball')}); built.append(write(rgl6147, n, u))
     n, u = letter_break(rgl6144, {'finest': lib_letter_product('2025-topps-finest-wwe'), 'exalted': lib_letter_product('2025-topps-exalted-wwe'), 'sapphire': lib_letter_product('2026-topps-chrome-wwe-sapphire'),
-        'sc': lib_letter_product('2026-topps-stadium-club-wwe'), 'chrome': gpk_fold(lib_letter_product('2026-topps-chrome-wwe'))}, None); built.append(write(rgl6144, n, u))
+        'sc': lib_letter_product('2026-topps-stadium-club-wwe'), 'chrome': gpk_fold(lib_letter_product('2026-topps-chrome-wwe')),
+        'select22': lib_letter_product('2022-panini-select-wwe'), 'prizm23': lib_letter_product('2023-panini-prizm-wwe'), 'photo24': lib_letter_product('2024-panini-photogenic-wwe')}, None); built.append(write(rgl6144, n, u))
+    n, u = team_break(rgl6148, {'pwc': rgl6148_product('2026-panini-prizm-world-cup-soccer'), 'nt': rgl6148_product('2025-26-panini-national-treasures-road-to-world-cup-soccer'),
+        'sel': rgl6148_product('2025-26-panini-select-road-to-world-cup-soccer')}); built.append(write(rgl6148, n, u))
     # RGL drafts: built only once RGL posts the listing (RGL_DRAFT_PREVIEW=<folder> writes previews there instead)
     PREVIEW = os.environ.get('RGL_DRAFT_PREVIEW')
     MLB6129 = lambda: {k: lib_mlb_product(v) for k, v in (('chrome', '2026-topps-chrome-baseball'), ('update', '2026-topps-update-series-baseball'),
