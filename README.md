@@ -266,6 +266,11 @@ team spot, box by box. Linked from the storefront's Breaks menu; every page carr
       only when nothing in stock is found. low null means none found; the dashboard lists it as missing. The "Weekly box
       price check" scheduled task (Thursdays 8:37 pm Eastern) re-searches every key, adds new box types, drops ones no
       current break uses, runs owner.py and pushes.
+  3r. Watch your breaks (Daniel, Nov 27, 2026): public page /breaks/watch, built by hub.py from each current break's page data
+      (plus breaks that ran today or yesterday). Break dropdown (the visitor's breaks first, from localStorage "mecv-in" and
+      "mecv-<id>-mine"), the break's stream and live chat (D.video; chat hidden once the break has run), and a spot dropdown that
+      shows every player in the spot by box with auto/insert/multi/NIL tags. "This is my spot" saves to the same keys the guide uses.
+      No card prices or values (Nov 25 rule). Linked from the Breaks menu.
   3q. Stream transcripts (Daniel, Nov 27, 2026): `build/breaks/transcripts.py <YouTube link>` saves a video's captions
       (uploader's, else YouTube's automatic ones) with yt-dlp to build/breaks/transcripts/<id>.json and .txt, plus
       index.json. The "Stream transcript" GitHub job runs it, but YouTube blocks GitHub's servers ("Sign in to confirm

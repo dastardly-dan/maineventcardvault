@@ -103,6 +103,7 @@ def menu_html(current=None):
     first = 'border-top:0;margin-top:0;padding-top:9px'
     links = [
         f'<a class="all" href="/breaks/" style="{first}{on if current == "hub" else ""}">All break guides<span>Every break with a guide right now</span></a>',
+        f'<a class="all" href="/breaks/watch" style="{first}{on if current == "watch" else ""}">Watch your breaks<span>Stream, chat and your spot on one page</span></a>',
         f'<a class="all" href="/breaks/builder" style="{first}{on if current == "builder" else ""}">Spot builder<span>Turn checklists into balanced spots</span></a>',
         f'<a class="all" href="/" style="{first}">Main Event Card Vault<span>Shop all my cards</span></a>',
         f'<a class="all" href="/iron-ledger.html" style="{first}{on if current == "ironledger" else ""}">Iron Ledger<span>My workout program</span></a>',
@@ -263,6 +264,159 @@ pb = f'''<!DOCTYPE html>
 </body></html>'''
 open(os.path.join(ROOT, 'breaks', 'past.html'), 'w').write(pb)
 fill(os.path.join(ROOT, 'breaks', 'past.html'), 'past')
+
+# ---------------- Watch along: breaks/watch.html (Daniel, Nov 27, 2026) ----------------
+# One public page to follow your breaks: pick a break (yours first, from "I'm in this break" and saved spots in this browser),
+# its stream with the chat beside it, and a spot dropdown that shows every player in that spot, box by box. No prices or
+# values of cards (Nov 25 rule); spot prices and open or sold only where the guide shows them.
+import owner as _ow
+def _at(w):
+    m = re.search(r'([A-Z][a-z]+ \d{1,2}, \d{4}).*?\(?(\d{1,2}:\d{2} [ap]m) Eastern', w)
+    if not m: return None
+    try: return datetime.datetime.strptime(m.group(1) + ' ' + m.group(2), '%B %d, %Y %I:%M %p').isoformat()
+    except ValueError: return None
+_recent = datetime.date.today() - datetime.timedelta(days=1)   # past breaks from today and yesterday only, to keep the page light
+W = []
+for i in items:
+    if is_past(i) and ran_on(i) < _recent: continue
+    D = _ow.page_data(i['id'])
+    if not D or not D.get('spots'): continue
+    W.append(dict(id=i['id'], title=D['title'], breaker=breaker_name(i), when=D.get('when', i['when']).split('. ')[0], at=_at(D.get('when', i['when'])),
+        past=is_past(i), video=D.get('video'), vstart=D.get('videoStart') or 0, url=D.get('url', ''), team=D.get('format') in ('pyt', 'random') and any(sp.get('teams') for sp in D['spots']),
+        boxes=[[b['k'], b.get('short', b['k']), b.get('c', '#e6be55')] for b in D['boxes']],
+        spots=[dict(id=sp['id'], label=sp['label'], sub=sp.get('g') or '', price=sp.get('price'), status=sp.get('status') or '',
+                    names={k: [[e[0], e[1] or '', 1 if e[2] else 0] for e in v] for k, v in D['names'].get(sp['id'], {}).items()}) for sp in D['spots']]))
+W.sort(key=lambda b: (b['past'], b['at'] or '9999'))
+WATCH_JS = r"""<script>(function () {
+var W = __DATA__, $ = function (i) { return document.getElementById(i); }, host = location.hostname || "maineventcardvault.com", curVid = null;
+function e(t) { return String(t == null ? "" : t).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+function get(k, d) { try { var v = JSON.parse(localStorage.getItem(k) || "null"); return v == null ? d : v; } catch (x) { return d; } }
+function put(k, a) { try { a && a.length ? localStorage.setItem(k, JSON.stringify(a)) : localStorage.removeItem(k); } catch (x) {} }
+function mine(id) { var a = get("mecv-" + id + "-mine", []); return Array.isArray(a) ? a : [String(a)]; }
+function ins() { var a = get("mecv-in", []); return Array.isArray(a) ? a : []; }
+function isIn(b) { return ins().indexOf(b.id) > -1 || mine(b.id).length > 0; }
+function tm(b) { var m = b.when.match(/\(([^)]*Eastern)\)/) || b.when.match(/(\d{1,2}:\d{2} [ap]m [A-Z][a-z]+)/); return m ? m[1].replace(" Eastern", " ET") : ""; }
+function day(b) { var m = b.when.match(/^([A-Za-z]+, [A-Za-z]+ \d+)/); return m ? m[1] : ""; }
+function byId(id) { for (var i = 0; i < W.length; i++) if (W[i].id === id) return W[i]; return null; }
+function pickDefault() {
+  var now = Date.now(), soon = function (b) { return b.at && new Date(b.at + "-05:00").getTime() + 3 * 3600e3 > now; };
+  var m = W.filter(function (b) { return isIn(b) && !b.past && soon(b); }); if (m.length) return m[0].id;
+  m = W.filter(isIn); if (m.length) return m[0].id;
+  m = W.filter(function (b) { return !b.past && soon(b); }); return (m[0] || W[0] || {}).id;
+}
+function fillBreaks(sel) {
+  var you = W.filter(isIn), up = W.filter(function (b) { return !b.past; }), ran = W.filter(function (b) { return b.past; }), h = "";
+  function grp(n, a) { if (!a.length) return; h += '<optgroup label="' + e(n) + '">' + a.map(function (b) { return '<option value="' + b.id + '">' + e(b.title + "  ·  " + day(b) + " " + tm(b)) + "</option>"; }).join("") + "</optgroup>"; }
+  grp("Your breaks", you); grp("Coming up", up.filter(function (b) { return you.indexOf(b) < 0; })); grp("Recently ran", ran.filter(function (b) { return you.indexOf(b) < 0; }));
+  $("wb").innerHTML = h; $("wb").value = sel;
+}
+function video(b) {
+  if (curVid === b.id) return; curVid = b.id; var v = $("wvid"), c = $("wchat");
+  if (!b.video) { v.innerHTML = '<div class="wnone">No stream link for this break yet. It shows up here as soon as the breaker goes live.' + (b.url ? '<br><a href="' + e(b.url) + '" target="_blank" rel="noopener">Breaker\'s listing</a>' : "") + "</div>"; c.innerHTML = '<div class="wnone">The live chat shows up here with the stream.</div>'; return; }
+  v.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + b.video + (b.vstart ? "?start=" + b.vstart : "") + '" title="' + e(b.title) + ' stream" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
+  c.innerHTML = b.past ? '<div class="wnone">This break already ran, so the video above is the replay and the chat is closed.</div>'
+    : '<iframe src="https://www.youtube.com/live_chat?v=' + b.video + "&embed_domain=" + encodeURIComponent(host) + '&dark_theme=1" title="Live chat"></iframe><div class="wsm">Sign in to YouTube to post. <a href="https://www.youtube.com/watch?v=' + b.video + '" target="_blank" rel="noopener">Open on YouTube</a></div>';
+}
+function tags(n, team) {
+  var f = n[1], h = "";
+  if (f.indexOf("A") > -1) h += '<span class="tag">' + (team && !n[2] ? "hit" : "auto") + "</span>";
+  if (f.indexOf("I") > -1 && !n[2] && f.indexOf("A") < 0) h += '<span class="tag i">insert</span>';
+  if (f.indexOf("M") > -1) h += '<span class="tag m">multi</span>';
+  if (f.indexOf("N") > -1) h += '<span class="tag n">NIL</span>';
+  return h;
+}
+function show(b, spotId) {
+  var my = mine(b.id), sel = spotId || my[0] || "";
+  $("ws").innerHTML = '<option value="">Pick a spot</option>' + b.spots.map(function (s) {
+    return '<option value="' + e(s.id) + '">' + e(s.label + (s.sub ? " (" + s.sub + ")" : "") + (my.indexOf(s.id) > -1 ? "  ·  yours" : "") + (s.status === "sold" ? "  ·  sold" : s.status === "open" ? "  ·  open" : "")) + "</option>"; }).join("");
+  $("ws").value = sel;
+  var inb = isIn(b);
+  $("whead").innerHTML = '<div class="wcard"><div class="kicker">' + e(b.breaker) + "</div><h2 class=\"display\">" + e(b.title) + '</h2><div class="sub">' + e(b.when) + (b.past ? " · already ran" : "") + '</div><div class="wbtns">' +
+    '<button type="button" id="win" class="' + (inb ? "on" : "") + '">' + (inb ? "You're in this break" : "I'm in this break") + "</button>" +
+    '<a href="/breaks/' + b.id + '">Full guide</a>' + (b.url ? '<a href="' + e(b.url) + '" target="_blank" rel="noopener">Breaker\'s listing</a>' : "") + "</div></div>";
+  $("win").onclick = function () { var a = ins(), i = a.indexOf(b.id); if (i > -1) a.splice(i, 1); else a.push(b.id); put("mecv-in", a); show(b, $("ws").value); list(); };
+  video(b); spot(b, sel); list();
+}
+function spot(b, id) {
+  var s = null; b.spots.forEach(function (x) { if (x.id === id) s = x; });
+  if (!s) { $("wspot").innerHTML = '<div class="wcard"><p class="sub">Pick a spot above to see every player in it, box by box.' + (b.spots.length ? " Your saved spots come up first next time." : "") + "</p></div>"; return; }
+  var my = mine(b.id), on = my.indexOf(s.id) > -1, n = 0, body = "";
+  b.boxes.forEach(function (bx) {
+    var a = s.names[bx[0]] || []; if (!a.length) return; n += a.length;
+    body += '<div class="wbox"><div class="wbn"><i style="background:' + e(bx[2]) + '"></i>' + e(bx[1]) + ' <span>' + a.length + "</span></div><div class=\"pills\">" + a.map(function (x) { return '<span class="pill">' + e(x[0]) + tags(x, b.team) + "</span>"; }).join("") + "</div></div>";
+  });
+  $("wspot").innerHTML = '<div class="wcard"><div class="wsh"><h3 class="display">' + e(s.label) + (s.sub ? ' <span class="sub">' + e(s.sub) + "</span>" : "") + "</h3>" +
+    (s.price ? '<span class="wst">$' + s.price + "</span>" : "") + (s.status ? '<span class="wst ' + e(s.status) + '">' + e(s.status) + "</span>" : "") +
+    '<button type="button" id="wmine" class="' + (on ? "on" : "") + '">' + (on ? "My spot" : "This is my spot") + "</button></div>" +
+    '<p class="sub">' + n + " players in this spot across " + b.boxes.length + " box" + (b.boxes.length > 1 ? "es" : "") + ".</p>" + (body || '<p class="sub">No names in this spot.</p>') + "</div>";
+  $("wmine").onclick = function () {
+    var a = mine(b.id), i = a.indexOf(s.id); if (i > -1) a.splice(i, 1); else a.push(s.id); put("mecv-" + b.id + "-mine", a);
+    if (a.length) { var q = ins(); if (q.indexOf(b.id) < 0) { q.push(b.id); put("mecv-in", q); } }
+    fillBreaks(b.id); show(b, s.id);
+  };
+}
+function list() {
+  var you = W.filter(isIn);
+  $("wmy").innerHTML = you.length ? you.map(function (b) {
+    var my = mine(b.id).map(function (id) { var s = null; b.spots.forEach(function (x) { if (x.id === id) s = x; }); return s ? s.label : null; }).filter(Boolean);
+    return '<a class="tile" href="#' + b.id + '"><div class="kicker" style="font-size:11px">' + e(b.breaker) + (b.video ? " · stream ready" : "") + '</div><div class="lab display" style="font-size:22px;margin-top:6px">' + e(b.title) + '</div><div class="cnt" style="margin-top:6px">' + e(day(b) + ", " + tm(b)) + (b.past ? " · ran" : "") + '</div><div class="peek">' + (my.length ? "Your spot" + (my.length > 1 ? "s" : "") + ": " + e(my.join(", ")) : "No spot saved yet") + "</div></a>";
+  }).join("") : '<p class="sub">Nothing saved yet. Pick a break above and tap <b>I\'m in this break</b>, or <b>This is my spot</b> once you know your spot. It\'s saved only in this browser, and it\'s the same list the guides use.</p>';
+}
+function route() {
+  var h = location.hash.replace(/^#/, "").split("/"), b = byId(h[0]) || byId(pickDefault());
+  if (!b) { $("whead").innerHTML = '<p class="sub">No breaks to follow right now.</p>'; return; }
+  fillBreaks(b.id); show(b, h[1] ? decodeURIComponent(h[1]) : "");
+}
+$("wb").onchange = function () { location.hash = $("wb").value; };
+$("ws").onchange = function () { var b = byId($("wb").value); if (b) history.replaceState(null, "", "#" + b.id + ($("ws").value ? "/" + encodeURIComponent($("ws").value) : "")); spot(b, $("ws").value); };
+window.addEventListener("hashchange", route); route();
+})();</script>"""
+wp = f"""<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex">
+<title>Watch Your Breaks | Main Event Card Vault</title><meta name="theme-color" content="#081524"><link rel="icon" href="{icon}">
+<style>{css}
+.bar .bmenu {{ margin-left: auto; }}
+.wpick {{ display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 14px; }}
+.wpick label {{ flex: 1 1 300px; display: flex; flex-direction: column; gap: 5px; font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-3); }}
+.wpick select {{ padding: 11px 14px; border-radius: 12px; border: 1px solid var(--line-2); background: var(--panel); color: var(--ink); font: inherit; font-size: 15px; text-transform: none; letter-spacing: 0; }}
+.wcard {{ background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 16px 18px; margin: 0 0 14px; }}
+.wcard h2 {{ font-size: 30px; margin: 4px 0 2px; }} .wcard h3 {{ font-size: 24px; margin: 0; }}
+.wbtns {{ display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }}
+.wbtns a, .wbtns button, #wmine {{ font: inherit; font-size: 14px; font-weight: 600; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line-2); background: var(--bg-2); color: var(--ink); text-decoration: none; cursor: pointer; }}
+.wbtns button, #wmine {{ background: var(--gold); color: #1a1405; border-color: var(--gold); }}
+.wbtns button.on, #wmine.on {{ background: transparent; color: var(--gold); }}
+.wgrid {{ display: grid; grid-template-columns: 1fr 360px; gap: 12px; margin: 0 0 14px; }}
+.wvid {{ position: relative; aspect-ratio: 16 / 9; background: #050c16; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; }}
+.wvid iframe {{ position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }}
+.wchat {{ display: flex; flex-direction: column; background: var(--panel); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; min-height: 320px; }}
+.wchat iframe {{ flex: 1; width: 100%; border: 0; min-height: 320px; }}
+.wnone {{ display: flex; align-items: center; justify-content: center; text-align: center; height: 100%; padding: 20px; color: var(--ink-3); font-size: 14px; line-height: 1.5; }}
+.wsm {{ font-size: 12px; color: var(--ink-3); padding: 7px 12px; }}
+.wsh {{ display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }} #wmine {{ margin-left: auto; }}
+.wst {{ font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; padding: 3px 10px; border-radius: 999px; border: 1px solid var(--line-2); color: var(--ink-2); }}
+.wst.open {{ color: #7fd3a1; border-color: #2f6b4c; }} .wst.sold {{ color: var(--ink-3); }}
+.wbox {{ margin: 12px 0 0; }} .wbn {{ font-weight: 700; font-size: 14px; display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }}
+.wbn i {{ width: 10px; height: 10px; border-radius: 3px; display: inline-block; }} .wbn span {{ color: var(--ink-3); font-weight: 400; }}
+.pills {{ display: flex; flex-wrap: wrap; gap: 6px; }}
+.pill {{ font-size: 13.5px; padding: 5px 10px; border-radius: 999px; background: var(--bg-2); border: 1px solid var(--line); color: var(--ink); }}
+.tag {{ font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; margin-left: 6px; padding: 1px 6px; border-radius: 6px; background: var(--gold); color: #1a1405; }}
+.tag.i {{ background: #3c6fd8; color: #fff; }} .tag.m {{ background: #7e57c2; color: #fff; }} .tag.n {{ background: #2f6b4c; color: #fff; }}
+.grid {{ grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }}
+@media (max-width: 900px) {{ .wgrid {{ grid-template-columns: 1fr; }} .wchat {{ height: 420px; }} }}
+/*BMENU-CSS*//*/BMENU-CSS*/
+{IN_CSS}</style></head><body>
+<header class="site"><div class="wrap"><div class="bar"><a class="brand" href="/"><img src="{icon}" alt=""><div><b class="display">Main Event Card Vault</b><span>Watch your breaks</span></div></a><!--BMENU--><!--/BMENU--></div></div></header>
+<div class="wrap hero"><div class="kicker">Follow along</div><h1 class="display">Watch your breaks</h1>
+<p class="lede">Pick a break to watch the stream with the live chat beside it, then pick a spot to see every player in it while the boxes get opened. Breaks you're in come up first.</p></div>
+<main class="wrap"><div class="wpick"><label>Break<select id="wb"></select></label><label>Spot<select id="ws"></select></label></div>
+<div id="whead"></div><div class="wgrid"><div class="wvid" id="wvid"></div><div class="wchat" id="wchat"></div></div><div id="wspot"></div>
+<h2 class="display" style="font-size:26px;margin:26px 0 10px">Your breaks</h2><div class="grid" id="wmy"></div></main>
+<footer><div class="wrap">Main Event Card Vault. Reference only; confirm checklists and house rules with the breaker. <a href="/breaks/">All break guides</a> · <a href="/breaks/release-notes">Release notes</a></div></footer>
+{WATCH_JS.replace('__DATA__', json.dumps(W, ensure_ascii=False).replace('</', '<\\/'))}
+</body></html>"""
+open(os.path.join(ROOT, 'breaks', 'watch.html'), 'w').write(wp)
+fill(os.path.join(ROOT, 'breaks', 'watch.html'), 'watch')
+print('watch page', len(W), 'breaks', len(wp), 'bytes')
 
 for i in items:
     fill(os.path.join(ROOT, 'breaks', i['id'] + '.html'), i['id'])
