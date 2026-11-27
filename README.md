@@ -234,13 +234,18 @@ team spot, box by box. Linked from the storefront's Breaks menu; every page carr
       odds-weighted points times its typical eBay asking price; unpriced names count at the typical price) once priced
       names hold half the points, and with pricing on, "by value" (the spot's price if the total were split by value;
       green above its price, red below). Builder only: break pages never show prices or values (Nov 25 rule stands).
-  3p. Owner dashboard (Daniel, Nov 27, 2026): maineventcardvault.com/owner, for Daniel only. worker.js sends /owner to
-      owner.js, which checks the OWNER_PASSWORD secret set in Cloudflare (Workers > maineventcardvault > Settings >
-      Variables and Secrets) and keeps him signed in for 30 days with a signed cookie. Without the secret the page stays
-      locked. The page is built by `build/breaks/owner.py` (run at the end of hub.py) into owner/dashboard.js;
-      .assetsignore keeps owner/ and owner.js from being served as files. It shows value for cost per spot for every
-      current break, price data status, and a Pulls section for the stream transcripts work that comes next. The repo is
-      public, so the numbers behind it can be worked out from prices.json; the password protects the page, not the data.
+  3p. Owner dashboard (Daniel, Nov 27, 2026): maineventcardvault.com/owner, linked as "Developer dashboard" at the bottom of
+      every page. worker.js sends /owner to owner.js, which checks the OWNER_PASSWORD secret in Cloudflare (Workers >
+      maineventcardvault > Settings > Variables and Secrets; set Nov 27) and keeps him signed in for 30 days. The page is
+      built by `build/breaks/owner.py` (run at the end of hub.py) into owner/dashboard.js; .assetsignore keeps owner/ and
+      owner.js from being served as files. For every current break it shows: break total (pick: spot prices added up;
+      random: spot price x spots sold), box cost (eBay asking price of one sealed box x boxes; prices.py looks these up
+      first, every 3 days), markup, each spot's value share (checklist points weighted by hit depth, or by eBay player
+      prices once half the points have one), fair price (share x box cost) and value for the price (pick breaks only),
+      a confidence level, and a plain list of missing data (box prices, player prices, pack odds, copied checklists).
+      build.py records the checklist each box used in box_lib.json. An Owner menu at the top (dashboard sections, site
+      pages, Cloudflare, GitHub jobs, eBay) lives only in this page. The repo is public, so the numbers behind it can be
+      worked out from prices.json; the password protects the page, not the data.
   3q. Stream transcripts (Daniel, Nov 27, 2026): `build/breaks/transcripts.py <YouTube link>` saves a video's captions
       (uploader's, else YouTube's automatic ones) with yt-dlp to build/breaks/transcripts/<id>.json and .txt, plus
       index.json. The "Stream transcript" GitHub job runs it, but YouTube blocks GitHub's servers ("Sign in to confirm

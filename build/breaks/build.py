@@ -65,7 +65,12 @@ def entries_from_product(prod, alias=True):
         for n in card.split(' / '): add(n, 'M')
     return out
 
+BOX_LIB = {}   # page id -> {box key: library checklist id}, saved to box_lib.json for the owner dashboard
+def note_box_lib(cfg, products):
+    BOX_LIB[cfg['id']] = {k: p.get('_pid') for k, p in products.items() if isinstance(p, dict) and p.get('_pid')}
+
 def letter_break(cfg, products, gender_of=None, alt=True):
+    note_box_lib(cfg, products)
     names = {s['id']: {} for s in cfg['spots']}
     unmatched = []
     # Hybrid breaks sell some wrestlers on their own ('who'): all of that wrestler's cards go to their spot,
@@ -94,6 +99,7 @@ def letter_break(cfg, products, gender_of=None, alt=True):
     return names, unmatched
 
 def team_break(cfg, products):
+    note_box_lib(cfg, products)
     names = {s['id']: {} for s in cfg['spots']}
     unmatched = []
     team_to_spot = {}
@@ -226,6 +232,15 @@ def add_prices(cfg, names):
                 if not player: continue
                 q = bq + ' ' + player
                 PRICE_TARGETS[q] = {'q': q, 'player': player}
+        # the sealed box itself (Daniel, Nov 27, 2026): its asking price is the "box cost" the owner dashboard compares the break's price with
+        sq = sealed_query(b['full'])
+        if sq: PRICE_TARGETS[sq] = {'q': sq, 'box': True}
+
+def sealed_query(full):
+    """'2026 Topps Chrome Baseball Jumbo (1 box)' -> '2026 Topps Chrome Baseball Jumbo box': the eBay search for one sealed box"""
+    q = ' '.join(re.sub(r'\(.*?\)', '', full).replace("'", '').split())
+    if not q: return None
+    return q if re.search(r'\bbox\b', q, re.I) else q + ' box'
 
 # Breaker streams (Daniel, Nov 25, 2026): the page shows the YouTube player in place of the title card.
 # One stream covers a whole break night, so each video lists the pages it covers. After the stream ends the same link is the replay.
@@ -1874,6 +1889,16 @@ rgl6144 = dict(
 )
 
 
+# Tag every product loaded from the library with its checklist id, so BOX_LIB knows which checklist each box used.
+def _tag_pid(f):
+    def g(pid, *a, **k):
+        r = f(pid, *a, **k)
+        if isinstance(r, dict): r = dict(r); r['_pid'] = pid
+        return r
+    return g
+lib_letter_product, lib_team_product, lib_mlb_product, lib_nba_product, rgl6148_product = map(
+    _tag_pid, (lib_letter_product, lib_team_product, lib_mlb_product, lib_nba_product, rgl6148_product))
+
 if __name__ == '__main__':
     built = []
     n, u = letter_break(cc871, WWE_PRODUCTS, wwe_gender); built.append(write(cc871, n, u))
@@ -1992,5 +2017,6 @@ if __name__ == '__main__':
             OUT = OUT_LIVE
     json.dump(sorted(PRICE_TARGETS.values(), key=lambda t: t['q']), open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'watch', 'price_targets.json'), 'w'), indent=0, ensure_ascii=False)
     json.dump([{k: b[k] for k in ('id', 'title', 'kicker', 'when', 'facts', 'ended', 'url', 'image', 'video') if k in b} for b in built], open(os.path.join(os.path.dirname(__file__), 'index.json'), 'w'))
+    json.dump(BOX_LIB, open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'box_lib.json'), 'w'), indent=0, sort_keys=True)
     for b in built:
         if b['unmatched']: print(b['id'], 'UNMATCHED', b['unmatched'][:40])

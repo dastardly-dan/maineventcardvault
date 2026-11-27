@@ -61,6 +61,36 @@ def summarize(items, player):
     return [round(statistics.median(vals), 2), round(min(vals), 2), len(vals)]
 
 
+# Sealed boxes (Daniel, Nov 27, 2026): the owner dashboard compares what a break's spots sell for with what its sealed
+# boxes cost. A box target is the box's name plus "box"; a listing counts when its title has every word of the product
+# name (year, brand, set, box type) and isn't a break spot, a pack, a case, a lot or an opened box.
+BOX_SKIP = re.compile(r'\b(break|breaks|breaking|spots?|random|pick|team|case|cases|lot|lots|empty|opened|open|repack|single|singles|'
+                      r'pack(?!s)|digital|custom|graded|psa|bgs)\b', re.I)
+BOX_KEEP_DAYS = 3
+BOX_EXTRA = {'box', 'hobby', 'the', 'of', 'x', 'and', '&'}   # sellers often leave these words out of the title
+
+
+def summarize_box(items, q):
+    words = [w for w in fold(q).replace("'", '').split() if w not in BOX_EXTRA]
+    vals = []
+    for it in items:
+        t = fold(it.get('title', '')).replace("'", '')
+        if BOX_SKIP.search(t) or not all(re.search(r'\b' + re.escape(w) + r'\b', t) for w in words): continue
+        try: v = float(it['price']['value'])
+        except (KeyError, ValueError): continue
+        if v >= 15: vals.append(v)
+    if len(vals) < 2: return None
+    return [round(statistics.median(vals), 2), round(min(vals), 2), len(vals)]
+
+
+def search_any(tok, q):
+    """the same search with no category, since sealed boxes aren't in Trading Card Singles"""
+    url = 'https://api.ebay.com/buy/browse/v1/item_summary/search?' + urllib.parse.urlencode(
+        {'q': q, 'limit': '50', 'filter': 'buyingOptions:{FIXED_PRICE},priceCurrency:USD,conditions:{NEW}'})
+    req = urllib.request.Request(url, headers={'Authorization': 'Bearer ' + tok, 'X-EBAY-C-MARKETPLACE-ID': 'EBAY_US'})
+    return json.load(urllib.request.urlopen(req, timeout=30)).get('itemSummaries', [])
+
+
 def main():
     cid, secret = (os.environ.get('EBAY_CLIENT_ID') or '').strip(), (os.environ.get('EBAY_CLIENT_SECRET') or '').strip()
     print('Client ID looks like', ('a Sandbox' if '-SBX-' in cid else 'a Production' if '-PRD-' in cid else 'an unknown'), 'key;', len(cid), 'characters')
@@ -73,7 +103,9 @@ def main():
     def age(q):
         p = prices.get(q)
         return 9999 if not p else (today - datetime.date.fromisoformat(p[3])).days
-    todo = sorted((t for t in targets if age(t['q']) >= KEEP_DAYS), key=lambda t: -age(t['q']))[:MAX_CALLS]
+    # sealed boxes first (a few dozen, refreshed every 3 days), then players, oldest first
+    todo = sorted((t for t in targets if age(t['q']) >= (BOX_KEEP_DAYS if t.get('box') else KEEP_DAYS)),
+                  key=lambda t: (not t.get('box'), -age(t['q'])))[:MAX_CALLS]
     print(len(targets), 'targets,', len(todo), 'to look up')
     tok = token(cid, secret)
     done = 0
@@ -87,7 +119,7 @@ def main():
         if time.time() - started > TIME_BUDGET:
             print('Time budget used; the rest will be looked up on the next run.'); break
         try:
-            s = summarize(search(tok, t['q']), t['player'])
+            s = summarize_box(search_any(tok, t['q']), t['q']) if t.get('box') else summarize(search(tok, t['q']), t['player'])
         except urllib.error.HTTPError as e:
             if e.code == 429: print('eBay call limit reached; stopping for today.'); break
             if e.code == 401: tok = token(cid, secret); continue
