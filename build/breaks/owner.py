@@ -404,6 +404,25 @@ def main():
         hl.append('<div><span>Best pick-your-spot buy</span><a href="#/b/%s"><b>%s</b></a><div class="sm">%s for %s%s%s</div></div>' % (
             r['id'], esc(r['title']), esc(sp['label']), money(sp['price']), (', with ' + esc(', '.join(sp['big'][:2]))) if sp['big'] else '', ' (already sold)' if sp['status'] == 'sold' else ''))
     if hl: ov.insert(1, '<div class="picks">%s</div>' % ''.join(hl))
+    lk = lambda a: '<a href="#/b/%s">%s</a>' % (a['id'], esc(a['title']))
+    mk = [a for a in breaks if a['markup']]
+    tk = []
+    below = [a for a in mk if a['markup'] < 1.0]
+    close = [a for a in mk if 1.0 <= a['markup'] <= 1.25]
+    high = sorted([a for a in mk if a['markup'] > 1.5], key=lambda a: -a['markup'])
+    if below: tk.append('Selling for less than the boxes cost, so buyers get more than they pay: %s.' % ', '.join('%s (%d%% under)' % (lk(a), round((1 - a['markup']) * 100)) for a in below))
+    if close: tk.append('Close to box cost: %s.' % ', '.join('%s (+%d%%)' % (lk(a), round((a['markup'] - 1) * 100)) for a in sorted(close, key=lambda a: a['markup'])))
+    if high: tk.append('Highest markups: %s.' % ', '.join('%s (+%d%%)' % (lk(a), round((a['markup'] - 1) * 100)) for a in high))
+    for a in breaks:
+        if a['pick'] and a['best_spots']:
+            g = [sp for sp in a['best_spots'] if sp['value'] and sp['value'] >= 1.4 and sp['status'] != 'sold'][:2]
+            bad = sorted([sp for sp in a['spots'] if sp['value'] and sp['value'] < 0.5 and sp['price']], key=lambda sp: sp['value'])[:2]
+            if g or bad:
+                tk.append('%s: %s%s%s.' % (lk(a), ('best open spots ' + ', '.join('%s %s (%.1fx)' % (esc(sp['label']), money(sp['price']), sp['value']) for sp in g)) if g else '',
+                          '; ' if g and bad else '', ('weakest ' + ', '.join('%s %s (%.1fx)' % (esc(sp['label']), money(sp['price']), sp['value']) for sp in bad)) if bad else ''))
+    nobox = [a for a in breaks if not a['box_cost']]
+    if nobox: tk.append('Not scored yet: %s, waiting on a box price.' % ', '.join(lk(a) for a in nobox))
+    if tk: ov.insert(2 if hl else 1, '<div class="picks takeaways"><div><span>What this means</span><ul>%s</ul></div></div>' % ''.join('<li>%s</li>' % t for t in tk))
     secs.append(('overview', 'Overview', ''.join(ov)))
 
     lede = ('Which breaks give you the best shot at a big hit for what it costs to get in, one ranking per breaker. Each break\'s biggest chase names are its '
@@ -438,7 +457,30 @@ def main():
             bits.append('Best open pick spot: <b>%s</b> in <a href="#/b/%s">%s</a> for %s (%.2fx hits for the price, %s value)%s.' % (
                 esc(sp['label']), r['id'], esc(r['title']), money(sp['price']), sp['hit_deal'],
                 ('%.2fx' % sp['value']) if sp['value'] else 'not yet scored for', (', holds ' + esc(', '.join(sp['big'][:2]))) if sp['big'] else ''))
-        return ('<div class="picks"><div>%s</div></div>' % '<br>'.join(bits)) if bits else ''
+        ranked_g = sorted([a for a in group if a['adj']], key=lambda a: a['adj'])
+        lnk = lambda a: '<a href="#/b/%s">%s</a>' % (a['id'], esc(a['title']))
+        nxt = [a for a in rnd[1:3] if not (len(ranked_g) > 2 and a is ranked_g[-1])]
+        if nxt:
+            bits.append('Next: %s.' % ', then '.join(lnk(a) for a in nxt))
+        if len(ranked_g) > 2:
+            w = ranked_g[-1]
+            hi = max(ranked_g, key=lambda a: a['chance'] or 0)
+            if w is hi and w['up_value'] and w['up_value'] < 0.9:
+                bits.append('Last: %s has the best odds at a big name here (%d%%), but at %s a spot it\'s overpriced (%.2fx value).' % (lnk(w), round(w['chance'] * 100), money(w['entry']), w['up_value']))
+            else:
+                bits.append('Last: %s, %s.' % (lnk(w), 'mostly on price (%.2fx value)' % w['up_value'] if w['up_value'] and w['up_value'] < 0.75 else 'with the lowest odds at a top chase name for its price'))
+        for a in group:
+            if a['up_spot'] and a['up_spot']['status'] == 'sold' and ranked_g and a is ranked_g[0]:
+                bits.append('Ranks first, but its best spot is already sold: %s for %s%s.' % (esc(a['up_spot']['label']), money(a['up_spot']['price']),
+                    (', holding ' + esc(a['up_spot']['big'][0])) if a['up_spot']['big'] else ''))
+        over = [a for a in rnd if a['up_value'] and a['up_value'] >= 1.0]
+        if over:
+            bits.append('Worth more than the price: %s.' % ', '.join('%s (%.2fx)' % (lnk(a), a['up_value']) for a in over))
+        gaps = [a for a in group if not a['up_value']] 
+        thin = [a for a in group if a['star_cover'] < 0.3]
+        if gaps: bits.append('Not fully scored yet: %s (no box cost).' % ', '.join(lnk(a) for a in gaps))
+        if thin: bits.append('Few star prices so far for %s, so treat those rankings loosely.' % ', '.join(lnk(a) for a in thin))
+        return ('<div class="picks takeaways"><div><span>What this means</span><ul>%s</ul></div></div>' % ''.join('<li>%s</li>' % b for b in bits)) if bits else ''
 
     groups = [(nm, [a for a in breaks if a['breaker'] == nm]) for nm in BREAKER.values()]
     groups = [(nm, g) for nm, g in groups if g]
@@ -560,7 +602,8 @@ th{text-align:left;font-size:12px;color:var(--ink3);font-weight:600;padding:8px 
 .tag{font-size:11px;border:1px solid var(--line);border-radius:999px;padding:0 6px;color:var(--ink2)}
 .ok{color:var(--up)}.warn{color:#a6761d}.bad{color:var(--dn)}
 .conf{font-size:12px;font-weight:700;border-radius:999px;padding:1px 8px;white-space:nowrap}.conf.high{background:#e3f3e9;color:var(--up)}.conf.medium{background:#f7efd9;color:#8a6a14}.conf.low{background:#f6e3de;color:var(--dn)}
-.picks{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px;margin:6px 0 18px}.picks>div{background:var(--panel);border:1px solid var(--line);border-left:4px solid #3ccf9a;border-radius:10px;padding:10px 12px}.picks span{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.04em;opacity:.7;margin-bottom:4px}
+.picks{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px;margin:6px 0 18px}.picks>div{background:var(--panel);border:1px solid var(--line);border-left:4px solid #3ccf9a;border-radius:10px;padding:10px 12px}.takeaways{grid-template-columns:1fr}.takeaways ul{margin:4px 0 0;padding-left:18px}.takeaways li{margin:3px 0}
+.picks span{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.04em;opacity:.7;margin-bottom:4px}
 .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin:8px 0 18px}.stats div{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
 .stats b{display:block;font-size:22px}.stats span{color:var(--ink3);font-size:13px}
 .list{display:grid;gap:8px}.item{display:grid;grid-template-columns:1.4fr 1fr 1fr auto;gap:12px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 12px;color:var(--ink);text-decoration:none}
