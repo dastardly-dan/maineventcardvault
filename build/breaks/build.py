@@ -1442,7 +1442,7 @@ gb1046 = dict(
     id='gb1046', title='GB1046 Midnight Chrome Inception', kicker='Acme Packs · Random team · NFL',
     url=acme_url(GB1046_H), when=ACME_FRI % ('10:00 pm', '11:00 pm'),
     facts=['4 boxes', '28 team spots (24 teams, 4 combos)', '$127 per spot, $31.75 for a 25% filler', 'Teams randomized live'],
-    format='team', checked=ACME_CHK,
+    format='team', checked='When checked on November 27, 2026, around 6:50 pm Eastern, the break was listed and spots were for sale.',
     boxes=[dict(BOX_CHROME_H, k='delight', short='Chrome Delight', c='#f2c14e', full='2026 Topps Chrome Football Breaker\'s Delight (1 box)',
                 types='Chrome base and Refractors, rookie cards, autographs, inserts.'),
            dict(BOX_MIDNIGHT, full='2026 Topps Midnight Football Hobby (1 box)'), BOX_CHROME_H],
