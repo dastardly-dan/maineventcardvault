@@ -249,7 +249,7 @@ team spot, box by box. Linked from the storefront's Breaks menu; every page carr
   3n. Friday checks (Daniel, Nov 27, 2026): two scheduled tasks, "Friday check: all breakers" at 1:00 pm Eastern and
       "Friday check: JWJ" at 6:00 pm Eastern (CRON_TZ America/New_York, so they stay at 1 and 6 pm through daylight saving).
       They don't run the builder gate. Each starts a fresh store check, works the queue by `build/breaks/page_builder.md`
-      and tells Daniel what's new, or that nothing is up. The Break guides page says so (hub.py intro).
+      and tells Daniel what's new, or that nothing is up. The Break guides page doesn't mention the schedule (Daniel took the note off, Nov 27).
   3k. Page builder timing (Daniel, Nov 25, 2026): the scheduled task fires every 5 minutes (at :03, :08, ...) on Sonnet and
       first runs `python3 build/breaks/builder_gate.py`. It works only when that prints RUN: during the first 4 hours of a
       breaker's stream (the watcher starts looking for the YouTube stream 2 hours before the first scheduled break and
