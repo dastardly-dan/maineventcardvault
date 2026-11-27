@@ -241,6 +241,11 @@ team spot, box by box. Linked from the storefront's Breaks menu; every page carr
       .assetsignore keeps owner/ and owner.js from being served as files. It shows value for cost per spot for every
       current break, price data status, and a Pulls section for the stream transcripts work that comes next. The repo is
       public, so the numbers behind it can be worked out from prices.json; the password protects the page, not the data.
+  3q. Stream transcripts (Daniel, Nov 27, 2026): `build/breaks/transcripts.py <YouTube link>` saves a video's captions
+      (uploader's, else YouTube's automatic ones) with yt-dlp to build/breaks/transcripts/<id>.json and .txt, plus
+      index.json. The "Stream transcript" GitHub job runs it, but YouTube blocks GitHub's servers ("Sign in to confirm
+      you're not a bot", tested on RGL #6128's video), so run it on Daniel's computer through the Claude desktop app
+      instead and commit the files. Descript can't take YouTube links. A live stream has no captions until it ends.
   3n. Friday checks (Daniel, Nov 27, 2026): two scheduled tasks, "Friday check: all breakers" at 1:00 pm Eastern and
       "Friday check: JWJ" at 6:00 pm Eastern (CRON_TZ America/New_York, so they stay at 1 and 6 pm through daylight saving).
       They don't run the builder gate. Each starts a fresh store check, works the queue by `build/breaks/page_builder.md`
