@@ -1610,18 +1610,25 @@ _cc878_base = [('ac-m', 'A & C', 'AC', 'M', 145), ('a-w', 'A', 'A', 'F', 115), (
                ('r-w', 'R', 'R', 'F', 125), ('s-m', 'S', 'S', 'M', 120), ('s-w', 'S', 'S', 'F', 160), ('t-m', 'T', 'T', 'M', 70), ('t-w', 'T', 'T', 'F', 140),
                ('uvw', 'U-V-W', 'UVW', None, 90), ('xyz', 'X-Y-Z-123', 'XYZ#', None, 45)]
 cc878_spots = [wwe_spot(i, lab, ls, g, pr, bool(a)) for (i, lab, ls, g, pr), a in zip(_cc878_base, _cc878_avail)]
+CC878_WOMEN = lib_women('2025-topps-chrome-wwe')
+def cc878_gender(n):
+    return 'F' if (n in CC878_WOMEN or key_of(n) in CC878_WOMEN or rgl_wwe_gender(n) == 'F') else 'M'
 cc878 = dict(
     id='cc878', title='CC878 2 Year Chrome PYL', kicker='Colfax Collectibles · Pick your letter · WWE',
     url=colfax_url(CC878_H), when=CC_SUN,
-    facts=['4 boxes (2 listed here)', '27 letter spots', '$35 to $200 per spot', '22 open, 5 sold as of 1:15 pm Eastern'],
+    facts=['4 boxes', '27 letter spots', '$35 to $200 per spot', '22 open, 5 sold as of 1:15 pm Eastern'],
     format='pyl', checked='Availability checked against Colfax\'s store data on November 27, 2026, around 1:15 pm Eastern. Spots sell fast, so check the live page before you buy.',
-    boxes=[dict(WWE_BOX['chrome'], full='2026 Topps Chrome WWE (1 Hobby, 1 Chrome Delight)')],
+    boxes=[dict(WWE_BOX['chrome'], k='chrome25', short='2025 Chrome', c='#5aa9ff', full='2025 Topps Chrome WWE (1 Hobby, 1 Chrome Delight)', kind='200-card base, 100 image variations, autographs, inserts',
+                types='Base, the Image Variations set, autographs (Gold Refractor base autographs plus Red Brand, Blue Brand and NXT sets, Hall of Fame, Legendary, Main Event and more) and inserts like Helix, Mania, Persona and Slammy.'),
+           dict(WWE_BOX['chrome'], full='2026 Topps Chrome WWE (1 Hobby, 1 Chrome Delight)')],
     spots=cc878_spots, rules=WWE_RULES,
-    notes=['The break has four boxes: 2025 Topps Chrome Hobby, 2026 Topps Chrome Hobby, 2025 Topps Chrome Delight and 2026 Topps Chrome Delight. This guide has the 2026 Chrome WWE checklist only, because we don\'t have the 2025 Chrome WWE checklist yet. Check those cards with Colfax.',
+    notes=['The break has four boxes: a Hobby and a Chrome Delight box from 2025 Topps Chrome WWE and from 2026 Topps Chrome WWE. Each year\'s pair is shown as one box here.',
            'Chrome Delight is a Topps Chrome WWE box, so it uses the same checklist as the Hobby box.',
+           'The 2025 Chrome WWE list comes from Checklist Center, not from a Topps file. Its Image Variations set (cards 201 to 300) reuses the base names, so it adds no new names.',
            'Autograph and insert lists come from the published checklists. A name only in an autograph set is much harder to pull than a base card.'],
     sources=[['CC878 break page (Colfax Collectibles)', colfax_url(CC878_H)],
-             ['Chrome WWE checklist', 'https://www.checklistcenter.com/2026-topps-chrome-wwe-wrestling-card-checklist/']],
+             ['2025 Topps Chrome WWE checklist (Checklist Center)', 'https://www.checklistcenter.com/2025-topps-chrome-wwe-wrestling-card-checklist/'],
+             ['2026 Topps Chrome WWE checklist (Checklist Center)', 'https://www.checklistcenter.com/2026-topps-chrome-wwe-wrestling-card-checklist/']],
 )
 
 # RGL #6145 Chrome & Midnight PYT #2 (Raiders random to all)
@@ -1737,7 +1744,7 @@ if __name__ == '__main__':
         'cosmic': lib_mlb_product('2026-topps-cosmic-chrome-baseball'), 'museum': lib_mlb_product('2026-topps-museum-collection-baseball')}); built.append(write(cc876, n, u))
     n, u = letter_break(cc877, {'finestff': lib_letter_product('2026-topps-finest-fantastic-four'), 'pop': lib_letter_product('2026-leaf-pop-century'),
         'neon': lib_letter_product('2026-topps-neon-marvel'), 'deadpool': lib_letter_product('2025-topps-chrome-deadpool')}, None, alt=False); built.append(write(cc877, n, u))
-    n, u = letter_break(cc878, {'chrome': W.CHROME}, wwe_gender); built.append(write(cc878, n, u))
+    n, u = letter_break(cc878, {'chrome25': lib_letter_product('2025-topps-chrome-wwe'), 'chrome': W.CHROME}, cc878_gender); built.append(write(cc878, n, u))
     n, u = letter_break(cc879, {'neon': lib_letter_product('2026-topps-neon-marvel'), 'finestff': lib_letter_product('2026-topps-finest-fantastic-four'),
         'mintm': lib_letter_product('2026-topps-mint-marvel')}, None, alt=False); built.append(write(cc879, n, u))
     n, u = team_break(rgl6145, {'chrome': CH, 'midnight': MN}); built.append(write(rgl6145, n, u))
