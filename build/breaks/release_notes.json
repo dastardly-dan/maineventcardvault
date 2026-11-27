@@ -2,6 +2,27 @@
  "_how": "Newest first. Add a new release at the top of 'releases', or add items to today's. tag: New, Improved or Fixed. area: Break guides, Spot Builder or Site. Then run python3 build/breaks/hub.py, which writes breaks/release-notes.html.",
  "releases": [
   {
+   "date": "November 27, 2026",
+   "title": "New guides for Saturday and Sunday breaks",
+   "items": [
+    [
+     "New",
+     "Break guides",
+     "Added guides for four Colfax breaks on Sunday, November 29: CC876 Cosmic & Museum X (random team, 27 spots, $100), CC877 Amy's Birthday Break (random letter, 20 spots, $105), CC878 2 Year Chrome PYL (WWE, pick your letter, 27 spots) and CC879 Finest Neon Mint (random letter, 18 spots, $105)."
+    ],
+    [
+     "New",
+     "Break guides",
+     "Added guides for three Run Good Life breaks on Saturday, November 28: #6145 Chrome & Midnight PYT (Raiders random to all), #6146 Half Case Gilded Collection (random team, 20 spots, $208) and #6147 Joy of Stadium Club (random team, 20 spots, $162)."
+    ],
+    [
+     "Improved",
+     "Break guides",
+     "CC877 and CC878 are missing some boxes because we don't have their checklists yet. Each page says which ones."
+    ]
+   ]
+  },
+  {
    "date": "November 26, 2026",
    "title": "Run Good Life break night wrap up",
    "items": [

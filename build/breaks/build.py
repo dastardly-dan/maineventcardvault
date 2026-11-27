@@ -270,9 +270,9 @@ def auto_stream(cfg):
 _NFL, _MLB, _NBA = [['football', 'American football']], [['baseball', 'baseball']], [['basketball', 'basketball']]
 _WWE, _UFC, _NASCAR = [['wrestl', 'wrestler']], [['martial', 'fighter']], [['racing', 'racing driver']]
 WIKI_BY_ID = {}
-for _ids, _h in ((('cc872', 'gb1037', 'gb1038a', 'gb1038b', 'gb1041', 'gb1043', 'gb1044', 'rgl6130', 'rgl6132', 'rgl6136', 'rgl6140'), _NFL),
-                  (('gb1042', 'rgl6129', 'rgl6134', 'rgl6137', 'rgl6138'), _MLB), (('jwj0244', 'rgl6131', 'rgl6139'), _NBA),
-                  (('cc871', 'jwj0246', 'jwj0247u', 'rgl6128', 'rgl612xwwe2'), _WWE), (('rgl6142',), _UFC), (('cc875', 'rgl6133'), _NASCAR),
+for _ids, _h in ((('cc872', 'gb1037', 'gb1038a', 'gb1038b', 'gb1041', 'gb1043', 'gb1044', 'rgl6130', 'rgl6132', 'rgl6136', 'rgl6140', 'rgl6145'), _NFL),
+                  (('gb1042', 'rgl6129', 'rgl6134', 'rgl6137', 'rgl6138', 'rgl6146', 'cc876'), _MLB), (('jwj0244', 'rgl6131', 'rgl6139', 'rgl6147'), _NBA),
+                  (('cc871', 'cc878', 'jwj0246', 'jwj0247u', 'rgl6128', 'rgl612xwwe2'), _WWE), (('rgl6142',), _UFC), (('cc875', 'rgl6133'), _NASCAR),
                   (('gb1045',), _NFL + _NBA), (('gb1040',), _NFL + _UFC + _NBA + _MLB + _WWE), (('rgl6141',), _NFL + _MLB + _NBA)):
     for _i in _ids: WIKI_BY_ID[_i] = _h
 
@@ -1502,6 +1502,191 @@ ACME_CL_NOTE = ('Checklists show what the maker planned for a product when it wa
                 'It goes to whichever spot its name or team matches, under Acme\'s rules.')
 for _c in (gb1041, gb1042, gb1043, gb1044, gb1045): _c['notes'].append(ACME_CL_NOTE)
 
+# ---------------- Nov 27 check: Colfax CC876 to CC879 (Sunday Nov 29) and RGL #6145 to #6147 (Saturday Nov 28) ----------------
+SAT = 'Saturday, November 28, 2026'
+CC_SUN = 'Sunday, November 29, 2026, 5:00 pm Central (6:00 pm Eastern)'
+def colfax_url(h): return 'https://colfaxcc.com/products/' + h
+CC_CHK = 'When checked on November 27, 2026, around 1:15 pm Eastern, the listing\'s tags showed %d break spots and %d filler spots, but the description lists %d spots, so the counts don\'t match; ask Colfax.'
+CC_FILLER = 'Filler entries are sold too (%s for a 25%% chance at a spot); see Colfax\'s listing for how fillers work.'
+CC_MULTI = cc872['rules'][2]
+CC_TEAM_RULE = ['Cards go to the team on the card', ['Colfax\'s rules: a card goes to the team listed on the front or back, not the jersey.',
+                'Retired players go to the team listed on their card. This guide files old franchises with today\'s team (Expos to the Nationals, old Cleveland to the Guardians, Washington Senators to the Twins and Browns to the Orioles).']]
+CC_LETTER_THE = 'A leading "The" doesn\'t count (Colfax\'s listing says "T (No The)"), so The Thing is T and The Maker is M.'
+
+# CC876 Cosmic & Museum X (Random Team)
+CC876_H = 'cc876-cosmic-museum-x-random-team'
+_cc876_teams = ['Angels', 'Astros', 'Athletics', 'Blue Jays', 'Braves', 'Brewers', 'Cardinals', 'Cubs', None, 'Dodgers', 'Giants', 'Guardians', 'Mariners', None, 'Mets',
+                'Nationals', 'Orioles', None, 'Phillies', 'Pirates', 'Rays', 'Red Sox', 'Reds', 'Royals', 'Tigers', 'White Sox', 'Yankees']
+_cc876_pairs = iter([("D'Backs / Rockies", ['Diamondbacks', 'Rockies']), ('Marlins / Twins', ['Marlins', 'Twins']), ('Padres / Rangers', ['Padres', 'Rangers'])])
+def _cc876_spot(t):
+    if t is None:
+        lab, ts = next(_cc876_pairs); return team_spot(tid(lab), lab, ts)
+    return team_spot(tid(t), t, [t])
+cc876 = dict(
+    id='cc876', title='CC876 Cosmic & Museum X (Random Team)', kicker='Colfax Collectibles · Random team · MLB',
+    url=colfax_url(CC876_H), when=CC_SUN,
+    facts=['4 boxes', '27 team spots', '$100 per spot, $25 filler', 'Teams randomized live'],
+    format='team', checked=CC_CHK % (21, 24, 27),
+    boxes=[dict(k='ginter', short='Allen & Ginter X', c='#f2c14e', full='2026 Topps Allen & Ginter X Baseball Hobby (1 box)', kind='Base, autographs, inserts, multi-player cards',
+                types='Base cards, autographs, inserts and multi-player cards from the Allen & Ginter checklist.'),
+           dict(next(b for b in gb1042['boxes'] if b['k'] == 'logo'), full='2026 Topps Chrome Baseball Logofractor Edition (1 box)'),
+           dict(next(b for b in rgl6138['boxes'] if b['k'] == 'cosmic'), full='2026 Topps Cosmic Chrome Baseball Hobby (1 box)'),
+           dict(next(b for b in gb1042['boxes'] if b['k'] == 'museum'), full='2026 Topps Museum Collection Baseball Hobby (1 box)')],
+    spots=[_cc876_spot(t) for t in _cc876_teams],
+    rules=[['How the 27 spots work', ['Colfax\'s listing sets 27 spots: 24 single teams and three pairs (D\'Backs and Rockies, Marlins and Twins, Padres and Rangers). Teams are randomized live on stream.']],
+           CC_TEAM_RULE, CC_MULTI],
+    notes=['The listing says "Allen & Ginter X". This guide uses the 2026 Topps Allen & Ginter Baseball checklist for that box.',
+           'The listing says "2026 Topps Chrome Logofractor" and "2026 Topps Cosmic". This guide uses the Chrome Baseball Logofractor Edition and Cosmic Chrome Baseball checklists.',
+           'Cards are listed with the team the official checklist gives them.',
+           CC_FILLER % '$25'],
+    sources=[['CC876 break page (Colfax Collectibles)', colfax_url(CC876_H)],
+             _src('2026-topps-allen-and-ginter-baseball', 'Topps Allen & Ginter Baseball'), _src('2026-topps-chrome-baseball-logofractor-edition', 'Topps Chrome Baseball Logofractor Edition'),
+             _src('2026-topps-cosmic-chrome-baseball', 'Topps Cosmic Chrome Baseball'), _src('2026-topps-museum-collection-baseball', 'Topps Museum Collection Baseball')],
+)
+
+# CC879 Finest Neon Mint (Random Letter)
+CC879_H = 'cc879-finest-neon-mint-random-letter'
+BOX_NEON = dict(k='neon', short='Marvel Neon', c='#8a6be0', full='2026 Topps Marvel Neon Hobby (1 box)', kind='Marvel characters, neon-style parallels, inserts',
+                types='Base with neon parallels, inserts and autographs.')
+BOX_MINT_M = dict(k='mintm', short='Marvel Mint', c='#3ccf9a', full='2026 Topps Marvel Mint (1 box)', kind='Marvel characters, base, autographs, inserts',
+                  types='Base, autographs and inserts from the Marvel Mint checklist.')
+BOX_FINEST_FF = dict(k='finestff', short='Finest Fantastic Four', c='#e2545e', full='2026 Topps Finest Fantastic Four Hobby (1 box)', kind='Base, autographs, inserts, multi-character cards',
+                     types='Finest base and Refractor parallels, autographs, inserts and multi-character cards from the Fantastic Four checklist.')
+cc879 = dict(
+    id='cc879', title='CC879 Finest Neon Mint (Random Letter)', kicker='Colfax Collectibles · Random letter · Marvel',
+    url=colfax_url(CC879_H), when=CC_SUN,
+    facts=['4 boxes', '18 letter spots', '$105 per spot, $26.25 filler', 'Letters randomized live'],
+    format='random', checked=CC_CHK % (14, 16, 18),
+    boxes=[dict(BOX_NEON, full='2026 Topps Marvel Neon Hobby (2 boxes)'), BOX_FINEST_FF, BOX_MINT_M],
+    spots=[cc_spot('A', 'A'), cc_spot('B', 'B'), cc_spot('C', 'C'), cc_spot('D', 'D'), cc_spot('E / F / U', 'EFU'), cc_spot('G', 'G'), cc_spot('H', 'H'),
+           cc_spot('I', 'I'), cc_spot('J / N', 'JN'), cc_spot('K / L', 'KL'), cc_spot('M', 'M'), cc_spot('O / Q / Y', 'OQY'), cc_spot('P / X / Z', 'PXZ'),
+           cc_spot('R', 'R'), cc_spot('S', 'S'), cc_spot('T (No The)', 'T'), cc_spot('V', 'V'), cc_spot('W', 'W'), cc_spot('# (numbers)', '#')],
+    rules=[['How the 18 spots work', ['Colfax\'s listing sets 18 letter spots. Several share a spot: E, F and U; J and N; K and L; O, Q and Y; P, X and Z. Letters are randomized live on stream.']],
+           ['First letter of the name on the card', ['The spot goes by the first letter of the name printed on the card: Spider-Man is S, Captain America is C. For a person, that\'s the first name.', CC_LETTER_THE,
+                                                     'Colfax\'s listing doesn\'t say how it handles characters, so check with Colfax.']],
+           ['Cards with more than one character', ['Each character on a dual or multi-character card is listed under their own letter.', CC_MULTI[1][0]]]],
+    notes=['The Finest Fantastic Four decade cards (1960s, 1970s and so on) start with a number, and Colfax\'s listing has no spot for them. They show under a number spot here; ask Colfax who gets them.',
+           'Lists come from the official Topps checklists.', CC_FILLER % '$26.25'],
+    sources=[['CC879 break page (Colfax Collectibles)', colfax_url(CC879_H)], _src('2026-topps-neon-marvel', 'Topps Marvel Neon'),
+             _src('2026-topps-finest-fantastic-four', 'Topps Finest Fantastic Four'), _src('2026-topps-mint-marvel', 'Topps Marvel Mint')],
+)
+
+# CC877 Amy's Birthday Break (Random Letter)
+CC877_H = 'cc877-amys-birthday-break-random-letter'
+cc877 = dict(
+    id='cc877', title="CC877 Amy's Birthday Break (Random Letter)", kicker='Colfax Collectibles · Random letter · Multi-theme',
+    url=colfax_url(CC877_H), when=CC_SUN,
+    facts=['6 boxes (4 listed here)', '20 letter spots', '$105 per spot, $26.25 filler', 'Letters randomized live'],
+    format='random', checked=CC_CHK % (15, 20, 20),
+    boxes=[dict(BOX_FINEST_FF), 
+           dict(k='pop', short='Leaf Pop Century', c='#f2c14e', full='2026 Leaf Pop Century (1 box)', kind='Autographs and multi-signature cards',
+                types='Autographs and multi-signature cards from the Leaf Pop Century checklist.'),
+           dict(BOX_NEON),
+           dict(k='deadpool', short='Chrome Deadpool', c='#e2545e', full='2025 Topps Chrome Deadpool Hobby (1 box)', kind='Base, autographs, inserts, multi-character cards',
+                types='Chrome base and Refractor parallels, autographs, inserts and multi-character cards from the Deadpool checklist.')],
+    spots=[cc_spot('A', 'A'), cc_spot('B', 'B'), cc_spot('C', 'C'), cc_spot('D', 'D'), cc_spot('E', 'E'), cc_spot('F / Z', 'FZ'), cc_spot('G', 'G'), cc_spot('H / Y', 'HY'),
+           cc_spot('I', 'I'), cc_spot('J', 'J'), cc_spot('K', 'K'), cc_spot('L / O', 'LO'), cc_spot('M', 'M'), cc_spot('N', 'N'), cc_spot('P', 'P'), cc_spot('Q / R / X', 'QRX'),
+           cc_spot('SA-SH', pre=[('SA', 'SH')]), cc_spot('SI-SY', pre=[('SI', 'SY')]), cc_spot('T (No The)', 'T'), cc_spot('U / V / W', 'UVW'), cc_spot('# (numbers)', '#')],
+    rules=[['How the 20 spots work', ['Colfax\'s listing sets 20 letter spots. S is split on the second letter (SA-SH and SI-SY), and a few spots share letters: F and Z, H and Y, L and O, and Q, R and X. Letters are randomized live on stream.']],
+           ['First letter of the name on the card', ['The spot goes by the first letter of the name printed on the card. For a person, that\'s the first name; for a character, the name as printed.', CC_LETTER_THE,
+                                                     'Colfax\'s listing doesn\'t say whether it means first or last name for people, so check with Colfax.']],
+           ['Cards with more than one name', ['Each person or character on a dual or multi-person card is listed under their own letter.', CC_MULTI[1][0]]]],
+    notes=['Two boxes aren\'t in this guide yet because we don\'t have their checklists: 2025 Kakawow DC Aura and 2026 Card Fun Disney Chronoz. Check those cards with Colfax.',
+           'The Finest Fantastic Four decade cards (1960s, 1970s and so on) and 42 Dugg start with a number, and Colfax\'s listing has no spot for them. They show under a number spot here; ask Colfax who gets them.',
+           'No spot lists the letters after SY (like SZ), so a name starting SZ would have no spot; ask Colfax.',
+           'Lists come from the official Topps checklists and the Leaf checklist.', CC_FILLER % '$26.25'],
+    sources=[['CC877 break page (Colfax Collectibles)', colfax_url(CC877_H)], _src('2026-topps-finest-fantastic-four', 'Topps Finest Fantastic Four'),
+             _src('2026-topps-neon-marvel', 'Topps Marvel Neon'), _src('2025-topps-chrome-deadpool', 'Topps Chrome Deadpool'),
+             ['2026 Leaf Pop Century checklist (Leaf Trading Cards)', 'https://www.leaftradingcards.com/products/2026-leaf-pop-century']],
+)
+
+# CC878 2 Year Chrome PYL (WWE)
+CC878_H = 'cc878-2-year-chrome-pyl-pick-your-letter'
+_cc878_avail = [1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0]
+_cc878_base = [('ac-m', 'A & C', 'AC', 'M', 145), ('a-w', 'A', 'A', 'F', 115), ('b-m', 'B', 'B', 'M', 90), ('b-w', 'B', 'B', 'F', 105), ('c-w', 'C', 'C', 'F', 70),
+               ('d', 'D', 'D', None, 100), ('ef', 'E & F', 'EF', None, 70), ('g', 'G', 'G', None, 100), ('h', 'H', 'H', None, 35), ('i', 'I', 'I', None, 55),
+               ('j-m', 'J', 'J', 'M', 185), ('j-w', 'J', 'J', 'F', 55), ('k-m', 'K', 'K', 'M', 70), ('k-w', 'K', 'K', 'F', 115), ('l', 'L', 'L', None, 155),
+               ('m', 'M', 'M', None, 45), ('n', 'N', 'N', None, 35), ('o', 'O', 'O', None, 60), ('pq', 'P & Q', 'PQ', None, 50), ('r-m', 'R', 'R', 'M', 200),
+               ('r-w', 'R', 'R', 'F', 125), ('s-m', 'S', 'S', 'M', 120), ('s-w', 'S', 'S', 'F', 160), ('t-m', 'T', 'T', 'M', 70), ('t-w', 'T', 'T', 'F', 140),
+               ('uvw', 'U-V-W', 'UVW', None, 90), ('xyz', 'X-Y-Z-123', 'XYZ#', None, 45)]
+cc878_spots = [wwe_spot(i, lab, ls, g, pr, bool(a)) for (i, lab, ls, g, pr), a in zip(_cc878_base, _cc878_avail)]
+cc878 = dict(
+    id='cc878', title='CC878 2 Year Chrome PYL', kicker='Colfax Collectibles · Pick your letter · WWE',
+    url=colfax_url(CC878_H), when=CC_SUN,
+    facts=['4 boxes (2 listed here)', '27 letter spots', '$35 to $200 per spot', '22 open, 5 sold as of 1:15 pm Eastern'],
+    format='pyl', checked='Availability checked against Colfax\'s store data on November 27, 2026, around 1:15 pm Eastern. Spots sell fast, so check the live page before you buy.',
+    boxes=[dict(WWE_BOX['chrome'], full='2026 Topps Chrome WWE (1 Hobby, 1 Chrome Delight)')],
+    spots=cc878_spots, rules=WWE_RULES,
+    notes=['The break has four boxes: 2025 Topps Chrome Hobby, 2026 Topps Chrome Hobby, 2025 Topps Chrome Delight and 2026 Topps Chrome Delight. This guide has the 2026 Chrome WWE checklist only, because we don\'t have the 2025 Chrome WWE checklist yet. Check those cards with Colfax.',
+           'Chrome Delight is a Topps Chrome WWE box, so it uses the same checklist as the Hobby box.',
+           'Autograph and insert lists come from the published checklists. A name only in an autograph set is much harder to pull than a base card.'],
+    sources=[['CC878 break page (Colfax Collectibles)', colfax_url(CC878_H)],
+             ['Chrome WWE checklist', 'https://www.checklistcenter.com/2026-topps-chrome-wwe-wrestling-card-checklist/']],
+)
+
+# RGL #6145 Chrome & Midnight PYT #2 (Raiders random to all)
+rgl6145_v = [('Arizona Cardinals', 260, 1), ('Atlanta Falcons', 70, 1), ('Baltimore Ravens', 105, 1), ('Buffalo Bills', 235, 1), ('Carolina Panthers', 90, 1),
+             ('Chicago Bears', 215, 1), ('Cincinnati Bengals', 145, 1), ('Cleveland Browns', 170, 1), ('Dallas Cowboys', 140, 1), ('Denver Broncos', 110, 1),
+             ('Detroit Lions', 110, 1), ('Green Bay Packers', 65, 1), ('Houston Texans', 45, 0), ('Indianapolis Colts', 70, 1), ('Jacksonville Jaguars', 85, 1),
+             ('Kansas City Chiefs', 375, 1), ('Las Vegas Raiders', 0, 0), ('Los Angeles Chargers', 80, 1), ('Los Angeles Rams', 255, 0), ('Miami Dolphins', 65, 0),
+             ('Minnesota Vikings', 85, 0), ('New England Patriots', 360, 1), ('New Orleans Saints', 145, 1), ('New York Giants', 175, 1), ('New York Jets', 105, 1),
+             ('Philadelphia Eagles', 130, 1), ('Pittsburgh Steelers', 100, 1), ('San Francisco 49ers', 170, 0), ('Seattle Seahawks', 195, 1),
+             ('Tampa Bay Buccaneers', 160, 1), ('Tennessee Titans', 155, 1), ('Washington Commanders', 95, 1)]
+RGL6145_H = 'rgl-6145-chrome-midnight-pyt-11-28-26-raiders-random'
+rgl6145 = dict(
+    id='rgl6145', title='RGL #6145 Chrome & Midnight PYT', kicker='Run Good Life · Pick your team · NFL',
+    url=rgl_url(RGL6145_H), when=_when(SAT, '6:15 pm', '9:15 pm'),
+    facts=['5 boxes', '32 team spots', '$45 to $375 per team', 'Raiders randomized to all'],
+    live=dict(shop='rgl', handle=RGL6145_H),
+    format='pyt', checked='Availability checked against Run Good Life\'s store data on November 27, 2026, around 1:15 pm Eastern: 26 of 31 teams open.',
+    boxes=[dict(b) for b in rgl6130['boxes']],
+    spots=team_spots_from_variants(rgl6145_v, lambda f: f.split(' ')[-1], 'Las Vegas Raiders'),
+    rules=list(rgl6130['rules']),
+    notes=list(rgl6130['notes']) + ['Same boxes as the Chrome & Midnight PYT on November 25 (#6130): 2 Chrome Hobby, 1 Chrome Jumbo and 2 Midnight.',
+           'RGL\'s store lists the Cardinals at $260, while the variant title says $295. Check the price at checkout.'],
+    sources=[['RGL #6145 break page (Run Good Life)', rgl_url(RGL6145_H)]] + list(rgl6130['sources'][1:]),
+)
+
+# RGL #6146 Half Case Gilded Collection (Random Team)
+RGL6146_H = 'rgl-6146-half-case-gilded-collection-random-team-11-28-26'
+rgl6146 = dict(
+    id='rgl6146', title='RGL #6146 Half Case Gilded Collection (Random Team)', kicker='Run Good Life · Random team · MLB',
+    url=rgl_url(RGL6146_H), when=_when(SAT, '7:00 pm', '10:00 pm'),
+    facts=['5 boxes', '20 spots for 30 teams', '$208 per spot, fillers $52', 'Teams randomized live'],
+    format='team', checked='Spots were still for sale when checked on November 27, 2026, around 1:15 pm Eastern.',
+    boxes=[dict(next(b for b in rgl6138['boxes'] if b['k'] == 'cosmic'), full='2026 Topps Cosmic Chrome Baseball Hobby (1 box)'),
+           dict(next(b for b in rgl6138['boxes'] if b['k'] == 'finest'), full='2026 Topps Finest Baseball (1 Mega box)'),
+           dict(next(b for b in rgl6138['boxes'] if b['k'] == 'gilded'), full='2026 Topps Gilded Collection Baseball Hobby (2 boxes)'),
+           dict(next(b for b in rgl6129['boxes'] if b['k'] == 'chrome'), full='2026 Topps Chrome Baseball Jumbo (1 box)')],
+    spots=list(MLB_RANDOM_SPOTS),
+    rules=[RGL_LIVE_GROUPS, RGL_TEAM_RULE, RGL_MULTI],
+    notes=['Cards are listed with the team the official checklist gives them. Expos cards are filed with the Nationals, old Cleveland cards with the Guardians and Washington Senators cards with the Twins.',
+           'The Chrome box is a Jumbo, and this guide uses the standard Chrome Baseball checklist for it, so any Jumbo-only cards may be missing.',
+           'Filler entries are sold too ($52 each); see RGL\'s listing for how fillers work.'],
+    sources=[['RGL #6146 break page (Run Good Life)', rgl_url(RGL6146_H)], _src('2026-topps-cosmic-chrome-baseball', 'Topps Cosmic Chrome Baseball'),
+             rgl6129['sources'][5], rgl6129['sources'][3], rgl6129['sources'][1]],
+)
+
+# RGL #6147 Joy of Stadium Club (Random Team)
+RGL6147_H = 'rgl-6147-joy-of-stadium-club-random-team-11-28-26'
+rgl6147 = dict(
+    id='rgl6147', title='RGL #6147 Joy of Stadium Club (Random Team)', kicker='Run Good Life · Random team · NBA',
+    url=rgl_url(RGL6147_H), when=_when(SAT, '8:00 pm', '11:00 pm'),
+    facts=['4 boxes', '20 spots for 30 teams', '$162 per spot, fillers $40.50', 'Teams randomized live'],
+    format='team', checked='Spots were still for sale when checked on November 27, 2026, around 1:15 pm Eastern.',
+    boxes=[dict(next(b for b in rgl6131['boxes'] if b['k'] == 'sc')),
+           dict(next(b for b in rgl6131['boxes'] if b['k'] == 'joy')),
+           dict(next(b for b in rgl6131['boxes'] if b['k'] == 'flag'), full='2026-27 Topps Flagship Basketball Jumbo (1 box)')],
+    spots=[team_spot(tid(t), t, [t]) for t in NBA_TEAMS],
+    rules=[RGL_LIVE_GROUPS, RGL_TEAM_RULE, RGL_MULTI],
+    notes=['Same Stadium Club, Joy of Basketball and Flagship boxes as the Joy of Basketball breaks on November 25, with a Flagship Jumbo this time.',
+           'The Flagship box is a Jumbo, and this guide uses the standard Flagship Basketball checklist for it, so any Jumbo-only cards may be missing.',
+           'Seattle SuperSonics legends are filed with the Thunder here, since that\'s the same franchise today.',
+           'Filler entries are sold too ($40.50 each); see RGL\'s listing for how fillers work.'],
+    sources=[['RGL #6147 break page (Run Good Life)', rgl_url(RGL6147_H)]] + list(rgl6131['sources'][1:]),
+)
+
+
 if __name__ == '__main__':
     built = []
     n, u = letter_break(cc871, WWE_PRODUCTS, wwe_gender); built.append(write(cc871, n, u))
@@ -1547,6 +1732,19 @@ if __name__ == '__main__':
         'obsidian': lib_letter_product('2026-panini-obsidian-football'), 'bowman': lib_letter_product('2026-bowman-football')}, None, alt=False); built.append(write(gb1043, n, u))
     n, u = letter_break(gb1044, {'best': lib_letter_product('2026-bowman-u-best-football')}, None, alt=False); built.append(write(gb1044, n, u))
     n, u = letter_break(gb1045, {'lf25': lib_letter_product('2025-leaf-optichrome-football'), 'lf26': lib_letter_product('2026-leaf-optichrome-football')}, None, alt=False); built.append(write(gb1045, n, u))
+    # Nov 27 check: Colfax CC876 to CC879 and RGL #6145 to #6147
+    n, u = team_break(cc876, {'ginter': lib_mlb_product('2026-topps-allen-and-ginter-baseball'), 'logo': lib_mlb_product('2026-topps-chrome-baseball-logofractor-edition'),
+        'cosmic': lib_mlb_product('2026-topps-cosmic-chrome-baseball'), 'museum': lib_mlb_product('2026-topps-museum-collection-baseball')}); built.append(write(cc876, n, u))
+    n, u = letter_break(cc877, {'finestff': lib_letter_product('2026-topps-finest-fantastic-four'), 'pop': lib_letter_product('2026-leaf-pop-century'),
+        'neon': lib_letter_product('2026-topps-neon-marvel'), 'deadpool': lib_letter_product('2025-topps-chrome-deadpool')}, None, alt=False); built.append(write(cc877, n, u))
+    n, u = letter_break(cc878, {'chrome': W.CHROME}, wwe_gender); built.append(write(cc878, n, u))
+    n, u = letter_break(cc879, {'neon': lib_letter_product('2026-topps-neon-marvel'), 'finestff': lib_letter_product('2026-topps-finest-fantastic-four'),
+        'mintm': lib_letter_product('2026-topps-mint-marvel')}, None, alt=False); built.append(write(cc879, n, u))
+    n, u = team_break(rgl6145, {'chrome': CH, 'midnight': MN}); built.append(write(rgl6145, n, u))
+    n, u = team_break(rgl6146, {'cosmic': lib_mlb_product('2026-topps-cosmic-chrome-baseball'), 'finest': lib_mlb_product('2026-topps-finest-baseball'),
+        'gilded': lib_mlb_product('2026-topps-gilded-collection-baseball'), 'chrome': lib_mlb_product('2026-topps-chrome-baseball')}); built.append(write(rgl6146, n, u))
+    n, u = team_break(rgl6147, {'sc': lib_nba_product('2025-26-topps-stadium-club-basketball'), 'joy': lib_nba_product('2025-26-topps-x-bob-ross-the-joy-of-basketball'),
+        'flag': lib_nba_product('2026-27-topps-flagship-basketball')}); built.append(write(rgl6147, n, u))
     # RGL drafts: built only once RGL posts the listing (RGL_DRAFT_PREVIEW=<folder> writes previews there instead)
     PREVIEW = os.environ.get('RGL_DRAFT_PREVIEW')
     MLB6129 = lambda: {k: lib_mlb_product(v) for k, v in (('chrome', '2026-topps-chrome-baseball'), ('update', '2026-topps-update-series-baseball'),
