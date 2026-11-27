@@ -246,6 +246,14 @@ team spot, box by box. Linked from the storefront's Breaks menu; every page carr
       build.py records the checklist each box used in box_lib.json. An Owner menu at the top (dashboard sections, site
       pages, Cloudflare, GitHub jobs, eBay) lives only in this page. The repo is public, so the numbers behind it can be
       worked out from prices.json; the password protects the page, not the data.
+  3p3. Hit potential (Daniel, Nov 27, 2026: "what breaks could have me hit the highest ... consider the price to get into the break ...
+      if it's a pick your own break, list the spot, even if it's already bought"): owner.py ranks each break's 10 biggest chase names
+      (autograph points x star power, where star power is the player's highest typical eBay asking price in any product looked up),
+      the chance one spot holds one (random: share of spots holding one, adjusted when spots are grouped live; pick: the best spot
+      that holds one), cost per shot (entry / chance) and adjusted cost (cost per shot / value for the price, capped at 1.5x).
+      Shown in the dashboard's "Hit potential" section, three "right now" picks at the top of the Overview, and on each pick break
+      a "Best spots to buy into" list (every spot, sold or open, ranked by hits for the price and value for the price together).
+      Rebuilds whenever hub.py runs, so it follows the daily eBay prices and the weekly box prices.
   3p2. Box prices (Daniel, Nov 27, 2026: "find the lowest possible cost ... update those box prices every week"):
       build/breaks/box_prices.json holds the lowest current price for one sealed box of each box type in the current
       breaks, keyed "product|type" exactly as owner.py's parts() splits a box line ("2026 Topps Chrome Football (2 Hobby,

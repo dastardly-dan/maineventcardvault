@@ -185,7 +185,12 @@ def main():
     have = sum(1 for v in PR.values() if v and v[0])
     bpp = os.path.join(HERE, 'box_prices.json')
     BP = json.load(open(bpp, encoding='utf-8')) if os.path.exists(bpp) else {}
-    WEB = BP.get('boxes', {})   # lowest price found on the web for one sealed box, by 'product|type' (weekly scheduled task)
+    WEB = BP.get('boxes', {})
+    QP = {t['q']: t['player'] for t in targets if not t.get('box')}
+    STAR = {}   # star power: a player's highest typical eBay asking price in any product looked up
+    for q, v in PR.items():
+        if v and v[0] and q in QP:
+            k = dkey(QP[q]); STAR[k] = max(STAR.get(k, 0), v[0])   # lowest price found on the web for one sealed box, by 'product|type' (weekly scheduled task)
 
     breaks, missing_all = [], {}
     for b in cur:
@@ -223,6 +228,7 @@ def main():
         a['box_cost_partial'] = box_cost if box_missing and box_cost else None
         # ---- names: checklist points (hit depth) and eBay prices
         rows = []   # (spot index, points, price or None, name)
+        crow = []   # (spot index, autograph points, all hit points, name): what you could hit
         bmap = {x['k']: x for x in boxes}
         for si, s in enumerate(D['spots']):
             for bk, ents in D['names'].get(s['id'], {}).items():
@@ -236,8 +242,11 @@ def main():
                         + (W['A'] * math.sqrt(max(d[0], 0.25)) if 'A' in fl else 0) \
                         + (W['I'] * math.sqrt(max(d[1], 0.25)) if 'I' in fl else 0) \
                         + (W['M'] * math.sqrt(max(d[2], 0.25)) if 'M' in fl else 0)
-                    if '?' in fl: pts *= 0.5   # listed under two letters (nickname); half to each
-                    pts *= bx['n']
+                    ap = W['A'] * math.sqrt(max(d[0], 0.25)) if 'A' in fl else 0
+                    hp = ap + (W['I'] * math.sqrt(max(d[1], 0.25)) if 'I' in fl else 0) + (W['M'] * math.sqrt(max(d[2], 0.25)) if 'M' in fl else 0)
+                    if '?' in fl: pts *= 0.5; ap *= 0.5; hp *= 0.5   # listed under two letters (nickname); half to each
+                    pts *= bx['n']; ap *= bx['n']; hp *= bx['n']
+                    if hp: crow.append((si, ap, hp, e[0]))
                     v = PR.get(box_query(bx['full']) + ' ' + key_of(e[0]).strip())
                     px = v[0] if v and v[0] else None
                     bx['names'] += 1; bx['priced'] += 1 if px else 0
@@ -247,7 +256,7 @@ def main():
         a['cover'] = sum(r[1] for r in priced) / tw
         a['market'] = a['cover'] >= MIN_COVER and len(priced) >= 8
         ref = statistics.median([r[2] for r in priced]) if priced else 0
-        spots = [dict(label=s['label'], sub=s.get('g') or '', price=s.get('price') or a['flat'], val=0.0, top={}) for s in D['spots']]
+        spots = [dict(label=s['label'], sub=s.get('g') or '', price=s.get('price') or a['flat'], status=s.get('status') or '', val=0.0, top={}) for s in D['spots']]
         for si, w, px, nm in rows:
             sp = spots[si]
             v = w * (px or ref) if a['market'] else w
@@ -259,6 +268,44 @@ def main():
             s['fair'] = s['share'] * a['box_cost'] if a['box_cost'] else None
             s['deal'] = (s['fair'] / s['price']) if s['fair'] and s['price'] else None
         a['spots'] = spots
+        a['fair_spot'] = (a['box_cost'] / a['sold']) if a['box_cost'] and a['sold'] else None
+        # ---- hit potential: the biggest chase names (autographs x star power) and the cheapest shot at one
+        stars = [STAR[dkey(key_of(nm))] for _, _, _, nm in crow if dkey(key_of(nm)) in STAR]
+        sref = statistics.median(stars) if stars else 1.0
+        a['star_cover'] = len(set(nm for _, _, _, nm in crow if dkey(key_of(nm)) in STAR)) / (len(set(nm for *_, nm in crow)) or 1)
+        chase, hitv = {}, [0.0] * len(spots)
+        for si, ap, hp, nm in crow:
+            st = STAR.get(dkey(key_of(nm)), sref)
+            chase[nm] = chase.get(nm, 0) + ap * st; hitv[si] += hp * st
+        top = [nm for nm, v in sorted(chase.items(), key=lambda x: -x[1]) if v > 0][:10]
+        a['top_chase'] = [(nm, STAR.get(dkey(key_of(nm)))) for nm in top]
+        tset, th = set(top), sum(hitv) or 1
+        for si, sp in enumerate(spots):
+            sp['hit_share'] = hitv[si] / th
+            sp['big'] = sorted({nm for s2, _, _, nm in crow if s2 == si and nm in tset}, key=top.index)
+            sp['value'] = sp['deal'] if a['pick'] else ((a['fair_spot'] / a['flat']) if a['fair_spot'] and a['flat'] else None)
+        tot = a['total'] or 0
+        for sp in spots:   # hit value for the price: the spot's share of the hits next to its share of what the whole break costs
+            sp['hit_deal'] = (sp['hit_share'] / (sp['price'] / tot)) if a['pick'] and sp['price'] and tot else None
+            sp['score'] = math.sqrt(sp['hit_deal'] * sp['value']) if sp['hit_deal'] and sp['value'] else (sp['hit_deal'] or None)
+        a['best_spots'] = sorted([sp for sp in spots if sp['score']], key=lambda sp: -sp['score'])[:8] if a['pick'] else []
+        if a['pick']:
+            cands = [sp for sp in spots if sp['big'] and sp['price']]
+            best = max(cands, key=lambda sp: (100 / sp['price']) * (sp['value'] or 1) * len(sp['big']) ** 0.5) if cands else None
+            a['entry'] = best['price'] if best else (min(sp['price'] for sp in spots if sp['price']) if any(sp['price'] for sp in spots) else None)
+            a['chance'] = 1.0 if best else None
+            a['up_spot'] = best
+            a['up_value'] = best['value'] if best else None
+        else:
+            n_listed = len(spots); with_big = sum(1 for sp in spots if sp['big'])
+            g = (n_listed / a['sold']) if a['sold'] and a['sold'] < n_listed else 1   # spots grouped live hold several teams or letters each
+            a['chance'] = 1 - (1 - with_big / n_listed) ** g if n_listed else None
+            a['entry'], a['up_spot'] = a['flat'], None
+            a['up_value'] = spots[0]['value'] if spots else None
+        # what one shot at a top chase name costs you (entry over chance), then adjusted for the spot's value for the price
+        a['per_shot'] = (a['entry'] / a['chance']) if a['chance'] and a['entry'] else None
+        a['adj'] = (a['per_shot'] / min(a['up_value'] or 1.0, 1.5)) if a['per_shot'] else None
+        a['upside'] = a['adj']
         a['markup'] = (a['total'] / a['box_cost']) if a['total'] and a['box_cost'] else None
         a['fair_spot'] = (a['box_cost'] / a['sold']) if a['box_cost'] and a['sold'] else None
         # ---- what's missing, in plain words, with what would help
@@ -338,7 +385,42 @@ def main():
     ov.append('</tbody></table>')
     ov.append('<div class="stats"><div><b>%d</b><span>current breaks</span></div><div><b>%d</b><span>with all box costs</span></div><div><b>%d</b><span>using eBay player prices</span></div><div><b>%s</b><span>names with an eBay price</span></div></div>' % (
         len(breaks), sum(1 for a in breaks if a['box_cost']), sum(1 for a in breaks if a['market']), format(have, ',')))
+    # right-now picks, at the top of the overview
+    ranked = sorted([a for a in breaks if a['adj']], key=lambda a: a['adj'])
+    valued = sorted([a for a in breaks if a['up_value'] and not a['pick']], key=lambda a: -a['up_value'])
+    pspots = sorted([(a, sp) for a in breaks if a['pick'] for sp in a['best_spots'][:1]], key=lambda x: -x[1]['score'])
+    hl = []
+    if ranked:
+        r = ranked[0]
+        hl.append('<div><span>Best shot at a big hit for the money</span><a href="#/b/%s"><b>%s</b></a><div class="sm">%s%s to get in%s, about %s per shot at one of its 10 biggest chase names</div></div>' % (
+            r['id'], esc(r['title']), (esc(r['up_spot']['label']) + ' for ') if r['up_spot'] else '', money(r['entry']),
+            (', holds ' + esc(r['up_spot']['big'][0]) + (', already sold' if r['up_spot']['status'] == 'sold' else '')) if r['up_spot'] and r['up_spot']['big'] else (', %d%% chance' % round(r['chance'] * 100)), money(r['per_shot'])))
+    if valued:
+        r = valued[0]
+        hl.append('<div><span>Most value for a random spot</span><a href="#/b/%s"><b>%s</b></a><div class="sm">a %s spot is worth about %s (%.2fx)</div></div>' % (
+            r['id'], esc(r['title']), money(r['flat']), money(r['fair_spot']), r['up_value']))
+    if pspots:
+        r, sp = pspots[0]
+        hl.append('<div><span>Best pick-your-spot buy</span><a href="#/b/%s"><b>%s</b></a><div class="sm">%s for %s%s%s</div></div>' % (
+            r['id'], esc(r['title']), esc(sp['label']), money(sp['price']), (', with ' + esc(', '.join(sp['big'][:2]))) if sp['big'] else '', ' (already sold)' if sp['status'] == 'sold' else ''))
+    if hl: ov.insert(1, '<div class="picks">%s</div>' % ''.join(hl))
     secs.append(('overview', 'Overview', ''.join(ov)))
+
+    hp = ['<h2>Hit potential</h2><p class="lede">Which breaks give you the best shot at a big hit for what it costs to get in. Each break\'s biggest chase names are its '
+          'autographs weighted by star power (the player\'s typical eBay asking price in any product we\'ve looked up). The chance is for one spot to hold at least one '
+          'of those 10 names; for pick-your-spot breaks it\'s the best spot that holds one. <b>Cost per shot</b> is the price to get in divided by that chance: a $100 spot with a 50% chance costs $200 per shot. '
+          '<b>Adjusted</b> divides that by the spot\'s value for the price, so overpriced spots slide down and fairly priced ones move up. Lowest adjusted cost is ranked first.</p>',
+          '<table><thead><tr><th>#</th><th>Break</th><th class="n">Entry</th><th class="n">Chance at a top chase</th><th class="n">Cost per shot</th><th class="n">Value for the price</th><th class="n">Adjusted</th><th>Biggest chase names</th></tr></thead><tbody>']
+    for rk, a in enumerate(sorted(breaks, key=lambda a: (a['adj'] is None, a['adj'] or 0)), 1):
+        tc = ', '.join('%s%s' % (esc(nm), (' <span class="sm">(%s)</span>' % money(st)) if st else '') for nm, st in a['top_chase'][:3])
+        hp.append('<tr><td>%d</td><td><a href="#/b/%s"><b>%s</b></a><div class="sm">%s · %s%s</div></td><td class="n">%s%s</td><td class="n">%s</td><td class="n">%s</td><td class="n">%s</td><td class="n"><b>%s</b></td><td>%s</td></tr>' % (
+            rk, a['id'], esc(a['title']), esc(a['breaker']), esc(a['when']), '' if a['star_cover'] >= 0.3 else ' · <span class="warn">few star prices yet</span>',
+            money(a['entry']) or '', ('<div class="sm">%s%s</div>' % (esc(a['up_spot']['label']), ' <span class="warn">sold</span>' if a['up_spot']['status'] == 'sold' else '')) if a['up_spot'] else '',
+            ('%d%%' % round(a['chance'] * 100)) if a['chance'] else '<span class="na">n/a</span>',
+            money(a['per_shot']), ('%.2fx' % a['up_value']) if a['up_value'] else '<span class="na">needs box cost</span>',
+            money(a['adj']), tc))
+    hp.append('</tbody></table><p class="sm">Star power comes from eBay asking prices, so it sharpens as the daily lookup fills in. A break marked "few star prices yet" is ranked mostly by checklist depth.</p>')
+    secs.append(('hits', 'Hit potential', ''.join(hp)))
 
     bl = ['<h2>Current breaks</h2><p class="lede">Open one to see every spot, what it\'s worth for the price, and what data is missing.</p><div class="list">']
     for a in breaks:
@@ -369,6 +451,17 @@ def main():
                 box_cell(bx)))
         h.append('</tbody></table>')
         basis = 'eBay player prices' if a['market'] else 'the checklists (hit depth)'
+        if a['top_chase']:
+            h.append('<h3>Biggest chase names</h3><p>%s</p>' % ', '.join('%s%s' % (esc(nm), (' <span class="sm">(eBay about %s)</span>' % money(st)) if st else '') for nm, st in a['top_chase']))
+        if a['best_spots']:
+            h.append('<h3>Best spots to buy into</h3><p class="sm">Every spot ranked, sold or not, on two things together: its share of the hits for its price, and its value for the price overall. 1.00x is fair for both.</p>'
+                     '<table><thead><tr><th>#</th><th>Spot</th><th class="n">Price</th><th class="n">Hits for the price</th><th class="n">Value for the price</th><th>Big chase names</th><th>Status</th></tr></thead><tbody>')
+            for i, sp in enumerate(a['best_spots'], 1):
+                h.append('<tr><td>%d</td><td><b>%s</b>%s</td><td class="n">%s</td>%s%s<td>%s</td><td>%s</td></tr>' % (
+                    i, esc(sp['label']), (' <span class="tag">%s</span>' % esc(sp['sub'])) if sp['sub'] else '', money(sp['price']),
+                    deal_cell(sp['hit_deal']), deal_cell(sp['value']), esc(', '.join(sp['big'][:3])) or '<span class="na">none of the top 10</span>',
+                    '<span class="warn">sold</span>' if sp['status'] == 'sold' else '<span class="ok">open</span>' if sp['status'] in ('open', 'avail', 'available') else esc(sp['status'] or 'not tracked')))
+            h.append('</tbody></table>')
         h.append('<h3>Spots</h3><p class="sm">Value share comes from %s.%s</p>' % (basis, '' if a['market'] else ' It switches to eBay player prices once at least half the points have one (now %d%%).' % round(a['cover'] * 100)))
         rows = sorted(a['spots'], key=lambda s: -(s['deal'] if s['deal'] else s['share'] / (s['price'] or 1e9)))
         h.append('<table><thead><tr><th>Spot</th><th class="n">Price</th><th class="n">Value share</th><th class="n">Fair price</th><th class="n">Value for the price</th></tr></thead><tbody>')
@@ -439,6 +532,7 @@ th{text-align:left;font-size:12px;color:var(--ink3);font-weight:600;padding:8px 
 .tag{font-size:11px;border:1px solid var(--line);border-radius:999px;padding:0 6px;color:var(--ink2)}
 .ok{color:var(--up)}.warn{color:#a6761d}.bad{color:var(--dn)}
 .conf{font-size:12px;font-weight:700;border-radius:999px;padding:1px 8px;white-space:nowrap}.conf.high{background:#e3f3e9;color:var(--up)}.conf.medium{background:#f7efd9;color:#8a6a14}.conf.low{background:#f6e3de;color:var(--dn)}
+.picks{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px;margin:6px 0 18px}.picks>div{background:var(--panel);border:1px solid var(--line);border-left:4px solid #3ccf9a;border-radius:10px;padding:10px 12px}.picks span{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.04em;opacity:.7;margin-bottom:4px}
 .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin:8px 0 18px}.stats div{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
 .stats b{display:block;font-size:22px}.stats span{color:var(--ink3);font-size:13px}
 .list{display:grid;gap:8px}.item{display:grid;grid-template-columns:1.4fr 1fr 1fr auto;gap:12px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 12px;color:var(--ink);text-decoration:none}
