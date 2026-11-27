@@ -1,0 +1,262 @@
+# name: 2021 Topps Finest WWE
+# sport: WWE
+# added: 2026-11-27
+# source: https://cardsmithsbreaks.com/full-checklist/2021-topps-finest-wwe/
+# note: Copied from Cardsmiths Breaks' checklist page on November 27, 2026 (not an official Topps file). Released March 10, 2022. Career Die Cut cards are 13 Undertaker career moments, listed as The Undertaker.
+
+[base]
+Adam Cole
+AJ Styles
+Akira Tozawa
+Alexa Bliss | W
+Aliyah | W
+Angel Garza
+Angelo Dawkins
+Apollo Crews
+Asuka | W
+Austin Theory
+Baron Corbin
+Bayley | W
+Becky Lynch | W
+Bianca Belair | W
+Big E
+Bobby Lashley
+Booker T
+Cameron Grimes
+Candice LeRae | W
+Carmella | W
+Cedric Alexander
+Cesaro
+Chad Gable
+Charlotte Flair | W
+Commander Azeez
+Dakota Kai | W
+Damian Priest
+Dana Brooke | W
+Danny Burch
+Dexter Lumis
+Dolph Ziggler
+Dominik Mysterio
+Drake Maverick
+Drew McIntyre
+Edge
+Elias
+Ember Moon | W
+Eva Marie | W
+Fabian Aichner
+Finn Bálor
+Goldberg
+Humberto Carrillo
+Indi Hartwell | W
+Io Shirai | W
+Isaiah "Swerve" Scott
+James Drake
+Jaxson Ryker
+Jeff Hardy
+Jey Uso
+Jimmy Uso
+Jinder Mahal
+John Cena
+John Morrison
+Johnny Gargano
+Kane
+Karrion Kross
+Kay Lee Ray | W
+Keith Lee
+Kevin Owens
+Kofi Kingston
+Kushida
+Kyle O'Reilly
+Lacey Evans | W
+Liv Morgan | W
+Mace
+Mandy Rose | W
+Mansoor
+Marcel Barthel
+Montez Ford
+Mustafa Ali
+MVP
+Naomi | W
+Nia Jax | W
+Nikki A.S.H. | W
+Omos
+Oney Lorcan
+Otis
+Paul Heyman
+Pete Dunne
+R-Truth
+Randy Orton
+Raquel González | W
+Reggie
+Rey Mysterio
+Rhea Ripley | W
+Rick Boogs
+Ricochet
+Riddle
+Rob Van Dam
+Robert Roode
+Roderick Strong
+Roman Reigns
+Sami Zayn
+Santos Escobar
+Sasha Banks | W
+Scarlett | W
+Seth Rollins
+Shayna Baszler | W
+Sheamus
+Shelton Benjamin
+Shinsuke Nakamura
+Shotzi | W
+Sonya Deville | W
+Stacy Keibler | W
+T-Bar
+Tamina | W
+Tegan Nox | W
+The Miz
+Timothy Thatcher
+Titus O'Neil
+Tommaso Ciampa
+Toni Storm | W
+Trent Seven
+Tyler Bate
+WALTER
+Xavier Woods
+Zack Gibson
+Zelina Vega | W
+Zoey Stark | W
+
+[auto]
+AJ Styles
+Alexa Bliss | W
+Angelo Dawkins
+Apollo Crews
+Asuka | W
+Austin Theory
+Becky Lynch | W
+Bianca Belair | W
+Big E
+Bobby Lashley
+Brutus "The Barber" Beefcake
+Candice LeRae | W
+Carmella | W
+Cesaro
+Chad Gable
+Commander Azeez
+Dakota Kai | W
+Damian Priest
+"Diamond" Dallas Page
+Dolph Ziggler
+Dominik Mysterio
+Drew McIntyre
+Edge
+Ember Moon | W
+Goldberg
+Humberto Carrillo
+Indi Hartwell | W
+Io Shirai | W
+Jake "The Snake" Roberts
+Jaxson Ryker
+Jeff Hardy
+Jerry "The King" Lawler
+John Morrison
+Johnny Gargano
+Karrion Kross
+King Corbin
+Kofi Kingston
+Kyle O'Reilly
+Lex Luger
+Liv Morgan | W
+Mandy Rose | W
+Mia Yim | W
+Mick Foley
+"Million Dollar Man" Ted DiBiase
+MVP
+Nia Jax | W
+Omos
+Otis
+R-Truth
+Raquel González | W
+Rey Mysterio
+Rhea Ripley | W
+Ricky "The Dragon" Steamboat
+Ricochet
+Riddle
+Rikishi
+Robert Roode
+Roman Reigns
+Ron Simmons
+Sami Zayn
+Santos Escobar
+Sasha Banks | W
+Scarlett | W
+Seth Rollins
+Shayna Baszler | W
+Sheamus
+Shinsuke Nakamura
+Shotzi Blackheart | W
+The Miz
+Titus O'Neil
+Wade Barrett
+William Regal
+Xavier Woods
+
+[insert]
+AJ Styles
+Asuka | W
+Bam Bam Bigelow
+Bayley | W
+Becky Lynch | W
+Bianca Belair | W
+Bobby Lashley
+Brutus "The Barber" Beefcake
+Carmella | W
+Cesaro
+Dave Mastiff
+"Diamond" Dallas Page
+Diesel
+Dolph Ziggler
+Dusty Rhodes
+Edge
+Goldberg
+Harley Race
+Hulk Hogan
+Jake "The Snake" Roberts
+Jeff Hardy
+Jerry "The King" Lawler
+John Cena
+Junkyard Dog
+Kofi Kingston
+Lex Luger
+Mandy Rose | W
+Mick Foley
+"Million Dollar Man" Ted DiBiase
+Montez Ford
+Mr. Perfect
+Nia Jax | W
+Paul Heyman
+R-Truth
+Randy Orton
+"Ravishing" Rick Rude
+Razor Ramon
+Rey Mysterio
+Rhea Ripley | W
+Ricky "The Dragon" Steamboat
+Rikishi
+Roman Reigns
+Ron Simmons
+"Rowdy" Roddy Piper
+Sasha Banks | W
+Scott Hall
+The British Bulldog
+The Miz
+The Undertaker
+Triple H
+Trish Stratus | W
+Wade Barrett
+William Regal
+
+[multi]
+Roman Reigns / Jimmy Uso / Jey Uso
+Wade Barrett / Drew McIntyre / Sheamus
+Santos Escobar / Raul Mendoza / Joaquin Wilde
+Kofi Kingston / Xavier Woods / Big E

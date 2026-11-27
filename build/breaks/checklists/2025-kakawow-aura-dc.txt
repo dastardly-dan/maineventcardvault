@@ -1,0 +1,277 @@
+# name: 2025 Kakawow Aura DC
+# sport: Entertainment
+# added: 2026-11-27
+# source: https://gogts.net/2025-kakawow-dc-trading-cards-hobby/
+# note: Official Kakawow checklist spreadsheet (last updated November 11, 2025), sent by Daniel. Script Art cards are facsimile signatures, counted as autographs; Seven Script Art is a seven-member Justice League card, listed as Justice League.
+
+[base]
+Aquaman
+Atom Smasher
+Atrocitus
+Bane
+Batgirl
+Batman
+Black Adam
+Black Lightning
+Black Manta
+Blue Beetle
+Brainiac
+Captain Cold
+Catwoman
+Cheetah
+Clayface
+Cyborg
+Cyclone
+Darkseid
+Deathstroke
+Doctor Fate
+Doomsday
+Green Arrow
+Green Lantern
+Harley Quinn
+Hawkgirl
+Hawkman
+James Gordon
+John Constantine
+John Stewart
+Katana
+Killer Croc
+King Shark
+Lex Luthor
+Martian Manhunter
+Mera
+Mister Terrific
+Mr. Freeze
+Naomi
+Nightwing
+Nubia
+Penguin
+Poison Ivy
+Ra's al Ghul
+Red Arrow
+Reverse-Flash
+Riddler
+Robin
+Rorschach
+Scarecrow
+Shazam
+Sinestro
+Solomon Grundy
+Static
+Steppenwolf
+Superboy
+Supergirl
+Superman
+The Flash
+The Joker
+Two-Face
+Vixen
+Wonder Girl
+Wonder Woman
+Zatanna
+
+[auto]
+Aquaman
+Atom Smasher
+Atrocitus
+Bane
+Batgirl
+Batman
+Black Adam
+Black Lightning
+Black Manta
+Blue Beetle
+Brainiac
+Captain Cold
+Catwoman
+Cheetah
+Clayface
+Cyborg
+Cyclone
+Darkseid
+Deathstroke
+Doctor Fate
+Doomsday
+Green Arrow
+Green Lantern
+Harley Quinn
+Hawkgirl
+Hawkman
+James Gordon
+John Constantine
+John Stewart
+Justice League
+Katana
+Killer Croc
+King Shark
+Lex Luthor
+Martian Manhunter
+Mera
+Mister Terrific
+Mr. Freeze
+Naomi
+Nightwing
+Nubia
+Penguin
+Poison Ivy
+Ra's al Ghul
+Red Arrow
+Reverse-Flash
+Riddler
+Robin
+Rorschach
+Scarecrow
+Shazam
+Sinestro
+Solomon Grundy
+Static
+Steppenwolf
+Superboy
+Supergirl
+Superman
+The Flash
+The Joker
+Two-Face
+Vixen
+Wonder Girl
+Wonder Woman
+Zatanna
+
+[insert]
+Action Comics #1
+Alfred Pennyworth
+All-American Comics #16
+Aqualad-Garth
+Aqualad-Jackson Hyde
+Aquaman
+Aquaman and the Lost Kingdom
+Batgirl
+Batman
+Batman #1
+Batman Forever
+Batman v Superman: Dawn of Justice
+Batman：The Killing Joke
+Birds of Prey ：and the Fantabulous Emancipation of One Harley Quinn
+Bizarro
+Black Adam
+Black Canary
+Black Manta
+Brainiac
+BRAZIL
+Bumblebee
+Captain Cold
+Catwoman
+Cheetah
+CHINA
+Clark Kent
+Creeper
+Crisis on Infinite Earths
+Cyborg
+CZECHIA
+Dark Nights: Death Metal
+Dark Nights: Metal
+Darkseid
+DC Rebirth
+Deathstroke
+Detective Comics #27
+Doctor Fate
+Doctor Sivana
+Elongated Man
+Final Crisis
+Flash Comics #1
+Flashpoint
+Forever Evil
+FRANCE
+General Zod
+GERMANY
+Green Arrow
+Green Lantern
+Green Lantern Vol. 2 #87
+Harley Quinn
+Hawkman
+Hawkwoman
+Infinite Crisis
+ITALY
+James Gordon
+JAPAN
+John Stewart
+Justice League
+Justice League International #1
+Justice League: The Darkseid War
+Katana
+Kid Flash
+Lex Luthor
+Lois Lane
+Martian Manhunter
+Mera
+MEXICO
+Mr. Freeze
+Mr. Mind
+Nightwing
+Nubia
+Parademon
+Penguin
+Poison Ivy
+POLAND
+Raven
+Red Tornado
+Reverse-Flash
+Riddler
+Robin
+Robotman
+RUSSIA
+Sensation Comics #1
+Shazam
+Shazam!
+Shazam! Fury of the Gods
+Showcase #4
+Sinestro
+SOUTH KOREA
+SPAIN
+Spectre
+Speedy
+Starfire
+Steppenwolf
+Suicide Squad
+Supergirl
+Superman
+Superman #1
+Superman Returns
+The Batman
+The Brave and the Bold #28
+The Dark Knight Returns
+The Death of Superman
+The Flash
+The Joker
+The Suicide Squad
+The Trinity
+TURKEY
+Two-Face
+UNITED STATES
+Wonder Girl
+Wonder Woman
+Wonder Woman #1
+Wonder Woman 1984
+Zatanna
+
+[multi]
+Batman / Man-Bat
+Batman / The Joker
+Batman / Two-Face
+Batman / Riddler
+Batman / Penguin
+Batman / Killer Croc
+Batman / Robin
+Batman / Nightwing
+Superman / Lex Luthor
+Superman / General Zod
+Superman / Mongul
+Superman / Batman
+The Joker / Batman
+The Joker / Batgirl
+The Joker / Red Hood
+Wonder Woman / Cheetah
+The Flash / Reverse-Flash
+Green Lantern / Sinestro
+Aquaman / Black Manta
+Shazam / Black Adam

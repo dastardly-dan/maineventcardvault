@@ -1,0 +1,348 @@
+# name: 2026 Card Fun Disney Chronoz
+# sport: Disney
+# added: 2026-11-27
+# source: Checklist PDF sent by Daniel, November 27, 2026
+# note: Card Fun checklist PDF (2,893 rows). Script Art cards are facsimile signatures, counted as autographs. "Gloden age of Disney" is the set name as printed. The one Sketch Card (CDL-SC-01) has no character listed, so it is left out.
+
+[base]
+Abu
+Abuela
+Agent Pleakley
+Aladdin
+Alice
+Amaya
+Angel
+Anna
+Antonio
+Ariel
+Asha
+Aurora
+Baloo
+Bambi
+Baymax
+Belle
+Benjamin Clawhauser
+Berlioz
+Bruni
+Bruno
+Camilo
+Captain Gantu
+Captain Hook
+Cheshire Cat
+Chief Bogo
+Chip 'n' Dale
+Christopher Robin
+Cinderella
+Cruella de Vil
+Daisy Duck
+Deputy Mayor Bellwether
+Dinah
+Dolores
+Donald Duck
+Dr. Facilier
+Dr. Jumba Jookiba
+Duchess
+Dumbo
+Eeyore
+Elsa
+Figaro
+Finnick
+Fix-It Felix
+Flash
+Flower
+Flynn Rider
+Fru Fru
+Gary
+Gaston
+Gazelle
+Genie
+Gogo Tomago
+Goofy
+Gus，Jaq
+Hades
+Hans
+Heihei
+Hiro Hamada
+Isabela
+Jafar
+Jasmine
+Jiminy Cricket
+Judy Hopps
+Julieta
+King Mufasa
+Kristoff
+Lady
+Lady Tremaine
+Leroy
+Lilo
+Loto
+Lucifer
+Lucky
+Luisa
+Mad Hatter
+Magnifico
+Maleficent
+March Hare
+Marie
+Matangi
+Maui
+Mayor Lionheart
+Meeko
+Merida
+Merryweather，Flora，Fauna
+Mickey Mouse
+Minnie Mouse
+Mirabel
+Miss Bunny
+Moana
+Moni
+Mowgli
+Mr. Big
+Mrs. Potts and Chip
+Mulan
+Mushu
+Nala
+Namaari
+Nibbles Maplestick
+Nick Wilde
+Olaf
+Owl
+Pascal
+Pawbert Lynxley
+Percy
+Perdita
+Pete
+Peter Pan
+Piglet
+Pinocchio
+Pluto
+Pocahontas
+Pongo
+Pooh
+Prince Charming
+Prince Eric
+Prince Naveen
+Prince Phillip
+Pua
+Pumbaa
+Queen
+Queen of Hearts
+Rabbit
+Rafiki
+Rapunzel
+Raya
+Reuben
+Scar
+Scrump
+Sergeant Tammy Calhoun
+Shang
+Shere Khan
+Simba
+Simba(young)
+Simea
+Sisu
+Snow White
+Star
+Stitch
+Sven
+Taffyta Muttonfudge
+The Beast
+The Prince
+Thomas O'Malley
+Thumper
+Tiana
+Tigger
+Timon
+Timothy Q. Mouse
+Tinker Bell
+Toulouse
+Tramp
+Tweedle Dee and Tweedle Dum
+Uncle Scrooge McDuck
+Ursula
+Valentino
+Vanellope von Schweetz
+Wasabi-No-Ginger
+White Rabbit
+Winddancer
+Wreck-It Ralph
+Yzma
+Zazu
+
+[auto]
+Aladdin
+Alice
+Angel
+Anna
+Ariel
+Aurora
+Bambi
+Belle
+Cheshire Cat
+Chip 'n' Dale
+Cinderella
+Daisy Duck
+Donald Duck
+Eeyore
+Elsa
+Figaro
+Flynn Rider
+Goofy
+Isabela
+Jasmine
+Kristoff
+Luisa
+Marie
+Merida
+Mickey Mouse
+Minnie Mouse
+Mirabel
+Moana
+Mulan
+Olaf
+Piglet
+Pluto
+Pocahontas
+Pooh
+Prince Charming
+Prince Eric
+Prince Phillip
+Rabbit
+Rapunzel
+Raya
+Snow White
+Stitch
+Tiana
+Tigger
+Tinker Bell
+
+[insert]
+Agent Pleakley
+Aladdin
+Alice
+Angel
+Anna
+Ariel
+Asha
+Aurora
+Baloo
+Bambi
+Baymax
+Belle
+Captain Gantu
+Captain Hook
+Cheshire Cat
+Chip 'n' Dale
+Chip&Dale
+Cinderella
+Cruella de Vil
+Daisy Duck
+Deputy Mayor Bellwether
+Donald Duck
+Dr. Facilier
+Dr. Jumba Jookiba
+Dumbo
+Eeyore
+Elsa
+Figaro
+Fix-It Felix
+Flower
+Gary
+Gaston
+Goofy
+Hades
+Hiro Hamada
+Jafar
+Jasmine
+Jiminy Cricket
+Judy Hopps
+Kaa
+Kristoff
+Lady
+Lady and the Tramp
+Lady Tremaine
+Leroy
+Lilo
+Mad Hatter
+Magnifico
+Maleficent
+Marie
+Merida
+Mickey & Friends
+Mickey Mouse
+Minnie Mouse
+Mirabel
+Moana
+Mother Gothel
+Mowgli
+Mulan
+Nala
+Nick Wilde
+Olaf
+Pawbert Lynxley
+Perdita
+Pete
+Peter Pan
+Piglet
+Pinocchio
+Pinocchio and Jiminy Cricket
+Pluto
+Pocahontas
+Pongo
+Pongo and Perdita
+Pooh
+Prince Hans
+Queen
+Queen of Hearts
+Rapunzel
+Raya
+Reuben
+Scar
+Scars
+Shere Khan
+Simba
+Snow White
+Stitch
+Sven
+Thumper
+Tiana
+Tigger
+Tinker Bell
+Tramp
+Tweedle Dee and Tweedle Dum
+Uncle Scrooge McDuck
+Ursula
+Vanellope von Schweetz
+White Rabbit
+Wreck-It Ralph
+
+[multi]
+Louie / Huey / Dewey
+Simba / Timon / Pumbaa
+Mickey Mouse / Minnie Mouse
+Donald Duck / Daisy Duck
+Goofy / Chip 'n' Dale
+Cinderella / Prince Charming
+Aurora / Prince Phillip
+Ariel / Prince Eric
+Jasmine / Aladdin
+Rapunzel / Flynn Rider
+Snow White / Tiana
+Belle / Pocahontas
+Mulan / Raya
+Merida / Moana
+Alice / Cheshire Cat
+Pooh / Piglet
+Tigger / Eeyore
+Stitch / Angel
+Elsa / Anna
+Mirabel / Isabela
+Mickey Mouse / Minnie Mouse / Pluto
+Donald Duck / Daisy Duck / Goofy
+Snow White / Cinderella / Aurora
+Ariel / Belle / Rapunzel
+Pocahontas / Mulan / Tiana
+Jasmine / Merida / Moana
+Pooh / Tigger / Piglet
+Elsa / Anna / Olaf
+Mirabel / Isabela / Luisa

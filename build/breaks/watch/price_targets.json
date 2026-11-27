@@ -1,5 +1,613 @@
 [
 {
+"q": "2021 Topps Finest WWE AJ Styles",
+"player": "AJ Styles"
+},
+{
+"q": "2021 Topps Finest WWE Adam Cole",
+"player": "Adam Cole"
+},
+{
+"q": "2021 Topps Finest WWE Akira Tozawa",
+"player": "Akira Tozawa"
+},
+{
+"q": "2021 Topps Finest WWE Alexa Bliss",
+"player": "Alexa Bliss"
+},
+{
+"q": "2021 Topps Finest WWE Aliyah",
+"player": "Aliyah"
+},
+{
+"q": "2021 Topps Finest WWE Angel Garza",
+"player": "Angel Garza"
+},
+{
+"q": "2021 Topps Finest WWE Angelo Dawkins",
+"player": "Angelo Dawkins"
+},
+{
+"q": "2021 Topps Finest WWE Apollo Crews",
+"player": "Apollo Crews"
+},
+{
+"q": "2021 Topps Finest WWE Asuka",
+"player": "Asuka"
+},
+{
+"q": "2021 Topps Finest WWE Austin Theory",
+"player": "Austin Theory"
+},
+{
+"q": "2021 Topps Finest WWE Bam Bam Bigelow",
+"player": "Bam Bam Bigelow"
+},
+{
+"q": "2021 Topps Finest WWE Baron Corbin",
+"player": "Baron Corbin"
+},
+{
+"q": "2021 Topps Finest WWE Bayley",
+"player": "Bayley"
+},
+{
+"q": "2021 Topps Finest WWE Becky Lynch",
+"player": "Becky Lynch"
+},
+{
+"q": "2021 Topps Finest WWE Bianca Belair",
+"player": "Bianca Belair"
+},
+{
+"q": "2021 Topps Finest WWE Big E",
+"player": "Big E"
+},
+{
+"q": "2021 Topps Finest WWE Bobby Lashley",
+"player": "Bobby Lashley"
+},
+{
+"q": "2021 Topps Finest WWE Booker T",
+"player": "Booker T"
+},
+{
+"q": "2021 Topps Finest WWE Brutus Beefcake",
+"player": "Brutus Beefcake"
+},
+{
+"q": "2021 Topps Finest WWE Cameron Grimes",
+"player": "Cameron Grimes"
+},
+{
+"q": "2021 Topps Finest WWE Candice LeRae",
+"player": "Candice LeRae"
+},
+{
+"q": "2021 Topps Finest WWE Carmella",
+"player": "Carmella"
+},
+{
+"q": "2021 Topps Finest WWE Cedric Alexander",
+"player": "Cedric Alexander"
+},
+{
+"q": "2021 Topps Finest WWE Cesaro",
+"player": "Cesaro"
+},
+{
+"q": "2021 Topps Finest WWE Chad Gable",
+"player": "Chad Gable"
+},
+{
+"q": "2021 Topps Finest WWE Charlotte Flair",
+"player": "Charlotte Flair"
+},
+{
+"q": "2021 Topps Finest WWE Commander Azeez",
+"player": "Commander Azeez"
+},
+{
+"q": "2021 Topps Finest WWE Dakota Kai",
+"player": "Dakota Kai"
+},
+{
+"q": "2021 Topps Finest WWE Dallas Page",
+"player": "Dallas Page"
+},
+{
+"q": "2021 Topps Finest WWE Damian Priest",
+"player": "Damian Priest"
+},
+{
+"q": "2021 Topps Finest WWE Dana Brooke",
+"player": "Dana Brooke"
+},
+{
+"q": "2021 Topps Finest WWE Danny Burch",
+"player": "Danny Burch"
+},
+{
+"q": "2021 Topps Finest WWE Dave Mastiff",
+"player": "Dave Mastiff"
+},
+{
+"q": "2021 Topps Finest WWE Dexter Lumis",
+"player": "Dexter Lumis"
+},
+{
+"q": "2021 Topps Finest WWE Diesel",
+"player": "Diesel"
+},
+{
+"q": "2021 Topps Finest WWE Dolph Ziggler",
+"player": "Dolph Ziggler"
+},
+{
+"q": "2021 Topps Finest WWE Dominik Mysterio",
+"player": "Dominik Mysterio"
+},
+{
+"q": "2021 Topps Finest WWE Drake Maverick",
+"player": "Drake Maverick"
+},
+{
+"q": "2021 Topps Finest WWE Drew McIntyre",
+"player": "Drew McIntyre"
+},
+{
+"q": "2021 Topps Finest WWE Dusty Rhodes",
+"player": "Dusty Rhodes"
+},
+{
+"q": "2021 Topps Finest WWE Edge",
+"player": "Edge"
+},
+{
+"q": "2021 Topps Finest WWE Elias",
+"player": "Elias"
+},
+{
+"q": "2021 Topps Finest WWE Ember Moon",
+"player": "Ember Moon"
+},
+{
+"q": "2021 Topps Finest WWE Eva Marie",
+"player": "Eva Marie"
+},
+{
+"q": "2021 Topps Finest WWE Fabian Aichner",
+"player": "Fabian Aichner"
+},
+{
+"q": "2021 Topps Finest WWE Finn Bálor",
+"player": "Finn Bálor"
+},
+{
+"q": "2021 Topps Finest WWE Goldberg",
+"player": "Goldberg"
+},
+{
+"q": "2021 Topps Finest WWE Harley Race",
+"player": "Harley Race"
+},
+{
+"q": "2021 Topps Finest WWE Hulk Hogan",
+"player": "Hulk Hogan"
+},
+{
+"q": "2021 Topps Finest WWE Humberto Carrillo",
+"player": "Humberto Carrillo"
+},
+{
+"q": "2021 Topps Finest WWE Indi Hartwell",
+"player": "Indi Hartwell"
+},
+{
+"q": "2021 Topps Finest WWE Io Shirai",
+"player": "Io Shirai"
+},
+{
+"q": "2021 Topps Finest WWE Isaiah Scott",
+"player": "Isaiah Scott"
+},
+{
+"q": "2021 Topps Finest WWE Jake Roberts",
+"player": "Jake Roberts"
+},
+{
+"q": "2021 Topps Finest WWE James Drake",
+"player": "James Drake"
+},
+{
+"q": "2021 Topps Finest WWE Jaxson Ryker",
+"player": "Jaxson Ryker"
+},
+{
+"q": "2021 Topps Finest WWE Jeff Hardy",
+"player": "Jeff Hardy"
+},
+{
+"q": "2021 Topps Finest WWE Jerry Lawler",
+"player": "Jerry Lawler"
+},
+{
+"q": "2021 Topps Finest WWE Jey Uso",
+"player": "Jey Uso"
+},
+{
+"q": "2021 Topps Finest WWE Jimmy Uso",
+"player": "Jimmy Uso"
+},
+{
+"q": "2021 Topps Finest WWE Jinder Mahal",
+"player": "Jinder Mahal"
+},
+{
+"q": "2021 Topps Finest WWE Joaquin Wilde",
+"player": "Joaquin Wilde"
+},
+{
+"q": "2021 Topps Finest WWE John Cena",
+"player": "John Cena"
+},
+{
+"q": "2021 Topps Finest WWE John Morrison",
+"player": "John Morrison"
+},
+{
+"q": "2021 Topps Finest WWE Johnny Gargano",
+"player": "Johnny Gargano"
+},
+{
+"q": "2021 Topps Finest WWE Junkyard Dog",
+"player": "Junkyard Dog"
+},
+{
+"q": "2021 Topps Finest WWE Kane",
+"player": "Kane"
+},
+{
+"q": "2021 Topps Finest WWE Karrion Kross",
+"player": "Karrion Kross"
+},
+{
+"q": "2021 Topps Finest WWE Kay Lee Ray",
+"player": "Kay Lee Ray"
+},
+{
+"q": "2021 Topps Finest WWE Keith Lee",
+"player": "Keith Lee"
+},
+{
+"q": "2021 Topps Finest WWE Kevin Owens",
+"player": "Kevin Owens"
+},
+{
+"q": "2021 Topps Finest WWE King Corbin",
+"player": "King Corbin"
+},
+{
+"q": "2021 Topps Finest WWE Kofi Kingston",
+"player": "Kofi Kingston"
+},
+{
+"q": "2021 Topps Finest WWE Kushida",
+"player": "Kushida"
+},
+{
+"q": "2021 Topps Finest WWE Kyle O'Reilly",
+"player": "Kyle O'Reilly"
+},
+{
+"q": "2021 Topps Finest WWE Lacey Evans",
+"player": "Lacey Evans"
+},
+{
+"q": "2021 Topps Finest WWE Lex Luger",
+"player": "Lex Luger"
+},
+{
+"q": "2021 Topps Finest WWE Liv Morgan",
+"player": "Liv Morgan"
+},
+{
+"q": "2021 Topps Finest WWE MVP",
+"player": "MVP"
+},
+{
+"q": "2021 Topps Finest WWE Mace",
+"player": "Mace"
+},
+{
+"q": "2021 Topps Finest WWE Mandy Rose",
+"player": "Mandy Rose"
+},
+{
+"q": "2021 Topps Finest WWE Mansoor",
+"player": "Mansoor"
+},
+{
+"q": "2021 Topps Finest WWE Marcel Barthel",
+"player": "Marcel Barthel"
+},
+{
+"q": "2021 Topps Finest WWE Mia Yim",
+"player": "Mia Yim"
+},
+{
+"q": "2021 Topps Finest WWE Mick Foley",
+"player": "Mick Foley"
+},
+{
+"q": "2021 Topps Finest WWE Montez Ford",
+"player": "Montez Ford"
+},
+{
+"q": "2021 Topps Finest WWE Mr. Perfect",
+"player": "Mr. Perfect"
+},
+{
+"q": "2021 Topps Finest WWE Mustafa Ali",
+"player": "Mustafa Ali"
+},
+{
+"q": "2021 Topps Finest WWE Naomi",
+"player": "Naomi"
+},
+{
+"q": "2021 Topps Finest WWE Nia Jax",
+"player": "Nia Jax"
+},
+{
+"q": "2021 Topps Finest WWE Nikki A.S.H.",
+"player": "Nikki A.S.H."
+},
+{
+"q": "2021 Topps Finest WWE Omos",
+"player": "Omos"
+},
+{
+"q": "2021 Topps Finest WWE Oney Lorcan",
+"player": "Oney Lorcan"
+},
+{
+"q": "2021 Topps Finest WWE Otis",
+"player": "Otis"
+},
+{
+"q": "2021 Topps Finest WWE Paul Heyman",
+"player": "Paul Heyman"
+},
+{
+"q": "2021 Topps Finest WWE Pete Dunne",
+"player": "Pete Dunne"
+},
+{
+"q": "2021 Topps Finest WWE R-Truth",
+"player": "R-Truth"
+},
+{
+"q": "2021 Topps Finest WWE Randy Orton",
+"player": "Randy Orton"
+},
+{
+"q": "2021 Topps Finest WWE Raquel González",
+"player": "Raquel González"
+},
+{
+"q": "2021 Topps Finest WWE Raul Mendoza",
+"player": "Raul Mendoza"
+},
+{
+"q": "2021 Topps Finest WWE Razor Ramon",
+"player": "Razor Ramon"
+},
+{
+"q": "2021 Topps Finest WWE Reggie",
+"player": "Reggie"
+},
+{
+"q": "2021 Topps Finest WWE Rey Mysterio",
+"player": "Rey Mysterio"
+},
+{
+"q": "2021 Topps Finest WWE Rhea Ripley",
+"player": "Rhea Ripley"
+},
+{
+"q": "2021 Topps Finest WWE Rick Boogs",
+"player": "Rick Boogs"
+},
+{
+"q": "2021 Topps Finest WWE Rick Rude",
+"player": "Rick Rude"
+},
+{
+"q": "2021 Topps Finest WWE Ricky Steamboat",
+"player": "Ricky Steamboat"
+},
+{
+"q": "2021 Topps Finest WWE Ricochet",
+"player": "Ricochet"
+},
+{
+"q": "2021 Topps Finest WWE Riddle",
+"player": "Riddle"
+},
+{
+"q": "2021 Topps Finest WWE Rikishi",
+"player": "Rikishi"
+},
+{
+"q": "2021 Topps Finest WWE Rob Van Dam",
+"player": "Rob Van Dam"
+},
+{
+"q": "2021 Topps Finest WWE Robert Roode",
+"player": "Robert Roode"
+},
+{
+"q": "2021 Topps Finest WWE Roddy Piper",
+"player": "Roddy Piper"
+},
+{
+"q": "2021 Topps Finest WWE Roderick Strong",
+"player": "Roderick Strong"
+},
+{
+"q": "2021 Topps Finest WWE Roman Reigns",
+"player": "Roman Reigns"
+},
+{
+"q": "2021 Topps Finest WWE Ron Simmons",
+"player": "Ron Simmons"
+},
+{
+"q": "2021 Topps Finest WWE Sami Zayn",
+"player": "Sami Zayn"
+},
+{
+"q": "2021 Topps Finest WWE Santos Escobar",
+"player": "Santos Escobar"
+},
+{
+"q": "2021 Topps Finest WWE Sasha Banks",
+"player": "Sasha Banks"
+},
+{
+"q": "2021 Topps Finest WWE Scarlett",
+"player": "Scarlett"
+},
+{
+"q": "2021 Topps Finest WWE Scott Hall",
+"player": "Scott Hall"
+},
+{
+"q": "2021 Topps Finest WWE Seth Rollins",
+"player": "Seth Rollins"
+},
+{
+"q": "2021 Topps Finest WWE Shayna Baszler",
+"player": "Shayna Baszler"
+},
+{
+"q": "2021 Topps Finest WWE Sheamus",
+"player": "Sheamus"
+},
+{
+"q": "2021 Topps Finest WWE Shelton Benjamin",
+"player": "Shelton Benjamin"
+},
+{
+"q": "2021 Topps Finest WWE Shinsuke Nakamura",
+"player": "Shinsuke Nakamura"
+},
+{
+"q": "2021 Topps Finest WWE Shotzi",
+"player": "Shotzi"
+},
+{
+"q": "2021 Topps Finest WWE Shotzi Blackheart",
+"player": "Shotzi Blackheart"
+},
+{
+"q": "2021 Topps Finest WWE Sonya Deville",
+"player": "Sonya Deville"
+},
+{
+"q": "2021 Topps Finest WWE Stacy Keibler",
+"player": "Stacy Keibler"
+},
+{
+"q": "2021 Topps Finest WWE T-Bar",
+"player": "T-Bar"
+},
+{
+"q": "2021 Topps Finest WWE Tamina",
+"player": "Tamina"
+},
+{
+"q": "2021 Topps Finest WWE Ted DiBiase",
+"player": "Ted DiBiase"
+},
+{
+"q": "2021 Topps Finest WWE Tegan Nox",
+"player": "Tegan Nox"
+},
+{
+"q": "2021 Topps Finest WWE The British Bulldog",
+"player": "The British Bulldog"
+},
+{
+"q": "2021 Topps Finest WWE The Miz",
+"player": "The Miz"
+},
+{
+"q": "2021 Topps Finest WWE The Undertaker",
+"player": "The Undertaker"
+},
+{
+"q": "2021 Topps Finest WWE Timothy Thatcher",
+"player": "Timothy Thatcher"
+},
+{
+"q": "2021 Topps Finest WWE Titus O'Neil",
+"player": "Titus O'Neil"
+},
+{
+"q": "2021 Topps Finest WWE Tommaso Ciampa",
+"player": "Tommaso Ciampa"
+},
+{
+"q": "2021 Topps Finest WWE Toni Storm",
+"player": "Toni Storm"
+},
+{
+"q": "2021 Topps Finest WWE Trent Seven",
+"player": "Trent Seven"
+},
+{
+"q": "2021 Topps Finest WWE Triple H",
+"player": "Triple H"
+},
+{
+"q": "2021 Topps Finest WWE Trish Stratus",
+"player": "Trish Stratus"
+},
+{
+"q": "2021 Topps Finest WWE Tyler Bate",
+"player": "Tyler Bate"
+},
+{
+"q": "2021 Topps Finest WWE WALTER",
+"player": "WALTER"
+},
+{
+"q": "2021 Topps Finest WWE Wade Barrett",
+"player": "Wade Barrett"
+},
+{
+"q": "2021 Topps Finest WWE William Regal",
+"player": "William Regal"
+},
+{
+"q": "2021 Topps Finest WWE Xavier Woods",
+"player": "Xavier Woods"
+},
+{
+"q": "2021 Topps Finest WWE Zack Gibson",
+"player": "Zack Gibson"
+},
+{
+"q": "2021 Topps Finest WWE Zelina Vega",
+"player": "Zelina Vega"
+},
+{
+"q": "2021 Topps Finest WWE Zoey Stark",
+"player": "Zoey Stark"
+},
+{
 "q": "2022 Panini Select WWE A-Kid",
 "player": "A-Kid"
 },
@@ -2930,6 +3538,1770 @@
 {
 "q": "2024 Panini PhotoGenic WWE Zelina Vega",
 "player": "Zelina Vega"
+},
+{
+"q": "2024 Panini Select WWE 1-2-3 Kid",
+"player": "1-2-3 Kid"
+},
+{
+"q": "2024 Panini Select WWE AJ Styles",
+"player": "AJ Styles"
+},
+{
+"q": "2024 Panini Select WWE Adam Pearce",
+"player": "Adam Pearce"
+},
+{
+"q": "2024 Panini Select WWE Adriana Rizzo",
+"player": "Adriana Rizzo"
+},
+{
+"q": "2024 Panini Select WWE Akam",
+"player": "Akam"
+},
+{
+"q": "2024 Panini Select WWE Akira Tozawa",
+"player": "Akira Tozawa"
+},
+{
+"q": "2024 Panini Select WWE Alba Fyre",
+"player": "Alba Fyre"
+},
+{
+"q": "2024 Panini Select WWE Albert",
+"player": "Albert"
+},
+{
+"q": "2024 Panini Select WWE Alexa Bliss",
+"player": "Alexa Bliss"
+},
+{
+"q": "2024 Panini Select WWE Alundra Blayze",
+"player": "Alundra Blayze"
+},
+{
+"q": "2024 Panini Select WWE Andrade",
+"player": "Andrade"
+},
+{
+"q": "2024 Panini Select WWE Andre Chase",
+"player": "Andre Chase"
+},
+{
+"q": "2024 Panini Select WWE Angel",
+"player": "Angel"
+},
+{
+"q": "2024 Panini Select WWE Angelo Dawkins",
+"player": "Angelo Dawkins"
+},
+{
+"q": "2024 Panini Select WWE Arianna Grace",
+"player": "Arianna Grace"
+},
+{
+"q": "2024 Panini Select WWE Ashante Adonis",
+"player": "Ashante Adonis"
+},
+{
+"q": "2024 Panini Select WWE Asuka",
+"player": "Asuka"
+},
+{
+"q": "2024 Panini Select WWE Austin Theory",
+"player": "Austin Theory"
+},
+{
+"q": "2024 Panini Select WWE Ava",
+"player": "Ava"
+},
+{
+"q": "2024 Panini Select WWE Axiom",
+"player": "Axiom"
+},
+{
+"q": "2024 Panini Select WWE B-Fab",
+"player": "B-Fab"
+},
+{
+"q": "2024 Panini Select WWE Bam Bam Bigelow",
+"player": "Bam Bam Bigelow"
+},
+{
+"q": "2024 Panini Select WWE Baron Corbin",
+"player": "Baron Corbin"
+},
+{
+"q": "2024 Panini Select WWE Batista",
+"player": "Batista"
+},
+{
+"q": "2024 Panini Select WWE Bayley",
+"player": "Bayley"
+},
+{
+"q": "2024 Panini Select WWE Becky Lynch",
+"player": "Becky Lynch"
+},
+{
+"q": "2024 Panini Select WWE Bianca Belair",
+"player": "Bianca Belair"
+},
+{
+"q": "2024 Panini Select WWE Big Boss Man",
+"player": "Big Boss Man"
+},
+{
+"q": "2024 Panini Select WWE Big E",
+"player": "Big E"
+},
+{
+"q": "2024 Panini Select WWE Billy Graham",
+"player": "Billy Graham"
+},
+{
+"q": "2024 Panini Select WWE Billy Gunn",
+"player": "Billy Gunn"
+},
+{
+"q": "2024 Panini Select WWE Blair Davenport",
+"player": "Blair Davenport"
+},
+{
+"q": "2024 Panini Select WWE Bob Orton",
+"player": "Bob Orton"
+},
+{
+"q": "2024 Panini Select WWE Bobby Heenan",
+"player": "Bobby Heenan"
+},
+{
+"q": "2024 Panini Select WWE Bobby Lashley",
+"player": "Bobby Lashley"
+},
+{
+"q": "2024 Panini Select WWE Booker T",
+"player": "Booker T"
+},
+{
+"q": "2024 Panini Select WWE Braun Strowman",
+"player": "Braun Strowman"
+},
+{
+"q": "2024 Panini Select WWE Bray Wyatt",
+"player": "Bray Wyatt"
+},
+{
+"q": "2024 Panini Select WWE Bret Hart",
+"player": "Bret Hart"
+},
+{
+"q": "2024 Panini Select WWE Brian Pillman",
+"player": "Brian Pillman"
+},
+{
+"q": "2024 Panini Select WWE Brinley Reece",
+"player": "Brinley Reece"
+},
+{
+"q": "2024 Panini Select WWE British Bulldog",
+"player": "British Bulldog"
+},
+{
+"q": "2024 Panini Select WWE Bron Breakker",
+"player": "Bron Breakker"
+},
+{
+"q": "2024 Panini Select WWE Bronco Nima",
+"player": "Bronco Nima"
+},
+{
+"q": "2024 Panini Select WWE Bronson Reed",
+"player": "Bronson Reed"
+},
+{
+"q": "2024 Panini Select WWE Brooks Jensen",
+"player": "Brooks Jensen"
+},
+{
+"q": "2024 Panini Select WWE Brother Love",
+"player": "Brother Love"
+},
+{
+"q": "2024 Panini Select WWE Bruno Sammartino",
+"player": "Bruno Sammartino"
+},
+{
+"q": "2024 Panini Select WWE Brutus Beefcake",
+"player": "Brutus Beefcake"
+},
+{
+"q": "2024 Panini Select WWE Brutus Creed",
+"player": "Brutus Creed"
+},
+{
+"q": "2024 Panini Select WWE Bubba Ray Dudley",
+"player": "Bubba Ray Dudley"
+},
+{
+"q": "2024 Panini Select WWE CM Punk",
+"player": "CM Punk"
+},
+{
+"q": "2024 Panini Select WWE Cactus Jack",
+"player": "Cactus Jack"
+},
+{
+"q": "2024 Panini Select WWE Candice LeRae",
+"player": "Candice LeRae"
+},
+{
+"q": "2024 Panini Select WWE Carlee Bright",
+"player": "Carlee Bright"
+},
+{
+"q": "2024 Panini Select WWE Carlito",
+"player": "Carlito"
+},
+{
+"q": "2024 Panini Select WWE Carmella",
+"player": "Carmella"
+},
+{
+"q": "2024 Panini Select WWE Carmelo Hayes",
+"player": "Carmelo Hayes"
+},
+{
+"q": "2024 Panini Select WWE Cedric Alexander",
+"player": "Cedric Alexander"
+},
+{
+"q": "2024 Panini Select WWE Chad Gable",
+"player": "Chad Gable"
+},
+{
+"q": "2024 Panini Select WWE Channing Lorenzo",
+"player": "Channing Lorenzo"
+},
+{
+"q": "2024 Panini Select WWE Charlie Dempsey",
+"player": "Charlie Dempsey"
+},
+{
+"q": "2024 Panini Select WWE Charlotte Flair",
+"player": "Charlotte Flair"
+},
+{
+"q": "2024 Panini Select WWE Chelsea Green",
+"player": "Chelsea Green"
+},
+{
+"q": "2024 Panini Select WWE Chyna",
+"player": "Chyna"
+},
+{
+"q": "2024 Panini Select WWE Cody Rhodes",
+"player": "Cody Rhodes"
+},
+{
+"q": "2024 Panini Select WWE Cora Jade",
+"player": "Cora Jade"
+},
+{
+"q": "2024 Panini Select WWE Cruz Del Toro",
+"player": "Cruz Del Toro"
+},
+{
+"q": "2024 Panini Select WWE Curt Hennig",
+"player": "Curt Hennig"
+},
+{
+"q": "2024 Panini Select WWE D-Lo Brown",
+"player": "D-Lo Brown"
+},
+{
+"q": "2024 Panini Select WWE D-Von Dudley",
+"player": "D-Von Dudley"
+},
+{
+"q": "2024 Panini Select WWE DIESEL",
+"player": "DIESEL"
+},
+{
+"q": "2024 Panini Select WWE Dakota Kai",
+"player": "Dakota Kai"
+},
+{
+"q": "2024 Panini Select WWE Damian Priest",
+"player": "Damian Priest"
+},
+{
+"q": "2024 Panini Select WWE Damon Kemp",
+"player": "Damon Kemp"
+},
+{
+"q": "2024 Panini Select WWE Dani Palmer",
+"player": "Dani Palmer"
+},
+{
+"q": "2024 Panini Select WWE Dante Chen",
+"player": "Dante Chen"
+},
+{
+"q": "2024 Panini Select WWE Dexter Lumis",
+"player": "Dexter Lumis"
+},
+{
+"q": "2024 Panini Select WWE Diamond Dallas Page",
+"player": "Diamond Dallas Page"
+},
+{
+"q": "2024 Panini Select WWE Dok Hendrix",
+"player": "Dok Hendrix"
+},
+{
+"q": "2024 Panini Select WWE Dominik Mysterio",
+"player": "Dominik Mysterio"
+},
+{
+"q": "2024 Panini Select WWE Don Muraco",
+"player": "Don Muraco"
+},
+{
+"q": "2024 Panini Select WWE Dragon Lee",
+"player": "Dragon Lee"
+},
+{
+"q": "2024 Panini Select WWE Drew McIntyre",
+"player": "Drew McIntyre"
+},
+{
+"q": "2024 Panini Select WWE Dude Love",
+"player": "Dude Love"
+},
+{
+"q": "2024 Panini Select WWE Duke Hudson",
+"player": "Duke Hudson"
+},
+{
+"q": "2024 Panini Select WWE Dusty Rhodes",
+"player": "Dusty Rhodes"
+},
+{
+"q": "2024 Panini Select WWE Earthquake",
+"player": "Earthquake"
+},
+{
+"q": "2024 Panini Select WWE Eddie Guerrero",
+"player": "Eddie Guerrero"
+},
+{
+"q": "2024 Panini Select WWE Eddy Thorpe",
+"player": "Eddy Thorpe"
+},
+{
+"q": "2024 Panini Select WWE Edris Enofe",
+"player": "Edris Enofe"
+},
+{
+"q": "2024 Panini Select WWE Elektra Lopez",
+"player": "Elektra Lopez"
+},
+{
+"q": "2024 Panini Select WWE Elton Prince",
+"player": "Elton Prince"
+},
+{
+"q": "2024 Panini Select WWE Eric Bischoff",
+"player": "Eric Bischoff"
+},
+{
+"q": "2024 Panini Select WWE Ethan Page",
+"player": "Ethan Page"
+},
+{
+"q": "2024 Panini Select WWE Eve Torres",
+"player": "Eve Torres"
+},
+{
+"q": "2024 Panini Select WWE Faarooq",
+"player": "Faarooq"
+},
+{
+"q": "2024 Panini Select WWE Fallon Henley",
+"player": "Fallon Henley"
+},
+{
+"q": "2024 Panini Select WWE Finn Balor",
+"player": "Finn Balor"
+},
+{
+"q": "2024 Panini Select WWE Fit Finlay",
+"player": "Fit Finlay"
+},
+{
+"q": "2024 Panini Select WWE Freddie Blassie",
+"player": "Freddie Blassie"
+},
+{
+"q": "2024 Panini Select WWE Gene Okerlund",
+"player": "Gene Okerlund"
+},
+{
+"q": "2024 Panini Select WWE George Steele",
+"player": "George Steele"
+},
+{
+"q": "2024 Panini Select WWE Gerald Brisco",
+"player": "Gerald Brisco"
+},
+{
+"q": "2024 Panini Select WWE Gigi Dolin",
+"player": "Gigi Dolin"
+},
+{
+"q": "2024 Panini Select WWE Giovanni Vinci",
+"player": "Giovanni Vinci"
+},
+{
+"q": "2024 Panini Select WWE Giulia",
+"player": "Giulia"
+},
+{
+"q": "2024 Panini Select WWE Gorilla Monsoon",
+"player": "Gorilla Monsoon"
+},
+{
+"q": "2024 Panini Select WWE Grayson Waller",
+"player": "Grayson Waller"
+},
+{
+"q": "2024 Panini Select WWE Great Muta",
+"player": "Great Muta"
+},
+{
+"q": "2024 Panini Select WWE Greg Valentine",
+"player": "Greg Valentine"
+},
+{
+"q": "2024 Panini Select WWE Gunther",
+"player": "Gunther"
+},
+{
+"q": "2024 Panini Select WWE Hank Walker",
+"player": "Hank Walker"
+},
+{
+"q": "2024 Panini Select WWE Harley Race",
+"player": "Harley Race"
+},
+{
+"q": "2024 Panini Select WWE Howard Finkel",
+"player": "Howard Finkel"
+},
+{
+"q": "2024 Panini Select WWE Hulk Hogan",
+"player": "Hulk Hogan"
+},
+{
+"q": "2024 Panini Select WWE Humberto",
+"player": "Humberto"
+},
+{
+"q": "2024 Panini Select WWE IRS",
+"player": "IRS"
+},
+{
+"q": "2024 Panini Select WWE IYO SKY",
+"player": "IYO SKY"
+},
+{
+"q": "2024 Panini Select WWE Ilja Dragunov",
+"player": "Ilja Dragunov"
+},
+{
+"q": "2024 Panini Select WWE Indi Hartwell",
+"player": "Indi Hartwell"
+},
+{
+"q": "2024 Panini Select WWE Isla Dawn",
+"player": "Isla Dawn"
+},
+{
+"q": "2024 Panini Select WWE Ivar",
+"player": "Ivar"
+},
+{
+"q": "2024 Panini Select WWE Ivy Nile",
+"player": "Ivy Nile"
+},
+{
+"q": "2024 Panini Select WWE Izzi Dame",
+"player": "Izzi Dame"
+},
+{
+"q": "2024 Panini Select WWE JD McDonagh",
+"player": "JD McDonagh"
+},
+{
+"q": "2024 Panini Select WWE Jacob Fatu",
+"player": "Jacob Fatu"
+},
+{
+"q": "2024 Panini Select WWE Jacy Jayne",
+"player": "Jacy Jayne"
+},
+{
+"q": "2024 Panini Select WWE Jade Cargill",
+"player": "Jade Cargill"
+},
+{
+"q": "2024 Panini Select WWE Jaida Parker",
+"player": "Jaida Parker"
+},
+{
+"q": "2024 Panini Select WWE Jakara Jackson",
+"player": "Jakara Jackson"
+},
+{
+"q": "2024 Panini Select WWE Jake Roberts",
+"player": "Jake Roberts"
+},
+{
+"q": "2024 Panini Select WWE Jason Jordan",
+"player": "Jason Jordan"
+},
+{
+"q": "2024 Panini Select WWE Javier Bernal",
+"player": "Javier Bernal"
+},
+{
+"q": "2024 Panini Select WWE Jay Strongbow",
+"player": "Jay Strongbow"
+},
+{
+"q": "2024 Panini Select WWE Jazmyn Nyx",
+"player": "Jazmyn Nyx"
+},
+{
+"q": "2024 Panini Select WWE Je'Von Evans",
+"player": "Je'Von Evans"
+},
+{
+"q": "2024 Panini Select WWE Jerry Lawler",
+"player": "Jerry Lawler"
+},
+{
+"q": "2024 Panini Select WWE Jey Uso",
+"player": "Jey Uso"
+},
+{
+"q": "2024 Panini Select WWE Jim Neidhart",
+"player": "Jim Neidhart"
+},
+{
+"q": "2024 Panini Select WWE Jimmy Garvin",
+"player": "Jimmy Garvin"
+},
+{
+"q": "2024 Panini Select WWE Jimmy Hart",
+"player": "Jimmy Hart"
+},
+{
+"q": "2024 Panini Select WWE Jimmy Uso",
+"player": "Jimmy Uso"
+},
+{
+"q": "2024 Panini Select WWE Joaquin Wilde",
+"player": "Joaquin Wilde"
+},
+{
+"q": "2024 Panini Select WWE Joe Coffey",
+"player": "Joe Coffey"
+},
+{
+"q": "2024 Panini Select WWE Joe Gacy",
+"player": "Joe Gacy"
+},
+{
+"q": "2024 Panini Select WWE John Cena",
+"player": "John Cena"
+},
+{
+"q": "2024 Panini Select WWE John Layfield",
+"player": "John Layfield"
+},
+{
+"q": "2024 Panini Select WWE Johnny Gargano",
+"player": "Johnny Gargano"
+},
+{
+"q": "2024 Panini Select WWE Josh Briggs",
+"player": "Josh Briggs"
+},
+{
+"q": "2024 Panini Select WWE Julius Creed",
+"player": "Julius Creed"
+},
+{
+"q": "2024 Panini Select WWE Kairi Sane",
+"player": "Kairi Sane"
+},
+{
+"q": "2024 Panini Select WWE Kane",
+"player": "Kane"
+},
+{
+"q": "2024 Panini Select WWE Karl Anderson",
+"player": "Karl Anderson"
+},
+{
+"q": "2024 Panini Select WWE Karmen Petrovic",
+"player": "Karmen Petrovic"
+},
+{
+"q": "2024 Panini Select WWE Karrion Kross",
+"player": "Karrion Kross"
+},
+{
+"q": "2024 Panini Select WWE Katana Chance",
+"player": "Katana Chance"
+},
+{
+"q": "2024 Panini Select WWE Kayden Carter",
+"player": "Kayden Carter"
+},
+{
+"q": "2024 Panini Select WWE Kelani Jordan",
+"player": "Kelani Jordan"
+},
+{
+"q": "2024 Panini Select WWE Ken Shamrock",
+"player": "Ken Shamrock"
+},
+{
+"q": "2024 Panini Select WWE Kevin Nash",
+"player": "Kevin Nash"
+},
+{
+"q": "2024 Panini Select WWE Kevin Owens",
+"player": "Kevin Owens"
+},
+{
+"q": "2024 Panini Select WWE Kiana James",
+"player": "Kiana James"
+},
+{
+"q": "2024 Panini Select WWE Kit Wilson",
+"player": "Kit Wilson"
+},
+{
+"q": "2024 Panini Select WWE Kofi Kingston",
+"player": "Kofi Kingston"
+},
+{
+"q": "2024 Panini Select WWE Kurt Angle",
+"player": "Kurt Angle"
+},
+{
+"q": "2024 Panini Select WWE LA Knight",
+"player": "LA Knight"
+},
+{
+"q": "2024 Panini Select WWE Lash Legend",
+"player": "Lash Legend"
+},
+{
+"q": "2024 Panini Select WWE Lex Luger",
+"player": "Lex Luger"
+},
+{
+"q": "2024 Panini Select WWE Lexis King",
+"player": "Lexis King"
+},
+{
+"q": "2024 Panini Select WWE Lita",
+"player": "Lita"
+},
+{
+"q": "2024 Panini Select WWE Liv Morgan",
+"player": "Liv Morgan"
+},
+{
+"q": "2024 Panini Select WWE Lola Vice",
+"player": "Lola Vice"
+},
+{
+"q": "2024 Panini Select WWE Luca Crusifino",
+"player": "Luca Crusifino"
+},
+{
+"q": "2024 Panini Select WWE Lucien Price",
+"player": "Lucien Price"
+},
+{
+"q": "2024 Panini Select WWE Ludwig Kaiser",
+"player": "Ludwig Kaiser"
+},
+{
+"q": "2024 Panini Select WWE Luke Gallows",
+"player": "Luke Gallows"
+},
+{
+"q": "2024 Panini Select WWE Lyra Valkyria",
+"player": "Lyra Valkyria"
+},
+{
+"q": "2024 Panini Select WWE MVP",
+"player": "MVP"
+},
+{
+"q": "2024 Panini Select WWE Malik Blade",
+"player": "Malik Blade"
+},
+{
+"q": "2024 Panini Select WWE Mankind",
+"player": "Mankind"
+},
+{
+"q": "2024 Panini Select WWE Mark Coffey",
+"player": "Mark Coffey"
+},
+{
+"q": "2024 Panini Select WWE Maxxine Dupri",
+"player": "Maxxine Dupri"
+},
+{
+"q": "2024 Panini Select WWE Meiko Satomura",
+"player": "Meiko Satomura"
+},
+{
+"q": "2024 Panini Select WWE Michelle McCool",
+"player": "Michelle McCool"
+},
+{
+"q": "2024 Panini Select WWE Michin",
+"player": "Michin"
+},
+{
+"q": "2024 Panini Select WWE Miss Elizabeth",
+"player": "Miss Elizabeth"
+},
+{
+"q": "2024 Panini Select WWE Molly Holly",
+"player": "Molly Holly"
+},
+{
+"q": "2024 Panini Select WWE Montez Ford",
+"player": "Montez Ford"
+},
+{
+"q": "2024 Panini Select WWE Mr. Stone",
+"player": "Mr. Stone"
+},
+{
+"q": "2024 Panini Select WWE Myles Borne",
+"player": "Myles Borne"
+},
+{
+"q": "2024 Panini Select WWE Naomi",
+"player": "Naomi"
+},
+{
+"q": "2024 Panini Select WWE Natalya",
+"player": "Natalya"
+},
+{
+"q": "2024 Panini Select WWE Nathan Frazer",
+"player": "Nathan Frazer"
+},
+{
+"q": "2024 Panini Select WWE Nia Jax",
+"player": "Nia Jax"
+},
+{
+"q": "2024 Panini Select WWE Nick Aldis",
+"player": "Nick Aldis"
+},
+{
+"q": "2024 Panini Select WWE Nikki Cross",
+"player": "Nikki Cross"
+},
+{
+"q": "2024 Panini Select WWE Nikkita Lyons",
+"player": "Nikkita Lyons"
+},
+{
+"q": "2024 Panini Select WWE Nikolai Volkoff",
+"player": "Nikolai Volkoff"
+},
+{
+"q": "2024 Panini Select WWE Noam Dar",
+"player": "Noam Dar"
+},
+{
+"q": "2024 Panini Select WWE Norman Smiley",
+"player": "Norman Smiley"
+},
+{
+"q": "2024 Panini Select WWE Oba Femi",
+"player": "Oba Femi"
+},
+{
+"q": "2024 Panini Select WWE Omos",
+"player": "Omos"
+},
+{
+"q": "2024 Panini Select WWE Oro Mensah",
+"player": "Oro Mensah"
+},
+{
+"q": "2024 Panini Select WWE Otis",
+"player": "Otis"
+},
+{
+"q": "2024 Panini Select WWE Paul Bearer",
+"player": "Paul Bearer"
+},
+{
+"q": "2024 Panini Select WWE Paul Ellering",
+"player": "Paul Ellering"
+},
+{
+"q": "2024 Panini Select WWE Paul Heyman",
+"player": "Paul Heyman"
+},
+{
+"q": "2024 Panini Select WWE Pete Dunne",
+"player": "Pete Dunne"
+},
+{
+"q": "2024 Panini Select WWE Piper Niven",
+"player": "Piper Niven"
+},
+{
+"q": "2024 Panini Select WWE R-Truth",
+"player": "R-Truth"
+},
+{
+"q": "2024 Panini Select WWE Randy Orton",
+"player": "Randy Orton"
+},
+{
+"q": "2024 Panini Select WWE Raquel Rodriguez",
+"player": "Raquel Rodriguez"
+},
+{
+"q": "2024 Panini Select WWE Razor Ramon",
+"player": "Razor Ramon"
+},
+{
+"q": "2024 Panini Select WWE Red Rooster",
+"player": "Red Rooster"
+},
+{
+"q": "2024 Panini Select WWE Rey Mysterio",
+"player": "Rey Mysterio"
+},
+{
+"q": "2024 Panini Select WWE Rezar",
+"player": "Rezar"
+},
+{
+"q": "2024 Panini Select WWE Rhea Ripley",
+"player": "Rhea Ripley"
+},
+{
+"q": "2024 Panini Select WWE Rick Rude",
+"player": "Rick Rude"
+},
+{
+"q": "2024 Panini Select WWE Rick Steiner",
+"player": "Rick Steiner"
+},
+{
+"q": "2024 Panini Select WWE Ricky Steamboat",
+"player": "Ricky Steamboat"
+},
+{
+"q": "2024 Panini Select WWE Ridge Holland",
+"player": "Ridge Holland"
+},
+{
+"q": "2024 Panini Select WWE Rikishi",
+"player": "Rikishi"
+},
+{
+"q": "2024 Panini Select WWE Riley Osborne",
+"player": "Riley Osborne"
+},
+{
+"q": "2024 Panini Select WWE Road Dogg",
+"player": "Road Dogg"
+},
+{
+"q": "2024 Panini Select WWE Rob Van Dam",
+"player": "Rob Van Dam"
+},
+{
+"q": "2024 Panini Select WWE Rocky Johnson",
+"player": "Rocky Johnson"
+},
+{
+"q": "2024 Panini Select WWE Roddy Piper",
+"player": "Roddy Piper"
+},
+{
+"q": "2024 Panini Select WWE Roman Reigns",
+"player": "Roman Reigns"
+},
+{
+"q": "2024 Panini Select WWE Ron Simmons",
+"player": "Ron Simmons"
+},
+{
+"q": "2024 Panini Select WWE Roxanne Perez",
+"player": "Roxanne Perez"
+},
+{
+"q": "2024 Panini Select WWE Sami Zayn",
+"player": "Sami Zayn"
+},
+{
+"q": "2024 Panini Select WWE Santos Escobar",
+"player": "Santos Escobar"
+},
+{
+"q": "2024 Panini Select WWE Scarlett",
+"player": "Scarlett"
+},
+{
+"q": "2024 Panini Select WWE Scott Hall",
+"player": "Scott Hall"
+},
+{
+"q": "2024 Panini Select WWE Scott Steiner",
+"player": "Scott Steiner"
+},
+{
+"q": "2024 Panini Select WWE Seth Rollins",
+"player": "Seth Rollins"
+},
+{
+"q": "2024 Panini Select WWE Shawn Michaels",
+"player": "Shawn Michaels"
+},
+{
+"q": "2024 Panini Select WWE Shawn Spears",
+"player": "Shawn Spears"
+},
+{
+"q": "2024 Panini Select WWE Shayna Baszler",
+"player": "Shayna Baszler"
+},
+{
+"q": "2024 Panini Select WWE Sheamus",
+"player": "Sheamus"
+},
+{
+"q": "2024 Panini Select WWE Sherri Martel",
+"player": "Sherri Martel"
+},
+{
+"q": "2024 Panini Select WWE Shinsuke Nakamura",
+"player": "Shinsuke Nakamura"
+},
+{
+"q": "2024 Panini Select WWE Shotzi",
+"player": "Shotzi"
+},
+{
+"q": "2024 Panini Select WWE Sid Vicious",
+"player": "Sid Vicious"
+},
+{
+"q": "2024 Panini Select WWE Sol Ruca",
+"player": "Sol Ruca"
+},
+{
+"q": "2024 Panini Select WWE Solo Sikoa",
+"player": "Solo Sikoa"
+},
+{
+"q": "2024 Panini Select WWE Sonya Deville",
+"player": "Sonya Deville"
+},
+{
+"q": "2024 Panini Select WWE Stacy Keibler",
+"player": "Stacy Keibler"
+},
+{
+"q": "2024 Panini Select WWE Stephanie Vaquer",
+"player": "Stephanie Vaquer"
+},
+{
+"q": "2024 Panini Select WWE Steve Austin",
+"player": "Steve Austin"
+},
+{
+"q": "2024 Panini Select WWE Sycho Sid",
+"player": "Sycho Sid"
+},
+{
+"q": "2024 Panini Select WWE Tama Tonga",
+"player": "Tama Tonga"
+},
+{
+"q": "2024 Panini Select WWE Tank Ledger",
+"player": "Tank Ledger"
+},
+{
+"q": "2024 Panini Select WWE Tatanka",
+"player": "Tatanka"
+},
+{
+"q": "2024 Panini Select WWE Tatum Paxley",
+"player": "Tatum Paxley"
+},
+{
+"q": "2024 Panini Select WWE Ted DiBiase",
+"player": "Ted DiBiase"
+},
+{
+"q": "2024 Panini Select WWE Tegan Nox",
+"player": "Tegan Nox"
+},
+{
+"q": "2024 Panini Select WWE Terry Funk",
+"player": "Terry Funk"
+},
+{
+"q": "2024 Panini Select WWE The Boogeyman",
+"player": "The Boogeyman"
+},
+{
+"q": "2024 Panini Select WWE The Godfather",
+"player": "The Godfather"
+},
+{
+"q": "2024 Panini Select WWE The Great Khali",
+"player": "The Great Khali"
+},
+{
+"q": "2024 Panini Select WWE The Honky Tonk Man",
+"player": "The Honky Tonk Man"
+},
+{
+"q": "2024 Panini Select WWE The Hurricane",
+"player": "The Hurricane"
+},
+{
+"q": "2024 Panini Select WWE The Iron Sheik",
+"player": "The Iron Sheik"
+},
+{
+"q": "2024 Panini Select WWE The Miz",
+"player": "The Miz"
+},
+{
+"q": "2024 Panini Select WWE The Rock",
+"player": "The Rock"
+},
+{
+"q": "2024 Panini Select WWE The Sandman",
+"player": "The Sandman"
+},
+{
+"q": "2024 Panini Select WWE Thea Hail",
+"player": "Thea Hail"
+},
+{
+"q": "2024 Panini Select WWE Theodore Long",
+"player": "Theodore Long"
+},
+{
+"q": "2024 Panini Select WWE Tiffany Stratton",
+"player": "Tiffany Stratton"
+},
+{
+"q": "2024 Panini Select WWE Tommaso Ciampa",
+"player": "Tommaso Ciampa"
+},
+{
+"q": "2024 Panini Select WWE Tonga Loa",
+"player": "Tonga Loa"
+},
+{
+"q": "2024 Panini Select WWE Tony D'Angelo",
+"player": "Tony D'Angelo"
+},
+{
+"q": "2024 Panini Select WWE Torrie Wilson",
+"player": "Torrie Wilson"
+},
+{
+"q": "2024 Panini Select WWE Trick Williams",
+"player": "Trick Williams"
+},
+{
+"q": "2024 Panini Select WWE Triple H",
+"player": "Triple H"
+},
+{
+"q": "2024 Panini Select WWE Trish Stratus",
+"player": "Trish Stratus"
+},
+{
+"q": "2024 Panini Select WWE Tyler Bate",
+"player": "Tyler Bate"
+},
+{
+"q": "2024 Panini Select WWE Tyler Breeze",
+"player": "Tyler Breeze"
+},
+{
+"q": "2024 Panini Select WWE Typhoon",
+"player": "Typhoon"
+},
+{
+"q": "2024 Panini Select WWE Tyriek Igwe",
+"player": "Tyriek Igwe"
+},
+{
+"q": "2024 Panini Select WWE Tyson Dupont",
+"player": "Tyson Dupont"
+},
+{
+"q": "2024 Panini Select WWE Ultimate Warrior",
+"player": "Ultimate Warrior"
+},
+{
+"q": "2024 Panini Select WWE Umaga",
+"player": "Umaga"
+},
+{
+"q": "2024 Panini Select WWE Uncle Howdy",
+"player": "Uncle Howdy"
+},
+{
+"q": "2024 Panini Select WWE Undertaker",
+"player": "Undertaker"
+},
+{
+"q": "2024 Panini Select WWE Vader",
+"player": "Vader"
+},
+{
+"q": "2024 Panini Select WWE Valhalla",
+"player": "Valhalla"
+},
+{
+"q": "2024 Panini Select WWE Wade Barrett",
+"player": "Wade Barrett"
+},
+{
+"q": "2024 Panini Select WWE Wendi Richter",
+"player": "Wendi Richter"
+},
+{
+"q": "2024 Panini Select WWE Wendy Choo",
+"player": "Wendy Choo"
+},
+{
+"q": "2024 Panini Select WWE Wes Lee",
+"player": "Wes Lee"
+},
+{
+"q": "2024 Panini Select WWE William Regal",
+"player": "William Regal"
+},
+{
+"q": "2024 Panini Select WWE Wolfgang",
+"player": "Wolfgang"
+},
+{
+"q": "2024 Panini Select WWE Wren Sinclair",
+"player": "Wren Sinclair"
+},
+{
+"q": "2024 Panini Select WWE X-Pac",
+"player": "X-Pac"
+},
+{
+"q": "2024 Panini Select WWE Xavier Woods",
+"player": "Xavier Woods"
+},
+{
+"q": "2024 Panini Select WWE Yokozuna",
+"player": "Yokozuna"
+},
+{
+"q": "2024 Panini Select WWE Zelina Vega",
+"player": "Zelina Vega"
+},
+{
+"q": "2024 Panini Select WWE Zoey Stark",
+"player": "Zoey Stark"
+},
+{
+"q": "2025 Kakawow Aura DC Action Comics #1",
+"player": "Action Comics #1"
+},
+{
+"q": "2025 Kakawow Aura DC Alfred Pennyworth",
+"player": "Alfred Pennyworth"
+},
+{
+"q": "2025 Kakawow Aura DC All-American Comics #16",
+"player": "All-American Comics #16"
+},
+{
+"q": "2025 Kakawow Aura DC Aqualad-Garth",
+"player": "Aqualad-Garth"
+},
+{
+"q": "2025 Kakawow Aura DC Aqualad-Jackson Hyde",
+"player": "Aqualad-Jackson Hyde"
+},
+{
+"q": "2025 Kakawow Aura DC Aquaman",
+"player": "Aquaman"
+},
+{
+"q": "2025 Kakawow Aura DC Aquaman and the Lost Kingdom",
+"player": "Aquaman and the Lost Kingdom"
+},
+{
+"q": "2025 Kakawow Aura DC Atom Smasher",
+"player": "Atom Smasher"
+},
+{
+"q": "2025 Kakawow Aura DC Atrocitus",
+"player": "Atrocitus"
+},
+{
+"q": "2025 Kakawow Aura DC BRAZIL",
+"player": "BRAZIL"
+},
+{
+"q": "2025 Kakawow Aura DC Bane",
+"player": "Bane"
+},
+{
+"q": "2025 Kakawow Aura DC Batgirl",
+"player": "Batgirl"
+},
+{
+"q": "2025 Kakawow Aura DC Batman",
+"player": "Batman"
+},
+{
+"q": "2025 Kakawow Aura DC Batman #1",
+"player": "Batman #1"
+},
+{
+"q": "2025 Kakawow Aura DC Batman Forever",
+"player": "Batman Forever"
+},
+{
+"q": "2025 Kakawow Aura DC Batman v Superman: Dawn of Justice",
+"player": "Batman v Superman: Dawn of Justice"
+},
+{
+"q": "2025 Kakawow Aura DC Batman：The Killing Joke",
+"player": "Batman：The Killing Joke"
+},
+{
+"q": "2025 Kakawow Aura DC Birds of Prey ：and the Fantabulous Emancipation of One Harley Quinn",
+"player": "Birds of Prey ：and the Fantabulous Emancipation of One Harley Quinn"
+},
+{
+"q": "2025 Kakawow Aura DC Bizarro",
+"player": "Bizarro"
+},
+{
+"q": "2025 Kakawow Aura DC Black Adam",
+"player": "Black Adam"
+},
+{
+"q": "2025 Kakawow Aura DC Black Canary",
+"player": "Black Canary"
+},
+{
+"q": "2025 Kakawow Aura DC Black Lightning",
+"player": "Black Lightning"
+},
+{
+"q": "2025 Kakawow Aura DC Black Manta",
+"player": "Black Manta"
+},
+{
+"q": "2025 Kakawow Aura DC Blue Beetle",
+"player": "Blue Beetle"
+},
+{
+"q": "2025 Kakawow Aura DC Brainiac",
+"player": "Brainiac"
+},
+{
+"q": "2025 Kakawow Aura DC Bumblebee",
+"player": "Bumblebee"
+},
+{
+"q": "2025 Kakawow Aura DC CHINA",
+"player": "CHINA"
+},
+{
+"q": "2025 Kakawow Aura DC CZECHIA",
+"player": "CZECHIA"
+},
+{
+"q": "2025 Kakawow Aura DC Captain Cold",
+"player": "Captain Cold"
+},
+{
+"q": "2025 Kakawow Aura DC Catwoman",
+"player": "Catwoman"
+},
+{
+"q": "2025 Kakawow Aura DC Cheetah",
+"player": "Cheetah"
+},
+{
+"q": "2025 Kakawow Aura DC Clark Kent",
+"player": "Clark Kent"
+},
+{
+"q": "2025 Kakawow Aura DC Clayface",
+"player": "Clayface"
+},
+{
+"q": "2025 Kakawow Aura DC Creeper",
+"player": "Creeper"
+},
+{
+"q": "2025 Kakawow Aura DC Crisis on Infinite Earths",
+"player": "Crisis on Infinite Earths"
+},
+{
+"q": "2025 Kakawow Aura DC Cyborg",
+"player": "Cyborg"
+},
+{
+"q": "2025 Kakawow Aura DC Cyclone",
+"player": "Cyclone"
+},
+{
+"q": "2025 Kakawow Aura DC DC Rebirth",
+"player": "DC Rebirth"
+},
+{
+"q": "2025 Kakawow Aura DC Dark Nights: Death Metal",
+"player": "Dark Nights: Death Metal"
+},
+{
+"q": "2025 Kakawow Aura DC Dark Nights: Metal",
+"player": "Dark Nights: Metal"
+},
+{
+"q": "2025 Kakawow Aura DC Darkseid",
+"player": "Darkseid"
+},
+{
+"q": "2025 Kakawow Aura DC Deathstroke",
+"player": "Deathstroke"
+},
+{
+"q": "2025 Kakawow Aura DC Detective Comics #27",
+"player": "Detective Comics #27"
+},
+{
+"q": "2025 Kakawow Aura DC Doctor Fate",
+"player": "Doctor Fate"
+},
+{
+"q": "2025 Kakawow Aura DC Doctor Sivana",
+"player": "Doctor Sivana"
+},
+{
+"q": "2025 Kakawow Aura DC Doomsday",
+"player": "Doomsday"
+},
+{
+"q": "2025 Kakawow Aura DC Elongated Man",
+"player": "Elongated Man"
+},
+{
+"q": "2025 Kakawow Aura DC FRANCE",
+"player": "FRANCE"
+},
+{
+"q": "2025 Kakawow Aura DC Final Crisis",
+"player": "Final Crisis"
+},
+{
+"q": "2025 Kakawow Aura DC Flash Comics #1",
+"player": "Flash Comics #1"
+},
+{
+"q": "2025 Kakawow Aura DC Flashpoint",
+"player": "Flashpoint"
+},
+{
+"q": "2025 Kakawow Aura DC Forever Evil",
+"player": "Forever Evil"
+},
+{
+"q": "2025 Kakawow Aura DC GERMANY",
+"player": "GERMANY"
+},
+{
+"q": "2025 Kakawow Aura DC General Zod",
+"player": "General Zod"
+},
+{
+"q": "2025 Kakawow Aura DC Green Arrow",
+"player": "Green Arrow"
+},
+{
+"q": "2025 Kakawow Aura DC Green Lantern",
+"player": "Green Lantern"
+},
+{
+"q": "2025 Kakawow Aura DC Green Lantern Vol. 2 #87",
+"player": "Green Lantern Vol. 2 #87"
+},
+{
+"q": "2025 Kakawow Aura DC Harley Quinn",
+"player": "Harley Quinn"
+},
+{
+"q": "2025 Kakawow Aura DC Hawkgirl",
+"player": "Hawkgirl"
+},
+{
+"q": "2025 Kakawow Aura DC Hawkman",
+"player": "Hawkman"
+},
+{
+"q": "2025 Kakawow Aura DC Hawkwoman",
+"player": "Hawkwoman"
+},
+{
+"q": "2025 Kakawow Aura DC ITALY",
+"player": "ITALY"
+},
+{
+"q": "2025 Kakawow Aura DC Infinite Crisis",
+"player": "Infinite Crisis"
+},
+{
+"q": "2025 Kakawow Aura DC JAPAN",
+"player": "JAPAN"
+},
+{
+"q": "2025 Kakawow Aura DC James Gordon",
+"player": "James Gordon"
+},
+{
+"q": "2025 Kakawow Aura DC John Constantine",
+"player": "John Constantine"
+},
+{
+"q": "2025 Kakawow Aura DC John Stewart",
+"player": "John Stewart"
+},
+{
+"q": "2025 Kakawow Aura DC Justice League",
+"player": "Justice League"
+},
+{
+"q": "2025 Kakawow Aura DC Justice League International #1",
+"player": "Justice League International #1"
+},
+{
+"q": "2025 Kakawow Aura DC Justice League: The Darkseid War",
+"player": "Justice League: The Darkseid War"
+},
+{
+"q": "2025 Kakawow Aura DC Katana",
+"player": "Katana"
+},
+{
+"q": "2025 Kakawow Aura DC Kid Flash",
+"player": "Kid Flash"
+},
+{
+"q": "2025 Kakawow Aura DC Killer Croc",
+"player": "Killer Croc"
+},
+{
+"q": "2025 Kakawow Aura DC King Shark",
+"player": "King Shark"
+},
+{
+"q": "2025 Kakawow Aura DC Lex Luthor",
+"player": "Lex Luthor"
+},
+{
+"q": "2025 Kakawow Aura DC Lois Lane",
+"player": "Lois Lane"
+},
+{
+"q": "2025 Kakawow Aura DC MEXICO",
+"player": "MEXICO"
+},
+{
+"q": "2025 Kakawow Aura DC Man-Bat",
+"player": "Man-Bat"
+},
+{
+"q": "2025 Kakawow Aura DC Martian Manhunter",
+"player": "Martian Manhunter"
+},
+{
+"q": "2025 Kakawow Aura DC Mera",
+"player": "Mera"
+},
+{
+"q": "2025 Kakawow Aura DC Mister Terrific",
+"player": "Mister Terrific"
+},
+{
+"q": "2025 Kakawow Aura DC Mongul",
+"player": "Mongul"
+},
+{
+"q": "2025 Kakawow Aura DC Mr. Freeze",
+"player": "Mr. Freeze"
+},
+{
+"q": "2025 Kakawow Aura DC Mr. Mind",
+"player": "Mr. Mind"
+},
+{
+"q": "2025 Kakawow Aura DC Naomi",
+"player": "Naomi"
+},
+{
+"q": "2025 Kakawow Aura DC Nightwing",
+"player": "Nightwing"
+},
+{
+"q": "2025 Kakawow Aura DC Nubia",
+"player": "Nubia"
+},
+{
+"q": "2025 Kakawow Aura DC POLAND",
+"player": "POLAND"
+},
+{
+"q": "2025 Kakawow Aura DC Parademon",
+"player": "Parademon"
+},
+{
+"q": "2025 Kakawow Aura DC Penguin",
+"player": "Penguin"
+},
+{
+"q": "2025 Kakawow Aura DC Poison Ivy",
+"player": "Poison Ivy"
+},
+{
+"q": "2025 Kakawow Aura DC RUSSIA",
+"player": "RUSSIA"
+},
+{
+"q": "2025 Kakawow Aura DC Ra's al Ghul",
+"player": "Ra's al Ghul"
+},
+{
+"q": "2025 Kakawow Aura DC Raven",
+"player": "Raven"
+},
+{
+"q": "2025 Kakawow Aura DC Red Arrow",
+"player": "Red Arrow"
+},
+{
+"q": "2025 Kakawow Aura DC Red Hood",
+"player": "Red Hood"
+},
+{
+"q": "2025 Kakawow Aura DC Red Tornado",
+"player": "Red Tornado"
+},
+{
+"q": "2025 Kakawow Aura DC Reverse-Flash",
+"player": "Reverse-Flash"
+},
+{
+"q": "2025 Kakawow Aura DC Riddler",
+"player": "Riddler"
+},
+{
+"q": "2025 Kakawow Aura DC Robin",
+"player": "Robin"
+},
+{
+"q": "2025 Kakawow Aura DC Robotman",
+"player": "Robotman"
+},
+{
+"q": "2025 Kakawow Aura DC Rorschach",
+"player": "Rorschach"
+},
+{
+"q": "2025 Kakawow Aura DC SOUTH KOREA",
+"player": "SOUTH KOREA"
+},
+{
+"q": "2025 Kakawow Aura DC SPAIN",
+"player": "SPAIN"
+},
+{
+"q": "2025 Kakawow Aura DC Scarecrow",
+"player": "Scarecrow"
+},
+{
+"q": "2025 Kakawow Aura DC Sensation Comics #1",
+"player": "Sensation Comics #1"
+},
+{
+"q": "2025 Kakawow Aura DC Shazam",
+"player": "Shazam"
+},
+{
+"q": "2025 Kakawow Aura DC Shazam!",
+"player": "Shazam!"
+},
+{
+"q": "2025 Kakawow Aura DC Shazam! Fury of the Gods",
+"player": "Shazam! Fury of the Gods"
+},
+{
+"q": "2025 Kakawow Aura DC Showcase #4",
+"player": "Showcase #4"
+},
+{
+"q": "2025 Kakawow Aura DC Sinestro",
+"player": "Sinestro"
+},
+{
+"q": "2025 Kakawow Aura DC Solomon Grundy",
+"player": "Solomon Grundy"
+},
+{
+"q": "2025 Kakawow Aura DC Spectre",
+"player": "Spectre"
+},
+{
+"q": "2025 Kakawow Aura DC Speedy",
+"player": "Speedy"
+},
+{
+"q": "2025 Kakawow Aura DC Starfire",
+"player": "Starfire"
+},
+{
+"q": "2025 Kakawow Aura DC Static",
+"player": "Static"
+},
+{
+"q": "2025 Kakawow Aura DC Steppenwolf",
+"player": "Steppenwolf"
+},
+{
+"q": "2025 Kakawow Aura DC Suicide Squad",
+"player": "Suicide Squad"
+},
+{
+"q": "2025 Kakawow Aura DC Superboy",
+"player": "Superboy"
+},
+{
+"q": "2025 Kakawow Aura DC Supergirl",
+"player": "Supergirl"
+},
+{
+"q": "2025 Kakawow Aura DC Superman",
+"player": "Superman"
+},
+{
+"q": "2025 Kakawow Aura DC Superman #1",
+"player": "Superman #1"
+},
+{
+"q": "2025 Kakawow Aura DC Superman Returns",
+"player": "Superman Returns"
+},
+{
+"q": "2025 Kakawow Aura DC TURKEY",
+"player": "TURKEY"
+},
+{
+"q": "2025 Kakawow Aura DC The Batman",
+"player": "The Batman"
+},
+{
+"q": "2025 Kakawow Aura DC The Brave and the Bold #28",
+"player": "The Brave and the Bold #28"
+},
+{
+"q": "2025 Kakawow Aura DC The Dark Knight Returns",
+"player": "The Dark Knight Returns"
+},
+{
+"q": "2025 Kakawow Aura DC The Death of Superman",
+"player": "The Death of Superman"
+},
+{
+"q": "2025 Kakawow Aura DC The Flash",
+"player": "The Flash"
+},
+{
+"q": "2025 Kakawow Aura DC The Joker",
+"player": "The Joker"
+},
+{
+"q": "2025 Kakawow Aura DC The Suicide Squad",
+"player": "The Suicide Squad"
+},
+{
+"q": "2025 Kakawow Aura DC The Trinity",
+"player": "The Trinity"
+},
+{
+"q": "2025 Kakawow Aura DC Two-Face",
+"player": "Two-Face"
+},
+{
+"q": "2025 Kakawow Aura DC UNITED STATES",
+"player": "UNITED STATES"
+},
+{
+"q": "2025 Kakawow Aura DC Vixen",
+"player": "Vixen"
+},
+{
+"q": "2025 Kakawow Aura DC Wonder Girl",
+"player": "Wonder Girl"
+},
+{
+"q": "2025 Kakawow Aura DC Wonder Woman",
+"player": "Wonder Woman"
+},
+{
+"q": "2025 Kakawow Aura DC Wonder Woman #1",
+"player": "Wonder Woman #1"
+},
+{
+"q": "2025 Kakawow Aura DC Wonder Woman 1984",
+"player": "Wonder Woman 1984"
+},
+{
+"q": "2025 Kakawow Aura DC Zatanna",
+"player": "Zatanna"
 },
 {
 "q": "2025 Kakawow Marvel Aura Aero",
@@ -22978,6 +25350,706 @@
 {
 "q": "2026 Bowman Football Sapphire Edition Zion Young",
 "player": "Zion Young"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Abu",
+"player": "Abu"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Abuela",
+"player": "Abuela"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Agent Pleakley",
+"player": "Agent Pleakley"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Aladdin",
+"player": "Aladdin"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Alice",
+"player": "Alice"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Amaya",
+"player": "Amaya"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Angel",
+"player": "Angel"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Anna",
+"player": "Anna"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Antonio",
+"player": "Antonio"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Ariel",
+"player": "Ariel"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Asha",
+"player": "Asha"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Aurora",
+"player": "Aurora"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Baloo",
+"player": "Baloo"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Bambi",
+"player": "Bambi"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Baymax",
+"player": "Baymax"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Belle",
+"player": "Belle"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Benjamin Clawhauser",
+"player": "Benjamin Clawhauser"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Berlioz",
+"player": "Berlioz"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Bruni",
+"player": "Bruni"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Bruno",
+"player": "Bruno"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Camilo",
+"player": "Camilo"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Captain Gantu",
+"player": "Captain Gantu"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Captain Hook",
+"player": "Captain Hook"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Cheshire Cat",
+"player": "Cheshire Cat"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Chief Bogo",
+"player": "Chief Bogo"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Chip 'n' Dale",
+"player": "Chip 'n' Dale"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Chip&Dale",
+"player": "Chip&Dale"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Christopher Robin",
+"player": "Christopher Robin"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Cinderella",
+"player": "Cinderella"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Cruella de Vil",
+"player": "Cruella de Vil"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Daisy Duck",
+"player": "Daisy Duck"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Deputy Mayor Bellwether",
+"player": "Deputy Mayor Bellwether"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Dewey",
+"player": "Dewey"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Dinah",
+"player": "Dinah"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Dolores",
+"player": "Dolores"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Donald Duck",
+"player": "Donald Duck"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Dr. Facilier",
+"player": "Dr. Facilier"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Dr. Jumba Jookiba",
+"player": "Dr. Jumba Jookiba"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Duchess",
+"player": "Duchess"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Dumbo",
+"player": "Dumbo"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Eeyore",
+"player": "Eeyore"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Elsa",
+"player": "Elsa"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Figaro",
+"player": "Figaro"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Finnick",
+"player": "Finnick"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Fix-It Felix",
+"player": "Fix-It Felix"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Flash",
+"player": "Flash"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Flower",
+"player": "Flower"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Flynn Rider",
+"player": "Flynn Rider"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Fru Fru",
+"player": "Fru Fru"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Gary",
+"player": "Gary"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Gaston",
+"player": "Gaston"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Gazelle",
+"player": "Gazelle"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Genie",
+"player": "Genie"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Gogo Tomago",
+"player": "Gogo Tomago"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Goofy",
+"player": "Goofy"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Gus，Jaq",
+"player": "Gus，Jaq"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Hades",
+"player": "Hades"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Hans",
+"player": "Hans"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Heihei",
+"player": "Heihei"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Hiro Hamada",
+"player": "Hiro Hamada"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Huey",
+"player": "Huey"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Isabela",
+"player": "Isabela"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Jafar",
+"player": "Jafar"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Jasmine",
+"player": "Jasmine"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Jiminy Cricket",
+"player": "Jiminy Cricket"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Judy Hopps",
+"player": "Judy Hopps"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Julieta",
+"player": "Julieta"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Kaa",
+"player": "Kaa"
+},
+{
+"q": "2026 Card Fun Disney Chronoz King Mufasa",
+"player": "King Mufasa"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Kristoff",
+"player": "Kristoff"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Lady",
+"player": "Lady"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Lady Tremaine",
+"player": "Lady Tremaine"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Lady and the Tramp",
+"player": "Lady and the Tramp"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Leroy",
+"player": "Leroy"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Lilo",
+"player": "Lilo"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Loto",
+"player": "Loto"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Louie",
+"player": "Louie"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Lucifer",
+"player": "Lucifer"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Lucky",
+"player": "Lucky"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Luisa",
+"player": "Luisa"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Mad Hatter",
+"player": "Mad Hatter"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Magnifico",
+"player": "Magnifico"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Maleficent",
+"player": "Maleficent"
+},
+{
+"q": "2026 Card Fun Disney Chronoz March Hare",
+"player": "March Hare"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Marie",
+"player": "Marie"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Matangi",
+"player": "Matangi"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Maui",
+"player": "Maui"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Mayor Lionheart",
+"player": "Mayor Lionheart"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Meeko",
+"player": "Meeko"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Merida",
+"player": "Merida"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Merryweather，Flora，Fauna",
+"player": "Merryweather，Flora，Fauna"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Mickey & Friends",
+"player": "Mickey & Friends"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Mickey Mouse",
+"player": "Mickey Mouse"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Minnie Mouse",
+"player": "Minnie Mouse"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Mirabel",
+"player": "Mirabel"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Miss Bunny",
+"player": "Miss Bunny"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Moana",
+"player": "Moana"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Moni",
+"player": "Moni"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Mother Gothel",
+"player": "Mother Gothel"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Mowgli",
+"player": "Mowgli"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Mr. Big",
+"player": "Mr. Big"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Mrs. Potts and Chip",
+"player": "Mrs. Potts and Chip"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Mulan",
+"player": "Mulan"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Mushu",
+"player": "Mushu"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Nala",
+"player": "Nala"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Namaari",
+"player": "Namaari"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Nibbles Maplestick",
+"player": "Nibbles Maplestick"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Nick Wilde",
+"player": "Nick Wilde"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Olaf",
+"player": "Olaf"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Owl",
+"player": "Owl"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Pascal",
+"player": "Pascal"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Pawbert Lynxley",
+"player": "Pawbert Lynxley"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Percy",
+"player": "Percy"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Perdita",
+"player": "Perdita"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Pete",
+"player": "Pete"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Peter Pan",
+"player": "Peter Pan"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Piglet",
+"player": "Piglet"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Pinocchio",
+"player": "Pinocchio"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Pinocchio and Jiminy Cricket",
+"player": "Pinocchio and Jiminy Cricket"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Pluto",
+"player": "Pluto"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Pocahontas",
+"player": "Pocahontas"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Pongo",
+"player": "Pongo"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Pongo and Perdita",
+"player": "Pongo and Perdita"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Pooh",
+"player": "Pooh"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Prince Charming",
+"player": "Prince Charming"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Prince Eric",
+"player": "Prince Eric"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Prince Hans",
+"player": "Prince Hans"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Prince Naveen",
+"player": "Prince Naveen"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Prince Phillip",
+"player": "Prince Phillip"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Pua",
+"player": "Pua"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Pumbaa",
+"player": "Pumbaa"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Queen",
+"player": "Queen"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Queen of Hearts",
+"player": "Queen of Hearts"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Rabbit",
+"player": "Rabbit"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Rafiki",
+"player": "Rafiki"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Rapunzel",
+"player": "Rapunzel"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Raya",
+"player": "Raya"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Reuben",
+"player": "Reuben"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Scar",
+"player": "Scar"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Scars",
+"player": "Scars"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Scrump",
+"player": "Scrump"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Sergeant Tammy Calhoun",
+"player": "Sergeant Tammy Calhoun"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Shang",
+"player": "Shang"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Shere Khan",
+"player": "Shere Khan"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Simba",
+"player": "Simba"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Simba(young)",
+"player": "Simba(young)"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Simea",
+"player": "Simea"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Sisu",
+"player": "Sisu"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Snow White",
+"player": "Snow White"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Star",
+"player": "Star"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Stitch",
+"player": "Stitch"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Sven",
+"player": "Sven"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Taffyta Muttonfudge",
+"player": "Taffyta Muttonfudge"
+},
+{
+"q": "2026 Card Fun Disney Chronoz The Beast",
+"player": "The Beast"
+},
+{
+"q": "2026 Card Fun Disney Chronoz The Prince",
+"player": "The Prince"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Thomas O'Malley",
+"player": "Thomas O'Malley"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Thumper",
+"player": "Thumper"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Tiana",
+"player": "Tiana"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Tigger",
+"player": "Tigger"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Timon",
+"player": "Timon"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Timothy Q. Mouse",
+"player": "Timothy Q. Mouse"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Tinker Bell",
+"player": "Tinker Bell"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Toulouse",
+"player": "Toulouse"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Tramp",
+"player": "Tramp"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Tweedle Dee and Tweedle Dum",
+"player": "Tweedle Dee and Tweedle Dum"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Uncle Scrooge McDuck",
+"player": "Uncle Scrooge McDuck"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Ursula",
+"player": "Ursula"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Valentino",
+"player": "Valentino"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Vanellope von Schweetz",
+"player": "Vanellope von Schweetz"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Wasabi-No-Ginger",
+"player": "Wasabi-No-Ginger"
+},
+{
+"q": "2026 Card Fun Disney Chronoz White Rabbit",
+"player": "White Rabbit"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Winddancer",
+"player": "Winddancer"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Wreck-It Ralph",
+"player": "Wreck-It Ralph"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Yzma",
+"player": "Yzma"
+},
+{
+"q": "2026 Card Fun Disney Chronoz Zazu",
+"player": "Zazu"
 },
 {
 "q": "2026 Leaf Optichrome Football Aaron Donald",

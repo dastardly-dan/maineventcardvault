@@ -1585,26 +1585,31 @@ CC877_H = 'cc877-amys-birthday-break-random-letter'
 cc877 = dict(
     id='cc877', title="CC877 Amy's Birthday Break (Random Letter)", kicker='Colfax Collectibles · Random letter · Multi-theme',
     url=colfax_url(CC877_H), when=CC_SUN,
-    facts=['6 boxes (4 listed here)', 'Letters A to Z for now', '$105 per spot, $26.25 filler', 'Letters randomized live'],
+    facts=['6 boxes', 'Letters A to Z for now', '$105 per spot, $26.25 filler', 'Letters randomized live'],
     format='random', checked=CC_CHK % (15, 20, 20) + ' Until Colfax confirms the setup, this guide shows each letter on its own, A to Z.',
     boxes=[dict(BOX_FINEST_FF), 
            dict(k='pop', short='Leaf Pop Century', c='#f2c14e', full='2026 Leaf Pop Century (1 box)', kind='Autographs and multi-signature cards',
                 types='Autographs and multi-signature cards from the Leaf Pop Century checklist.'),
            dict(BOX_NEON),
            dict(k='deadpool', short='Chrome Deadpool', c='#e2545e', full='2025 Topps Chrome Deadpool Hobby (1 box)', kind='Base, autographs, inserts, multi-character cards',
-                types='Chrome base and Refractor parallels, autographs, inserts and multi-character cards from the Deadpool checklist.')],
+                types='Chrome base and Refractor parallels, autographs, inserts and multi-character cards from the Deadpool checklist.'),
+           dict(k='auradc', short='Kakawow Aura DC', c='#1f6fd1', full='2025 Kakawow Aura DC Hobby (1 box)', kind='DC heroes and villains: base, Script Art, inserts, multi-character cards',
+                types='Base with Silver, Aura and color parallels, Script Art cards (facsimile signatures), inserts like Chibi, DC Legacy and Gotham Legend, and multi-character cards.'),
+           dict(k='chronoz', short='Disney Chronoz', c='#7d3c98', full='2026 Card Fun Disney Chronoz (1 box)', kind='Disney characters: base, Script Art, inserts, multi-character cards',
+                types='Retro, Future and ChronoZ base with parallels, Script Art cards (facsimile signatures), inserts like Debuts, Chronic Ring and Pop Blast, and multi-character cards.')],
     spots=cc_az(),
     rules=[['How the spots work', ['Colfax\'s listing text lists 20 spots, but its tags say 15 break spots and 20 filler spots, so the real setup isn\'t clear. Until Colfax confirms it, this guide shows each letter on its own, A to Z. Letters are randomized live on stream.',
                                     'The listing text groups them like this: A, B, C, D, E, F / Z, G, H / Y, I, J, K, L / O, M, N, P, Q / R / X, S split as SA-SH and SI-SY, T (No The), and U / V / W. This guide will switch to the real groups once they\'re confirmed.']],
            ['First letter of the name on the card', ['The spot goes by the first letter of the name printed on the card. For a person, that\'s the first name; for a character, the name as printed.', CC_LETTER_THE,
                                                      'Colfax\'s listing doesn\'t say whether it means first or last name for people, so check with Colfax.']],
            ['Cards with more than one name', ['Each person or character on a dual or multi-person card is listed under their own letter.', CC_MULTI[1][0]]]],
-    notes=['Two boxes aren\'t in this guide yet because we don\'t have their checklists: 2025 Kakawow DC Aura and 2026 Card Fun Disney Chronoz. Check those cards with Colfax.',
+    notes=['Script Art cards in the Kakawow and Card Fun boxes carry printed (facsimile) signatures, not hand-signed autographs; this guide counts them with the autographs.',
            'The Finest Fantastic Four decade cards (1960s, 1970s and so on) and 42 Dugg start with a number, and the listing has no letter for them. They show under a number spot here; ask Colfax who gets them.',
-           'Lists come from the official Topps checklists and the Leaf checklist.', CC_FILLER % '$26.25'],
+           'Lists come from the official Topps checklists, the Leaf checklist, Kakawow\'s checklist spreadsheet and Card Fun\'s checklist.', CC_FILLER % '$26.25'],
     sources=[['CC877 break page (Colfax Collectibles)', colfax_url(CC877_H)], _src('2026-topps-finest-fantastic-four', 'Topps Finest Fantastic Four'),
              _src('2026-topps-neon-marvel', 'Topps Marvel Neon'), _src('2025-topps-chrome-deadpool', 'Topps Chrome Deadpool'),
-             ['2026 Leaf Pop Century checklist (Leaf Trading Cards)', 'https://www.leaftradingcards.com/products/2026-leaf-pop-century']],
+             ['2026 Leaf Pop Century checklist (Leaf Trading Cards)', 'https://www.leaftradingcards.com/products/2026-leaf-pop-century'],
+             ['2025 Kakawow Aura DC checklist (Kakawow, via GTS Distribution)', 'https://gogts.net/2025-kakawow-dc-trading-cards-hobby/']],
 )
 
 # CC878 2 Year Chrome PYL (WWE)
@@ -1835,7 +1840,7 @@ assert len(rgl6144_spots) == 60 and len({s['id'] for s in rgl6144_spots}) == 60
 rgl6144 = dict(
     id='rgl6144', title='RGL #6144 Survivor Series Multi-Year PYL-W', kicker='Run Good Life · Pick your wrestler or letter · WWE',
     url=rgl_url(RGL6144_H), when=_when(SAT, '5:00 pm', '8:00 pm'),
-    facts=['11 boxes (9 listed here)', '60 spots: 40 wrestlers, 20 letter groups', '$20 to $240 per spot', 'First name, no "The"'],
+    facts=['11 boxes', '60 spots: 40 wrestlers, 20 letter groups', '$20 to $240 per spot', 'First name, no "The"'],
     live=dict(shop='rgl', handle=RGL6144_H),
     format='pyl', checked='Availability checked against Run Good Life\'s store data on November 27, 2026, around 1:15 pm Eastern: %d of 60 spots open.' % sum(1 for s in rgl6144_spots if s['status'] == 'open'),
     boxes=[dict(next(b for b in rgl6128['boxes'] if b['k'] == 'finest'), full='2025 Topps Finest WWE Hobby (1 box)'),
@@ -1843,16 +1848,19 @@ rgl6144 = dict(
            dict(WWE_BOX['sapphire'], full='2026 Topps Chrome WWE Sapphire (1 box)'),
            dict(WWE_BOX['sc'], full='2026 Topps Stadium Club WWE Hobby (1 box)'),
            dict(WWE_BOX['chrome'], full='2026 Topps Chrome WWE Delight (1 box)', types='Base and Refractor parallels, inserts like Signalz, Gamut and Helix, Garbage Pail Kids cards, autographs.'),
+           dict(k='finest21', short='Finest 2021', c='#d4ac0d', full='2021 Topps Finest WWE (1 box)', kind='Base, autographs, inserts, triple autographs',
+                types='Roster Card base with Refractor parallels, autographs, inserts like Legacies, Rumble Pops and Uncrowned Greatness, and triple autographs.'),
            dict(k='select22', short='Select 2022', c='#c0392b', full='2022 Panini Select WWE Hobby (1 box)', kind='Tiered base, autographs, memorabilia, inserts', types='Concourse, Premier and Ringside base with Prizm parallels, autographs, memorabilia and inserts.'),
            dict(k='prizm23', short='Prizm 2023', c='#8e44ad', full='2023 Panini Prizm WWE Hobby and Lucky Envelope (2 boxes)', kind='Base, autographs, inserts, multi-wrestler cards', types='Base with Prizm parallels (Lucky Envelope boxes have their own Prizm parallels), autographs, inserts and dual cards. Both boxes use the same checklist.'),
-           dict(k='photo24', short='PhotoGenic 2024', c='#16a085', full='2024 Panini PhotoGenic WWE Hobby (1 box)', kind='Base, autographs, inserts, multi-wrestler cards', types='Base with parallels, autographs, inserts and multi-wrestler cards.')],
+           dict(k='photo24', short='PhotoGenic 2024', c='#16a085', full='2024 Panini PhotoGenic WWE Hobby (1 box)', kind='Base, autographs, inserts, multi-wrestler cards', types='Base with parallels, autographs, inserts and multi-wrestler cards.'),
+           dict(k='select24', short='Select 2024', c='#e67e22', full='2024 Panini Select WWE Hobby (1 box)', kind='Tiered base, autographs, memorabilia, inserts', types='Concourse, Premier and Ringside base with Prizm parallels, autographs, memorabilia and inserts.')],
     spots=rgl6144_spots,
     rules=[['Pick a wrestler or a letter', ['RGL sells 40 popular wrestlers on their own and 20 "all others" letter spots for everyone else. Buy a wrestler and you get only that wrestler\'s cards. Buy a letter and you get every card for that first letter except the wrestlers sold on their own.',
                                           'It goes by first name, and a leading "The" doesn\'t count, so The Miz is M. The Rock is sold on his own.']],
            WWE_RULES[1],
            ['Garbage Pail Kids cards go to the wrestler', ['RGL\'s rule: every Garbage Pail Kids card from 2026 Topps Chrome WWE goes to the wrestler\'s spot, not the name on the card. "Potty Mouth Punk" goes to CM Punk, who has his own spot. This guide files all of them that way.']],
            RGL_MULTI],
-    notes=['Two of the eleven boxes aren\'t in this guide yet because we don\'t have their checklists: 2021 Topps Finest and 2024 Select Hobby. Check those cards with RGL.',
+    notes=['The 2021 Topps Finest list was copied from Cardsmiths Breaks\' checklist page, not Topps\' own file. Its 13 Career Die Cut cards are Undertaker career moments, listed here as The Undertaker.',
            'Panini\'s checklists put some nicknames in front of the name, like "The American Nightmare" Cody Rhodes. Those cards show under the first-name letter with a question mark, and under the nickname\'s letter too, so check with RGL which one counts.',
            'Alternate names go with the spot: Mankind, Cactus Jack and Dude Love count as Mick Foley (the spot says "all"), Hollywood Hogan counts as Hulk Hogan, The Fiend is in the Bray Wyatt spot, and the Uso spot has both Jey and Jimmy. Ask RGL if you need a ruling.',
            'The listing\'s Garbage Pail Kids example says "C-Men", which looks copied from an earlier break. CM Punk has his own spot here.',
@@ -1860,7 +1868,7 @@ rgl6144 = dict(
            'RGL says every spot is entered in a $600 store credit giveaway, drawn among everyone in all of its #6000 breaks after all six have run.',
            'Chrome Delight is a Topps Chrome WWE box, so it uses the same checklist as the Hobby box.',
            'Lists come from the official Topps and Panini checklists.'],
-    sources=[['RGL #6144 break page (Run Good Life)', rgl_url(RGL6144_H)], ['Panini Select 2022, Prizm 2023 and PhotoGenic 2024 WWE checklists (official Panini CSVs)', SRC_PANINI], rgl6128['sources'][1], rgl6128['sources'][2], rgl6128['sources'][4], rgl6128['sources'][5],
+    sources=[['RGL #6144 break page (Run Good Life)', rgl_url(RGL6144_H)], ['Panini Select 2022, Prizm 2023, PhotoGenic 2024 and Select 2024 WWE checklists (official Panini CSVs)', SRC_PANINI], ['2021 Topps Finest WWE checklist (Cardsmiths Breaks)', 'https://cardsmithsbreaks.com/full-checklist/2021-topps-finest-wwe/'], rgl6128['sources'][1], rgl6128['sources'][2], rgl6128['sources'][4], rgl6128['sources'][5],
              _src('2026-topps-chrome-wwe-sapphire', 'Topps Chrome WWE Sapphire'), _src('2025-topps-exalted-wwe', 'Topps Exalted WWE')],
 )
 
@@ -1914,7 +1922,8 @@ if __name__ == '__main__':
     n, u = team_break(cc876, {'ginter': lib_mlb_product('2026-topps-allen-and-ginter-baseball'), 'logo': lib_mlb_product('2026-topps-chrome-baseball-logofractor-edition'),
         'cosmic': lib_mlb_product('2026-topps-cosmic-chrome-baseball'), 'museum': lib_mlb_product('2026-topps-museum-collection-baseball')}); built.append(write(cc876, n, u))
     n, u = letter_break(cc877, {'finestff': lib_letter_product('2026-topps-finest-fantastic-four'), 'pop': lib_letter_product('2026-leaf-pop-century'),
-        'neon': lib_letter_product('2026-topps-neon-marvel'), 'deadpool': lib_letter_product('2025-topps-chrome-deadpool')}, None, alt=False); built.append(write(cc877, n, u))
+        'neon': lib_letter_product('2026-topps-neon-marvel'), 'deadpool': lib_letter_product('2025-topps-chrome-deadpool'),
+        'auradc': lib_letter_product('2025-kakawow-aura-dc'), 'chronoz': lib_letter_product('2026-card-fun-disney-chronoz')}, None, alt=False); built.append(write(cc877, n, u))
     n, u = letter_break(cc878, {'chrome25': lib_letter_product('2025-topps-chrome-wwe'), 'chrome': W.CHROME}, cc878_gender); built.append(write(cc878, n, u))
     n, u = letter_break(cc879, {'neon': lib_letter_product('2026-topps-neon-marvel'), 'finestff': lib_letter_product('2026-topps-finest-fantastic-four'),
         'mintm': lib_letter_product('2026-topps-mint-marvel')}, None, alt=False); built.append(write(cc879, n, u))
@@ -1925,7 +1934,8 @@ if __name__ == '__main__':
         'flag': lib_nba_product('2026-27-topps-flagship-basketball')}); built.append(write(rgl6147, n, u))
     n, u = letter_break(rgl6144, {'finest': lib_letter_product('2025-topps-finest-wwe'), 'exalted': lib_letter_product('2025-topps-exalted-wwe'), 'sapphire': lib_letter_product('2026-topps-chrome-wwe-sapphire'),
         'sc': lib_letter_product('2026-topps-stadium-club-wwe'), 'chrome': gpk_fold(lib_letter_product('2026-topps-chrome-wwe')),
-        'select22': lib_letter_product('2022-panini-select-wwe'), 'prizm23': lib_letter_product('2023-panini-prizm-wwe'), 'photo24': lib_letter_product('2024-panini-photogenic-wwe')}, None); built.append(write(rgl6144, n, u))
+        'select22': lib_letter_product('2022-panini-select-wwe'), 'prizm23': lib_letter_product('2023-panini-prizm-wwe'), 'photo24': lib_letter_product('2024-panini-photogenic-wwe'),
+        'finest21': lib_letter_product('2021-topps-finest-wwe'), 'select24': lib_letter_product('2024-panini-select-wwe')}, None); built.append(write(rgl6144, n, u))
     n, u = team_break(rgl6148, {'pwc': rgl6148_product('2026-panini-prizm-world-cup-soccer'), 'nt': rgl6148_product('2025-26-panini-national-treasures-road-to-world-cup-soccer'),
         'sel': rgl6148_product('2025-26-panini-select-road-to-world-cup-soccer')}); built.append(write(rgl6148, n, u))
     # RGL drafts: built only once RGL posts the listing (RGL_DRAFT_PREVIEW=<folder> writes previews there instead)
