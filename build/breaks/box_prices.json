@@ -1,0 +1,321 @@
+{
+ "updated": "2026-11-27",
+ "how": "Lowest current price for one sealed box from shops, StockX and eBay Buy It Now, before shipping and tax. Refreshed weekly.",
+ "boxes": {
+  "2021 Topps Finest WWE|Hobby": {
+   "low": 169.94,
+   "source": "Diamond Cards Online",
+   "url": "https://www.diamondcardsonline.com/2021-topps-wwe-finest-wrestling-hobby-box",
+   "note": "Older box; most shops are sold out, so stock is not confirmed.",
+   "also": "Midwest Cards $297.95 (sold out)",
+   "date": "2026-11-27"
+  },
+  "2022 Panini Select WWE|Hobby": {
+   "low": 349.95,
+   "source": "Dave & Adam's",
+   "url": "https://yi5jxc.dacardworld.com/sports-cards/2022-panini-select-wwe-wrestling-hobby-box-3",
+   "also": "StockX about $340; eBay $424.49",
+   "date": "2026-11-27"
+  },
+  "2023 Panini Prizm WWE|Hobby": {
+   "low": 324.95,
+   "source": "Waxstat average",
+   "url": "https://www.waxstat.com/boxes/2023-panini-prizm-wwe-hobby-box",
+   "note": "Waxstat 30-day low was $180 on eBay.",
+   "also": "Midwest Cards $349.95 (sold out)",
+   "date": "2026-11-27"
+  },
+  "2023 Panini Prizm WWE|Lucky Envelope": {
+   "low": null,
+   "note": "A rare box sold through one distributor; no price found anywhere. Tell me what one costs.",
+   "date": "2026-11-27"
+  },
+  "2024 Panini PhotoGenic WWE|Hobby": {
+   "low": 209.95,
+   "source": "Giant Sports Cards",
+   "url": "https://giantsportscards.com/products/2024-panini-wwe-photogenic-hobby-box",
+   "date": "2026-11-27"
+  },
+  "2024 Panini Select WWE|Hobby": {
+   "low": 229.95,
+   "source": "Dave & Adam's",
+   "url": "https://dacardworld.com/sports-cards/2024-panini-select-wwe-wrestling-hobby-box",
+   "date": "2026-11-27"
+  },
+  "2025 Kakawow Aura DC|Hobby": {
+   "low": 94.99,
+   "source": "Smoke and Mirrors Hobby",
+   "url": "https://www.smokeandmirrorshobby.com/collections/wow-all-products/products/kakawow-2025-aura-dc-hobby-edition",
+   "also": "Dave & Adam's $154.95",
+   "date": "2026-11-27"
+  },
+  "2025 Leaf Optichrome Football|Jumbo": {
+   "low": 224.95,
+   "source": "Steel City Collectibles",
+   "url": "https://www.steelcitycollectibles.com/i/2025-leaf-optichrome-football-jumbo-hobby-box",
+   "also": "Blowout Cards $224.95",
+   "date": "2026-11-27"
+  },
+  "2025 Topps Chrome Deadpool|Hobby": {
+   "low": 359.95,
+   "source": "Dave & Adam's",
+   "url": "https://www.dacardworld.com/entertainment/2025-topps-deadpool-chrome-hobby-box",
+   "list": 219.99,
+   "also": "Midwest Cards $309.95 (sold out)",
+   "date": "2026-11-27"
+  },
+  "2025 Topps Chrome WWE|Delight": {
+   "low": 439.95,
+   "source": "Blowout Cards",
+   "url": "https://www.blowoutcards.com/2025-topps-chrome-wwe-delight-box.html",
+   "date": "2026-11-27"
+  },
+  "2025 Topps Chrome WWE|Hobby": {
+   "low": 474.95,
+   "source": "Giant Sports Cards",
+   "url": "https://giantsportscards.com/products/2025-topps-chrome-wwe-hobby-box",
+   "list": 159.99,
+   "note": "One smaller shop lists it at $324.75; check before counting on that.",
+   "date": "2026-11-27"
+  },
+  "2025 Topps Exalted WWE|Hobby": {
+   "low": 189.95,
+   "source": "Dave & Adam's",
+   "url": "https://www.dacardworld.com/sports-cards/2025-topps-wwe-exalted-wrestling-hobby-box",
+   "also": "The Cardiacs $189.95",
+   "date": "2026-11-27"
+  },
+  "2025 Topps Finest WWE|Hobby": {
+   "low": 425.0,
+   "source": "World Champion Sports Cards",
+   "url": "https://www.worldchampionsportscards.org/products/2025-topps-finest-wwe-hobby-box-presell",
+   "list": 269.99,
+   "also": "Giant $429.95",
+   "date": "2026-11-27"
+  },
+  "2025-26 Panini National Treasures Road to FIFA World Cup 2026|Hobby": {
+   "low": 2869.95,
+   "source": "Giant Sports Cards",
+   "url": "https://giantsportscards.com/products/2025-26-panini-national-treasures-road-to-fifa-world-cup-soccer-hobby-box",
+   "date": "2026-11-27"
+  },
+  "2025-26 Panini Select Road to FIFA World Cup 2026|Hobby": {
+   "low": 494.95,
+   "source": "Midwest Cards",
+   "url": "https://www.midwestcards.com/products/2025-26-panini-select-road-to-world-cup-soccer-hobby-box",
+   "also": "Diamond Cards $520.94",
+   "date": "2026-11-27"
+  },
+  "2025-26 Topps Stadium Club Basketball|Hobby": {
+   "low": 339.94,
+   "source": "Diamond Cards Online",
+   "url": "https://www.diamondcardsonline.com/2025-26-topps-stadium-club-basketball-hobby-box/",
+   "date": "2026-11-27"
+  },
+  "2025-26 Topps x Bob Ross The Joy of Basketball|Hobby": {
+   "low": 799.99,
+   "source": "Topps (Collector's Box list price)",
+   "url": "https://launches.topps.com/en-US/launch/2025-26-topps-x-bob-ross-the-joy-of-basketball-collectors-box",
+   "list": 799.99,
+   "note": "Sold out at shops; no resale price found yet.",
+   "date": "2026-11-27"
+  },
+  "2026 Card Fun Disney Chronoz|Hobby": {
+   "low": 149.95,
+   "source": "Dave & Adam's",
+   "url": "https://www.dacardworld.com/entertainment/2026-card-fun-chronoz-disney-legacy-hobby-box",
+   "date": "2026-11-27"
+  },
+  "2026 Leaf Optichrome Football|Hobby": {
+   "low": 144.95,
+   "source": "Dave & Adam's",
+   "url": "https://www.dacardworld.com/sports-cards/2026-leaf-optichrome-football-hobby-box",
+   "list": 179.99,
+   "date": "2026-11-27"
+  },
+  "2026 Leaf Optichrome Football|Jumbo": {
+   "low": 269.95,
+   "source": "Steel City Collectibles",
+   "url": "https://www.steelcitycollectibles.com/index.php/i/2026-leaf-optichrome-football-jumbo-hobby-box",
+   "date": "2026-11-27"
+  },
+  "2026 Leaf Pop Century|Hobby": {
+   "low": 309.95,
+   "source": "Giant Sports Cards",
+   "url": "https://giantsportscards.com/products/2026-leaf-pop-century-hobby-box",
+   "date": "2026-11-27"
+  },
+  "2026 Panini Obsidian Football|FOTL": {
+   "low": 489.95,
+   "source": "Dave & Adam's",
+   "url": "https://www.dacardworld.com/sports-cards/2026-panini-obsidian-football-1st-off-the-line-fotl-hobby-box",
+   "also": "Steel City $464.95 (sold out)",
+   "date": "2026-11-27"
+  },
+  "2026 Panini Prizm Baseball|Hobby": {
+   "low": 199.95,
+   "source": "Giant Sports Cards",
+   "url": "https://giantsportscards.com/products/2026-panini-prizm-baseball-hobby-box",
+   "also": "Dave & Adam's $199.95",
+   "date": "2026-11-27"
+  },
+  "2026 Panini Prizm FIFA World Cup|Hobby": {
+   "low": 799.75,
+   "source": "The Awesome Card Shop",
+   "url": "https://theawesomecardshop.com/products/2026-panini-prizm-fifa-world-cup-soccer-hobby-box",
+   "also": "Midwest Cards $949.95",
+   "date": "2026-11-27"
+  },
+  "2026 Topps Allen & Ginter X Baseball|Hobby": {
+   "low": 310.0,
+   "source": "Cardlines (resale range)",
+   "url": "https://cardlines.com/2026-topps-allen-ginter-x-baseball/",
+   "list": 219.99,
+   "note": "Topps online exclusive, sold out. Resale runs $310 to $400, most at $350 to $375.",
+   "date": "2026-11-27"
+  },
+  "2026 Topps Bowman Best Football|Hobby": {
+   "low": 299.94,
+   "source": "Diamond Cards Online",
+   "note": "Same box as Bowman U Best Football.",
+   "date": "2026-11-27"
+  },
+  "2026 Topps Bowman Football|Jumbo": {
+   "low": 579.0,
+   "source": "StockX",
+   "also": "Giant $829.95",
+   "date": "2026-11-27"
+  },
+  "2026 Topps Bowman U Best Football|Hobby": {
+   "low": 299.94,
+   "source": "Diamond Cards Online",
+   "date": "2026-11-27"
+  },
+  "2026 Topps Chrome Baseball Logofractor Edition|Hobby": {
+   "low": 184.95,
+   "source": "Giant Sports Cards",
+   "also": "The Cardiacs $194.95",
+   "date": "2026-11-27"
+  },
+  "2026 Topps Chrome Baseball|Jumbo": {
+   "low": 749.95,
+   "source": "Dave & Adam's",
+   "also": "StockX $767",
+   "date": "2026-11-27"
+  },
+  "2026 Topps Chrome Black Baseball|Hobby": {
+   "low": 349.95,
+   "source": "Giant Sports Cards",
+   "also": "eBay $384; StockX $420",
+   "date": "2026-11-27"
+  },
+  "2026 Topps Chrome Football|Hobby": {
+   "low": 599.94,
+   "source": "Diamond Cards Online",
+   "list": 439.99,
+   "date": "2026-11-27"
+  },
+  "2026 Topps Chrome Football|Jumbo": {
+   "low": 1099.94,
+   "source": "Diamond Cards Online",
+   "list": 789.99,
+   "date": "2026-11-27"
+  },
+  "2026 Topps Chrome WWE Sapphire|Hobby": {
+   "low": 334.95,
+   "source": "The Cardiacs",
+   "url": "https://www.thecardiacs.com/products/2026-topps-chrome-wwe-sapphire-edition-box",
+   "list": 349.99,
+   "also": "Dave & Adam's $349.95",
+   "date": "2026-11-27"
+  },
+  "2026 Topps Chrome WWE|Delight": {
+   "low": 634.95,
+   "source": "Dave & Adam's",
+   "url": "https://www.dacardworld.com/sports-cards/2026-topps-chrome-wwe-wrestling-delight-box",
+   "also": "Blowout Cards $649.95",
+   "date": "2026-11-27"
+  },
+  "2026 Topps Chrome WWE|Hobby": {
+   "low": 289.95,
+   "source": "The Cardiacs",
+   "url": "https://thecardiacs.com/products/2026-topps-chrome-wwe-hobby-box",
+   "also": "Dave & Adam's $294.95",
+   "date": "2026-11-27"
+  },
+  "2026 Topps Cosmic Chrome Baseball|Hobby": {
+   "low": 840.0,
+   "source": "StockX",
+   "date": "2026-11-27"
+  },
+  "2026 Topps Finest Baseball|Mega": {
+   "low": 92.0,
+   "source": "eBay (via SportsCardsPro)",
+   "also": "Dave & Adam's $119.95",
+   "date": "2026-11-27"
+  },
+  "2026 Topps Finest Fantastic Four|Hobby": {
+   "low": 284.95,
+   "source": "CardVault by Tom Brady",
+   "url": "https://cardvaultbytombrady.com/products/2025-topps-finest-x-men-97-hobby-copy",
+   "list": 249.99,
+   "also": "Midwest Cards $339.95",
+   "date": "2026-11-27"
+  },
+  "2026 Topps Gilded Collection Baseball|Hobby": {
+   "low": 1399.95,
+   "source": "Steel City Collectibles",
+   "date": "2026-11-27"
+  },
+  "2026 Topps Inception Football|Hobby": {
+   "low": 438.0,
+   "source": "StockX",
+   "list": 379.99,
+   "note": "Sold out at Topps.",
+   "date": "2026-11-27"
+  },
+  "2026 Topps Marvel Mint|Hobby": {
+   "low": 534.95,
+   "source": "Giant Sports Cards",
+   "url": "https://giantsportscards.com/products/2026-topps-marvel-mint-hobby-box",
+   "list": 339.99,
+   "date": "2026-11-27"
+  },
+  "2026 Topps Marvel Neon|Hobby": {
+   "low": 243.0,
+   "source": "StockX",
+   "url": "https://stockx.com/2026-topps-neon-marvel-hobby-box",
+   "also": "eBay $282; Midwest Cards $274.95",
+   "date": "2026-11-27"
+  },
+  "2026 Topps Midnight Football|Hobby": {
+   "low": 669.0,
+   "source": "eBay Buy It Now (via Cardsmiths)",
+   "list": 539.99,
+   "also": "Midwest Cards $699.95",
+   "date": "2026-11-27"
+  },
+  "2026 Topps Museum Collection Baseball|Hobby": {
+   "low": 699.95,
+   "source": "Giant Sports Cards",
+   "url": "https://giantsportscards.com/products/2026-topps-museum-collection-baseball-hobby-box",
+   "list": 419.99,
+   "also": "Midwest Cards $699.95",
+   "date": "2026-11-27"
+  },
+  "2026 Topps Stadium Club WWE|Hobby": {
+   "low": 179.17,
+   "source": "eBay Buy It Now (via Cardsmiths)",
+   "url": "https://cardsmithsbreaks.com/full-checklist/2026-topps-stadium-club-wwe-hobby-box/",
+   "also": "StockX $198",
+   "date": "2026-11-27"
+  },
+  "2026-27 Topps Flagship Basketball|Jumbo": {
+   "low": 523.95,
+   "source": "Giant Sports Cards",
+   "url": "https://giantsportscards.com/products/2026-27-topps-flagship-basketball-jumbo-box",
+   "also": "Diamond Cards $529.94",
+   "date": "2026-11-27"
+  }
+ }
+}

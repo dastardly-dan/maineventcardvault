@@ -63,6 +63,32 @@ def box_count(full):
     return sum(ns) if ns else 1
 
 
+TYPES = ["Breaker's Delight", 'Chrome Delight', 'Delight', 'Lucky Envelope', 'Jumbo', 'Mega', 'FOTL', 'Hobby', 'Blaster', 'Value']
+
+
+def parts(full):
+    """a box line split into (product, box type, count), the keys of box_prices.json:
+    '2026 Topps Chrome Football (2 Hobby, 1 Jumbo)' -> [('2026 Topps Chrome Football', 'Hobby', 2), ('2026 Topps Chrome Football', 'Jumbo', 1)]"""
+    m = re.search(r'\(([^)]*)\)', full); inner = m.group(1) if m else ''
+    base = re.sub(r'\(.*?\)', '', full)
+    found = []
+    for t in TYPES:
+        if re.search(r'\b' + re.escape(t) + r'\b', base, re.I) and not any(t.lower() in f.lower() for f in found): found.append(t)
+    prod = base
+    for t in TYPES + ['Boxes', 'Box', 'and', '1st Off The Line', 'First Off The Line']:
+        prod = re.sub(r'\b' + re.escape(t) + r'\b', '', prod, flags=re.I)
+    prod = ' '.join(prod.replace('&', ' & ').split()).strip(' -,&')
+    prod = ' '.join(prod.split())
+    dl = lambda t: 'Delight' if 'Delight' in t else t
+    out = []
+    for n, t in re.findall(r"(\d+)\s+([A-Za-z' ]+?)(?:,|$| boxes| box)", inner):
+        tt = next((x for x in TYPES if x.lower() in t.lower()), None)
+        if tt: out.append((prod, dl(tt), int(n)))
+    if out: return out
+    if len(found) >= 2: return [(prod, dl(t), 1) for t in found]
+    return [(prod, dl(found[0] if found else 'Hobby'), box_count(full))]
+
+
 def toks(s):
     s = fold(s).lower().replace("'", '').replace('&', ' and ')
     return [t for t in re.findall(r'[a-z0-9]+', s) if t not in ('the', 'of', 'x', 'and', 'box', 'boxes', 'hobby', 'edition')]
@@ -157,6 +183,9 @@ def main():
     pdates = sorted(v[3] for v in PR.values() if v)
     targets = json.load(open(os.path.join(HERE, 'watch', 'price_targets.json'), encoding='utf-8'))
     have = sum(1 for v in PR.values() if v and v[0])
+    bpp = os.path.join(HERE, 'box_prices.json')
+    BP = json.load(open(bpp, encoding='utf-8')) if os.path.exists(bpp) else {}
+    WEB = BP.get('boxes', {})   # lowest price found on the web for one sealed box, by 'product|type' (weekly scheduled task)
 
     breaks, missing_all = [], {}
     for b in cur:
@@ -170,11 +199,23 @@ def main():
             n = box_count(bx['full']); pid = BOXLIB.get(b['id'], {}).get(bx['k']) or match_box(bx['full'], LIBR)
             if pid not in LIBR: pid = match_box(bx['full'], LIBR)
             sp = PR.get(sealed_query(bx['full']))
+            ebay = sp[0] if sp and sp[0] else None
+            # web price per part (each box type in the line), falling back to the eBay sealed median for the whole line
+            pts, web, src, unpriced = parts(bx['full']), 0.0, [], []
+            for prod, typ, cnt in pts:
+                w = WEB.get(prod + '|' + typ) or {}
+                if w.get('low'):
+                    web += w['low'] * cnt; src.append(dict(part='%s %s' % (cnt, typ), low=w['low'], source=w.get('source', ''), url=w.get('url', ''), note=w.get('note', ''), also=w.get('also', '')))
+                else: unpriced.append((prod, typ, cnt, w.get('note', '')))
+            if pts and not unpriced: cost, how = web, 'web'
+            elif ebay: cost, how = ebay * n, 'ebay'
+            else: cost, how = None, None
             info = dict(k=bx['k'], full=bx['full'], short=bx.get('short', bx['k']), n=n, pid=pid,
                         official=bool(pid and LIBR[pid]['official']), odds=bool(pid and pid in ODDS),
-                        sealed=(sp[0] if sp and sp[0] else None), sealed_n=(sp[2] if sp and sp[0] else 0), sealed_tried=bool(sp),
+                        sealed=ebay, sealed_n=(sp[2] if sp and sp[0] else 0), sealed_tried=bool(sp),
+                        cost=cost, how=how, src=src, unpriced=unpriced, web_partial=(web if src and unpriced else None),
                         names=0, priced=0)
-            if info['sealed']: box_cost += info['sealed'] * n
+            if cost: box_cost += cost
             else: box_missing.append(info)
             boxes.append(info)
         a['boxes'] = boxes
@@ -227,8 +268,9 @@ def main():
                 miss.append(('checklist', 'No checklist linked for %s, so its cards aren\'t counted.' % bx['full']))
             elif not bx['official']:
                 miss.append(('source', 'The %s checklist was copied from a website, not the maker\'s own file.' % bx['short']))
-            if not bx['sealed']:
-                miss.append(('box', 'No sealed box price yet for %s.%s' % (bx['full'], ' eBay had too few matching listings; tell me what one costs.' if bx['sealed_tried'] else ' The daily eBay lookup adds it.')))
+            if not bx['cost']:
+                for prod, typ, cnt, note in bx['unpriced']:
+                    miss.append(('box', 'No box price for %s %s.%s' % (prod, typ, (' ' + note) if note else ' The weekly price check didn\'t find one; tell me what one costs.')))
             if bx['pid'] and not bx['odds']:
                 miss.append(('odds', 'No pack odds for %s, so its hit sets all count about the same.' % bx['short']))
             if bx['names'] and bx['priced'] / bx['names'] < 0.5:
@@ -267,8 +309,20 @@ def main():
         ds = [s for s in a['spots'] if s['deal']]
         return max(ds, key=lambda s: s['deal']) if ds else max(a['spots'], key=lambda s: s['share'] / (s['price'] or 1e9))
 
+    def box_cell(bx):
+        if bx['how'] == 'web':
+            lines = []
+            for x in bx['src']:
+                name = ('<a href="%s" target="_blank" rel="noopener">%s</a>' % (esc(x['url']), esc(x['source']))) if x['url'] else esc(x['source'])
+                lines.append('%s%s at %s' % ((esc(x['part']) + ': ') if len(bx['src']) > 1 or bx['n'] > 1 else '', money(x['low']), name))
+            tip = ' '.join(t for x in bx['src'] for t in (x['note'], ('Also: ' + x['also']) if x['also'] else '') if t)
+            return '%s<div class="sm">%s</div>' % (money(bx['cost']), '<br>'.join(lines)) + ('<div class="sm" title="%s">more</div>' % esc(tip) if tip else '')
+        if bx['how'] == 'ebay':
+            return '%s<div class="sm">eBay median, %d listings%s</div>' % (money(bx['cost']), bx['sealed_n'], (', %s x %d' % (money(bx['sealed']), bx['n'])) if bx['n'] > 1 else '')
+        return '<span class="na">not yet</span>' + ('<div class="sm">%s so far</div>' % money(bx['web_partial']) if bx['web_partial'] else '')
+
     secs = []
-    ov = ['<h2>Which breaks are worth it</h2><p class="lede">Every current break, with what all its spots sell for next to what its sealed boxes cost on eBay. '
+    ov = ['<h2>Which breaks are worth it</h2><p class="lede">Every current break, with what all its spots sell for next to the lowest price we found for its sealed boxes. '
           'Breakers usually charge somewhat more than the boxes cost; the lower the markup, the better the deal for buyers. Fillers aren\'t counted.</p>',
           '<table><thead><tr><th>Break</th><th class="n">Spots</th><th class="n">Break total</th><th class="n">Box cost</th><th class="n">Markup</th><th>Best spot for the price</th><th>Confidence</th></tr></thead><tbody>']
     for a in sorted(breaks, key=lambda a: (a['markup'] is None, a['markup'] or 0)):
@@ -306,13 +360,13 @@ def main():
         else:
             tip = 'Once the sealed box prices come in, this shows a fair price for %s.' % ('each spot' if a['pick'] else 'a spot')
         h.append('<p><b>%s.</b> %s</p>' % (esc(verdict(a)), tip))
-        h.append('<h3>Boxes and data</h3><table><thead><tr><th>Box</th><th>Checklist</th><th>Pack odds</th><th class="n">eBay player prices</th><th class="n">Sealed box price</th></tr></thead><tbody>')
+        h.append('<h3>Boxes and data</h3><table><thead><tr><th>Box</th><th>Checklist</th><th>Pack odds</th><th class="n">eBay player prices</th><th class="n">Box cost (lowest found)</th></tr></thead><tbody>')
         for bx in a['boxes']:
             h.append('<tr><td>%s</td><td>%s</td><td>%s</td><td class="n">%s</td><td class="n">%s</td></tr>' % (
                 esc(bx['full']), ('<span class="ok">official</span>' if bx['official'] else '<span class="warn">copied from a website</span>') if bx['pid'] else '<span class="bad">not linked</span>',
                 '<span class="ok">yes</span>' if bx['odds'] else '<span class="warn">no</span>',
                 ('%d of %d names' % (bx['priced'], bx['names'])) if bx['names'] else '',
-                (money(bx['sealed']) + (' x %d' % bx['n'] if bx['n'] > 1 else '') + '<div class="sm">%d listings</div>' % bx['sealed_n']) if bx['sealed'] else '<span class="na">not yet</span>'))
+                box_cell(bx)))
         h.append('</tbody></table>')
         basis = 'eBay player prices' if a['market'] else 'the checklists (hit depth)'
         h.append('<h3>Spots</h3><p class="sm">Value share comes from %s.%s</p>' % (basis, '' if a['market'] else ' It switches to eBay player prices once at least half the points have one (now %d%%).' % round(a['cover'] * 100)))
@@ -328,7 +382,7 @@ def main():
             h.append('<h3>What\'s missing</h3><ul class="miss">%s</ul>' % ''.join('<li>%s</li>' % esc(t) for _, t in a['miss']))
         secs.append(('b/' + a['id'], None, ''.join(h)))
 
-    lab = dict(box=('Sealed box prices', 'Fills in from the daily eBay lookup. If one stays missing, tell me what that box sells for.'),
+    lab = dict(box=('Box prices', 'The weekly price check looks for these. If one stays missing, tell me what that box sells for.'),
                prices=('eBay player prices', 'Fills in over a few days (about 4,500 names a day).'),
                odds=('Pack odds', 'Send the odds sheet (usually on the maker\'s checklist page) and the hit weights get sharper.'),
                source=('Checklists copied from websites', 'An official checklist file from the maker would replace these.'),
@@ -347,13 +401,13 @@ def main():
               format(len([t for t in targets if not t.get('box')]), ','), format(len(PR), ','), format(have, ','),
               datetime.date.fromisoformat(pdates[-1]).strftime('%B %-d, %Y') if pdates else 'none yet'),
           '<ul><li><b>Break total:</b> every spot\'s price added up for pick-your-spot breaks; the spot price times the number of spots sold for random breaks. Fillers aren\'t counted.</li>'
-          '<li><b>Box cost:</b> the typical eBay Buy It Now asking price for one sealed box, times the number of boxes. Asking prices run a little above what boxes actually sell for.</li>'
+          '<li><b>Box cost:</b> the lowest price found for one sealed box (shops, StockX and eBay Buy It Now, before shipping and tax), times the number of boxes. A scheduled task checks these every week (prices as of BOXDATE). When a box has no web price, the typical eBay Buy It Now asking price from the daily lookup fills in. Breakers often pay less than this by buying whole cases.</li>'
           '<li><b>Markup:</b> break total compared with box cost. Breakers usually charge something over box cost for their time, shipping and the stream.</li>'
           '<li><b>Value share:</b> each name gets points for its cards in each box (base 1, autograph 2, insert 0.5, multi-person 0.5). Autograph, insert and multi points grow with how many of those sets the player is in, weighted by pack odds where we have them. With enough eBay player prices, points are also multiplied by each player\'s typical asking price.</li>'
           '<li><b>Fair price:</b> a spot\'s value share of the box cost. It assumes the cards in the boxes are worth about what the sealed boxes cost, which is roughly true on average and never for any one box.</li>'
           '<li><b>Value for the price:</b> fair price divided by the spot\'s price. 1.00x is fair, 1.20x or more (green) is a good deal, 0.85x or less (red) is a poor one.</li>'
           '<li><b>Confidence:</b> high when the box costs, eBay player prices, official checklists and pack odds are all in; lower as each is missing.</li></ul>']
-    secs.append(('how', 'How it works', ''.join(pr)))
+    secs.append(('how', 'How it works', ''.join(pr).replace('BOXDATE', datetime.date.fromisoformat(BP['updated']).strftime('%B %-d, %Y') if BP.get('updated') else 'not yet')))
     secs.append(('pulls', 'Pulls', '<h2>Pulls from streams</h2><p class="lede">Coming next: hits called out on each breaker\'s stream, matched to the checklist, so we can see what actually comes out of each product next to what the values say should.</p>'))
 
     nav = ''.join('<a href="#/%s" data-v="%s">%s</a>' % (k, k, t) for k, t, _ in secs if t)

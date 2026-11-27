@@ -239,13 +239,21 @@ team spot, box by box. Linked from the storefront's Breaks menu; every page carr
       maineventcardvault > Settings > Variables and Secrets; set Nov 27) and keeps him signed in for 30 days. The page is
       built by `build/breaks/owner.py` (run at the end of hub.py) into owner/dashboard.js; .assetsignore keeps owner/ and
       owner.js from being served as files. For every current break it shows: break total (pick: spot prices added up;
-      random: spot price x spots sold), box cost (eBay asking price of one sealed box x boxes; prices.py looks these up
-      first, every 3 days), markup, each spot's value share (checklist points weighted by hit depth, or by eBay player
+      random: spot price x spots sold), box cost (lowest web price for one sealed box x boxes, from
+      build/breaks/box_prices.json; falls back to the eBay asking price prices.py looks up every 3 days), markup, each spot's value share (checklist points weighted by hit depth, or by eBay player
       prices once half the points have one), fair price (share x box cost) and value for the price (pick breaks only),
       a confidence level, and a plain list of missing data (box prices, player prices, pack odds, copied checklists).
       build.py records the checklist each box used in box_lib.json. An Owner menu at the top (dashboard sections, site
       pages, Cloudflare, GitHub jobs, eBay) lives only in this page. The repo is public, so the numbers behind it can be
       worked out from prices.json; the password protects the page, not the data.
+  3p2. Box prices (Daniel, Nov 27, 2026: "find the lowest possible cost ... update those box prices every week"):
+      build/breaks/box_prices.json holds the lowest current price for one sealed box of each box type in the current
+      breaks, keyed "product|type" exactly as owner.py's parts() splits a box line ("2026 Topps Chrome Football (2 Hobby,
+      1 Jumbo)" gives "2026 Topps Chrome Football|Hobby" x2 and "...|Jumbo" x1). Each entry: low, source, url, list
+      (maker's price), note, also (other prices seen), date. Shops, StockX and eBay Buy It Now count; sold-out listings
+      only when nothing in stock is found. low null means none found; the dashboard lists it as missing. The "Weekly box
+      price check" scheduled task (Thursdays 8:37 pm Eastern) re-searches every key, adds new box types, drops ones no
+      current break uses, runs owner.py and pushes.
   3q. Stream transcripts (Daniel, Nov 27, 2026): `build/breaks/transcripts.py <YouTube link>` saves a video's captions
       (uploader's, else YouTube's automatic ones) with yt-dlp to build/breaks/transcripts/<id>.json and .txt, plus
       index.json. The "Stream transcript" GitHub job runs it, but YouTube blocks GitHub's servers ("Sign in to confirm
