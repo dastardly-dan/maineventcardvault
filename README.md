@@ -230,6 +230,17 @@ team spot, box by box. Linked from the storefront's Breaks menu; every page carr
   3j. Streams (Daniel, Nov 25, 2026): when Daniel sends a breaker's YouTube link, add it to `STREAMS` in `build.py`
       with the page ids for that break night. Those pages show the YouTube player instead of the title card; the same
       link becomes the replay after the stream. Pages without a stream keep the title card.
+  3o. Value per spot (Daniel, Nov 27, 2026): the Spot Builder shows each spot's share of the break's value (each name's
+      odds-weighted points times its typical eBay asking price; unpriced names count at the typical price) once priced
+      names hold half the points, and with pricing on, "by value" (the spot's price if the total were split by value;
+      green above its price, red below). Builder only: break pages never show prices or values (Nov 25 rule stands).
+  3p. Owner dashboard (Daniel, Nov 27, 2026): maineventcardvault.com/owner, for Daniel only. worker.js sends /owner to
+      owner.js, which checks the OWNER_PASSWORD secret set in Cloudflare (Workers > maineventcardvault > Settings >
+      Variables and Secrets) and keeps him signed in for 30 days with a signed cookie. Without the secret the page stays
+      locked. The page is built by `build/breaks/owner.py` (run at the end of hub.py) into owner/dashboard.js;
+      .assetsignore keeps owner/ and owner.js from being served as files. It shows value for cost per spot for every
+      current break, price data status, and a Pulls section for the stream transcripts work that comes next. The repo is
+      public, so the numbers behind it can be worked out from prices.json; the password protects the page, not the data.
   3n. Friday checks (Daniel, Nov 27, 2026): two scheduled tasks, "Friday check: all breakers" at 1:00 pm Eastern and
       "Friday check: JWJ" at 6:00 pm Eastern (CRON_TZ America/New_York, so they stay at 1 and 6 pm through daylight saving).
       They don't run the builder gate. Each starts a fresh store check, works the queue by `build/breaks/page_builder.md`

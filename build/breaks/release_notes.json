@@ -44,6 +44,11 @@
      "Improved",
      "Site",
      "The Break guides page now says when new breaks are checked: every Friday at 1:00 pm Eastern for all four breakers, and again at 6:00 pm Eastern for JWJ."
+    ],
+    [
+     "New",
+     "Spot builder",
+     "Each spot now shows its share of the break's value, from typical eBay asking prices and the checklist odds, once enough names in the boxes have a price. With pricing on, it also shows what the spot would cost if the total were split by value, in green when the spot holds more value than its price and red when it holds less."
     ]
    ]
   },

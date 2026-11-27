@@ -272,3 +272,7 @@ if os.path.exists(os.path.join(ROOT, 'breaks', 'builder.html')): fill(os.path.jo
 if os.path.exists(os.path.join(ROOT, 'iron-ledger.html')): fill_bundled(os.path.join(ROOT, 'iron-ledger.html'), 'ironledger')
 fill(os.path.join(ROOT, 'build', 'template.html'))
 print('menu written to', len(items) + 2, 'files')
+
+# Daniel's private dashboard (owner/dashboard.js, served by worker.js at /owner behind the password)
+import owner
+owner.main()

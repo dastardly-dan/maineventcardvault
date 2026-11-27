@@ -5,11 +5,13 @@
 // ratings.html, the Shoot tool, iron-ledger.html and so on. This code only runs
 // for requests that don't match a file, and the only thing it handles itself is
 // the Iron Ledger sync API at /api/ironledger and the live open/sold lookup for the
-// break guides at /api/break-status (breakstatus.js). Anything else goes back to the
+// break guides at /api/break-status (breakstatus.js), plus Daniel's password-protected dashboard at /owner
+// (owner.js). Anything else goes back to the
 // asset handler, so 404s behave exactly as they did before.
 
 import { DurableObject } from "cloudflare:workers";
 import { breakStatus, breakList, STATUS_API, LIST_API } from "./breakstatus.js";
+import { owner, OWNER } from "./owner.js";
 
 const API = "/api/ironledger";
 const MAX_BODY = 1_000_000;          // a few years of workouts is well under this
@@ -19,6 +21,7 @@ const FAIL_WINDOW_MS = 15 * 60 * 1000;
 export default {
   async fetch(request, env, ctx) {
     const { pathname } = new URL(request.url);
+    if (pathname === OWNER || pathname.startsWith(OWNER + "/")) return owner(request, env);
     if (pathname === STATUS_API) return breakStatus(request, ctx);
     if (pathname === LIST_API) return breakList(request, ctx);
     if (pathname === API || pathname.startsWith(API + "/")) {

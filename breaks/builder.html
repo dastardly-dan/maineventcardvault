@@ -319,6 +319,9 @@ textarea.in { min-height: 90px; resize: vertical; font-size: 13px; line-height: 
 .spot .nums { text-align: right; font-size: 13px; color: var(--ink-2); white-space: nowrap; }
 .spot .nums b { color: var(--ink); font-size: 15px; }
 .spot .nums .pr { color: var(--gold-2); font-weight: 700; font-size: 15px; }
+.spot .nums .val { font-size: 12px; color: var(--ink-3); }
+.spot .nums .val.up { color: #2e8b57; font-weight: 700; }
+.spot .nums .val.dn { color: #b5543c; font-weight: 700; }
 .spot .nums .pr .pmine { font-style: normal; font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: #0b1726; background: var(--gold); border-radius: 999px; padding: 1px 6px; vertical-align: 2px; }
 .pset { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; margin: 0 14px 10px 60px; padding: 10px 12px; background: var(--bg-2); border: 1px solid var(--line); border-radius: 10px; font-size: 13px; color: var(--ink-2); }
 .pset label { display: flex; align-items: center; gap: 8px; color: var(--ink); }
@@ -486,6 +489,7 @@ table.rows td small { color: var(--ink-3); }
           <label class="f" style="margin-top:12px">Market prices (eBay)</label>
           <div class="seg" id="mkt"><button data-v="off">Off</button><button data-v="light">Light</button><button data-v="normal">Normal</button><button data-v="strong">Strong</button></div>
           <div class="hint">Gives names that sell higher on eBay a bit more weight. It looks at the typical Buy It Now asking price for each player's cards from the same product. Names with no price, or a price at or below the typical, stay as they are. Asking prices, not sales, and prices fill in over a few days.</div>
+          <div class="hint">Value per spot works the same way whether this is on or off: each name's odds-weighted points times its typical asking price (names with no price count at the typical price), added up for the spot. "Value 6.2%" is the spot's share of the break's value. With pricing on, "by value" is what the spot would cost if the total were split by value instead of points; green means the spot holds more value than its price, red means less. It's a guide built from asking prices, not a promise of what comes out of the box.</div>
           <div class="hint" id="mktnote"></div>
           <div id="heyopt" class="heyopt" hidden>
             <label class="f" style="margin-top:12px">Paul Heyman spot</label>
@@ -1153,6 +1157,12 @@ Bianca Belair | W | auto</pre>
     if (S.paste.trim()) boxes++;
     var stars = starMap();
     var list = Object.keys(map).map(function (k) { return map[k]; }).filter(function (r) { return r.w > 0; });
+    // value per spot: each name's pull weight (its odds-weighted points, before stars and boosts) times its typical eBay
+    // asking price; names with no price count at the typical price. Only shown when priced names hold half the points.
+    var vpw = 0, vpp = 0, vpx = list.filter(function (r) { return r.pxq; }).map(function (r) { return r.pxs / r.pxq; }).sort(function (a, b) { return a - b; });
+    var vref = vpx[Math.floor(vpx.length / 2)] || 0;
+    list.forEach(function (r) { vpw += r.w; if (r.pxq) vpp += r.w; r.v = vref ? r.w * (r.pxq ? r.pxs / r.pxq : vref) : 0; });
+    var val = { n: vpx.length, cover: vpw ? vpp / vpw : 0 }; val.ok = val.n >= 8 && val.cover >= 0.5;
     list.forEach(function (r) {
       var f = fold(r.n).toLowerCase().replace(/"/g, ""), m = 1;
       stars.forEach(function (s) { if (f === s[0] || (" " + f + " ").indexOf(" " + s[0] + " ") > -1) m = Math.max(m, s[1]); });
@@ -1169,7 +1179,8 @@ Bianca Belair | W | auto</pre>
     if (note) {
       var when = mdate ? new Date(mdate + "T12:00:00").toLocaleDateString("en-US", { month: "long", day: "numeric" }) : "";
       note.textContent = !priced.length ? "No eBay prices on file for these boxes yet." : priced.length < 8 ? "Only " + priced.length + " names in these boxes have an eBay price, which is too few to use." :
-        (mk ? "Using" : "Available:") + " eBay prices for " + priced.length + " of " + list.length + " names in these boxes" + (when ? " (checked " + when + ")" : "") + ".";
+        (mk ? "Using" : "Available:") + " eBay prices for " + priced.length + " of " + list.length + " names in these boxes" + (when ? " (checked " + when + ")" : "") + "." +
+        (val.ok ? " Each spot shows its share of the value." : " Value per spot shows once priced names hold at least half of the points (now " + Math.round(val.cover * 100) + "%).");
     }
     // superstar boost: each player's points raised to a power, measured against the typical player, so a star pulls away from role players
     var sk = BOOST[S.boost] ? BOOST[S.boost][0] : 1;
@@ -1177,7 +1188,7 @@ Bianca Belair | W | auto</pre>
       var ws = list.map(function (r) { return r.w; }).sort(function (a, b) { return a - b; }), ref = ws[Math.floor(ws.length / 2)] || 1;
       list.forEach(function (r) { r.w = ref * Math.pow(r.w / ref, sk); });
     }
-    return { list: list, boxes: boxes, sports: Object.keys(sports) };
+    return { list: list, boxes: boxes, sports: Object.keys(sports), val: val };
   }
 
   // ---------- teams ----------
@@ -1510,7 +1521,10 @@ Bianca Belair | W | auto</pre>
     var ws = bins.map(function (b) { return b.w; }), hi = Math.max.apply(null, ws), lo = Math.min.apply(null, ws);
     var outT = teams && tb.out.length ? tb.out.map(function (u) { return u.team; }).sort() : [], outN = 0;
     if (outT.length) { var os = {}; tb.out.forEach(function (u) { u.names.forEach(function (x) { if (!os[x.n]) { os[x.n] = 1; outN++; } }); }); }
-    LAST = { bins: bins, total: total, N: N, goal: goal, teams: teams, out: outT, outN: outN };
+    var VAL = c.val && c.val.ok, totV = 0;
+    if (VAL) { bins.forEach(function (b) { b.val = 0; b.names.forEach(function (x) { b.val += x.v || 0; }); totV += b.val; }); VAL = totV > 0; }
+    bins.forEach(function (b) { b.vs = VAL ? b.val / totV : null; b.vprice = VAL && goal ? Math.round(sumP * b.vs) : null; });
+    LAST = { bins: bins, total: total, N: N, goal: goal, teams: teams, out: outT, outN: outN, val: VAL };
     var prices = bins.map(function (b) { return b.price; });
     $("stats").innerHTML = [
       [list.length - outN, "names"], [c.boxes, c.boxes === 1 ? "box" : "boxes"], [bins.length, "spots"],
@@ -1552,7 +1566,7 @@ Bianca Belair | W | auto</pre>
       var autos = b.names.filter(function (x) { return x.a; }).length;
       var share = b.w / total * 100;
       return '<details class="spot' + (b.heyman ? " hey" : "") + '"' + (expandAll || OPENK[b.pkey] ? " open" : "") + ' data-pk="' + esc(b.pkey) + '">' + "<summary><span class=\"no\">" + (i + 1) + '</span><span class="lb display">' + esc(b.label) + (b.sub ? "<small>" + esc(b.sub) + "</small>" : "") + '</span><span class="mid"><div class="meter"><i style="width:' + Math.min(100, b.w / hi * 100) + '%"></i></div><div class="top">' + esc(top.join(", ")) + '</div></span><span class="nums">' +
-        (goal ? '<span class="pr">' + usd(b.price) + (b.locked ? ' <span class="pmine">set</span>' : "") + "</span><br>" : "") + "<b>" + share.toFixed(1) + "%</b> · " + b.names.length + (b.names.length === 1 ? " name" : " names") + "<br>" + autos + " with autos</span></summary>" +
+        (goal ? '<span class="pr">' + usd(b.price) + (b.locked ? ' <span class="pmine">set</span>' : "") + "</span><br>" : "") + "<b>" + share.toFixed(1) + "%</b> · " + b.names.length + (b.names.length === 1 ? " name" : " names") + "<br>" + autos + " with autos" + valHtml(b) + "</span></summary>" +
         (goal ? '<div class="pset"><label>Price for this spot <span class="money"><input class="in" type="number" min="0" step="1" data-pk="' + esc(b.pkey) + '" value="' + (b.locked ? b.price : "") + '" placeholder="' + b.sugg + '"></span></label><span class="sg">Suggested ' + usd(b.sugg) + (b.locked ? ' · <button class="linkbtn" type="button" data-reset="' + esc(b.pkey) + '">Use suggested</button>' : "") + '</span><span class="sg2">Change it and the other spots move the other way, so the total stays at ' + usd(goal) + ".</span></div>" : "") +
         '<div class="all">' + allHtml(b, "") + "</div></details>";
     }).join("");
@@ -1568,6 +1582,12 @@ Bianca Belair | W | auto</pre>
     if (location.hash.indexOf("#/search/") === 0) drawSearch(decodeURIComponent(location.hash.slice(9)));
   }
 
+  // a spot's share of the break's eBay value, and (with pricing on) what it would cost priced by value instead of points
+  function valHtml(b) {
+    if (b.vs == null) return "";
+    var r = b.vprice != null && b.price > 0 ? b.vprice / b.price : 1, cls = r >= 1.2 ? " up" : r <= 0.8 ? " dn" : "";
+    return '<br><span class="val' + cls + '" title="Share of the break\'s value, from typical eBay asking prices">Value ' + (b.vs * 100).toFixed(1) + "%" + (b.vprice != null ? " · by value " + usd(b.vprice) : "") + "</span>";
+  }
   function hl(n, q) {
     if (!q) return esc(n);
     var f = fold(n).toLowerCase(), i = f.indexOf(q);
@@ -1703,10 +1723,10 @@ Bianca Belair | W | auto</pre>
   $("csv").onclick = function () {
     if (!LAST) return;
     var q = function (s) { return '"' + String(s).replace(/"/g, '""') + '"'; };
-    var rows = [["Spot", "Label", "Group", "Share %", "Names", "Price", "All names"]].concat(LAST.bins.map(function (b, i) {
-      return [i + 1, b.label, b.sub, (b.w / LAST.total * 100).toFixed(1), b.names.length, LAST.goal ? b.price : "", b.names.map(function (x) { return x.n; }).join("; ")];
+    var rows = [["Spot", "Label", "Group", "Share %", "Names", "Price", "Value %", "Price by value", "All names"]].concat(LAST.bins.map(function (b, i) {
+      return [i + 1, b.label, b.sub, (b.w / LAST.total * 100).toFixed(1), b.names.length, LAST.goal ? b.price : "", b.vs != null ? (b.vs * 100).toFixed(1) : "", b.vprice != null ? b.vprice : "", b.names.map(function (x) { return x.n; }).join("; ")];
     }));
-    if (LAST.out && LAST.out.length) rows.push(["Left out", LAST.out.join(" / "), "Giveaway, not in the pricing", "", LAST.outN, "", ""]);
+    if (LAST.out && LAST.out.length) rows.push(["Left out", LAST.out.join(" / "), "Giveaway, not in the pricing", "", LAST.outN, "", "", "", ""]);
     var a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([rows.map(function (r) { return r.map(q).join(","); }).join("\n")], { type: "text/csv" }));
     a.download = "spot-list.csv"; document.body.appendChild(a); a.click(); a.remove();
   };

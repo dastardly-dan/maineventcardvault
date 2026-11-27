@@ -12,6 +12,8 @@ README.md
 # Worker code and config: run by Cloudflare, not served as files.
 worker.js
 breakstatus.js
+owner.js
+owner
 wrangler.jsonc
 .wrangler
 node_modules

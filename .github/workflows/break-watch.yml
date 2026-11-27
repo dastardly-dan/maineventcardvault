@@ -37,10 +37,10 @@ jobs:
           python build/breaks/hub.py > /dev/null
       - name: Commit anything new
         run: |
-          if [ -n "$(git status --porcelain build/breaks breaks)" ]; then
+          if [ -n "$(git status --porcelain build/breaks breaks owner)" ]; then
             git config user.name "Break watcher"
             git config user.email "actions@users.noreply.github.com"
-            git add build/breaks breaks
+            git add build/breaks breaks owner
             git commit -m "Break watcher: store products changed"
             ok=0
             for i in 1 2 3 4; do
