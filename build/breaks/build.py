@@ -247,8 +247,8 @@ def sealed_query(full):
 STREAMS = {
     'Ck782vibiC0': dict(title='RGL Pre-Thanksgiving Marathon Stream (RGL #6128 to #6143)',
                         pages=['rgl6128', 'rgl612xwwe2'] + ['rgl%d' % n for n in range(6129, 6144)]),
-    'kVX-OdgG5f8': dict(title='Acme Packs Friday Break Night (GB1041 to GB1045)',   # Daniel sent the link, Nov 27, 2026
-                        pages=['gb1041', 'gb1042', 'gb1043', 'gb1044', 'gb1045']),
+    'kVX-OdgG5f8': dict(title='Acme Packs Friday Break Night (GB1041 to GB1046)',   # Daniel sent the link, Nov 27, 2026
+                        pages=['gb1041', 'gb1042', 'gb1043', 'gb1044', 'gb1045', 'gb1046']),
 }
 VIDEO_OF = {pid: (vid, v['title']) for vid, v in STREAMS.items() for pid in v['pages']}
 # Run Good Life also posts one video per break on its second channel, @rungoodbreaks (Daniel, Nov 26, 2026). A page listed in
@@ -294,7 +294,7 @@ def auto_stream(cfg):
 _NFL, _MLB, _NBA = [['football', 'American football']], [['baseball', 'baseball']], [['basketball', 'basketball']]
 _WWE, _UFC, _NASCAR = [['wrestl', 'wrestler']], [['martial', 'fighter']], [['racing', 'racing driver']]
 WIKI_BY_ID = {}
-for _ids, _h in ((('cc872', 'gb1037', 'gb1038a', 'gb1038b', 'gb1041', 'gb1043', 'gb1044', 'rgl6130', 'rgl6132', 'rgl6136', 'rgl6140', 'rgl6145'), _NFL),
+for _ids, _h in ((('cc872', 'gb1037', 'gb1038a', 'gb1038b', 'gb1041', 'gb1046', 'gb1043', 'gb1044', 'rgl6130', 'rgl6132', 'rgl6136', 'rgl6140', 'rgl6145'), _NFL),
                   (('gb1042', 'rgl6129', 'rgl6134', 'rgl6137', 'rgl6138', 'rgl6146', 'cc876'), _MLB), (('jwj0244', 'rgl6131', 'rgl6139', 'rgl6147'), _NBA),
                   (('cc871', 'cc878', 'rgl6144', 'jwj0246', 'jwj0247u', 'rgl6128', 'rgl612xwwe2'), _WWE), (('rgl6142',), _UFC), (('cc875', 'rgl6133'), _NASCAR),
                   (('gb1045',), _NFL + _NBA), (('rgl6148',), [['footballer', 'footballer']]), (('gb1040',), _NFL + _UFC + _NBA + _MLB + _WWE), (('rgl6141',), _NFL + _MLB + _NBA)):
@@ -1436,6 +1436,24 @@ gb1041 = dict(
     sources=[['GB1041 break page (Acme Packs)', acme_url(GB1041_H)], ACME_TERMS, SRC_INCEPTION, SRC_MIDNIGHT, SRC_CHROME],
 )
 
+# GB1046: Midnight Chrome Inception (random team, NFL), posted Nov 27 at about 6:45 pm Eastern for 10 pm Central the same night
+GB1046_H = 'gb1046-midnight-chrome-inception-random-team'
+gb1046 = dict(
+    id='gb1046', title='GB1046 Midnight Chrome Inception', kicker='Acme Packs · Random team · NFL',
+    url=acme_url(GB1046_H), when=ACME_FRI % ('10:00 pm', '11:00 pm'),
+    facts=['4 boxes', '28 team spots (24 teams, 4 combos)', '$127 per spot, $31.75 for a 25% filler', 'Teams randomized live'],
+    format='team', checked=ACME_CHK,
+    boxes=[dict(BOX_CHROME_H, k='delight', short='Chrome Delight', c='#f2c14e', full='2026 Topps Chrome Football Breaker\'s Delight (1 box)',
+                types='Chrome base and Refractors, rookie cards, autographs, inserts.'),
+           dict(BOX_MIDNIGHT, full='2026 Topps Midnight Football Hobby (1 box)'), BOX_CHROME_H],
+    spots=[team_spot(re.sub(r'[^a-z0-9]', '', l.lower()), l, ts) for l, ts in gb1038b_spots],
+    rules=ACME_RULES,
+    notes=['Cards are listed with the team the official checklist gives them.',
+           'The title says Inception, but the listing doesn\'t list an Inception box: one Chrome Football Delight, one Midnight and two Chrome Football Hobby boxes. This guide follows the boxes listed, so check with Acme if you were expecting Inception.',
+           'The Chrome Delight and Chrome Hobby boxes share one checklist.', ACME_FILLER % '$31.75'],
+    sources=[['GB1046 break page (Acme Packs)', acme_url(GB1046_H)], ACME_TERMS, SRC_MIDNIGHT, SRC_CHROME],
+)
+
 # GB1042: Chrome At The Museum (random team, MLB)
 GB1042_H = 'gb1042-chrome-at-the-museum-random-teams'
 gb1042_spots = [('Athletics', ['Athletics']), ('Atlanta Braves', ['Braves']), ('Arizona Diamondbacks / Tampa Bay Rays', ['Diamondbacks', 'Rays']),
@@ -1560,7 +1578,7 @@ gb1045 = dict(
 ACME_CL_NOTE = ('Checklists show what the maker planned for a product when it was made. The boxes opened on the stream can differ, for example a '
                 'FOTL (First Off The Line), Jumbo or other version, or a late change by the maker, so a card that isn\'t listed here can still turn up. '
                 'It goes to whichever spot its name or team matches, under Acme\'s rules.')
-for _c in (gb1041, gb1042, gb1043, gb1044, gb1045): _c['notes'].append(ACME_CL_NOTE)
+for _c in (gb1041, gb1042, gb1043, gb1044, gb1045, gb1046): _c['notes'].append(ACME_CL_NOTE)
 
 # ---------------- Nov 27 check: Colfax CC876 to CC879 (Sunday Nov 29) and RGL #6145 to #6147 (Saturday Nov 28) ----------------
 SAT = 'Saturday, November 28, 2026'
@@ -1975,6 +1993,7 @@ if __name__ == '__main__':
     close(gb1040, 'Tuesday, November 24, 2026', ['5 boxes', '21 letter spots', '$135 per spot'])  # ran Nov 24 (Daniel)
     n, u = letter_break(gb1040, g40, None, alt=False); built.append(write(gb1040, n, u))
     n, u = team_break(gb1041, {'chrome': CH, 'midnight': MN, 'inception': IN}); built.append(write(gb1041, n, u))
+    n, u = team_break(gb1046, {'delight': CH, 'chrome': CH, 'midnight': MN}); built.append(write(gb1046, n, u))
     n, u = team_break(gb1042, {'logo': lib_mlb_product('2026-topps-chrome-baseball-logofractor-edition'), 'black': lib_mlb_product('2026-topps-chrome-black-baseball'),
         'prizm': lib_mlb_product('2026-panini-prizm-baseball'), 'museum': lib_mlb_product('2026-topps-museum-collection-baseball')}); built.append(write(gb1042, n, u))
     n, u = letter_break(gb1043, {'best': lib_letter_product('2026-bowman-u-best-football'), 'chrome': lib_letter_product('2026-topps-chrome-football'),
