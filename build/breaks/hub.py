@@ -331,9 +331,11 @@ function show(b, spotId) {
     return '<option value="' + e(s.id) + '">' + e(s.label + (s.sub ? " (" + s.sub + ")" : "") + (my.indexOf(s.id) > -1 ? "  ·  yours" : "") + (s.status === "sold" ? "  ·  sold" : s.status === "open" ? "  ·  open" : "")) + "</option>"; }).join("");
   $("ws").value = sel;
   var inb = isIn(b);
-  $("whead").innerHTML = '<div class="wcard"><div class="kicker">' + e(b.breaker) + "</div><h2 class=\"display\">" + e(b.title) + '</h2><div class="sub">' + e(b.when) + (b.past ? " · already ran" : "") + '</div><div class="wbtns">' +
+  $("whead").innerHTML = '<div class="wcard"><div><div class="kicker">' + e(b.breaker) + "</div><h2 class=\"display\">" + e(b.title) + '</h2><div class="sub">' + e(b.when) + (b.past ? " · already ran" : "") + '</div></div><div class="wbtns">' +
     '<button type="button" id="win" class="' + (inb ? "on" : "") + '">' + (inb ? "You're in this break" : "I'm in this break") + "</button>" +
+    '<button type="button" id="wwide" class="on">' + (document.body.classList.contains("wide") ? "Video and chat side by side" : "Bigger video") + "</button>" +
     '<a href="/breaks/' + b.id + '">Full guide</a>' + (b.url ? '<a href="' + e(b.url) + '" target="_blank" rel="noopener">Breaker\'s listing</a>' : "") + "</div></div>";
+  $("wwide").onclick = function () { var w = !document.body.classList.contains("wide"); document.body.classList.toggle("wide", w); try { w ? localStorage.setItem("mecv-watch-wide", "1") : localStorage.removeItem("mecv-watch-wide"); } catch (x) {} this.textContent = w ? "Video and chat side by side" : "Bigger video"; $("wvid").scrollIntoView({ block: "start", behavior: "smooth" }); };
   $("win").onclick = function () { var a = ins(), i = a.indexOf(b.id); if (i > -1) a.splice(i, 1); else a.push(b.id); put("mecv-in", a); show(b, $("ws").value); list(); };
   video(b); spot(b, sel); list();
 }
@@ -367,6 +369,7 @@ function route() {
   if (!b) { $("whead").innerHTML = '<p class="sub">No breaks to follow right now.</p>'; return; }
   fillBreaks(b.id); show(b, h[1] ? decodeURIComponent(h[1]) : "");
 }
+try { if (localStorage.getItem("mecv-watch-wide")) document.body.classList.add("wide"); } catch (x) {}
 $("wb").onchange = function () { location.hash = $("wb").value; };
 $("ws").onchange = function () { var b = byId($("wb").value); if (b) history.replaceState(null, "", "#" + b.id + ($("ws").value ? "/" + encodeURIComponent($("ws").value) : "")); spot(b, $("ws").value); };
 window.addEventListener("hashchange", route); route();
@@ -376,19 +379,25 @@ wp = f"""<!DOCTYPE html>
 <title>Watch Your Breaks | Main Event Card Vault</title><meta name="theme-color" content="#081524"><link rel="icon" href="{icon}">
 <style>{css}
 .bar .bmenu {{ margin-left: auto; }}
+:root {{ --maxw: 1600px; }}
+.hero {{ padding-top: 14px; padding-bottom: 4px; }} .hero h1 {{ font-size: clamp(28px, 4vw, 40px); margin: 4px 0 6px; }} .hero .lede {{ font-size: 15px; margin: 0; }}
 .wpick {{ display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 14px; }}
 .wpick label {{ flex: 1 1 300px; display: flex; flex-direction: column; gap: 5px; font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-3); }}
 .wpick select {{ padding: 11px 14px; border-radius: 12px; border: 1px solid var(--line-2); background: var(--panel); color: var(--ink); font: inherit; font-size: 15px; text-transform: none; letter-spacing: 0; }}
 .wcard {{ background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 16px 18px; margin: 0 0 14px; }}
-.wcard h2 {{ font-size: 30px; margin: 4px 0 2px; }} .wcard h3 {{ font-size: 24px; margin: 0; }}
+.wcard h2 {{ font-size: 22px; margin: 2px 0 0; }} #whead .wcard {{ display: flex; flex-wrap: wrap; align-items: center; gap: 6px 18px; padding: 12px 16px; }} #whead .wbtns {{ margin: 0 0 0 auto; }} .wcard h3 {{ font-size: 24px; margin: 0; }}
 .wbtns {{ display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }}
 .wbtns a, .wbtns button, #wmine {{ font: inherit; font-size: 14px; font-weight: 600; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line-2); background: var(--bg-2); color: var(--ink); text-decoration: none; cursor: pointer; }}
 .wbtns button, #wmine {{ background: var(--gold); color: #1a1405; border-color: var(--gold); }}
 .wbtns button.on, #wmine.on {{ background: transparent; color: var(--gold); }}
-.wgrid {{ display: grid; grid-template-columns: 1fr 360px; gap: 12px; margin: 0 0 14px; }}
-.wvid {{ position: relative; aspect-ratio: 16 / 9; background: #050c16; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; }}
+.wgrid {{ display: grid; grid-template-columns: 1fr 340px; gap: 12px; margin: 0 0 14px; }}
+body.wide .wgrid {{ grid-template-columns: 1fr; }} body.wide .wchat {{ height: 460px; }}
+.vh {{ position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }}
+.wpick {{ margin-bottom: 10px; }} .wpick select {{ padding: 9px 12px; }}
+.wvbox {{ display: flex; justify-content: center; background: #050c16; border-radius: 16px; }}
+.wvid {{ position: relative; width: 100%; max-width: calc((100vh - 170px) * 16 / 9); aspect-ratio: 16 / 9; background: #050c16; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; }}
 .wvid iframe {{ position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }}
-.wchat {{ display: flex; flex-direction: column; background: var(--panel); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; min-height: 320px; }}
+.wchat {{ max-height: calc(100vh - 170px); display: flex; flex-direction: column; background: var(--panel); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; min-height: 320px; }}
 .wchat iframe {{ flex: 1; width: 100%; border: 0; min-height: 320px; }}
 .wnone {{ display: flex; align-items: center; justify-content: center; text-align: center; height: 100%; padding: 20px; color: var(--ink-3); font-size: 14px; line-height: 1.5; }}
 .wsm {{ font-size: 12px; color: var(--ink-3); padding: 7px 12px; }}
@@ -406,10 +415,9 @@ wp = f"""<!DOCTYPE html>
 /*BMENU-CSS*//*/BMENU-CSS*/
 {IN_CSS}</style></head><body>
 <header class="site"><div class="wrap"><div class="bar"><a class="brand" href="/"><img src="{icon}" alt=""><div><b class="display">Main Event Card Vault</b><span>Watch your breaks</span></div></a><!--BMENU--><!--/BMENU--></div></div></header>
-<div class="wrap hero"><div class="kicker">Follow along</div><h1 class="display">Watch your breaks</h1>
-<p class="lede">Pick a break to watch the stream with the live chat beside it, then pick a spot to see every player in it while the boxes get opened. Breaks you're in come up first.</p></div>
-<main class="wrap"><div class="wpick"><label>Break<select id="wb"></select></label><label>Spot<select id="ws"></select></label></div>
-<div id="whead"></div><div class="wgrid"><div class="wvid" id="wvid"></div><div class="wchat" id="wchat"></div></div><div id="wspot"></div>
+<main class="wrap" style="padding-top:14px"><h1 class="vh">Watch your breaks</h1><div class="wpick"><label>Break<select id="wb"></select></label><label>Spot<select id="ws"></select></label></div>
+<div class="wgrid"><div class="wvbox"><div class="wvid" id="wvid"></div></div><div class="wchat" id="wchat"></div></div><div id="whead"></div><div id="wspot"></div>
+<p class="sub" style="margin:4px 0 0">Pick a break to watch the stream with the live chat beside it, then pick a spot to see every player in it while the boxes get opened. Breaks you're in come up first.</p>
 <h2 class="display" style="font-size:26px;margin:26px 0 10px">Your breaks</h2><div class="grid" id="wmy"></div></main>
 <footer><div class="wrap">Main Event Card Vault. Reference only; confirm checklists and house rules with the breaker. <a href="/breaks/">All break guides</a> · <a href="/breaks/release-notes">Release notes</a></div></footer>
 {WATCH_JS.replace('__DATA__', json.dumps(W, ensure_ascii=False).replace('</', '<\\/'))}
