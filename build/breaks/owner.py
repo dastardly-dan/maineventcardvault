@@ -274,15 +274,24 @@ def main():
         sref = statistics.median(stars) if stars else 1.0
         a['star_cover'] = len(set(nm for _, _, _, nm in crow if dkey(key_of(nm)) in STAR)) / (len(set(nm for *_, nm in crow)) or 1)
         chase, hitv = {}, [0.0] * len(spots)
+        pername = [dict() for _ in spots]   # per spot: name -> (hit value, has an autograph)
         for si, ap, hp, nm in crow:
             st = STAR.get(dkey(key_of(nm)), sref)
             chase[nm] = chase.get(nm, 0) + ap * st; hitv[si] += hp * st
+            v, au = pername[si].get(nm, (0.0, False)); pername[si][nm] = (v + hp * st, au or ap > 0)
         top = [nm for nm, v in sorted(chase.items(), key=lambda x: -x[1]) if v > 0][:10]
         a['top_chase'] = [(nm, STAR.get(dkey(key_of(nm)))) for nm in top]
         tset, th = set(top), sum(hitv) or 1
         for si, sp in enumerate(spots):
             sp['hit_share'] = hitv[si] / th
             sp['big'] = sorted({nm for s2, _, _, nm in crow if s2 == si and nm in tset}, key=top.index)
+            # hit rating: the spot's share of the hit value against an even split (1.0 = average), as 1 to 5 stars
+            r = sp['hit_share'] * len(spots)
+            sp['hit_ratio'] = r
+            sp['stars'] = 5 if r >= 2.0 else 4 if r >= 1.4 else 3 if r >= 0.85 else 2 if r >= 0.45 else 1 if r > 0 else 0
+            sp['hit_names'] = [(nm, STAR.get(dkey(key_of(nm))), au) for nm, (v, au) in sorted(pername[si].items(), key=lambda x: -x[1][0])[:3]]
+            autos = [(STAR.get(dkey(key_of(nm)), 0), nm) for nm, (v, au) in pername[si].items() if au]
+            sp['ceiling'] = max(autos) if autos and max(autos)[0] else None
             sp['value'] = sp['deal'] if a['pick'] else ((a['fair_spot'] / a['flat']) if a['fair_spot'] and a['flat'] else None)
         tot = a['total'] or 0
         for sp in spots:   # hit value for the price: the spot's share of the hits next to its share of what the whole break costs
@@ -533,11 +542,17 @@ def main():
                     '<span class="warn">sold</span>' if sp['status'] == 'sold' else '<span class="ok">open</span>' if sp['status'] in ('open', 'avail', 'available') else esc(sp['status'] or 'not tracked')))
             h.append('</tbody></table>')
         h.append('<h3>Spots</h3><p class="sm">Value share comes from %s.%s</p>' % (basis, '' if a['market'] else ' It switches to eBay player prices once at least half the points have one (now %d%%).' % round(a['cover'] * 100)))
-        rows = sorted(a['spots'], key=lambda s: -(s['deal'] if s['deal'] else s['share'] / (s['price'] or 1e9)))
-        h.append('<table><thead><tr><th>Spot</th><th class="n">Price</th><th class="n">Value share</th><th class="n">Fair price</th><th class="n">Value for the price</th></tr></thead><tbody>')
+        rows = sorted(a['spots'], key=lambda s: -s['hit_ratio'])
+        h.append('<p class="sm"><b>Hit rating</b> ranks each spot by the hits it could bring: its players\' autographs, inserts and multi-player cards, each counted by how much that player\'s cards sell for on eBay, so the more valuable the players, the bigger the possible hit. '
+                 '3 stars is an average spot for this break; 5 stars holds at least twice the average hit value. <b>Biggest possible hit</b> is the spot\'s most valuable autograph name, with that player\'s typical eBay asking price.</p>')
+        h.append('<table><thead><tr><th>Spot</th><th>Hit rating</th><th>Biggest possible hit</th><th class="n">Price</th><th class="n">Value share</th><th class="n">Fair price</th><th class="n">Value for the price</th></tr></thead><tbody>')
         for s in rows:
-            h.append('<tr><td><b>%s</b>%s<div class="sm">%s</div></td><td class="n">%s</td><td class="n">%.1f%%</td><td class="n">%s</td>%s</tr>' % (
-                esc(s['label']), (' <span class="tag">%s</span>' % esc(s['sub'])) if s['sub'] else '', esc(', '.join(s['top'])),
+            stars = '<span class="stars" title="%.1fx the average spot">%s<span class="off">%s</span></span><div class="sm">%.1fx average</div>' % (s['hit_ratio'], '&#9733;' * s['stars'], '&#9733;' * (5 - s['stars']), s['hit_ratio'])
+            hn = ', '.join(esc(nm) + (' <span class="sm">(%s)</span>' % money(st) if st else '') for nm, st, au in s['hit_names'])
+            ceil = ('<b>%s</b><div class="sm">eBay about %s</div>' % (esc(s['ceiling'][1]), money(s['ceiling'][0]))) if s['ceiling'] else '<span class="na">no priced autograph</span>'
+            h.append('<tr><td><b>%s</b>%s%s<div class="sm">%s</div></td><td>%s</td><td>%s</td><td class="n">%s</td><td class="n">%.1f%%</td><td class="n">%s</td>%s</tr>' % (
+                esc(s['label']), (' <span class="tag">%s</span>' % esc(s['sub'])) if s['sub'] else '', ' <span class="warn">sold</span>' if a['pick'] and s['status'] == 'sold' else '',
+                hn or esc(', '.join(s['top'])), stars, ceil,
                 money(s['price']) or '&nbsp;', s['share'] * 100, money(s['fair']) or '<span class="na">needs box cost</span>',
                 deal_cell(s['deal']) if a['pick'] else '<td class="r na">random</td>'))
         h.append('</tbody></table>')
@@ -603,6 +618,7 @@ th{text-align:left;font-size:12px;color:var(--ink3);font-weight:600;padding:8px 
 .ok{color:var(--up)}.warn{color:#a6761d}.bad{color:var(--dn)}
 .conf{font-size:12px;font-weight:700;border-radius:999px;padding:1px 8px;white-space:nowrap}.conf.high{background:#e3f3e9;color:var(--up)}.conf.medium{background:#f7efd9;color:#8a6a14}.conf.low{background:#f6e3de;color:var(--dn)}
 .picks{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px;margin:6px 0 18px}.picks>div{background:var(--panel);border:1px solid var(--line);border-left:4px solid #3ccf9a;border-radius:10px;padding:10px 12px}.takeaways{grid-template-columns:1fr}.takeaways ul{margin:4px 0 0;padding-left:18px}.takeaways li{margin:3px 0}
+.stars{color:#d4a72c;font-size:16px;letter-spacing:1px;white-space:nowrap}.stars .off{color:#c9ced8;opacity:.5}
 .picks span{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.04em;opacity:.7;margin-bottom:4px}
 .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin:8px 0 18px}.stats div{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
 .stats b{display:block;font-size:22px}.stats span{color:var(--ink3);font-size:13px}

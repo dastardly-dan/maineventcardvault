@@ -255,6 +255,9 @@ team spot, box by box. Linked from the storefront's Breaks menu; every page carr
       pick spot, then all breakers together; #/hits/acmepacks etc. jump to a breaker), three "right now" picks at the top of the Overview, and on each pick break
       a "Best spots to buy into" list (every spot, sold or open, ranked by hits for the price and value for the price together).
       Rebuilds whenever hub.py runs, so it follows the daily eBay prices and the weekly box prices.
+      Each break's Spots table is sorted by Hit rating (1 to 5 stars): the spot's share of hit value (autograph, insert and multi
+      points x the player's star power) against an even split, 3 stars = average, 5 = twice average or more. It also shows the
+      spot's biggest possible hit (its most valuable autograph name and that player's typical eBay asking price) and top hit names.
   3p2. Box prices (Daniel, Nov 27, 2026: "find the lowest possible cost ... update those box prices every week"):
       build/breaks/box_prices.json holds the lowest current price for one sealed box of each box type in the current
       breaks, keyed "product|type" exactly as owner.py's parts() splits a box line ("2026 Topps Chrome Football (2 Hobby,
