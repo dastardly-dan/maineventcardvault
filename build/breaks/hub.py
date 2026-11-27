@@ -63,7 +63,7 @@ html = f'''<!DOCTYPE html>
 <div class="wrap hero"><div class="kicker">Spot guides</div><h1 class="display">Break guides</h1>
 <p class="lede">Who you could pull in each spot, box by box, built from the published checklists. Pick-your-letter breaks show which spots are still open and what they cost.</p></div>
 <main class="wrap"><div class="grid">{cards}</div>{"" if not up else '<p class="sub" style="margin-top:22px">Looking for a break that already ran? Its guide is still up on <a href="/breaks/past">Past breaks</a>.</p>'}<a class="tile" href="/breaks/builder" style="display:block;margin:22px 0 32px;border-color:var(--gold)"><div class="kicker" style="font-size:11px">Breaker tool</div><div class="lab display" style="font-size:26px;margin-top:6px">Spot builder</div><div class="peek" style="margin-top:6px">Pick checklists, set a spot count, and get the most evenly balanced letter spots, with optional pricing.</div></a></main>
-<footer><div class="wrap">Main Event Card Vault. Reference only; confirm checklists and house rules with the breaker. <a href="/breaks/release-notes">Release notes</a> · <a href="/breaks/past">Past breaks</a></div></footer>
+<footer><div class="wrap">Main Event Card Vault. Reference only; confirm checklists and house rules with the breaker. <a href="/breaks/release-notes">Release notes</a> · <a href="/breaks/past">Past breaks</a> · <a href="/owner">Developer dashboard</a></div></footer>
 </body></html>'''
 html = html.replace('</body>', IN_SCRIPT + '</body>')
 open(os.path.join(ROOT,'breaks','index.html'),'w').write(html)
@@ -143,7 +143,7 @@ def fill_bundled(path, current):
     open(path, 'w').write(s[:a] + '\n' + enc + '\n  ' + s[b:])
 
 # A Release notes link at the bottom of every page that has the Breaks menu (Daniel, Nov 24).
-RN_LINK = '<!--RNLINK--><a href="/breaks/release-notes">Release notes</a> · <a href="/breaks/past">Past breaks</a><!--/RNLINK-->'  # Past breaks: Daniel, Nov 24
+RN_LINK = '<!--RNLINK--><a href="/breaks/release-notes">Release notes</a> · <a href="/breaks/past">Past breaks</a> · <a href="/owner">Developer dashboard</a><!--/RNLINK-->'  # Past breaks: Daniel, Nov 24; Developer dashboard (the password-protected /owner page): Daniel, Nov 27
 def footer_link(s, current):
     if current == 'notes':
         return s
@@ -193,7 +193,7 @@ rn = f'''<!DOCTYPE html>
 <p class="lede">Changes to the break guides, the Spot Builder and the site, newest first.</p></div>
 <main class="wrap"><div class="rfilter" id="rf"><button class="on" data-a="">Everything</button><button data-a="Break guides">Break guides</button><button data-a="Spot Builder">Spot Builder</button><button data-a="Site">Site</button></div>
 {rn_body}</main>
-<footer><div class="wrap">Main Event Card Vault. <a href="/breaks/">All break guides</a> · <a href="/breaks/past">Past breaks</a></div></footer>
+<footer><div class="wrap">Main Event Card Vault. <a href="/breaks/">All break guides</a> · <a href="/breaks/past">Past breaks</a> · <a href="/owner">Developer dashboard</a></div></footer>
 <script>(function(){{var bs=document.querySelectorAll("#rf button");bs.forEach(function(b){{b.onclick=function(){{var a=b.getAttribute("data-a");bs.forEach(function(x){{x.classList.toggle("on",x===b);}});document.querySelectorAll(".rel").forEach(function(r){{var n=0;r.querySelectorAll("li").forEach(function(li){{var ok=!a||li.querySelector(".rarea").textContent===a;li.hidden=!ok;if(ok)n++;}});r.hidden=!n;}});}};}});}})();</script>
 </body></html>'''
 open(os.path.join(ROOT, 'breaks', 'release-notes.html'), 'w').write(rn)
@@ -243,7 +243,7 @@ pb = f'''<!DOCTYPE html>
 <p class="lede">Breaks that have already run, newest first. Each guide is still up, so you can look back at who was in every spot and check off what you pulled.</p>
 <p class="lede" style="margin-top:8px">Bought into a break? Open its guide and tap <b>I'm in this break</b>, even if you don't know your spot yet. It gets a "You're in" badge here and under a <b>My breaks</b> filter. Saved only in this browser.</p></div>
 <main class="wrap">{past_tools}<div class="grid" id="pgrid">{past_cards}</div><p class="sub" id="pnone" hidden>No past breaks match. Try another search or clear the filters.</p></main>
-<footer><div class="wrap">Main Event Card Vault. <a href="/breaks/">All break guides</a> · <a href="/breaks/release-notes">Release notes</a></div></footer>
+<footer><div class="wrap">Main Event Card Vault. <a href="/breaks/">All break guides</a> · <a href="/breaks/release-notes">Release notes</a> · <a href="/owner">Developer dashboard</a></div></footer>
 {IN_SCRIPT}<script>(function () {{
   var q = document.getElementById("pq"); if (!q) return;
   var m = document.getElementById("pm"), bs = document.querySelectorAll("#pb .chip"), ts = document.querySelectorAll("#pgrid .tile"), b = "";
