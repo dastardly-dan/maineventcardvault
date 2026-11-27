@@ -266,6 +266,15 @@ team spot, box by box. Linked from the storefront's Breaks menu; every page carr
       only when nothing in stock is found. low null means none found; the dashboard lists it as missing. The "Weekly box
       price check" scheduled task (Thursdays 8:37 pm Eastern) re-searches every key, adds new box types, drops ones no
       current break uses, runs owner.py and pushes.
+  3s. Special hits (Daniel, Nov 27, 2026: "they pulled a Browns WR dual auto, we should list those types of hits as well"):
+      build/breaks/hits.py saves every multi-player card (dual, triple, quad autographs, combo inserts and relics) by set name
+      into hits.json, from the Topps card files (checklist_parse.py's *.cards.json, kept under /home/claude/work/cl/out and
+      /tmp/*/cards when the checklists were built) and official Panini CSVs (parallels folded into their base set).
+      build.py's special_hits() lists each card under the spots its players land in (D.hits[spot] = [box, set, auto or insert,
+      players, other spots]); the guide shows "Special hits in this spot" and the Watch page shows them in the spot view.
+      Boxes with no card-level source yet: Leaf, Kakawow, Card Fun, Panini Obsidian Football, Diamond Cards copies (Road to
+      World Cup), 2021 Finest WWE, 2025 Chrome WWE, 2026 Chrome Black Baseball. Add a new product with
+      `python3 build/breaks/hits.py --topps <file.cards.json>` or `--panini <file.csv> <library id>`, then rebuild.
   3r. Watch your breaks (Daniel, Nov 27, 2026): public page /breaks/watch, built by hub.py from each current break's page data
       (plus breaks that ran today or yesterday). Break dropdown (the visitor's breaks first, from localStorage "mecv-in" and
       "mecv-<id>-mine"), the break's stream and live chat (D.video; chat hidden once the break has run), and a spot dropdown that

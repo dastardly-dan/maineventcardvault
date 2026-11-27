@@ -284,7 +284,7 @@ for i in items:
     W.append(dict(id=i['id'], title=D['title'], breaker=breaker_name(i), when=D.get('when', i['when']).split('. ')[0], at=_at(D.get('when', i['when'])),
         past=is_past(i), video=D.get('video'), vstart=D.get('videoStart') or 0, url=D.get('url', ''), team=D.get('format') in ('pyt', 'random') and any(sp.get('teams') for sp in D['spots']),
         boxes=[[b['k'], b.get('short', b['k']), b.get('c', '#e6be55')] for b in D['boxes']],
-        spots=[dict(id=sp['id'], label=sp['label'], sub=sp.get('g') or '', price=sp.get('price'), status=sp.get('status') or '',
+        spots=[dict(id=sp['id'], label=sp['label'], sub=sp.get('g') or '', price=sp.get('price'), status=sp.get('status') or '', hits=(D.get('hits') or {}).get(sp['id'], []),
                     names={k: [[e[0], e[1] or '', 1 if e[2] else 0] for e in v] for k, v in D['names'].get(sp['id'], {}).items()}) for sp in D['spots']]))
 W.sort(key=lambda b: (b['past'], b['at'] or '9999'))
 WATCH_JS = r"""<script>(function () {
@@ -339,6 +339,12 @@ function show(b, spotId) {
   $("win").onclick = function () { var a = ins(), i = a.indexOf(b.id); if (i > -1) a.splice(i, 1); else a.push(b.id); put("mecv-in", a); show(b, $("ws").value); list(); };
   video(b); spot(b, sel); list();
 }
+function hitsHTML(b, s) {
+  if (!s.hits || !s.hits.length) return "";
+  var bk = {}; b.boxes.forEach(function (x) { bk[x[0]] = x; });
+  return '<div class="whits"><div class="wbn">Special hits <span>' + s.hits.length + '</span></div>' + s.hits.map(function (h) { var x = bk[h[0]] || [h[0], h[0], "#888"];
+    return '<div class="whit"><i style="background:' + e(x[2]) + '"></i><b>' + e(h[1]) + "</b>" + (h[2] === "auto" ? '<span class="tag">auto</span>' : "") + ' <span class="wsm2">' + e(x[1]) + "</span><div>" + e(h[3]) + (h[4] ? ' <span class="wsm2">(also ' + e(h[4]) + ")</span>" : "") + "</div></div>"; }).join("") + "</div>";
+}
 function spot(b, id) {
   var s = null; b.spots.forEach(function (x) { if (x.id === id) s = x; });
   if (!s) { $("wspot").innerHTML = '<div class="wcard"><p class="sub">Pick a spot above to see every player in it, box by box.' + (b.spots.length ? " Your saved spots come up first next time." : "") + "</p></div>"; return; }
@@ -350,7 +356,7 @@ function spot(b, id) {
   $("wspot").innerHTML = '<div class="wcard"><div class="wsh"><h3 class="display">' + e(s.label) + (s.sub ? ' <span class="sub">' + e(s.sub) + "</span>" : "") + "</h3>" +
     (s.price ? '<span class="wst">$' + s.price + "</span>" : "") + (s.status ? '<span class="wst ' + e(s.status) + '">' + e(s.status) + "</span>" : "") +
     '<button type="button" id="wmine" class="' + (on ? "on" : "") + '">' + (on ? "My spot" : "This is my spot") + "</button></div>" +
-    '<p class="sub">' + n + " players in this spot across " + b.boxes.length + " box" + (b.boxes.length > 1 ? "es" : "") + ".</p>" + (body || '<p class="sub">No names in this spot.</p>') + "</div>";
+    '<p class="sub">' + n + " players in this spot across " + b.boxes.length + " box" + (b.boxes.length > 1 ? "es" : "") + ".</p>" + hitsHTML(b, s) + (body || '<p class="sub">No names in this spot.</p>') + "</div>";
   $("wmine").onclick = function () {
     var a = mine(b.id), i = a.indexOf(s.id); if (i > -1) a.splice(i, 1); else a.push(s.id); put("mecv-" + b.id + "-mine", a);
     if (a.length) { var q = ins(); if (q.indexOf(b.id) < 0) { q.push(b.id); put("mecv-in", q); } }
@@ -404,6 +410,8 @@ body.wide .wgrid {{ grid-template-columns: 1fr; }} body.wide .wchat {{ height: 4
 .wsh {{ display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }} #wmine {{ margin-left: auto; }}
 .wst {{ font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; padding: 3px 10px; border-radius: 999px; border: 1px solid var(--line-2); color: var(--ink-2); }}
 .wst.open {{ color: #7fd3a1; border-color: #2f6b4c; }} .wst.sold {{ color: var(--ink-3); }}
+.whits {{ margin: 12px 0 4px; padding: 10px 12px; border: 1px solid var(--line); border-left: 4px solid var(--gold); border-radius: 12px; background: var(--bg-2); }}
+.whit {{ position: relative; padding-left: 16px; margin: 6px 0; font-size: 14px; }} .whit i {{ position: absolute; left: 0; top: 6px; width: 9px; height: 9px; border-radius: 3px; }} .wsm2 {{ font-size: 12.5px; color: var(--ink-3); }}
 .wbox {{ margin: 12px 0 0; }} .wbn {{ font-weight: 700; font-size: 14px; display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }}
 .wbn i {{ width: 10px; height: 10px; border-radius: 3px; display: inline-block; }} .wbn span {{ color: var(--ink-3); font-weight: 400; }}
 .pills {{ display: flex; flex-wrap: wrap; gap: 6px; }}

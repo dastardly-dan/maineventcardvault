@@ -136,6 +136,10 @@ h2 { font-size: 30px; margin: 0 0 6px; }
 .btn:hover { border-color: var(--gold); }
 .btn.gold { background: var(--gold); color: var(--on-gold); border-color: var(--gold); font-weight: 600; }
 
+.shits { background: var(--panel); border: 1px solid var(--line); border-left: 4px solid var(--gold, #e6be55); border-radius: var(--radius); padding: 12px 16px; margin: 0 0 12px; }
+.shits h3 { margin: 0 0 2px; font-size: 17px; } .shits ul { list-style: none; margin: 8px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 8px 16px; }
+.shits li { padding-left: 16px; position: relative; font-size: 14px; } .shits li i { position: absolute; left: 0; top: 6px; width: 9px; height: 9px; border-radius: 3px; }
+.shits li .sub { font-size: 12.5px; }
 .boxes { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 12px; }
 .box { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 16px 16px; border-top: 4px solid var(--c); }
 .box h3 { margin: 0; font-size: 16px; }
@@ -545,6 +549,15 @@ __THEME__
     }).join("");
   }
 
+  // Special hits (Daniel, Nov 27): dual autographs and other multi-player cards by set name, from the official checklists
+  function specialHits(s) {
+    var h = (D.hits || {})[s.id]; if (!h || !h.length) return "";
+    var bk = {}; D.boxes.forEach(function (b) { bk[b.k] = b; });
+    return '<div class="shits"><h3>Special hits in this spot</h3><p class="sub">Multi-player cards from the official checklists' + (h.some(function (x) { return x[4]; }) ? ". When the players are in different spots, who gets the card comes down to the breaker's rules" : "") + '.</p><ul>' +
+      h.map(function (x) { var b = bk[x[0]] || { c: "#888", short: x[0] };
+        return '<li><i style="background:' + b.c + '"></i><b>' + esc(x[1]) + '</b>' + (x[2] === "auto" ? ' <span class="tag">auto</span>' : "") + ' <span class="sub">' + esc(b.short) + '</span><div>' + esc(x[3]) + (x[4] ? ' <span class="sub">(also ' + esc(x[4]) + ")</span>" : "") + "</div></li>"; }).join("") + "</ul></div>";
+  }
+
   function drawSpot(id) {
     var s = SP[id]; if (!s) { location.hash = "#/spots"; return; }
     var prev = D.spots[(s.i + D.spots.length - 1) % D.spots.length], next = D.spots[(s.i + 1) % D.spots.length], mine = store.has(s.id);
@@ -553,7 +566,7 @@ __THEME__
       '<div class="spothead"><div class="big display"' + big + ">" + esc(s.label) + '</div><div class="meta"><div class="row" style="display:flex;gap:6px;margin-bottom:6px;align-items:center">' + badges(s) + "</div><b>" + count(s) + " names</b> across " + boxesWith(s) + " of " + D.boxes.length + " boxes" + (s.nil ? "<br>Plus college (NIL) cards starting with " + esc(s.nil) : "") + "</div>" +
       '<div class="acts"><a class="btn" href="' + href(prev.id) + '">&lsaquo; ' + esc(full(prev)) + '</a><a class="btn" href="' + href(next.id) + '">' + esc(full(next)) + ' &rsaquo;</a><button class="btn' + (mine ? "" : " gold") + '" id="pin">' + (mine ? "Remove from my spots" : "Add to my spots") + '</button><button class="btn" id="topulls">My pulls (' + got.all().length + ")</button></div></div>" +
       '<p class="sub" style="margin:-4px 0 10px">Tap a name to check it off when you pull it.' + (D.wiki ? " The W next to a name opens that player's Wikipedia page. A faded W means we didn't find an exact page, so it opens a Wikipedia search instead." : "") + "</p>" +
-      legend(s) +
+      legend(s) + specialHits(s) +
       '<div class="boxes">' + D.boxes.map(function (b) {
         var a = list(s, b.k);
         return '<div class="box" style="--c:' + b.c + '"><h3>' + esc(b.full) + '</h3><div class="kind">' + esc(b.kind) + (a.length ? " · " + a.length : "") + "</div>" +

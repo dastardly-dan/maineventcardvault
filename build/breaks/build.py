@@ -300,6 +300,39 @@ for _ids, _h in ((('cc872', 'gb1037', 'gb1038a', 'gb1038b', 'gb1041', 'gb1043', 
                   (('gb1045',), _NFL + _NBA), (('rgl6148',), [['footballer', 'footballer']]), (('gb1040',), _NFL + _UFC + _NBA + _MLB + _WWE), (('rgl6141',), _NFL + _MLB + _NBA)):
     for _i in _ids: WIKI_BY_ID[_i] = _h
 
+# Special hits (Daniel, Nov 27, 2026): every multi-player card (dual autographs and the like) by its set name, listed under the
+# spots its players land in. hits.json comes from hits.py (official Topps and Panini checklists). A card whose players are in
+# different spots is listed under each, with where the other players are.
+_HP = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'hits.json')
+HITS = json.load(open(_HP, encoding='utf-8')) if os.path.exists(_HP) else {}
+def _hk(n): return re.sub(r'[^a-z0-9]', '', fold(re.sub(r'"[^"]*"', '', n)).lower())
+def special_hits(cfg, names):
+    lib = BOX_LIB.get(cfg['id'], {})
+    label = {sp['id']: sp['label'] for sp in cfg['spots']}
+    out = {}
+    for box in cfg['boxes']:
+        pid = lib.get(box['k'])
+        if not pid:   # some boxes aren't tagged with their checklist; match by name like the owner dashboard does
+            import owner as _ow
+            global _OWLIB
+            try: _OWLIB
+            except NameError: _OWLIB = _ow.library()
+            pid = _ow.match_box(box['full'], _OWLIB)
+        cards = HITS.get(pid or '', [])
+        if not cards: continue
+        where = {}
+        for sid, bx in names.items():
+            for e in bx.get(box['k'], []): where.setdefault(_hk(e[0]), []).append(sid)
+        for setname, kind, ps in cards:
+            spots = [(p[0], where.get(_hk(p[0]), [])) for p in ps]
+            hit = {sid for _, ss in spots for sid in ss}
+            if not hit: continue
+            for sid in hit:
+                others = sorted({'%s (%s)' % (n, label[o]) for n, ss in spots for o in ss if o != sid and sid not in ss})
+                out.setdefault(sid, []).append([box['k'], setname, kind, ' / '.join(p[0] for p in ps), ', '.join(others)])
+    for sid in out: out[sid].sort(key=lambda h: (h[2] != 'auto', h[0], h[1], h[3]))
+    return out
+
 def write(cfg, names, unmatched):
     data = dict(cfg)
     if cfg['id'] in WIKI_BY_ID: data['wiki'] = WIKI_BY_ID[cfg['id']]
@@ -318,6 +351,8 @@ def write(cfg, names, unmatched):
     if cfg.get('ended'): data['spots'] = [{k: v for k, v in s.items() if k != 'status'} for s in cfg['spots']]
     data['names'] = names
     data['unmatched'] = unmatched
+    sh = special_hits(cfg, names)
+    if sh: data['hits'] = sh
     th = breaker_of(cfg['id'])
     html = TPL.replace('__THEME__', theme_css(th)).replace('__THEMECOLOR__', THEMES[th]['hdr'] if th else '#081524').replace('__ICON__', ICON).replace('__TITLE__', cfg['title']).replace(
         '__DATA__', json.dumps(data, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/'))
