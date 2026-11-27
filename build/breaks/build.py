@@ -247,6 +247,8 @@ def sealed_query(full):
 STREAMS = {
     'Ck782vibiC0': dict(title='RGL Pre-Thanksgiving Marathon Stream (RGL #6128 to #6143)',
                         pages=['rgl6128', 'rgl612xwwe2'] + ['rgl%d' % n for n in range(6129, 6144)]),
+    'kVX-OdgG5f8': dict(title='Acme Packs Friday Break Night (GB1041 to GB1045)',   # Daniel sent the link, Nov 27, 2026
+                        pages=['gb1041', 'gb1042', 'gb1043', 'gb1044', 'gb1045']),
 }
 VIDEO_OF = {pid: (vid, v['title']) for vid, v in STREAMS.items() for pid in v['pages']}
 # Run Good Life also posts one video per break on its second channel, @rungoodbreaks (Daniel, Nov 26, 2026). A page listed in
