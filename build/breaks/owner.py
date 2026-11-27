@@ -406,20 +406,48 @@ def main():
     if hl: ov.insert(1, '<div class="picks">%s</div>' % ''.join(hl))
     secs.append(('overview', 'Overview', ''.join(ov)))
 
-    hp = ['<h2>Hit potential</h2><p class="lede">Which breaks give you the best shot at a big hit for what it costs to get in. Each break\'s biggest chase names are its '
-          'autographs weighted by star power (the player\'s typical eBay asking price in any product we\'ve looked up). The chance is for one spot to hold at least one '
-          'of those 10 names; for pick-your-spot breaks it\'s the best spot that holds one. <b>Cost per shot</b> is the price to get in divided by that chance: a $100 spot with a 50% chance costs $200 per shot. '
-          '<b>Adjusted</b> divides that by the spot\'s value for the price, so overpriced spots slide down and fairly priced ones move up. Lowest adjusted cost is ranked first.</p>',
-          '<table><thead><tr><th>#</th><th>Break</th><th class="n">Entry</th><th class="n">Chance at a top chase</th><th class="n">Cost per shot</th><th class="n">Value for the price</th><th class="n">Adjusted</th><th>Biggest chase names</th></tr></thead><tbody>']
-    for rk, a in enumerate(sorted(breaks, key=lambda a: (a['adj'] is None, a['adj'] or 0)), 1):
-        tc = ', '.join('%s%s' % (esc(nm), (' <span class="sm">(%s)</span>' % money(st)) if st else '') for nm, st in a['top_chase'][:3])
-        hp.append('<tr><td>%d</td><td><a href="#/b/%s"><b>%s</b></a><div class="sm">%s · %s%s</div></td><td class="n">%s%s</td><td class="n">%s</td><td class="n">%s</td><td class="n">%s</td><td class="n"><b>%s</b></td><td>%s</td></tr>' % (
-            rk, a['id'], esc(a['title']), esc(a['breaker']), esc(a['when']), '' if a['star_cover'] >= 0.3 else ' · <span class="warn">few star prices yet</span>',
-            money(a['entry']) or '', ('<div class="sm">%s%s</div>' % (esc(a['up_spot']['label']), ' <span class="warn">sold</span>' if a['up_spot']['status'] == 'sold' else '')) if a['up_spot'] else '',
-            ('%d%%' % round(a['chance'] * 100)) if a['chance'] else '<span class="na">n/a</span>',
-            money(a['per_shot']), ('%.2fx' % a['up_value']) if a['up_value'] else '<span class="na">needs box cost</span>',
-            money(a['adj']), tc))
-    hp.append('</tbody></table><p class="sm">Star power comes from eBay asking prices, so it sharpens as the daily lookup fills in. A break marked "few star prices yet" is ranked mostly by checklist depth.</p>')
+    lede = ('Which breaks give you the best shot at a big hit for what it costs to get in, one ranking per breaker. Each break\'s biggest chase names are its '
+            'autographs weighted by star power (the player\'s typical eBay asking price in any product we\'ve looked up). The chance is for one spot to hold at least one '
+            'of those 10 names; for pick-your-spot breaks it\'s the best spot that holds one. <b>Cost per shot</b> is the price to get in divided by that chance: a $100 spot with a 50% chance costs $200 per shot. '
+            '<b>Adjusted</b> divides that by the spot\'s value for the price, so overpriced spots slide down and fairly priced ones move up. Lowest adjusted cost is ranked first.')
+    head = ('<table><thead><tr><th>#</th><th>Break</th><th class="n">Entry</th><th class="n">Chance at a top chase</th><th class="n">Cost per shot</th>'
+            '<th class="n">Value for the price</th><th class="n">Adjusted</th><th>Biggest chase names</th></tr></thead><tbody>')
+
+    def hit_rows(group, show_breaker):
+        out = []
+        for rk, a in enumerate(sorted(group, key=lambda a: (a['adj'] is None, a['adj'] or 0)), 1):
+            tc = ', '.join('%s%s' % (esc(nm), (' <span class="sm">(%s)</span>' % money(st)) if st else '') for nm, st in a['top_chase'][:3])
+            out.append('<tr><td>%d</td><td><a href="#/b/%s"><b>%s</b></a><div class="sm">%s%s%s</div></td><td class="n">%s%s</td><td class="n">%s</td><td class="n">%s</td><td class="n">%s</td><td class="n"><b>%s</b></td><td>%s</td></tr>' % (
+                rk, a['id'], esc(a['title']), (esc(a['breaker']) + ' · ') if show_breaker else '', esc(a['when']), '' if a['star_cover'] >= 0.3 else ' · <span class="warn">few star prices yet</span>',
+                money(a['entry']) or '', ('<div class="sm">%s%s</div>' % (esc(a['up_spot']['label']), ' <span class="warn">sold</span>' if a['up_spot']['status'] == 'sold' else '')) if a['up_spot'] else '',
+                ('%d%%' % round(a['chance'] * 100)) if a['chance'] else '<span class="na">n/a</span>',
+                money(a['per_shot']), ('%.2fx' % a['up_value']) if a['up_value'] else '<span class="na">needs box cost</span>',
+                money(a['adj']), tc))
+        return ''.join(out)
+
+    def best_line(group):
+        bits = []
+        rnd = sorted([a for a in group if not a['pick'] and a['adj']], key=lambda a: a['adj'])
+        if rnd:
+            r = rnd[0]
+            bits.append('Best random break: <a href="#/b/%s"><b>%s</b></a>, %s a spot, %d%% chance at a top chase name, %s value for the price.' % (
+                r['id'], esc(r['title']), money(r['entry']), round(r['chance'] * 100), ('%.2fx' % r['up_value']) if r['up_value'] else 'no'))
+        opens = sorted([(a, sp) for a in group if a['pick'] for sp in a['best_spots'] if sp['status'] != 'sold'], key=lambda x: (x[1]['value'] is None, -x[1]['score']))
+        if opens:
+            r, sp = opens[0]
+            bits.append('Best open pick spot: <b>%s</b> in <a href="#/b/%s">%s</a> for %s (%.2fx hits for the price, %s value)%s.' % (
+                esc(sp['label']), r['id'], esc(r['title']), money(sp['price']), sp['hit_deal'],
+                ('%.2fx' % sp['value']) if sp['value'] else 'not yet scored for', (', holds ' + esc(', '.join(sp['big'][:2]))) if sp['big'] else ''))
+        return ('<div class="picks"><div>%s</div></div>' % '<br>'.join(bits)) if bits else ''
+
+    groups = [(nm, [a for a in breaks if a['breaker'] == nm]) for nm in BREAKER.values()]
+    groups = [(nm, g) for nm, g in groups if g]
+    hp = ['<h2>Hit potential</h2><p class="lede">%s</p><p>%s</p>' % (lede, ' · '.join(
+        '<a href="#/hits/%s">%s (%d)</a>' % (re.sub(r'[^a-z]', '', nm.lower()), esc(nm), len(g)) for nm, g in groups))]
+    for nm, g in groups:
+        hp.append('<h3 id="h-%s">%s</h3>%s%s%s</tbody></table>' % (re.sub(r'[^a-z]', '', nm.lower()), esc(nm), best_line(g), head, hit_rows(g, False)))
+    hp.append('<h3>All breakers together</h3>%s%s</tbody></table>' % (head, hit_rows(breaks, True)))
+    hp.append('<p class="sm">Star power comes from eBay asking prices, so it sharpens as the daily lookup fills in. A break marked "few star prices yet" is ranked mostly by checklist depth.</p>')
     secs.append(('hits', 'Hit potential', ''.join(hp)))
 
     bl = ['<h2>Current breaks</h2><p class="lede">Open one to see every spot, what it\'s worth for the price, and what data is missing.</p><div class="list">']
@@ -545,7 +573,8 @@ th{text-align:left;font-size:12px;color:var(--ink3);font-weight:600;padding:8px 
 (function(){var S=[].slice.call(document.querySelectorAll("main section")),N=[].slice.call(document.querySelectorAll("header nav a")),q=document.getElementById("q"),om=document.querySelector(".om");
 function show(v){S.forEach(function(s){s.hidden=s.getAttribute("data-v")!==v});var top=v.indexOf("b/")===0?"breaks":v;N.forEach(function(a){a.classList.toggle("on",a.getAttribute("data-v")===top)});if(om)om.open=false;window.scrollTo(0,0)}
 function route(){var v=(location.hash.replace(/^#\\/?/,"")||"overview");if(v.indexOf("search/")===0){q.value=decodeURIComponent(v.slice(7));search(q.value);v="search"}
-if(!S.some(function(s){return s.getAttribute("data-v")===v}))v="overview";show(v)}
+var jump=null;if(v.indexOf("hits/")===0){jump="h-"+v.slice(5);v="hits"}
+if(!S.some(function(s){return s.getAttribute("data-v")===v}))v="overview";show(v);if(jump){var j=document.getElementById(jump);if(j)j.scrollIntoView()}}
 function search(t){t=t.trim().toLowerCase();var out=[];if(t)S.forEach(function(s){var v=s.getAttribute("data-v");if(v==="search"||v==="overview")return;var h=s.querySelector("h2");
 [].forEach.call(s.querySelectorAll("tbody tr, li"),function(tr){if(tr.textContent.toLowerCase().indexOf(t)>-1)out.push('<tr><td><a href="#/'+v+'">'+(h?h.textContent:v)+"</a></td><td>"+tr.innerHTML+"</td></tr>")})});
 document.getElementById("res").innerHTML=t?(out.length?"<table><tbody>"+out.slice(0,200).join("")+"</tbody></table>":'<p class="na">Nothing matches.</p>'):""}

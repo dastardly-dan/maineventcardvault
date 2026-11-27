@@ -251,7 +251,8 @@ team spot, box by box. Linked from the storefront's Breaks menu; every page carr
       (autograph points x star power, where star power is the player's highest typical eBay asking price in any product looked up),
       the chance one spot holds one (random: share of spots holding one, adjusted when spots are grouped live; pick: the best spot
       that holds one), cost per shot (entry / chance) and adjusted cost (cost per shot / value for the price, capped at 1.5x).
-      Shown in the dashboard's "Hit potential" section, three "right now" picks at the top of the Overview, and on each pick break
+      Shown in the dashboard's "Hit potential" section (one ranking per breaker, each with its best random break and best open
+      pick spot, then all breakers together; #/hits/acmepacks etc. jump to a breaker), three "right now" picks at the top of the Overview, and on each pick break
       a "Best spots to buy into" list (every spot, sold or open, ranked by hits for the price and value for the price together).
       Rebuilds whenever hub.py runs, so it follows the daily eBay prices and the weekly box prices.
   3p2. Box prices (Daniel, Nov 27, 2026: "find the lowest possible cost ... update those box prices every week"):
