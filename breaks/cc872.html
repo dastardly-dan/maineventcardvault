@@ -66,13 +66,17 @@ body.compact .heroimg { display: none; }
 /* pop-out player: fixed in the bottom corner once the stream scrolls off the top (left of the chat panel when it's open) */
 .popbar { display: none; }
 body.vidpop .herovid .frame { position: fixed; right: 16px; bottom: 16px; width: 380px; max-height: none; z-index: 70; border-radius: 12px; box-shadow: 0 14px 40px rgba(0,0,0,.45); border: 1px solid rgba(255,255,255,.18); }
-body.vidpop.popbig .herovid .frame { width: min(600px, 46vw); }
 body.vidpop.chatopen .herovid .frame { right: 376px; }
 body.vidpop .popbar { display: flex; gap: 4px; position: absolute; top: 6px; right: 6px; z-index: 2; opacity: .2; transition: opacity .15s; }
 body.vidpop .herovid .frame:hover .popbar, body.vidpop .popbar:focus-within { opacity: 1; }
+.popgrip { display: none; }
+body.vidpop .popgrip { display: block; position: absolute; top: 0; left: 0; width: 26px; height: 26px; z-index: 3; cursor: nwse-resize; touch-action: none;
+  background: linear-gradient(135deg, rgba(255,255,255,.95) 0 3px, transparent 3px 7px, rgba(255,255,255,.95) 7px 10px, transparent 10px) top left / 14px 14px no-repeat, rgba(0,0,0,.55); border-bottom-right-radius: 10px; }
+body.popdrag .herovid iframe { pointer-events: none; }
+body.popdrag { user-select: none; cursor: nwse-resize; }
 .popbar button { font: inherit; font-size: 12px; font-weight: 600; padding: 4px 9px; border-radius: 999px; border: 0; background: rgba(0,0,0,.75); color: #fff; cursor: pointer; }
 @media (hover: none) { body.vidpop .popbar { opacity: 1; } }
-@media (max-width: 900px) { body.vidpop .herovid .frame { width: 62vw; right: 10px; bottom: 10px; } body.vidpop.popbig .herovid .frame { width: calc(100vw - 20px); } body.vidpop.chatopen .herovid .frame { right: 10px; bottom: calc(40vh + 24px); } }
+@media (max-width: 900px) { body.vidpop .herovid .frame { width: 62vw; right: 10px; bottom: 10px; } body.vidpop.chatopen .herovid .frame { right: 10px; bottom: calc(40vh + 24px); } }
 .herovid .frame { position: relative; aspect-ratio: 16 / 9; border-radius: 12px; overflow: hidden; border: 1px solid var(--line); background: #000; }
 .herovid .frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 .herovid .vlab { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: 8px; font-size: 13px; }
@@ -450,12 +454,23 @@ mark { background: #fff1a8; }
     hv.hidden = false; document.getElementById("hero").classList.add("hasimg", "hasvid"); document.body.classList.add("hasstream");
     // pop-out player (Daniel, Nov 27): scroll past the stream and it floats in a corner, so you can watch while you look through
     // your spot. The same player moves (it isn't reloaded), and it goes back in place when you scroll up.
-    var fr = hv.querySelector(".frame"), pop = document.createElement("div"), popClosed = false, popBig = false;
-    try { popBig = localStorage.getItem("mecv-pop-big") === "1"; } catch (e) {}
-    document.body.classList.toggle("popbig", popBig);
+    var fr = hv.querySelector(".frame"), pop = document.createElement("div"), grip = document.createElement("span"), popClosed = false, popW = 0;
+    try { popW = parseInt(localStorage.getItem("mecv-pop-w"), 10) || 0; } catch (e) {}
     pop.className = "popbar";
-    pop.innerHTML = '<button type="button" data-a="up">Back to video</button><button type="button" data-a="size">' + (popBig ? "Smaller" : "Bigger") + '</button><button type="button" data-a="x" aria-label="Close the small player">&times;</button>';
-    fr.appendChild(pop);
+    pop.innerHTML = '<button type="button" data-a="up">Back to video</button><button type="button" data-a="less" aria-label="Make the player smaller">Smaller</button><button type="button" data-a="more" aria-label="Make the player bigger">Bigger</button><button type="button" data-a="x" aria-label="Close the small player">&times;</button>';
+    grip.className = "popgrip"; grip.title = "Drag to resize"; grip.setAttribute("aria-hidden", "true");
+    fr.appendChild(pop); fr.appendChild(grip);
+    // the player's width: anything from 220 pixels up to what fits the window (it keeps the video's shape)
+    var popMax = function () { return Math.max(220, Math.min(window.innerWidth - (document.body.classList.contains("chatopen") && window.innerWidth > 900 ? 392 : 20), (window.innerHeight - 30) * 16 / 9)); };
+    var popSize = function () { fr.style.width = document.body.classList.contains("vidpop") && popW ? Math.round(Math.min(Math.max(popW, 220), popMax())) + "px" : ""; };
+    var popSave = function () { try { popW ? localStorage.setItem("mecv-pop-w", String(Math.round(popW))) : localStorage.removeItem("mecv-pop-w"); } catch (e) {} };
+    grip.addEventListener("pointerdown", function (ev) {
+      ev.preventDefault(); grip.setPointerCapture(ev.pointerId); document.body.classList.add("popdrag");
+      var x0 = ev.clientX, y0 = ev.clientY, w0 = fr.getBoundingClientRect().width;
+      var mv = function (e) { var d = Math.max(x0 - e.clientX, (y0 - e.clientY) * 16 / 9); popW = Math.min(Math.max(w0 + d, 220), popMax()); popSize(); };
+      var up = function () { grip.removeEventListener("pointermove", mv); grip.removeEventListener("pointerup", up); grip.removeEventListener("pointercancel", up); document.body.classList.remove("popdrag"); popSave(); };
+      grip.addEventListener("pointermove", mv); grip.addEventListener("pointerup", up); grip.addEventListener("pointercancel", up);
+    });
     var popCheck = function () {
       var r = hv.getBoundingClientRect(), gone = r.bottom < 70;
       if (!gone) popClosed = false;
@@ -464,11 +479,12 @@ mark { background: #fff1a8; }
       if (on && !document.body.classList.contains("vidpop")) hv.style.minHeight = hv.offsetHeight + "px";
       if (!on) hv.style.minHeight = "";
       document.body.classList.toggle("vidpop", on);
+      popSize();
     };
     pop.onclick = function (ev) {
       var a = ev.target.getAttribute && ev.target.getAttribute("data-a"); if (!a) return;
       if (a === "up") window.scrollTo({ top: Math.max(0, hv.getBoundingClientRect().top + window.scrollY - 80), behavior: "smooth" });
-      if (a === "size") { popBig = !popBig; document.body.classList.toggle("popbig", popBig); ev.target.textContent = popBig ? "Smaller" : "Bigger"; try { popBig ? localStorage.setItem("mecv-pop-big", "1") : localStorage.removeItem("mecv-pop-big"); } catch (e) {} }
+      if (a === "more" || a === "less") { var w = fr.getBoundingClientRect().width; popW = Math.min(Math.max(a === "more" ? w * 1.35 : w / 1.35, 220), popMax()); popSize(); popSave(); }
       if (a === "x") { popClosed = true; popCheck(); }
     };
     window.addEventListener("scroll", popCheck, { passive: true }); window.addEventListener("resize", popCheck);
