@@ -437,21 +437,29 @@ def main():
     lede = ('Which breaks give you the best shot at a big hit for what it costs to get in, one ranking per breaker. Each break\'s biggest chase names are its '
             'autographs weighted by star power (the player\'s typical eBay asking price in any product we\'ve looked up). The chance is for one spot to hold at least one '
             'of those 10 names; for pick-your-spot breaks it\'s the best spot that holds one. <b>Cost per shot</b> is the price to get in divided by that chance: a $100 spot with a 50% chance costs $200 per shot. '
-            '<b>Adjusted</b> divides that by the spot\'s value for the price, so overpriced spots slide down and fairly priced ones move up. Lowest adjusted cost is ranked first.')
+            '<b>Adjusted</b> divides that by the spot\'s value for the price, so overpriced spots slide down and fairly priced ones move up. Lowest adjusted cost is ranked first. Switch to <b>Best odds</b> to rank by the chance alone.')
     head = ('<table><thead><tr><th>#</th><th>Break</th><th class="n">Entry</th><th class="n">Chance at a top chase</th><th class="n">Cost per shot</th>'
             '<th class="n">Value for the price</th><th class="n">Adjusted</th><th>Biggest chase names</th></tr></thead><tbody>')
 
-    def hit_rows(group, show_breaker):
+    def odds_key(a):   # best odds first; ties go to the cheaper shot
+        return (a['chance'] is None, -(a['chance'] or 0), a['per_shot'] or 1e9)
+
+    def hit_rows(group, show_breaker, by='money'):
         out = []
-        for rk, a in enumerate(sorted(group, key=lambda a: (a['adj'] is None, a['adj'] or 0)), 1):
+        order = sorted(group, key=odds_key) if by == 'odds' else sorted(group, key=lambda a: (a['adj'] is None, a['adj'] or 0))
+        for rk, a in enumerate(order, 1):
             tc = ', '.join('%s%s' % (esc(nm), (' <span class="sm">(%s)</span>' % money(st)) if st else '') for nm, st in a['top_chase'][:3])
-            out.append('<tr><td>%d</td><td><a href="#/b/%s"><b>%s</b></a><div class="sm">%s%s%s</div></td><td class="n">%s%s</td><td class="n">%s</td><td class="n">%s</td><td class="n">%s</td><td class="n"><b>%s</b></td><td>%s</td></tr>' % (
+            out.append('<tr><td>%d</td><td><a href="#/b/%s"><b>%s</b></a><div class="sm">%s%s%s</div></td><td class="n">%s%s</td><td class="n">%s</td><td class="n">%s</td><td class="n">%s</td><td class="n">%s</td><td>%s</td></tr>' % (
                 rk, a['id'], esc(a['title']), (esc(a['breaker']) + ' · ') if show_breaker else '', esc(a['when']), '' if a['star_cover'] >= 0.3 else ' · <span class="warn">few star prices yet</span>',
                 money(a['entry']) or '', ('<div class="sm">%s%s</div>' % (esc(a['up_spot']['label']), ' <span class="warn">sold</span>' if a['up_spot']['status'] == 'sold' else '')) if a['up_spot'] else '',
-                ('%d%%' % round(a['chance'] * 100)) if a['chance'] else '<span class="na">n/a</span>',
+                (('<b>%d%%</b>' if by == 'odds' else '%d%%') % round(a['chance'] * 100)) if a['chance'] else '<span class="na">n/a</span>',
                 money(a['per_shot']), ('%.2fx' % a['up_value']) if a['up_value'] else '<span class="na">needs box cost</span>',
-                money(a['adj']), tc))
+                money(a['adj']) if by == 'odds' else '<b>%s</b>' % money(a['adj']), tc))
         return ''.join(out)
+
+    def hit_tables(group, show_breaker):
+        return ('<div class="t-money">%s%s</tbody></table></div><div class="t-odds">%s%s</tbody></table></div>' % (
+            head, hit_rows(group, show_breaker, 'money'), head, hit_rows(group, show_breaker, 'odds')))
 
     def best_line(group):
         bits = []
@@ -460,6 +468,12 @@ def main():
             r = rnd[0]
             bits.append('Best random break: <a href="#/b/%s"><b>%s</b></a>, %s a spot, %d%% chance at a top chase name, %s value for the price.' % (
                 r['id'], esc(r['title']), money(r['entry']), round(r['chance'] * 100), ('%.2fx' % r['up_value']) if r['up_value'] else 'no'))
+        od = sorted([a for a in group if a['chance'] and not a['pick']], key=odds_key)
+        if od and (not rnd or od[0] is not rnd[0]):
+            r = od[0]
+            bits.append('Best odds at a big name: <a href="#/b/%s"><b>%s</b></a>, %d%% chance for %s a spot (%s per shot)%s.' % (
+                r['id'], esc(r['title']), round(r['chance'] * 100), money(r['entry']), money(r['per_shot']),
+                (', but only %.2fx value for the price' % r['up_value']) if r['up_value'] and r['up_value'] < 0.9 else ''))
         opens = sorted([(a, sp) for a in group if a['pick'] for sp in a['best_spots'] if sp['status'] != 'sold'], key=lambda x: (x[1]['value'] is None, -x[1]['score']))
         if opens:
             r, sp = opens[0]
@@ -474,7 +488,9 @@ def main():
         if len(ranked_g) > 2:
             w = ranked_g[-1]
             hi = max(ranked_g, key=lambda a: a['chance'] or 0)
-            if w is hi and w['up_value'] and w['up_value'] < 0.9:
+            if od and w is od[0] and w['up_value']:
+                bits.append('Last for the money: %s, because of the price (%.2fx value), even with the best odds.' % (lnk(w), w['up_value']))
+            elif w is hi and w['up_value'] and w['up_value'] < 0.9:
                 bits.append('Last: %s has the best odds at a big name here (%d%%), but at %s a spot it\'s overpriced (%.2fx value).' % (lnk(w), round(w['chance'] * 100), money(w['entry']), w['up_value']))
             else:
                 bits.append('Last: %s, %s.' % (lnk(w), 'mostly on price (%.2fx value)' % w['up_value'] if w['up_value'] and w['up_value'] < 0.75 else 'with the lowest odds at a top chase name for its price'))
@@ -495,9 +511,11 @@ def main():
     groups = [(nm, g) for nm, g in groups if g]
     hp = ['<h2>Hit potential</h2><p class="lede">%s</p><p>%s</p>' % (lede, ' · '.join(
         '<a href="#/hits/%s">%s (%d)</a>' % (re.sub(r'[^a-z]', '', nm.lower()), esc(nm), len(g)) for nm, g in groups))]
+    hp.append('<div class="hsort"><span>Rank by</span><button type="button" data-s="money">Best for the money</button><button type="button" data-s="odds">Best odds</button>'
+              '<span class="sm t-money">Lowest adjusted cost first.</span><span class="sm t-odds">Highest chance at a top chase name first, whatever the price. Pick-your-spot breaks show 100% when you can buy a spot that holds one.</span></div>')
     for nm, g in groups:
-        hp.append('<h3 id="h-%s">%s</h3>%s%s%s</tbody></table>' % (re.sub(r'[^a-z]', '', nm.lower()), esc(nm), best_line(g), head, hit_rows(g, False)))
-    hp.append('<h3>All breakers together</h3>%s%s</tbody></table>' % (head, hit_rows(breaks, True)))
+        hp.append('<h3 id="h-%s">%s</h3>%s%s' % (re.sub(r'[^a-z]', '', nm.lower()), esc(nm), best_line(g), hit_tables(g, False)))
+    hp.append('<h3>All breakers together</h3>%s' % hit_tables(breaks, True))
     hp.append('<p class="sm">Star power comes from eBay asking prices, so it sharpens as the daily lookup fills in. A break marked "few star prices yet" is ranked mostly by checklist depth.</p>')
     secs.append(('hits', 'Hit potential', ''.join(hp)))
 
@@ -619,6 +637,9 @@ th{text-align:left;font-size:12px;color:var(--ink3);font-weight:600;padding:8px 
 .conf{font-size:12px;font-weight:700;border-radius:999px;padding:1px 8px;white-space:nowrap}.conf.high{background:#e3f3e9;color:var(--up)}.conf.medium{background:#f7efd9;color:#8a6a14}.conf.low{background:#f6e3de;color:var(--dn)}
 .picks{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px;margin:6px 0 18px}.picks>div{background:var(--panel);border:1px solid var(--line);border-left:4px solid #3ccf9a;border-radius:10px;padding:10px 12px}.takeaways{grid-template-columns:1fr}.takeaways ul{margin:4px 0 0;padding-left:18px}.takeaways li{margin:3px 0}
 .stars{color:#d4a72c;font-size:16px;letter-spacing:1px;white-space:nowrap}.stars .off{color:#c9ced8;opacity:.5}
+.hsort{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;margin:4px 0 6px;position:sticky;top:52px;z-index:3;background:var(--bg);padding:6px 0}.hsort>span:first-child{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--ink3)}
+.hsort button{font:inherit;font-size:14px;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:999px;padding:4px 12px;cursor:pointer}.hsort button.on{background:#14202e;color:#fff;border-color:#14202e}
+body:not(.hodds) .t-odds,body.hodds .t-money{display:none}
 .picks span{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.04em;opacity:.7;margin-bottom:4px}
 .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin:8px 0 18px}.stats div{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
 .stats b{display:block;font-size:22px}.stats span{color:var(--ink3);font-size:13px}
@@ -639,6 +660,8 @@ function search(t){t=t.trim().toLowerCase();var out=[];if(t)S.forEach(function(s
 document.getElementById("res").innerHTML=t?(out.length?"<table><tbody>"+out.slice(0,200).join("")+"</tbody></table>":'<p class="na">Nothing matches.</p>'):""}
 var tm;q.addEventListener("input",function(){clearTimeout(tm);tm=setTimeout(function(){var v=q.value.trim();history.replaceState(null,"",v?"#/search/"+encodeURIComponent(v):"#/overview");route()},150)});
 document.addEventListener("click",function(e){if(om&&om.open&&!om.contains(e.target))om.open=false});
+var HS=[].slice.call(document.querySelectorAll(".hsort button"));function hsort(m){document.body.classList.toggle("hodds",m==="odds");HS.forEach(function(b){b.classList.toggle("on",b.getAttribute("data-s")===m)})}
+var hm="money";try{hm=localStorage.getItem("mecv-hsort")||"money"}catch(e){}hsort(hm);HS.forEach(function(b){b.addEventListener("click",function(){var m=b.getAttribute("data-s");hsort(m);try{localStorage.setItem("mecv-hsort",m)}catch(e){}})});
 window.addEventListener("hashchange",route);route()})();
 </script></body></html>'''
     page = page.replace('__NAV__', nav).replace('__BODY__', body).replace('__BUILT__', built).replace('__OWNER__', owner_menu)
