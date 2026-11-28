@@ -47,6 +47,12 @@ def thumb(i):
     return f'<div class="thumb"><img src="{esc(src)}" alt="{esc(i["title"])} title card" loading="lazy" onerror="this.parentNode.remove()"></div>' if src else ''
 def card(i): return f'''<a class="tile" href="/breaks/{i['id']}" style="border-left:4px solid {edge(i)}">{thumb(i)}<div class="kicker" style="font-size:11px">{esc(i['kicker'])}</div><div class="lab display" style="font-size:26px;margin-top:6px">{esc(i['title'])}</div><div class="cnt" style="margin-top:8px">{esc(i['when'])}</div><div class="peek">{esc(' · '.join(i['facts']))}</div></a>'''
 up = ''.join(card(i) for i in items if not is_past(i)); past = ''.join(card(i) for i in items if is_past(i))
+PAST_BANNER = ('<a class="pastban" href="/breaks/past"><span class="pb-k">Past breaks</span><span>Looking for a break that already ran? Every past guide is still up, '
+               'with who was in each spot. <b>View past breaks</b></span></a>')
+PB_CSS = ('.pastban { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; margin: 0 0 18px; padding: 11px 16px; border-radius: 12px; '
+          'border: 1px solid var(--gold); border-left-width: 5px; background: var(--panel); color: var(--ink); text-decoration: none; font-size: 15px; } '
+          '.pastban:hover { background: var(--panel-2, var(--panel)); } .pastban b { color: var(--gold); white-space: nowrap; } '
+          '.pastban .pb-k { font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--gold); font-weight: 700; }')
 cards = up or '<a class="tile" href="/breaks/past" style="display:block;border-color:var(--gold)"><div class="kicker" style="font-size:11px">No breaks posted right now</div><div class="lab display" style="font-size:26px;margin-top:6px">Past breaks</div><div class="peek" style="margin-top:6px">Every break that already ran is on the Past breaks page, with its full guide. New guides show up here as soon as the breakers post them.</div></a>'  # past breaks stay online but aren't listed
 html = f'''<!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex">
@@ -58,11 +64,12 @@ html = f'''<!DOCTYPE html>
 .tile .thumb {{ margin: -4px -4px 12px; border-radius: 10px; overflow: hidden; line-height: 0; }}
 .tile .thumb img {{ width: 100%; height: auto; display: block; }}
 /*BMENU-CSS*//*/BMENU-CSS*/
-{IN_CSS}</style></head><body>
+{IN_CSS}
+{PB_CSS}</style></head><body>
 <header class="site"><div class="wrap"><div class="bar"><a class="brand" href="/"><img src="{icon}" alt=""><div><b class="display">Main Event Card Vault</b><span>Break guides</span></div></a><!--BMENU--><!--/BMENU--></div></div></header>
 <div class="wrap hero"><div class="kicker">Spot guides</div><h1 class="display">Break guides</h1>
 <p class="lede">Who you could pull in each spot, box by box, built from the published checklists. Pick-your-letter breaks show which spots are still open and what they cost.</p></div>
-<main class="wrap"><div class="grid">{cards}</div>{"" if not up else '<p class="sub" style="margin-top:22px">Looking for a break that already ran? Its guide is still up on <a href="/breaks/past">Past breaks</a>.</p>'}<a class="tile" href="/breaks/builder" style="display:block;margin:22px 0 32px;border-color:var(--gold)"><div class="kicker" style="font-size:11px">Breaker tool</div><div class="lab display" style="font-size:26px;margin-top:6px">Spot builder</div><div class="peek" style="margin-top:6px">Pick checklists, set a spot count, and get the most evenly balanced letter spots, with optional pricing.</div></a></main>
+<main class="wrap">{PAST_BANNER if up else ""}<div class="grid">{cards}</div><a class="tile" href="/breaks/builder" style="display:block;margin:22px 0 32px;border-color:var(--gold)"><div class="kicker" style="font-size:11px">Breaker tool</div><div class="lab display" style="font-size:26px;margin-top:6px">Spot builder</div><div class="peek" style="margin-top:6px">Pick checklists, set a spot count, and get the most evenly balanced letter spots, with optional pricing.</div></a></main>
 <footer><div class="wrap">Main Event Card Vault. Reference only; confirm checklists and house rules with the breaker. <a href="/breaks/release-notes">Release notes</a> · <a href="/breaks/past">Past breaks</a> · <a href="/owner">Developer dashboard</a></div></footer>
 </body></html>'''
 html = html.replace('</body>', IN_SCRIPT + '</body>')
@@ -386,9 +393,11 @@ wp = f"""<!DOCTYPE html>
 <style>{css}
 .bar .bmenu {{ margin-left: auto; }}
 :root {{ --maxw: 1600px; }}
+{PB_CSS} .pastban {{ margin: 0 0 12px; padding: 8px 14px; font-size: 14px; }}
 .hero {{ padding-top: 14px; padding-bottom: 4px; }} .hero h1 {{ font-size: clamp(28px, 4vw, 40px); margin: 4px 0 6px; }} .hero .lede {{ font-size: 15px; margin: 0; }}
 .wpick {{ display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 14px; }}
 .wpick label {{ flex: 1 1 300px; display: flex; flex-direction: column; gap: 5px; font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-3); }}
+.wpick label {{ min-width: 0; }} .wpick select {{ width: 100%; min-width: 0; max-width: 100%; }}
 .wpick select {{ padding: 11px 14px; border-radius: 12px; border: 1px solid var(--line-2); background: var(--panel); color: var(--ink); font: inherit; font-size: 15px; text-transform: none; letter-spacing: 0; }}
 .wcard {{ background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 16px 18px; margin: 0 0 14px; }}
 .wcard h2 {{ font-size: 22px; margin: 2px 0 0; }} #whead .wcard {{ display: flex; flex-wrap: wrap; align-items: center; gap: 6px 18px; padding: 12px 16px; }} #whead .wbtns {{ margin: 0 0 0 auto; }} .wcard h3 {{ font-size: 24px; margin: 0; }}
@@ -423,7 +432,7 @@ body.wide .wgrid {{ grid-template-columns: 1fr; }} body.wide .wchat {{ height: 4
 /*BMENU-CSS*//*/BMENU-CSS*/
 {IN_CSS}</style></head><body>
 <header class="site"><div class="wrap"><div class="bar"><a class="brand" href="/"><img src="{icon}" alt=""><div><b class="display">Main Event Card Vault</b><span>Watch your breaks</span></div></a><!--BMENU--><!--/BMENU--></div></div></header>
-<main class="wrap" style="padding-top:14px"><h1 class="vh">Watch your breaks</h1><div class="wpick"><label>Break<select id="wb"></select></label><label>Spot<select id="ws"></select></label></div>
+<main class="wrap" style="padding-top:14px"><h1 class="vh">Watch your breaks</h1>{PAST_BANNER}<div class="wpick"><label>Break<select id="wb"></select></label><label>Spot<select id="ws"></select></label></div>
 <div class="wgrid"><div class="wvbox"><div class="wvid" id="wvid"></div></div><div class="wchat" id="wchat"></div></div><div id="whead"></div><div id="wspot"></div>
 <p class="sub" style="margin:4px 0 0">Pick a break to watch the stream with the live chat beside it, then pick a spot to see every player in it while the boxes get opened. Breaks you're in come up first.</p>
 <h2 class="display" style="font-size:26px;margin:26px 0 10px">Your breaks</h2><div class="grid" id="wmy"></div></main>

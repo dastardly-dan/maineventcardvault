@@ -134,6 +134,11 @@
      "Updated",
      "Breaks",
      "GB1041, GB1042, GB1044 and GB1046 have run and moved to Past breaks. GB1043 and GB1045 are still on tonight's Acme Packs stream."
+    ],
+    [
+     "Improved",
+     "Site",
+     "Break guides and Watch your breaks now have a banner at the top that links to Past breaks, for anyone looking for a break that already ran."
     ]
    ]
   },
