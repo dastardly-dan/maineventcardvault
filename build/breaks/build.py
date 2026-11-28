@@ -1579,6 +1579,11 @@ ACME_CL_NOTE = ('Checklists show what the maker planned for a product when it wa
                 'FOTL (First Off The Line), Jumbo or other version, or a late change by the maker, so a card that isn\'t listed here can still turn up. '
                 'It goes to whichever spot its name or team matches, under Acme\'s rules.')
 for _c in (gb1041, gb1042, gb1043, gb1044, gb1045, gb1046): _c['notes'].append(ACME_CL_NOTE)
+# Daniel: only GB1043 and GB1045 are left on Acme's stream (Nov 27, 9:43 pm Eastern)
+close(gb1041, 'Friday, November 27, 2026', ['5 boxes', '28 team spots (24 teams, 4 combos)', '$120 per spot, $30 for a 25% filler', 'Teams randomized live'])
+close(gb1042, 'Friday, November 27, 2026', ['6 boxes', '27 team spots (24 teams, 3 combos)', '$105 per spot, $26.25 for a 25% filler', 'Teams randomized live'])
+close(gb1044, 'Friday, November 27, 2026', ['4 boxes', '16 letter spots', '$105 per spot, $26.25 for a 25% filler', 'Letters randomized live'])
+close(gb1046, 'Friday, November 27, 2026', ['4 boxes', '28 team spots (24 teams, 4 combos)', '$127 per spot, $31.75 for a 25% filler', 'Teams randomized live'])
 
 # ---------------- Nov 27 check: Colfax CC876 to CC879 (Sunday Nov 29) and RGL #6145 to #6147 (Saturday Nov 28) ----------------
 SAT = 'Saturday, November 28, 2026'
