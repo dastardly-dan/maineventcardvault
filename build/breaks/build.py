@@ -1584,6 +1584,7 @@ close(gb1041, 'Friday, November 27, 2026', ['5 boxes', '28 team spots (24 teams,
 close(gb1042, 'Friday, November 27, 2026', ['6 boxes', '27 team spots (24 teams, 3 combos)', '$105 per spot, $26.25 for a 25% filler', 'Teams randomized live'])
 close(gb1044, 'Friday, November 27, 2026', ['4 boxes', '16 letter spots', '$105 per spot, $26.25 for a 25% filler', 'Letters randomized live'])
 close(gb1043, 'Friday, November 27, 2026', ['4 boxes', '20 letter spots', '$115 per spot, $28.75 for a 25% filler', 'Letters randomized live'])  # Daniel: GB1043 done (Nov 27, 10:40 pm Eastern)
+close(gb1045, 'Friday, November 27, 2026', ['8 boxes', '12 letter spots (the listing says 16)', '$175 per spot', 'Letters randomized live'])  # Daniel: the Leaf is done (Nov 28 morning)
 close(gb1046, 'Friday, November 27, 2026', ['4 boxes', '28 team spots (24 teams, 4 combos)', '$127 per spot, $31.75 for a 25% filler', 'Teams randomized live'])
 
 # ---------------- Nov 27 check: Colfax CC876 to CC879 (Sunday Nov 29) and RGL #6145 to #6147 (Saturday Nov 28) ----------------
