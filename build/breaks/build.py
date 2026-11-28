@@ -1583,6 +1583,7 @@ for _c in (gb1041, gb1042, gb1043, gb1044, gb1045, gb1046): _c['notes'].append(A
 close(gb1041, 'Friday, November 27, 2026', ['5 boxes', '28 team spots (24 teams, 4 combos)', '$120 per spot, $30 for a 25% filler', 'Teams randomized live'])
 close(gb1042, 'Friday, November 27, 2026', ['6 boxes', '27 team spots (24 teams, 3 combos)', '$105 per spot, $26.25 for a 25% filler', 'Teams randomized live'])
 close(gb1044, 'Friday, November 27, 2026', ['4 boxes', '16 letter spots', '$105 per spot, $26.25 for a 25% filler', 'Letters randomized live'])
+close(gb1043, 'Friday, November 27, 2026', ['4 boxes', '20 letter spots', '$115 per spot, $28.75 for a 25% filler', 'Letters randomized live'])  # Daniel: GB1043 done (Nov 27, 10:40 pm Eastern)
 close(gb1046, 'Friday, November 27, 2026', ['4 boxes', '28 team spots (24 teams, 4 combos)', '$127 per spot, $31.75 for a 25% filler', 'Teams randomized live'])
 
 # ---------------- Nov 27 check: Colfax CC876 to CC879 (Sunday Nov 29) and RGL #6145 to #6147 (Saturday Nov 28) ----------------
