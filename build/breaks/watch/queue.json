@@ -1,1 +1,23 @@
-[]
+[
+ {
+  "event": "removed",
+  "shop": "acme",
+  "first_seen": "2026-11-28T01:50:24+00:00",
+  "handle": "gb1041-25-chance-filler-midnight-chrome-inception",
+  "url": "https://acmepackscards.com/products/gb1041-25-chance-filler-midnight-chrome-inception"
+ },
+ {
+  "event": "removed",
+  "shop": "acme",
+  "first_seen": "2026-11-28T01:50:24+00:00",
+  "handle": "gb1042-25-chance-filler-chrome-at-the-museum",
+  "url": "https://acmepackscards.com/products/gb1042-25-chance-filler-chrome-at-the-museum"
+ },
+ {
+  "event": "removed",
+  "shop": "acme",
+  "first_seen": "2026-11-28T01:50:24+00:00",
+  "handle": "gb1044-25-chance-filler-the-best-of-bowman",
+  "url": "https://acmepackscards.com/products/gb1044-25-chance-filler-the-best-of-bowman"
+ }
+]
